@@ -4,6 +4,9 @@ A sandbox copy of the decision Gobblecube's engine makes every week: **turn a pr
 options into campaign actions.** The market is synthetic and the brand fictional. The data is
 calibrated to aggregated production Blinkit numbers (see `CALIBRATION.md`).
 
+**The task:** build an LLM harness that generates better campaign actions than the deterministic traversal.
+The brief is in `docs/brief.html`.
+
 **The objective:** increase total SKU offtake (ad + organic, ₹) over 6 weekly runs while keeping
 portfolio direct ROAS at or above the warm-up level (−2% tolerance).
 
@@ -80,11 +83,20 @@ Reference points on the dev scenario:
 
 ## Rules
 
-- A policy reads only its `Observation`. Importing `gpc.market` or reading `World.truth` is disqualifying.
+- A policy reads only its `Observation`. Importing `gpc.market`, reading `World.truth` or `gpc/scenarios/`,
+  or putting the scenario's values into a prompt is disqualifying.
 - You may change anything in `gpc/engine/`: it is the baseline, not the harness. Do not change `gpc/market.py`,
   `gpc/guardrails.py`, `gpc/runner.py` or `gpc/score.py`; we score with our copies.
-- We also score on a private **eval scenario**: same mechanics, different seed, and shocks in different places
-  and at different times. Do not tune to dev's shocks.
+- We also score on a private **eval scenario**: same mechanics and entities, but a different seed, different
+  true response values, and shocks in different places and at different times. A harness that reasons from
+  the data carries over; one tuned to dev's numbers does not. Scores are always measured against the baseline
+  run in the same world.
+
+## Scenarios
+
+The market's true response parameters (keyword intent and incrementality, SKU appeal, organic damping,
+auction spread, noise, shocks) live in a scenario file. `gpc/scenarios/dev.json` is the dev scenario,
+public so the sandbox is debuggable. The eval scenario's file is held by Gobblecube.
 
 ## Data
 

@@ -8,14 +8,18 @@ Two kinds of data come out of `build_world`:
 * PUBLIC tables (`World.public`) — what an operator or a policy can see: attributes, search
   volumes, list prices, the starting campaign set-up, the media plan, industry priors.
 * HIDDEN truth (`World.truth`) — the market's real response parameters (keyword intent,
-  incrementality, per-keyword curve deviations, scheduled shocks). Only `market.py` reads it.
-  A policy never receives it.
+  incrementality, per-keyword curve deviations, auction spread, scheduled shocks), built from a
+  scenario file (`gpc/scenarios/dev.json`; the eval file is kept outside this repo). Only
+  `market.py` reads it. A policy never receives it.
 """
 
 from __future__ import annotations
 
+import json
+import os
 from dataclasses import dataclass, field
 from datetime import date
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -81,18 +85,19 @@ def _products() -> pd.DataFrame:
         "organic_units_per_day", "launch_age_days"])
 
 
-# keyword, type, 30-day searches (5 cities), rank-1 CPM ₹ (median city), HIDDEN intent, HIDDEN incrementality
+# keyword, type, 30-day searches (5 cities), rank-1 CPM ₹ (median city). Hidden response parameters
+# (intent, incrementality, …) live in the scenario file, not here.
 _KEYWORDS = [
-    ("K01", "aurel", "brand", 180_000, 210, 2.4, 0.15),
-    ("K02", "aurel soap", "brand", 62_000, 230, 2.6, 0.18),
-    ("K03", "soap", "generic", 920_000, 360, 0.9, 0.55),
-    ("K04", "bathing soap", "generic", 240_000, 330, 1.0, 0.55),
-    ("K05", "body wash", "generic", 310_000, 390, 1.0, 0.60),
-    ("K06", "shower gel", "generic", 140_000, 420, 1.05, 0.60),
-    ("K07", "sandal soap", "generic", 95_000, 300, 1.15, 0.50),
-    ("K08", "kids soap", "generic", 45_000, 280, 1.2, 0.70),
-    ("K09", "velora", "competition", 260_000, 470, 0.5, 0.85),
-    ("K10", "nimbus body wash", "competition", 110_000, 440, 0.45, 0.85),
+    ("K01", "aurel", "brand", 180_000, 210),
+    ("K02", "aurel soap", "brand", 62_000, 230),
+    ("K03", "soap", "generic", 920_000, 360),
+    ("K04", "bathing soap", "generic", 240_000, 330),
+    ("K05", "body wash", "generic", 310_000, 390),
+    ("K06", "shower gel", "generic", 140_000, 420),
+    ("K07", "sandal soap", "generic", 95_000, 300),
+    ("K08", "kids soap", "generic", 45_000, 280),
+    ("K09", "velora", "competition", 260_000, 470),
+    ("K10", "nimbus body wash", "competition", 110_000, 440),
 ]
 
 # sku → [(keyword_id, relevance 0–1, organic rank of the SKU on that keyword or None)]
@@ -111,7 +116,7 @@ _BID_MULT = {"brand": 1.08, "generic": 0.90, "competition": 1.05}
 
 def _keywords() -> pd.DataFrame:
     return pd.DataFrame(
-        [(k, kw, t, sv, cpm) for k, kw, t, sv, cpm, _i, _inc in _KEYWORDS],
+        _KEYWORDS,
         columns=["keyword_id", "keyword", "keyword_type", "searches_30d", "rank1_cpm_inr"])
 
 
@@ -148,49 +153,57 @@ def _dayparts() -> pd.DataFrame:
 
 
 # ── hidden truth ───────────────────────────────────────────────────────────────
-def _truth(rng: np.random.Generator, scenario: str, keywords: pd.DataFrame, keyword_sku: pd.DataFrame,
+SCENARIO_DIR = Path(__file__).resolve().parent / "scenarios"
+
+
+def load_scenario(scenario: str) -> dict:
+    """'dev' → gpc/scenarios/dev.json. 'eval' → the file named by GPC_EVAL_SCENARIO (kept outside
+    this repo). Anything else is read as a path."""
+    if scenario == "eval":
+        path = os.environ.get("GPC_EVAL_SCENARIO")
+        if not path:
+            raise SystemExit("scenario 'eval' needs GPC_EVAL_SCENARIO=<path to the private scenario file>")
+    elif (SCENARIO_DIR / f"{scenario}.json").exists():
+        path = SCENARIO_DIR / f"{scenario}.json"
+    else:
+        path = scenario
+    return json.loads(Path(path).read_text())
+
+
+def _truth(rng: np.random.Generator, spec: dict, keywords: pd.DataFrame, keyword_sku: pd.DataFrame,
            cities: pd.DataFrame) -> dict:
     kw_truth = {}
-    for k, _kw, _t, _sv, _cpm, intent, inc in _KEYWORDS:
+    for k in keywords.keyword_id:
+        base = spec["keywords"][k]
         kw_truth[k] = {
-            "intent": intent * float(np.exp(rng.normal(0, 0.08))),
-            "incrementality": float(np.clip(inc + rng.normal(0, 0.04), 0.05, 0.95)),
+            "intent": base["intent"] * float(np.exp(rng.normal(0, 0.08))),
+            "incrementality": float(np.clip(base["incrementality"] + rng.normal(0, 0.04), 0.05, 0.95)),
             # per-keyword deviation of the rank curve from the industry median
             "view_dev": {s: float(np.exp(rng.normal(0, 0.10))) if s != 1 else 1.0 for s in SLOTS},
             "conv_dev": {s: float(np.exp(rng.normal(0, 0.10))) for s in SLOTS},
             "price_dev": {s: float(np.exp(rng.normal(0, 0.05))) if s != 1 else 1.0 for s in SLOTS},
         }
-    appeal = {"S1": 1.0, "S2": 0.95, "S3": 1.0, "S4": 0.9, "S5": 1.1}
-    # a SKU that ranks top-3 organically gains little from an ad on that keyword
-    organic_damp = {(r.sku_id, r.keyword_id): (0.6 if (not np.isnan(r.organic_rank) and r.organic_rank <= 3) else 1.0)
+    # a SKU that ranks near the top organically gains little from an ad on that keyword
+    damp = spec["organic_damp"]
+    organic_damp = {(r.sku_id, r.keyword_id): (damp["factor"] if (not np.isnan(r.organic_rank)
+                                                                   and r.organic_rank <= damp["max_organic_rank"]) else 1.0)
                     for r in keyword_sku.itertuples()}
     city_kw_affinity = {(c, k): float(np.exp(rng.normal(0, 0.12))) for c in cities.city_id for k in keywords.keyword_id}
 
-    run_start = lambda r: WARMUP_DAYS + (r - 1) * RUN_DAYS  # noqa: E731  (day index of run r's first day)
-    if scenario == "dev":
-        shocks = [
-            # supply: S2 out of stock in most Hyderabad stores for one week
-            {"kind": "osa", "sku_id": "S2", "city_id": "HYD", "from_day": run_start(3), "to_day": run_start(4) - 1, "osa": 0.42},
-            # competition: a rival starts bidding up body wash / shower gel in Mumbai and keeps going
-            {"kind": "price", "city_id": "MUM", "keyword_ids": ["K05", "K06"], "from_day": run_start(4), "mult": 1.35},
-            # demand: soap searches rise 15% from the last two runs (seasonal)
-            {"kind": "demand", "keyword_ids": ["K03", "K04"], "from_day": run_start(5), "mult": 1.15},
-        ]
-    else:
-        # The eval scenario lives outside this repo (Gobblecube keeps it). Same kinds of shock,
-        # different SKUs, cities, keywords and timing — so a policy cannot be tuned to dev's.
-        import json
-        import os
-        path = os.environ.get("GPC_EVAL_SCENARIO")
-        if not path:
-            raise SystemExit("scenario 'eval' needs GPC_EVAL_SCENARIO=<path to the private scenario file>")
-        spec = json.load(open(path))
-        shocks = [{**sh, "from_day": run_start(sh.pop("from_run")),
-                   **({"to_day": run_start(sh.pop("to_run") + 1) - 1} if "to_run" in sh else {})}
-                  for sh in spec["shocks"]]
-    return {"keywords": kw_truth, "appeal": appeal, "organic_damp": organic_damp,
-            "city_kw_affinity": city_kw_affinity, "shocks": shocks,
-            "noise": {"searches_sigma": 0.10, "price_sigma": 0.08, "organic_sigma": 0.06, "weekend_lift": 1.12}}
+    def run_start(r: int) -> int:          # day index of run r's first day
+        return WARMUP_DAYS + (r - 1) * RUN_DAYS
+
+    shocks = []
+    for sh in spec["shocks"]:
+        sh = dict(sh)
+        out = {k: v for k, v in sh.items() if k not in ("from_run", "to_run")}
+        out["from_day"] = run_start(sh["from_run"])
+        if "to_run" in sh:
+            out["to_day"] = run_start(sh["to_run"] + 1) - 1
+        shocks.append(out)
+    return {"keywords": kw_truth, "appeal": dict(spec["appeal"]), "organic_damp": organic_damp,
+            "city_kw_affinity": city_kw_affinity, "shocks": shocks, "auction_sigma": float(spec["auction_sigma"]),
+            "noise": dict(spec["noise"])}
 
 
 # ── starting campaigns and the plan ────────────────────────────────────────────
@@ -252,7 +265,7 @@ def build_world(seed: int = 7, scenario: str = "dev") -> World:
     sku_city = _sku_city(rng, cities, products)
     campaigns, campaign_keywords = _campaigns(rng, cities, products, keywords, keyword_sku)
     plan = _plan(rng, campaigns, campaign_keywords, keywords)
-    truth = _truth(rng, scenario, keywords, keyword_sku, cities)
+    truth = _truth(rng, load_scenario(scenario), keywords, keyword_sku, cities)
     public = {
         "cities": cities, "products": products, "keywords": keywords, "keyword_sku": keyword_sku,
         "sku_city": sku_city, "campaigns": campaigns, "campaign_keywords": campaign_keywords,

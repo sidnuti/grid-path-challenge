@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grid Path AI Challenge</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+.ov{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;background:#f8f8f6;color:#1a1a18;font-size:14px;line-height:1.6;}
+.ov code{font-family:ui-monospace,monospace;font-size:12px;background:#f1efe8;padding:1px 5px;border-radius:3px;color:#444441;}
+.page{max-width:1180px;margin:0 auto;padding:36px 28px;}
+.num{font-variant-numeric:tabular-nums;}
+.header{border-bottom:2px solid #e0dfd8;padding-bottom:20px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+.header-brand{font-size:11px;color:#888780;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:5px;}
+.header-title{font-size:22px;font-weight:500;color:#1a1a18;margin-bottom:8px;text-wrap:balance;}
+.header-meta{font-size:11px;color:#b4b2a9;display:flex;flex-wrap:wrap;gap:14px;}
+.header-stamp{text-align:right;font-size:11px;color:#b4b2a9;line-height:1.8;white-space:nowrap;}
+.finding-box{background:#EAF3DE;border:1px solid #BEDFA0;border-left:4px solid #4E8A2E;border-radius:6px;padding:14px 18px;margin-bottom:24px;}
+.finding-box p{font-size:13px;color:#274d10;line-height:1.65;margin:0;}
+.finding-box strong{color:#183409;}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+.kpi-card{background:#fff;border:0.5px solid #e0dfd8;border-radius:10px;padding:16px 18px;}
+.kpi-card.star{border-left:3px solid #4E8A2E;}
+.kpi-label{font-size:11px;color:#888780;margin-bottom:6px;}
+.kpi-value{font-size:26px;font-weight:500;color:#1a1a18;line-height:1.05;margin-bottom:5px;font-variant-numeric:tabular-nums;}
+.kpi-delta{font-size:13px;font-weight:600;}
+.kpi-sub{font-size:11px;color:#b4b2a9;margin-top:6px;line-height:1.45;}
+.pos{color:#27500A;font-weight:600;}.neg{color:#A32D2D;font-weight:600;}.flat{color:#5F5E5A;font-weight:600;}
+.badge{display:inline-block;font-size:10px;font-weight:500;padding:2px 8px;border-radius:4px;}
+.badge-ok{background:#EAF3DE;color:#27500A;}.badge-info{background:#E6F1FB;color:#0C447C;}.badge-gray{background:#F1EFE8;color:#5F5E5A;}.badge-warn{background:#FAEEDA;color:#854F0B;}
+.section{margin-bottom:36px;}
+.section-title{font-size:12px;font-weight:500;color:#5F5E5A;text-transform:uppercase;letter-spacing:0.07em;padding-bottom:8px;border-bottom:1px solid #e0dfd8;margin-bottom:16px;}
+.section-lead{font-size:13px;color:#5F5E5A;margin-bottom:14px;line-height:1.6;}
+.section-lead strong{color:#1a1a18;}
+.table-wrap{overflow-x:auto;border:0.5px solid #e0dfd8;border-radius:8px;background:#fff;margin-bottom:6px;}
+table{width:100%;border-collapse:collapse;font-size:12px;}
+th{text-align:left;font-size:10px;font-weight:500;color:#888780;text-transform:uppercase;letter-spacing:0.04em;padding:8px 11px;border-bottom:1px solid #e0dfd8;background:#fafaf8;white-space:nowrap;}
+td{padding:7px 11px;border-bottom:0.5px solid #f1efe8;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:#fafaf8;}
+.tr{text-align:right;font-variant-numeric:tabular-nums;}
+.rowhead{background:#fafaf8;font-weight:600;color:#1a1a18;}
+.sub{color:#b4b2a9;font-size:10.5px;}
+.tag{display:inline-block;font-size:9.5px;font-weight:600;padding:1px 6px;border-radius:3px;background:#E6F1FB;color:#0C447C;margin-left:5px;}
+.insight{background:#fff;border:0.5px solid #e0dfd8;border-left:3px solid #185FA5;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;}
+.insight p{font-size:12px;color:#5F5E5A;line-height:1.65;margin:0;}
+.insight strong{color:#1a1a18;}
+.insight-warn{border-left-color:#BA7517;}.insight-ok{border-left-color:#1D9E75;}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:0.5px solid #e0dfd8;border-radius:8px;overflow:hidden;background:#fff;margin:12px 0;}
+.split>div{padding:16px 18px;}
+.split>div:first-child{border-right:0.5px solid #e0dfd8;}
+.split .big{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;}
+.split .cap{font-size:11px;color:#888780;margin-top:6px;line-height:1.45;}
+.footer{border-top:0.5px solid #e0dfd8;padding-top:14px;margin-top:32px;font-size:10px;color:#b4b2a9;line-height:1.8;}
+.footer strong{color:#5F5E5A;}
+@media(max-width:820px){.kpi-grid{grid-template-columns:repeat(2,1fr);}.split{grid-template-columns:1fr;}.split>div:first-child{border-right:none;border-bottom:0.5px solid #e0dfd8;}}
+</style>
+
+<style>
+body{background:#f8f8f6;}
+.ov ol,.ov ul{padding-left:20px;font-size:13px;color:#5F5E5A;line-height:1.7;}
+.ov li{margin-bottom:4px;}
+.ov li strong{color:#1a1a18;}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:12px;}
+.flow>div{background:#fff;border:0.5px solid #e0dfd8;border-radius:8px;padding:10px 12px;font-size:11.5px;color:#5F5E5A;line-height:1.5;}
+.flow>div b{display:block;font-size:12px;color:#1a1a18;margin-bottom:3px;}
+.flow>div.guard{border-top:3px solid #BA7517;}
+@media(max-width:820px){.flow{grid-template-columns:repeat(2,1fr);}.header-stamp{text-align:left;white-space:normal;}}
+</style>
+</head>
+<body>
+<div class="ov"><div class="page">
+
+<div class="header">
+  <div>
+    <div class="header-brand">Gobblecube · Hiring · Head of AI work project</div>
+    <div class="header-title">Can AI grow offtake from our grid-path traversal without giving up ROAS?</div>
+    <div class="header-meta"><span>Synthetic Blinkit market, calibrated to production</span><span>5 SKUs × 5 cities × 10 keywords · 25 campaigns</span><span>6 weekly runs</span></div>
+  </div>
+  <div class="header-stamp">Issued Oct 2026<br>Candidate-facing brief<br>All data synthetic · no client data<br>Questions: your Gobblecube contact</div>
+</div>
+
+<div class="finding-box"><p><strong>You get a sandbox copy of the decision our engine makes every week: turning a priced grid of ad options into campaign actions.</strong> It includes a synthetic market, our deterministic grid-path traversal as the baseline, and a guardrail layer every policy must pass through. <strong>Your objective: increase total SKU offtake (ad + organic) over 6 runs while keeping portfolio direct ROAS at or above its starting level.</strong> Build an LLM harness that generates better actions, and tell us what it costs. We judge three things equally: <strong>the lift on a scenario you have not seen</strong>, <strong>how well you understood why the baseline falls short</strong>, and <strong>whether the cost analysis holds up</strong>.</p></div>
+
+<div class="kpi-grid">
+  <div class="kpi-card star"><div class="kpi-label">Baseline offtake vs doing nothing</div><div class="kpi-value">+0.1%</div><div class="kpi-delta flat">₹4.10L/day</div><div class="kpi-sub">Six runs of the deterministic traversal barely move offtake.</div></div>
+  <div class="kpi-card"><div class="kpi-label">Baseline direct ROAS</div><div class="kpi-value">4.97×</div><div class="kpi-delta pos">floor 4.54×</div><div class="kpi-sub">It protects ROAS and leaves the headroom above the floor unused.</div></div>
+  <div class="kpi-card"><div class="kpi-label">Naive "scale everything"</div><div class="kpi-value">+3.3%</div><div class="kpi-delta neg">3.99× · fails</div><div class="kpi-sub">More offtake, but below the floor even after guardrails. Spending more is not the answer.</div></div>
+  <div class="kpi-card"><div class="kpi-label">What you are moving</div><div class="kpi-value">110</div><div class="kpi-delta flat">cells</div><div class="kpi-sub">Campaign × keyword, each priced over 4 ad slots × 4 dayparts.</div></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§1 · The sandbox</div>
+  <div class="section-lead">A fictional brand, Aurel, sells soap and body wash on Blinkit. Its magnitudes are calibrated to aggregated production data: ad-slot positions, conversion by slot, daypart demand, CPMs and ROAS ranges by keyword type. Policies see only what an operator sees. The market's response parameters stay hidden.</div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Entity</th><th>What exists</th><th>Base data provided</th></tr></thead>
+    <tbody>
+      <tr><td class="rowhead">Products</td><td>5 SKUs: two soaps, a body wash, a shower gel, a new kids' bar</td><td>MRP, selling price, pack, sub-category, organic units/day, launch age</td></tr>
+      <tr><td class="rowhead">Cities</td><td>Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune</td><td>Tier, demand share, CPM index, dark stores, daypart demand split, on-shelf availability per SKU</td></tr>
+      <tr><td class="rowhead">Keywords</td><td>10: 2 brand, 6 generic, 2 competitor brand</td><td>Type, 30-day searches, rank-1 CPM, relevance and organic rank per SKU</td></tr>
+      <tr><td class="rowhead">Campaigns</td><td>25 Product Booster campaigns, one per SKU × city</td><td>Daily budget, CPM bid per keyword, daypart schedule</td></tr>
+      <tr><td class="rowhead">Media plan</td><td>One line per cell (campaign × keyword)</td><td>₹/day budget, direct-ROAS goal, marginal floor, evidence tier</td></tr>
+      <tr><td class="rowhead">Timeline</td><td>28 warm-up days, then 6 weekly runs</td><td>Each run: decide, pass guardrails, apply, then 7 days of market data</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§2 · The baseline: deterministic grid-path traversal</div>
+  <div class="section-lead">This is the logic you are trying to beat. Code, data and a viewer that walks through every step for every run and cell are at <strong>github.com/sidnuti/grid-path-challenge</strong> (<a href="https://github.com/sidnuti/grid-path-challenge">link</a>). Open <code>viewer/grid_path_viewer.html</code> first.</div>
+  <div class="flow">
+    <div><b>1 · Grid</b>From 28 days of data: CPM, impressions, orders and ROAS for every cell × slot (1/5/9/13) × daypart. Thin evidence is shrunk.</div>
+    <div><b>2 · Loop</b>Per cell: clears goal, misses goal, or too thin. Cuts are paced by a patience ladder: 3 / 5 / 7 miss-days allow 10 / 25 / 50% of spend.</div>
+    <div><b>3 · Traversal</b>Bid first (±5–50% steps), then move money (receiver must earn ≥ 1.2× the source with P &gt; 0.8, one transport LP), then hours.</div>
+    <div><b>4 · Ledger</b>Decisions become actions on real levers. Budget raises are sized by how much of a raise the campaign can actually spend.</div>
+    <div class="guard"><b>5 · Guardrails</b>Bid bounds and step size, top slot, stock availability, realisable budget, cell goal, and the portfolio ROAS floor. Mandatory for every policy.</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">§3 · The task: build an LLM harness that generates better actions</div>
+  <div class="section-lead">Build a harness around an LLM that produces better campaign actions than the deterministic traversal. To the sandbox, the harness is just a <strong>policy</strong>: it reads the run's <code>Observation</code> and returns a list of actions. How it gets there is your design. Some shapes it could take:</div>
+  <ul>
+    <li>an agent with <strong>tools</strong> over the observed data and the engine's pieces (grid, verdicts, bid options, projections) that decides cell by cell or campaign by campaign;</li>
+    <li>an LLM that <strong>reviews and rewrites</strong> the traversal's proposals before they go out;</li>
+    <li>an LLM that forms <strong>hypotheses</strong> (where is spend not incremental? which thin cells are worth exploring?) while deterministic code sizes the moves.</li>
+  </ul>
+  <div class="section-lead">Deterministic code is welcome as tools. What we need to see is that the <strong>LLM is what makes the decisions better</strong>. Show it with an ablation: the same harness with the LLM step removed.</div>
+  <div class="section-lead"><strong>Hard rules</strong> (breaking one scores as not passing):</div>
+  <ol>
+    <li><strong>Observation only.</strong> The harness reads what it is given. Reading the simulator, its scenario files or its hidden parameters, or putting their values into a prompt, disqualifies the submission.</li>
+    <li><strong>Guardrails stay on.</strong> Every action passes the guardrail layer. Do not modify it, the simulator, the runner or the scorer; we score with our copies.</li>
+    <li><strong>Validated output.</strong> LLM output is parsed and checked against the action schema before it leaves the harness. Malformed or out-of-range output must not crash a run.</li>
+    <li><strong>Reproducible.</strong> <code>make score POLICY=…</code> on a clean checkout reproduces your numbers. Report results over at least 3 replicates, because LLM calls are stochastic.</li>
+    <li><strong>Fail soft.</strong> If the LLM errors, times out or exceeds its budget, the run falls back to the baseline. Show that it does.</li>
+  </ol>
+</div>
+
+<div class="section">
+  <div class="section-title">§4 · How we score it</div>
+  <div class="section-lead">The dev scenario ships with the repo. <strong>We also score on a private eval scenario</strong>. It uses the same mechanics and the same kinds of entities, but a different seed, different true response values, and shocks in different places and at different times. A harness that reasons from the data carries over. One tuned to dev's particular numbers does not. Scores are always measured against the baseline run in the same world.</div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Dimension</th><th>Metric</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="rowhead">Objective</td><td>Total offtake ₹ over the 6 runs, vs the baseline</td><td class="sub">Ad + organic units × selling price, all 5 SKUs</td></tr>
+      <tr><td class="rowhead">Constraint</td><td>Portfolio direct ROAS over the 6 runs ≥ warm-up ROAS × 0.98</td><td class="sub">A policy that fails the floor scores zero on the objective, however large its lift</td></tr>
+      <tr><td class="rowhead">Robustness</td><td>Lift on the eval scenario and across extra seeds</td><td class="sub">We run several. A lift that holds on one seed only does not count.</td></tr>
+      <tr><td class="rowhead">Efficiency</td><td>Offtake gained per extra ₹ of ad spend · share of your actions the guardrails block</td><td class="sub">A policy that proposes 800 actions to ship 300 is wasting the operator's attention</td></tr>
+      <tr><td class="rowhead">LLM contribution</td><td>Your harness vs the same harness with the LLM step removed</td><td class="sub">If the LLM adds nothing over its own deterministic tools, say so</td></tr>
+      <tr><td class="rowhead">Cost</td><td>$ per run, wall-clock per run, tokens, LLM calls per run</td><td class="sub">Metered by you, checked by us</td></tr>
+    </tbody>
+  </table></div>
+  <div class="insight"><p><strong>Read:</strong> the ROAS you can see on each keyword is direct, ad-attributed ROAS. Offtake is ad plus organic. The two can disagree. Work out where, and how you would know from the data you are given.</p></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§5 · The cost analysis we expect</div>
+  <div class="section-lead">Turn your lift into rupees per day and set it against every cost, including the ones that are not tokens. Give a low, mid and high case, and say how the answer scales to a real portfolio of 100+ campaigns.</div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Line</th><th>How to compute it</th><th class="tr">Illustrative</th></tr></thead>
+    <tbody>
+      <tr><td class="rowhead">Value</td><td>Δ offtake ₹/day vs the baseline, at ROAS ≥ floor</td><td class="tr">+2% × ₹4.10L ≈ <strong>₹8.2K/day</strong></td></tr>
+      <tr><td class="rowhead">Run cost</td><td>$ per run × runs per week</td><td class="tr">—</td></tr>
+      <tr><td class="rowhead">Latency</td><td>Wall-clock per decision. Would it fit a 15-minute production stage?</td><td class="tr">—</td></tr>
+      <tr><td class="rowhead">Build + run</td><td>Engineer-weeks to productionise, plus monitoring and evaluation</td><td class="tr">—</td></tr>
+      <tr><td class="rowhead">Risk</td><td>How often and how badly your policy does worse than the baseline</td><td class="tr">—</td></tr>
+      <tr><td class="rowhead">Break-even</td><td>Smallest portfolio at which value covers cost</td><td class="tr">—</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§6 · Ground rules</div>
+  <ul>
+    <li>Everything in the sandbox is synthetic. You may keep your code.</li>
+    <li>Use any tools you like, including AI coding assistants. Tell us which ones and for what.</li>
+    <li>LLM access is provided through a key capped at $150 total. The meter logs every call.</li>
+    <li>Ask questions. We answer within one working day and share each answer with every candidate.</li>
+    <li>If you find a bug in the sandbox, report it. A real defect counts in your favour.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  <strong>Sources.</strong> Reference results: <code>make score</code> on the dev scenario (seed 7), 28 warm-up days + 6 weekly runs. Market calibration: aggregated multi-brand Blinkit data (industry rank curve, rank × hour bid curve, MMM cell outputs), documented in the repo's <code>CALIBRATION.md</code>.<br>
+  <strong>Caveats.</strong> The market is a model. Its mechanics are simpler than Blinkit's and its parameters are drawn, not measured. Results transfer to production only as far as the mechanics do, and saying how far is part of the memo.
+</div>
+
+</div></div>
+</body>
+</html>

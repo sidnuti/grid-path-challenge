@@ -9,7 +9,7 @@ Mechanics, per day and daypart (night → morning → afternoon → evening):
    × weekend lift × noise × any demand shock.
 2. Auction: each slot (1 / 5 / 9 / 13) has a median clearing CPM = rank-1 CPM × city index
    × daypart level × slot price ratio × daily noise × any price shock. Competitor bids vary from
-   auction to auction (log-normal, σ = 0.30), so a bid wins a SHARE of auctions at each slot and
+   auction to auction (log-normal; the spread is a hidden scenario parameter), so a bid wins a SHARE of auctions at each slot and
    pays the clearing price of the auctions it wins. Bidding higher wins the top slot more often
    but pays more for those marginal auctions: returns diminish. Two Aurel campaigns on the same
    keyword in the same city compete: where the higher bid holds a slot, the lower one drops a slot.
@@ -34,9 +34,6 @@ from scipy.stats import norm, poisson
 
 from .world import (DAYPART_PRICE, DAYPARTS, SLOT_CONV, SLOT_PRICE_REL, SLOT_VIEW_REL, SLOTS, START_DATE,
                     World)
-
-
-AUCTION_SIGMA = 0.30    # spread of the competitor bid level across auctions within a daypart
 
 
 def _slot_shares(bid: float, base: dict[int, float], sigma: float) -> dict[int, tuple[float, float]]:
@@ -153,7 +150,7 @@ class Market:
                         * level * pmult for s in SLOTS}
                 occupied = {s: 0.0 for s in SLOTS}          # share of auctions a higher Aurel bid already holds
                 for bid, pi in sorted(entrants, key=lambda x: -x[0]):
-                    shares = _slot_shares(bid, base, AUCTION_SIGMA)
+                    shares = _slot_shares(bid, base, t["auction_sigma"])
                     # own-brand collision: where a sibling already holds the slot, this ad drops one slot down
                     moved, adj = 0.0, {}
                     for s in SLOTS:
