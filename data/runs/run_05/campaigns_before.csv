@@ -1,0 +1,26 @@
+campaign_id,campaign_name,sku_id,city_id,ad_type,daily_budget_inr,on_night,on_morning,on_afternoon,on_evening
+C-S1-DEL,AUR_S1_DEL_PB,S1,DEL,Product Booster,2100.0,True,True,True,True
+C-S1-MUM,AUR_S1_MUM_PB,S1,MUM,Product Booster,1600.0,True,True,True,True
+C-S1-BLR,AUR_S1_BLR_PB,S1,BLR,Product Booster,1600.0,True,True,True,True
+C-S1-HYD,AUR_S1_HYD_PB,S1,HYD,Product Booster,1150.0,True,True,True,True
+C-S1-PUN,AUR_S1_PUN_PB,S1,PUN,Product Booster,750.0,True,True,True,True
+C-S2-DEL,AUR_S2_DEL_PB,S2,DEL,Product Booster,1700.0,True,True,True,True
+C-S2-MUM,AUR_S2_MUM_PB,S2,MUM,Product Booster,900.0,True,True,True,True
+C-S2-BLR,AUR_S2_BLR_PB,S2,BLR,Product Booster,1350.0,True,True,True,True
+C-S2-HYD,AUR_S2_HYD_PB,S2,HYD,Product Booster,600.0,True,True,True,True
+C-S2-PUN,AUR_S2_PUN_PB,S2,PUN,Product Booster,400.0,True,True,True,True
+C-S3-DEL,AUR_S3_DEL_PB,S3,DEL,Product Booster,2900.0,True,True,True,True
+C-S3-MUM,AUR_S3_MUM_PB,S3,MUM,Product Booster,2350.0,True,True,True,True
+C-S3-BLR,AUR_S3_BLR_PB,S3,BLR,Product Booster,1050.0,True,True,True,True
+C-S3-HYD,AUR_S3_HYD_PB,S3,HYD,Product Booster,400.0,True,True,True,True
+C-S3-PUN,AUR_S3_PUN_PB,S3,PUN,Product Booster,750.0,True,True,True,True
+C-S4-DEL,AUR_S4_DEL_PB,S4,DEL,Product Booster,1150.0,True,True,True,True
+C-S4-MUM,AUR_S4_MUM_PB,S4,MUM,Product Booster,950.0,True,True,True,True
+C-S4-BLR,AUR_S4_BLR_PB,S4,BLR,Product Booster,1250.0,True,True,True,True
+C-S4-HYD,AUR_S4_HYD_PB,S4,HYD,Product Booster,400.0,True,True,True,True
+C-S4-PUN,AUR_S4_PUN_PB,S4,PUN,Product Booster,400.0,True,True,True,True
+C-S5-DEL,AUR_S5_DEL_PB,S5,DEL,Product Booster,400.0,True,True,True,True
+C-S5-MUM,AUR_S5_MUM_PB,S5,MUM,Product Booster,1300.0,True,True,True,True
+C-S5-BLR,AUR_S5_BLR_PB,S5,BLR,Product Booster,500.0,True,True,True,True
+C-S5-HYD,AUR_S5_HYD_PB,S5,HYD,Product Booster,400.0,True,True,True,True
+C-S5-PUN,AUR_S5_PUN_PB,S5,PUN,Product Booster,400.0,True,True,True,True

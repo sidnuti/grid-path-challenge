@@ -1,0 +1,11 @@
+source_id,demand_id,amount_inr,m_source,m_demand,gain_per_inr,p_better
+cut:C-S5-DEL:K03,raise:C-S3-BLR:K04,61.6,0.933,3.362,2.429,1.0
+cut:C-S5-DEL:K03,raise:C-S4-MUM:K06,19.91,0.933,9.206,8.273,1.0
+cut:C-S5-MUM:K03,raise:C-S1-MUM:K03,272.99,1.738,3.235,1.497,1.0
+cut:C-S5-MUM:K03,raise:C-S1-MUM:K07,76.72,1.738,5.657,3.919,1.0
+cut:C-S5-MUM:K03,raise:C-S2-PUN:K05,12.04,1.738,8.42,6.682,1.0
+cut:C-S5-MUM:K03,raise:C-S3-HYD:K03,6.2,1.738,3.233,1.495,1.0
+cut:C-S5-MUM:K03,raise:C-S4-HYD:K05,21.37,1.738,8.318,6.58,1.0
+cut:C-S5-BLR:K03,raise:C-S3-HYD:K03,259.32,1.405,3.233,1.828,1.0
+cut:C-S5-HYD:K03,raise:C-S3-BLR:K04,11.84,1.609,3.362,1.753,1.0
+cut:C-S5-HYD:K03,raise:C-S3-HYD:K03,143.72,1.609,3.233,1.624,1.0

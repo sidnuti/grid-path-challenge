@@ -1,0 +1,45 @@
+action_id,campaign_id,keyword_id,action_type,rule,outcome,detail
+r01-a001,C-S1-DEL,K07,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r01-a005,C-S1-BLR,K07,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r01-a011,C-S2-MUM,K05,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r01-a018,C-S2-PUN,K05,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r01-a031,C-S4-MUM,K06,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r01-a036,C-S4-HYD,K05,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r01-a037,C-S4-HYD,K06,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r01-a002,C-S1-MUM,K01,reduce_cpm,ALL,passed,
+r01-a003,C-S1-MUM,K04,reduce_cpm,ALL,passed,
+r01-a004,C-S1-BLR,K01,reduce_cpm,ALL,passed,
+r01-a006,C-S1-HYD,K01,reduce_cpm,ALL,passed,
+r01-a007,C-S1-HYD,K03,reduce_cpm,ALL,passed,
+r01-a008,C-S1-PUN,K01,reduce_cpm,ALL,passed,
+r01-a009,C-S2-DEL,K05,reduce_cpm,ALL,passed,
+r01-a010,C-S2-DEL,K06,increase_cpm,ALL,passed,
+r01-a012,C-S2-BLR,K01,reduce_cpm,ALL,passed,
+r01-a013,C-S2-BLR,K05,reduce_cpm,ALL,passed,
+r01-a014,C-S2-HYD,K01,reduce_cpm,ALL,passed,
+r01-a015,C-S2-HYD,K05,increase_cpm,ALL,passed,
+r01-a016,C-S2-HYD,K06,increase_cpm,ALL,passed,
+r01-a017,C-S2-PUN,K01,reduce_cpm,ALL,passed,
+r01-a019,C-S3-DEL,K01,reduce_cpm,ALL,passed,
+r01-a020,C-S3-DEL,K02,reduce_cpm,ALL,passed,
+r01-a021,C-S3-DEL,K04,reduce_cpm,ALL,passed,
+r01-a022,C-S3-MUM,K02,reduce_cpm,ALL,passed,
+r01-a023,C-S3-MUM,K09,reduce_cpm,ALL,passed,
+r01-a024,C-S3-BLR,K02,reduce_cpm,ALL,passed,
+r01-a025,C-S3-BLR,K03,reduce_cpm,ALL,passed,
+r01-a026,C-S3-BLR,K04,reduce_cpm,ALL,passed,
+r01-a027,C-S4-DEL,K05,increase_cpm,ALL,passed,
+r01-a028,C-S4-DEL,K10,reduce_cpm,ALL,passed,
+r01-a029,C-S4-MUM,K01,reduce_cpm,ALL,passed,
+r01-a030,C-S4-MUM,K05,increase_cpm,ALL,passed,
+r01-a032,C-S4-MUM,K10,reduce_cpm,ALL,passed,
+r01-a033,C-S4-BLR,K05,increase_cpm,ALL,passed,
+r01-a034,C-S4-BLR,K06,reduce_cpm,ALL,passed,
+r01-a035,C-S4-BLR,K10,reduce_cpm,ALL,passed,
+r01-a038,C-S5-DEL,K03,reduce_cpm,ALL,passed,
+r01-a039,C-S5-MUM,K03,reduce_cpm,ALL,passed,
+r01-a040,C-S5-MUM,K08,reduce_cpm,ALL,passed,
+r01-a041,C-S5-BLR,K03,reduce_cpm,ALL,passed,
+r01-a042,C-S1-DEL,,increase_budget,ALL,passed,
+r01-a043,C-S1-BLR,,increase_budget,ALL,passed,
+r01-a044,C-S2-MUM,,increase_budget,ALL,passed,

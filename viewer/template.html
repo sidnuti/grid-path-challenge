@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grid Path Traversal</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#f8f8f6;}
+.ov{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;background:#f8f8f6;color:#1a1a18;font-size:14px;line-height:1.6;}
+.ov code{font-family:ui-monospace,monospace;font-size:12px;background:#f1efe8;padding:1px 5px;border-radius:3px;color:#444441;}
+.page{max-width:1180px;margin:0 auto;padding:36px 28px;}
+.header{border-bottom:2px solid #e0dfd8;padding-bottom:20px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+.header-brand{font-size:11px;color:#888780;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:5px;}
+.header-title{font-size:22px;font-weight:500;color:#1a1a18;margin-bottom:8px;text-wrap:balance;}
+.header-meta{font-size:11px;color:#b4b2a9;display:flex;flex-wrap:wrap;gap:14px;}
+.header-stamp{text-align:right;font-size:11px;color:#b4b2a9;line-height:1.8;}
+.finding-box{background:#EAF3DE;border:1px solid #BEDFA0;border-left:4px solid #4E8A2E;border-radius:6px;padding:14px 18px;margin-bottom:24px;}
+.finding-box p{font-size:13px;color:#274d10;line-height:1.65;margin:0;}
+.finding-box strong{color:#183409;}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+.kpi-card{background:#fff;border:0.5px solid #e0dfd8;border-radius:10px;padding:16px 18px;}
+.kpi-card.star{border-left:3px solid #4E8A2E;}
+.kpi-label{font-size:11px;color:#888780;margin-bottom:6px;}
+.kpi-value{font-size:26px;font-weight:500;color:#1a1a18;line-height:1.05;margin-bottom:5px;font-variant-numeric:tabular-nums;}
+.kpi-delta{font-size:13px;font-weight:600;}
+.kpi-sub{font-size:11px;color:#b4b2a9;margin-top:6px;line-height:1.45;}
+.pos{color:#27500A;font-weight:600;}.neg{color:#A32D2D;font-weight:600;}.flat{color:#5F5E5A;font-weight:600;}
+.badge{display:inline-block;font-size:10px;font-weight:500;padding:2px 8px;border-radius:4px;white-space:nowrap;}
+.badge-ok{background:#EAF3DE;color:#27500A;}.badge-info{background:#E6F1FB;color:#0C447C;}.badge-gray{background:#F1EFE8;color:#5F5E5A;}.badge-warn{background:#FAEEDA;color:#854F0B;}.badge-bad{background:#FCEBEB;color:#A32D2D;}
+.section{margin-bottom:36px;}
+.section-title{font-size:12px;font-weight:500;color:#5F5E5A;text-transform:uppercase;letter-spacing:0.07em;padding-bottom:8px;border-bottom:1px solid #e0dfd8;margin-bottom:16px;}
+.section-lead{font-size:13px;color:#5F5E5A;margin-bottom:14px;line-height:1.6;max-width:880px;}
+.section-lead strong{color:#1a1a18;}
+.table-wrap{overflow-x:auto;border:0.5px solid #e0dfd8;border-radius:8px;background:#fff;margin-bottom:6px;}
+.table-wrap.scroll{max-height:420px;overflow-y:auto;}
+table{width:100%;border-collapse:collapse;font-size:12px;}
+th{text-align:left;font-size:10px;font-weight:500;color:#888780;text-transform:uppercase;letter-spacing:0.04em;padding:8px 11px;border-bottom:1px solid #e0dfd8;background:#fafaf8;white-space:nowrap;position:sticky;top:0;}
+td{padding:7px 11px;border-bottom:0.5px solid #f1efe8;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+.tr{text-align:right;font-variant-numeric:tabular-nums;}
+.rowhead{background:#fafaf8;font-weight:600;color:#1a1a18;}
+.sub{color:#b4b2a9;font-size:10.5px;}
+.insight{background:#fff;border:0.5px solid #e0dfd8;border-left:3px solid #185FA5;border-radius:0 6px 6px 0;padding:12px 16px;margin-top:12px;}
+.insight p{font-size:12px;color:#5F5E5A;line-height:1.65;margin:0;}
+.insight strong{color:#1a1a18;}
+.footer{border-top:0.5px solid #e0dfd8;padding-top:14px;margin-top:32px;font-size:10px;color:#b4b2a9;line-height:1.8;}
+.footer strong{color:#5F5E5A;}
+/* viewer additions */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px;}
+.pill{border:0.5px solid #d6d4cc;background:#fff;border-radius:999px;padding:4px 12px;font-size:12px;cursor:pointer;color:#5F5E5A;font-family:inherit;}
+.pill[aria-pressed="true"]{background:#1a1a18;color:#fff;border-color:#1a1a18;}
+.pill:focus-visible,select:focus-visible{outline:2px solid #185FA5;outline-offset:2px;}
+select{font-family:inherit;font-size:12px;padding:5px 8px;border:0.5px solid #d6d4cc;border-radius:6px;background:#fff;color:#1a1a18;max-width:100%;}
+label.ctl{font-size:11px;color:#888780;display:flex;gap:6px;align-items:center;}
+.path{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:8px;}
+.step{background:#fff;border:0.5px solid #e0dfd8;border-radius:8px;padding:10px 12px;}
+.step .n{font-size:10px;color:#888780;text-transform:uppercase;letter-spacing:0.06em;}
+.step .h{font-size:13px;font-weight:600;margin:2px 0 6px;}
+.step .v{font-size:11.5px;color:#5F5E5A;line-height:1.55;font-variant-numeric:tabular-nums;}
+.step.guard{border-top:3px solid #BA7517;}
+.grid2{display:grid;grid-template-columns:300px 1fr;gap:14px;}
+.card{background:#fff;border:0.5px solid #e0dfd8;border-radius:8px;padding:14px 16px;}
+.kv{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:12px;}
+.kv div:nth-child(odd){color:#888780;}
+.kv div:nth-child(even){text-align:right;font-variant-numeric:tabular-nums;font-weight:500;}
+.matrix td{text-align:center;font-variant-numeric:tabular-nums;line-height:1.35;}
+.matrix td .c1{font-weight:600;font-size:12px;}
+.matrix td .c2{font-size:10.5px;color:#888780;}
+.matrix td.cur{box-shadow:inset 0 0 0 2px #888780;}
+.matrix td.new{background:#EAF3DE;}
+.matrix td.new.cur{box-shadow:inset 0 0 0 2px #4E8A2E;}
+tr.chosen td{background:#EAF3DE;font-weight:600;}
+.legend{font-size:11px;color:#888780;display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-2px;margin-right:4px;}
+.chart-wrap{background:#fff;border:0.5px solid #e0dfd8;border-radius:8px;padding:12px 14px;overflow-x:auto;}
+.chart-wrap svg{display:block;width:100%;min-width:560px;height:auto;}
+.reason{font-size:12px;color:#1a1a18;margin-top:10px;padding:8px 10px;background:#fafaf8;border-radius:6px;}
+@media(max-width:820px){.kpi-grid{grid-template-columns:repeat(2,1fr);}.path{grid-template-columns:repeat(2,1fr);}.grid2{grid-template-columns:1fr;}.header-stamp{text-align:left;}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style></head>
+<body><div class="ov"><div class="page">
+
+<div class="header">
+  <div>
+    <div class="header-brand">Grid Path Challenge · Synthetic Blinkit market · Deterministic baseline</div>
+    <div class="header-title">How the grid-path traversal turns data into campaign actions, run by run</div>
+    <div class="header-meta"><span>Brand: Aurel (fictional)</span><span>5 SKUs × 5 cities × 10 keywords</span><span>25 campaigns (1 SKU × 1 city each)</span><span>28-day warm-up + 6 weekly runs</span></div>
+  </div>
+  <div class="header-stamp">Ad slots 1 / 5 / 9 / 13 · 4 dayparts<br>Offtake = ad + organic units × ASP<br>ROAS = direct (ad-attributed) revenue ÷ spend<br>Data: simulated, calibrated to production aggregates</div>
+</div>
+
+<div class="finding-box"><p id="bluf"></p></div>
+<div class="kpi-grid" id="kpis"></div>
+
+<div class="section">
+  <div class="section-title">§1 · Three reference policies on the same market</div>
+  <div class="section-lead">Each policy faces the <strong>same hidden market and the same random draws</strong>, so differences are caused by the actions alone. <strong>No-op</strong> never changes anything. <strong>Baseline</strong> is the deterministic traversal shown on this page. <strong>Naive</strong> raises every bid 30% and every budget 40% each run, filtered by the same guardrails.</div>
+  <div class="controls" role="group" aria-label="Chart metric">
+    <button class="pill" data-metric="offtake_day" aria-pressed="true">Offtake ₹/day</button>
+    <button class="pill" data-metric="droas" aria-pressed="false">Direct ROAS</button>
+    <button class="pill" data-metric="spend_day" aria-pressed="false">Ad spend ₹/day</button>
+  </div>
+  <div class="chart-wrap"><svg id="chart" viewBox="0 0 900 300" role="img" aria-label="Weekly series by policy"></svg></div>
+  <div class="legend"><span><span class="sw" style="background:#888780"></span>No-op</span><span><span class="sw" style="background:#185FA5"></span>Baseline traversal</span><span><span class="sw" style="background:#BA7517"></span>Naive scaler</span><span id="floorLegend"><span class="sw" style="background:#A32D2D"></span>ROAS floor</span></div>
+  <div class="table-wrap" style="margin-top:12px"><table id="refTable"></table></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§2 · The path, one run at a time</div>
+  <div class="section-lead">Every run starts from what was observed up to the decision day. Steps 1–4 are the traversal. Step 5 is the guardrail layer, which every policy passes through. Pick a run:</div>
+  <div class="controls" id="runPills" role="group" aria-label="Run"></div>
+  <div class="path" id="path"></div>
+  <div class="insight"><p id="runNote"></p></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§3 · Inside one cell</div>
+  <div class="section-lead">A <strong>cell</strong> is one keyword in one campaign (one SKU in one city). The grid prices every <strong>slot × daypart</strong> option. Slots in a daypart are alternatives, so a bid buys one per daypart. The outlined box is the slot the campaign actually held last week. The green box is where the chosen bid lands.</div>
+  <div class="controls">
+    <label class="ctl" for="selCamp">Campaign <select id="selCamp"></select></label>
+    <label class="ctl" for="selKw">Keyword <select id="selKw"></select></label>
+    <label class="ctl" for="selShow">Show <select id="selShow"><option value="droas">DROAS</option><option value="spend">₹ spend/day</option><option value="orders">orders/day</option></select></label>
+  </div>
+  <div class="grid2">
+    <div class="card"><div id="verdictCard"></div></div>
+    <div>
+      <div class="table-wrap"><table class="matrix" id="matrix"></table></div>
+      <div class="legend"><span><span class="sw" style="box-shadow:inset 0 0 0 2px #888780;background:#fff"></span>held last week</span><span><span class="sw" style="background:#EAF3DE"></span>chosen bid lands here</span><span id="reachNote"></span></div>
+    </div>
+  </div>
+  <div style="margin-top:14px" class="table-wrap"><table id="options"></table></div>
+  <div class="reason" id="cellReason"></div>
+  <div style="margin-top:14px" class="table-wrap"><table id="cellActions"></table></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§4 · Money: sources → demands</div>
+  <div class="section-lead">Rupees freed by bid cuts, plus a growth pool of unspent plan money (priced at the ROAS floor, open only while the portfolio runs ≥ 5% above it), fund bid raises and budget-bound campaigns. A rupee moves only when the receiver's marginal ROAS ≥ <strong>1.2×</strong> the source's and <strong>P(better) &gt; 0.8</strong>. All moves are solved together as one transport LP. Freed rupees that nobody qualifies for are released.</div>
+  <div class="table-wrap scroll"><table id="transfers"></table></div>
+  <div class="grid2" style="grid-template-columns:1fr 1fr;margin-top:12px">
+    <div class="table-wrap scroll"><table id="sources"></table></div>
+    <div class="table-wrap scroll"><table id="demands"></table></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">§5 · Actions and the guardrail layer</div>
+  <div class="section-lead">Everything the ledger proposed this run, and what each guardrail did to it. <span class="badge badge-ok">passed</span> ships, <span class="badge badge-warn">clamped</span> ships changed, <span class="badge badge-bad">blocked</span> / <span class="badge badge-bad">trimmed</span> does not ship.</div>
+  <div class="controls"><label class="ctl" for="selType">Action type <select id="selType"><option value="">all</option></select></label></div>
+  <div class="table-wrap scroll"><table id="actions"></table></div>
+  <div class="table-wrap scroll" style="margin-top:12px"><table id="ledgerLog"></table></div>
+</div>
+
+<div class="section">
+  <div class="section-title">§6 · Base data</div>
+  <div class="controls" id="baseTabs" role="group" aria-label="Base table"></div>
+  <div class="table-wrap scroll"><table id="baseTable"></table></div>
+</div>
+
+<div class="footer">
+  <strong>Sources.</strong> Simulated by <code>gpc/market.py</code> (hidden from policies). Ad-slot positions, slot view / conversion / price ratios, daypart search shares and direct-ROAS ranges by keyword type are calibrated to aggregated production Blinkit data (industry rank curve, rank × hour bid curve, MMM cell outputs); see <code>CALIBRATION.md</code>. Traversal: <code>gpc/engine/</code>. Guardrails: <code>gpc/guardrails.py</code>.<br>
+  <strong>Caveats.</strong> All brands, products, campaigns and numbers are synthetic. Grid values are the engine's estimates from observed data, not the market's truth; the gap between the two is part of the challenge.
+</div>
+</div></div>
+
+<script>
+const D=/*__DATA__*/null;
+const $=s=>document.querySelector(s);
+const inr=v=>v==null?"–":(v<0?"−":"")+"₹"+Math.abs(Math.round(v)).toLocaleString("en-IN");
+const k=v=>v==null?"–":(Math.abs(v)>=1e5?"₹"+(v/1e5).toFixed(2)+"L":inr(v));
+const x2=v=>v==null?"–":(+v).toFixed(2)+"×";
+const pct=v=>v==null?"–":((v>0?"+":"")+v.toFixed(1)+"%");
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const kwName=Object.fromEntries(D.base.keywords.map(r=>[r.keyword_id,r.keyword]));
+const kwType=Object.fromEntries(D.base.keywords.map(r=>[r.keyword_id,r.keyword_type]));
+const skuName=Object.fromEntries(D.base.products.map(r=>[r.sku_id,r.sku_name]));
+const cityName=Object.fromEntries(D.base.cities.map(r=>[r.city_id,r.city_name]));
+const DPS=["night","morning","afternoon","evening"], SLOTS=[1,5,9,13];
+let run=1, metric="offtake_day";
+const R=()=>D.runs[run-1];
+
+function table(el,cols,data,rowCls){
+  const h="<thead><tr>"+cols.map(c=>`<th class="${c.r?'tr':''}">${c.h}</th>`).join("")+"</tr></thead>";
+  const b="<tbody>"+(data.length?data.map(d=>`<tr class="${rowCls?rowCls(d):''}">`+cols.map(c=>`<td class="${c.r?'tr':''} ${c.cls||''}">${c.f?c.f(d):esc(d[c.k])}</td>`).join("")+"</tr>").join(""):`<tr><td colspan="${cols.length}" class="sub">nothing this run</td></tr>`)+"</tbody>";
+  el.innerHTML=h+b;
+}
+
+// ── KPIs + BLUF ────────────────────────────────────────────────
+function header(){
+  const b=D.summary.baseline,n=D.summary.no_op,v=D.summary.naive;
+  const vsN=(b.offtake_inr/n.offtake_inr-1)*100, nvN=(v.offtake_inr/n.offtake_inr-1)*100;
+  $("#bluf").innerHTML=`<strong>The deterministic traversal protects ROAS but barely grows offtake: ${pct(vsN)} against doing nothing, while lifting direct ROAS from ${x2(b.warmup_direct_roas)} to ${x2(b.direct_roas)}.</strong> It spends <strong>${inr(b.ad_spend_inr_per_day)}/day</strong> against no-op's ${inr(n.ad_spend_inr_per_day)}, leaving ROAS headroom unused above the <strong>${x2(b.roas_floor)}</strong> floor. Scaling everything is not the answer either: the naive scaler grows offtake ${pct(nvN)} but ends at <strong>${x2(v.direct_roas)}</strong>, below the floor, even after the guardrails trimmed it. The challenge is to find the growth in between.`;
+  $("#kpis").innerHTML=[
+    ["star","Baseline offtake / day (6 runs)",k(b.offtake_inr_per_day),pct(vsN)+" vs no-op",vsN>0.05?"pos":"flat",`Warm-up ${k(b.warmup_offtake_inr_per_day)}/day. Ad + organic, all 5 SKUs.`],
+    ["","Baseline direct ROAS",x2(b.direct_roas),`floor ${x2(b.roas_floor)}`,"pos",`Warm-up ${x2(b.warmup_direct_roas)}. Constraint met.`],
+    ["","Baseline ad spend / day",inr(b.ad_spend_inr_per_day),pct((b.ad_spend_inr_per_day/n.ad_spend_inr_per_day-1)*100)+" vs no-op","flat","Mostly bid cuts and bid shading."],
+    ["","Actions shipped",b.actions_shipped,`of ${b.actions_proposed} proposed`,"flat","Across 6 runs, after guardrails."],
+  ].map(([c,l,val,d,dc,s])=>`<div class="kpi-card ${c}"><div class="kpi-label">${l}</div><div class="kpi-value">${val}</div><div class="kpi-delta ${dc}">${d}</div><div class="kpi-sub">${s}</div></div>`).join("");
+  const rows=[["no_op","No-op"],["baseline","Baseline traversal"],["naive","Naive scaler"]].map(([kk,l])=>({l,...D.summary[kk],vs:(D.summary[kk].offtake_inr/n.offtake_inr-1)*100}));
+  table($("#refTable"),[
+    {h:"Policy",f:d=>`<span class="rowhead" style="background:none">${d.l}</span>`},
+    {h:"Offtake ₹/day",r:1,f:d=>inr(d.offtake_inr_per_day)},{h:"vs no-op",r:1,f:d=>`<span class="${d.vs>0.05?'pos':d.vs<-0.05?'neg':'flat'}">${pct(d.vs)}</span>`},
+    {h:"Ad spend ₹/day",r:1,f:d=>inr(d.ad_spend_inr_per_day)},{h:"Direct ROAS",r:1,f:d=>x2(d.direct_roas)},
+    {h:"ROAS ≥ floor",f:d=>d.roas_constraint_met?'<span class="badge badge-ok">met</span>':'<span class="badge badge-bad">fails</span>'},
+    {h:"Actions shipped / proposed",r:1,f:d=>`${d.actions_shipped} / ${d.actions_proposed}`}],rows);
+}
+
+// ── chart ──────────────────────────────────────────────────────
+function chart(){
+  const svg=$("#chart"),W=900,H=300,L=70,Rm=20,T=18,B=40;
+  const ser=[["no_op","#888780"],["baseline","#185FA5"],["naive","#BA7517"]];
+  const labels=D.series.baseline.map(p=>p.label);
+  let vals=ser.flatMap(([s])=>D.series[s].map(p=>p[metric])).filter(v=>v!=null);
+  const floor=D.summary.baseline.roas_floor;
+  if(metric==="droas") vals.push(floor);
+  let lo=Math.min(...vals),hi=Math.max(...vals); const pad=(hi-lo)*0.12||1; lo-=pad; hi+=pad;
+  const xs=i=>L+i*(W-L-Rm)/(labels.length-1), ys=v=>T+(hi-v)*(H-T-B)/(hi-lo);
+  const fmt=v=>metric==="droas"?v.toFixed(2)+"×":(v>=1e5?"₹"+(v/1e5).toFixed(2)+"L":"₹"+(v/1e3).toFixed(1)+"K");
+  let g="";
+  for(let i=0;i<=4;i++){const v=lo+(hi-lo)*i/4,y=ys(v);g+=`<line x1="${L}" x2="${W-Rm}" y1="${y}" y2="${y}" stroke="#ecebe5"/><text x="${L-8}" y="${y+4}" text-anchor="end" font-size="11" fill="#888780">${fmt(v)}</text>`;}
+  labels.forEach((l,i)=>g+=`<text x="${xs(i)}" y="${H-14}" text-anchor="middle" font-size="11" fill="#888780">${l}</text>`);
+  if(metric==="droas") g+=`<line x1="${L}" x2="${W-Rm}" y1="${ys(floor)}" y2="${ys(floor)}" stroke="#A32D2D" stroke-dasharray="5 4"/><text x="${W-Rm}" y="${ys(floor)-6}" text-anchor="end" font-size="11" fill="#A32D2D">floor ${floor.toFixed(2)}×</text>`;
+  ser.forEach(([s,c])=>{const p=D.series[s];g+=`<polyline fill="none" stroke="${c}" stroke-width="2.2" points="${p.map((q,i)=>xs(i)+","+ys(q[metric])).join(" ")}"/>`+p.map((q,i)=>`<circle cx="${xs(i)}" cy="${ys(q[metric])}" r="${i===p.length-1?4:2.6}" fill="${c}"><title>${s} · ${q.label}: ${fmt(q[metric])}</title></circle>`).join("");});
+  svg.innerHTML=g; $("#floorLegend").hidden=metric!=="droas";
+}
+document.querySelectorAll("[data-metric]").forEach(b=>b.onclick=()=>{metric=b.dataset.metric;document.querySelectorAll("[data-metric]").forEach(x=>x.setAttribute("aria-pressed",x===b));chart();});
+
+// ── path stepper ───────────────────────────────────────────────
+function path(){
+  const r=R(),vc=r.verdict_counts,bids=r.bids;
+  const raise=bids.filter(b=>b.chosen_bid>b.live_bid).length,cut=bids.filter(b=>b.chosen_bid<b.live_bid).length;
+  const sum=(a,f)=>a.reduce((s,x)=>s+(+x[f]||0),0);
+  const gl=r.guardrail_log, cnt=o=>gl.filter(g=>g.outcome===o).length;
+  const steps=[
+    ["1","Grid",`${new Set(r.grid.map(g=>g.campaign_id+g.keyword_id)).size} cells × 4 slots × 4 dayparts<br>${r.grid.filter(g=>g.reach_source!=="observed").length/4|0} cell-dayparts priced from truncated days or priors`],
+    ["2","Loop verdicts",`CLEARS ${vc.CLEARS||0} · MISSES ${vc.MISSES||0} · THIN ${vc.THIN||0}<br>${r.verdicts.filter(v=>v.ladder_fraction>0).length} misses past the patience ladder`],
+    ["3a","Bid first",`${raise} raises · ${cut} cuts<br>${bids.length-raise-cut} cells hold`],
+    ["3b","Move money",`${r.sources.length} sources ${k(sum(r.sources,"supply_inr"))}/day<br>${r.demands.length} demands ${k(sum(r.demands,"demand_inr"))}/day<br>moved ${k(sum(r.transfers,"amount_inr"))}/day`],
+    ["4","Ledger",`${r.proposed.length} actions proposed<br>${r.dayparts.length} daypart switches · ${r.ledger_log.length} dropped`],
+    ["5","Guardrails",`${r.actions.length} ship · ${cnt("clamped")} clamped<br>${cnt("blocked")} blocked · ${cnt("trimmed")} trimmed`],
+  ];
+  $("#path").innerHTML=steps.map(([n,h,v],i)=>`<div class="step ${i===5?'guard':''}"><div class="n">Step ${n}</div><div class="h">${h}</div><div class="v">${v}</div></div>`).join("");
+  const n=r.notes,g=r.guardrail_summary;
+  $("#runNote").innerHTML=`<strong>Run ${r.run}, decided ${r.date}.</strong> Portfolio direct ROAS over the last 7 days was <strong>${x2(n.portfolio_droas_7d)}</strong> against a floor of ${x2(n.roas_floor)}; the growth pool was <strong>${n.growth_pool_open?"open ("+inr(n.growth_pool_inr)+"/day)":"closed"}</strong>. After guardrails the run projects ${g.projected_delta_spend!=null?`<strong>${inr(g.projected_delta_spend)}/day</strong> of spend and <strong>${inr(g.projected_delta_rev)}/day</strong> of ad revenue change, landing at ${x2(g.projected_droas_after)} on the grid's own estimate`:"no change"}.`;
+}
+
+// ── cell inspector ─────────────────────────────────────────────
+function fillCamps(){
+  const camps=[...new Set(R().verdicts.map(v=>v.campaign_id))].sort();
+  const s=$("#selCamp"),cur=s.value;
+  s.innerHTML=camps.map(c=>{const [_,sku,city]=c.split("-");return `<option value="${c}">${c} · ${esc(skuName[sku])} · ${cityName[city]}</option>`}).join("");
+  s.value=cur&&camps.includes(cur)?cur:(camps.find(c=>R().bids.some(b=>b.campaign_id===c&&b.chosen_bid!==b.live_bid))||camps[0]);
+  fillKws();
+}
+function fillKws(){
+  const c=$("#selCamp").value,s=$("#selKw"),cur=s.value;
+  const kws=R().verdicts.filter(v=>v.campaign_id===c).map(v=>v.keyword_id);
+  s.innerHTML=kws.map(x=>`<option value="${x}">${x} · ${esc(kwName[x])} (${kwType[x]})</option>`).join("");
+  s.value=kws.includes(cur)?cur:(kws.find(x=>R().bids.some(b=>b.campaign_id===c&&b.keyword_id===x&&b.chosen_bid!==b.live_bid))||kws[0]);
+}
+function cell(){
+  const r=R(),c=$("#selCamp").value,kw=$("#selKw").value,show=$("#selShow").value;
+  const v=r.verdicts.find(x=>x.campaign_id===c&&x.keyword_id===kw), b=r.bids.find(x=>x.campaign_id===c&&x.keyword_id===kw);
+  const pc=r.pacing.find(x=>x.campaign_id===c)||{};
+  const vb={CLEARS:"badge-ok",MISSES:"badge-bad",THIN:"badge-gray"}[v.verdict];
+  $("#verdictCard").innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><strong>${esc(kwName[kw])}</strong><span class="badge ${vb}">${v.verdict}</span></div>
+  <div class="kv">
+    <div>Plan goal (direct ROAS)</div><div>${x2(v.goal_droas)}</div>
+    <div>Marginal floor</div><div>${x2(v.marginal_floor_droas)}</div>
+    <div>Realised, 28 days</div><div>${x2(v.droas_28d)}</div>
+    <div>Shrunk (orders/(orders+25))</div><div>${x2(v.droas_shrunk)}</div>
+    <div>Orders, 28 days</div><div>${v.orders_28d}</div>
+    <div>Spend / day, last 7</div><div>${inr(v.spend_7d_avg)}</div>
+    <div>Miss streak</div><div>${v.miss_streak_days} days</div>
+    <div>Patience ladder allows</div><div>${v.ladder_fraction?Math.round(v.ladder_fraction*100)+"% cut":"no cut"}</div>
+    <div>Live bid → chosen</div><div>${inr(b.live_bid)} → ${inr(b.chosen_bid)}</div>
+    <div>Campaign budget</div><div>${inr(pc.daily_budget_inr)}</div>
+    <div>Ran out (last 7 days)</div><div>${pc.ran_out_days??"–"}/7 ${pc.typical_run_out?"· by "+pc.typical_run_out:""}</div>
+  </div>`;
+  const g=r.grid.filter(x=>x.campaign_id===c&&x.keyword_id===kw);
+  const newSlots=(b.slots_new||"").split("/"), tier=g[0]?.tier;
+  let h="<thead><tr><th>Slot</th>"+DPS.map(d=>`<th>${d}</th>`).join("")+"</tr></thead><tbody>";
+  SLOTS.forEach(s=>{h+=`<tr><td class="rowhead">${s}</td>`+DPS.map((d,i)=>{const q=g.find(x=>x.daypart===d&&x.slot===s);if(!q)return"<td>–</td>";
+    const main=show==="droas"?x2(q.droas):show==="spend"?inr(q.spend_day):(+q.orders_day).toFixed(2);
+    const cls=(q.current_slot===s?"cur ":"")+(String(s)===newSlots[i]?"new":"");
+    return `<td class="${cls}"><div class="c1">${main}</div><div class="c2">₹${Math.round(q.cpm_inr)} CPM · ${Math.round(q.impressions_day).toLocaleString("en-IN")} impr</div></td>`}).join("")+"</tr>";});
+  $("#matrix").innerHTML=h+"</tbody>";
+  const srcs=[...new Set(g.map(x=>x.reach_source))];
+  $("#reachNote").textContent=`tier ${tier} · capacity from: ${srcs.join(", ")}`;
+  const opts=r.options.filter(o=>o.campaign_id===c&&o.keyword_id===kw);
+  const live=opts.find(o=>o.step_pct===0)||opts[0];
+  table($("#options"),[
+    {h:"Bid step",r:1,f:o=>pct(o.step_pct)},{h:"Bid",r:1,f:o=>inr(o.bid)},{h:"Slot by daypart (N/M/A/E)",f:o=>esc(o.slots)},
+    {h:"Pred spend/day",r:1,f:o=>inr(o.pred_spend)},{h:"Pred revenue/day",r:1,f:o=>inr(o.pred_rev)},{h:"Pred DROAS",r:1,f:o=>x2(o.pred_droas)},
+    {h:"≥ goal",f:o=>o.pred_droas==null?"–":(o.pred_droas>=v.goal_droas?'<span class="pos">yes</span>':'<span class="neg">no</span>')},
+    {h:"Marginal vs live",r:1,f:o=>{const ds=o.pred_spend-live.pred_spend,dr=o.pred_rev-live.pred_rev;if(Math.abs(ds)<1)return"–";const m=dr/ds;return `<span class="${ds>0&&m<v.marginal_floor_droas?'neg':''}">${x2(m)}</span>`}},
+  ],opts,o=>o.chosen?"chosen":"");
+  $("#cellReason").innerHTML=`<strong>Decision:</strong> ${esc(b.reason)}`;
+  const acts=r.proposed.filter(a=>a.campaign_id===c);
+  table($("#cellActions"),[
+    {h:"Action",f:a=>`<code>${a.action_type}</code>`},{h:"Keyword",f:a=>a.keyword_id?esc(kwName[a.keyword_id]):"campaign"},
+    {h:"From",r:1,f:a=>isNaN(+a.current_value)?esc(a.current_value):inr(a.current_value)},{h:"To",r:1,f:a=>isNaN(+a.new_value)?esc(a.new_value):inr(a.new_value)},
+    {h:"Guardrail",f:a=>gTag(a.action_id)},{h:"Why",f:a=>`<span class="sub">${esc(a.reason)}</span>`}],acts);
+}
+function gTag(id){
+  const e=R().guardrail_log.filter(g=>g.action_id===id);
+  return e.map(g=>{const c={passed:"badge-ok",clamped:"badge-warn",blocked:"badge-bad",trimmed:"badge-bad"}[g.outcome];return `<span class="badge ${c}" title="${esc(g.detail)}">${g.rule==="ALL"?"passed":g.rule.replace(/^G\d_/,"").replace(/_/g," ").toLowerCase()+" · "+g.outcome}</span>`}).join(" ")||'<span class="badge badge-gray">–</span>';
+}
+
+// ── money ──────────────────────────────────────────────────────
+function money(){
+  const r=R();
+  const lbl=id=>{if(id==="pool:growth")return"Growth pool";const [kind,c,kw]=id.split(":");return `${c}${kw?" · "+esc(kwName[kw]):" · budget"}`};
+  table($("#transfers"),[{h:"From (source)",f:t=>lbl(t.source_id)},{h:"To (demand)",f:t=>lbl(t.demand_id)},{h:"₹/day",r:1,f:t=>inr(t.amount_inr)},
+    {h:"m source",r:1,f:t=>x2(t.m_source)},{h:"m demand",r:1,f:t=>x2(t.m_demand)},{h:"Gain per ₹",r:1,f:t=>x2(t.gain_per_inr)},{h:"P(better)",r:1,f:t=>(+t.p_better).toFixed(2)}],r.transfers);
+  table($("#sources"),[{h:"Source",f:s=>s.kind==="growth_pool"?"Growth pool":`${s.campaign_id} · ${esc(kwName[s.keyword_id])}`},{h:"Supply",r:1,f:s=>inr(s.supply_inr)},{h:"m",r:1,f:s=>x2(s.m)},{h:"Placed",r:1,f:s=>inr(s.placed_inr)},{h:"Released",r:1,f:s=>inr(s.released_inr)}],r.sources);
+  table($("#demands"),[{h:"Demand",f:d=>d.kind==="budget_bound"?`${d.campaign_id} · budget`:`${d.campaign_id} · ${esc(kwName[d.keyword_id])}`},{h:"Kind",f:d=>`<span class="sub">${d.kind.replace("_"," ")}</span>`},{h:"Wants",r:1,f:d=>inr(d.demand_inr)},{h:"m",r:1,f:d=>x2(d.m)},{h:"Funded",r:1,f:d=>inr(d.funded_inr)}],r.demands);
+}
+
+// ── actions ────────────────────────────────────────────────────
+function actions(){
+  const r=R(),t=$("#selType"),types=[...new Set(r.proposed.map(a=>a.action_type))].sort(),cur=t.value;
+  t.innerHTML='<option value="">all</option>'+types.map(x=>`<option>${x}</option>`).join(""); t.value=types.includes(cur)?cur:"";
+  const rows=r.proposed.filter(a=>!t.value||a.action_type===t.value);
+  table($("#actions"),[{h:"ID",f:a=>`<span class="sub">${a.action_id}</span>`},{h:"Campaign",f:a=>a.campaign_id},{h:"Keyword",f:a=>a.keyword_id?esc(kwName[a.keyword_id]):"–"},
+    {h:"Action",f:a=>`<code>${a.action_type}</code>`},{h:"From",r:1,f:a=>isNaN(+a.current_value)?esc(a.current_value):inr(a.current_value)},{h:"To",r:1,f:a=>isNaN(+a.new_value)?esc(a.new_value):inr(a.new_value)},
+    {h:"Δ",r:1,f:a=>a.change_pct==null?"–":pct(a.change_pct)},{h:"Guardrail",f:a=>gTag(a.action_id)},{h:"Why",f:a=>`<span class="sub">${esc(a.reason)}</span>`}],rows);
+  table($("#ledgerLog"),[{h:"Dropped in the ledger",f:l=>`${l.campaign_id}${l.keyword_id?" · "+esc(kwName[l.keyword_id]):""}`},{h:"Decision",f:l=>l.decision},{h:"Why",f:l=>`<span class="sub">${esc(l.detail)}</span>`}],r.ledger_log);
+}
+
+// ── base data ──────────────────────────────────────────────────
+const baseTabs=[["cities","Cities"],["products","Products"],["keywords","Keywords"],["keyword_sku","Keyword × SKU"],["campaigns","Campaigns (start)"],["plan","Media plan"],["industry_rank_curve","Rank curve"],["dayparts","Dayparts"]];
+let baseSel="cities";
+function base(){
+  $("#baseTabs").innerHTML=baseTabs.map(([kk,l])=>`<button class="pill" data-base="${kk}" aria-pressed="${kk===baseSel}">${l}</button>`).join("");
+  document.querySelectorAll("[data-base]").forEach(b=>b.onclick=()=>{baseSel=b.dataset.base;base();});
+  const d=D.base[baseSel],cols=Object.keys(d[0]||{});
+  table($("#baseTable"),cols.map(c=>({h:c.replace(/_/g," "),r:typeof d[0][c]==="number",f:x=>typeof x[c]==="number"?(+x[c]).toLocaleString("en-IN",{maximumFractionDigits:4}):esc(x[c])})),d);
+}
+
+function renderRun(){
+  document.querySelectorAll("#runPills .pill").forEach(p=>p.setAttribute("aria-pressed",+p.dataset.run===run));
+  path(); fillCamps(); cell(); money(); actions();
+}
+$("#runPills").innerHTML=D.runs.map(r=>`<button class="pill" data-run="${r.run}">Run ${r.run} · ${r.date.slice(5)}</button>`).join("");
+document.querySelectorAll("#runPills .pill").forEach(p=>p.onclick=()=>{run=+p.dataset.run;renderRun();});
+$("#selCamp").onchange=()=>{fillKws();cell();}; $("#selKw").onchange=cell; $("#selShow").onchange=cell; $("#selType").onchange=actions;
+header(); chart(); renderRun(); base();
+</script>
+</body></html>

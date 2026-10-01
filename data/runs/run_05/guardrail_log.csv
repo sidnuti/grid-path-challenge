@@ -1,0 +1,22 @@
+action_id,campaign_id,keyword_id,action_type,rule,outcome,detail
+r05-a003,C-S1-MUM,K07,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r05-a009,C-S2-PUN,K05,increase_cpm,G3_TOP_SLOT,blocked,already at slot 1 on ≥ 80% of impressions
+r05-a001,C-S1-DEL,K04,reduce_cpm,ALL,passed,
+r05-a002,C-S1-MUM,K01,reduce_cpm,ALL,passed,
+r05-a004,C-S1-BLR,K02,reduce_cpm,ALL,passed,
+r05-a005,C-S1-BLR,K03,reduce_cpm,ALL,passed,
+r05-a006,C-S2-DEL,K01,reduce_cpm,ALL,passed,
+r05-a007,C-S2-DEL,K06,increase_cpm,ALL,passed,
+r05-a008,C-S2-BLR,K05,reduce_cpm,ALL,passed,
+r05-a010,C-S3-MUM,K09,reduce_cpm,ALL,passed,
+r05-a011,C-S3-HYD,K03,reduce_cpm,ALL,passed,
+r05-a012,C-S4-DEL,K01,reduce_cpm,ALL,passed,
+r05-a013,C-S4-MUM,K06,increase_cpm,ALL,passed,
+r05-a014,C-S4-HYD,K06,increase_cpm,ALL,passed,
+r05-a015,C-S5-DEL,K01,reduce_cpm,ALL,passed,
+r05-a016,C-S5-DEL,K03,reduce_cpm,ALL,passed,
+r05-a017,C-S5-MUM,K03,reduce_cpm,ALL,passed,
+r05-a018,C-S5-BLR,K01,reduce_cpm,ALL,passed,
+r05-a019,C-S5-BLR,K03,reduce_cpm,ALL,passed,
+r05-a020,C-S5-HYD,K01,reduce_cpm,ALL,passed,
+r05-a021,C-S1-MUM,,increase_budget,ALL,passed,

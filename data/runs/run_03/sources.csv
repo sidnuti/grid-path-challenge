@@ -1,0 +1,9 @@
+source_id,kind,campaign_id,keyword_id,supply_inr,m,orders,placed_inr,released_inr
+cut:C-S1-PUN:K03,bid_cut,C-S1-PUN,K03,297.23,2.958,66.0,297.23,0.0
+cut:C-S3-DEL:K03,bid_cut,C-S3-DEL,K03,150.69,3.53,605.0,150.69,0.0
+cut:C-S3-BLR:K03,bid_cut,C-S3-BLR,K03,535.85,3.214,206.0,535.85,0.0
+cut:C-S5-DEL:K03,bid_cut,C-S5-DEL,K03,97.66,1.472,96.0,97.66,0.0
+cut:C-S5-BLR:K01,bid_cut,C-S5-BLR,K01,24.94,9.342,38.0,0.0,24.94
+cut:C-S5-BLR:K03,bid_cut,C-S5-BLR,K03,320.49,1.255,135.0,320.49,0.0
+cut:C-S5-PUN:K03,bid_cut,C-S5-PUN,K03,36.82,0.79,31.0,36.82,0.0
+pool:growth,growth_pool,,,2776.35,4.535,400.0,0.0,0.0

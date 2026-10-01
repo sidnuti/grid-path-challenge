@@ -1,0 +1,6 @@
+source_id,kind,campaign_id,keyword_id,supply_inr,m,orders,placed_inr,released_inr
+cut:C-S3-DEL:K01,bid_cut,C-S3-DEL,K01,35.14,12.649,64.0,0.0,35.14
+cut:C-S3-BLR:K03,bid_cut,C-S3-BLR,K03,280.85,2.887,229.0,280.85,0.0
+cut:C-S5-BLR:K03,bid_cut,C-S5-BLR,K03,77.63,1.038,122.0,77.63,0.0
+cut:C-S5-HYD:K03,bid_cut,C-S5-HYD,K03,46.55,1.339,64.0,46.55,0.0
+pool:growth,growth_pool,,,2598.29,4.535,400.0,0.0,0.0

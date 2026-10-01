@@ -1,0 +1,5 @@
+daypart,hours,search_share,bid_level
+night,00–06,0.11,0.98
+morning,06–12,0.26,1.0
+afternoon,12–18,0.33,1.01
+evening,18–24,0.3,0.99

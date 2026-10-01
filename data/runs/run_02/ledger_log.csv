@@ -1,0 +1,6 @@
+campaign_id,keyword_id,decision,outcome,detail
+C-S1-DEL,K03,bid raise,dropped,only 0% funded by the transport step
+C-S1-DEL,K04,bid raise,dropped,only 0% funded by the transport step
+C-S1-MUM,K03,bid raise,dropped,only 0% funded by the transport step
+C-S3-HYD,K03,bid raise,dropped,only 0% funded by the transport step
+C-S4-HYD,K10,bid raise,dropped,only 0% funded by the transport step

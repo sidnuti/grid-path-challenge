@@ -1,0 +1,111 @@
+campaign_id,keyword_id,verdict,tier,live_bid,chosen_bid,step_pct,pred_spend_live,pred_rev_live,pred_spend_new,pred_rev_new,slots_live,slots_new,reason,delta_spend,delta_rev,marginal_droas
+C-S1-DEL,K01,MISSES,A,225.0,225.0,0,208.72,2868.53,208.72,2868.53,1/1/1/1,1/1/1/1,misses goal; streak 0d < 3 — patience ladder says wait,0.0,0.0,
+C-S1-DEL,K02,THIN,A,200.0,200.0,0,23.5,374.98,23.5,374.98,9/5/5/9,9/5/5/9,thin evidence — hold,0.0,0.0,
+C-S1-DEL,K03,CLEARS,A,305.0,320.0,5,1516.99,5133.06,1775.17,6102.51,1/1/1/5,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",258.18,969.45,3.755
+C-S1-DEL,K04,CLEARS,A,295.0,310.0,5,409.24,1517.78,476.5,1785.16,1/1/1/5,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",67.26,267.38,3.975
+C-S1-DEL,K07,CLEARS,A,275.0,290.0,5,159.76,904.59,184.92,1059.3,1/1/1/5,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",25.16,154.71,6.149
+C-S1-DEL,K09,CLEARS,A,425.0,425.0,0,381.3,325.71,381.3,325.71,5/1/1/9,5/1/1/9,clears goal; no better option on the grid,0.0,0.0,
+C-S1-MUM,K01,CLEARS,A,235.0,235.0,0,263.77,4308.05,263.77,4308.05,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-MUM,K02,CLEARS,A,250.0,250.0,0,90.13,1995.76,90.13,1995.76,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-MUM,K03,CLEARS,A,335.0,350.0,5,719.94,1758.68,1230.89,3367.92,5/5/5/1,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",510.95,1609.24,3.15
+C-S1-MUM,K04,CLEARS,A,350.0,350.0,0,460.4,1694.91,460.4,1694.91,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-MUM,K07,CLEARS,A,280.0,310.0,10,35.76,123.77,120.0,579.56,9/9/5/5,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",84.24,455.79,5.411
+C-S1-MUM,K09,CLEARS,A,550.0,550.0,0,874.98,597.02,874.98,597.02,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-BLR,K01,CLEARS,A,215.0,225.0,5,132.64,1621.42,154.25,1929.34,1/1/1/5,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",21.61,307.92,14.249
+C-S1-BLR,K02,CLEARS,A,250.0,240.0,-5,81.01,1490.32,81.01,1490.32,1/1/1/1,1/1/1/1,lower: same revenue for less spend,0.0,0.0,
+C-S1-BLR,K03,MISSES,A,325.0,310.0,-5,1582.77,4794.6,1582.77,4794.6,1/1/1/1,1/1/1/1,cut: misses goal 3d; smallest bid step down,0.0,0.0,
+C-S1-BLR,K04,MISSES,A,320.0,320.0,0,263.34,932.77,263.34,932.77,1/1/1/1,1/1/1/1,misses goal; streak 1d < 3 — patience ladder says wait,0.0,0.0,
+C-S1-BLR,K07,CLEARS,A,290.0,305.0,5,152.31,756.14,161.7,808.76,5/1/1/1,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",9.39,52.62,5.604
+C-S1-BLR,K09,CLEARS,B,465.0,465.0,0,641.67,428.61,641.67,428.61,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-HYD,K01,THIN,A,200.0,200.0,0,107.95,1803.56,107.95,1803.56,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S1-HYD,K02,THIN,A,200.0,200.0,0,13.91,256.04,13.91,256.04,5/5/5/5,5/5/5/5,thin evidence — hold,0.0,0.0,
+C-S1-HYD,K03,CLEARS,A,290.0,290.0,0,784.15,2532.98,784.15,2532.98,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-HYD,K04,CLEARS,A,275.0,275.0,0,178.86,690.84,178.86,690.84,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-HYD,K07,THIN,A,235.0,235.0,0,13.76,48.14,13.76,48.14,9/9/9/5,9/9/9/5,thin evidence — hold,0.0,0.0,
+C-S1-HYD,K09,CLEARS,A,555.0,555.0,0,417.5,393.77,417.5,393.77,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-PUN,K01,CLEARS,A,200.0,200.0,0,75.85,1469.1,75.85,1469.1,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-PUN,K02,THIN,A,200.0,200.0,0,24.3,563.09,24.3,563.09,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S1-PUN,K03,MISSES,A,285.0,270.0,-5,483.38,1236.27,186.15,356.92,5/1/1/1,9/5/5/5,cut: misses goal 3d; smallest bid step down,-297.23,-879.35,2.958
+C-S1-PUN,K04,CLEARS,A,275.0,275.0,0,123.67,634.24,123.67,634.24,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S1-PUN,K07,THIN,A,235.0,235.0,0,20.35,93.47,20.35,93.47,5/5/5/5,5/5/5/5,thin evidence — hold,0.0,0.0,
+C-S1-PUN,K09,CLEARS,A,465.0,465.0,0,216.29,206.53,216.29,206.53,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-DEL,K01,CLEARS,A,230.0,230.0,0,331.64,8496.83,331.64,8496.83,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-DEL,K05,CLEARS,A,345.0,345.0,0,854.94,5609.96,854.94,5609.96,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-DEL,K06,CLEARS,A,390.0,390.0,0,333.31,1299.16,333.31,1299.16,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-DEL,K10,CLEARS,A,470.0,470.0,0,442.86,685.02,442.86,685.02,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-MUM,K01,CLEARS,A,245.0,235.0,-5,253.02,5356.22,253.02,5356.22,1/1/1/1,1/1/1/1,lower: same revenue for less spend,0.0,0.0,
+C-S2-MUM,K05,CLEARS,A,400.0,400.0,0,614.46,3655.0,614.46,3655.0,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-MUM,K06,CLEARS,B,375.0,375.0,0,31.62,48.44,31.62,48.44,9/9/9/9,9/9/9/9,clears goal; no better option on the grid,0.0,0.0,
+C-S2-MUM,K10,CLEARS,B,490.0,490.0,0,335.54,469.05,335.54,469.05,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-BLR,K01,CLEARS,A,240.0,230.0,-5,238.4,4486.15,238.4,4486.15,1/1/1/1,1/1/1/1,lower: same revenue for less spend,0.0,0.0,
+C-S2-BLR,K05,CLEARS,A,375.0,375.0,0,622.36,3608.56,622.36,3608.56,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-BLR,K06,CLEARS,B,350.0,350.0,0,29.81,51.86,29.81,51.86,13/9/9/9,13/9/9/9,clears goal; no better option on the grid,0.0,0.0,
+C-S2-BLR,K10,CLEARS,B,450.0,450.0,0,295.43,360.38,295.43,360.38,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-HYD,K01,CLEARS,A,215.0,205.0,-5,132.68,3934.17,132.68,3934.17,1/1/1/1,1/1/1/1,lower: same revenue for less spend,0.0,0.0,
+C-S2-HYD,K05,CLEARS,A,330.0,330.0,0,276.68,1954.17,276.68,1954.17,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-HYD,K06,CLEARS,A,365.0,365.0,0,171.57,631.9,171.57,631.9,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-HYD,K10,CLEARS,A,380.0,380.0,0,164.09,312.52,164.09,312.52,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S2-PUN,K01,THIN,A,200.0,200.0,0,79.94,1938.27,79.94,1938.27,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S2-PUN,K05,CLEARS,A,300.0,315.0,5,163.85,1335.19,175.94,1445.86,5/1/1/1,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",12.09,110.67,9.154
+C-S2-PUN,K06,THIN,B,320.0,320.0,0,13.2,28.28,13.2,28.28,9/9/9/9,9/9/9/9,thin evidence — hold,0.0,0.0,
+C-S2-PUN,K10,CLEARS,C,395.0,395.0,0,91.7,122.73,91.7,122.73,1/1/1/1,1/1/1/1,clears goal but tier C (unproven) — hold,0.0,0.0,
+C-S3-DEL,K01,THIN,A,210.0,210.0,0,252.15,2920.75,252.15,2920.75,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S3-DEL,K02,CLEARS,A,215.0,215.0,0,122.08,2142.16,122.08,2142.16,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S3-DEL,K03,MISSES,A,300.0,285.0,-5,2173.92,6769.32,2023.23,6237.35,1/1/1/1,5/1/1/1,cut: misses goal 16d → ladder allows 50% of spend,-150.69,-531.97,3.53
+C-S3-DEL,K04,CLEARS,A,280.0,295.0,5,505.54,2070.4,545.0,2252.35,5/1/1/1,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",39.46,181.95,4.611
+C-S3-DEL,K09,MISSES,A,465.0,440.0,-5,742.84,661.94,742.84,661.94,1/1/1/1,1/1/1/1,cut: misses goal 19d; smallest bid step down,0.0,0.0,
+C-S3-MUM,K01,MISSES,A,225.0,225.0,0,77.79,614.47,77.79,614.47,5/5/5/5,5/5/5/5,misses goal; streak 0d < 3 — patience ladder says wait,0.0,0.0,
+C-S3-MUM,K02,CLEARS,A,250.0,250.0,0,91.58,1499.55,91.58,1499.55,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S3-MUM,K03,CLEARS,A,345.0,345.0,0,1419.58,3709.73,1419.58,3709.73,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S3-MUM,K04,MISSES,A,375.0,375.0,0,464.19,1538.59,464.19,1538.59,1/1/1/1,1/1/1/1,misses goal; streak 0d < 3 — patience ladder says wait,0.0,0.0,
+C-S3-MUM,K09,CLEARS,A,560.0,560.0,0,925.67,707.96,925.67,707.96,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S3-BLR,K01,MISSES,A,240.0,240.0,0,173.33,1949.68,173.33,1949.68,1/1/1/1,1/1/1/1,misses goal; streak 1d < 3 — patience ladder says wait,0.0,0.0,
+C-S3-BLR,K02,THIN,A,240.0,240.0,0,69.56,1262.73,69.56,1262.73,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S3-BLR,K03,MISSES,A,315.0,300.0,-5,1006.27,2702.22,470.42,980.01,5/1/1/5,9/5/5/5,cut: misses goal 6d; smallest bid step down,-535.85,-1722.21,3.214
+C-S3-BLR,K04,CLEARS,A,315.0,330.0,5,197.65,612.28,271.1,886.1,5/1/1/5,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",73.45,273.82,3.728
+C-S3-BLR,K09,CLEARS,A,525.0,525.0,0,644.65,475.84,644.65,475.84,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S3-HYD,K01,THIN,B,200.0,200.0,0,49.74,645.96,49.74,645.96,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S3-HYD,K02,THIN,A,235.0,235.0,0,47.28,853.72,47.28,853.72,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S3-HYD,K03,CLEARS,A,250.0,300.0,20,72.3,118.07,494.57,1513.73,9/9/9/9,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",422.27,1395.66,3.305
+C-S3-HYD,K04,THIN,B,225.0,225.0,0,6.98,10.11,6.98,10.11,13/13/13/13,13/13/13/13,thin evidence — hold,0.0,0.0,
+C-S3-HYD,K09,CLEARS,B,440.0,440.0,0,345.55,285.25,345.55,285.25,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S3-PUN,K01,THIN,A,200.0,200.0,0,65.9,1000.83,65.9,1000.83,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S3-PUN,K02,THIN,A,220.0,220.0,0,32.23,608.98,32.23,608.98,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S3-PUN,K03,MISSES,A,335.0,335.0,0,627.83,1732.66,627.83,1732.66,1/1/1/1,1/1/1/1,misses goal; streak 1d < 3 — patience ladder says wait,0.0,0.0,
+C-S3-PUN,K04,MISSES,B,240.0,240.0,0,14.85,26.48,14.85,26.48,9/9/9/9,9/9/9/9,misses goal; streak 0d < 3 — patience ladder says wait,0.0,0.0,
+C-S3-PUN,K09,CLEARS,B,410.0,410.0,0,189.22,222.11,189.22,222.11,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-DEL,K01,CLEARS,A,240.0,230.0,-5,328.89,9735.92,328.89,9735.92,1/1/1/1,1/1/1/1,lower: same revenue for less spend,0.0,0.0,
+C-S4-DEL,K05,CLEARS,A,360.0,360.0,0,797.88,6483.64,797.88,6483.64,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-DEL,K06,CLEARS,A,370.0,390.0,5,320.75,2426.34,344.86,2629.28,5/1/1/1,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",24.11,202.94,8.417
+C-S4-DEL,K10,CLEARS,A,425.0,425.0,0,452.72,872.97,452.72,872.97,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-MUM,K01,CLEARS,A,220.0,230.0,5,177.33,4680.08,230.49,6369.17,5/5/1/1,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",53.16,1689.09,31.774
+C-S4-MUM,K05,CLEARS,A,390.0,390.0,0,507.52,3379.46,507.52,3379.46,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-MUM,K06,CLEARS,A,420.0,440.0,5,241.28,1850.61,260.81,2018.39,5/1/1/1,1/1/1/1,"raise: more revenue, still ≥ goal and ≥ marginal floor",19.53,167.78,8.591
+C-S4-MUM,K10,CLEARS,B,470.0,470.0,0,316.09,471.19,316.09,471.19,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-BLR,K01,CLEARS,A,235.0,225.0,-5,203.64,5279.28,203.64,5279.28,1/1/1/1,1/1/1/1,lower: same revenue for less spend,0.0,0.0,
+C-S4-BLR,K05,CLEARS,A,375.0,375.0,0,508.0,3167.75,508.0,3167.75,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-BLR,K06,CLEARS,A,400.0,400.0,0,306.56,2877.67,306.56,2877.67,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-BLR,K10,CLEARS,A,450.0,450.0,0,291.29,575.14,291.29,575.14,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-HYD,K01,THIN,A,210.0,210.0,0,108.02,3049.54,108.02,3049.54,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S4-HYD,K05,CLEARS,A,320.0,320.0,0,288.46,2461.48,288.46,2461.48,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-HYD,K06,CLEARS,A,360.0,360.0,0,166.45,1382.2,166.45,1382.2,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-HYD,K10,CLEARS,C,350.0,350.0,0,18.7,20.07,18.7,20.07,9/9/9/9,9/9/9/9,clears goal but tier C (unproven) — hold,0.0,0.0,
+C-S4-PUN,K01,CLEARS,A,205.0,200.0,-50,62.52,2002.94,62.52,2002.94,1/1/1/1,1/1/1/1,lower: same revenue for less spend,0.0,0.0,
+C-S4-PUN,K05,THIN,B,250.0,250.0,0,5.86,21.5,5.86,21.5,13/13/13/13,13/13/13/13,thin evidence — hold,0.0,0.0,
+C-S4-PUN,K06,CLEARS,A,360.0,360.0,0,89.78,807.08,89.78,807.08,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S4-PUN,K10,THIN,C,340.0,340.0,0,9.17,10.73,9.17,10.73,9/9/9/9,9/9/9/9,thin evidence — hold,0.0,0.0,
+C-S5-DEL,K01,MISSES,A,245.0,245.0,0,283.8,2451.72,283.8,2451.72,1/1/1/1,1/1/1/1,misses goal; streak 0d < 3 — patience ladder says wait,0.0,0.0,
+C-S5-DEL,K03,MISSES,A,270.0,255.0,-5,245.45,273.06,147.79,129.26,9/5/9/–,9/9/9/–,cut: misses goal 4d; smallest bid step down,-97.66,-143.8,1.472
+C-S5-DEL,K08,THIN,A,270.0,270.0,0,56.54,248.67,56.54,248.67,1/1/1/5,1/1/1/5,thin evidence — hold,0.0,0.0,
+C-S5-MUM,K01,THIN,A,220.0,220.0,0,41.55,223.3,41.55,223.3,5/5/9/5,5/5/9/5,thin evidence — hold,0.0,0.0,
+C-S5-MUM,K03,MISSES,A,370.0,350.0,-5,1663.79,2407.51,1663.79,2407.51,1/1/1/1,1/1/1/1,cut: misses goal 28d; smallest bid step down,0.0,0.0,
+C-S5-MUM,K08,CLEARS,A,310.0,310.0,0,66.23,339.81,66.23,339.81,1/1/1/1,1/1/1/1,clears goal; no better option on the grid,0.0,0.0,
+C-S5-BLR,K01,MISSES,A,240.0,230.0,-5,141.13,1159.36,116.19,926.36,1/1/1/1,1/1/5/1,cut: misses goal 4d; smallest bid step down,-24.94,-233.0,9.342
+C-S5-BLR,K03,MISSES,A,305.0,290.0,-5,516.38,550.44,195.89,148.34,5/5/5/5,9/9/9/9,cut: misses goal 28d; smallest bid step down,-320.49,-402.1,1.255
+C-S5-BLR,K08,THIN,B,265.0,265.0,0,20.37,60.93,20.37,60.93,5/5/5/5,5/5/5/5,thin evidence — hold,0.0,0.0,
+C-S5-HYD,K01,MISSES,A,235.0,235.0,0,137.78,1292.52,137.78,1292.52,1/1/1/1,1/1/1/1,misses goal; streak 0d < 3 — patience ladder says wait,0.0,0.0,
+C-S5-HYD,K03,MISSES,A,265.0,265.0,0,244.47,350.97,244.47,350.97,9/5/5/5,9/5/5/5,misses goal; streak 1d < 3 — patience ladder says wait,0.0,0.0,
+C-S5-HYD,K08,THIN,B,230.0,230.0,0,8.87,31.73,8.87,31.73,9/5/5/5,9/5/5/5,thin evidence — hold,0.0,0.0,
+C-S5-PUN,K01,THIN,B,200.0,200.0,0,35.67,415.44,35.67,415.44,1/1/1/1,1/1/1/1,thin evidence — hold,0.0,0.0,
+C-S5-PUN,K03,MISSES,A,255.0,240.0,-5,63.04,44.74,26.22,15.65,9/9/9/9,13/13/13/13,cut: misses goal 4d; smallest bid step down,-36.82,-29.09,0.79
+C-S5-PUN,K08,THIN,C,200.0,200.0,0,0.64,1.5,0.64,1.5,13/13/13/13,13/13/13/13,thin evidence — hold,0.0,0.0,

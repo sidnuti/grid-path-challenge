@@ -1,0 +1,17 @@
+demand_id,kind,campaign_id,keyword_id,demand_inr,m,orders,funded_inr
+raise:C-S1-DEL:K03,bid_raise,C-S1-DEL,K03,399.91,3.114,264.0,0.0
+raise:C-S1-DEL:K04,bid_raise,C-S1-DEL,K04,98.6,3.599,101.0,0.0
+raise:C-S1-DEL:K07,bid_raise,C-S1-DEL,K07,35.71,5.287,64.0,35.71
+raise:C-S1-MUM:K03,bid_raise,C-S1-MUM,K03,790.51,3.349,162.0,0.0
+raise:C-S1-BLR:K07,bid_raise,C-S1-BLR,K07,30.01,5.252,49.0,30.01
+raise:C-S2-MUM:K05,bid_raise,C-S2-MUM,K05,91.9,5.915,139.0,91.9
+raise:C-S2-PUN:K05,bid_raise,C-S2-PUN,K05,11.96,9.14,82.0,11.96
+raise:C-S3-DEL:K01,bid_raise,C-S3-DEL,K01,59.36,13.343,484.0,59.36
+raise:C-S3-HYD:K03,bid_raise,C-S3-HYD,K03,421.94,3.253,71.0,0.0
+raise:C-S4-MUM:K06,bid_raise,C-S4-MUM,K06,19.25,7.545,65.0,19.25
+raise:C-S4-HYD:K05,bid_raise,C-S4-HYD,K05,20.16,9.144,74.0,20.16
+raise:C-S4-HYD:K06,bid_raise,C-S4-HYD,K06,10.07,9.286,52.0,10.07
+raise:C-S4-HYD:K10,bid_raise,C-S4-HYD,K10,112.53,2.437,10.0,0.0
+budget:C-S1-BLR,budget_bound,C-S1-BLR,,625.0,3.682,774.0,340.58
+budget:C-S1-DEL,budget_bound,C-S1-DEL,,475.0,4.037,557.0,475.0
+budget:C-S2-MUM,budget_bound,C-S2-MUM,,300.0,7.507,283.0,300.0

@@ -1,0 +1,31 @@
+action_id,campaign_id,keyword_id,action_type,current_value,new_value,reason,move_ids,change_pct
+r03-a001,C-S1-DEL,K03,increase_cpm,305.0,320.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S1-PUN:K03→raise:C-S1-DEL:K03;cut:C-S5-DEL:K03→raise:C-S1-DEL:K03;cut:C-S5-BLR:K03→raise:C-S1-DEL:K03;cut:C-S5-PUN:K03→raise:C-S1-DEL:K03,4.9
+r03-a002,C-S1-DEL,K04,increase_cpm,295.0,310.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S3-BLR:K03→raise:C-S1-DEL:K04,5.1
+r03-a003,C-S1-DEL,K07,increase_cpm,275.0,290.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S3-DEL:K03→raise:C-S1-DEL:K07,5.5
+r03-a004,C-S1-MUM,K07,increase_cpm,280.0,310.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S3-DEL:K03→raise:C-S1-MUM:K07;cut:C-S5-BLR:K03→raise:C-S1-MUM:K07,10.7
+r03-a005,C-S1-BLR,K01,increase_cpm,215.0,225.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S3-DEL:K03→raise:C-S1-BLR:K01,4.7
+r03-a006,C-S1-BLR,K02,reduce_cpm,250.0,240.0,lower: same revenue for less spend,,-4.0
+r03-a007,C-S1-BLR,K03,reduce_cpm,325.0,310.0,cut: misses goal 3d; smallest bid step down,,-4.6
+r03-a008,C-S1-BLR,K07,increase_cpm,290.0,305.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S3-DEL:K03→raise:C-S1-BLR:K07,5.2
+r03-a009,C-S1-PUN,K03,reduce_cpm,285.0,270.0,cut: misses goal 3d; smallest bid step down,cut:C-S1-PUN:K03→raise:C-S1-DEL:K03;cut:C-S1-PUN:K03→raise:C-S4-DEL:K06;cut:C-S1-PUN:K03→raise:C-S4-MUM:K06;cut:C-S1-PUN:K03→budget:C-S1-DEL,-5.3
+r03-a010,C-S2-MUM,K01,reduce_cpm,245.0,235.0,lower: same revenue for less spend,,-4.1
+r03-a011,C-S2-BLR,K01,reduce_cpm,240.0,230.0,lower: same revenue for less spend,,-4.2
+r03-a012,C-S2-HYD,K01,reduce_cpm,215.0,205.0,lower: same revenue for less spend,,-4.7
+r03-a013,C-S2-PUN,K05,increase_cpm,300.0,315.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S3-BLR:K03→raise:C-S2-PUN:K05,5.0
+r03-a014,C-S3-DEL,K03,reduce_cpm,300.0,285.0,cut: misses goal 16d → ladder allows 50% of spend,cut:C-S3-DEL:K03→raise:C-S1-DEL:K07;cut:C-S3-DEL:K03→raise:C-S1-MUM:K07;cut:C-S3-DEL:K03→raise:C-S1-BLR:K01;cut:C-S3-DEL:K03→raise:C-S1-BLR:K07;cut:C-S3-DEL:K03→raise:C-S3-DEL:K04,-5.0
+r03-a015,C-S3-DEL,K04,increase_cpm,280.0,295.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S3-DEL:K03→raise:C-S3-DEL:K04,5.4
+r03-a016,C-S3-DEL,K09,reduce_cpm,465.0,440.0,cut: misses goal 19d; smallest bid step down,,-5.4
+r03-a017,C-S3-BLR,K03,reduce_cpm,315.0,300.0,cut: misses goal 6d; smallest bid step down,cut:C-S3-BLR:K03→raise:C-S1-DEL:K04;cut:C-S3-BLR:K03→raise:C-S2-PUN:K05;cut:C-S3-BLR:K03→budget:C-S1-DEL,-4.8
+r03-a018,C-S4-DEL,K01,reduce_cpm,240.0,230.0,lower: same revenue for less spend,,-4.2
+r03-a019,C-S4-DEL,K06,increase_cpm,370.0,390.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S1-PUN:K03→raise:C-S4-DEL:K06,5.4
+r03-a020,C-S4-MUM,K01,increase_cpm,220.0,230.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S5-BLR:K03→raise:C-S4-MUM:K01,4.5
+r03-a021,C-S4-MUM,K06,increase_cpm,420.0,440.0,"raise: more revenue, still ≥ goal and ≥ marginal floor",cut:C-S1-PUN:K03→raise:C-S4-MUM:K06,4.8
+r03-a022,C-S4-BLR,K01,reduce_cpm,235.0,225.0,lower: same revenue for less spend,,-4.3
+r03-a023,C-S4-PUN,K01,reduce_cpm,205.0,200.0,lower: same revenue for less spend,,-2.4
+r03-a024,C-S5-DEL,K03,reduce_cpm,270.0,255.0,cut: misses goal 4d; smallest bid step down,cut:C-S5-DEL:K03→raise:C-S1-DEL:K03,-5.6
+r03-a025,C-S5-MUM,K03,reduce_cpm,370.0,350.0,cut: misses goal 28d; smallest bid step down,,-5.4
+r03-a026,C-S5-BLR,K01,reduce_cpm,240.0,230.0,cut: misses goal 4d; smallest bid step down,,-4.2
+r03-a027,C-S5-BLR,K03,reduce_cpm,305.0,290.0,cut: misses goal 28d; smallest bid step down,cut:C-S5-BLR:K03→raise:C-S1-DEL:K03;cut:C-S5-BLR:K03→raise:C-S1-MUM:K07;cut:C-S5-BLR:K03→raise:C-S4-MUM:K01;cut:C-S5-BLR:K03→budget:C-S1-PUN,-4.9
+r03-a028,C-S5-PUN,K03,reduce_cpm,255.0,240.0,cut: misses goal 4d; smallest bid step down,cut:C-S5-PUN:K03→raise:C-S1-DEL:K03,-5.9
+r03-a029,C-S1-DEL,,increase_budget,1400.0,2100.0,budget-bound (ran out 7/7 days); deploy ₹992/day ÷ absorption 1.00,cut:C-S1-PUN:K03→budget:C-S1-DEL;cut:C-S3-BLR:K03→budget:C-S1-DEL,50.0
+r03-a030,C-S1-PUN,,increase_budget,500.0,750.0,budget-bound (ran out 3/7 days); deploy ₹156/day ÷ absorption 0.43,cut:C-S5-BLR:K03→budget:C-S1-PUN,50.0

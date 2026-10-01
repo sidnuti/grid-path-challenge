@@ -1,0 +1,3 @@
+campaign_id,keyword_id,decision,outcome,detail
+C-S2-BLR,K06,bid raise,dropped,only 0% funded by the transport step
+C-S3-HYD,,budget raise,dropped,"budget-bound and clearing goal, but no source passed the transfer test"

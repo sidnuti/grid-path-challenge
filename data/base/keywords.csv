@@ -1,0 +1,11 @@
+keyword_id,keyword,keyword_type,searches_30d,rank1_cpm_inr
+K01,aurel,brand,180000,210
+K02,aurel soap,brand,62000,230
+K03,soap,generic,920000,360
+K04,bathing soap,generic,240000,330
+K05,body wash,generic,310000,390
+K06,shower gel,generic,140000,420
+K07,sandal soap,generic,95000,300
+K08,kids soap,generic,45000,280
+K09,velora,competition,260000,470
+K10,nimbus body wash,competition,110000,440

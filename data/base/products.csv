@@ -1,0 +1,6 @@
+sku_id,sku_name,sub_category,pack,mrp_inr,asp_inr,organic_units_per_day,launch_age_days
+S1,Aurel Sandal Glow Soap,Soap,4 × 100 g,200,172,900,900
+S2,Aurel Charcoal Body Wash,Body Wash,250 ml,325,279,260,540
+S3,Aurel Aloe Fresh Soap,Soap,3 × 125 g,165,149,640,1200
+S4,Aurel Lime Shower Gel,Shower Gel,500 ml,499,424,140,300
+S5,Aurel Kids Bubble Bar,Kids Soap,4 × 75 g,140,126,70,45

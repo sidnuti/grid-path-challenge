@@ -1,0 +1,20 @@
+{
+  "run": 1,
+  "decision_date": "2026-08-31",
+  "traversal": {
+    "portfolio_droas_7d": 4.649,
+    "roas_floor": 4.535,
+    "growth_pool_open": false,
+    "growth_pool_inr": 0.0,
+    "plan_headroom_inr": 14463.72
+  },
+  "guardrails": {
+    "portfolio_spend_7d_avg": 18866.43,
+    "portfolio_droas_7d": 4.649,
+    "projected_droas_before_G8": 4.961,
+    "projected_droas_after": 4.961,
+    "projected_delta_spend": -137.17,
+    "projected_delta_rev": 5217.97,
+    "roas_floor": 4.535
+  }
+}
