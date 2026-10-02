@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+.env
+harness_eval/out/
+llm_cache/

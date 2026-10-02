@@ -1,0 +1,93 @@
+{
+  "name": "P5_severe_osa_dip",
+  "note": "The market's true response parameters for the dev scenario. Policies must not read this file. The eval scenario uses different values and shocks and is not in this repo.",
+  "keywords": {
+    "K01": {
+      "intent": 2.4,
+      "incrementality": 0.15
+    },
+    "K02": {
+      "intent": 2.6,
+      "incrementality": 0.18
+    },
+    "K03": {
+      "intent": 0.9,
+      "incrementality": 0.55
+    },
+    "K04": {
+      "intent": 1.0,
+      "incrementality": 0.55
+    },
+    "K05": {
+      "intent": 1.0,
+      "incrementality": 0.6
+    },
+    "K06": {
+      "intent": 1.05,
+      "incrementality": 0.6
+    },
+    "K07": {
+      "intent": 1.15,
+      "incrementality": 0.5
+    },
+    "K08": {
+      "intent": 1.2,
+      "incrementality": 0.7
+    },
+    "K09": {
+      "intent": 0.5,
+      "incrementality": 0.85
+    },
+    "K10": {
+      "intent": 0.45,
+      "incrementality": 0.85
+    }
+  },
+  "appeal": {
+    "S1": 1.0,
+    "S2": 0.95,
+    "S3": 1.0,
+    "S4": 0.9,
+    "S5": 1.1
+  },
+  "organic_damp": {
+    "max_organic_rank": 3,
+    "factor": 0.6
+  },
+  "auction_sigma": 0.3,
+  "noise": {
+    "searches_sigma": 0.1,
+    "price_sigma": 0.08,
+    "organic_sigma": 0.06,
+    "weekend_lift": 1.12
+  },
+  "shocks": [
+    {
+      "kind": "osa",
+      "sku_id": "S2",
+      "city_id": "HYD",
+      "from_run": 3,
+      "to_run": 4,
+      "osa": 0.2
+    },
+    {
+      "kind": "price",
+      "city_id": "MUM",
+      "keyword_ids": [
+        "K05",
+        "K06"
+      ],
+      "from_run": 4,
+      "mult": 1.35
+    },
+    {
+      "kind": "demand",
+      "keyword_ids": [
+        "K03",
+        "K04"
+      ],
+      "from_run": 5,
+      "mult": 1.15
+    }
+  ]
+}
