@@ -47,7 +47,7 @@ def test_maybe_write_trace_is_a_noop_when_off(warm_obs, monkeypatch):
     monkeypatch.delenv("TRACE_DIR", raising=False)
     params = load_params()
     actions = pd.DataFrame(columns=["campaign_id", "keyword_id", "action_type", "new_value", "reason"])
-    result = maybe_write_trace("test_policy", warm_obs, params, None, actions, {})
+    result = maybe_write_trace("test_policy", "sim-1", warm_obs, params, None, actions, {})
     assert result is None
 
 
@@ -59,8 +59,9 @@ def test_build_trace_counts_match_run_trace(warm_obs):
     run_trace = {"depth": "L1", "headroom": headroom, "candidates_raised": pd.DataFrame({"x": [1, 2, 3]}),
                 "candidates_cut": pd.DataFrame({"x": [1]}), "candidates_explore": pd.DataFrame(),
                 "precheck_dropped": pd.DataFrame({"x": [1, 2]}), "leaf_calls": [{"leaf": "L1_value", "outcome": "ok"}]}
-    trace = build_trace("htn_harness", warm_obs, params, None, actions, run_trace)
+    trace = build_trace("htn_harness", "sim-abc123", warm_obs, params, None, actions, run_trace)
     assert trace.depth == "L1"
+    assert trace.simulation_id == "sim-abc123"
     assert trace.n_candidates_raised == 3
     assert trace.n_candidates_cut == 1
     assert trace.n_candidates_explore == 0
@@ -69,6 +70,40 @@ def test_build_trace_counts_match_run_trace(warm_obs):
     assert len(trace.leaf_calls) == 1
     assert trace.headroom["allowance_inr_day"] == headroom.allowance_inr_day
     assert trace.fallback_reason is None
+    assert trace.usage == {"calls": 0, "tokens_in": 0, "tokens_out": 0, "cost_usd": 0.0, "wall_clock_s": 0.0}
+    assert trace.lifetime_usage == trace.usage  # llm=None -> both zero via the same no-Meter fallback
+
+
+def test_build_trace_usage_is_per_run_not_lifetime():
+    """Regression test: with a Meter in the chain that has accumulated lifetime usage across
+    several runs but had its run_usage reset for this one, `trace.usage` must reflect only this
+    run, while `trace.lifetime_usage` keeps the running total."""
+    from harness.llm.meter import Meter
+
+    class _Mock:
+        def complete_json(self, *a, **kw):
+            from harness.llm.client import Usage
+            return {}, Usage(calls=1, tokens_in=10, tokens_out=5)
+
+    meter = Meter(_Mock(), "claude-sonnet", max_usd_per_run=100.0)
+    meter.complete_json("s", "u", {}, 5.0)  # "previous run"
+    meter.reset_run()
+    meter.complete_json("s", "u", {}, 5.0)  # "this run"
+
+    w = build_world(7)
+    m = Market(w)
+    acc = {"daily_facts": [], "campaign_daily": [], "sku_city_daily": []}
+    for d in range(WARMUP_DAYS):
+        for k, v in m.simulate_day(d, w.public["campaigns"], w.public["campaign_keywords"]).items():
+            acc[k].append(v)
+    fr = {k: pd.concat(v, ignore_index=True) for k, v in acc.items()}
+    obs = Observation(run=1, day=WARMUP_DAYS, public=w.public, campaigns=w.public["campaigns"],
+                      campaign_keywords=w.public["campaign_keywords"], roas_floor=4.0, warmup_droas=4.6, **fr)
+    params = load_params()
+    actions = pd.DataFrame(columns=["campaign_id", "keyword_id", "action_type", "new_value", "reason"])
+    trace = build_trace("p", "sim-1", obs, params, meter, actions, {"depth": "L1"})
+    assert trace.usage["calls"] == 1          # this run only
+    assert trace.lifetime_usage["calls"] == 2  # both runs
 
 
 def test_obs_digest_deterministic_and_sensitive_to_changes(warm_obs):
@@ -87,13 +122,14 @@ def test_maybe_write_trace_roundtrips_through_jsonl(warm_obs, tmp_path, monkeypa
     monkeypatch.setenv("TRACE_DIR", str(tmp_path))
     params = load_params()
     actions = pd.DataFrame(columns=["campaign_id", "keyword_id", "action_type", "new_value", "reason"])
-    written = maybe_write_trace("test_policy", warm_obs, params, None, actions, {"depth": "L0"})
+    written = maybe_write_trace("test_policy", "sim-xyz", warm_obs, params, None, actions, {"depth": "L0"})
     assert written is not None
     path = tmp_path / "test_policy.jsonl"
     assert path.exists()
     loaded = read_traces(path)
     assert len(loaded) == 1
     assert loaded[0].policy == "test_policy"
+    assert loaded[0].simulation_id == "sim-xyz"
     assert loaded[0].run == warm_obs.run
 
 
@@ -101,9 +137,29 @@ def test_maybe_write_trace_appends_across_calls(warm_obs, tmp_path, monkeypatch)
     monkeypatch.setenv("TRACE_DIR", str(tmp_path))
     params = load_params()
     actions = pd.DataFrame(columns=["campaign_id", "keyword_id", "action_type", "new_value", "reason"])
-    maybe_write_trace("p", warm_obs, params, None, actions, {"depth": "L0"})
-    maybe_write_trace("p", warm_obs, params, None, actions, {"depth": "L0"})
+    maybe_write_trace("p", "sim-1", warm_obs, params, None, actions, {"depth": "L0"})
+    maybe_write_trace("p", "sim-1", warm_obs, params, None, actions, {"depth": "L0"})
     lines = (tmp_path / "p.jsonl").read_text().strip().splitlines()
     assert len(lines) == 2
     for line in lines:
         json.loads(line)  # each line is independently valid JSON
+
+
+def test_maybe_write_trace_simulation_id_groups_separate_simulations(warm_obs, tmp_path, monkeypatch):
+    """Two `simulate()` calls writing to the same TRACE_DIR/policy file must stay distinguishable
+    by simulation_id -- this is the gap the field was added to close."""
+    monkeypatch.setenv("TRACE_DIR", str(tmp_path))
+    params = load_params()
+    actions = pd.DataFrame(columns=["campaign_id", "keyword_id", "action_type", "new_value", "reason"])
+    maybe_write_trace("p", "sim-A", warm_obs, params, None, actions, {"depth": "L0"})
+    maybe_write_trace("p", "sim-B", warm_obs, params, None, actions, {"depth": "L0"})
+    loaded = read_traces(tmp_path / "p.jsonl")
+    assert {t.simulation_id for t in loaded} == {"sim-A", "sim-B"}
+
+
+def test_htn_policies_generate_a_simulation_id_per_instance():
+    from harness.policy import HTNHarness, HTNToolsOnly
+    a, b = HTNToolsOnly(), HTNToolsOnly()
+    assert a._simulation_id != b._simulation_id  # two policy instances, two simulations
+    h = HTNHarness()
+    assert h._simulation_id and isinstance(h._simulation_id, str)

@@ -42,6 +42,19 @@ def test_build_arms_adds_full_and_loo_when_llm_enabled():
     assert all(f"loo_{leaf}" in arms for leaf in ("L1_value", "L2_shock", "L3_sibling", "L4_explore", "L6_review"))
 
 
+def test_build_arms_llm_arms_use_llm_depth_not_the_base_params_depth():
+    """Regression test for a real bug: the LLM arms used to build HTNHarness with the unmodified
+    base params, whose depth is "L0" in default.json — making them silently identical to
+    tools_only (zero LLM calls, $0 cost) no matter what LLM_MODE said."""
+    from harness.config import load_params
+    base = load_params()
+    assert base.depth == "L0"
+    arms = build_arms(base, llm_enabled=True, llm_depth="L1")
+    full = arms["full"]()
+    assert full.params.depth == "L1"
+    assert base.depth == "L0"  # the base params object itself must be untouched
+
+
 class _MockLLM:
     def complete_json(self, system, user, schema, timeout, **kwargs):
         from harness.llm.client import Usage

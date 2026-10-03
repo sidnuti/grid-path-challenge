@@ -6,11 +6,21 @@ the same L0 mechanics when `params.depth` says so and an LLM is actually configu
 `_tools_only_recommend` under the hood (see `_harness_recommend`'s `llm is None` branch). Fail-soft
 per the plan: any exception anywhere in `recommend` falls back to `gpc.policy.DeterministicTraversal`,
 so a bug or an LLM failure degrades to the baseline rather than to nothing.
+
+**Fixed 2026-10-03** (an independent review found this): raise candidates used to go through
+`tools.sizing.select_raises` *before* `tools.precheck.filter_precheck` — so the headroom
+allowance, already tight after the sizing fix the same day, was being spent ranking candidates
+that would be blocked anyway (measured: half of one run's `m_reprice_raises` candidates were
+already G3-doomed, cells already holding slot 1). A doomed candidate consuming budget could crowd
+out a genuinely shippable one lower in the ranking. `filter_precheck` now runs on the raise
+candidates immediately after projection, *before* `select_raises` ever sees them; the
+budget-constrained sizing step only ever competes among candidates that could actually ship.
 """
 
 from __future__ import annotations
 
 import logging
+import uuid
 
 import pandas as pd
 
@@ -56,14 +66,16 @@ def _tools_only_recommend(obs: Observation, params: Params) -> tuple[pd.DataFram
     budget = m_budget_raises(obs, diag, params, iota)
     raises = _concat([reprice, budget], reprice)
     raises = project_candidates(obs, diag.grid, diag.pacing, raises)
+    raises_ok, raises_dropped = filter_precheck(obs, diag.verdicts, diag.pacing, raises)
 
     headroom = compute_headroom(obs, params)
-    selected = select_raises(raises, headroom.allowance_inr_day, params)
+    selected = select_raises(raises_ok, headroom.allowance_inr_day, params)
 
     cuts = m_base_cuts(obs, diag)
 
     candidates = _concat([selected, cuts], selected)
     kept, dropped = filter_precheck(obs, diag.verdicts, diag.pacing, candidates)
+    dropped = _concat([raises_dropped, dropped], dropped)
 
     actions = kept[ACTION_COLS].copy() if len(kept) else pd.DataFrame(columns=ACTION_COLS)
     trace = {"diagnostics": diag, "iota": iota, "sibling_holds": hold, "sibling_markets": mk,
@@ -94,9 +106,10 @@ def _harness_recommend(obs: Observation, params: Params, llm, action_log: dict,
 
     raises = _concat([reprice, budget, shock_raise], reprice)
     raises = project_candidates(obs, diag.grid, diag.pacing, raises)
+    raises_ok, raises_dropped = filter_precheck(obs, diag.verdicts, diag.pacing, raises)
 
     headroom = compute_headroom(obs, params)
-    selected = select_raises(raises, headroom.allowance_inr_day, params)
+    selected = select_raises(raises_ok, headroom.allowance_inr_day, params)
     selected = review_veto(obs, headroom, selected, params, llm, replicate=replicate, metas=leaf_calls)
 
     explore = explore_candidates(obs, diag, params, llm, replicate=replicate, metas=leaf_calls)
@@ -104,6 +117,7 @@ def _harness_recommend(obs: Observation, params: Params, llm, action_log: dict,
 
     candidates = _concat([selected, explore, cuts], selected)
     kept, dropped = filter_precheck(obs, diag.verdicts, diag.pacing, candidates)
+    dropped = _concat([raises_dropped, dropped], dropped)
 
     actions = kept[ACTION_COLS].copy() if len(kept) else pd.DataFrame(columns=ACTION_COLS)
     trace = {"diagnostics": diag, "iota": iota, "sibling_holds": hold, "sibling_markets": mk,
@@ -119,19 +133,20 @@ class HTNToolsOnly(Policy):
 
     def __init__(self, params: Params | None = None):
         self.params = params or load_params()
+        self._simulation_id = uuid.uuid4().hex[:12]
 
     def recommend(self, obs: Observation) -> pd.DataFrame:
         try:
             actions, trace = _tools_only_recommend(obs, self.params)
             self.last_trace = trace
-            maybe_write_trace(self.name, obs, self.params, None, actions, trace)
+            maybe_write_trace(self.name, self._simulation_id, obs, self.params, None, actions, trace)
             return actions
         except Exception:
             logger.exception("HTNToolsOnly failed on run %s; falling back to DeterministicTraversal", obs.run)
             fallback = DeterministicTraversal()
             actions = fallback.recommend(obs)
             self.last_trace = {"fallback_reason": "exception", "baseline_trace": fallback.last_trace}
-            maybe_write_trace(self.name, obs, self.params, None, actions, self.last_trace)
+            maybe_write_trace(self.name, self._simulation_id, obs, self.params, None, actions, self.last_trace)
             return actions
 
 
@@ -152,6 +167,7 @@ class HTNHarness(Policy):
         self._llm_initialized = llm is not None
         self._action_log: dict[tuple[str, str], list[int]] = {}
         self.replicate = replicate
+        self._simulation_id = uuid.uuid4().hex[:12]
 
     def _llm(self):
         if not self._llm_initialized:
@@ -166,12 +182,12 @@ class HTNHarness(Policy):
             actions, trace = _harness_recommend(obs, self.params, llm, self._action_log, self.replicate)
             self.last_trace = trace
             _log_actions(self._action_log, obs, actions)
-            maybe_write_trace(self.name, obs, self.params, llm, actions, trace)
+            maybe_write_trace(self.name, self._simulation_id, obs, self.params, llm, actions, trace)
             return actions
         except Exception:
             logger.exception("HTNHarness failed on run %s; falling back to DeterministicTraversal", obs.run)
             fallback = DeterministicTraversal()
             actions = fallback.recommend(obs)
             self.last_trace = {"fallback_reason": "exception", "baseline_trace": fallback.last_trace}
-            maybe_write_trace(self.name, obs, self.params, None, actions, self.last_trace)
+            maybe_write_trace(self.name, self._simulation_id, obs, self.params, None, actions, self.last_trace)
             return actions

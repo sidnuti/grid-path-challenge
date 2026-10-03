@@ -1,10 +1,11 @@
 {
-  "version": "2026-10-02.0",
+  "version": "2026-10-03.0",
   "depth": "L0",
   "headroom": {
     "margin": 0.02,
     "front_load": true,
-    "run_allowance_frac": [0.10, 0.15, 0.20, 0.20, 0.20, 0.15]
+    "run_allowance_frac": [0.10, 0.15, 0.20, 0.20, 0.20, 0.15],
+    "min_allowance_inr_day": 300.0
   },
   "siblings": {
     "leader_min_slot1_share": 0.80
@@ -16,11 +17,6 @@
     "lookback_days": 21,
     "recent_days": 7
   },
-  "sizing": {
-    "mu_lo": 0.0,
-    "mu_hi": 20.0,
-    "mu_iters": 40
-  },
   "explore": {
     "enabled": false,
     "max_thin_cells": 0,
@@ -31,7 +27,7 @@
   },
   "llm": {
     "max_usd_per_run": 2.0,
-    "review_threshold_inr": 2000.0
+    "review_threshold_inr": 500.0
   },
   "verify": {
     "max_repairs": 1

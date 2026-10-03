@@ -13,7 +13,6 @@ Cell: campaign {campaign_id}, keyword {keyword_id} ({keyword_type}), tier {tier}
 Verdict: {verdict}. Orders in the last 28 days: {orders_28d}.
 Live bid: INR {live_bid}. Mechanically proposed new bid: INR {proposed_bid} ({step_pct:+d}%).
 Shrunk realised dROAS: {droas_shrunk}. Goal dROAS: {goal_droas}.
-Recent reach z-score: {z_reach} (own-action confound: {own_action_confound}).
 
 Return bid_multiplier (0.5-1.5, applied to the proposed raise's size above the live bid — 1.0
 means take the full proposed raise, 0.5 means take half of it, >1 means go further than proposed

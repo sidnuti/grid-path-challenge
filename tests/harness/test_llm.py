@@ -6,7 +6,7 @@ import pytest
 
 from harness.llm.client import Usage
 from harness.llm.faults import FaultInjectingClient
-from harness.llm.meter import BudgetExceeded, Meter, price_for, reset_run_budget
+from harness.llm.meter import FALLBACK_PRICE, BudgetExceeded, Meter, price_for, reset_run_budget
 from harness.llm.providers import AnthropicClient, OpenAIClient, OpenRouterClient, build_provider
 from harness.llm.replay import ReplayClient, cache_key
 
@@ -132,6 +132,16 @@ def test_meter_tracks_usage_and_cost():
     expected = (100 * price["in"] + 50 * price["out"]) / 1e6
     assert usage.cost_usd == pytest.approx(expected)
     assert meter.usage.calls == 1
+
+
+def test_price_for_glm_flashx_is_not_the_flat_fallback():
+    """Regression test: before this row existed, z-ai/glm-5.3-flashx (the model actually
+    configured in .env, and the one used for the first real LLM-arm run) fell back to the
+    Claude-Sonnet-rate placeholder ($3/$15 per M tokens) — about 8-12x this model's real
+    OpenRouter price, overstating every cost figure a run with it produced by the same factor."""
+    price = price_for("z-ai/glm-5.3-flashx")
+    assert price == {"in": 0.37, "out": 1.25}
+    assert price != FALLBACK_PRICE
 
 
 def test_meter_raises_budget_exceeded():

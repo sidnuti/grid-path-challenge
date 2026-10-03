@@ -249,20 +249,91 @@ of which has been exercised at scale yet (see "standing open items" below).
 ## Verification run (M1 gate)
 
 `python -m gpc.score --policy harness.policy:HTNToolsOnly --seed {7,11,23,42}`, dev scenario.
-**Current numbers, post the `M_CompetitorCut` removal** (see "Correctness fix: the
-`M_CompetitorCut` incrementality bug" below) — the original M1 gate table from before that fix is
-kept in the build log's M1 entry for the record, not reproduced here, since this is now the real
-behaviour:
+**Current numbers, post the 2026-10-03 sizing/precheck-ordering/headroom fixes** (see "Second
+independent review: sizing and headroom bugs" below). Two earlier tables existed before this one
+(pre-`M_CompetitorCut`-removal, and post-removal-but-pre-sizing-fix) — both kept in the build
+log for the record, not reproduced here. **The lift dropped materially between the second table
+and this one** (e.g. seed 7: +0.36% -> +0.10%) — not a regression, the honest number once sizing
+stopped shipping 17-114x its allowance:
 
 | seed | roas_constraint_met | direct_roas | roas_floor | offtake_vs_baseline_pct | shipped/proposed |
 |---|---|---|---|---|---|
-| 7  | true | 4.793 | 4.535 | +0.36 | 64/64 |
-| 11 | true | 4.607 | 4.006 | +0.70 | 103/103 |
-| 23 | true | 4.457 | 4.090 | +0.89 | 99/99 |
-| 42 | true | 5.165 | 4.721 | +0.95 | 74/74 |
+| 7  | true | 4.901 | 4.535 | +0.10 | 59/59 |
+| 11 | true | 4.545 | 4.006 | +0.13 | 103/103 |
+| 23 | true | 4.508 | 4.090 | +0.10 | 91/91 |
+| 42 | true | 5.257 | 4.721 | +0.39 | 68/68 |
 
 No fallback to `DeterministicTraversal` on any seed. `git diff --stat gpc/market.py
 gpc/guardrails.py gpc/runner.py gpc/score.py` is empty throughout (verified — `gpc/` untouched).
+
+## Second independent review: sizing and headroom bugs (2026-10-03)
+
+A second pass from the same parallel review session re-verified the five fixes above, re-measured
+lift at +0.82%/+0.66% (vs. baseline/no-op) across 36 cost-free simulations, and flagged a longer
+"still open" list. Verified every item against the code directly rather than taking the framing on
+trust; all of the following were confirmed real:
+
+- **Sizing was structurally a no-op beyond a basic filter, overshooting the allowance by
+  17-114x** (reproduced directly: ₹5,030/day shipped against a ₹43.83/day allowance on one
+  seed/run). Root cause: every candidate-generating method emits exactly one option per cell, so
+  `select_raises`'s "pick the best option per cell" step had nothing to choose between — `mu`
+  never influenced anything, and the harshest-tested-`mu` branch shipped the whole unconstrained
+  set whenever it still overshot. Rewritten as a 0/1 greedy knapsack by marginal ratio, which is
+  what the actual one-option-per-cell candidate shape supports. 8 new tests
+  (`tests/harness/test_sizing.py`); previously zero.
+- **Precheck ran after sizing**, so the budget could be spent on candidates already doomed by G3
+  (measured: half of one run's reprice candidates). Precheck now runs on raise candidates before
+  `select_raises` sees them.
+- **Runs 1-2 structurally got $0 allowance** (no banked post-warmup outperformance exists yet at
+  run 1, by construction). Added `headroom_min_allowance_inr_day` (300 inr/day default) as a floor
+  under the allowance — `gpc.guardrails`' G8 remains the real safety net regardless.
+- **Trace recorded lifetime, not per-run, usage, and had no simulation id.** Both fixed:
+  `RunTrace.usage` is now this run's own figure (`Meter.run_usage`, added for the per-run-budget
+  fix, just not wired into the trace before); `lifetime_usage` keeps the old number;
+  `simulation_id` (one per policy instance) now lets separate `simulate()` calls writing to the
+  same `TRACE_DIR` file be told apart.
+- **No lift-vs-no-op, no confidence interval** in `harness_eval` reports. Added
+  `offtake_vs_noop_pct` and a rough normal-approximation 95% CI per arm/group.
+- **L1's prompt had three hardcoded-blank fields** (`keyword_type`, `goal_droas`, and
+  `orders_28d` — the last one doubly broken, `.get()`-defaulting on a frame that never had that
+  column). Fixed with real lookups; `z_reach`/`own_action_confound` dropped from the prompt
+  entirely rather than faked, since L1 never actually receives shock data at this call site.
+  Prompt file bumped `v1` -> `v2` (a real local `llm_cache/` exists from an earlier record run;
+  serving v1-wording answers under an unchanged version tag would repeat the cache-key bug fixed
+  the day before). Moved to a per-leaf `PROMPT_VERSIONS` dict so one leaf's edit doesn't
+  invalidate every leaf's cache.
+- **L4's "unbounded" call count.** `explore_candidates` only counted *accepted* explores toward
+  its cap, so a model rejecting every THIN cell got called once per THIN cell (up to ~22-27, per
+  E8), not capped. Split into an attempt counter (controls the loop) vs. an acceptance counter
+  (controls what ships).
+- **L6 review veto "never triggers".** Confirmed as a calibration mismatch, not a logic bug:
+  `llm_review_threshold_inr` defaulted to 2000 inr/day, far above what the now-correctly-sized
+  allowance typically produces. Lowered to 500 — a judgment call, logged as such; a
+  threshold expressed as a fraction of the run's own allowance would track actual output better
+  and is flagged as the cleaner long-term fix, not built this session.
+
+Three items confirmed but **not** changed, each for a stated reason:
+
+- **"Most detected surges are suppressed"** — real, but no live model has exercised
+  `shock_raises`' confidence gate yet (everything tested is `MockLLM`); tuning a second unverified
+  threshold on top of the first would be guessing, not fixing. Needs a real `LLM_MODE=record` run
+  to calibrate against.
+- **"Sibling holds freeze half the cells (55%, measured); no active fix for a wrong leader."**
+  Correct as far as it goes — `followers_to_hold` only ever suppresses followers; it never
+  actively raises the true scored leader to contest a slot a wrong sibling is winning, because
+  `m_reprice_raises` only raises CLEARS cells and a long-losing true leader is often MISSES. An
+  incomplete implementation of SG3's intent, not a bug in what exists. A real fix needs a new,
+  actively-correcting lever (bypass the CLEARS gate for the true leader when `wrong_leader` is
+  flagged, the same pattern `shock_raises` already uses) — scoped as real follow-up work.
+- **"4 of 11 S2 arm presets are identical to the default."** Confirmed
+  (`headroom_front_load`/`shock_z_2.5`/`explore_off`/`depth_L0` all materialize to exactly
+  `base_params`) — intentional, since each arm dimension includes the value matching the shipped
+  default for side-by-side completeness, not a typo. Costs 4 wasted simulations in a full sweep;
+  noted as a minor compute-efficiency item, not treated as incorrect.
+- **"Learner picks highest mean with no allowance for noise."** Accurately describes the stub's
+  own documented design (`propose_params`'s docstring already calls it "deliberately dumb"); a
+  variance-aware learner is already flagged as future work in `systems-1-2-3-roadmap.md`. No
+  change — confirmed the existing disclosure was accurate, not newly discovered.
 
 ## M2 — LLM layer (done)
 
@@ -375,16 +446,28 @@ actually have it, so left unchanged rather than fixing something that wasn't bro
   reproducibility? self-authored perturbed scenarios (P1-P6) acceptable for offline validation?
 - **S2-arms x worlds sweep** — the thing that would actually produce `learner_stub`'s input from
   real data, not a hand-fed JSON file.
-- **`meter.price_for()` has no row for `glm-*`** (the configured model) — cost figures involving
-  it are a flat-rate approximation, not measured. (Spun off as background task `task_861787f2`.)
+- ~~`meter.price_for()` has no row for `glm-*`~~ — **done**: a real `glm-5.3-flashx`/`glm-5.3-flash`
+  row was added 2026-10-03 (by the parallel review session; verified correct and left in place),
+  with a regression test (`test_price_for_glm_flashx_is_not_the_flat_fallback`).
 - **E4/E5 shock-recall** has no multiple-testing correction — fine for feeding a leaf's judgment,
   not yet validated as a named-shock recall check against the three specific `dev.json` shocks.
-- **A real LLM-arm `harness_eval` run** (`LLM_MODE=record`, real spend) has not been executed —
-  everything LLM-related has been tested with `MockLLM` plus one minimal live smoke call; the
-  plan's ~$40 evaluation budget hasn't been touched. This is also the first real exercise the
-  cost-tracking fixes above (cache-hit crediting, per-run budget reset) haven't had yet — they're
-  tested with mocks, not proven against a real multi-run `record`/`replay` cycle.
+- **A real LLM-arm `harness_eval` run** (`LLM_MODE=record`, real spend) has not been executed at
+  scale by this session — everything LLM-related here is tested with `MockLLM` plus a couple of
+  minimal live smoke calls; the plan's ~$40 evaluation budget hasn't been meaningfully touched.
+  (A real `llm_cache/` with recorded responses does exist locally, from a run outside this
+  session's own actions — not committed, gitignored.) This is also the real exercise the
+  cost-tracking fixes (cache-hit crediting, per-run budget reset, per-run trace usage) and the L2
+  shock-confidence calibration below still need and haven't had.
 - **`leaf()`'s trace record still doesn't include the rendered prompt text** (`system`/`user`),
   only the outcome, usage and raw response — flagged by the same review that found the four bugs
   above as "results thrown away instead of traced", now partially true rather than fully true.
   Spun off as background task `task_3eaa54e8`.
+- **`shock_raises`' confidence gate** (`result.confidence >= 0.5`) has never been checked against
+  a real model's actual response distribution — the parallel review's "most detected surges are
+  suppressed" finding is plausible but unverified; needs a real recorded run to calibrate, not
+  another guessed constant.
+- **Sibling arbitration (SG3) has no active correction for a wrong leader** — `followers_to_hold`
+  suppresses followers but never raises the true scored leader to contest a slot a wrong sibling
+  holds (measured: 55% of cells held on dev seed 7). A real fix needs a verdict-bypass raise for
+  the true leader when `contested_markets`' own `wrong_leader` flag fires, mirroring
+  `shock_raises`' pattern — scoped, not built.

@@ -4,6 +4,18 @@ in the next. Treat it like a budget: how much extra ₹/day of spend the portfol
 run while the *cumulative* projected dROAS still clears `obs.roas_floor * (1 + margin)`, spread
 across the runs left by an allowance schedule (front-loaded by default, since unused headroom early
 is wasted when later shocks need it more, and because the floor is checked at the end).
+
+**`headroom_min_allowance_inr_day` added 2026-10-03** (an independent review flagged "runs 1-2
+can't raise" as a real limitation): at run 1 there is, by construction, zero post-warmup data yet
+— `cum_spend`/`cum_rev` below are both 0, so the pure "banked outperformance" formula gives exactly
+0 allowance, every time, regardless of world or seed. That zero is mathematically correct for what
+it measures (nothing has been banked yet) but overstates the actual risk of a small, floor-safe
+raise: `gpc.guardrails`' G8 independently projects and vetoes any action set that would push
+cumulative portfolio dROAS below the floor, so a raise this tool blocks at run 1 was never
+necessarily *unsafe* — this tool was just being more conservative than the guardrail it sits in
+front of. A small non-zero floor (`params.headroom_min_allowance_inr_day`, default 300 inr/day,
+~1.6% of a ~18K inr/day portfolio) lets sizing consider a modest raise even with zero banked
+headroom; G8 remains the actual, authoritative safety net regardless of what this number is set to.
 """
 
 from __future__ import annotations
@@ -60,6 +72,7 @@ def compute_headroom(obs: Observation, params: Params) -> Headroom:
     else:
         frac = params.allowance_frac(obs.run)
     allowance = headroom_day * frac if params.headroom_front_load else headroom_day / max(7 - obs.run + 1, 1)
+    allowance = max(allowance, params.headroom_min_allowance_inr_day)
     return Headroom(run=obs.run, spend_to_date=round(spend, 2), revenue_to_date=round(revenue, 2),
                      droas_to_date=round(droas, 4), roas_floor=round(floor, 4), margin=params.headroom_margin,
                      headroom_inr_day=round(headroom_day, 2), allowance_inr_day=round(allowance, 2))

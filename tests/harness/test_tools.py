@@ -82,8 +82,22 @@ def test_headroom_arithmetic_is_nonnegative_and_matches_formula(warm_obs):
     params = load_params()
     h = compute_headroom(warm_obs, params)
     assert h.headroom_inr_day >= 0
-    assert h.allowance_inr_day <= h.headroom_inr_day + 1e-6
+    # allowance is a fraction of banked headroom, floored at headroom_min_allowance_inr_day (run 1
+    # has 0 banked headroom by construction -- no post-warmup data exists yet -- so the min floor
+    # is expected to dominate here; see headroom.py's module docstring for why that's intentional)
+    assert h.allowance_inr_day <= max(h.headroom_inr_day, params.headroom_min_allowance_inr_day) + 1e-6
     assert h.allowance_inr_day >= 0
+
+
+def test_headroom_run1_gets_the_minimum_allowance_floor_not_zero(warm_obs):
+    """Regression test for a real limitation an independent review flagged: run 1 has zero banked
+    post-warmup headroom by construction, so the pure formula always gives $0 and sizing could
+    never consider a raise in the first run of any simulation, however safe. `gpc.guardrails`' G8
+    remains the actual floor backstop regardless of this minimum."""
+    params = load_params()
+    h = compute_headroom(warm_obs, params)  # warm_obs fixture is run=1
+    assert h.headroom_inr_day == 0.0
+    assert h.allowance_inr_day == params.headroom_min_allowance_inr_day
 
 
 # ── precheck vs apply_guardrails ───────────────────────────────────────────────────

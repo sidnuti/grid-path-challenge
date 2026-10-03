@@ -37,7 +37,7 @@ from gpc.policy import DeterministicTraversal
 from gpc.world import WARMUP_DAYS, build_world
 
 from harness.config import load_params
-from harness.htn.llm_methods import explore_candidates, shock_raises
+from harness.htn.llm_methods import adjust_raise_sizes, explore_candidates, shock_raises
 from harness.htn.methods import m_base_cuts, m_budget_raises, m_reprice_raises, m_sibling_holds
 from harness.llm.client import Usage
 from harness.policy import HTNHarness, HTNToolsOnly, _harness_recommend
@@ -184,6 +184,32 @@ def test_s7_exploration_is_capped(warm_obs):
         assert float(opt_spend.iloc[0]) <= params.explore_spend_cap_inr_day + 1e-6
 
 
+def test_s7b_exploration_caps_llm_calls_not_just_accepted_cells(warm_obs):
+    """Regression test for a real bug (found by an independent review): `explore_candidates`
+    used to only increment its break-condition counter on an *accepted* explore, so a model that
+    rejects every cell got called once per THIN cell in the fixture (up to all of them, per E8),
+    not capped at `explore_max_thin_cells` calls. Using an LLM that always says `explore=False`
+    (the old test's always-accept mock couldn't have caught this)."""
+    class CountingRejectLLM:
+        def __init__(self):
+            self.calls = 0
+
+        def complete_json(self, system, user, schema, timeout, **kwargs):
+            self.calls += 1
+            return {"explore": False}, Usage(calls=1, tokens_in=10, tokens_out=5)
+
+    params = load_params()
+    params = dataclasses.replace(params, explore_enabled=True, explore_max_thin_cells=1,
+                                 explore_spend_cap_inr_day=400.0)
+    diag = diagnose(warm_obs)
+    n_thin = (diag.bids.verdict == "THIN").sum()
+    assert n_thin >= 2, "fixture should have >= 2 THIN cells for this to be a meaningful check"
+    llm = CountingRejectLLM()
+    out = explore_candidates(warm_obs, diag, params, llm)
+    assert len(out) == 0
+    assert llm.calls == 1, f"expected exactly 1 call (the cap), got {llm.calls} against {n_thin} THIN cells"
+
+
 def test_s8_a_price_drop_shock_does_not_trigger_a_surge_raise(warm_obs):
     diag = diagnose(warm_obs)
     row = diag.bids[diag.bids.verdict != "CLEARS"].iloc[0]
@@ -248,6 +274,41 @@ def test_s10_the_last_run_spends_the_full_remaining_headroom():
     obs_run5 = dataclasses.replace(obs_run6, run=5)
     h6 = compute_headroom(obs_run6, params)
     h5 = compute_headroom(obs_run5, params)
-    assert h6.allowance_inr_day == pytest.approx(h6.headroom_inr_day)
-    if h5.headroom_inr_day > 0:
+    # run 6 spends the full remaining headroom -- or the minimum floor (2026-10-03 fix), on a
+    # world/run where banked headroom alone would otherwise still be ~0 this late
+    assert h6.allowance_inr_day == pytest.approx(max(h6.headroom_inr_day, params.headroom_min_allowance_inr_day))
+    if h5.headroom_inr_day > params.headroom_min_allowance_inr_day:
         assert h5.allowance_inr_day < h5.headroom_inr_day
+
+
+def test_l1_raise_size_prompt_carries_real_fields_not_blanks(warm_obs):
+    """Regression test for a real bug (found by an independent review): `adjust_raise_sizes`
+    used to render `keyword_type`, `goal_droas` and `orders_28d` as hardcoded blanks/zeros in the
+    L1 prompt, even though all three are cheap to look up from data already in scope. Builds a
+    synthetic tier-B CLEARS raise candidate and checks the rendered prompt text a capturing mock
+    actually receives."""
+    class CapturingLLM:
+        def __init__(self):
+            self.last_user = None
+
+        def complete_json(self, system, user, schema, timeout, **kwargs):
+            self.last_user = user
+            return {"bid_multiplier": 1.0, "confidence": 0.5}, Usage(calls=1, tokens_in=10, tokens_out=5)
+
+    diag = diagnose(warm_obs)
+    tier_b = diag.grid[diag.grid.tier == "B"]
+    assert len(tier_b), "fixture should have >= 1 tier-B cell"
+    cid, kid = tier_b.iloc[0].campaign_id, tier_b.iloc[0].keyword_id
+    bid_row = diag.bids[(diag.bids.campaign_id == cid) & (diag.bids.keyword_id == kid)].iloc[0]
+    raises = pd.DataFrame([{"campaign_id": cid, "keyword_id": kid, "action_type": "increase_cpm",
+                           "current_value": bid_row.live_bid, "new_value": bid_row.live_bid * 1.1,
+                           "iota": 0.5, "reason": "test"}])
+    llm = CapturingLLM()
+    adjust_raise_sizes(warm_obs, diag, raises, llm)
+    assert llm.last_user is not None, "expected an LLM call for this tier-B candidate"
+    kt = warm_obs.public["keywords"].set_index("keyword_id").loc[kid, "keyword_type"]
+    goal_droas = diag.verdicts.set_index(["campaign_id", "keyword_id"]).loc[(cid, kid), "goal_droas"]
+    assert f"({kt})" in llm.last_user, "keyword_type must be the real type, not a blank"
+    assert f"Goal dROAS: {float(goal_droas)}" in llm.last_user, "goal_droas must be the real value, not a blank"
+    assert "Orders in the last 28 days: 0.0" not in llm.last_user or diag.verdicts.set_index(
+        ["campaign_id", "keyword_id"]).loc[(cid, kid), "orders_28d"] == 0.0

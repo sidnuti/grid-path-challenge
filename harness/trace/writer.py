@@ -29,15 +29,16 @@ def trace_dir() -> Path | None:
     return Path(d) if d else None
 
 
-def maybe_write_trace(policy_name: str, obs: Observation, params, llm, actions: pd.DataFrame,
+def maybe_write_trace(policy_name: str, simulation_id: str, obs: Observation, params, llm, actions: pd.DataFrame,
                       run_trace: dict) -> RunTrace | None:
     """No-op (returns None, writes nothing) when `TRACE_DIR` is unset. Otherwise builds and
     appends a `RunTrace` and returns it (useful for tests, which can assert on the returned
-    object without re-reading the file)."""
+    object without re-reading the file). `simulation_id` (one per policy instance, i.e. one per
+    `simulate()` call) lets a reader group rows from the same file back into simulations."""
     d = trace_dir()
     if d is None:
         return None
-    trace = build_trace(policy_name, obs, params, llm, actions, run_trace)
+    trace = build_trace(policy_name, simulation_id, obs, params, llm, actions, run_trace)
     d.mkdir(parents=True, exist_ok=True)
     path = d / f"{policy_name}.jsonl"
     with path.open("a") as f:

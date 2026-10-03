@@ -10,6 +10,24 @@ that switch itself; it reads whatever `harness/llm/build_llm_stack` would build 
 (`LLM_MODE=record` or `live`) by setting the env var, not as a side effect of running `make
 harness-eval`. `LLM_MODE=replay` runs the LLM arms for free against an already-recorded cache.
 
+**Bug fixed 2026-10-03**: the LLM arms used to build `HTNHarness` with `params.depth` left at
+`harness/params/default.json`'s own default, `"L0"` — which makes `_harness_recommend` skip
+straight to the tools-only path regardless of whether an LLM is configured, so `full`/`loo_*`
+silently made zero LLM calls (and billed $0) no matter what `LLM_MODE` said. `--depth` now
+defaults to `"L1"` and is applied to the LLM arms specifically (`tools_only`/`baseline`/`no_op`
+are untouched by it, since depth is meaningless to them).
+
+**Two evaluation gaps closed the same day** (an independent review flagged both): the report only
+ever compared an arm to `baseline`, never to `no_op` — "is the harness beating doing-nothing" is
+a different, also-useful question from "is it beating the deterministic baseline", and the
+`no_op` arm was already being run, just not used for a second comparison. Now `offtake_vs_noop_pct`
+sits alongside `offtake_vs_baseline_pct` in the raw CSV, and the aggregated report adds a rough
+95% CI on the mean lift (`_ci95_str`, a normal approximation — `n` per group is a handful of
+worlds, not a large sample, so treat it as indicative, not rigorous) plus the no-op comparison.
+Perturbed-world near-duplication (P1-P6 differ from dev by one shock-schedule change each, per
+`worlds.py`) is **not** addressed here — that's a question about what `worlds.py` generates, not
+how this script reports on it; flagged, not fixed, in `problem-mapped/A1-implementation.md`.
+
     PYTHONPATH=. python -m harness_eval.run_matrix                  # cost-free arms, all worlds
     LLM_MODE=record PYTHONPATH=. python -m harness_eval.run_matrix --worlds search_7  # one paid run
 """
@@ -19,6 +37,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from dataclasses import replace
 from pathlib import Path
 
 import pandas as pd
@@ -54,7 +73,11 @@ class LeafAblationLLM:
         return self.inner.complete_json(system, user, schema, timeout, **kwargs)
 
 
-def build_arms(params, llm_enabled: bool, replicate: int = 0) -> dict:
+def build_arms(params, llm_enabled: bool, replicate: int = 0, llm_depth: str = "L1") -> dict:
+    """`params` (unmodified) backs the cost-free arms. The LLM arms use `replace(params,
+    depth=llm_depth)` — passing `params` itself would leave them at `params.depth`, which is
+    `"L0"` in `harness/params/default.json` and makes `_harness_recommend` skip the LLM entirely
+    regardless of `llm_enabled` (the bug fixed above)."""
     arms = {
         "no_op": lambda: NoOpPolicy(),
         "baseline": lambda: DeterministicTraversal(),
@@ -63,16 +86,18 @@ def build_arms(params, llm_enabled: bool, replicate: int = 0) -> dict:
     if not llm_enabled:
         return arms
 
+    llm_params = replace(params, depth=llm_depth)
+
     def make_full():
-        llm, _ = build_llm_stack(params)
-        return HTNHarness(params, llm=llm, replicate=replicate)
+        llm, _ = build_llm_stack(llm_params)
+        return HTNHarness(llm_params, llm=llm, replicate=replicate)
 
     arms["full"] = make_full
 
     def make_loo(leaf_name):
         def _build():
-            llm, _ = build_llm_stack(params)
-            return HTNHarness(params, llm=LeafAblationLLM(llm, leaf_name), replicate=replicate)
+            llm, _ = build_llm_stack(llm_params)
+            return HTNHarness(llm_params, llm=LeafAblationLLM(llm, leaf_name), replicate=replicate)
         return _build
 
     for leaf_name in LOO_LEAVES:
@@ -96,7 +121,11 @@ def run_one(arm_name: str, build_policy, label: str, seed: int, scenario: str) -
 
 
 def run_matrix(world_names: list[str] | None = None, n_replicates: int = 1,
-               include_perturbed: bool = True) -> pd.DataFrame:
+               include_perturbed: bool = True, llm_depth: str = "L1",
+               llm_arm_names: list[str] | None = None) -> pd.DataFrame:
+    """`llm_arm_names`, if given, restricts the LLM arms actually run to this subset of
+    `{"full", "loo_L1_value", "loo_L2_shock", "loo_L3_sibling", "loo_L4_explore", "loo_L6_review"}`
+    — useful for keeping a real-money run small (e.g. `["full"]` skips all 5 LOO arms)."""
     params = load_params()
     _, mode = build_llm_stack(params)
     llm_enabled = mode != "off"
@@ -107,7 +136,7 @@ def run_matrix(world_names: list[str] | None = None, n_replicates: int = 1,
     cost_free = ("no_op", "baseline", "tools_only")
     rows = []
     for label, seed, scenario in specs:
-        arms = build_arms(params, llm_enabled, replicate=0)
+        arms = build_arms(params, llm_enabled, replicate=0, llm_depth=llm_depth)
         for arm_name in cost_free:
             row = run_one(arm_name, arms[arm_name], label, seed, scenario)
             row["replicate"] = 0
@@ -115,16 +144,34 @@ def run_matrix(world_names: list[str] | None = None, n_replicates: int = 1,
         for arm_name in arms:
             if arm_name in cost_free:
                 continue
+            if llm_arm_names is not None and arm_name not in llm_arm_names:
+                continue
             for replicate in range(n_replicates):
-                arms_r = build_arms(params, llm_enabled, replicate)
+                arms_r = build_arms(params, llm_enabled, replicate, llm_depth=llm_depth)
                 row = run_one(arm_name, arms_r[arm_name], label, seed, scenario)
                 row["replicate"] = replicate
                 rows.append(row)
     df = pd.DataFrame(rows)
     base = df[df.arm == "baseline"].set_index("world").offtake_inr_per_day
+    noop = df[df.arm == "no_op"].set_index("world").offtake_inr_per_day
     df["offtake_vs_baseline_pct"] = df.apply(
         lambda r: round((r.offtake_inr_per_day / base.get(r.world, r.offtake_inr_per_day) - 1) * 100, 3), axis=1)
+    df["offtake_vs_noop_pct"] = df.apply(
+        lambda r: round((r.offtake_inr_per_day / noop.get(r.world, r.offtake_inr_per_day) - 1) * 100, 3), axis=1)
     return df
+
+
+def _ci95_str(s: pd.Series) -> str:
+    """A normal-approximation 95% CI on the mean (`mean +/- 1.96 * sample_std / sqrt(n)`) — a
+    rough-and-ready interval, not a rigorous one (n per group is typically 4-12 worlds, not a
+    large sample), but better than reporting a bare mean with no sense of how noisy it is.
+    `n <= 1` has no estimable spread; returned as "n/a" rather than a misleadingly tight interval."""
+    n = len(s)
+    if n <= 1:
+        return "n/a"
+    se = s.std(ddof=1) / (n ** 0.5)
+    lo, hi = s.mean() - 1.96 * se, s.mean() + 1.96 * se
+    return f"[{lo:.2f}, {hi:.2f}]"
 
 
 def _to_markdown(df: pd.DataFrame) -> str:
@@ -154,7 +201,10 @@ def write_report(df: pd.DataFrame, out_dir: Path) -> None:
         lines.append(f"## {group}")
         sub = df[df.world.isin(worlds)]
         agg = sub.groupby("arm").agg(
+            n=("offtake_vs_baseline_pct", "size"),
             mean_lift_pct=("offtake_vs_baseline_pct", "mean"),
+            lift_ci95=("offtake_vs_baseline_pct", _ci95_str),
+            mean_lift_vs_noop_pct=("offtake_vs_noop_pct", "mean"),
             p_lift_negative=("offtake_vs_baseline_pct", lambda s: round((s < 0).mean(), 3)),
             floor_met_share=("roas_constraint_met", "mean"),
             mean_blocked_share=("blocked_share", "mean"),
@@ -173,10 +223,14 @@ def main() -> None:
     ap.add_argument("--replicates", type=int, default=1)
     ap.add_argument("--no-perturbed", action="store_true")
     ap.add_argument("--out", default=str(OUT_DIR))
+    ap.add_argument("--depth", default="L1", choices=("L1", "L2"), help="depth for the LLM arms only")
+    ap.add_argument("--llm-arms", nargs="*", default=None,
+                    help="restrict LLM arms to this subset, e.g. --llm-arms full")
     a = ap.parse_args()
     _, mode = build_llm_stack(load_params())
     print(f"LLM_MODE={mode!r} -> LLM arms {'ENABLED' if mode != 'off' else 'disabled (cost-free arms only)'}")
-    df = run_matrix(a.worlds, a.replicates, include_perturbed=not a.no_perturbed)
+    df = run_matrix(a.worlds, a.replicates, include_perturbed=not a.no_perturbed, llm_depth=a.depth,
+                    llm_arm_names=a.llm_arms)
     write_report(df, Path(a.out))
     print(f"wrote {a.out}/matrix.csv and {a.out}/report.md ({len(df)} rows)")
 

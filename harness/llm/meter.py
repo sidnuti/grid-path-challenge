@@ -32,6 +32,11 @@ DEFAULT_PRICE_USD_PER_MTOK = {
     "gpt-5": {"in": 5.0, "out": 15.0},
     "gpt-4o-mini": {"in": 0.15, "out": 0.6},
     "gpt-4o": {"in": 2.5, "out": 10.0},
+    # Added 2026-10-03 after the first real LLM-arm run used the $3/$15 fallback (Claude-Sonnet
+    # pricing) for a model that costs ~8-12x less — OpenRouter's published rate for the
+    # z-ai/glm-5.3-flashx model configured in .env (per openrouter.ai/z-ai/glm-5.3-flashx).
+    "glm-5.3-flashx": {"in": 0.37, "out": 1.25},
+    "glm-5.3-flash": {"in": 0.37, "out": 1.25},  # covers the non-X variant too, same published rate
 }
 FALLBACK_PRICE = {"in": 3.0, "out": 15.0}
 
@@ -50,21 +55,43 @@ def price_for(model: str) -> dict:
     return FALLBACK_PRICE
 
 
-def usage_of(llm) -> dict:
-    """Walks an `llm` client's `.inner` chain (as `ReplayClient` -> `Meter` ->
-    `FaultInjectingClient` -> provider is built, see `harness/llm/__init__.py::build_llm_stack`)
-    looking for the first `.usage` attribute, i.e. the `Meter` in the stack. Returns all-zero
-    usage for `llm=None` or a stack with no `Meter` (e.g. a bare mock in a test)."""
+def _usage_dict(u) -> dict:
+    return {"calls": u.calls, "tokens_in": u.tokens_in, "tokens_out": u.tokens_out,
+           "cost_usd": round(u.cost_usd, 4), "wall_clock_s": round(u.wall_clock_s, 2)}
+
+
+_ZERO_USAGE = {"calls": 0, "tokens_in": 0, "tokens_out": 0, "cost_usd": 0.0, "wall_clock_s": 0.0}
+
+
+def _find_meter_attr(llm, attr: str) -> dict:
     node = llm
     for _ in range(5):
         if node is None:
             break
-        if hasattr(node, "usage"):
-            u = node.usage
-            return {"calls": u.calls, "tokens_in": u.tokens_in, "tokens_out": u.tokens_out,
-                    "cost_usd": round(u.cost_usd, 4), "wall_clock_s": round(u.wall_clock_s, 2)}
+        if hasattr(node, attr):
+            return _usage_dict(getattr(node, attr))
         node = getattr(node, "inner", None)
-    return {"calls": 0, "tokens_in": 0, "tokens_out": 0, "cost_usd": 0.0, "wall_clock_s": 0.0}
+    return dict(_ZERO_USAGE)
+
+
+def usage_of(llm) -> dict:
+    """Walks an `llm` client's `.inner` chain (as `ReplayClient` -> `Meter` ->
+    `FaultInjectingClient` -> provider is built, see `harness/llm/__init__.py::build_llm_stack`)
+    looking for the first `.usage` attribute, i.e. the `Meter` in the stack: the **lifetime**
+    total since that `Meter` was built (a policy instance builds one, reused across every run in
+    a `simulate()` call). Returns all-zero usage for `llm=None` or a stack with no `Meter` (e.g. a
+    bare mock in a test). For this run's usage alone, see `run_usage_of`."""
+    return _find_meter_attr(llm, "usage")
+
+
+def run_usage_of(llm) -> dict:
+    """Same chain-walk as `usage_of`, but reads `.run_usage` — the total **since the last
+    `reset_run()`** (`harness/policy.py` calls `reset_run_budget` at the start of every
+    `recommend()`), i.e. this run's own usage. This is what `harness/trace/schema.py` puts in
+    `RunTrace.usage` — added 2026-10-03 alongside `Meter.run_usage` itself; before that, a trace
+    reader had to diff two consecutive JSONL lines to get a per-run number from the lifetime
+    total `usage_of` returns, which this makes unnecessary."""
+    return _find_meter_attr(llm, "run_usage")
 
 
 def reset_run_budget(llm) -> None:
