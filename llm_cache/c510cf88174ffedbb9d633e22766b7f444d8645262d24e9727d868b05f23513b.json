@@ -1,0 +1,249 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "YM-BLR-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release slot dominance from sub-optimal holder S1 to allow efficient bidder S2."
+      },
+      {
+        "id": "LM-BLR-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure slot-1 position for highest-incremental-sku S2."
+      },
+      {
+        "id": "YM-BLR-K03-S5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Step back weaker holder S5 from generic keyword to prevent ad waste."
+      },
+      {
+        "id": "YM-HYD-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Yield brand keyword slot to more efficient body-wash competitor S2."
+      },
+      {
+        "id": "LM-HYD-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture brand search traffic via S2 to drive incremental unit growth."
+      },
+      {
+        "id": "YM-MUM-K05-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce spend leakage on S2 generic cell to reallocate to higher-mroas S4."
+      },
+      {
+        "id": "LM-MUM-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Install shower-gel SKU S4 as primary winner to maximize incremental revenue."
+      },
+      {
+        "id": "YM-MUM-K09-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Exit low-score competition keyword for S3, minimizing wasteful impressions."
+      },
+      {
+        "id": "LM-MUM-K09-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Take competition keyword lead with S1 despite narrow margin, maintaining baseline visibility."
+      },
+      {
+        "id": "YM-MUM-K10-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Step back S2 from competition keyword to free impression quota for superior scorer S4."
+      },
+      {
+        "id": "LM-MUM-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Direct competition traffic to highest-value SKU S4 for better catalog conversion."
+      },
+      {
+        "id": "YM-PUN-K01-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Yield brand search dominance from low-iota shower gel S4 to higher-potential body wash S2."
+      },
+      {
+        "id": "LM-PUN-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture brand queries via S2, leveraging strong incremental lift to fill allowance headroom."
+      },
+      {
+        "id": "YM-PUN-K04-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Step back S3 from generic keyword where score gap favors incrementality over current holder."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Prioritized correcting misallocated contest markets (wrong_holder=True) by yielding from inefficient incumbents and leading with higher-iota SKUs. Avoided forcing leads on MISSES-verdict cells to prevent G7 compliance failures. Focused changes fall within budget allowance constraints."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25327,
+    "tokens_out": 20364,
+    "cost_usd": 0.00340713,
+    "wall_clock_s": 178.291800417
+  }
+}

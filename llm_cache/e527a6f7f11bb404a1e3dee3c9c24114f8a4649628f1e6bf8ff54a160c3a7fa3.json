@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical score narrowly favors C-S2-MUM, but C-S4-MUM demonstrates substantially higher slot1_share_7d (0.90 vs 0.58), indicating stronger existing market dominance and positioning efficiency. Given the near-tie in leader scores, prioritizing the campaign with proven top-slot traction better preserves efficient volume and aligns with defensive leadership strategy."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1655,
+    "cost_usd": 0.025875,
+    "wall_clock_s": 17.988988000000063
+  }
+}

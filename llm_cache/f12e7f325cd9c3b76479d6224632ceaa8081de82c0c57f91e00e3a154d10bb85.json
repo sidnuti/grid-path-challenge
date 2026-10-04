@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.95,
+    "rationale": "While the mechanical scores are virtually identical (0.6038 vs 0.6037), C-S3-BLR holds a marginal edge and dominates in slot1_share_7d (0.95 vs 0.55). This significant gap in top-slot capture strongly indicates C-S3-BLR has better traction and less internal cannibalization risk when designated as the protected leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1086,
+    "cost_usd": 0.01734,
+    "wall_clock_s": 12.806535958000005
+  }
+}

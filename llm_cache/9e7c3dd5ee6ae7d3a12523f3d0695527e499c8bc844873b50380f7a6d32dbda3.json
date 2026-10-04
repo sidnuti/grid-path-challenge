@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.67,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 4.67 is highly significant and flagged, while CPM remains flat (z=0.001). With own-action confound false, this points to a genuine external demand or inventory surge rather than competitive pressure or harness feedback loop."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 767,
+    "cost_usd": 0.012837,
+    "wall_clock_s": 8.720681249999984
+  }
+}

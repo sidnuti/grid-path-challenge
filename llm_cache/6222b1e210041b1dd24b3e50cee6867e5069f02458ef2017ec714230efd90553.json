@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.65,
+    "rationale": "Realized dROAS (4.96) comfortably exceeds goal (3.15), validating the upward bid adjustment. Low order volume (23) introduces higher estimation variance despite shrinkage, warranting moderate confidence. Applying the full proposed raise aligns with the dampening preference when uncertain."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 1841,
+    "cost_usd": 0.029034,
+    "wall_clock_s": 22.84971895900003
+  }
+}

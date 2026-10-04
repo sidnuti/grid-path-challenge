@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 2.97,
+    "direction": "surge",
+    "confidence": 0.78,
+    "rationale": "Reach jumped ~3.0 SD (well past flag threshold) while CPM stayed near baseline (+0.63 SD, unflagged), indicating expanded impressions without a price move \u2014 consistent with a genuine demand surge or competitor retreat, not a price/competition bid-driven shock. OSA z-score is 0.0 and the own_action_confound flag is False, so the harness's own prior bid/budget change is unlikely to explain this. Classify as a real market shock worth reacting to, with moderate-high confidence given the flat CPM slightly weakens certainty about the underlying driver."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 561,
+    "cost_usd": 0.0008614600000000001,
+    "wall_clock_s": 5.044697832999873
+  }
+}

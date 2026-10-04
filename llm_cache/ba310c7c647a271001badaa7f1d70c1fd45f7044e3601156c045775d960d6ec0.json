@@ -1,0 +1,200 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-Generic-Scale",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL,C-S4-PUN,C-S2-HYD,C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-PUN",
+          "R:C-S2-HYD",
+          "R:C-S2-BLR",
+          "K:Shower Gel:generic",
+          "K:Body Wash:generic",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K06",
+          "C:C-S2-HYD/K05",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-incremental generic demand in scale campaigns; boost off-take with positive mroas_up20 signals."
+      },
+      {
+        "id": "LB-Campaigns-Scale",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL,C-S4-DEL,C-S1-HYD,C-S2-BLR,C-S1-PUN,C-S2-HYD,C-S2-PUN,C-S4-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "R:C-S4-DEL",
+          "R:C-S1-HYD",
+          "R:C-S2-BLR",
+          "R:C-S1-PUN",
+          "R:C-S2-HYD",
+          "R:C-S2-PUN",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlock headroom for efficient scale campaigns to maximize incremental offtake within daily allowance."
+      },
+      {
+        "id": "CB-Campaigns-HoldTrim",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM,C-S1-BLR,C-S3-DEL,C-S3-BLR,C-S3-MUM,C-S3-HYD,C-S3-PUN,C-S5-DEL,C-S5-BLR,C-S5-MUM,C-S5-HYD,C-S5-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM",
+          "R:C-S1-BLR",
+          "R:C-S3-DEL",
+          "R:C-S3-BLR",
+          "R:C-S3-MUM",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN",
+          "R:C-S5-DEL",
+          "R:C-S5-BLR",
+          "R:C-S5-MUM",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce bleed from weak/held campaigns, freeing allowance for scale roles and protecting portfolio ROAS floor."
+      },
+      {
+        "id": "LM-S4-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01",
+          "C:C-S4-DEL/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift brand awareness impressions to Shower Gel (S4) which holds higher incremental score than incumbent S1 in DEL."
+      },
+      {
+        "id": "LM-S2-PUN-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10",
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong-holder in PUN competition; move volume to Body Wash (S2) where Shower Gel (S4) score is zero."
+      },
+      {
+        "id": "YM-S3-StepBack",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR,DEL,HYD,MUM",
+          "keyword_id": "K02,K03,K04,K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K02",
+          "M:BLR:K03",
+          "M:BLR:K09",
+          "M:DEL:K02",
+          "M:DEL:K04",
+          "M:DEL:K09",
+          "M:HYD:K02",
+          "M:MUM:K04",
+          "M:MUM:K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Release inefficient Soap (S3) dominance in competitor/generic terms, allowing higher-score SKUs to compete without forced slot-1 bids that risk MISSES verdicts."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "soap",
+        "keyword_type": "brand",
+        "sku_role": "scale",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "body_wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "body_wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "shower_gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "shower_gel",
+        "keyword_type": "brand",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "shower_gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "kids_soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "kids_soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Plan shifts budget and bids from trimmed/low-iota segments to scale campaigns and high-mroas generic cells. Contested market leaders adjusted only where cells CLEAR G7 guardrails, avoiding prior slot-1 failures. Budget cuts on hold/trim roles preserve the 4.0858 ROAS floor while funding incremental growth."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10998,
+    "tokens_out": 9090,
+    "cost_usd": 0.00151164,
+    "wall_clock_s": 88.44496729100007
+  }
+}

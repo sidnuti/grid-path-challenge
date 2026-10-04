@@ -1,0 +1,179 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LK-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S4 (score 1.909 vs 1.184) to capture higher incremental revenue and beat internal sibling S2."
+      },
+      {
+        "id": "LK-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead competition market for S4 (score 0.805 vs 0.668), maximizing iota 1.00 returns."
+      },
+      {
+        "id": "LK-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S1 leads brand market in HYD (score 1.295 vs 1.149) to secure defensive base demand."
+      },
+      {
+        "id": "LK-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S1 leads PUN brand market against S4/S2, preventing low-iota displacement."
+      },
+      {
+        "id": "RB-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bid on high-iota generic term (mroas 7.41, iota 0.82) to drive incremental off-take."
+      },
+      {
+        "id": "RB-S4-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture full competition incrementality (iota 1.00, iroas 6.68) with conservative size."
+      },
+      {
+        "id": "RB-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale Body Wash generic in HYD (mroas 6.83, iota 0.65) within headroom."
+      },
+      {
+        "id": "RB-S2-HYD-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund competition\u589e\u91cf in HYD (iota 0.99, iroas 5.02)."
+      },
+      {
+        "id": "RB-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise on efficient generic in DEL (mroas 4.48) to utilize budget headroom."
+      },
+      {
+        "id": "RB-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Boost BLR generic efficiency (mroas 5.04) where campaign recently capped."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Fixed prior rejections by dropping S1 lead attempts on mismatched goals, removing saturated bid raises (G3), and staying strictly within the 532 INR allowance via targeted bid increases instead of budget hikes. Focuses spend on cells with high mroas_up20 and iota near 1.00 to maximize incremental off-take while keeping portfolio DRoAS comfortably above the 4.8155 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12616,
+    "tokens_out": 10302,
+    "cost_usd": 0.00171774,
+    "wall_clock_s": 93.26447387500002
+  }
+}

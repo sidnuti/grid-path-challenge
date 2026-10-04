@@ -1,0 +1,205 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unblock budget cap on efficient Soap-DEL fund to capture remaining organic+ad demand without exceeding allowance."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Relieve funding constraint on Soap-BLR fund (6/7 run-outs) to sustain incremental volume."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift shower gel brand leadership from S2 to S4 in DEL, aligning impression share with highest incremental revenue per impression."
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocate soap generic share in DEL from S3 to S1, optimizing incremental yield on a cleared cell."
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S4 shower gel leadership on brand queries in MUM, consolidating high-value incremental share."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move S4 shower gel to leader role on BLR brand search, capturing superior delta over incumbent S1."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure shower gel competition leadership in BLR behind S4 to lift portfolio incremental conversion."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Test +10% bid lift on high-headroom generic cell to gauge reach elasticity without breaching safety rails."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incremental push on cleared generic segment supporting fund campaign efficiency."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Budget lifts are sized small to remain within the daily allowance while relieving caps on efficient fund campaigns. Contested market realignments prioritize S4 on shower gel brand/competition and S1 on soap generic to maximize iota-weighted delivery. Avoid aggressive reactions to flagged anomalies due to own-action confounding. All moves preserve portfolio DROAS margin above floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11093,
+    "tokens_out": 8959,
+    "cost_usd": 0.00149746,
+    "wall_clock_s": 72.97941329100001
+  }
+}

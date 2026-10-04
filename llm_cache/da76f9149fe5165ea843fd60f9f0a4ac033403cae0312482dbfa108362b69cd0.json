@@ -1,0 +1,364 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impression dominance to S2 (highest incremental score) in BLR/K01 contest."
+      },
+      {
+        "id": "LM-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Allocate lead position in BLR/K03 to S1, the best incremental performer."
+      },
+      {
+        "id": "LM-BLR-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure slot-1 in BLR/K04 for S3, maximizing incremental revenue per impression."
+      },
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect HYD/K01 volume to S2, preventing low-iroas bleed."
+      },
+      {
+        "id": "LM-HYD-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead HYD/K03 market with S3 (score 0.722) over inefficient incumbents."
+      },
+      {
+        "id": "LM-HYD-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate HYD/K04 share behind S3 for better margin/unit economics."
+      },
+      {
+        "id": "LM-HYD-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Place S1 in lead for HYD competition to capture high-intent searches efficiently."
+      },
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take lead in MUM brand contest with S1 (score 0.566) to secure high-conversion traffic."
+      },
+      {
+        "id": "LM-MUM-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Dominant positioning for S1 in MUM secondary brand term."
+      },
+      {
+        "id": "LM-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift MUM generic volume to S3 (score 0.772) for superior incrementality."
+      },
+      {
+        "id": "LM-MUM-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate MUM/K04 lead with S3 to improve blended iROAS."
+      },
+      {
+        "id": "LM-MUM-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prioritize S4 in MUM competition where it commands highest incremental value."
+      },
+      {
+        "id": "HLD-C-S1-DEL",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Prevent escalation on C-S1-DEL (droas 3.56 < floor) to safeguard portfolio ROAS."
+      },
+      {
+        "id": "HLD-C-S3-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Freeze upward pressure on C-S3-MUM (trim, droas 2.82) to maintain floor."
+      },
+      {
+        "id": "HLD-C-S3-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Block raises on C-S3-BLR (trim, iroas 0.91) to stop margin erosion."
+      },
+      {
+        "id": "HLD-C-S3-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Cap spending on C-S3-HYD (hold, droas 2.59) to preserve overall portfolio efficiency."
+      },
+      {
+        "id": "HLD-C-S5-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Stabilize C-S5-BLR (hold, droas 2.26) and prevent wasteful bid inflation."
+      },
+      {
+        "id": "HLD-C-S5-DEL",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restrict C-S5-DEL escalation (hold, dropped orders) to protect unit economics."
+      },
+      {
+        "id": "HLD-C-S5-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Limit C-S5-MUM spend growth (hold, iroas 1.55) until incremental lift materializes."
+      },
+      {
+        "id": "HLD-C-S1-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Pause new investment in C-S1-MUM (trim role) to avoid diluting blended returns."
+      },
+      {
+        "id": "HLD-C-S1-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Halt upward trajectory on C-S1-BLR (trim, droas 3.29) to keep portfolio above 4.82."
+      },
+      {
+        "id": "BR-C-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic",
+          "sub_category": "Body Wash"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase exposure on highly scalable Body Wash generic cell (mROAS 4.79) to drive incremental off-take."
+      },
+      {
+        "id": "BR-C-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06",
+          "keyword_type": "generic",
+          "sub_category": "Body Wash"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture additional incremental demand in DEL generic segment with validated ROI uplift."
+      },
+      {
+        "id": "BR-C-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic",
+          "sub_category": "Body Wash"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push MUM Body Wash generic volume using strong predicted mROAS (6.11) headroom."
+      },
+      {
+        "id": "BR-C-S4-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06",
+          "keyword_type": "generic",
+          "sub_category": "Shower Gel"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K06",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage Shower Gel scale role in PUN with exceptional mROAS projection (10.42) to accelerate off-take."
+      }
+    ],
+    "stance": [],
+    "notes": "Reallocation of contested-market impression share to highest-incrementality SKUs drives efficiency gains without violating the 4.82 roas floor. Targeted holds on persistent trim/hold campaigns prevent margin dilution, while medium bid lifts are restricted to scale-campaigns demonstrating clear mROAS upside (>4.5x)."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11085,
+    "tokens_out": 9809,
+    "cost_usd": 0.00160772,
+    "wall_clock_s": 84.23111824999978
+  }
+}

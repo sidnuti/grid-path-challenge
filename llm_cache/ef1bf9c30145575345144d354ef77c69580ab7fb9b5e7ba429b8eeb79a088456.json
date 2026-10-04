@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.5,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "The highly significant reach z-score (5.476) confirms a statistically robust deviation. Absence of an own-action confound and clean OSA metrics indicate this is a genuine external market or demand surge rather than an internal artifact. The modest unflagged CPM dip points to volume-driven efficiency or mild competitive pricing, but does not override the primary surge signal."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 2099,
+    "cost_usd": 0.032817,
+    "wall_clock_s": 19.993754166999906
+  }
+}

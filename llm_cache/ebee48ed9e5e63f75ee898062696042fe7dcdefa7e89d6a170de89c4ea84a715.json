@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 2.7,
+    "direction": "surge",
+    "confidence": 0.75,
+    "rationale": "Reach z-score of 2.719 (~2.7 baseline SDs) is well above flag threshold while CPM moved only mildly (z=0.578), a pattern consistent with a genuine demand-side surge \u2014 more volume at roughly stable prices \u2014 rather than a price/competition repricing or noise. The own-action confound flag is false and OSA is flat (z=0.0), so the harness's prior bid/budget move is an unlikely explanation. Worth reacting to."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 443,
+    "cost_usd": 0.00071396,
+    "wall_clock_s": 4.257844875000046
+  }
+}

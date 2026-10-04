@@ -1,0 +1,214 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "lm-s4-mum-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift top slot to S4 where incremental score beats S2 rival."
+      },
+      {
+        "id": "lm-s4-blr-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:BLR:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture uncontested S4 leadership in BLR competition via higher iroas."
+      },
+      {
+        "id": "lm-s4-pun-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Win contested PUN competition slot for S4 over S2."
+      },
+      {
+        "id": "rb-s4-mum-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K10",
+          "K:Shower Gel:competition"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive incremental share on high-iota comp keyword."
+      },
+      {
+        "id": "rb-s4-blr-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K10",
+          "K:Shower Gel:competition"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale BLR comp spend to capitalize on iota ~1.00."
+      },
+      {
+        "id": "rb-s4-pun-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K10",
+          "K:Shower Gel:competition"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund incremental win rate in PUN competition."
+      },
+      {
+        "id": "rb-s4-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand high iroas generic volume in MUM shower gel."
+      },
+      {
+        "id": "rb-s4-pun-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K05",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Grow PUN generic off-take on efficient bids."
+      },
+      {
+        "id": "rb-s4-pun-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Test marginal uplift on THIN generic cell with strong baseline iroas."
+      },
+      {
+        "id": "rb-s2-del-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K10",
+          "K:Body Wash:competition"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Extract incremental value from hold body wash campaign via competition."
+      },
+      {
+        "id": "rb-s2-mum-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K10",
+          "K:Body Wash:competition"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Capture remaining room in trim MUM body wash market."
+      },
+      {
+        "id": "budget-s4-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Unlock full budget capacity for MUM scale role to maximize iroas."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "hold",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused spending on S4 competition and generic keywords where iota approaches 1.00 and iroas outpaces organic displacement. Market lead changes ensure highest incremental SKUs capture premium slots while staying within daily allowance."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 26865,
+    "tokens_out": 19842,
+    "cost_usd": 0.0033854099999999997,
+    "wall_clock_s": 172.90254262500002
+  }
+}

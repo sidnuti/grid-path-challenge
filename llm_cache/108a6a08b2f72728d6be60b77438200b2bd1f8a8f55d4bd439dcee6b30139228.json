@@ -1,0 +1,136 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental volume on body wash generic where mroas_up20 is 3.96 and iota is 0.48."
+      },
+      {
+        "id": "I2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push into higher conversion slots on generic queries; high incremental return supports scale."
+      },
+      {
+        "id": "I3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage mroas_up20 of 8.14 for rapid, efficient incremental growth in Pune."
+      },
+      {
+        "id": "I4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Release slot-1 share to S1 (score 0.671 > 0.595) to resolve wrong-holder status and improve contest efficiency."
+      },
+      {
+        "id": "I5",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Relieve 7-day run-out constraint on efficient fund campaign to stabilize brand+generic coverage."
+      },
+      {
+        "id": "I6",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Sustain high-ROAS shower gel volume in Mumbai where daily caps previously throttled spend."
+      },
+      {
+        "id": "I7",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block all increases due to osa_3d of 0.42 (<0.60 threshold) to prevent spend waste on unavailable inventory."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "all",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Dropped previously rejected C-S2-DEL/K05 raise due to lack of predicted gain. Focused bid expansion on high-iota body wash generics and resolved the S3/S1 contest mismatch in DEL K04. Budget lifts replenish run-out on fund campaigns while holding C-S2-HYD safeguards against low-osa availability. Portfolio DROAS remains comfortably above the 4.62 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11206,
+    "tokens_out": 8518,
+    "cost_usd": 0.0014435200000000002,
+    "wall_clock_s": 80.3075885
+  }
+}

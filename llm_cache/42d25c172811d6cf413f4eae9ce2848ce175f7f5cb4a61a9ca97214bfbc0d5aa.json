@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-DEL",
+    "confidence": 0.62,
+    "rationale": "C-S2-DEL has the higher mechanical leader_score (1.7404 vs 1.7285), so it retains the default preference despite the near-tie margin. Supporting evidence also favours it: its 7-day slot-1 share (0.84) is substantially higher than C-S4-DEL's (0.69), indicating it more consistently holds the top position. The narrow score gap caps confidence at a moderate level."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 412,
+    "cost_usd": 0.0006400599999999999,
+    "wall_clock_s": 4.190102374999924
+  }
+}

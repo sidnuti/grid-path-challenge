@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.5,
+    "rationale": "Low order volume (18 in 28d) introduces high variance in the realised dROAS, reducing reliability of the forward-looking simulation despite the clear verdict. Dampening the proposed raise curbs noise-driven spend while retaining partial exposure to the mechanical recommendation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 461,
+    "tokens_out": 1735,
+    "cost_usd": 0.027408,
+    "wall_clock_s": 20.98934158399993
+  }
+}

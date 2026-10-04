@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.9,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z=5.876 is a ~5.9-sigma deviation, far beyond noise. CPM simultaneously fell 2.67 sigma, a pattern consistent with a genuine market shift (expanded inventory/demand or softened competition lowering auction prices while reach expands), not a mechanical artifact. Own-action confound flag is false, ruling out the harness's prior bid/budget move as the cause, and OSA shows no offsetting anomaly. Magnitude set by the reach z-score; direction read as surge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 552,
+    "cost_usd": 0.00085021,
+    "wall_clock_s": 5.289672791000044
+  }
+}

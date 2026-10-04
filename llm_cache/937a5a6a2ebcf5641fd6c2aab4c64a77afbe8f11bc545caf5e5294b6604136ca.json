@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.5,
+    "rationale": "The mechanical leader_score already selects C-S1-MUM (0.2139 vs 0.1955). Given the near-tie, C-S3-MUM's higher slot1_share does not provide clear evidence of better conversion-driven profitability or incrementality to override the mechanical pick. C-S1-MUM remains the optimal leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1785,
+    "cost_usd": 0.027825,
+    "wall_clock_s": 17.005893291999996
+  }
+}

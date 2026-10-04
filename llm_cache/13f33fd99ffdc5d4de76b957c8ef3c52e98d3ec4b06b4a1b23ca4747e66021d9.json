@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.78,
+    "rationale": "Mechanical leader_score favours C-S3-MUM (0.6707 vs 0.6421); the supporting evidence does not favour the alternative \u2014 C-S3-MUM's 7d slot-1 share of 0.94 versus 0.55 indicates it already holds the top position and its bid is the one worth protecting. No clear evidence points to C-S1-MUM, so the mechanical pick stands."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 391,
+    "cost_usd": 0.00061418,
+    "wall_clock_s": 3.491345375000037
+  }
+}

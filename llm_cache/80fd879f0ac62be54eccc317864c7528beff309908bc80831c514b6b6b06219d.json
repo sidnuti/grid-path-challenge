@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10,
+    "direction": "surge",
+    "confidence": 0.87,
+    "rationale": "Reach z=+12.3 with CPM z=-5.3 is a classic genuine market signal: impression volume exploded while unit price collapsed, consistent with a price/competition shift (competitor bid pullback or inventory expansion) rather than our own spend, since a self-driven bid/budget move would raise CPM rather than crash it. OSA flat (z=0) rules out an organic attention shift, and the own_action_confound flag is False, so the harness's prior move is unlikely to be the cause. Combined magnitude (~13 sigma across metrics) is capped at 10; reacting is warranted."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 432,
+    "tokens_out": 679,
+    "cost_usd": 0.00100859,
+    "wall_clock_s": 6.270288582999996
+  }
+}

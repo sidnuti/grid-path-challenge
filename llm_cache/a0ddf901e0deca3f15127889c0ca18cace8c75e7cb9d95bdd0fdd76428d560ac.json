@@ -1,0 +1,110 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-MUM",
+          "R:C-S4-BLR",
+          "K:Shower Gel:competition",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture top slot on fully incremental shower gel search terms; aligns with highest portfolio iroas and iota=1.00."
+      },
+      {
+        "id": "INT-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer impression share from S2 to S4 on high-volume generic query; aligns with best incremental revenue score."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure shower gel dominance over body wash in Mumbai generic cluster."
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture Bangalore generic share for shower gel; displaces weaker holder."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Relieve hard cap on efficient fund; maintains baseline incremental soap volume in BLR."
+      },
+      {
+        "id": "INT-06",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S5",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Prune low-incrementality kids soap generic spend; reallocates allowance to higher iroas shifts."
+      }
+    ],
+    "notes": "Run 1 prioritizes spending the daily allowance on S4 shower gel where iota=1.00 and iroas exceeds 5.5 across all cities. Competitor and generic keywords are targeted for aggressive bid lifts and market leadership shifts from S2/S1. Budget raised only for efficient funds (S3-BLR); weak trim/hold (S5) receive minor bid cuts to preserve room without risking floor compliance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11866,
+    "tokens_out": 10284,
+    "cost_usd": 0.0016929,
+    "wall_clock_s": 89.95050995800001
+  }
+}

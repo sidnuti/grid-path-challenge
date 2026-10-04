@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.55,
+    "rationale": "The mechanical leader_score provides a narrow but decisive edge for C-S1-DEL (0.6520 vs 0.6301). Per the directive to prefer the mechanical pick in near-ties unless evidence clearly shifts preference, C-S1-DEL is selected as the leader. Confidence remains moderate due to the tight score differential and the notably higher slot1 share of C-S3-DEL, which introduces minor noise to the mechanical metric."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 1891,
+    "cost_usd": 0.029412,
+    "wall_clock_s": 18.85697975
+  }
+}

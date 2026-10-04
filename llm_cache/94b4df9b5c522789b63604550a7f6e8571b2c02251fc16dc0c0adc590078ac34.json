@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.7,
+    "rationale": "Mechanical scores are a near-tie (0.1857 vs 0.1836), but the corroborating evidence supports the mechanical pick: C-S1-HYD already dominates the top slot with 0.89 slot1_share_7d versus 0.50 for C-S3-HYD. Protecting C-S1-HYD's bid aligns with current market position, while C-S3-HYD holding rather than raising carries little risk of losing slot-1 presence it mostly doesn't hold."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 507,
+    "cost_usd": 0.0007591799999999999,
+    "wall_clock_s": 4.798359791999928
+  }
+}

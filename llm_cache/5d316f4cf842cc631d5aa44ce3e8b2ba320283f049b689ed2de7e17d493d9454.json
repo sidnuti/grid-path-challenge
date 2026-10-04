@@ -1,0 +1,306 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital & lift portfolio dROAS by trimming low-iroas Soap holdings."
+      },
+      {
+        "id": "INT-02",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital & lift portfolio dROAS by trimming low-iroas Soap holdings."
+      },
+      {
+        "id": "INT-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital & lift portfolio dROAS by trimming low-iroas Soap holdings."
+      },
+      {
+        "id": "INT-04",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital & lift portfolio dROAS by trimming low-iroas Soap holdings."
+      },
+      {
+        "id": "INT-05",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital & lift portfolio dROAS by trimming low-iroas Soap holdings."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand high-iota generic volume; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand high-iota generic volume; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture brand search with remaining bid headroom."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Shower Gel generic; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Shower Gel generic; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic; slot1<80% & CLEARS."
+      },
+      {
+        "id": "INT-15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Counter self-inflicted reach dip; strong mroas_up20 supports uplift."
+      },
+      {
+        "id": "INT-16",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture brand search with remaining bid headroom."
+      },
+      {
+        "id": "INT-17",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Correct wrong leader; S2 beat-sheet leads generic win probability."
+      },
+      {
+        "id": "INT-18",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back lower-impact SKU to conserve budget & avoid waste."
+      },
+      {
+        "id": "INT-19",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Correct wrong leader; S4 beat-sheet leads generic win probability."
+      },
+      {
+        "id": "INT-20",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back lower-impact SKU to conserve budget & avoid waste."
+      }
+    ],
+    "stance": [],
+    "notes": "Trimmed underperforming Soap holdings to fund high-iota Body Wash & Shower Gel expansions. Corrected leadership in DEL/HYD generic contested markets where our higher-value SKUs were losing impressions to lower-value siblings. Bid ups restricted to cells below 80% slot-1 share to satisfy guardrails."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25411,
+    "tokens_out": 18352,
+    "cost_usd": 0.00314809,
+    "wall_clock_s": 159.89352120800004
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "L_S4_DEL_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift generic keyword leadership to S4 where incremental score exceeds incumbent S2 by 0.18, capturing higher ROI."
+      },
+      {
+        "id": "L_S4_DEL_K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfer leadership to S4 (score 2.702 vs S2 1.084) to maximize incremental volume."
+      },
+      {
+        "id": "L_S4_BLR_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder; S4 outperforms S2 incrementally on BLR generic demand."
+      },
+      {
+        "id": "L_S4_MUM_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture surplus incremental demand currently held by less efficient S2."
+      },
+      {
+        "id": "R_S4_DEL_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bid on cleared cell with 55% slot share to secure additional impressions without violating cap."
+      },
+      {
+        "id": "R_S4_DEL_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid expansion on cleared cell (56% share) aligned with high iroas (4.98)."
+      },
+      {
+        "id": "R_S4_BLR_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise on cleared cell (61% share) targeting scale role with strong mroas (7.85)."
+      },
+      {
+        "id": "R_S4_MUM_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid increase to convert available reach while slot share remains below 80% threshold."
+      },
+      {
+        "id": "R_S2_MUM_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund-efficient bid lift on cleared MUM body wash generic; supports overall portfolio traction."
+      },
+      {
+        "id": "C_S5_DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce daily allocation on historically capped, low-iroas kids soap line to protect ROAS floor."
+      },
+      {
+        "id": "C_S5_BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim weekly budget to free allowance for higher-yielding categories ahead of final run."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "best",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "best",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Focused plan for run 5 corrects prior misallocations by redirecting leadership to highest-incrementality SKUs in contested generic keywords and raising bids only on cleared cells with verified headroom (<80% slot share). Low-value kids soap budgets are trimmed to insulate portfolio direct ROAS against the floor while maximizing off-take in scale roles."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11587,
+    "tokens_out": 10185,
+    "cost_usd": 0.00167166,
+    "wall_clock_s": 92.67256966699995
+  }
+}

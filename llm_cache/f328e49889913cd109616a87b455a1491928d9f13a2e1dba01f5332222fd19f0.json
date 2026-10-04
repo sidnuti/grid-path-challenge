@@ -1,0 +1,231 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfers top slot from saturated S4 to efficient S2 Body Wash, capturing higher incremental orders."
+      },
+      {
+        "id": "LM-S2-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Wins HYD brand search share for scalable S2 over weaker S1, improving iROAS mix."
+      },
+      {
+        "id": "LM-S2-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secures PUN brand traffic for efficient S2, displacing low-value S5 hold."
+      },
+      {
+        "id": "LM-S2-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shifts MUM brand leadership to S2 scale role, maximizing incremental capture."
+      },
+      {
+        "id": "LM-S4-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Moves S4 Shower Gel to top slot for generic term, leveraging superior iota vs S2."
+      },
+      {
+        "id": "BR-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlocks daily spend capacity for fund/scale S4-DEL; ran out 7 of last 7 days."
+      },
+      {
+        "id": "BR-S3-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restores budget headroom for profitable S3-PUN soap operations."
+      },
+      {
+        "id": "RB-S2-DEL-G",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases bid density on efficient DEL generic terms to boost incremental off-take."
+      },
+      {
+        "id": "RB-S4-DEL-G",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Pushes competitive positioning on high-iota Shower Gel generics."
+      },
+      {
+        "id": "RB-S4-BLR-G",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expands S4 BLR generic reach; strong iROAS profile supports lift."
+      },
+      {
+        "id": "H-S5-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Freezes S5 MUM spend (iroas 0.95); preserves portfolio ROAS floor and allowance for scales."
+      },
+      {
+        "id": "H-S5-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Caps weak S5 BLR investment (iroas 1.27); reallocates budget to higher-marginal campaigns."
+      },
+      {
+        "id": "H-S3-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Stops budget bleed from S3 MUM (iroas 1.19); safeguards near-threshold portfolio ROAS."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "scale",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "hold",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Capital is pulled from chronically underperforming Kids Soap and Soap holds to protect the tight 4.17 ROAS floor. Contests are realigned so scalable S2 and S4 roles lead winning slots, ensuring every rupee drives incremental orders before the final run."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11159,
+    "tokens_out": 7642,
+    "cost_usd": 0.0013282300000000001,
+    "wall_clock_s": 66.2773860000002
+  }
+}

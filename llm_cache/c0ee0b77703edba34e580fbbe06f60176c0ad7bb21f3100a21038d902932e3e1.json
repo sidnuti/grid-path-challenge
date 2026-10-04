@@ -1,0 +1,227 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BUD-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unseal cap for efficient fund SKU running out daily; safe for portfolio ROAS"
+      },
+      {
+        "id": "BUD-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unseal cap for hold SKU exhausted 7d; captures baseline soap demand"
+      },
+      {
+        "id": "BUD-S3-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unseal cap for efficient fund SKU; prevents budget loss"
+      },
+      {
+        "id": "LM-S2-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S2 (score 1.554) over S4; improves incrementality"
+      },
+      {
+        "id": "LM-S4-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S4 (score 1.022) over S2; corrects wrong holder"
+      },
+      {
+        "id": "LM-S2-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Align brand lead to highest incremental S2 (0.955) vs S3"
+      },
+      {
+        "id": "LM-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift generic lead to S2 (score 1.640); displaces weaker S4"
+      },
+      {
+        "id": "LM-S3-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fix wrong holder; promote best incremental S3 (0.840) over S1"
+      },
+      {
+        "id": "LM-S4-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Promote highest incremental S4 (1.544) over S2 in generic contest"
+      },
+      {
+        "id": "LM-S2-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Replace S5 lead with more efficient S2 (0.781)"
+      },
+      {
+        "id": "LM-S3-PUN-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder; advance S3 (0.918) over S1"
+      },
+      {
+        "id": "LM-S4-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift lead to best incremental S4 (1.464) over S2"
+      },
+      {
+        "id": "BID-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture residual headroom on CLEARS generic cell; supports S2 scale role"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Replaced rejected market leads with targeted budget unsealing for exhausted fund/hold campaigns and corrected ownership across 9 contested markets where incumbent holders were demonstrably weaker. Bid adjustments kept minimal to preserve ROAS floor headroom while driving incremental off-take."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11277,
+    "tokens_out": 6947,
+    "cost_usd": 0.00124142,
+    "wall_clock_s": 66.37887979200013
+  }
+}

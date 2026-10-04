@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical score slightly favors C-S2-MUM. Despite C-S4-MUM's higher slot1 share, the score gap is narrow and falls within expected noise; retaining the mechanical pick avoids unnecessary bid disruption while maintaining efficient allocation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1862,
+    "cost_usd": 0.02898,
+    "wall_clock_s": 19.59129125000004
+  }
+}

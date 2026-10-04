@@ -1,0 +1,102 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift shower gel generic impressions to highest iroas SKU, displacing lower-efficiency body wash."
+      },
+      {
+        "id": "LM-BLR-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental shower gel demand in BLR generics, improving portfolio offtake."
+      },
+      {
+        "id": "BR-DEL-K05-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase share-of-voice on cleared generic cell with mroas_up20 of 9.57."
+      },
+      {
+        "id": "BR-MUM-K05-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Boost efficient MUM generic spending where iroas is 6.24 and cell clears."
+      },
+      {
+        "id": "CB-S1-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance by reducing heavily wasted budget on a hold SKU with run-out 7d and low iroas 1.90."
+      },
+      {
+        "id": "CB-S1-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocate marginal budget from inefficient SOAP hold to scale campaigns, safeguarding ROAS floor."
+      }
+    ],
+    "stance": [],
+    "notes": "Reallocation prioritizes high-incrementality S4 generic cells over low-irosa S1 budget drains. Leads correct market misallocation per M:xref, while cuts preserve headroom against the zero-margin ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11131,
+    "tokens_out": 8225,
+    "cost_usd": 0.00140318,
+    "wall_clock_s": 82.62138462499999
+  }
+}

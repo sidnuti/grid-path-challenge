@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.62,
+    "rationale": "Mechanical scores are a near-tie (0.2296 vs 0.2345, well within noise), so the tiebreaker evidence decides. C-S1-PUN holds 85% of slot1 over the last 7 days versus 61% for C-S3-PUN, indicating S1 is the dominant incumbent whose bid actually determines market position; protecting S1's bid preserves the lead while S3 holding avoids cannibalising it. The slot1 gap is large enough to clearly favour S1 despite the marginal mechanical edge to S3."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 650,
+    "cost_usd": 0.0009379299999999999,
+    "wall_clock_s": 5.974838208000051
+  }
+}

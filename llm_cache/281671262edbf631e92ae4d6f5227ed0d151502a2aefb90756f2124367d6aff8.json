@@ -1,0 +1,131 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund top-performing shower gel campaign in Delhi; high iroas (4.54), ran out 3/7 days, maximizes incremental revenue per rupee."
+      },
+      {
+        "id": "int-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient shower gel campaign in Mumbai; ran out 3/7 days, strong delta returns, absorbs allowance safely."
+      },
+      {
+        "id": "int-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Top up body wash budget in Mumbai; iota 1.00 on competitor terms, high incrementality despite moderate base iroas."
+      },
+      {
+        "id": "int-4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure daily budget for soap fund in Delhi; ran out 7/7 days, maintains market share while freeing room via trim cuts."
+      },
+      {
+        "id": "int-5",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Utilize Hyderabad allowance on high-iroas shower gel campaign (4.97); ran out 2/7 days, compliant with OSA constraints."
+      },
+      {
+        "id": "int-6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase bid on 100%-incremental competitor keyword (iota 1.00, iroas 4.36) to capture pure\u589e\u91cf volume without cannibalization."
+      },
+      {
+        "id": "int-7",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim weak soap campaign (iroas 1.68) to reallocate \u20b9870 allowance to higher-return SKUs while keeping portfolio direct ROAS above 4.6258 floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Allocating ~\u20b91000 of daily allowance to top-performing Shower Gel (C-S4) and Body Wash (C-S2-MUM) campaigns with verified iroas >2.5 and high iota. Cutting back underperforming Soap trim (C-S3-DEL) to protect portfolio margin above the 4.6258 floor while maximizing incremental offtake. All budget raises meet the \u22652 run-out day threshold and comply with OSA/incrementality guardrails."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12194,
+    "tokens_out": 9654,
+    "cost_usd": 0.00162084,
+    "wall_clock_s": 83.03805387499995
+  }
+}

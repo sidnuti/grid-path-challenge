@@ -1,0 +1,147 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-S4MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase incremental off-take on high-iROAS generic cell with room below slot cap."
+      },
+      {
+        "id": "RB-S4DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up efficient generic cell to capture incremental volume."
+      },
+      {
+        "id": "RB-S2DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Capture incremental volume on clearing generic cell."
+      },
+      {
+        "id": "RB-S4PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Expand reach on top-iROAS shower gel generic."
+      },
+      {
+        "id": "RB-S3MUM-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM",
+          "C:C-S3-MUM/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Small boost on efficient generic cell to utilize spare allowance."
+      },
+      {
+        "id": "CB-S1DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; SKU is hold with sub-median iROAS."
+      },
+      {
+        "id": "CB-S2MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; SKU is hold with sub-median iROAS."
+      },
+      {
+        "id": "CB-S5DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; SKU is hold with lowest iROAS."
+      },
+      {
+        "id": "CB-S5BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; SKU is hold with lowest iROAS."
+      }
+    ],
+    "stance": [],
+    "notes": "Rebalanced spend from low-iROAS hold campaigns to scale campaigns with verified generic cells below slot caps. All raises respect MISSES/80% thresholds and OSA constraints. Trimmed weakholds to protect portfolio ROAS floor while maximizing incremental growth."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11213,
+    "tokens_out": 9692,
+    "cost_usd": 0.0015963499999999999,
+    "wall_clock_s": 78.88618795900001
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.68,
+    "rationale": "Mechanical scores are a near-tie (0.6419 vs 0.6479, gap ~0.006 within noise). The tiebreaker evidence clearly favours C-S1-BLR: it holds slot 1 in 88% of auctions over 7d versus 42% for C-S3-BLR, making it the incumbent auction leader for this market. Protecting C-S1-BLR's bid preserves that dominance while C-S3-BLR holds at minimal cost. C-S5-BLR is far behind on score and is not a contender."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 360,
+    "tokens_out": 1195,
+    "cost_usd": 0.00162695,
+    "wall_clock_s": 9.776271083999973
+  }
+}

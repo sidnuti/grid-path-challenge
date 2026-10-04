@@ -1,0 +1,205 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "raise-budget-s4-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Allocate more daily spend to Scale-tier Shower Gel campaign with 4.33 iROAS and available headroom."
+      },
+      {
+        "id": "raise-budget-s2-hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund Scale-tier Body Wash campaign in HYD (3.38 iROAS) to capture incremental volume safely."
+      },
+      {
+        "id": "raise-budget-s4-hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on Scale-tier Shower Gel efficiency (5.21 iROAS) in HYD with remaining allowance."
+      },
+      {
+        "id": "raise-budget-s1-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Soap budget in PUN aligning with Scale role while preserving ROAS headroom."
+      },
+      {
+        "id": "raise-budget-s2-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Marginal budget lift for Scale-tier Body Wash in PUN to secure baseline volume."
+      },
+      {
+        "id": "raise-bid-s4-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Aggressively bid up generic K06 (mroas_up20=9.96, CLEARS/A) to capture impressions near slot 5 without hitting cap."
+      },
+      {
+        "id": "raise-bid-s2-hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase generic K05 bid to leverage 8.68 mroas_up20 and strong CLEARS verdict."
+      },
+      {
+        "id": "lead-market-mum-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Shift market leadership on generic K05 in MUM to S4 (score 1.536 vs S2 1.115) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "lead-market-pun-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Elevate S4 to lead K05 in PUN, correcting sub-optimal S2 dominance and capturing 1.460 incremental score."
+      },
+      {
+        "id": "hold-s3-del",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block all bid and budget increases for Trim-tier Soap campaign in DEL to preserve portfolio headroom."
+      },
+      {
+        "id": "cut-budget-s3-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce inefficient Soap spend in MUM (trim role, 1.18 iROAS) to free daily allowance for scale tiers."
+      },
+      {
+        "id": "cut-budget-s3-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cut weak Soap campaign in BLR to offset portfolio risk and maintain ROAS floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "any",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "any",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "any",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Revised plan drops previously rejected brand-lead intents in favor of targeted generic bid-ups and budget reallocations toward scale-tier SKUs. Contested markets on generic K05 shifted to S4 where incremental scores are highest. Budget cuts on trim-tier Soap campaigns protect the 4.63 ROAS floor while deploying the full 14k INR daily headroom efficiently."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11197,
+    "tokens_out": 9178,
+    "cost_usd": 0.0015290500000000001,
+    "wall_clock_s": 76.88132116700001
+  }
+}

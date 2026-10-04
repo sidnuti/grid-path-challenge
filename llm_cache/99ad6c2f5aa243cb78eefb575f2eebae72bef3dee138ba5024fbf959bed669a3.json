@@ -1,0 +1,274 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to higher-incrementality S1 on DEL competition."
+      },
+      {
+        "id": "INT-02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back lower-incrementality S3 sibling."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to higher-incrementality S1 on BLR generic."
+      },
+      {
+        "id": "INT-04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back lower-incrementality S3 sibling."
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to highly efficient S4 Shower Gel on HYD brand."
+      },
+      {
+        "id": "INT-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back less efficient S2 Body Wash sibling."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to higher-incrementality S1 on PUN generic."
+      },
+      {
+        "id": "INT-08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back lower-incrementality S3 sibling."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to higher-incrementality S1 on MUM competition."
+      },
+      {
+        "id": "INT-10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back lower-incrementality S3 sibling."
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure top slot on highly efficient, incremental generic keyword with ample bid headroom."
+      },
+      {
+        "id": "INT-12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-DEL/K10",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture fully incremental competitor keyword on scalable Body Wash portfolio."
+      },
+      {
+        "id": "INT-13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Expand volume on scalable Body Wash generic with positive mROAS."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Expand volume on scalable Body Wash generic with positive mROAS."
+      },
+      {
+        "id": "INT-15",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free allowance by reducing spend on low-incrementality Kids Soap."
+      },
+      {
+        "id": "INT-16",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free allowance by reducing spend on weak Soap campaign."
+      },
+      {
+        "id": "INT-17",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free allowance by reducing spend on weak Soap campaign."
+      },
+      {
+        "id": "INT-18",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free allowance by reducing spend on low-ROAS Kids Soap."
+      }
+    ],
+    "stance": [],
+    "notes": "Correcting five misplaced market leaders to maximize incremental revenue per impression. Scaling highly efficient Shower Gel and Body Wash generics/competitor keywords while trimming weak Soap and Kids Soap budgets to preserve allowance and maintain portfolio direct ROAS above the 4.62 floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24048,
+    "tokens_out": 22880,
+    "cost_usd": 0.00369584,
+    "wall_clock_s": 195.005613875
+  }
+}

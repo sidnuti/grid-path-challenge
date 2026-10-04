@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "C-S3-MUM holds the top mechanical leader_score (1.7739) in a near-tie with C-S2-MUM (1.7658). No evidence clearly favours the runner-up: C-S2's higher slot1_share_7d (0.28 vs 0.20) is a modest gap and C-S3's lower share suggests greater headroom for protected bidding, so the mechanical pick is retained."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 404,
+    "tokens_out": 304,
+    "cost_usd": 0.00052948,
+    "wall_clock_s": 3.486871084000029
+  }
+}

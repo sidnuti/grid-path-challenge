@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.62,
+    "rationale": "Near-tie in leader_score (1.2873 vs 1.2682); default to the mechanical pick C-S2-PUN. The extra evidence does not clearly favour C-S4-PUN: its 0.92 slot1_share suggests it already dominates slot 1, implying limited incremental headroom from additional bid, whereas C-S2-PUN at 0.61 retains room where bid changes materially affect outcomes. Keep C-S4-PUN holding rather than raising."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 624,
+    "cost_usd": 0.0009054299999999999,
+    "wall_clock_s": 5.593686499999876
+  }
+}

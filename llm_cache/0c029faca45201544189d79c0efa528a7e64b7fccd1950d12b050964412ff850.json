@@ -1,0 +1,232 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; drop low-incrementality Soap ad spend in Mumbai."
+      },
+      {
+        "id": "INT-02",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; trim weak Soap ad share in Mumbai."
+      },
+      {
+        "id": "INT-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; drop inefficient Soap ads in Bangalore."
+      },
+      {
+        "id": "INT-04",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; trim weak Soap ad share in Bangalore."
+      },
+      {
+        "id": "INT-05",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; reduce low-iota Soap spend in Hyderabad."
+      },
+      {
+        "id": "INT-06",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; trim underperforming Soap ads in Hyderabad."
+      },
+      {
+        "id": "INT-07",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; cut inefficient Soap bids in Pune."
+      },
+      {
+        "id": "INT-08",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; drop weak Soap share in Pune."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent run-outs; protect high-iota Body Wash orders in Delhi."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure daily budget; capture incremental sales in Bangalore."
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Avoid stock-out from budget caps in Hyderabad."
+      },
+      {
+        "id": "INT-12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Win more generic impressions; high iota (0.85) drives incremental revenue."
+      },
+      {
+        "id": "INT-13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture shower gel generics; strong mroas (6.48) supports bid lift."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Defend generic share in Delhi; iota 0.85 ensures ROI above floor."
+      },
+      {
+        "id": "INT-15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase body wash generic reach in BLR; high incremental value."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Focused cuts on low-iota Soap SKUs (S1, S3) across metros to free ample allowance. Redirected savings to fund budgets for out-of-stock-prone Body Wash campaigns (S2) and bid up high-incrementality generic/competition cells where slot-1 shares and MISSES verdicts permit. Maintains portfolio ROAS safely above 4.82 floor while maximizing incremental offtake."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11357,
+    "tokens_out": 9876,
+    "cost_usd": 0.0016245900000000002,
+    "wall_clock_s": 71.88625370900002
+  }
+}

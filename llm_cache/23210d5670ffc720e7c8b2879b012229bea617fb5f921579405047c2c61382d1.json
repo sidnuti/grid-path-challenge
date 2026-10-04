@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.5,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach shows a highly significant positive deviation (z=5.48, flagged) with no own-action confound or OSA disruption. The unflagged CPM dip does not negate the statistical signal, pointing instead to a genuine exogenous demand expansion driving impression volume upward."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1891,
+    "cost_usd": 0.029697,
+    "wall_clock_s": 20.210158915999955
+  }
+}

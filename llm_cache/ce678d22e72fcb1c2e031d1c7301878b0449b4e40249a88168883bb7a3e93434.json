@@ -1,0 +1,203 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient body wash campaign in Delhi; ran out 7/7 days, high iota on competition keywords."
+      },
+      {
+        "id": "INT02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale high-incremental shower gel spend in Mumbai; strong iroas (5.51) and protected iota cells."
+      },
+      {
+        "id": "INT03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale high-incremental shower gel spend in Bangalore; strong iroas (4.90) and protection status."
+      },
+      {
+        "id": "INT04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund body wash in Mumbai; ran out 7/7 days, high iota on competition keyword drives true incrementality."
+      },
+      {
+        "id": "INT05",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Lift hold soap campaign to capture brand search demand; ran out 6/7 days."
+      },
+      {
+        "id": "INT06",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Lift hold soap campaign to capture brand search demand; ran out 7/7 days."
+      },
+      {
+        "id": "INT07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase competitive pressure on high-iRAS brand keyword where slot-1 share is mid-range (0.51)."
+      },
+      {
+        "id": "INT08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift premium brand search share to best incremental SKU S1 over S4."
+      },
+      {
+        "id": "INT09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Optimize brand search allocation to S1 in Mumbai."
+      },
+      {
+        "id": "INT10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Optimize brand search allocation to S1 in Bangalore."
+      },
+      {
+        "id": "INT11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Optimize brand search allocation to S1 in Hyderabad."
+      },
+      {
+        "id": "INT12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture second best brand keyword slot with S1 over S3."
+      },
+      {
+        "id": "INT13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture second best brand keyword slot with S1 over S3."
+      }
+    ],
+    "stances": [],
+    "notes": "Aggressively deployed allowance into high-iota fund campaigns (S2/S4) and scaled hold/scale soap campaigns to capture run-out capacity. Reallocated contested brand-search slots to S1, the highest incremental performer across cities, using lead_market to force sibling yield. Maintains portfolio ROAS floor by avoiding weak S3/S5 spend and focusing on protected/incremental cells."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12145,
+    "tokens_out": 9911,
+    "cost_usd": 0.00165278,
+    "wall_clock_s": 76.80201362499997
+  }
+}

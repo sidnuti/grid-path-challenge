@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.6,
+    "rationale": "Higher mechanical leader score indicates greater expected value. While C-S2-HYD has a stronger recent slot position share, C-S4-HYD's superior score aligns with the directive to prefer the mechanical pick in a near-tie scenario."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1707,
+    "cost_usd": 0.026661,
+    "wall_clock_s": 18.761893749999956
+  }
+}

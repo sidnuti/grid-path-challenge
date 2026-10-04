@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S5-PUN",
+    "confidence": 0.9,
+    "rationale": "Mechanical leader C-S5-PUN (0.6133) is a near-tie with C-S3-PUN (0.5663), but the evidence clearly supports keeping C-S5-PUN as leader: it holds a dominant 0.96 slot1_share_7d versus 0.21 for C-S3-PUN, so it is already winning the auction and its bid is the one worth protecting."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 402,
+    "tokens_out": 322,
+    "cost_usd": 0.00055124,
+    "wall_clock_s": 3.8662194589999217
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S5-PUN",
+    "confidence": 0.92,
+    "rationale": "C-S5-PUN has the highest mechanical leader score (0.6133) and dominates impression share with a 96% slot-1 rate over 7 days. This strong performance metric aligns with the mechanical recommendation, validating its status as the clear leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1195,
+    "cost_usd": 0.019191,
+    "wall_clock_s": 11.525538959000073
+  }
+}

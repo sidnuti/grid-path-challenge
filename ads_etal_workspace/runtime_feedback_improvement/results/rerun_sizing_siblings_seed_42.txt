@@ -1,0 +1,12 @@
+{'n_raises': 18, 'allowance': 0.0, 'max_rows_per_group': 1, 'sum_dspend_all': 3694.8, 'n_dspend_gt1': 18, 'n_selected': 0, 'selected_dspend': 0.0, 'overshoot': False, 'run': 1, 'fallback': False, 'n_hold': 60, 'n_contested': 40, 'n_wrong_leader': 21, 'wrong_leader_markets_where_leader_raised': 0, 'precheck_dropped': 0, 'n_actions': 10, 'by_type': {'reduce_cpm': 10}}
+{'n_raises': 17, 'allowance': 124.67, 'max_rows_per_group': 1, 'sum_dspend_all': 3701.9, 'n_dspend_gt1': 17, 'n_selected': 17, 'selected_dspend': 3701.9, 'overshoot': True, 'run': 2, 'fallback': False, 'n_hold': 60, 'n_contested': 40, 'n_wrong_leader': 20, 'wrong_leader_markets_where_leader_raised': 6, 'precheck_dropped': 5, 'n_actions': 26, 'by_type': {'reduce_cpm': 14, 'increase_cpm': 6, 'increase_budget': 6}}
+{'n_raises': 8, 'allowance': 387.83, 'max_rows_per_group': 1, 'sum_dspend_all': 1847.3, 'n_dspend_gt1': 8, 'n_selected': 8, 'selected_dspend': 1847.3, 'overshoot': True, 'run': 3, 'fallback': False, 'n_hold': 60, 'n_contested': 40, 'n_wrong_leader': 14, 'wrong_leader_markets_where_leader_raised': 0, 'precheck_dropped': 5, 'n_actions': 14, 'by_type': {'reduce_cpm': 11, 'increase_budget': 3}}
+{'n_raises': 3, 'allowance': 674.75, 'max_rows_per_group': 1, 'sum_dspend_all': 114.7, 'n_dspend_gt1': 3, 'n_selected': 3, 'selected_dspend': 114.7, 'overshoot': False, 'run': 4, 'fallback': False, 'n_hold': 60, 'n_contested': 40, 'n_wrong_leader': 15, 'wrong_leader_markets_where_leader_raised': 0, 'precheck_dropped': 3, 'n_actions': 8, 'by_type': {'reduce_cpm': 8}}
+{'n_raises': 3, 'allowance': 1019.24, 'max_rows_per_group': 1, 'sum_dspend_all': 102.7, 'n_dspend_gt1': 3, 'n_selected': 3, 'selected_dspend': 102.7, 'overshoot': False, 'run': 5, 'fallback': False, 'n_hold': 58, 'n_contested': 40, 'n_wrong_leader': 12, 'wrong_leader_markets_where_leader_raised': 0, 'precheck_dropped': 3, 'n_actions': 7, 'by_type': {'reduce_cpm': 7}}
+{'n_raises': 3, 'allowance': 6824.92, 'max_rows_per_group': 1, 'sum_dspend_all': 103.9, 'n_dspend_gt1': 3, 'n_selected': 3, 'selected_dspend': 103.9, 'overshoot': False, 'run': 6, 'fallback': False, 'n_hold': 58, 'n_contested': 40, 'n_wrong_leader': 11, 'wrong_leader_markets_where_leader_raised': 0, 'precheck_dropped': 3, 'n_actions': 9, 'by_type': {'reduce_cpm': 9}}
+1 proposed 10 final 10
+2 proposed 26 final 26
+3 proposed 14 final 14
+4 proposed 8 final 8
+5 proposed 7 final 7
+6 proposed 9 final 9

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.7,
+    "rationale": "Mechanical pick C-S3-DEL has the higher leader_score (0.1837 vs 0.1709). The near-tie prompted review, but the corroborating evidence supports the mechanical choice: C-S3-DEL already holds a 0.90 slot1 share over the last 7 days versus 0.55 for C-S1-DEL, indicating it owns the top position and its bid is the one worth protecting. No evidence clearly favours C-S1-DEL. Confidence is moderate given the narrow score gap."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 336,
+    "tokens_out": 412,
+    "cost_usd": 0.00063932,
+    "wall_clock_s": 4.465056666999999
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BUD-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unpack severe budget constraint (7/7 run-outs) to capture remaining efficient demand."
+      },
+      {
+        "id": "BUD-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Replenish daily budget for BLR Soap to sustain fund efficiency."
+      },
+      {
+        "id": "BUD-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free budget capacity for Body Wash scale in MUM."
+      },
+      {
+        "id": "BUD-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Minor top-up for Shower Gel HYD; maintains fund status without overspend."
+      },
+      {
+        "id": "BID-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-mROAS brand query with significant headroom (slot-1 share 34%)."
+      },
+      {
+        "id": "BID-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incremental generic volume in PUN with favorable conditions and low current slot share."
+      },
+      {
+        "id": "BID-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up generic queries where slot-1 share is 60% and mROAS is strong."
+      },
+      {
+        "id": "BID-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure incremental impression share in HYD with proven mROAS uplift."
+      },
+      {
+        "id": "BID-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Small lift on generic K06 in PUN to maintain efficiency without hitting saturation."
+      },
+      {
+        "id": "CON-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to higher-incrementality SKU S1 over incumbent S3."
+      },
+      {
+        "id": "CON-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:BLR:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Competitor segment leadership yields higher incremental ROI for S2."
+      },
+      {
+        "id": "CON-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct holder to highest-incrementality SKU S4."
+      },
+      {
+        "id": "CON-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Align leadership to S4 for superior incremental score in PUN brand queries."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused on replenishing heavily constrained funds and scaling efficient bid cells with ample slot-1 headroom. Corrected key contested markets to align with incremental ROI leaders. Avoided saturated cells and MISSES verdicts to prevent rejected plans."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24155,
+    "tokens_out": 20333,
+    "cost_usd": 0.0033679400000000003,
+    "wall_clock_s": 172.17555404099994
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-DEL",
+    "confidence": 0.85,
+    "rationale": "Adheres to the mechanical leader_score which prioritizes long-term efficiency metrics (conversion, ASP, incrementality) over short-term impression share. The ~0.07 margin indicates C-S2-DEL delivers better unit economics for this market, aligning with the instruction to prefer the mechanical pick unless overridden by clear contrary evidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 976,
+    "cost_usd": 0.015687,
+    "wall_clock_s": 10.808316749999904
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM:S2-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shifts Body Wash brand traffic in DEL to higher-iota S2 leader, capturing incremental share from S4."
+      },
+      {
+        "id": "LM:S2-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Corrects wrong holder in MUM K01, elevating S2 to maximize incremental revenue."
+      },
+      {
+        "id": "LM:S2-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Establishes S2 as primary holder for Body Wash brand in HYD pending OSA recovery."
+      },
+      {
+        "id": "LM:S2-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfers ownership of competitive K01 impressions to high-iroas S2 in PUN."
+      },
+      {
+        "id": "LM:S3-BLR-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:BLR:K02",
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Resolves incorrect holder alignment in BLR Soap brand search."
+      },
+      {
+        "id": "LM:S1-MUM-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:MUM:K04",
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Returns K04 generic holder to S1 where incremental score outweighs S3."
+      },
+      {
+        "id": "LM:S3-MUM-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:MUM:K09",
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Fixes competitor keyword holder mismatch in MUM."
+      },
+      {
+        "id": "RB:S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Captures efficient incremental volume in high-headroom generic cell without breaching allowance."
+      },
+      {
+        "id": "RB:S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverages S2 scale role and positive mroas_up20 signal in BLR generic."
+      },
+      {
+        "id": "RB:S2-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Targets high-predicted return cell (mroas_up20=5.39) with controlled increment."
+      },
+      {
+        "id": "RB:S1-PUN-K07",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K07"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-PUN/K07",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Capitalizes on THIN generic cell with 6.57 predicted uplift potential."
+      },
+      {
+        "id": "BR:S2-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Relieves chronic cap-outs while maintaining fund status and portfolio ROAS floor."
+      },
+      {
+        "id": "BR:S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prevents stock-outs in high-direct-ROAS shower gel line during peak demand."
+      },
+      {
+        "id": "HOLD:S3-PUN",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Caps budget bleed on trim-tier SKU with weak iroas (1.04)."
+      },
+      {
+        "id": "HOLD:S3-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stops inefficient spend in low-incrementality Soap trim segment."
+      },
+      {
+        "id": "HOLD:S3-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Preserves portfolio ROAS by freezing underperforming hyd soap inventory."
+      },
+      {
+        "id": "HOLD:S5-DEL",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Limits allocation to low-iota kids soap category."
+      },
+      {
+        "id": "HOLD:S5-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trims spend in trim-tier kids soap market."
+      },
+      {
+        "id": "HOLD:S5-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Blocks raises in hold-rated kids soap campaign."
+      },
+      {
+        "id": "HOLD:S5-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Freezes allocation to maintain aggregate floor metrics."
+      },
+      {
+        "id": "HOLD:S5-PUN",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Stops funding low-return kids soap impressions."
+      },
+      {
+        "id": "HOLD:S2-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Explicitly blocks increases per OSA_3d=0.42 constraint (<0.60 threshold)."
+      },
+      {
+        "id": "CB:S3-DEL-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduces CPC on MISSES tier competitor cell to improve blended iroas."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Revised plan discards previously rejected slot-1 and allowance-breaking raises. Redirects budget from S3/S5 trim tiers to S2/S4 scale/fund positions. Enforces OSA guardrail on S2-HYD. Market leadership shifts align with highest incremental revenue per impression scores. Portfolio ROAS floor preserved via stance constraints."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11176,
+    "tokens_out": 9884,
+    "cost_usd": 0.0016202,
+    "wall_clock_s": 96.314566625
+  }
+}

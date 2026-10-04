@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.75,
+    "rationale": "Mechanical scoring selects C-S3-PUN due to a marginally higher leader_score. This decision is strongly supported by its significantly higher slot1_share (0.89 vs 0.66), demonstrating clear market dominance and validating the mechanical pick over C-S1-PUN."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1877,
+    "cost_usd": 0.029205,
+    "wall_clock_s": 20.140716083000143
+  }
+}

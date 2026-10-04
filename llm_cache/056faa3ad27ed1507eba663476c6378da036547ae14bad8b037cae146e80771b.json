@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.62,
+    "rationale": "Mechanical leader_score top pick C-S4-BLR (2.1904) is in a near-tie with C-S3-BLR (2.1430), but the supplemental evidence does not favour the alternative: C-S4-BLR also holds a higher 7-day slot1 share (0.24 vs 0.17). With no clear evidence to overturn the mechanical pick, retain C-S4-BLR as leader; confidence is moderate given the score gap is within noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 402,
+    "tokens_out": 316,
+    "cost_usd": 0.00054374,
+    "wall_clock_s": 3.999429207999981
+  }
+}

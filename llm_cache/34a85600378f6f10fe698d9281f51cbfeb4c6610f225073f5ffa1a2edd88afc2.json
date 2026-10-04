@@ -1,0 +1,334 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leadership to higher-incrementality Shower Gel in Delhi brand search."
+      },
+      {
+        "id": "I2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce wasted impression costs from less efficient Body Wash sibling."
+      },
+      {
+        "id": "I3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead Soap generic over trimming competitor-focused SKU in Delhi."
+      },
+      {
+        "id": "I4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back low-IROAS SKU in contested Delhi generic market."
+      },
+      {
+        "id": "I5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure Delhi brand lead in HYD for high-performing Shower Gel."
+      },
+      {
+        "id": "I6",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield saturated Body Wash campaign in HYD brand search."
+      },
+      {
+        "id": "I7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Lead Soap generic in MUM over weak competitor SKU."
+      },
+      {
+        "id": "I8",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce S3 MUM bid share in generic keyword."
+      },
+      {
+        "id": "I9",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unblock efficient fund running out of budget daily in Mumbai."
+      },
+      {
+        "id": "I10",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund remaining budget for high-IROAS Shower Gel in Mumbai."
+      },
+      {
+        "id": "I11",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Release budget constraint for efficient BLR Shower Gel fund."
+      },
+      {
+        "id": "I12",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Free spend from weak Delhi competitor-focused soap campaign."
+      },
+      {
+        "id": "I13",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce bleed from low-IROAS competitor soap in MUM."
+      },
+      {
+        "id": "I14",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim BLR competitor soap spending to protect portfolio ROAS."
+      },
+      {
+        "id": "I15",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Cut Hyderabad competitor soap waste."
+      },
+      {
+        "id": "I16",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim Pune competitor soap allocation."
+      },
+      {
+        "id": "I17",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up high-incrementality generic cell to capture surplus demand."
+      },
+      {
+        "id": "I18",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture adjacent generic demand with strong predicted uplift (mroas_up20=4.58)."
+      },
+      {
+        "id": "I19",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce low-IROAS kids soap spend in Mumbai."
+      },
+      {
+        "id": "I20",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim low-IROAS kids soap in Hyderabad."
+      },
+      {
+        "id": "I21",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim low-IROAS kids soap in Pune."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Redirecting budget from systematically weak competitor-focused and low-IROAS campaigns to fund/scale portfolios while correcting misallocated market leadership. Bid adjustments target high-leverage generic cells, and budget releases strictly adhere to the 2-run-out-day threshold."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11126,
+    "tokens_out": 10385,
+    "cost_usd": 0.0016838299999999999,
+    "wall_clock_s": 93.63053933399999
+  }
+}

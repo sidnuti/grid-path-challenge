@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.7,
+    "rationale": "The mechanical top two are a near-tie (1.7472 vs 1.6607, ~5% apart, within score noise), so the tie-break evidence is decisive: C-S3-DEL holds a 0.95 slot1_share_7d versus 0.36 for C-S2-DEL, meaning C-S3 is already the de facto top-position holder in this market. Protecting C-S3's bid preserves observed market leadership; the slot-1 dominance clearly favours it over the marginal mechanical edge of C-S2."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 403,
+    "tokens_out": 1085,
+    "cost_usd": 0.0015053599999999999,
+    "wall_clock_s": 9.919801957999994
+  }
+}

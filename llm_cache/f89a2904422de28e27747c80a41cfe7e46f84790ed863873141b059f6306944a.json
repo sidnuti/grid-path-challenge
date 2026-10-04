@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.62,
+    "rationale": "Mechanical leader_score favors C-S1-BLR (0.8497 vs 0.8292). The 0.02 gap is modest, and C-S3-BLR's higher slot1_share (0.83) is a plausible counter-signal, but position share alone does not clearly outweigh the conversion x ASP x incrementality basis of the score. Defaulting to the mechanical pick with only mild confidence given the near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 491,
+    "cost_usd": 0.00073918,
+    "wall_clock_s": 5.334841749999896
+  }
+}

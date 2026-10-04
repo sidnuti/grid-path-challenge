@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.6,
+    "rationale": "Mechanical scoring selects C-S1-DEL by a narrow margin (0.9921 vs 0.9479). While C-S3-DEL shows meaningfully higher slot 1 share (0.72 vs 0.53), indicating stronger prevailing visibility, the score gap is small enough to likely represent noise in a near-tie scenario. Following the explicit directive to retain the mechanical pick unless overridden by clear evidence, C-S1-DEL is chosen as leader. Confidence is set moderately due to the tight differential and competing slot-share signal."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 373,
+    "tokens_out": 1819,
+    "cost_usd": 0.028404,
+    "wall_clock_s": 22.8770035
+  }
+}

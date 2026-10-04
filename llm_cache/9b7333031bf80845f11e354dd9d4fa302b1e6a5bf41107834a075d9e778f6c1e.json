@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.62,
+    "rationale": "C-S3-BLR holds the top mechanical leader_score (1.5906), and while C-S2-BLR is a near-tie (1.5651, within noise), the only additional signal \u2014 slot1_share_7d of 0.50 vs 0.16 \u2014 does not clearly favour C-S2, since slot1 share reflects auction/bidding posture rather than conversion x ASP x incrementality. Default to the mechanical pick; C-S2-BLR should hold rather than raise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 404,
+    "tokens_out": 796,
+    "cost_usd": 0.00114448,
+    "wall_clock_s": 6.553783833000011
+  }
+}

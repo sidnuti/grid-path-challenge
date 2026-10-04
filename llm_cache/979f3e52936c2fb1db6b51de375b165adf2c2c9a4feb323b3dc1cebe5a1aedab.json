@@ -1,0 +1,173 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BID-S2D-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental off-take from scalable Body Wash generic in DEL."
+      },
+      {
+        "id": "BID-S1H-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture efficient branded volume in HYD where bid headroom exists."
+      },
+      {
+        "id": "BID-S2BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic in BLR."
+      },
+      {
+        "id": "BID-S2HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand reach for scalable Body Wash generic in HYD."
+      },
+      {
+        "id": "BID-S4M-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow Shower Gel generic volume in MUM."
+      },
+      {
+        "id": "CUT-S3M",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance by reducing low-iroas Soap spend."
+      },
+      {
+        "id": "CUT-S5M",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Protect portfolio ROAS by trimming weak Kids Soap spend."
+      },
+      {
+        "id": "CUT-S3D",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce inefficient Soap spend in DEL."
+      },
+      {
+        "id": "CUT-S5BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift budget from low-incrementality Kids Soap to scalable SKUs."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "lead",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "lead",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "lead",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Dropped previously rejected budget and competitive raise intents that showed no predicted gain or violated capacity rules. Replaced with targeted generic/brand bid increases on scalable campaigns and budget trims on low-incrementality holds/trims to protect portfolio ROAS floor while utilizing remaining daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11222,
+    "tokens_out": 8054,
+    "cost_usd": 0.0013836799999999998,
+    "wall_clock_s": 78.49213687499997
+  }
+}

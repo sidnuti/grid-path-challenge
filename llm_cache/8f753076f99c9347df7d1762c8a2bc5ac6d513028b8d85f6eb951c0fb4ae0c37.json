@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 6.4,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 6.36 (~6.4 baseline sigmas) is a severe, clearly flagged surge. CPM is essentially flat (z=-0.81, unflagged), so this is not a price/bidding-war effect, and the own-action confound flag is False, so it is unlikely the harness's own prior bid/budget change showing up in the data. The pattern \u2014 large reach expansion with no accompanying price pressure and no self-inflicted cause \u2014 points to a genuine market signal (query-volume/demand surge or competitor easing opening up cheap impressions), which warrants a reaction."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 797,
+    "cost_usd": 0.00115646,
+    "wall_clock_s": 7.656361083999968
+  }
+}

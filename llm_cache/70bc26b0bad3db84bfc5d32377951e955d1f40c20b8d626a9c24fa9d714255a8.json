@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader_score selects C-S3-MUM. The top two scores are virtually tied (difference < 0.5%). Although C-S2-MUM holds a modestly higher Slot 1 share (0.28 vs 0.20), this is insufficient to clearly override the composite mechanical metric, so the mechanical selection is retained."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1839,
+    "cost_usd": 0.028851,
+    "wall_clock_s": 20.577727958999958
+  }
+}

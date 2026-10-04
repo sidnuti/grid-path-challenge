@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.85,
+    "rationale": "C-S3-MUM holds the higher mechanical leader_score (0.6873 vs 0.6812) and demonstrates substantially stronger historical performance with a 0.86 slot1_share_7d compared to 0.69 for C-S1-MUM. Both metrics align to clearly confirm the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1359,
+    "cost_usd": 0.021435,
+    "wall_clock_s": 14.392542208000123
+  }
+}

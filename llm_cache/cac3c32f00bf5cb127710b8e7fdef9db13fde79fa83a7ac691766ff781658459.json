@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10,
+    "direction": "surge",
+    "confidence": 0.95,
+    "rationale": "Extreme positive reach z-score (12.26) strongly signals a genuine market demand surge. Low CPM z-score and absence of an own-action confound rule out price competition shifts or mechanical artifacts, supporting a real external demand spike."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 445,
+    "tokens_out": 657,
+    "cost_usd": 0.01119,
+    "wall_clock_s": 8.112316208000038
+  }
+}

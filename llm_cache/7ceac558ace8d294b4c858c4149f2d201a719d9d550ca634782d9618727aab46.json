@@ -1,0 +1,376 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "CUT-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Recover cash from low-iRoAS trim SKU."
+      },
+      {
+        "id": "CUT-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Recover cash from inefficient soap campaign."
+      },
+      {
+        "id": "CUT-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stop bleed on lowest RoAS kids soap SKU."
+      },
+      {
+        "id": "CUT-S2-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce spend on body wash trim campaign."
+      },
+      {
+        "id": "RAISE-S1-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund scale candidate with reallocated budget."
+      },
+      {
+        "id": "RAISE-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase share on efficient fund campaign."
+      },
+      {
+        "id": "RAISEBID-S4-DEL-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Exploit massive mROAS upside (28.8) and low slot capture."
+      },
+      {
+        "id": "LM-S1-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Displace S2 holder; S1 delivers 2.5x better incremental score."
+      },
+      {
+        "id": "LM-S1-DEL-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K02",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Take brand leadership from S3 Trim; higher ROI."
+      },
+      {
+        "id": "LM-S1-DEL-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K09",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure comp search for S1 instead of S3."
+      },
+      {
+        "id": "LM-S1-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Replace S5 holder with efficient S1 Fund."
+      },
+      {
+        "id": "LM-S1-HYD-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K02",
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead market against S3 Trim holder."
+      },
+      {
+        "id": "LM-S1-MUM-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:MUM:K02",
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Gain brand share from S3 Trim."
+      },
+      {
+        "id": "LM-S1-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:MUM:K03",
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift generic volume to S1 Scale SKU."
+      },
+      {
+        "id": "LM-S1-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Displace S5 holder with S1 Scale."
+      },
+      {
+        "id": "LM-S1-PUN-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:PUN:K04",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder; S1 has higher incremental score."
+      },
+      {
+        "id": "LM-S1-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:BLR:K03",
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take generic leadership from S3 Trim."
+      },
+      {
+        "id": "LM-S4-BLR-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:BLR:K10",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Replace S2 Trim holder with S4 Fund."
+      },
+      {
+        "id": "LM-S4-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Gain shower gel lead from S2 Trim."
+      },
+      {
+        "id": "LM-S4-HYD-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure slot 1 for S4 over S2 Trim."
+      },
+      {
+        "id": "LM-S4-MUM-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:MUM:K10",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Outrank S2 Trim on shower gel comp."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "soap",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "shower gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "body wash",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocation cuts trimmed inefficiency (S3/S2/S5 MUM/BLR/HYD) to fund S1 and S4 scale opportunities. Market leadership changes correct wrong holders where S1/S4 have >20% incremental advantage, optimizing portfolio ROAS and off-take."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23043,
+    "tokens_out": 23434,
+    "cost_usd": 0.00373771,
+    "wall_clock_s": 212.812273292
+  }
+}

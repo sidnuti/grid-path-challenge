@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.55,
+    "rationale": "The mechanical leader_score favors C-S3-PUN (0.1820 vs 0.1645). While C-S1-PUN shows a notably higher historical top-slot share, the scores represent a close margin where the mechanical metric integrates core profitability drivers (conversion, ASP, incrementality). Per guidelines, the mechanical selection is retained as the default choice in this near-tie scenario."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1978,
+    "cost_usd": 0.03072,
+    "wall_clock_s": 19.38052462500002
+  }
+}

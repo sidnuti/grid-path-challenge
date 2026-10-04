@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.6,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "High reach z-score (4.59) paired with a flat CPM (0.20) and absent own-action confound strongly indicates a genuine demand surge. The lack of price pressure rules out competitive bidding escalation, while stable OSA suggests broader market demand rather than supply-side disruption."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1501,
+    "cost_usd": 0.023847,
+    "wall_clock_s": 16.455000332999987
+  }
+}

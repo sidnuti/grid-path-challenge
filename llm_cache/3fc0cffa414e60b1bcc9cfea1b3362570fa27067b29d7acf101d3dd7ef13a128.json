@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.55,
+    "rationale": "Mechanical leader_score is slightly higher and guidelines require preferring it in near-ties. The ~7% gap is minimal, so confidence is set accordingly. While C-S4 has higher slot1_share, the explicit preference for the mechanical pick remains applicable here."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1499,
+    "cost_usd": 0.023535,
+    "wall_clock_s": 15.070621416999984
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score slightly favors C-S4-HYD (1.5845 vs 1.5177). Per instruction to prefer the mechanical pick in near-ties, the higher slot share of C-S2-HYD does not clearly override this metric-based advantage."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1263,
+    "cost_usd": 0.020001,
+    "wall_clock_s": 12.366044750000015
+  }
+}

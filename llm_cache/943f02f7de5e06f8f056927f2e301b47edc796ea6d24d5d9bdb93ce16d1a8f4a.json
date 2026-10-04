@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 5.0 denotes a highly significant deviation, while CPM remains at z=0.0, indicating a genuine demand or inventory surge rather than a competitive price escalation. Own-action confound flag is false, ruling out harness-induced noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1411,
+    "cost_usd": 0.022485,
+    "wall_clock_s": 15.115232042000116
+  }
+}

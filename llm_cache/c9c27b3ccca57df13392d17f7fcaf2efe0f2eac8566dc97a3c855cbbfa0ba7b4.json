@@ -1,0 +1,161 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "lead-S4-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocate search impressions to highest-incremental SKU"
+      },
+      {
+        "id": "yield-S2-DEL-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back lower-iroas sibling to free capacity"
+      },
+      {
+        "id": "lead-S4-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture inefficient market share held by weaker Body Wash SKU"
+      },
+      {
+        "id": "yield-S2-BLR-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce low-value spend in contested generic term"
+      },
+      {
+        "id": "lead-S1-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Improve local Soap keyword efficiency over weaker Kids SKU"
+      },
+      {
+        "id": "yield-S5-MUM-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Conserve budget on low-iroas Kids product"
+      },
+      {
+        "id": "raise-budget-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund run-out budget to capture remaining efficient demand"
+      },
+      {
+        "id": "raise-budget-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Supplement fund status within daily spend allowance"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Dropped previously rejected bids constrained by MISSES verdicts or slot-1 caps. Prioritized reallocation of high-value impression gaps via contests to Shower Gel SKUs, which deliver disproportionate incremental revenue and protect portfolio ROAS. Increased budgets for top-performing fund campaigns within the daily allowance to secure remaining efficient volume."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11319,
+    "tokens_out": 7421,
+    "cost_usd": 0.0013043,
+    "wall_clock_s": 59.28038908299999
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 5.0 indicates a strong, flagged deviation consistent with a genuine market demand or inventory surge. CPM and OSA remain flat at zero, ruling out competitive pricing shifts or pacing/budget artifacts. The own-action confound is false, reinforcing that the signal reflects external market conditions rather than the harness observing its own prior moves."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 441,
+    "tokens_out": 1019,
+    "cost_usd": 0.016608,
+    "wall_clock_s": 11.185516083000039
+  }
+}

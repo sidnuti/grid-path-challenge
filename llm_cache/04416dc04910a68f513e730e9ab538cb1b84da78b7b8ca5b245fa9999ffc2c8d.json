@@ -1,0 +1,325 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift ownership to highest-incremental SKU (S2) for BLR generic searches, boosting off-take share."
+      },
+      {
+        "id": "YM-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back lower-value S1 bids on shared BLR generic impressions to reduce cannibalization."
+      },
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Consolidate MUM generic traffic under S2 (score 1.746) for maximum incremental lift."
+      },
+      {
+        "id": "YM-MUM-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Yield MUM generic slot from S3 to S2, preserving portfolio ROAS."
+      },
+      {
+        "id": "LM-DEL-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer DEL branded search leadership to S3 (score 1.355) over incumbent S1."
+      },
+      {
+        "id": "YM-DEL-K02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S1 displacement cost on DEL brand queries by yielding to S3."
+      },
+      {
+        "id": "LM-DEL-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move DEL generic leadership to S3 (score 0.824) to improve marginal acquisition efficiency."
+      },
+      {
+        "id": "YM-DEL-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S1 on DEL generic K03 to lower blended CPC while maintaining volume."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect PUN generic traffic from low-iota S5 to efficient S2 leader."
+      },
+      {
+        "id": "YM-PUN-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate wasteful S5 bidding on PUN generic searches."
+      },
+      {
+        "id": "LM-MUM-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Assert S3 leadership on MUM generic K04 where incremental ROI exceeds S1."
+      },
+      {
+        "id": "YM-MUM-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S1 overhead on MUM K04 to protect portfolio direct ROAS."
+      },
+      {
+        "id": "CM-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free ~\u20b9480/day allowance by cutting lowest-iota category (Kids Soap, iroas 0.97)."
+      },
+      {
+        "id": "CM-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Relieve budget waste on capped, weak-delivery MUM soap campaign (iroas 1.70)."
+      },
+      {
+        "id": "CM-S1-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Downsize HYD soap spend (iroas 1.93) to reallocate capital to scale-ready Body Wash/Shower Gel."
+      },
+      {
+        "id": "RB-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture additional high-mroas (6.70) generic impressions for DEL Body Wash within 10% bid bump."
+      },
+      {
+        "id": "RB-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand DEL Body Wash generic coverage on K06 where slot-1 share is manageable (59%)."
+      },
+      {
+        "id": "RB-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Drive incremental PU body wash offtake via strong mroas (7.76) on generic K05."
+      },
+      {
+        "id": "RB-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push HYD shower gel acquisition where generic mroas hits 7.85 with healthy slot position."
+      },
+      {
+        "id": "H-S2-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "A:C-S2-HYD/K01",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Freeze all raises on HYD Body Wash to prevent overspending during severe stockout (OSA 0.42)."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "conquest"
+      }
+    ],
+    "notes": "Prioritized contested-market corrections to route traffic to highest-incremental SKUs, protecting direct ROAS floor while driving off-take. Freed ~\u20b91k/day allowance via cuts on low-iota Kids Soap and weak del/MUM/HYD soap campaigns, then deployed to small bid lifts on scale-ready Body Wash and Shower Gel generic keywords. Held S2-HYD strictly due to critical stockout (OSA 0.42) blocking any demand capture until replenishment."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11182,
+    "tokens_out": 10098,
+    "cost_usd": 0.0016482,
+    "wall_clock_s": 80.5938799160001
+  }
+}

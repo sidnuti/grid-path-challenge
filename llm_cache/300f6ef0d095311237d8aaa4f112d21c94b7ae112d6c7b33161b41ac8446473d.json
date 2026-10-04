@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "Mechanical scores are nearly tied, suggesting the metric is noisy. C-S1-HYD demonstrates significantly stronger auction dominance and position stability with a 0.94 slot1 share versus 0.59 for C-S3-HYD. This clear positional advantage justifies selecting C-S1-HYD as the leader despite the marginally lower mechanical score."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 2451,
+    "cost_usd": 0.037821,
+    "wall_clock_s": 25.518312874999992
+  }
+}

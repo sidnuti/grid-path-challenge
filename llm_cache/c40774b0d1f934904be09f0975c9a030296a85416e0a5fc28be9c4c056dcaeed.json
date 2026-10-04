@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.6,
+    "rationale": "Realized dROAS (4.80) significantly exceeds the goal (3.15), validating the mechanism's upward adjustment. However, only 21 orders in 28 days introduces sampling noise, capping confidence at moderate levels. Applying the full proposed raise size aligns with the directive to dampen rather than override when evidence is solid but volume-limited."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 474,
+    "tokens_out": 1715,
+    "cost_usd": 0.027147,
+    "wall_clock_s": 19.3441674579999
+  }
+}

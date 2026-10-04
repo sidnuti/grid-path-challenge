@@ -1,0 +1,262 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-YLD-S3-GEN-DEL-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back S3 from MISSES generic cell; reduces waste while allowing S1 to naturally capture share."
+      },
+      {
+        "id": "INT-LD-S4-GEN-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift highest-iota Shower Gel (S4) to lead DEL generic; captures incremental demand with mroas_up20=8.39."
+      },
+      {
+        "id": "INT-YLD-S2-GEN-DEL-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Yield DEL generic body wash slot to S4; preserves efficient budget allocation."
+      },
+      {
+        "id": "INT-LD-S4-GEN-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Move MUM generic visibility to S4 (score 2.224); counters recent reach drop and lifts incremental revenue."
+      },
+      {
+        "id": "INT-YLD-S2-GEN-MUM-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back S2 from MUM generic competition; aligns with S4 scale priority."
+      },
+      {
+        "id": "INT-LD-S4-BRAND-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Swap PUN brand holder from S1 to S4; leverages S4 superior droas (8.44 vs 4.96) and scale status."
+      },
+      {
+        "id": "INT-YLD-S1-BRAND-PUN-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Reduce S1 PUN brand spend; recaptures budget for higher-iota Shower Gel campaigns."
+      },
+      {
+        "id": "INT-LD-S2-COMP-PUN-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift PUN competition slot to S2 (highest incremental score); maximizes conquest efficiency."
+      },
+      {
+        "id": "INT-YLD-S4-COMP-PUN-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back S4 from PUN comp keyword; avoids overlap and lets S2 lead cost-effectively."
+      },
+      {
+        "id": "INT-LD-S1-GEN-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Replace S5 holder with S1 on BLR generic; S1 has fund status and higher iroas (1.72 vs 0.82)."
+      },
+      {
+        "id": "INT-YLD-S5-GEN-BLR-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Yield BLR generic kids soap slot; reduces low-incrementality spend."
+      },
+      {
+        "id": "INT-LD-S1-GEN-BLR-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Lead S1 on BLR generic K04; clears inefficiency from S3 holder and boosts top-line offtake."
+      },
+      {
+        "id": "INT-YLD-S3-GEN-BLR-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back weak S3 BLR holder; reallocates impressions to efficient S1 fund campaign."
+      },
+      {
+        "id": "INT-LD-S4-GEN-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift BLR generic to S4 (score 1.518); offsets T:BLR:K05 reach decline and captures incremental growth."
+      },
+      {
+        "id": "INT-YLD-S2-GEN-BLR-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Yield BLR generic body wash slot to S4; optimizes cross-SKU allocation."
+      },
+      {
+        "id": "CUT-BUD-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Reduce S3 Delhi drag (trim role, iroas 0.90); frees ~\u20b9513/day for scale campaigns without risking stockouts."
+      },
+      {
+        "id": "CUT-BUD-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Trim Mumbai S3 bleed (trim role, iroas 0.76); preserves portfolio DRoAS ceiling."
+      },
+      {
+        "id": "CUT-BUD-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Hold/cut S3 Bangalore (hold role, iroas 0.88); shifts budget to S1 fund status where iroas=1.72."
+      },
+      {
+        "id": "RAISE-BID-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Increase generic CPM on C-S4-DEL; sustains slot leadership post-market swap, expected ROI uplift ~12%."
+      },
+      {
+        "id": "RAISE-BID-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Boost CPM on C-S4-DEL K06; reinforces shower gel dominance in DEL with proven mroas trajectory."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "lead",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "lead",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "lead",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Reallocation focuses market leadership on highest incremental SKUs (S4 for Shower Gel, S2 for Body Wash comp, S1 for Soap generic). Budget cuts on S3 campaigns prevent portfolio DRoAS dilution. Raised bids sustain new leaders on efficient cells."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24942,
+    "tokens_out": 17889,
+    "cost_usd": 0.00307383,
+    "wall_clock_s": 130.063139875
+  }
+}

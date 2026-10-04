@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.8,
+    "rationale": "Realised dROAS (4.35) substantially exceeds goal (3.15), providing clear efficiency headroom to support the full proposed raise. While order volume is modest (17), the efficiency signal is robust enough to retain the standard step size."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 1431,
+    "cost_usd": 0.022884,
+    "wall_clock_s": 15.951967792000005
+  }
+}

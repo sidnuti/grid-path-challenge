@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.8,
+    "rationale": "Mechanical leader_score is a near-tie (0.6162 vs 0.6057), but the corroborating evidence clearly supports the mechanical pick: C-S3-PUN holds a 0.91 slot1_share_7d versus 0.40 for C-S1-PUN, indicating dominant impression share that is not explained by the noisy score difference. No evidence favours C-S1-PUN."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 361,
+    "tokens_out": 331,
+    "cost_usd": 0.0005473199999999999,
+    "wall_clock_s": 3.013175792000027
+  }
+}

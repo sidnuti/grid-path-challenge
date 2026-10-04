@@ -1,0 +1,129 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BID-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K06",
+          "M:HYD:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive high-yield incremental volume on a competition keyword where S4 leads market score; iROAS 4.32 provides strong dROAS cushion."
+      },
+      {
+        "id": "BID-S2-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capitalize on scale status and strong predicted mroas on generic term."
+      },
+      {
+        "id": "BID-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand efficient reach on generic search with healthy incrementality."
+      },
+      {
+        "id": "BID-S1-HYD-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD",
+          "C:C-S1-HYD/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secure low-share brand term efficiently to sustain baseline demand."
+      },
+      {
+        "id": "LND-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01",
+          "C:C-S1-HYD/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leadership from weaker sibling S2 to capture dominant incremental share."
+      },
+      {
+        "id": "LND-HYD-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:HYD:K02",
+          "C:C-S1-HYD/K02"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Take top position on competitor term where S1 holds superior score."
+      },
+      {
+        "id": "LND-BLR-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09",
+          "C:C-S1-BLR/K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reallocate leadership from S3 to S1 on competition keyword to boost overall market share."
+      }
+    ],
+    "notes": "Focused spend on high-iota scale/fund campaigns with valid headroom (no G3/G7 blocks) while correcting three contested markets where inferior holders captured impressions. Maintains portfolio dROAS well above floor given current headroom and selective targeting."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11920,
+    "tokens_out": 9286,
+    "cost_usd": 0.00156478,
+    "wall_clock_s": 76.15608279099996
+  }
+}

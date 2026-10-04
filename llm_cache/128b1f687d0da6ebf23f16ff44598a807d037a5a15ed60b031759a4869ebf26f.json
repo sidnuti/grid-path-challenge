@@ -1,0 +1,310 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K01-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Concentrate DEL brand impression share on S3 (score 1.005) currently captured by lower-value S5; lifts portfolio iROAS without extra allowance spend."
+      },
+      {
+        "id": "YM-DEL-K01-S5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce wasted ad spend on S5 in DEL brand; prevents ROAS dilution while S3 captures incremental volume."
+      },
+      {
+        "id": "LM-DEL-K02-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong-holder allocation in DEL generic; S3 score 1.162 significantly outperforms S1 leader."
+      },
+      {
+        "id": "YM-DEL-K02-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S1 to avoid intra-brand cannibalization and preserve budget for higher-iota placements."
+      },
+      {
+        "id": "LM-DEL-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect DEL generic traffic to S4 (score 1.401) currently held by inefficient S2; maximizes incremental revenue per impression."
+      },
+      {
+        "id": "YM-DEL-K06-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free impression share for S4; improves DEL portfolio incrementality and protects direct ROAS floor."
+      },
+      {
+        "id": "LM-DEL-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift DEL competition share to S4 (score 1.198); S2 currently captures traffic at lower incremental value."
+      },
+      {
+        "id": "YM-DEL-K10-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Concede S2 shares in DEL competition; concentrates budget on S4's proven incrementality."
+      },
+      {
+        "id": "LM-HYD-K01-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fix HYD brand holder gap; S3 score 0.981 vs S1 0.000, corrects inefficiency and captures branded intent."
+      },
+      {
+        "id": "YM-HYD-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S1 in HYD brand to concentrate budget on higher-value S3 without increasing allowance usage."
+      },
+      {
+        "id": "LM-HYD-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect HYD generic traffic to S4 (score 1.085) currently trapped by S2; drives incremental shower gel offtake."
+      },
+      {
+        "id": "YM-HYD-K05-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free impression share for S4; improves HYD portfolio incrementality and maintains ROAS cushion."
+      },
+      {
+        "id": "RB-C-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand budget on top-funder fund SKU that ran out consistently; captures overflow demand safely within 300 INR allowance."
+      },
+      {
+        "id": "BID-C-S1-BLR-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01",
+          "keyword_type": "brand"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-BLR",
+          "C:C-S1-BLR/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase bid on thin-brand cell with clear headroom; leverages existing efficiency (iroas 2.69) to drive incremental volume."
+      },
+      {
+        "id": "BID-C-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Push bid on high-mroas generic cell (6.84); captures untapped SHG demand in HYD scale campaign without triggering allowance caps."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritize zero-cost contested-market reallocations to shift impression share toward SKUs with highest incremental scores, directly lifting portfolio iROAS and protecting the 4.17 floor. Pair with targeted small-budget expansion on consistently out-of-budget fund campaigns and precise bid nudges on thin-but-efficient cells to drive off-take growth within the 300 INR daily raise allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11167,
+    "tokens_out": 8983,
+    "cost_usd": 0.0015027999999999999,
+    "wall_clock_s": 82.29840024999999
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.85,
+    "rationale": "C-S2-BLR has the higher mechanical leader_score (0.7911 vs 0.7387) and shows significantly stronger current dominance with a 0.93 slot1_share compared to 0.48 for C-S4-BLR. Both metrics align with the mechanical selection, providing no clear evidence to override it."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 901,
+    "cost_usd": 0.014565,
+    "wall_clock_s": 9.165335582999887
+  }
+}

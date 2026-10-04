@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.8,
+    "confidence": 0.3,
+    "rationale": "Only 19 orders in 28 days yields high statistical volatility, meaning the dROAS shortfall vs. goal likely reflects sampling noise rather than true inefficiency. Applying mild dampening to the already conservative +5% proposal to limit noise-driven budget drift while preserving the test. Confidence is low due to thin conversion volume."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 462,
+    "tokens_out": 1702,
+    "cost_usd": 0.026916,
+    "wall_clock_s": 17.385273499999926
+  }
+}

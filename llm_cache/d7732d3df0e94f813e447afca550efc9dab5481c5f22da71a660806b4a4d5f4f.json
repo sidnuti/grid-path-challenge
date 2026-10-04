@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader is C-S3-MUM, but the scores are a near-tie. C-S1-MUM has a significantly higher slot1_share_7d (0.89 vs 0.66), indicating stronger actual market dominance and visibility. This evidence clearly favors overriding the noisy mechanical score and selecting C-S1-MUM as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 2033,
+    "cost_usd": 0.031617,
+    "wall_clock_s": 17.82077808300005
+  }
+}

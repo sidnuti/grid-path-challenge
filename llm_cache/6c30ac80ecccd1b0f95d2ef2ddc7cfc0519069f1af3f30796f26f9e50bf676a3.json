@@ -1,0 +1,230 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "IBR-K05-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure incremental Shower Gel demand in DEL via efficient generic cell with 9.57 mroas."
+      },
+      {
+        "id": "IBM-K05-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale high-iota generic reach for S4 in MUM without triggering slot-cap blocks."
+      },
+      {
+        "id": "IBL-K05-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental volume in BLR on scale-role cell with ample bid headroom."
+      },
+      {
+        "id": "IBE-K06-S2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Drive incremental Body Wash off-take in DEL via efficient generic query."
+      },
+      {
+        "id": "IBM-K03-S3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-MUM",
+          "C:C-S3-MUM/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Expand Soap generic footprint in MUM on scaled budget with positive mroas."
+      },
+      {
+        "id": "IBH-K03-S3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-HYD",
+          "C:C-S3-HYD/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Leverage HYD Soap scale role and clear verdict to lift incremental sales."
+      },
+      {
+        "id": "CON-BLR-K01-L",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K01",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 from lower-iota S1 to highest-score S4 in BLR brand queries."
+      },
+      {
+        "id": "CON-BLR-K01-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release S1 share in BLR K01 to prevent cannibalization and protect ROAS."
+      },
+      {
+        "id": "CON-HYD-K01-L",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move HYD brand slot-1 to S4 (score 2.243) over S1 for superior incrementality."
+      },
+      {
+        "id": "CON-MUM-K01-L",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Install S3 as best-holder in MUM K01 to capture top incremental revenue."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Allocated ~\u20b9200 of the \u20b9300 daily allowance to six small raise_bids on scale/fund generic cells with verified mroas uplift, deliberately avoiding >=80% slot-1 shares and MISSES/A blocks. Resolved three cross-city contest misallocations by shifting slot-1 leadership to S4/S3, maximizing incremental order flow while containing organic displacement risk to keep portfolio DRoAS above the 4.6258 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10845,
+    "tokens_out": 10760,
+    "cost_usd": 0.0017241499999999998,
+    "wall_clock_s": 86.20246370800001
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.65,
+    "rationale": "While C-S3-MUM holds a marginally higher mechanical score, C-S1-MUM dominates with a significantly higher slot share (0.95 vs 0.44). This strong positioning implies greater visibility, more consistent conversion rates, and better overall efficiency, making it the safer choice to protect as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 895,
+    "cost_usd": 0.014475,
+    "wall_clock_s": 8.989703417000044
+  }
+}

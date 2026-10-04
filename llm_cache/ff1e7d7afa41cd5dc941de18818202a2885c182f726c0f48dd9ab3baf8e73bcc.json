@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 6.5,
+    "direction": "surge",
+    "confidence": 0.88,
+    "rationale": "Reach z-score of 6.5 is a large, flagged deviation well beyond noise thresholds. Own-action confound flag is false and OSA z-score is 0.0, so this is not the harness's own prior bid/budget move landing in the data. CPM is essentially flat (z = -0.47), which argues against a price/competition shock and is consistent with a genuine demand-side surge (more available volume at stable pricing). Classify as a real demand surge worth reacting to; magnitude ~6.5 baseline SDs with high confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 432,
+    "tokens_out": 392,
+    "cost_usd": 0.00064984,
+    "wall_clock_s": 3.9565949999998793
+  }
+}

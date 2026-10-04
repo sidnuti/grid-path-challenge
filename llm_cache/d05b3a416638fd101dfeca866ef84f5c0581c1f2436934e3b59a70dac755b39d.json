@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "C-S1-MUM holds the highest mechanical leader_score. The gap over the runner-up C-S2-MUM is minimal, and both have nearly identical slot1_shares. Without clear evidence favoring an alternative, the mechanical selection is retained per instructions."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1629,
+    "cost_usd": 0.025701,
+    "wall_clock_s": 15.644657874999993
+  }
+}

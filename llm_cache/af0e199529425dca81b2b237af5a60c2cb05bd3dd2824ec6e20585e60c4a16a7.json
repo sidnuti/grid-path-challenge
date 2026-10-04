@@ -1,0 +1,184 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore budget for efficient fund city; ran out 7/7 days."
+      },
+      {
+        "id": "I2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore budget for efficient fund city; ran out 5/7 days."
+      },
+      {
+        "id": "I3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore budget for efficient fund city; ran out 7/7 days."
+      },
+      {
+        "id": "I4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Top up body wash fund city; ran out 2/7 days."
+      },
+      {
+        "id": "I5",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim deadweight kids soap spend (iroas 1.20)."
+      },
+      {
+        "id": "I6",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim deadweight kids soap spend (iroas 0.98)."
+      },
+      {
+        "id": "I7",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim deadweight kids soap spend (iroas 1.20)."
+      },
+      {
+        "id": "I8",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim deadweight kids soap spend (iroas 0.98)."
+      },
+      {
+        "id": "I9",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03",
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share on high-iota generic cell (iota=0.67); clears goal."
+      },
+      {
+        "id": "I10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06",
+          "M:BLR:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental body wash demand; slot1=0.62, clears goal."
+      },
+      {
+        "id": "I11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Seed scalable shower gel generic cell; mroas_up20=7.71."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Prioritized budget relief for exhausted fund cities and aggressive trimming of low-incrementality Kids Soap campaigns. Focused bid raises on cleared, high-iota generic cells with available headroom."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25420,
+    "tokens_out": 16668,
+    "cost_usd": 0.00292944,
+    "wall_clock_s": 150.18185966600004
+  }
+}

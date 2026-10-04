@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.65,
+    "rationale": "The mechanical leader score identifies C-S2-PUN as the top candidate (1.1813), closely followed by C-S4-PUN (1.1407). Although C-S1-PUN exhibits a dominant 7-day share (0.94), its considerably lower performance score suggests it may already be saturating demand or reflecting historical rather than current efficiency. Lacking clear evidence to deprioritize the mechanical pick, C-S2-PUN is retained as the leader to optimize conversion-driven value."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1585,
+    "cost_usd": 0.025041,
+    "wall_clock_s": 14.835705708999996
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.55,
+    "rationale": "Mechanical leader_score picks C-S3-DEL (0.6570) over C-S1-DEL (0.6414) \u2014 a near-tie within noise, so default to the mechanical pick. C-S1-DEL's higher slot1_share_7d (0.88 vs 0.73) shows strong top-slot presence but does not clearly outweigh the score-based pick, which already folds in conversion, ASP, and incrementality. C-S5-DEL (0.3567) is well behind and should hold."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 360,
+    "tokens_out": 600,
+    "cost_usd": 0.0008832,
+    "wall_clock_s": 5.528799583000136
+  }
+}

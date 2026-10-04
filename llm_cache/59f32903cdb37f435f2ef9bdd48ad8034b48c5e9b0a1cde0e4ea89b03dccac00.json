@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.85,
+    "rationale": "C-S3-MUM holds the higher mechanical leader_score and dominates the slot1_share_7d metric (0.92 vs 0.65), clearly breaking the near-tie and reinforcing the mechanical recommendation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1438,
+    "cost_usd": 0.02262,
+    "wall_clock_s": 13.71166541699995
+  }
+}

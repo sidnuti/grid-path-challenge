@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical scores are a near-tie (0.7591 vs 0.7889), so the noisy score alone should not decide. The slot1_share_7d evidence clearly favours C-S1-MUM: it holds the top slot 95% of the time versus 44% for C-S3-MUM, making it the de facto incumbent market leader for MUM/K02. Protecting C-S1-MUM's bid preserves stable coverage of the auction, while letting C-S3-MUM hold avoids cannibalising slot1 with no incremental gain."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 1103,
+    "cost_usd": 0.0015041800000000001,
+    "wall_clock_s": 8.786885332999987
+  }
+}

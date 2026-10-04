@@ -1,0 +1,264 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-HYD",
+          "C:C-S3-HYD/K03",
+          "C:C-S3-HYD/K04",
+          "C:C-S3-HYD/K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lift budget cap on fund campaign (7 run-outs) to capture efficient generic and competition inventory aligned with allowance usage goal."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-PUN",
+          "C:C-S3-PUN/K03",
+          "C:C-S3-PUN/K04",
+          "C:C-S3-PUN/K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lift budget cap on fund campaign (7 run-outs) to capture efficient generic and competition inventory aligned with allowance usage goal."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K06",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlock capped fund campaign (7 run-outs) to maximize spend on high-iota competition and efficient generic keywords."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K06",
+          "C:C-S4-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlock capped fund campaign (4 run-outs) to capture remaining efficient spend capacity."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05",
+          "C:C-S4-HYD/K06",
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlock capped fund campaign (6 run-outs) to capture remaining efficient spend capacity."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S3 (score 0.821) over S1 (0.552) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S3 (score 0.669) over S1 (0.598) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S3 (score 0.745) over S1 (0.610) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S3 (score 0.703) over S1 (0.550) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S3 (score 0.746) over S1 (0.538) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S2 (score 1.296) over S4 (1.040) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S2 (score 1.339) over S4 (1.000) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot dominance to S2 (score 1.183) over S4 (0.976) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up on competitor keyword (iota=0.63, iroas=5.16) to drive incremental volume with spare bid headroom."
+      },
+      {
+        "id": "INT-15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up on competitor keyword (iota=0.63, iroas=4.23) to drive incremental volume with spare bid headroom."
+      },
+      {
+        "id": "INT-16",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up on competitor keyword (iota=0.63, iroas=2.93) to drive incremental volume with spare bid headroom."
+      }
+    ],
+    "notes": "Spending majority of the \u20b91303 allowance on budget-capped fund campaigns and high-incrementality competitor keywords. Lead market shifts prioritize SKUs with superior incremental revenue per impression on contested generic keywords."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12212,
+    "tokens_out": 10934,
+    "cost_usd": 0.00178778,
+    "wall_clock_s": 93.63464525000006
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-B1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Target sub-category-specific generic term in PUN scale market; slot-1 share at 69% leaves headroom. High iroas (4.56) ensures incremental spend utilization without triggering the 80% block."
+      },
+      {
+        "id": "INT-B2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share on brand-generic soap match in PUN; slot-1 share at 59% allows effective CPM lift with strong iroas (3.87). Efficiently burns remaining allowance on proven incremental demand."
+      },
+      {
+        "id": "INT-B3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Replenish budget capacity after recent run-out; supports high-volume generic and competition cells in scale market without concentrated bid risk."
+      },
+      {
+        "id": "INT-B4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale body wash generic delivery in HYD; slot-1 share at 69% provides room for bid increase while maintaining efficiency and staying under guardrail limits."
+      }
+    ],
+    "notes": "Focused spend on PUN scale campaigns and select HYD cells where slot-1 share remains below the 80% bid-raise block threshold. Allocated allowance to highest verified iroas opportunities without breaching campaign budgets or portfolio ROAS floor.",
+    "stance": []
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 26069,
+    "tokens_out": 17793,
+    "cost_usd": 0.00309516,
+    "wall_clock_s": 174.32402912499998
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped efficient campaign with 7 run-out days; unlock incremental sales."
+      },
+      {
+        "id": "INT-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to highest incremental revenue SKU S4."
+      },
+      {
+        "id": "INT-03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back low-incremental S5 to free impressions for leader."
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; capture incremental volume on high-gap market."
+      },
+      {
+        "id": "INT-05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S2 to allow S4 leadership."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to S4 on strong generic cell."
+      },
+      {
+        "id": "INT-07",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S2."
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; maximize iRoAS on high-gap market."
+      },
+      {
+        "id": "INT-09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S2."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Bid up high-iRoAS (10.07) high-iota (0.93) generic cell."
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Bid up high-iRoAS (7.98) high-iota (0.93) generic cell."
+      },
+      {
+        "id": "INT-12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Bid up high-iRoAS (7.09) high-iota (0.93) generic cell."
+      },
+      {
+        "id": "INT-13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up competition cell with iota 1.00."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Bid up highest iRoAS (13.67) competition cell."
+      },
+      {
+        "id": "INT-15",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S4 leadership in PUN competition."
+      },
+      {
+        "id": "INT-16",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S2 in PUN competition."
+      },
+      {
+        "id": "INT-17",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-PUN",
+          "keyword_id": "K04"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-PUN/K04"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Cut spend on misgoal, weak Soap cell to free allowance."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Focused on shifting leadership to high-iRoAS Shower Gel (S4) in contested generic/competition markets, funding the capped-but-efficient Body Wash fund (S2-BLR), and raising bids on the highest incremental returns (iRoAS >7, iota \u22650.93). Trimmed a missed-goal Soap cell to efficiently reallocate the 300 INR daily allowance toward scalable incrementality without breaching the ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11842,
+    "tokens_out": 11503,
+    "cost_usd": 0.0018506500000000001,
+    "wall_clock_s": 85.422963667
+  }
+}

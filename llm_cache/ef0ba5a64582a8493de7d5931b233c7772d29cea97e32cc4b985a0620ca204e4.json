@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "Reach shows a highly significant positive deviation (z=5.0) with a confirmed surge direction, while CPM and OSA remain at baseline levels. The absence of an own-action confound and stable pricing metrics strongly indicate a genuine external demand expansion rather than a bidding artifact or cost shift. Magnitude directly reflects the 5-standard-deviation reach spike."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1564,
+    "cost_usd": 0.02478,
+    "wall_clock_s": 14.59795829199993
+  }
+}

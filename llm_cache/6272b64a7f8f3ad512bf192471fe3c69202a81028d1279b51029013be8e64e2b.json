@@ -1,0 +1,284 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "bgt-up-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlock capacity for efficient Shower Gel runs in DEL"
+      },
+      {
+        "id": "bgt-up-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore constrained BLR capital allocation"
+      },
+      {
+        "id": "bgt-up-S2-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieve body-wash cap in high-demand MUM"
+      },
+      {
+        "id": "bgt-cut-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce low-iota soap spend to protect portfolio floor"
+      },
+      {
+        "id": "bid-up-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 9,
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push efficient generic traction without capping slot"
+      },
+      {
+        "id": "bid-up-S4-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 9,
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-incrementality competition traffic"
+      },
+      {
+        "id": "bid-up-S1-DEL-K09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": 9,
+        "evidence_refs": [
+          "C:C-S1-DEL/K09",
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand scale role footprint in DEL competition segment"
+      },
+      {
+        "id": "bid-up-S2-BLR-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 9,
+        "evidence_refs": [
+          "C:C-S2-BLR/K10",
+          "M:BLR:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage BLR body wash scale headroom efficiently"
+      },
+      {
+        "id": "lead-S4-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Install highest-iota shower gel as category anchor"
+      },
+      {
+        "id": "yield-S5-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Recede low-value kids soap from contested position"
+      },
+      {
+        "id": "lead-S1-DEL-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign DEL soap competition to scale leader"
+      },
+      {
+        "id": "yield-S3-DEL-K09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free impressions from trim holder to improve ROI"
+      },
+      {
+        "id": "lead-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure MUM generic dominance with fund-role body wash"
+      },
+      {
+        "id": "yield-S4-MUM-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back saturated shower gel to preserve margin"
+      },
+      {
+        "id": "lead-S4-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Align PUN generic lead with scale shower gel"
+      },
+      {
+        "id": "yield-S1-PUN-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield lower-iota soap for higher incremental gains"
+      },
+      {
+        "id": "hold-S5-block",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "evidence_refs": [
+          "R:S5-*"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Cap displacement-heavy kids soap allocations"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritizing budget relief for out-of-capacity funds (S4-DEL, S4-BLR, S2-MUM) while trimming weak trim-tier soap spend. Correcting four contested markets where weak holders blocked high-iota scale/fund leaders. Bid pushes target slot 9 to secure volume without triggering cap violations. Portfolio ROAS floor remains protected via hold on high-displacement Kids Soap."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11157,
+    "tokens_out": 11339,
+    "cost_usd": 0.0018087800000000003,
+    "wall_clock_s": 87.40445966700008
+  }
+}

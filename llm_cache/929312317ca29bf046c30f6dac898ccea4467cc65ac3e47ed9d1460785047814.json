@@ -1,0 +1,306 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "RBD-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped-efficient delivery; recapture demand after 7-day run-outs."
+      },
+      {
+        "id": "RBD-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped-efficient delivery; recapture demand after 7-day run-outs."
+      },
+      {
+        "id": "RBD-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient delivery; extend runway for 4-day run-outs."
+      },
+      {
+        "id": "BD-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share on highest iroas/mroas_up20 cell; captures incremental volume."
+      },
+      {
+        "id": "BD-02",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share on high iroas/mroas_up20 generic cell; drives incremental sales."
+      },
+      {
+        "id": "BD-03",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share on highly efficient generic cell; scales profitable off-take."
+      },
+      {
+        "id": "BD-04",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up competitor keyword with iota=1.0; pure incremental growth."
+      },
+      {
+        "id": "BD-05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up competitor keyword with iota=1.0; pure incremental growth."
+      },
+      {
+        "id": "BD-06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase share on efficient generic cell; leverages mroas_up20=6.97."
+      },
+      {
+        "id": "LM-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S3 has highest incremental revenue per impression."
+      },
+      {
+        "id": "LM-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S3 leads on incremental value metric."
+      },
+      {
+        "id": "LM-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; shift leadership to highest scorer S3."
+      },
+      {
+        "id": "LM-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S1 holds incremental edge over S3."
+      },
+      {
+        "id": "LM-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S3 maximizes incremental revenue per impression."
+      },
+      {
+        "id": "LM-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S3 leads on iroas-based scoring."
+      },
+      {
+        "id": "LM-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S3 overtakes S4 on incremental value."
+      },
+      {
+        "id": "LM-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S1 holds slight incremental edge."
+      },
+      {
+        "id": "LM-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong_holder; S4 leads Shower Gel on incremental revenue."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "conquest"
+      }
+    ],
+    "notes": "Spent allowance on highest incremental return cells (high mroas_up20 x iota) and fixed 9 misplaced market leaderships to align slot allocation with incremental revenue scores. Funded three efficiently running campaigns that depleted budgets, ensuring we capture residual demand while maintaining portfolio ROAS well above the floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12133,
+    "tokens_out": 11550,
+    "cost_usd": 0.00186549,
+    "wall_clock_s": 91.19304045799998
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.9,
+    "rationale": "C-S3-BLR holds the highest mechanical leader_score (0.6183) and dominates slot1_share_7d (0.90), clearly outperforming all siblings. Per the instruction to prefer the mechanical pick when no strong contrary evidence exists, it remains the optimal leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1720,
+    "cost_usd": 0.027066,
+    "wall_clock_s": 16.22030749999999
+  }
+}

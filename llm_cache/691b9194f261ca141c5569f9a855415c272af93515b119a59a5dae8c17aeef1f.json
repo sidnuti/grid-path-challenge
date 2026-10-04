@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 8.5,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 12.3 is exceptionally high, confirming a statistically significant deviation rather than noise. Combined with a CPM z-score of -5.28, a mechanical direction read of surge, and a false own-action confound flag, this points strongly to a genuine external market shock (likely sudden demand pickup or relaxed competition) rather than a self-referential artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 443,
+    "tokens_out": 1750,
+    "cost_usd": 0.027579,
+    "wall_clock_s": 16.423620583
+  }
+}

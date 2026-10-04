@@ -1,0 +1,259 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incremental off-take growth; mroas_up20=7.39 well above baseline."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture headroom under slot-1 cap; high incremental yield."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Boost generic Body Wash visibility below 80% slot-1 threshold."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K04"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-HYD/K04"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Fill incremental headroom in Hyderabad soap generic."
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reallocate impression share to highest incremental revenue SKU (S4 score 1.614 vs incumbent S2 93%)."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead Shower Gel generic in Delhi; displace lower-IOTA sibling."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure shower gel leadership in Mumbai."
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Best incremental performer for soap brand in Pune."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift soap brand impressions to top incremental SKU in Mumbai."
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct misallocated soap generic share in Delhi."
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Improve competition keyword efficiency in Delhi."
+      },
+      {
+        "id": "INT-12",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Conserve budget on underperforming Kids Soap portfolio; iroas 0.73."
+      },
+      {
+        "id": "INT-13",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Reduce lean on hold-stance body wash campaign running out of budget."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "best",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Bid increases target high-mroas cells safely below the 80% slot-1 guardrail and OSA floor. Contested market realignments displace lower-IOTA siblings to maximize incremental revenue without breaching the \u20b9300 daily allowance. Kids Soap is held to preserve portfolio ROAS margin."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11268,
+    "tokens_out": 11864,
+    "cost_usd": 0.0018803600000000002,
+    "wall_clock_s": 89.33722337500004
+  }
+}

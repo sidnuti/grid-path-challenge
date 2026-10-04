@@ -1,0 +1,339 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reassign prime placement to S1 (highest incremental score) in BLR K01 to capture true demand"
+      },
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to S1 in DEL K01 where it holds superior iota vs incumbent"
+      },
+      {
+        "id": "LM-DEL-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.82,
+        "expected_effect": "Secure S1 leadership in DEL K09 competition pool to maximize incremental reach"
+      },
+      {
+        "id": "LM-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Elevate S2 Body Wash in DEL K06 generic market to capture higher iroas share"
+      },
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect HYD K01 brand traffic to S1 for optimal conversion efficiency"
+      },
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S1 as primary bidder in MUM K01 to win incremental volume"
+      },
+      {
+        "id": "LM-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Promote S2 to lead MUM K06 generic slot, capitalizing on 1.414 incremental score"
+      },
+      {
+        "id": "LM-PUN-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.82,
+        "expected_effect": "Consolidate PUN K03 generic search behind S1 to improve overall market efficiency"
+      },
+      {
+        "id": "LM-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.82,
+        "expected_effect": "Move S1 to lead MUM K03 generic market where it holds top incremental rank"
+      },
+      {
+        "id": "LM-HYD-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Assume HYD K02 brand leadership for S1 to capture high-intent searchers"
+      },
+      {
+        "id": "RM-DEL-S1-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "K:Soap:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Unlock additional delivery capacity for highly efficient S1 Delhi operations"
+      },
+      {
+        "id": "RM-BLR-S2-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.82,
+        "expected_effect": "Fuel rapid growth in BLR Body Wash market leveraging industry-leading generic iroas (2.90)"
+      },
+      {
+        "id": "RM-HYD-S4-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand shower gel visibility in Hyderabad where scale role and headroom indicate readiness"
+      },
+      {
+        "id": "RM-PUN-S2-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase Punjabi body wash inventory investment to capitalize on strong incremental returns"
+      },
+      {
+        "id": "RB-DEL-S1-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.78,
+        "expected_effect": "Push bid on DEL generic K03 to secure higher impression share while clearing MISSES threshold"
+      },
+      {
+        "id": "RB-BLR-S2-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.78,
+        "expected_effect": "Strengthen position on BLR Body Wash generic K05 to drive incremental order flow"
+      },
+      {
+        "id": "CB-S5-ALL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce waste in low-incrementality Kids Soap segment, freeing allowance for higher-yield SKUs"
+      },
+      {
+        "id": "CB-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim Mumbai Kids Soap spend to reallocate budget toward scalable Soap/Body Wash assets"
+      },
+      {
+        "id": "CB-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Lower Hyderabad Kids Soap allocation to protect portfolio iroas and direct ROAS floor"
+      },
+      {
+        "id": "CB-S5-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Discipline spending on weak-performing Kids Soap HYD campaign"
+      },
+      {
+        "id": "CB-S5-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Cut Pune Kids Soap budget to eliminate low-value ad displacement and preserve ROAS margin"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Reallocated budget from structurally weak Kids Soap campaigns to scale-ready Body Wash, Soap, and Shower Gel portfolios. Resolved 10 contested keyword markets to ensure highest-iota SKUs capture premium impressions. Maintained direct ROAS floor safety by capping raises on MISSES-tier cells and preserving budget discipline across trimmed categories."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11171,
+    "tokens_out": 9429,
+    "cost_usd": 0.0015609,
+    "wall_clock_s": 78.88053237499997
+  }
+}

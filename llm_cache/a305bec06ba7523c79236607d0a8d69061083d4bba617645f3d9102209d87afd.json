@@ -1,0 +1,278 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "budget_raise_funds",
+        "verb": "raise_budget",
+        "scope": [
+          {
+            "campaign_id": "C-S1-DEL"
+          },
+          {
+            "campaign_id": "C-S1-HYD"
+          },
+          {
+            "campaign_id": "C-S4-MUM"
+          },
+          {
+            "campaign_id": "C-S4-BLR"
+          }
+        ],
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "R:C-S1-HYD",
+          "R:C-S4-MUM",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Restore daily budgets to efficient fund-campaigns that exhausted allocation, protecting direct ROAS while enabling further ad-driven off-take."
+      },
+      {
+        "id": "bid_scale_shower_body_del",
+        "verb": "raise_bid",
+        "scope": [
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K05"
+          },
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K06"
+          },
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K10"
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K05"
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K06"
+          }
+        ],
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S2-DEL",
+          "K:Shower Gel:generic",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lift bids on CLEARS generic/competition cells with low slot-share to capture incremental demand within daily spend allowance."
+      },
+      {
+        "id": "yield_wrong_holders",
+        "verb": "yield_market",
+        "scope": [
+          {
+            "sku_id": "S5",
+            "city_id": "DEL",
+            "keyword_id": "K01"
+          },
+          {
+            "sku_id": "S1",
+            "city_id": "DEL",
+            "keyword_id": "K02"
+          },
+          {
+            "sku_id": "S2",
+            "city_id": "DEL",
+            "keyword_id": "K10"
+          },
+          {
+            "sku_id": "S3",
+            "city_id": "MUM",
+            "keyword_id": "K04"
+          },
+          {
+            "sku_id": "S3",
+            "city_id": "MUM",
+            "keyword_id": "K09"
+          },
+          {
+            "sku_id": "S5",
+            "city_id": "PUN",
+            "keyword_id": "K01"
+          },
+          {
+            "sku_id": "S3",
+            "city_id": "PUN",
+            "keyword_id": "K04"
+          },
+          {
+            "sku_id": "S1",
+            "city_id": "HYD",
+            "keyword_id": "K01"
+          },
+          {
+            "sku_id": "S2",
+            "city_id": "HYD",
+            "keyword_id": "K05"
+          },
+          {
+            "sku_id": "S1",
+            "city_id": "MUM",
+            "keyword_id": "K02"
+          }
+        ],
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "M:DEL:K02",
+          "M:DEL:K10",
+          "M:MUM:K04",
+          "M:MUM:K09",
+          "M:PUN:K01",
+          "M:PUN:K04",
+          "M:HYD:K01",
+          "M:HYD:K05",
+          "M:MUM:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back misaligned SKU-holders in contested auctions to prevent self-competition and wasted CPMs, improving portfolio efficiency."
+      },
+      {
+        "id": "lead_best_incremental",
+        "verb": "lead_market",
+        "scope": [
+          {
+            "sku_id": "S3",
+            "city_id": "DEL",
+            "keyword_id": "K01"
+          },
+          {
+            "sku_id": "S3",
+            "city_id": "DEL",
+            "keyword_id": "K02"
+          },
+          {
+            "sku_id": "S4",
+            "city_id": "DEL",
+            "keyword_id": "K10"
+          },
+          {
+            "sku_id": "S1",
+            "city_id": "MUM",
+            "keyword_id": "K04"
+          },
+          {
+            "sku_id": "S1",
+            "city_id": "MUM",
+            "keyword_id": "K09"
+          },
+          {
+            "sku_id": "S3",
+            "city_id": "PUN",
+            "keyword_id": "K01"
+          },
+          {
+            "sku_id": "S1",
+            "city_id": "PUN",
+            "keyword_id": "K04"
+          },
+          {
+            "sku_id": "S3",
+            "city_id": "HYD",
+            "keyword_id": "K01"
+          },
+          {
+            "sku_id": "S4",
+            "city_id": "HYD",
+            "keyword_id": "K05"
+          },
+          {
+            "sku_id": "S3",
+            "city_id": "MUM",
+            "keyword_id": "K02"
+          }
+        ],
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "M:DEL:K02",
+          "M:DEL:K10",
+          "M:MUM:K04",
+          "M:MUM:K09",
+          "M:PUN:K01",
+          "M:PUN:K04",
+          "M:HYD:K01",
+          "M:HYD:K05",
+          "M:MUM:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign leading position to highest-incremental SKUs per impression, optimizing auction efficiency and total revenue."
+      },
+      {
+        "id": "scale_blr_generic",
+        "verb": "raise_bid",
+        "scope": [
+          {
+            "campaign_id": "C-S2-BLR",
+            "keyword_id": "K05"
+          },
+          {
+            "campaign_id": "C-S2-BLR",
+            "keyword_id": "K06"
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K05"
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K06"
+          }
+        ],
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bids on scalable BLR generic keywords with ample bid headroom to drive volume without exceeding slot-cap limits."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "defend_min",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Prioritizes budget restoration for funds and bid scaling for efficient scale-campaigns within daily allowance. Corrects 10 contested market holdings to align with highest-incremental SKUs, mitigating self-auction interference."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24040,
+    "tokens_out": 21416,
+    "cost_usd": 0.00350528,
+    "wall_clock_s": 155.80691649999997
+  }
+}

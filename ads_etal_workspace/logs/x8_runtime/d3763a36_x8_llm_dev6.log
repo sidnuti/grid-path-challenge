@@ -1,0 +1,7 @@
+54 simulations, 12 workers, ledger $0.038 / cap $10.0
+[1/54] ('l12_llm_r0', 11, 'dev', '425s', 0.664)
+[2/54] ('l12_llm_r0', 7, 'dev', '472s', 0.7754)
+[3/54] ('l12_llm_r1', 7, 'dev', '474s', 0.7777)
+[4/54] ('l12_llm_r2', 7, 'dev', '504s', 0.8228)
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

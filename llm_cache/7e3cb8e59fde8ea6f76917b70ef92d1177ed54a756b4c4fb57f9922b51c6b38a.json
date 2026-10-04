@@ -1,0 +1,379 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "expected_effect": "Capture incremental Body Wash volume in Delhi."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "expected_effect": "Expand efficient delivery in Bangalore."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "expected_effect": "Grow Hyderabad body wash sales."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "expected_effect": "Uncap high-iRoas fund, ran out 4 days."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "expected_effect": "Support strong shower gel performance, ran out 6 days."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "expected_effect": "Unlock fully funded Bangalore portfolio, ran out 7 days."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "expected_effect": "Restore hyderabad soap volume, ran out 7 days."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "expected_effect": "Maintain Delhi soap fund efficiency, ran out 7 days."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "expected_effect": "Reallocate slot 1 to highest incremental SKU."
+      },
+      {
+        "id": "INT-10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "expected_effect": "Step back low-iota soap holder."
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Win branded search in Hyderabad for scalable body wash."
+      },
+      {
+        "id": "INT-12",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Yield branded slot to higher-iRoas sibling."
+      },
+      {
+        "id": "INT-13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "expected_effect": "Win branded search in Mumbai for scalable body wash."
+      },
+      {
+        "id": "INT-14",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "expected_effect": "Yield branded slot to higher-iRoas sibling."
+      },
+      {
+        "id": "INT-15",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Win branded search in Pune for scalable body wash."
+      },
+      {
+        "id": "INT-16",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Cede branded slot to superior body wash competitor."
+      },
+      {
+        "id": "INT-17",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "A:C-S1-PUN/K03"
+        ],
+        "expected_effect": "Suppress bid on endogenous reach spike."
+      },
+      {
+        "id": "INT-18",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K04"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "A:C-S1-PUN/K04"
+        ],
+        "expected_effect": "Suppress bid on endogenous reach spike."
+      },
+      {
+        "id": "INT-19",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "A:C-S2-DEL/K01"
+        ],
+        "expected_effect": "Suppress bid on internal drop artifact."
+      },
+      {
+        "id": "INT-20",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "expected_effect": "Halt drain from sub-1 iroas kids soap."
+      },
+      {
+        "id": "INT-21",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "expected_effect": "Reduce weak kids soap allocation."
+      },
+      {
+        "id": "INT-22",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "expected_effect": "Optimize trim portfolio Mumbai soap."
+      },
+      {
+        "id": "INT-23",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "expected_effect": "Aggressively capture top slot for high-iRoas shower gel."
+      },
+      {
+        "id": "INT-24",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "expected_effect": "Aggressively capture top slot for high-iRoas shower gel."
+      },
+      {
+        "id": "INT-25",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "expected_effect": "Aggressively capture top slot for high-iRoas shower gel."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritizing scale roles in Body Wash and Shower Gel while reallocating contested branded searches to higher-iRoas siblings. Suppressing internally-confounded anomalies and cutting underperforming Kids Soap buckets to preserve portfolio ROAS above floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24421,
+    "tokens_out": 20414,
+    "cost_usd": 0.0033864500000000005,
+    "wall_clock_s": 176.94731575000003
+  }
+}

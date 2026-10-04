@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "The two top scores are a near-tie (1.5556 vs 1.5629, ~0.5% apart \u2014 well within noise), so the mechanical margin is not meaningful. The observable evidence clearly favours C-S1-HYD: it holds a 0.96 slot1_share_7d, effectively owning the top auction position for HYD/K01, versus 0.37 for C-S2-HYD. Protecting C-S1-HYD's bid defends the established market leadership, while C-S2-HYD's position is far less secure despite the negligible score edge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 410,
+    "tokens_out": 816,
+    "cost_usd": 0.0011717000000000001,
+    "wall_clock_s": 8.29524541600017
+  }
+}

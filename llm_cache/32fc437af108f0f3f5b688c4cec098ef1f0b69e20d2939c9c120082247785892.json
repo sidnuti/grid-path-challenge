@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.65,
+    "rationale": "C-S4-HYD has the highest leader_score (2.2430 vs 2.1757 for C-S3-HYD), a near-tie within noise. Slot1 shares are identical (0.12), so no evidence favours the runner-up; per policy, keep the mechanical pick. Margin over the third candidate (C-S5-HYD, 0.7573) is large, so leadership among these siblings is clear despite the top-two tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 408,
+    "tokens_out": 475,
+    "cost_usd": 0.00074471,
+    "wall_clock_s": 3.7838500830000044
+  }
+}

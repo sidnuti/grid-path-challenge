@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.62,
+    "rationale": "Mechanical leader_score favours C-S3-DEL (0.6740 vs 0.6249); C-S1-DEL's higher slot1_share (0.88 vs 0.79) offers some counter-evidence but is not decisive, so default to the mechanical pick at moderate confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 464,
+    "cost_usd": 0.00070506,
+    "wall_clock_s": 3.9915177499999572
+  }
+}

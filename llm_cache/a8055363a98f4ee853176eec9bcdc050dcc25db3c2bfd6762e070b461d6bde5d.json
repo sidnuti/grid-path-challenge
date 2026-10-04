@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10.0,
+    "direction": "surge",
+    "confidence": 0.95,
+    "rationale": "The reach z-score of 11.5 represents an extreme statistical deviation far beyond normal variance. Combined with unchanged CPM and OSA readings and a false own-action confound flag, this confirms a genuine, strong market-level demand surge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1989,
+    "cost_usd": 0.031167,
+    "wall_clock_s": 21.94345862499995
+  }
+}

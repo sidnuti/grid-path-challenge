@@ -1,0 +1,71 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Add ~80 INR/day spend to fund shower gel in BLR; iroas 2.71, ran_out 7d",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ]
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Add ~110 INR/day spend to fund shower gel in DEL; iroas 2.61, ran_out 7d",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ]
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "expected_effect": "Add ~65 INR/day spend to fund soap in PUN; iroas 2.24, ran_out 7d",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ]
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "expected_effect": "Add ~40 INR/day spend to fund soap in HYD; iroas 2.04, ran_out 6d",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ]
+      }
+    ],
+    "notes": "Removed previously rejected slot-1 protected K10 raises and over-allowance budget change. Allocated 295 INR/day of the 300 allowance to the four highest-iroas fund campaigns to maximize incremental off-take while staying within daily spend limits."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12224,
+    "tokens_out": 7093,
+    "cost_usd": 0.00128881,
+    "wall_clock_s": 74.5468975
+  }
+}

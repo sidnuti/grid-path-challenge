@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical leader_score already favours C-S1-HYD (0.6488 vs 0.5928) and the supporting evidence reinforces it: its 7-day slot-1 share (0.92) is far higher than C-S3-HYD's (0.64), indicating stronger current auction position to protect. No evidence favours flipping the pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 274,
+    "cost_usd": 0.00046867,
+    "wall_clock_s": 2.787018332999992
+  }
+}

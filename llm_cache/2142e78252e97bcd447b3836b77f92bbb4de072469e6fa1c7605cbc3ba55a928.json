@@ -1,0 +1,256 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-raise-s1-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funds efficient Soap campaign that ran out daily; supports off-take growth."
+      },
+      {
+        "id": "budget-raise-s1-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funds efficient Soap campaign that ran out daily; supports off-take growth."
+      },
+      {
+        "id": "budget-raise-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Provides headroom for scalable Body Wash with strong iota."
+      },
+      {
+        "id": "cut-budget-s3-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Conserves budget from weak trim role to protect portfolio ROAS floor."
+      },
+      {
+        "id": "cut-budget-s5-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Conserves budget from low iRoAS hold role."
+      },
+      {
+        "id": "bid-raise-s2-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases visibility on scalable generic cell with clear headroom."
+      },
+      {
+        "id": "bid-raise-s2-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases visibility on scalable generic cell with clear headroom."
+      },
+      {
+        "id": "bid-raise-s2-del-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Captures highly incremental competitor demand (iota 0.96)."
+      },
+      {
+        "id": "lead-market-blr-k09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Resolves incorrect holder; prioritizes SKU with higher incremental revenue."
+      },
+      {
+        "id": "yield-market-blr-k09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Steps back lower-value SKU in contested market."
+      },
+      {
+        "id": "lead-market-mum-k09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Resolves incorrect holder; prioritizes SKU with higher incremental revenue."
+      },
+      {
+        "id": "yield-market-mum-k09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Steps back lower-value SKU in contested market."
+      },
+      {
+        "id": "lead-market-pun-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Resolves incorrect holder; prioritizes SKU with higher incremental revenue."
+      },
+      {
+        "id": "yield-market-pun-k03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Steps back lower-value SKU in contested market."
+      },
+      {
+        "id": "cut-budget-s1-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "A:C-S1-MUM/K03",
+          "A:C-S1-MUM/K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduces spend where OSA is critically low, preventing wasted impressions."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Funds efficient daily-runout campaigns (S1-DEL, S1-PUN, S2-DEL) and trims low-iRoAS holds/trims (S3-DEL, S5-BLR) to preserve the 4.62 portfolio ROAS floor. Redirects bid allocation toward high-incrementality competition cells for Body Wash and corrects three contested markets with incorrect holders. Strictly avoids bids on OSA-constrained and MISSES-tier cells per platform guardrails."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 22349,
+    "tokens_out": 23606,
+    "cost_usd": 0.00373925,
+    "wall_clock_s": 181.500588667
+  }
+}

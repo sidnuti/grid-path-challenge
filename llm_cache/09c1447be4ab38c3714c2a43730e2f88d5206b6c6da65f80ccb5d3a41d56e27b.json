@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 6.5,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach shows a strong statistical surge (z=6.508, flagged) while CPM remains effectively unchanged (z=-0.47) and the own-action confound flag is explicitly false. This divergence between volume and pricing, combined with the absence of an internal harness artifact, points to a genuine exogenous demand or inventory expansion rather than a competitive bidding shift or mechanical artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 443,
+    "tokens_out": 1575,
+    "cost_usd": 0.024954,
+    "wall_clock_s": 16.545009083999958
+  }
+}

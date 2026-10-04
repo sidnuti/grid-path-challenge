@@ -1,0 +1,185 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-s1-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "expected_effect": "Prevent budget exhaustion to maintain baseline Soap volume in DEL"
+      },
+      {
+        "id": "budget-s1-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "expected_effect": "Extend runway for 6-day run-out flag without triggering guardrails"
+      },
+      {
+        "id": "budget-s2-blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "expected_effect": "Fund capped-but-efficient Body Wash inventory in BLR"
+      },
+      {
+        "id": "bid-s2-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "expected_effect": "Capture incremental generic demand with healthy bid headroom"
+      },
+      {
+        "id": "bid-s2-del-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "expected_effect": "Win competitive auctions safely below slot-1 saturation cap"
+      },
+      {
+        "id": "bid-s2-mum-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "expected_effect": "Improve incremental reach on high-iota generic cell"
+      },
+      {
+        "id": "bid-s2-mum-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ],
+        "expected_effect": "Secure competitive inventory efficiently in scale portfolio"
+      },
+      {
+        "id": "lead-mum-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "expected_effect": "Shift leadership to S2, the highest incremental revenue SKU"
+      },
+      {
+        "id": "lead-mum-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "expected_effect": "Optimize contest allocation toward S2 over S4"
+      },
+      {
+        "id": "lead-pun-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Correct wrong-holder in PUN body wash contest"
+      },
+      {
+        "id": "yield-hyd-k04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "expected_effect": "Step back S3 to let top-incremental SKU win HYD K04"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused budget relief on chronic run-outs (S1-DEL/PUN, S2-BLR) while scaling high-iROAS Body Wash cells in DEL/MUM via targeted bid lifts and market leadership swaps. Held low-incrementality soap/kids portfolios to preserve portfolio DOAS above floor. Avoided HYD city for S2 due to 3-day OSA constraint (0.42)."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11594,
+    "tokens_out": 10077,
+    "cost_usd": 0.00165783,
+    "wall_clock_s": 88.41489374999992
+  }
+}

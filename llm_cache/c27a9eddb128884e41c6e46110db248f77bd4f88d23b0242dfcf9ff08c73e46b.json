@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 5.0 indicates a strong surge with no CPM shift, pointing to a genuine demand or inventory increase. No own-action confound present."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1349,
+    "cost_usd": 0.021555,
+    "wall_clock_s": 12.594758791999993
+  }
+}

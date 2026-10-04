@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.0,
+    "direction": "surge",
+    "confidence": 0.75,
+    "rationale": "Reach z-score of 2.968 is significantly flagged true, indicating a meaningful deviation from baseline. CPM and OSA remain unflagged, suggesting the move is not driven by price competition or internal optimization. With no own-action confound present, the isolated reach surge most likely reflects a genuine demand or inventory shift rather than a bidding artifact or system noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1399,
+    "cost_usd": 0.022317,
+    "wall_clock_s": 14.28907987499997
+  }
+}

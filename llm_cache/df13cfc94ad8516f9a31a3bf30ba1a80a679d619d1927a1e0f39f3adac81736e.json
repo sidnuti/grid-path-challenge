@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.68,
+    "rationale": "Mechanical pick C-S2-PUN leads on leader_score (1.1813 vs 1.1407 for C-S4-PUN) in a near-tie. No clear counter-evidence: C-S2-PUN also holds the higher slot1_share_7d of the two (0.26 vs 0.18), so the default mechanical leader is retained."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 402,
+    "tokens_out": 418,
+    "cost_usd": 0.00067124,
+    "wall_clock_s": 3.5510501250000175
+  }
+}

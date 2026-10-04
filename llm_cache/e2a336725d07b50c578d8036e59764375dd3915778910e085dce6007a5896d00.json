@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "Although C-S2 holds a marginally higher mechanical leader_score, C-S3 exhibits overwhelming market dominance with a 0.94 slot1_share compared to C-S2's 0.29. This significant disparity in top-slot capture strongly indicates superior structural performance and stability, providing clear evidence to deviate from the mechanical pick and designate C-S3 as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2123,
+    "cost_usd": 0.033111,
+    "wall_clock_s": 23.498447082999974
+  }
+}

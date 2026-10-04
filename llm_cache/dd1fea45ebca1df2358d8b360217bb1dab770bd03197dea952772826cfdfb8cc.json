@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach shows a highly significant positive deviation (z=5.0) while CPM and OSA remain stable (z=0.0). The absence of an own-action confound flag indicates this is unlikely to be a self-referential artifact, pointing instead to a genuine external market shift driving the surge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1071,
+    "cost_usd": 0.017385,
+    "wall_clock_s": 10.517982665999995
+  }
+}

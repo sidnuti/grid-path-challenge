@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 5.0 is a large, flagged deviation, while CPM and OSA z-scores are both 0.0 and the own-action confound flag is false. A genuine demand shift (more auctions/impressions) typically moves reach without moving prices, whereas a competition/price shock would usually lift CPM, and a harness confound would set the own-action flag. The flat CPM and absent confound signal point to a real market demand surge rather than a price shift or self-inflicted artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 432,
+    "tokens_out": 399,
+    "cost_usd": 0.00065859,
+    "wall_clock_s": 3.950193833999947
+  }
+}

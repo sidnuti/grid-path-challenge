@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader_score favors C-S4-BLR (1.2024 vs 1.0884). Although the scores represent a near-tie, the provided metrics do not clearly justify overriding the algorithmic selection. C-S4-BLR remains the most reliable choice for the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1601,
+    "cost_usd": 0.025065,
+    "wall_clock_s": 14.906913999999915
+  }
+}

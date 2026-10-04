@@ -1,0 +1,209 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "int-budget-del-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand capacity on efficient fund campaign; consistent daily run-outs indicate unmet demand"
+      },
+      {
+        "id": "int-budget-blr-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Remove budget ceiling for scaled soap segment; iroas supports incremental growth"
+      },
+      {
+        "id": "int-budget-mum-s4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capitalize on top-tier shower gel ROAS; high budget exhaustion limits current volume"
+      },
+      {
+        "id": "int-budget-del-s4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Seed incremental demand on high-iota portfolio hero; limited run-outs suggest partial saturation"
+      },
+      {
+        "id": "int-bid-hyd-s2-g",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aggressive bid lift on generic query; scale role and mroas_up20 of 6.96 justify expansion"
+      },
+      {
+        "id": "int-bid-hyd-s3-g",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD",
+          "C:C-S3-HYD/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture low-slot-share generic demand; fund status and strong iota support incremental lift"
+      },
+      {
+        "id": "int-bid-del-s1-g",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Modest generic bid bump; slot1 near threshold limits move size but ROI remains positive"
+      },
+      {
+        "id": "int-lead-del-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; shift branding dominance to S4 which commands highest incremental score"
+      },
+      {
+        "id": "int-lead-del-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocate generic leadership to S1 for superior marginal conversion efficiency"
+      },
+      {
+        "id": "int-lead-blr-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Install S4 as market leader in contested body wash generic pool; S2 currently over-allocates"
+      },
+      {
+        "id": "int-lead-mum-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Displace low-value S5 from generic lead position; S1 captures higher incrementality per impression"
+      },
+      {
+        "id": "int-lead-mum-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Align market leadership with best-scoring SKU to maximize blended ROAS"
+      },
+      {
+        "id": "int-yield-pun-k10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S2 from competition keyword to allow S4 takeover; reduces internal cannibalization"
+      },
+      {
+        "id": "int-hold-s5",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "confidence": 0.7,
+        "expected_effect": "Freeze expansion across Kids Soap portfolio to protect overall iroas floor given weak unit economics"
+      }
+    ],
+    "notes": "We deploy available ROAS headroom to lift budgets on exhausted fund campaigns and target bid increases on generic cells with clear slot headroom and strong predicted mroas. Internal market contestation is resolved by shifting leadership to highest-incrementality SKUs, consolidating efficient share without diluting portfolio margins."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11169,
+    "tokens_out": 8922,
+    "cost_usd": 0.00149493,
+    "wall_clock_s": 71.46949262499999
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-DEL-S1-K09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-DEL/K09",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture competitive impressions efficiently; iROAS maintained above floor"
+      },
+      {
+        "id": "RB-BLR-S2-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-BLR/K10",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase generic visibility in BLR with high margin; drive incremental volume"
+      },
+      {
+        "id": "RB-PUN-S2-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-PUN/K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand share in PUN generic segment where slot occupancy is suboptimal"
+      },
+      {
+        "id": "RB-HYD-S4-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-HYD/K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage scale role and high OSA to grow Shower Gel off-take in HYD"
+      },
+      {
+        "id": "RB-BLR-S1-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-BLR/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push generic keyword with healthy mROAS uplift and room below 80% slot threshold"
+      },
+      {
+        "id": "RB-MUM-S4-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Gain incremental reach in MUM generic pool without breaching slot-cap guardrail"
+      },
+      {
+        "id": "RM-BLR-S1-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR/"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Unbox efficient daily spend in BLR; satisfies G5 run-out requirement"
+      },
+      {
+        "id": "RM-DEL-S4-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL/"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Unlock capped budget in DEL fund status while preserving direct ROAS floor"
+      },
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Replace sub-optimal holder S2 with highest incremental ROI SKU S1 in brand queries"
+      },
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Align ownership to best incremental performer S1; trigger automatic sibling yield"
+      },
+      {
+        "id": "RC-PUN-S5-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN/"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free allowance in trim-tier SKU to reallocate toward higher-iROAS channels"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Replaced rejected leads/budget bumps on MISSES or under-runout campaigns with targeted bid expansions on CLEARING cells below the 80% slot threshold and two qualified budget unlocks. Added market-leadership corrections where our best-incremental SKUs were displaced by lower-scoring siblings. Trim/Skid budgets trimmed conservatively to offset spend reallocation while keeping portfolio iROAS comfortably above the 4.5874 floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24952,
+    "tokens_out": 11061,
+    "cost_usd": 0.0021864899999999997,
+    "wall_clock_s": 84.04916220799998
+  }
+}

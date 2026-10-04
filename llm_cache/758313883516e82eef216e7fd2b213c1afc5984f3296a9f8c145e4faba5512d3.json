@@ -1,0 +1,215 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "SB-C-S2-DEL/K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid uplift on high-iota (0.87) generic query with slot headroom to capture incremental body wash volume efficiently."
+      },
+      {
+        "id": "SB-C-S2-MUM/K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental bid lift on strong-performing generic term (iroas 3.75, iota 0.87) below slot-cap threshold."
+      },
+      {
+        "id": "SB-C-S2-PUN/K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient generic exposure (iroas 4.32, iota 0.87) within safe slot-share bounds."
+      },
+      {
+        "id": "SB-C-S4-PUN/K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive shower gel growth via incremental bid lift on high-iota generic (iroas 4.48)."
+      },
+      {
+        "id": "SB-C-S4-MUM/K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on uncapped generic search demand (iroas 3.86) with moderate bid escalation."
+      },
+      {
+        "id": "SB-C-S4-DEL/K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand shower gel visibility on profitable generic term with 54% slot share, preserving margin."
+      },
+      {
+        "id": "LM-HYD-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Shift search share to highest-incrementality shower gel player in HYD generic pool, displacing lower-value soap bid."
+      },
+      {
+        "id": "YM-HYD-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce soap overlap in HYD generic contest, freeing budget for more incremental shower gel capture."
+      },
+      {
+        "id": "LM-HYD-K05-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Install highest-scoring body wash SKU (iREV 1.76) as market leader, correcting misaligned holder in competitive generic space."
+      },
+      {
+        "id": "YM-HYD-K05-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back shower gel share where body wash delivers stronger incremental returns per impression."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "trim",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Dropped previously rejected intents (overlapping leads, slot-capped bids, zero-gain markets). Concentrated bid lifts on high-iota generic cells with proven scale roles and confirmed slot headroom (<80%). Corrected two misallocated contests in HYD to route impressions to highest incremental SKUs. Budget headroom (\u20b917.7k) comfortably absorbs marginal bid adjustments while protecting portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11356,
+    "tokens_out": 7792,
+    "cost_usd": 0.0013536400000000001,
+    "wall_clock_s": 72.9167325410001
+  }
+}

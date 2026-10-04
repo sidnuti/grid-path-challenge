@@ -1,0 +1,172 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture unmet demand for high-iroas Shower Gel; allocates ~\u20b9150."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture unmet demand; allocates ~\u20b9100."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Boost high-iota Body Wash spend; allocates ~\u20b9120."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase share on strong generic term (iroas 6.84); bid not blocked at 79% slot-1."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capitalize on high incremental ROI (iroas 4.77) where bid room exists."
+      },
+      {
+        "id": "INT-06",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Stop low-incremental competition bleed (iroas 0.97, MISSES)."
+      },
+      {
+        "id": "INT-07",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free room from inefficient competition spend (iroas 0.85)."
+      },
+      {
+        "id": "INT-08",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-MUM/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim misaligned competitor targeting (iroas 0.79)."
+      },
+      {
+        "id": "INT-09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-HYD/K09"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Minor trim on falling competition cell."
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Prioritize S2 in generic search where it yields higher incremental value."
+      },
+      {
+        "id": "INT-11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back S4 in BLR generic to avoid cannibalization with higher-iroas S2."
+      }
+    ],
+    "notes": "Prioritized spend on S4/Shower Gel and S2/Body Wash where iroas and iota drive true incremental value; shifted budget away from low-return S3 competition. Avoided bid increases on C-S2-HYD due to OSA <60% block. Contest shifts optimize slot allocation for highest incremental revenue per impression."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12005,
+    "tokens_out": 8750,
+    "cost_usd": 0.0014976500000000001,
+    "wall_clock_s": 81.477766083
+  }
+}

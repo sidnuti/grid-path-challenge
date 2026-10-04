@@ -1,0 +1,260 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-S2BLR-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Increase efficient off-take for Body Wash in BLR where slot-1 share is low.",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K01"
+        ]
+      },
+      {
+        "id": "RB-S2BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental generic demand for Body Wash in BLR.",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ]
+      },
+      {
+        "id": "RB-S2BLR-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Push competitor bids for Body Wash in BLR where share is unconstrained.",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K10"
+        ]
+      },
+      {
+        "id": "RB-S4MUM-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental Shower Gel demand in MUM at sub-80% slot-1 share.",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K01"
+        ]
+      },
+      {
+        "id": "RB-S4MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Expand generic Shower Gel reach in MUM efficiently.",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K06"
+        ]
+      },
+      {
+        "id": "RB-S1BLR-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Expand Soap brand coverage in BLR where impression share is constrained.",
+        "evidence_refs": [
+          "R:C-S1-BLR",
+          "C:C-S1-BLR/K01"
+        ]
+      },
+      {
+        "id": "RB-S1BLR-K02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Secure additional Soap brand impressions in BLR safely below slot-1 cap.",
+        "evidence_refs": [
+          "R:C-S1-BLR",
+          "C:C-S1-BLR/K02"
+        ]
+      },
+      {
+        "id": "RB-S2PUN-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Leverage high iROAS (3.17) for Body Wash in PUN on branded terms.",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K01"
+        ]
+      },
+      {
+        "id": "RB-S2PUN-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Grow competitor search presence for efficient Body Wash off-take in PUN.",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K10"
+        ]
+      },
+      {
+        "id": "LM-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong-holder contest; S4 takes leadership over S2 to maximize incremental revenue.",
+        "evidence_refs": [
+          "M:DEL:K06"
+        ]
+      },
+      {
+        "id": "LM-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to highest-IOTA S4 in DEL competitor search.",
+        "evidence_refs": [
+          "M:DEL:K10"
+        ]
+      },
+      {
+        "id": "LM-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Secure S4 leadership in MUM generic market where it outperforms sibling S2.",
+        "evidence_refs": [
+          "M:MUM:K06"
+        ]
+      },
+      {
+        "id": "LM-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Resolve near-tie contested market; S4 leads to capture marginal efficiency.",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ]
+      },
+      {
+        "id": "H-S5MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "confidence": 0.95,
+        "expected_effect": "Preserve allowance by blocking bids/budget on low-IOTA Kids Soap campaign.",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ]
+      },
+      {
+        "id": "H-S2DEL",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Prevent overspend on inefficient trim-role Body Wash campaign in DEL.",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "all",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "all",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "all",
+        "sku_role": "trim",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "all",
+        "sku_role": "hold",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused raises on efficient scale-campaigns with proven bid headroom (<80% slot-1) while correcting four wrong-holder contested markets to shift volume to S4. Applied holds on trim-role campaigns to safeguard the \u20b9300 daily allowance and protect portfolio iROAS."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11399,
+    "tokens_out": 9835,
+    "cost_usd": 0.00162052,
+    "wall_clock_s": 77.96410945799994
+  }
+}

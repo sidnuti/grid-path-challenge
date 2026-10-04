@@ -1,0 +1,118 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove budget cap on efficient fund SKU S1 in DEL to drive incremental volume within allowance."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10",
+          "C:C-S4-MUM/K10",
+          "C:C-S4-BLR/K10",
+          "C:C-S4-HYD/K10",
+          "C:C-S4-PUN/K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Bid up shower gel competitor terms with iota\u22481 and mroas_up20 3.2\u20136.6 for maximum incremental return."
+      },
+      {
+        "id": "INT-3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong_holder in DEL K01; place highest-score SKU S3 in slot 1 to capture incremental reach."
+      },
+      {
+        "id": "INT-4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Win contested DEL K05 market for Shower Gel where S4 holds best incremental score."
+      },
+      {
+        "id": "INT-5",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim inefficient Kids Soap budget (iroas 1.09) to free allowance for higher-return SKUs."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "all",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund,scale",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "all",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Revised plan scales to fit the \u20b9300 allowance by prioritizing high-iota Shower Gel competitor bids and releasing S1-DEL budget caps. Contested market interventions correct worst-holder gaps in DEL. Weak Kids Soap spend is trimmed to fund incremental gain while preserving the ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12119,
+    "tokens_out": 9599,
+    "cost_usd": 0.00161144,
+    "wall_clock_s": 80.205484625
+  }
+}

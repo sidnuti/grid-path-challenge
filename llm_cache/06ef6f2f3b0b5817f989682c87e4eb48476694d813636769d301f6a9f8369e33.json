@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "Mechanical score picks C-S1-MUM. Its slot1_share_7d is substantially higher than the runner-up (0.88 vs 0.52), indicating dominant premium placement. Evidence strongly supports retaining the mechanical leader over adjusting bids."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1256,
+    "cost_usd": 0.01989,
+    "wall_clock_s": 11.599045042000057
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.6,
+    "rationale": "Realised dROAS (1.72) falls short of the 2.22 target, suggesting current bids may already be exceeding sustainable margin thresholds. Dampening the proposed +10% raise to 0.7x mitigates profit leakage risk while preserving the system\u2019s directional guidance. Confidence is moderate due to the trade-off between unit-level profitability and volume growth objectives."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 474,
+    "tokens_out": 2087,
+    "cost_usd": 0.032727,
+    "wall_clock_s": 25.47486204200004
+  }
+}

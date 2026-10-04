@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.55,
+    "rationale": "The mechanical leader_score favors C-S1-BLR (0.3681 vs 0.3323). Although C-S3-BLR exhibits a substantially higher slot1_share_7d (0.90 vs 0.48), the composite metric already synthesizes conversion, ASP, and incrementality, making it the primary indicator of market profitability. Per instructions, the mechanical selection is retained as the slot1 differential does not unequivocally override the aggregate score. Confidence is moderated due to the near-tie and noted mechanical noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2114,
+    "cost_usd": 0.03276,
+    "wall_clock_s": 21.851498999999997
+  }
+}

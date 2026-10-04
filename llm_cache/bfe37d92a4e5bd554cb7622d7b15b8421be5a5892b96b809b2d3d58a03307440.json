@@ -1,0 +1,363 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "swap-hyd-k01-s2-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift ownership to highest incremental SKU S2 in HYD K01 market."
+      },
+      {
+        "id": "swap-hyd-k01-y1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Step back S1 to allow S2 lead."
+      },
+      {
+        "id": "swap-hyd-k09-s3-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct wrong holder; S3 leads HYD competitor market."
+      },
+      {
+        "id": "swap-hyd-k09-y1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Yield slot to S3."
+      },
+      {
+        "id": "swap-del-k05-s4-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct wrong holder; S4 leads DEL generic market."
+      },
+      {
+        "id": "swap-del-k05-y2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Yield slot to S4."
+      },
+      {
+        "id": "swap-del-k10-s2-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct wrong holder; S2 leads DEL competitor market."
+      },
+      {
+        "id": "swap-del-k10-y4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Yield slot to S2."
+      },
+      {
+        "id": "swap-mum-k06-s4-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct wrong holder; S4 dominates MUM shower gel generic."
+      },
+      {
+        "id": "swap-mum-k06-y2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Yield slot to S4."
+      },
+      {
+        "id": "swap-mum-k10-s2-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct wrong holder; S2 leads MUM competitor market."
+      },
+      {
+        "id": "swap-mum-k10-y4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Yield slot to S2."
+      },
+      {
+        "id": "swap-pun-k01-s2-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct wrong holder; S2 leads PUN generic market."
+      },
+      {
+        "id": "swap-pun-k01-y1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Yield slot to S2."
+      },
+      {
+        "id": "trim-s3-soap",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce wasted spend on weak iroas Soap performer across cities."
+      },
+      {
+        "id": "trim-s5-kids",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR",
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce wasted spend on weak iroas Kids Soap performer across cities."
+      },
+      {
+        "id": "fund-s1-hyd-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free budget cap for efficient Fund SKU running out daily."
+      },
+      {
+        "id": "fund-s2-del-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Support efficient Fund SKU with recent run-outs."
+      },
+      {
+        "id": "fund-s4-mum-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Support efficient Fund SKU with run-outs."
+      },
+      {
+        "id": "fund-s2-blr-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Support efficient Fund SKU with run-outs."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "best_iroas",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "best_iroas",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "best_iroas",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "best_iroas",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "best_iroas",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "best_iroas",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "best_iroas",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Corrected 7 wrong holders in contested markets to maximize incremental revenue per impression. Trimmed low-incrementality S3/S5 portfolios and raised budgets on 4 efficient Fund SKUs approaching their caps, within the 1100 INR daily allowance."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24115,
+    "tokens_out": 17890,
+    "cost_usd": 0.00304915,
+    "wall_clock_s": 154.53061641699992
+  }
+}

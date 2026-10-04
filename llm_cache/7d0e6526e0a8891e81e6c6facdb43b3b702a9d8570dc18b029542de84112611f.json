@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.65,
+    "rationale": "Mechanical leader score favors C-S3-BLR (1.1555 vs 1.1121). Combined with a substantially higher slot share (0.93 vs 0.61), it demonstrates stronger immediate demand capture and stability. In a near-tie, the mechanical pick plus clear slot advantage warrants retaining it over C-S1-BLR."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 705,
+    "cost_usd": 0.011625,
+    "wall_clock_s": 8.395290749999958
+  }
+}

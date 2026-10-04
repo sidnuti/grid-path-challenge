@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.85,
+    "rationale": "Mechanical leader_score favors C-S3-BLR (1.2747 vs 1.2446), reinforced by its substantially higher slot1_share_7d (0.85 vs 0.64), indicating stronger market positioning. C-S5-BLR is significantly lower and excluded."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1194,
+    "cost_usd": 0.019032,
+    "wall_clock_s": 12.32475966700008
+  }
+}

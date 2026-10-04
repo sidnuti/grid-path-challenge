@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach exhibits an extreme positive deviation (z=11.5), clearly triggering a mechanical surge. CPM is unflagged (-1.87), indicating the volume expansion is not accompanied by cost inflation typical of aggressive bidding changes. Own-action confound is false, ruling out self-referential feedback loops. The combination points to a genuine external demand or inventory shift driving the reach spike. Magnitude capped at 10.0 given the >10 standard deviation excursion."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1516,
+    "cost_usd": 0.024072,
+    "wall_clock_s": 14.743699707999895
+  }
+}

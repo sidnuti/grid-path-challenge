@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.75,
+    "rationale": "C-S1-MUM commands a dominant 95% slot-1 share versus 44% for C-S3-MUM, signaling established market control and consistent top-position visibility. While C-S3-MUM edges out slightly on the mechanical score, the narrow ~4% margin falls within expected noise. Protecting the incumbent with proven auction dominance prevents costly sibling bidding wars and aligns incentives around the actual market winner."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1934,
+    "cost_usd": 0.03006,
+    "wall_clock_s": 19.632419374999984
+  }
+}

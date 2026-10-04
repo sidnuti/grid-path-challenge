@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10,
+    "direction": "surge",
+    "confidence": 0.98,
+    "rationale": "Reach z-score of 11.42 is exceptionally extreme, far beyond typical noise or gradual shifts. Coupled with a notable CPM decline (-3.31) and a clear mechanical 'surge' read, while the own-action confound flag is false, the data robustly points to a genuine external demand or inventory shock rather than a self-referential bidding artifact. Magnitude capped at 10 given the scale limit."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 445,
+    "tokens_out": 851,
+    "cost_usd": 0.0141,
+    "wall_clock_s": 10.12467929200011
+  }
+}

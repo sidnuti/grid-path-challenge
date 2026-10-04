@@ -1,0 +1,281 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S4 (score 1.141) displacing S2"
+      },
+      {
+        "id": "LM-HYD-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S4 (score 1.476) displacing S2"
+      },
+      {
+        "id": "LM-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S4 (score 1.429) displacing S2"
+      },
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S2 (score 0.808) displacing S5"
+      },
+      {
+        "id": "LM-HYD-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S3 (score 0.867) displacing S1"
+      },
+      {
+        "id": "LM-DEL-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S3 (score 0.930) displacing S1"
+      },
+      {
+        "id": "LM-DEL-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S3 (score 0.895) displacing S1"
+      },
+      {
+        "id": "LM-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S3 (score 0.839) displacing S1"
+      },
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to S2 (score 0.751) displacing S3"
+      },
+      {
+        "id": "LM-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to S2 (score 1.267) displacing S4"
+      },
+      {
+        "id": "RB-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume with low slot-1 share and high droas"
+      },
+      {
+        "id": "RB-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S4-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume with low slot-1 share and high droas"
+      },
+      {
+        "id": "RB-S3-HYD-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S3-HYD/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume with mroas_up20 exceeding goal"
+      },
+      {
+        "id": "RB-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume with high mroas_up20 prediction"
+      },
+      {
+        "id": "RB-S3-PUN-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S3-PUN/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume with mroas_up20 exceeding goal"
+      },
+      {
+        "id": "RB-S4-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume with high mroas_up20 prediction"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale|fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale|fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale|fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritized correcting misallocated slots in contested markets to maximize incremental yield. Applied conservative small bid increases only on cells with <80% slot-1 share and positive mroas_up20 to protect the tight ROAS floor while utilizing available budget. Avoided S2-HYD leads due to sub-60% OSA restriction blocking increases."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23549,
+    "tokens_out": 23368,
+    "cost_usd": 0.0037443100000000003,
+    "wall_clock_s": 178.357059584
+  }
+}

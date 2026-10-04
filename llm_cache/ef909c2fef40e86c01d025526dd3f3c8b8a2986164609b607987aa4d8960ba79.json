@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.65,
+    "rationale": "Mechanical scores are near-tied (0.3681 vs 0.3323), introducing noise. C-S3-BLR holds a decisively higher slot1_share_7d (0.90 vs 0.48), providing a strong tie-breaking signal that justifies overriding the mechanical pick in favor of the campaign currently dominating the top ad slot."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1646,
+    "cost_usd": 0.02574,
+    "wall_clock_s": 18.734054459000003
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.53,
+    "rationale": "Scores are within 1.7%, indicating a noisy near-tie. Per explicit instructions, the mechanical leader (C-S3-HYD, 0.7636) is preferred despite C-S1-HYD commanding a substantially higher slot1 share (0.85 vs 0.56), as the composite metric retains a slight edge and the secondary signal does not overwhelmingly override it. Confidence remains moderate due to the tight margin and conflicting positional dominance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 2269,
+    "cost_usd": 0.035091,
+    "wall_clock_s": 23.51435216599998
+  }
+}

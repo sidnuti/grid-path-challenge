@@ -1,0 +1,179 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-S2-PUN-GEN-RAISE",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental demand efficiently; iroas 3.08 with bid headroom."
+      },
+      {
+        "id": "INT-S4-HYD-GEN-RAISE",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental demand efficiently in Hyderabad where Shower Gel shows strong margin uplift."
+      },
+      {
+        "id": "INT-S2-BLR-GEN-RAISE",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Moderate lift for profitable Body Wash inventory in Bangalore."
+      },
+      {
+        "id": "INT-MKT-LEAD-S2-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "expected_effect": "Shift slot-1 leadership to S2 where incremental score (1.318) exceeds S4 (0.511)."
+      },
+      {
+        "id": "INT-MKT-YLD-S4-PUN-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "expected_effect": "Step back S4 from contested generic term to reduce cannibalization."
+      },
+      {
+        "id": "INT-MKT-LEAD-S2-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "expected_effect": "Lead S2 on Body Wash generic in Hyderabad where it holds superior incrementality."
+      },
+      {
+        "id": "INT-MKT-YLD-S4-HYD-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "expected_effect": "Yield slot on S4 Hyderabad to free clicks for S2."
+      },
+      {
+        "id": "INT-CUT-S5-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:S5-DEL",
+          "R:S5-MUM",
+          "R:S5-BLR",
+          "R:S5-HYD",
+          "R:S5-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce wasted spend on Kids Soap hold/trim campaigns to protect portfolio ROAS above floor."
+      },
+      {
+        "id": "INT-CUT-S3-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:S3-DEL",
+          "R:S3-MUM",
+          "R:S3-BLR",
+          "R:S3-HYD",
+          "R:S3-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim budgets on weak Soap campaigns (holds/trims) to reallocate allowance to scale candidates."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "hold",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritizing incremental growth in high-iroas Body Wash & Shower Gel generics while correcting misaligned market leaders on K05. Budget cuts on weak Kids Soap and trim Soap campaigns protect portfolio ROAS above the 4.59 floor and free allowance for scale positions."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11075,
+    "tokens_out": 10724,
+    "cost_usd": 0.00172637,
+    "wall_clock_s": 97.63981091600022
+  }
+}

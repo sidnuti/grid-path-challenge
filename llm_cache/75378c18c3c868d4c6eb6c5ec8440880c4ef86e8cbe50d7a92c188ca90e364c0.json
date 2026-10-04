@@ -1,0 +1,265 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "bf-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped efficient Body Wash campaign; captures incremental volume at high iroas"
+      },
+      {
+        "id": "bf-s2-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped efficient Body Wash campaign; secures room for top performing cells"
+      },
+      {
+        "id": "bf-s4-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund high-mroas Shower Gel campaign; drives incremental demand"
+      },
+      {
+        "id": "bf-s4-blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund high-mroas Shower Gel campaign; sustains dominant position"
+      },
+      {
+        "id": "bf-s4-hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund high-mroas Shower Gel campaign; maintains efficient growth"
+      },
+      {
+        "id": "ct-s3-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim weak performer; frees room for higher iroas options"
+      },
+      {
+        "id": "ct-s3-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim weak performer; reallocates to efficient brands"
+      },
+      {
+        "id": "ct-s3-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim weak performer; stops bleed on low iroas"
+      },
+      {
+        "id": "ct-s5-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim low volume kids soap; optimizes spend"
+      },
+      {
+        "id": "ct-s5-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim low volume kids soap; conserves allowance"
+      },
+      {
+        "id": "rb-s2-del-brand",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "brand"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental lift on high-iota brand cell below slot-1 cap"
+      },
+      {
+        "id": "rb-s2-del-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push bid on clearing generic cell to win profitable impressions"
+      },
+      {
+        "id": "rb-s4-del-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental Shower Gel demand where share is open"
+      },
+      {
+        "id": "rb-s1-del-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient Soap generic spend with high iota and room"
+      },
+      {
+        "id": "rb-s1-hyd-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase high-return generic bids on scale campaign"
+      },
+      {
+        "id": "rb-s1-pun-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand efficient generic footprint on scale campaign"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Pivoted spend entirely to fund and scale campaigns with validated run-out patterns and highest incremental returns. Trimmed low-iota trim SKUs to free allowance for high-yield options. Dropped contested market leads failing OSA or goal checks per guardrails. Bid raises target below-cap cells to maximize incremental lift without triggering slot-1 caps."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12522,
+    "tokens_out": 10389,
+    "cost_usd": 0.00172623,
+    "wall_clock_s": 88.448868834
+  }
+}

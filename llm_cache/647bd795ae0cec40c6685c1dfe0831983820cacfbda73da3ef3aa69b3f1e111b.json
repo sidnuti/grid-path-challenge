@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.9,
+    "rationale": "The mechanical leader_score favors C-S1-MUM, aligning with its superior slot share metric (0.92 vs 0.66). Consistent performance across available metrics supports retaining the mechanical pick without contradiction."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1133,
+    "cost_usd": 0.018045,
+    "wall_clock_s": 12.641427167000074
+  }
+}

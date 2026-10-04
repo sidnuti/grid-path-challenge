@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10.0,
+    "direction": "surge",
+    "confidence": 0.95,
+    "rationale": "The reach z-score of 79.76 represents an extreme statistical outlier far beyond normal operational variance. With OSA at 0.0 indicating no supply constraint and the own-action confound flag explicitly false, the data strongly points to a genuine external demand surge rather than internal bidding artifacts or competitive pricing shifts."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 446,
+    "tokens_out": 1522,
+    "cost_usd": 0.024168,
+    "wall_clock_s": 15.857658124999944
+  }
+}

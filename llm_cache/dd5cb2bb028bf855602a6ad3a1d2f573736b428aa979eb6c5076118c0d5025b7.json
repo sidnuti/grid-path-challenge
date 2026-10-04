@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.55,
+    "rationale": "Mechanical leader_score favors C-S4-PUN (0.6591 vs 0.5941). Per instructions, the mechanical pick is preferred in near-ties. Retaining C-S4-PUN as the protected leader aligns with automated scoring, while C-S2-PUN holds to prevent internal competition."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2552,
+    "cost_usd": 0.03933,
+    "wall_clock_s": 24.428762041000027
+  }
+}

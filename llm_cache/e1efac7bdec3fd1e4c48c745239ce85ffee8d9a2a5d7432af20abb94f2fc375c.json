@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 9.9,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Extreme reach z-score (12.3) paired with a significant CPM drop (-5.28) and a false own-action confound flag strongly indicate a genuine market-level demand or inventory surge. The mechanical direction confirms upward movement, warranting high confidence that this is an exogenous shock requiring immediate response."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 443,
+    "tokens_out": 1542,
+    "cost_usd": 0.024459,
+    "wall_clock_s": 14.610969332999986
+  }
+}

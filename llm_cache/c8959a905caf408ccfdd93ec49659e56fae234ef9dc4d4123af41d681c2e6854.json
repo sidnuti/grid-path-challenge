@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.85,
+    "confidence": 0.6,
+    "rationale": "Tier B with 22 orders in 28 days is a moderately reliable read, supporting most of the +10% raise. However, the shrunk realised dROAS (1.87) sits ~16% below the 2.22 goal, so the raise rests on marginal-clearing logic rather than above-goal headroom; dampen modestly rather than fully trusting the mechanical step, while staying near 1.0 given the CLEARS verdict and guardrail clamp."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 447,
+    "tokens_out": 1129,
+    "cost_usd": 0.0015766399999999998,
+    "wall_clock_s": 9.954928583999958
+  }
+}

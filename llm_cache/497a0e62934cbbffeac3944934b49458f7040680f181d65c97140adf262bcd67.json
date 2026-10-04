@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.55,
+    "rationale": "The mechanical score narrowly leads C-S1-BLR (1.2582 vs 1.1798). While C-S3-BLR holds a stronger 7-day slot share (0.86 vs 0.63), the composite score captures conversion, ASP, and incrementality, offering a more holistic view of campaign value. Following the directive to prefer the mechanical pick in a near-tie, C-S1-BLR is selected."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 2212,
+    "cost_usd": 0.034302,
+    "wall_clock_s": 24.11310579100018
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-budget-s3-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Free budget from low-IROAS Soap trim campaign to fund high-uplift shifts.",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ]
+      },
+      {
+        "id": "cut-budget-s3-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Free budget from low-IROAS Soap trim campaign to fund high-uplift shifts.",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ]
+      },
+      {
+        "id": "cut-budget-s5-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Release constrained Spend from holding Kids Soap to allocate to Scale SKUs.",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ]
+      },
+      {
+        "id": "cut-budget-s5-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Release constrained Spend from holding Kids Soap to allocate to Scale SKUs.",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ]
+      },
+      {
+        "id": "cut-budget-s5-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Release constrained Spend from trim Kids Soap to allocate to Scale SKUs.",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ]
+      },
+      {
+        "id": "lead-hyd-k06-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.95,
+        "expected_effect": "Shift impression share to S4 (score 2.357) displacing weak S2 incumbent in Hyderabad Shower Gel generics.",
+        "evidence_refs": [
+          "M:HYD:K06"
+        ]
+      },
+      {
+        "id": "lead-blr-k01-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.95,
+        "expected_effect": "Install S2 as market leader (score 1.802) over S4/S5 to capture efficient Body Wash searches in Bangalore.",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ]
+      },
+      {
+        "id": "lead-mum-k05-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "expected_effect": "Reallocate slot 1 to S4 (score 1.734) improving incremental ROI vs S2 in Mumbai Shower Gel generics.",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ]
+      },
+      {
+        "id": "lead-pun-k05-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "expected_effect": "Move S4 to slot 1 (score 1.647) maximizing incrementality in Pune generic shower gel searches.",
+        "evidence_refs": [
+          "M:PUN:K05"
+        ]
+      },
+      {
+        "id": "raise-hyd-k06-s4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "confidence": 0.85,
+        "expected_effect": "Support S4 market lead with aggressive bid lift on cleared A-tier cell; high OSA allows volume expansion.",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ]
+      },
+      {
+        "id": "raise-blr-k01-s2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "confidence": 0.85,
+        "expected_effect": "Secure top position efficiently; current iroas 3.79 and fund role support controlled expansion.",
+        "evidence_refs": [
+          "C:C-S2-BLR/K01"
+        ]
+      },
+      {
+        "id": "raise-mum-k05-s4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "confidence": 0.85,
+        "expected_effect": "Drive incremental sales; mroas_up20=6.50 indicates strong revenue upside per additional rupee spent.",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ]
+      },
+      {
+        "id": "raise-pun-k05-s4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on highest measured uplift (mroas_up20=7.31) in constrained but high-potential Pune market.",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Budget reductions on low-IROAS Soap and Kids campaigns free ~\u20b9800+/day, safely funding high-uplift shifts in Shower Gel and Body Wash generics while keeping portfolio ROAS above the 4.8155 floor. Market-lead changes displace weak incumbents per the M-table scores without triggering G7 MISSES bans or OSA constraints."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11417,
+    "tokens_out": 8865,
+    "cost_usd": 0.00149496,
+    "wall_clock_s": 83.05928787499988
+  }
+}

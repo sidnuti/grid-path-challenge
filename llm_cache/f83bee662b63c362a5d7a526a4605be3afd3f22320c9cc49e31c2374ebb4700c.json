@@ -1,0 +1,355 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift slot leadership to highest incrementality SKU S1 on generic queries in BLR."
+      },
+      {
+        "id": "YM-BLR-K04-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Reduce overlap from S3 to avoid cannibalization and improve ROAS."
+      },
+      {
+        "id": "LM-DEL-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Capture high-value brand traffic in DEL with S4 shower gel."
+      },
+      {
+        "id": "YM-DEL-K01-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Step back S3 on DEL brand searches to concentrate share."
+      },
+      {
+        "id": "LM-DEL-K03-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Lead incremental generic revenue in DEL with S1 soap."
+      },
+      {
+        "id": "YM-DEL-K03-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Yield S3 to minimize wasteful overlap on DEL generic queries."
+      },
+      {
+        "id": "LM-HYD-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Direct HYD brand traffic to higher margin S4 shower gel."
+      },
+      {
+        "id": "YM-HYD-K01-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Reduce bid interference from S2 body wash on HYD brand terms."
+      },
+      {
+        "id": "LM-HYD-K04-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Assign HYD generic K04 leadership to S3 which has slightly higher incremental score."
+      },
+      {
+        "id": "YM-HYD-K04-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Lower S1 bids on HYD K04 to prevent internal competition."
+      },
+      {
+        "id": "LM-MUM-K03-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift MUM generic K03 leadership from low-score S5 to efficient S1."
+      },
+      {
+        "id": "YM-MUM-K03-S5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Significantly reduce S5 overlap on MUM generic queries to save budget."
+      },
+      {
+        "id": "LM-MUM-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Establish S1 as leader on MUM K04 generic queries due to superior incremental return."
+      },
+      {
+        "id": "YM-MUM-K04-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Cut S3 spend on MUM K04 to protect portfolio ROAS."
+      },
+      {
+        "id": "LM-PUN-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Redirect PUN brand traffic to S4 shower gel for maximum value."
+      },
+      {
+        "id": "YM-PUN-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Decrease S1 presence on PUN brand searches where S4 dominates efficiently."
+      },
+      {
+        "id": "LM-PUN-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Win PUN generic K05 volume with S4 shower gel."
+      },
+      {
+        "id": "YM-PUN-K05-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Step back S2 body wash from PUN K05 generic segment."
+      },
+      {
+        "id": "LM-PUN-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Concentrate PUN competition K10 spend on S4."
+      },
+      {
+        "id": "YM-PUN-K10-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Reduce S2 bidding on PUN competition queries."
+      },
+      {
+        "id": "LM-BLR-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Claim BLR generic K05 leadership for S4."
+      },
+      {
+        "id": "YM-BLR-K05-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Diminish S2 footprint on BLR K05 to lower waste."
+      },
+      {
+        "id": "LM-HYD-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift HYD competition K10 leadership to S4."
+      },
+      {
+        "id": "YM-HYD-K10-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Curtailed S2 bids on HYD K10 competition queries."
+      }
+    ],
+    "notes": "Corrected 12 misaligned contested markets by assigning leadership to SKUs with the highest incremental revenue per impression. This reallocation preserves budget efficiency, drives incremental offtake, and keeps portfolio direct ROAS safely above the 4.6258 floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23107,
+    "tokens_out": 20974,
+    "cost_usd": 0.00341983,
+    "wall_clock_s": 180.69463212500003
+  }
+}

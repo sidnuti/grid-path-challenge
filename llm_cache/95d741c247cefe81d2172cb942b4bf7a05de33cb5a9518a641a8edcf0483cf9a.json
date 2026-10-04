@@ -1,0 +1,120 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase spend on high-iroas (4.25) generic body wash cell with verified bid headroom; drives incremental volume within allowance."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Target slot-1 on zero-displacement competition keyword (iota=1.00, iroas=5.45); maximizes incremental off-take per rupee."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale bid on top-performing BLR body wash generic cell (iroas=3.72, mroas_up20=3.81) below slot-1 cap."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund growth in Mumbai generic body wash where incremental return (iroas=3.38) and predicted uplift (mroas_up20=5.74) are strong."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure premium placement on high-iroas (4.57) Pune generic keyword to capture incremental demand ahead of run 6 deadline."
+      }
+    ],
+    "stance": [],
+    "notes": "Redirected spend to five high-incrementality cells with verified bid headroom (slot1 < 0.80, no OSA block, CLEARS verdict). Excluded HYD body wash due to 3-day OSA contraction (0.42) and capped high-slot-share cells. Plan stays within \u20b9300 allowance while prioritizing iota-heavy competition and high-mroas generic keywords to grow total off-take before portfolio roll-forward."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12340,
+    "tokens_out": 7870,
+    "cost_usd": 0.0013932999999999999,
+    "wall_clock_s": 65.57647362500006
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S5-PUN",
+    "confidence": 0.95,
+    "rationale": "The mechanical score already favors C-S5-PUN (0.6133 vs 0.5663). Its extremely high slot1 share (0.96) compared to the runner-up (0.21) confirms dominant auction performance, providing clear evidence to uphold the mechanical selection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 927,
+    "cost_usd": 0.015171,
+    "wall_clock_s": 8.270270459000017
+  }
+}

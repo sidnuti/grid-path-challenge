@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.75,
+    "rationale": "C-S2-HYD holds the highest mechanical leader_score (2.2347) versus the closest competitor C-S3-HYD (2.1003). Furthermore, C-S2-HYD demonstrates a significantly higher slot1_share_7d (0.37 vs 0.14), indicating more efficient or effective placement. There is no clear evidence in the provided metrics to override the mechanical selection, so maintaining C-S2-HYD as the leader is preferred."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 2000,
+    "cost_usd": 0.031281,
+    "wall_clock_s": 20.443595833000018
+  }
+}

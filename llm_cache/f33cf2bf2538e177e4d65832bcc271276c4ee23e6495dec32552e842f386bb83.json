@@ -1,0 +1,367 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce low-incrementality Soap spend to protect portfolio ROAS."
+      },
+      {
+        "id": "INT-02",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce low-incrementality Soap spend to protect portfolio ROAS."
+      },
+      {
+        "id": "INT-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce low-incrementality Soap spend to protect portfolio ROAS."
+      },
+      {
+        "id": "INT-04",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce low-incrementality Soap spend to protect portfolio ROAS."
+      },
+      {
+        "id": "INT-05",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce low-incrementality Soap spend to protect portfolio ROAS."
+      },
+      {
+        "id": "INT-06",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim weak Kids Soap spend to improve overall efficiency."
+      },
+      {
+        "id": "INT-07",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim weak Kids Soap spend to improve overall efficiency."
+      },
+      {
+        "id": "INT-08",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim weak Kids Soap spend to improve overall efficiency."
+      },
+      {
+        "id": "INT-09",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim weak Kids Soap spend to improve overall efficiency."
+      },
+      {
+        "id": "INT-10",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim weak Kids Soap spend to improve overall efficiency."
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share on efficient Body Wash generic keyword."
+      },
+      {
+        "id": "INT-12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow Shower Gel volume on high-mroas generic cell."
+      },
+      {
+        "id": "INT-13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow Shower Gel volume on high-mroas generic cell."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase spend on efficient Body Wash generic."
+      },
+      {
+        "id": "INT-15",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign slot leadership to higher incremental SKU S3."
+      },
+      {
+        "id": "INT-16",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back low-incrementality SKU S1."
+      },
+      {
+        "id": "INT-17",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign slot leadership to higher incremental SKU S3."
+      },
+      {
+        "id": "INT-18",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back low-incrementality SKU S1."
+      },
+      {
+        "id": "INT-19",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign slot leadership to higher incremental SKU S3."
+      },
+      {
+        "id": "INT-20",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back low-incrementality SKU S1."
+      },
+      {
+        "id": "INT-21",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign slot leadership to higher incremental SKU S4."
+      },
+      {
+        "id": "INT-22",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back lower incremental SKU S2."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "S5",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritize ROAS protection by cutting low-incrementality Soap and Kids SKUs, while reallocating room to efficient Scale SKUs (S2, S4). Reassign contested markets to maximize incremental revenue per impression."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24748,
+    "tokens_out": 19930,
+    "cost_usd": 0.00333334,
+    "wall_clock_s": 166.05580495899994
+  }
+}

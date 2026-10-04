@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.65,
+    "rationale": "C-S3-MUM is selected as the mechanical leader with the highest incrementality-weighted score (0.6779). While C-S1-MUM shows a higher historical slot share (0.89 vs 0.66), the top-two margin is narrow and does not clearly override the mechanical metric. Per the directive to default to the mechanical pick in near-ties, C-S3-MUM is retained for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1889,
+    "cost_usd": 0.029457,
+    "wall_clock_s": 17.24522299999998
+  }
+}

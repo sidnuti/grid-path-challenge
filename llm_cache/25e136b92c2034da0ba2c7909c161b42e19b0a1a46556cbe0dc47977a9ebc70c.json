@@ -1,0 +1,265 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Relieve frequent budget caps (ran out 6/7 days); fund role with iroas 2.76 supports additional spend."
+      },
+      {
+        "id": "2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Address run-outs (3/7 days); efficient body wash funder, iroas 2.54."
+      },
+      {
+        "id": "3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Constant budget exhaustion (7/7 days); scale shower gel spends safely with iroas 2.94."
+      },
+      {
+        "id": "4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund role with strong iroas 3.15; lifting budget unlocks incremental soap volume."
+      },
+      {
+        "id": "5",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "High-frequency runner-out (6/7 days); iroas 3.59 justifies increased allocation."
+      },
+      {
+        "id": "6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale role with confirmed bid headroom; increase generic bid share to capture demand."
+      },
+      {
+        "id": "7",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage available headroom; top-tier iroas 3.23 supports aggressive positioning."
+      },
+      {
+        "id": "8",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Region-leading iroas 3.44; bid lift secures top impressions without risking ROAS floor."
+      },
+      {
+        "id": "9",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Strong scale candidate (iroas 3.77); expands reach beyond current capped limits."
+      },
+      {
+        "id": "10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Best portfolio iroas 3.92; increase bids to solidify share on generic queries."
+      },
+      {
+        "id": "11",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim inefficient soap spend (iroas 0.81); frees allowance for higher-return SKUs."
+      },
+      {
+        "id": "12",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Low incremental value (iroas 0.74); reduce exposure to protect DROAS floor."
+      },
+      {
+        "id": "13",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Weak performance (iroas 0.77); reallocate funds to scale roles."
+      },
+      {
+        "id": "14",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03",
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "S3 over-holds generic slot despite lower incremental score than S1; step back to prevent cannibalization."
+      },
+      {
+        "id": "15",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Hold replaced by S1 on incremental basis; yields efficiency in contested soap market."
+      },
+      {
+        "id": "16",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09",
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Competition keyword misallocation; S3 yields to S1 who drives higher marginal ROI."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Reallocate capital from underperforming S3 Soap campaigns to fund-and-scale roles in Body Wash and Shower Gel, securing +~\u20b912k net spend capacity while protecting the 4.59 DROAS floor. Resolve misaligned contest holders in MUM/PUN generic slots to maximize incremental revenue per impression."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11120,
+    "tokens_out": 10024,
+    "cost_usd": 0.00163672,
+    "wall_clock_s": 78.78292216699992
+  }
+}

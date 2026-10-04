@@ -1,0 +1,390 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BUD-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore full daily spend capacity for efficient fund SKU; captures remaining allowance efficiently."
+      },
+      {
+        "id": "BUD-S2-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore full daily spend capacity for efficient fund SKU."
+      },
+      {
+        "id": "BUD-S3-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore full daily spend capacity for efficient fund SKU."
+      },
+      {
+        "id": "BID-S1-BLR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Exploit bid headroom on scale campaign to lift incremental off-take."
+      },
+      {
+        "id": "BID-S2-BLR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Exploit bid headroom on scale campaign."
+      },
+      {
+        "id": "BID-S2-PUN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Exploit bid headroom on scale campaign."
+      },
+      {
+        "id": "BID-S2-HYD",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Exploit bid headroom on scale campaign."
+      },
+      {
+        "id": "LD-BLR-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S1)."
+      },
+      {
+        "id": "YL-BLR-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent to avoid internal cannibalization."
+      },
+      {
+        "id": "LD-BLR-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S1)."
+      },
+      {
+        "id": "YL-BLR-K09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent."
+      },
+      {
+        "id": "LD-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S4)."
+      },
+      {
+        "id": "YL-DEL-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent."
+      },
+      {
+        "id": "LD-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S2)."
+      },
+      {
+        "id": "YL-DEL-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent."
+      },
+      {
+        "id": "LD-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S4)."
+      },
+      {
+        "id": "YL-HYD-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent."
+      },
+      {
+        "id": "LD-HYD-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S4)."
+      },
+      {
+        "id": "YL-HYD-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent."
+      },
+      {
+        "id": "LD-HYD-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S3)."
+      },
+      {
+        "id": "YL-HYD-K09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent."
+      },
+      {
+        "id": "LD-PUN-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:PUN:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to highest incremental revenue SKU (S3)."
+      },
+      {
+        "id": "YL-PUN-K09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:PUN:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weak incumbent."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Final run optimizes for incremental off-take within remaining allowance by funding exhausted efficient campaigns and exploiting bid headroom on scale SKUs. Contested market slots are reallocated to highest-iROAS incumbents to prevent internal cannibalization and boost portfolio ROI."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11108,
+    "tokens_out": 11076,
+    "cost_usd": 0.0017731200000000002,
+    "wall_clock_s": 92.987065917
+  }
+}

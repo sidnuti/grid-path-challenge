@@ -1,0 +1,178 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Release budget capacity for high-iROAS generic & competition cells; prevents run-out leakage."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale fund-capped shower gel in Mumbai; leverages iroas 4.67 and high mroas_up20."
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Maintain body wash budget availability while prioritizing shower gel upside."
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Preserve shower gel shelf space in BLR without over-allocating to lower-iROAS competitors."
+      },
+      {
+        "id": "INT-5",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce trim waste to free allowance for scale campaigns."
+      },
+      {
+        "id": "INT-6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental shower gel generic demand; slot1 at 61% leaves clear headroom."
+      },
+      {
+        "id": "INT-7",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Drive high-iROAS generic sales in HYD; currently mid-slot with iroas 7.54."
+      },
+      {
+        "id": "INT-8",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale strongest local shower gel performance; iroas 8.08 and slot1 at 64%."
+      },
+      {
+        "id": "INT-9",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secure competitive placements for body wash where iroas is 4.43 and slot1 is 58%."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "lead",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "defend",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "defend",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "hold",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocated \u20b9300 allowance from trim waste (C-S3-MUM) and held-back budget to fund campaigns and high-iROAS showergel generic cells, bypassing slot-1 blocked or MISSES tiers. Stance prioritizes Shower Gel lead across generics/brands while holding weaker soap/kids segments to protect portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11936,
+    "tokens_out": 7104,
+    "cost_usd": 0.0012816,
+    "wall_clock_s": 61.444120209000005
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.6,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Highly significant reach spike (z=4.586) with no CPM movement and no own-action confound strongly points to a genuine external demand shift rather than price competition or internal bidding artifacts."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1441,
+    "cost_usd": 0.022947,
+    "wall_clock_s": 13.915328875
+  }
+}

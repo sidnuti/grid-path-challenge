@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.62,
+    "rationale": "Mechanical leader_score favors C-S4-HYD (1.5845 vs 1.5177, ~4% gap). C-S2-HYD has a higher slot1_share_7d (0.81 vs 0.66), which favors it, but this advantage is not decisive enough to clearly override the mechanical pick in a near-tie; therefore default to the score leader C-S4-HYD with moderate confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 370,
+    "cost_usd": 0.0005886699999999999,
+    "wall_clock_s": 3.8675755419999405
+  }
+}

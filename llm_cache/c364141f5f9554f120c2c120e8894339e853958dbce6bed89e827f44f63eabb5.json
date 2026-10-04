@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.9,
+    "confidence": 0.6,
+    "rationale": "Low order volume (24 over 28 days) introduces high statistical noise, making short-term dROAS estimates volatile. Performance is materially below target, suggesting efficiency constraints rather than pure volume limitations. Applying the full mechanical step risks accelerating spend while ROI remains suboptimal. A slight dampening (10%) preserves the system's upward bias to test for lift while mitigating downside risk from noisy data, consistent with the directive to stay near 1.0 when uncertain."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 2000,
+    "cost_usd": 0.031395,
+    "wall_clock_s": 20.493467874999965
+  }
+}

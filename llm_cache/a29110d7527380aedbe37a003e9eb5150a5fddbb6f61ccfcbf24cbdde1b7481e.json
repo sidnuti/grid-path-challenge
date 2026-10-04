@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.7,
+    "rationale": "The mechanical leader_scores are essentially tied (0.6479 vs 0.6419), making the metric noisy and unreliable for separation. C-S1-BLR shows a substantially higher slot1_share_7d (0.88 vs 0.42), indicating dominant top-ad visibility and more efficient current market execution. This clear practical advantage outweighs the negligible score difference, favoring C-S1-BLR for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1444,
+    "cost_usd": 0.022782,
+    "wall_clock_s": 16.012755999999968
+  }
+}

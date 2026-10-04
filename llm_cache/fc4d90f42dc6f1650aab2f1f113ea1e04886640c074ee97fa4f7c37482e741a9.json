@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.7,
+    "rationale": "The mechanical scores are a near-tie (0.6418 vs 0.6779, within stated noise), so incumbency evidence breaks the tie: C-S1-MUM already holds 89% of slot 1 versus 66% for C-S3-MUM, making it the de facto market leader whose bid should be protected while the sibling holds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 361,
+    "tokens_out": 825,
+    "cost_usd": 0.00116482,
+    "wall_clock_s": 7.174142458000006
+  }
+}

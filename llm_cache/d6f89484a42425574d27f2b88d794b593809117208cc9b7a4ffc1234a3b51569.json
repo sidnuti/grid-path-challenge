@@ -1,0 +1,292 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "L1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift brand slot ownership to highest-incrementality SKU, improving iroas and displacing lower-value siblings."
+      },
+      {
+        "id": "L2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder in Delhi brand contests; capture efficient incremental volume."
+      },
+      {
+        "id": "L3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Align Hyderabad brand allocation with incremental leader."
+      },
+      {
+        "id": "L4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fix Pune brand contest allocation to maximize ROI."
+      },
+      {
+        "id": "L5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S2 as dominant brand holder in Mumbai contests."
+      },
+      {
+        "id": "L6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move shower gel generic leadership to S4, leveraging higher incremental score than S2."
+      },
+      {
+        "id": "B1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase volume in efficient Body Wash generic buckets with positive mroas_up20."
+      },
+      {
+        "id": "B2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture additional incremental demand in Mumbai generic segments."
+      },
+      {
+        "id": "B3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Shower Gel generic presence where forecasted revenue exceeds cost."
+      },
+      {
+        "id": "B4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K06",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Grow scalable Shower Gel generic spend with strong iroas foundation."
+      },
+      {
+        "id": "B5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K06",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push efficient Shower Gel generic bids to maximize off-take without breaching ROAS floor."
+      },
+      {
+        "id": "H1",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block all raises and budget increases due to critical 3-day OSA (0.42) below 0.60 threshold, preventing wasted spend and stockout penalties."
+      },
+      {
+        "id": "BU1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore capacity for top-funnel Body Wash fund running out daily; minimal allowance impact."
+      },
+      {
+        "id": "BU2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prevent repeated run-outs for Mumbai Body Wash fund while preserving portfolio margin."
+      },
+      {
+        "id": "BU3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Support high-iroas Shower Gel campaign capped by daily budget limits."
+      },
+      {
+        "id": "BU4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Enable continued growth for scalable Shower Gel Bangalore account."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "all",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "all",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "all",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "all",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "all",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Focused on fixing misallocated contest shares (wrong holders) and directing incremental spend toward high-iroas Body Wash/Shower Gel generics. Applied strategic hold on S2-HYD to prevent overspend during severe stockout. Budget increments kept small to remain strictly within daily allowance while supporting daily run-outs on primary Funds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11604,
+    "tokens_out": 9798,
+    "cost_usd": 0.0016218600000000001,
+    "wall_clock_s": 96.63168620900001
+  }
+}

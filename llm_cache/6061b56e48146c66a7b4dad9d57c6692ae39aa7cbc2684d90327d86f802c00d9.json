@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.75,
+    "rationale": "C-S3-HYD holds the mechanical lead (0.2599 vs 0.2402) and the corroborating evidence strengthens it: its 7-day slot1 share of 0.97 versus 0.43 for C-S1-HYD shows it already dominates the top slot, so it is the natural bid to protect. The near-tie score gap is small, but no evidence favours flipping to C-S1-HYD; C-S3-HYD should lead while C-S1-HYD holds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 340,
+    "tokens_out": 447,
+    "cost_usd": 0.0006845499999999999,
+    "wall_clock_s": 4.204727999999932
+  }
+}

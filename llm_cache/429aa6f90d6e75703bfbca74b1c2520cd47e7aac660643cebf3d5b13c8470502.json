@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.75,
+    "rationale": "The mechanical scores are nearly identical (difference ~5.7%), creating the near-tie noted in the prompt. C-S3-PUN commands a decisive 92% slot 1 share versus 47% for the mechanical leader, indicating superior current positioning, conversion momentum, and market stability. This clear operational advantage overrides the negligible mechanical edge, making C-S3-PUN the optimal leader for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 2499,
+    "cost_usd": 0.038607,
+    "wall_clock_s": 24.784815708999986
+  }
+}

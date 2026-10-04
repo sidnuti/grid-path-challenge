@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.8,
+    "rationale": "C-S3-MUM is the mechanical leader with a marginally higher score (0.6873 vs 0.6812). This is strongly reinforced by its significantly higher slot1_share_7d (0.86 vs 0.69), indicating superior placement retention and market dominance, justifying its selection as the protected leader despite the narrow score gap."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1945,
+    "cost_usd": 0.030225,
+    "wall_clock_s": 19.037903916999994
+  }
+}

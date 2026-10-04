@@ -1,0 +1,166 @@
+days 0 69 | rows 107603
+
+## 1. Structure
+keyword_id  K01  K02   K03   K04  K05  K06  K07  K08  K09  K10
+sku_id                                                        
+S1          1.0  1.0   0.8   0.8            1.0       0.6     
+S2          0.9                   1.0  0.7                 0.8
+S3          0.9  0.9  0.85  0.85                      0.6     
+S4          0.8                   0.8  1.0                 0.7
+S5          0.7        0.5                       1.0          
+keyword_type  brand  competition  generic
+sku_id                                   
+S1                2            1        3
+S2                1            1        2
+S3                2            1        2
+S4                1            1        2
+S5                1            0        2
+markets (city x kw): 50 | contested (>=2 Aurel SKUs): 40 | max SKUs in one market: 5
+keyword_id           K01  K02  K03  K04  K05  K06  K07  K08  K09  K10
+max_skus_per_market    5    2    3    2    2    2    1    1    2    2
+
+## 2. Plan by keyword type
+              cells  budget  goal_med  floor_med
+keyword_type                                    
+brand            35    9430     8.880       4.00
+competition      20    5450     1.625       1.00
+generic          55   13970     3.050       1.37
+evidence_tier
+medium    45
+high      40
+low       25
+Name: count, dtype: int64
+
+## 3. Warm-up by keyword type (per day)
+                 spend      impr  orders       rev  droas     cpm  cvr_pct  spend_share
+keyword_type                                                                           
+brand          2097.16  10292.79  169.32  35257.39  16.81  203.75     1.65         0.11
+competition    4506.98  11101.54   23.21   5209.96   1.16  405.98     0.21         0.24
+generic       12315.09  42847.75  228.93  47083.54   3.82  287.42     0.53         0.65
+
+## 3b. Warm-up by keyword (per day)
+                                            spend       rev  droas     cpm  cvr_pct
+keyword_type keyword_id keyword                                                    
+brand        K01        aurel             1737.39  28284.96  16.28  205.05     1.47
+             K02        aurel soap         359.77   6972.43  19.38  197.70     2.47
+competition  K09        velora            3090.43   2475.32   0.80  415.93     0.21
+             K10        nimbus body wash  1416.55   2734.64   1.93  385.83     0.20
+generic      K03        soap              7203.48  17754.57   2.46  284.25     0.46
+             K04        bathing soap      1533.38   5563.14   3.63  270.26     0.62
+             K05        body wash         2245.27  14893.50   6.63  310.63     0.64
+             K06        shower gel         992.70   6983.89   7.04  319.51     0.58
+             K07        sandal soap        219.69   1222.43   5.56  226.54     0.73
+             K08        kids soap          120.57    666.00   5.52  228.75     1.00
+
+## 3c. Warm-up by sub-category x keyword type: dROAS
+keyword_type  brand  competition  generic
+sub_category                             
+Body Wash     18.33         1.45     5.81
+Kids Soap      7.57          NaN     1.65
+Shower Gel    24.93         2.28     7.90
+Soap          15.28         0.80     3.19
+
+## 4. SKU and city (warm-up, per day)
+           spend        rev  droas     offtake  ad_unit_share
+sku_id                                                       
+S1      4817.691  20455.714  4.246  155346.714          0.132
+S2      2734.157  17945.679  6.564   76994.036          0.233
+S3      6098.488  21158.000  3.469  100191.857          0.211
+S4      2656.867  22578.000  8.498   64735.714          0.349
+S5      2612.029   5413.500  2.073   10665.000          0.508
+            spend        rev  droas     offtake  ad_unit_share
+city_id                                                       
+BLR      4040.156  18197.571  4.504   88412.000          0.184
+DEL      5670.809  27523.214  4.853  132040.357          0.204
+HYD      2328.734  11599.607  4.981   52235.071          0.217
+MUM      5299.059  21674.429  4.090   98798.464          0.198
+PUN      1580.474   8556.071  5.414   36447.429          0.227
+
+## 5. Slots and dayparts (warm-up)
+         impr      cpm  cvr_pct  droas  impr_share
+slot                                              
+1     1301524  287.028    0.698  4.986       0.724
+5      348072  319.963    0.622  4.221       0.194
+9       90516  296.496    0.425  3.101       0.050
+13      58666  306.090    0.273  1.979       0.033
+               spend      cpm  cvr_pct  droas  spend_share
+daypart                                                   
+afternoon  176074.04  295.001    0.660  4.659        0.332
+evening    133927.91  296.624    0.674  4.925        0.253
+morning    152641.16  292.646    0.650  4.513        0.288
+night       67095.36  293.221    0.625  4.213        0.127
+
+## 6. Budget run-out
+run-out rate {'eval': 0.134, 'warmup': 0.299}
+warm-up run-out days by campaign (top 10): {'C-S1-BLR': 28, 'C-S5-DEL': 28, 'C-S5-BLR': 28, 'C-S2-MUM': 28, 'C-S3-BLR': 28, 'C-S1-DEL': 28, 'C-S1-PUN': 18, 'C-S1-HYD': 11, 'C-S5-MUM': 9, 'C-S5-HYD': 3}
+run-out daypart: {'evening': 215, 'afternoon': 134, 'morning': 1}
+budget utilisation warm-up: 0.779
+
+## 7. Portfolio by week (baseline trajectory)
+         spend       rev  droas    offtake    org   adu
+week                                                   
+0     18939.77  87793.43   4.64  408581.43  11694  2942
+1     18875.94  84726.14   4.49  406675.00  11749  2868
+2     18994.78  89977.57   4.74  409917.57  11652  3025
+3     18866.43  87706.43   4.65  406559.29  11593  2966
+4     18383.21  89063.86   4.84  409466.29  11771  2856
+5     18509.00  90081.57   4.87  416931.29  11913  2914
+6     18205.61  87176.29   4.79  406835.57  11661  2899
+7     17237.86  88640.86   5.14  408756.43  11744  2885
+8     17321.91  88608.86   5.12  406314.71  11587  2913
+9     17345.78  87877.71   5.07  408800.14  11578  2918
+
+## 8. Cannibalisation: organic units ~ ad orders by keyword type (sku x city x day, FE)
+{'brand': np.float64(-0.925), 'generic': np.float64(0.988), 'competition': np.float64(-0.054), 'osa': np.float64(-0.262)}
+
+## 9. Anomalies: weekly z of slot-1-equivalent reach per city x keyword (eval weeks vs warm-up)
+week  city_id  keyword_id
+5     BLR      K03           159.5
+7     BLR      K03            83.5
+6     BLR      K03            83.0
+4     BLR      K03            80.1
+9     BLR      K03            50.7
+8     BLR      K03            46.3
+9     MUM      K04            31.4
+      DEL      K09            23.0
+6     HYD      K01            19.0
+8     MUM      K04            18.5
+6     DEL      K07            18.3
+9     DEL      K07            18.2
+
+CPM by week, competitor keywords:
+keyword_id    K09    K10
+week                    
+0           415.0  385.0
+1           417.0  385.0
+2           416.0  386.0
+3           415.0  386.0
+4           414.0  372.0
+5           410.0  370.0
+6           409.0  372.0
+7           407.0  368.0
+8           403.0  368.0
+9           403.0  368.0
+
+OSA min by sku x city (all days):
+                 min  mean
+sku_id city_id            
+S2     HYD      0.42  0.87
+S4     PUN      0.78  0.78
+                min  max  count
+sku_id city_id                 
+S2     HYD       42   48      7
+
+## 10. Baseline actions per run
+     proposed  shipped  reduce_cpm  increase_cpm  increase_budget
+run                                                              
+1          44       37          28             6              3.0
+2          31       26          20             3              3.0
+3          30       24          17             5              2.0
+4          29       25          21             4              0.0
+5          21       19          15             3              1.0
+6          21       17          13             4              0.0
+  action_id campaign_id keyword_id   action_type         rule  outcome                                     detail
+0  r03-a002    C-S1-DEL        K04  increase_cpm  G3_TOP_SLOT  blocked  already at slot 1 on ≥ 80% of impressions
+1  r03-a003    C-S1-DEL        K07  increase_cpm  G3_TOP_SLOT  blocked  already at slot 1 on ≥ 80% of impressions
+2  r03-a004    C-S1-MUM        K07  increase_cpm  G3_TOP_SLOT  blocked  already at slot 1 on ≥ 80% of impressions

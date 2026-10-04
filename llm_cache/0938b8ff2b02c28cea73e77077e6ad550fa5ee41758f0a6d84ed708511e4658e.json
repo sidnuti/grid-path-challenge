@@ -1,0 +1,332 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift K01 leadership to S2 which has higher incremental score."
+      },
+      {
+        "id": "LM-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move K05 generic leadership to S4 for higher value."
+      },
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S2 leads K01 in BLR efficiently."
+      },
+      {
+        "id": "LM-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead market on K05 BLR for S4."
+      },
+      {
+        "id": "LM-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure K06 leadership for S4 in BLR."
+      },
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer K01 brand leadership to S1 in MUM."
+      },
+      {
+        "id": "LM-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S4 dominance on K06 in MUM."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect PUN K01 leadership to S2."
+      },
+      {
+        "id": "LM-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S4 dominance on PUN K06."
+      },
+      {
+        "id": "CB-S1-DEL-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S1-DEL/K09",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove inefficient competition spend on S1-DEL."
+      },
+      {
+        "id": "CB-S1-MUM-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K09"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S1-MUM/K09",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Cut weak competition exposure on S1-MUM."
+      },
+      {
+        "id": "CB-S3-DEL-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S3-DEL/K09",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate loss-leading competition impressions on S3-DEL."
+      },
+      {
+        "id": "CB-S3-MUM-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K09"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S3-MUM/K09",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Drop unprofitable competitor targeting on S3-MUM."
+      },
+      {
+        "id": "BU-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim budget on S3-DEL (trim role) to shift capital."
+      },
+      {
+        "id": "BU-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce spend allocation to S3-MUM due to weak ROAS."
+      },
+      {
+        "id": "BU-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Constrict budget on S3-BLR to mitigate drag."
+      },
+      {
+        "id": "BU-S5-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lower Kids Soap budget in DEL to fund higher-yield channels."
+      },
+      {
+        "id": "BU-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cap S5-BLR spend given subpar incremental returns."
+      },
+      {
+        "id": "BU-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Tighten budget on S5-MUM (trim role) to conserve allowance."
+      },
+      {
+        "id": "HM-S1-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Block raises on S1-MUM (hold role) to protect portfolio floor."
+      },
+      {
+        "id": "HM-S1-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Block raises on S1-BLR to maintain efficiency constraints."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritized market leadership shifts to high-incrementality SKUs while cutting inefficient competition bids and trimming budgets on hold/trim campaigns. This preserves portfolio ROAS above the floor by reallocating the limited daily allowance toward scalable Shower Gel and Body Wash channels."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23795,
+    "tokens_out": 16662,
+    "cost_usd": 0.00287991,
+    "wall_clock_s": 126.25251087500001
+  }
+}

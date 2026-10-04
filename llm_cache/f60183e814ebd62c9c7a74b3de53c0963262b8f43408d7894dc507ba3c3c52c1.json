@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader score favors C-S4-PUN. While C-S2-PUN shows higher recent visibility, its lower efficiency metric may indicate overbidding; protecting the mechanically superior bid for C-S4-PUN aligns with the directive to default to the mechanical pick when scores are close."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 689,
+    "cost_usd": 0.011385,
+    "wall_clock_s": 7.46207979199994
+  }
+}

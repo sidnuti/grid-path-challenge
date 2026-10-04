@@ -1,0 +1,209 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "i1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unleash efficient spend on top-performing fund campaign; consumes ~\u20b9400 of daily allowance."
+      },
+      {
+        "id": "i2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture remaining efficient volume from Mumbai Body Wash."
+      },
+      {
+        "id": "i3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share on high-mROAS generic cell; drives incremental revenue at \u20b92.58 spend."
+      },
+      {
+        "id": "i4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 9,
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure mid-slot presence on cleared generic; supports S2 offtake growth."
+      },
+      {
+        "id": "i5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up high-incremental Shower Gel generic; aligns with fund/scale posture."
+      },
+      {
+        "id": "i6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate share on cleared generic; protects margin with iroas 5.21."
+      },
+      {
+        "id": "i7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move leader from S1 to S2 (score 1.819 vs 0.718); captures highest incremental value in Delhi brand search."
+      },
+      {
+        "id": "i8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Overtake S1 in Hyderabad brand search; gap 0.44 favors S2 incrementality."
+      },
+      {
+        "id": "i9",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Block bids/budget until OSA recovers from 0.42 (<0.60 threshold); prevents wasted spend and ROAS drag."
+      },
+      {
+        "id": "i10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K07"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Exploit high mROAS+up20 (7.89 vs 2.44 goal) on Soap generic; drives scale."
+      },
+      {
+        "id": "i11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K07"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Target high-return generic cell in Pune; complements S1 scale posture."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "S2",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2,S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "all",
+        "sku_role": "S5",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritizes high-iota, high-mROAS_generic cells (S2/S4 Body Wash & Shower Gel) to stretch the \u20b9798 allowance into incremental offtake. Yields inefficient incumbents in key metro brand searches to maximize portfolio ROI while OSA compliance is enforced on C-S2-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11106,
+    "tokens_out": 8548,
+    "cost_usd": 0.00144442,
+    "wall_clock_s": 78.202908708
+  }
+}

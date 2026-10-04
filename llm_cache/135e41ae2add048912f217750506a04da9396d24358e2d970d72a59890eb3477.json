@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.75,
+    "rationale": "Although C-S3-MUM has a slightly higher mechanical leader score, C-S1-MUM holds a dominant 91% slot-1 share versus 68%. This substantial margin in top-position acquisition indicates stronger actual market control and bid efficiency, clearly favoring C-S1-MUM despite the narrow mechanical score difference."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1368,
+    "cost_usd": 0.02157,
+    "wall_clock_s": 15.579136915999925
+  }
+}

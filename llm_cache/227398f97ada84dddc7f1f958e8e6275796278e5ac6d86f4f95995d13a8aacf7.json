@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-MUM",
+    "confidence": 0.55,
+    "rationale": "C-S2-MUM has the highest mechanical leader_score (1.6500), which we prioritize per the explicit instruction to prefer the mechanical pick. Confidence is moderate due to the close second-place score of C-S4-MUM (1.5077) and C-S4's dominant slot1_share_7d (0.97 vs 0.15), which introduces meaningful noise into the mechanical ranking."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2296,
+    "cost_usd": 0.035706,
+    "wall_clock_s": 23.225852291999985
+  }
+}

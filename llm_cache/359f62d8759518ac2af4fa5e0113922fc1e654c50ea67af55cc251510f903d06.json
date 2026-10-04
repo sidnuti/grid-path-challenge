@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "The mechanical pick favors C-S1-HYD (0.2413 vs 0.2268). Despite the narrow score difference, C-S1-HYD holds a decisive 96% slot1_share versus 34%, strongly validating its dominance and justifying retention of the mechanical leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1556,
+    "cost_usd": 0.024396,
+    "wall_clock_s": 14.241464791999988
+  }
+}

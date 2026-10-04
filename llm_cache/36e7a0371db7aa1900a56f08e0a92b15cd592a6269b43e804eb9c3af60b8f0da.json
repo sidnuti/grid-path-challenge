@@ -1,0 +1,194 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-R1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Drive incremental off-take via efficient Body Wash generic demand."
+      },
+      {
+        "id": "INT-R2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale Body Wash generic spend in Mumbai with top-tier iroas."
+      },
+      {
+        "id": "INT-R3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Modest expansion for Shower Gel generic in Hyderabad given high slot penetration."
+      },
+      {
+        "id": "INT-R4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Incremental bid lift for Shower Gel generic in Pune scale market."
+      },
+      {
+        "id": "INT-L1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Assign leadership to S2, which yields higher incremental revenue per impression than incumbent S4."
+      },
+      {
+        "id": "INT-L2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Redirect brand term auction power to higher-value S2 over lower-iota S1."
+      },
+      {
+        "id": "INT-H1",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Freeze bidding and budget actions pending recovery of critical OSA deficit (0.42)."
+      },
+      {
+        "id": "INT-C1",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce bleed on weak Soap generic segment to reallocate funds toward scalable iroas."
+      },
+      {
+        "id": "INT-C2",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM",
+          "C:C-S3-MUM/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim inefficient Soap generic impressions in Mumbai to protect portfolio margin."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritize high-iroas generic demand for Body Wash and Shower Gel while preserving budget headroom through targeted cuts on weak Soap segments. Hydration alerts override scaling plans for S2-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11198,
+    "tokens_out": 9008,
+    "cost_usd": 0.00150698,
+    "wall_clock_s": 84.70718387500006
+  }
+}

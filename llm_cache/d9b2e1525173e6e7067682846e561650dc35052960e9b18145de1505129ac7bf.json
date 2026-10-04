@@ -1,0 +1,200 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocates brand impression share to S2, the highest incremental seller, replacing inefficient holder S4."
+      },
+      {
+        "id": "INT-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Moves Soap brand leadership to S2 (scale), displacing weak S1 share to capture incremental growth."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Corrects misallocated brand slot to S2, improving portfolio incrementality without exceeding budget."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD",
+          "T:HYD:K02",
+          "T:HYD:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Funds capped efficient spend in Hyderabad fund status; meets run-out threshold requirement."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Uncaps Shower Gel Mumbai spend leveraging high iroas (4.63); stays within 558 INR allowance."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Restores Body Wash Bangalore capacity after 7 run-out days; supports stable scaling."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "M:PUN:K01"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Provides liquidity for Pune Soap account; prepares for incremental generic gains."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increases bid on clearing generic cell to capture high-iota (0.48) impressions; respects <80% slot ceiling."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Targets strong mroas_up20 (6.82) for efficient incremental lift in Hyderabad."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capitalizes on high-margin generic demand in Pune while staying below the 80% slot block threshold."
+      },
+      {
+        "id": "INT-11",
+        "verb": "hold",
+        "scope": {
+          "sub_category": "Soap",
+          "keyword_type": "competition"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Freezes spend on low-incrementality competitor terms across Soap to protect portfolio DROAS floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "S2",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S2,S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Corrected prior failures by replacing invalid direct slot-1 requests with lead_market verbs, ensuring S2 captures brand dominance where incremental value is highest. Budget raises were shifted exclusively to campaigns meeting the \u22652 run-out day rule to stay within the 558 INR daily allowance. Bid expansions target clear, sub-80% slot-1 share cells with proven positive marginal returns."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11379,
+    "tokens_out": 7876,
+    "cost_usd": 0.00136525,
+    "wall_clock_s": 65.50175208300016
+  }
+}

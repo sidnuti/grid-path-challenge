@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 6.5,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 6.51 indicates a severe statistical outlier strongly exceeding baseline variance. With the own-action confound flag disabled and stable CPM/OSA scores, this reflects a genuine, isolated demand expansion rather than a bid feedback loop or pricing artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 443,
+    "tokens_out": 1215,
+    "cost_usd": 0.019554,
+    "wall_clock_s": 13.601491833000182
+  }
+}

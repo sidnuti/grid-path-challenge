@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.9,
+    "rationale": "C-S3-BLR achieves the highest leader_score (0.6183) and overwhelmingly dominates slot1_share_7d (0.90 vs 0.29 for the next candidate). This massive share advantage confirms its market leadership and validates the mechanical score despite the narrow numerical gap to C-S5-BLR."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1323,
+    "cost_usd": 0.021111,
+    "wall_clock_s": 12.041046499999993
+  }
+}

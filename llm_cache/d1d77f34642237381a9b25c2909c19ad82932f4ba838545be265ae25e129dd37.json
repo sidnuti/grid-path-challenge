@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.5,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach is +4.5 sigma, a strong flagged surge, while CPM is essentially flat (-0.95 sigma, unflagged) and OSA shows no movement. Flat CPM alongside a large reach jump points to a genuine volume/demand expansion (more eligible queries or impressions) rather than a price or competition shift, which would typically move CPM. The own-action confound flag is false, so this is unlikely to be the harness's own prior bid/budget change landing in the data. Magnitude is set at ~4.5, matching the reach z-score in baseline standard deviations."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 586,
+    "cost_usd": 0.00089271,
+    "wall_clock_s": 5.745280874999992
+  }
+}

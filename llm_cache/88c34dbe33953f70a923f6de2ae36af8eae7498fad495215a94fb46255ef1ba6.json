@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.6,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach exhibits a clear statistical surge (z=3.616) with zero deviation in CPM or OSA metrics, ruling out competitive bidding shifts or own-action confounds. The isolated demand spike points to genuine market-level interest rather than mechanical artifacts."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 442,
+    "tokens_out": 649,
+    "cost_usd": 0.011061,
+    "wall_clock_s": 8.166273082999965
+  }
+}

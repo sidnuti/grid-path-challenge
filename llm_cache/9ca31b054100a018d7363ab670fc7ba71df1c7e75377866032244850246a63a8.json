@@ -1,0 +1,267 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BUD-R-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Relieve cap for efficient fund; ran out 3d.",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ]
+      },
+      {
+        "id": "BUD-R-S2-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Fund out 6d/7d; strong iROAS 2.67.",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ]
+      },
+      {
+        "id": "BUD-R-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Fund out 7d/7d; top iROAS 4.91.",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ]
+      },
+      {
+        "id": "BUD-R-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Fund out 7d/7d; iROAS 4.54.",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ]
+      },
+      {
+        "id": "BID-R-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 6.89).",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ]
+      },
+      {
+        "id": "BID-R-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 4.58).",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ]
+      },
+      {
+        "id": "BID-R-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 5.71).",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ]
+      },
+      {
+        "id": "BID-R-S2-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 3.75).",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ]
+      },
+      {
+        "id": "BID-R-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 5.97).",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ]
+      },
+      {
+        "id": "BID-R-S2-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 3.85).",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ]
+      },
+      {
+        "id": "BID-R-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up scaling generic cell (mROAS 5.27).",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ]
+      },
+      {
+        "id": "BID-R-S2-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up scaling generic cell (mROAS 5.27).",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06"
+        ]
+      },
+      {
+        "id": "BID-R-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 6.68).",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ]
+      },
+      {
+        "id": "BID-R-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 4.58).",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ]
+      },
+      {
+        "id": "BID-R-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 7.05).",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ]
+      },
+      {
+        "id": "BID-R-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 4.58).",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ]
+      },
+      {
+        "id": "BID-R-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 6.68).",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ]
+      },
+      {
+        "id": "BID-R-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid up clearing generic cell (mROAS 3.67).",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ]
+      }
+    ],
+    "notes": "Focused purely on raising budget for fully-funded campaigns and bidding up efficiently clearing generic cells across S2 and S4 portfolios. Avoided contested leader changes and blocked cells from prior run. Headroom supports this aggressive allocation toward high-iROAS incremental growth."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24293,
+    "tokens_out": 18431,
+    "cost_usd": 0.0031248200000000004,
+    "wall_clock_s": 138.988678708
+  }
+}

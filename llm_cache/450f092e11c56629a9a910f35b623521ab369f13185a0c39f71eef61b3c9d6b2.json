@@ -1,0 +1,271 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-S2M-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Capture highly incremental competitor demand (iota=1.00, iroas=7.21) without diluting portfolio ROAS",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ]
+      },
+      {
+        "id": "RB-S2H-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Scale truly incremental competitor keyword spend (iota=1.00, iroas=8.87)",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ]
+      },
+      {
+        "id": "RB-S2B-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Drive incremental volume on scaled campaign via competitor keyword (iota=1.00, iroas=3.83)",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ]
+      },
+      {
+        "id": "RB-S4B-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K10",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Unlock incremental reach on high-efficiency competitor term (iota=1.00, iroas=5.39)",
+        "evidence_refs": [
+          "C:C-S4-BLR/K10"
+        ]
+      },
+      {
+        "id": "RB-S2D-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Funding efficient scale campaign on competitor keyword (iota=1.00, iroas=4.20)",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ]
+      },
+      {
+        "id": "RB-S4D-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Bid up generic term with strongest margin uplift potential (mroas_up20=9.99)",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ]
+      },
+      {
+        "id": "RB-S2D-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on efficient generic term with solid incremental return (mroas_up20=6.53)",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ]
+      },
+      {
+        "id": "RB-S2M-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental demand on high-performing generic keyword (mroas_up20=6.24)",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ]
+      },
+      {
+        "id": "Budg-S2M",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Remove budget ceiling to support consistent incremental scale (role=fund, ran out 7d)",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ]
+      },
+      {
+        "id": "Budg-S2H",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Align budget with efficient competitor/generic demand (role=fund, ran out 2d)",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ]
+      },
+      {
+        "id": "Budg-S4D",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Prevent stockout of spend capacity for efficient scale/fund cells (role=fund, ran out 7d)",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ]
+      },
+      {
+        "id": "Budg-S4B",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Support incremental growth in shower gel BLR market (role=fund, ran out 7d)",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ]
+      },
+      {
+        "id": "Budg-S1P",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Unblock efficient spend across soap PUN market (role=fund, ran out 7d)",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ]
+      },
+      {
+        "id": "Budg-S2D",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Maintain funding for body wash DEL incremental drivers (role=fund, ran out 7d)",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ]
+      }
+    ],
+    "notes": "Shifted allowance to high-iota competition keywords and high-mroas generic cells to maximize truly incremental off-take while preserving portfolio ROAS floor. Budget raises prevent depletion on consistently running-out fund campaigns. Dropped prior lead-market intents that exceeded daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12338,
+    "tokens_out": 11394,
+    "cost_usd": 0.00185136,
+    "wall_clock_s": 98.52371262499997
+  }
+}

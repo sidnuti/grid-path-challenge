@@ -1,0 +1,199 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "raise-s4-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture high incremental generic demand; mroas 9.51 vs goal 2.09, slot share 48%."
+      },
+      {
+        "id": "raise-s2-hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient body wash generic capture; mroas 7.08 vs goal 2.85."
+      },
+      {
+        "id": "raise-s2-hyd-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand secondary generic reach efficiently; mroas 5.90 vs goal 1.66."
+      },
+      {
+        "id": "raise-s1-pun-k03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Modest uplift on soap generic with healthy mroas 3.06; supports fund role."
+      },
+      {
+        "id": "raise-s4-pun-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Target sub-dominant slot with high mroas 6.35; drives incremental volume."
+      },
+      {
+        "id": "lead-s4-del-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift shower gel leadership from S2 to S4 where incremental score is 2.84x higher."
+      },
+      {
+        "id": "lead-s4-blr-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Realign shower gel market to S4 leader (score 2.148 vs 0.669); improves iota realization."
+      },
+      {
+        "id": "lead-s4-pun-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer shower gel dominance to S4; incumbent S2 holds weak incremental value."
+      },
+      {
+        "id": "lead-s4-hyd-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Overtake S2 in branded shower gel queries; S4 incremental score 1.525 vs 0.676."
+      },
+      {
+        "id": "lead-s1-mum-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift soap generic leadership from S5 to S1; S1 score 0.834 significantly outscores incumbent."
+      },
+      {
+        "id": "lead-s1-mum-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take generic soap market from S3 to S1; S1 score 0.964 shows clear incremental advantage."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Dropped previously rejected brand-leads and weak markets; focused budget on high mroas generic cells and contested markets where wrong_holder=True. All raises target cells with strong predicted revenue lift (>2x goal) to protect portfolio ROAS above 4.62 floor. OSA checks pass for all targeted cells."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23678,
+    "tokens_out": 18705,
+    "cost_usd": 0.00314199,
+    "wall_clock_s": 141.60189625
+  }
+}

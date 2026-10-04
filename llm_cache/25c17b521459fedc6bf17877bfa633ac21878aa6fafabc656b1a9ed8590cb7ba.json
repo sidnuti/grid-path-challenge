@@ -1,0 +1,158 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "raise-s4-hyd-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Grow incremental offtake on highly efficient SHG SKUs with available bid headroom."
+      },
+      {
+        "id": "raise-s4-pun-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture top-of-funnel incremental sales for SHG in Pune without hitting slot-1 caps."
+      },
+      {
+        "id": "raise-s2-blr-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Leverage Body Wash scale role and positive iroas to bid up generic searches."
+      },
+      {
+        "id": "lead-blr-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Align impression ownership to highest incremental-revenue SKU (S4), yielding S2 siblings."
+      },
+      {
+        "id": "lead-hyd-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift brand lead to SHG (highest iroas) over BW in Hyderabad to capture incremental volume."
+      },
+      {
+        "id": "cut-s3-del-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL/:"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Conserve allowance for efficient SKUs by trimming waste on trim-grade Soap."
+      },
+      {
+        "id": "cut-s3-mum-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM/:"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce drag on portfolio ROAS from underperforming MUM Soap campaign."
+      },
+      {
+        "id": "cut-s3-blr-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR/:"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reallocate funds away from weak BLR Soap performance."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": null,
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": null,
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": null,
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Shifted spend to high-iROAS Shower Gel and Body Wash scales while correcting major market misalignments in BLR K05 and HYD K01. Trimmed S3 budgets to protect portfolio ROAS floor; avoided restricted cells per prior rejections. All raises fall comfortably within the 300 INR daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11422,
+    "tokens_out": 9125,
+    "cost_usd": 0.0015289099999999999,
+    "wall_clock_s": 91.19244383399999
+  }
+}

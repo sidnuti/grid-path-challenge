@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10,
+    "direction": "surge",
+    "confidence": 0.88,
+    "rationale": "Reach is ~11.3 SD above baseline (far beyond noise), while CPM is essentially flat (z=0.54) \u2014 a demand-side reach surge rather than a price/competition move, which would show up in CPM. Own-action confound flag is false, so there is no signal this reflects the harness's own prior bid/budget change. Evidence points to a genuine market demand shock; magnitude capped at 10 given z > 10."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 451,
+    "cost_usd": 0.0007239600000000001,
+    "wall_clock_s": 4.659915083000016
+  }
+}

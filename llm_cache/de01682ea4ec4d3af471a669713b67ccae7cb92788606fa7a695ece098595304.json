@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.85,
+    "rationale": "Mechanical leader_score already favors C-S1-PUN. Its 7-day top-slot share (0.93) is nearly double that of C-S3-PUN (0.50), providing strong supplementary evidence to confidently uphold the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1235,
+    "cost_usd": 0.019575,
+    "wall_clock_s": 13.953796833000013
+  }
+}

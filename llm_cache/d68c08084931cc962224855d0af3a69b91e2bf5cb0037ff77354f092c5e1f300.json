@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 79.76 is massively elevated and strongly flagged, indicating an extreme departure from baseline. Absence of an own-action confound rules out self-inflected bid/budget artifacts. Combined with the mechanical surge signal and relatively unchanged CPM, this strongly points to a genuine market or demand shock calibrated to the upper bound of the 0\u201310 magnitude scale."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 446,
+    "tokens_out": 1692,
+    "cost_usd": 0.026718,
+    "wall_clock_s": 15.606311332999894
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05",
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "+20% bid lifts incremental share for Shower Gel in BLR, leveraging mroas 7.15."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06",
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "+20% bid captures margin in SG generic MUM, mroas 7.86."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K05",
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "+20% bid drives incremental off-take in SG generic PUN, mroas 8.25."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K07"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "+20% bid boosts Soap generic reach in PUN, mroas 9.12."
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Assign slot-1 leadership to S1 Soap in DEL generic, replacing S5."
+      },
+      {
+        "id": "INT-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S5 Kids Soap in DEL generic to accommodate S1 leadership."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift SG generic DEL leadership from S2 to S4."
+      },
+      {
+        "id": "INT-08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S2 BW generic DEL footprint to free impressions for S4."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Establish S4 SG generic DEL as market leader."
+      },
+      {
+        "id": "INT-10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S2 BW generic DEL to S4."
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reassign Soap generic MUM leadership from S3 to S1."
+      },
+      {
+        "id": "INT-12",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back S3 Soap generic MUM."
+      },
+      {
+        "id": "INT-13",
+        "verb": "hold",
+        "scope": {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition"
+        },
+        "evidence_refs": [
+          "K:Body Wash:competition"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Cap spend on low-incrementality competition keywords to preserve budget for generic/brand."
+      },
+      {
+        "id": "INT-14",
+        "verb": "trim",
+        "scope": {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.65,
+        "expected_effect": "Reduce bids on low-iota generic Kids Soap to curb wasteful spend."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Shift spend from inefficient contest keywords to high-mROAS generic cells in scale portfolios. Reallocate impression leadership in contested generic markets to maximize incremental revenue while preserving fund portfolios."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10908,
+    "tokens_out": 9783,
+    "cost_usd": 0.00159903,
+    "wall_clock_s": 85.29959920799999
+  }
+}

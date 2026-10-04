@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.7,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "Reach z-score of 3.72 is a strong, statistically significant surge well beyond noise. CPM is essentially flat (z=-0.49), indicating a volume-side shift (demand/impression availability expansion at stable prices) rather than a price/competition shock. The own-action confound flag is False and OSA is neutral, so the deviation is unlikely to be the harness's own prior bid/budget move or a competitor action. Evidence points to a genuine market demand shift worth reacting to; slight residual uncertainty since a demand surge would often nudge CPM upward."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 635,
+    "cost_usd": 0.00095396,
+    "wall_clock_s": 6.192112916000042
+  }
+}

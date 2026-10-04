@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.9,
+    "rationale": "The mechanical score correctly selects C-S3-HYD. This choice is strongly reinforced by its 97% slot 1 share over the past 7 days versus C-S1-HYD's 43%, indicating superior ad placement efficiency and higher conversion potential. Protecting C-S3-HYD's bid is the optimal strategy for this market."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 885,
+    "cost_usd": 0.014331,
+    "wall_clock_s": 11.87032216700004
+  }
+}

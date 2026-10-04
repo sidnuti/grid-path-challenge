@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.62,
+    "rationale": "Scores are a near-tie (0.6520 vs 0.6301), so default to the mechanical leader C-S1-DEL. S3's higher slot1_share_7d (0.93) is not clear evidence against the mechanical pick: it may indicate S3 is already saturating slot 1, so it can hold without bid protection, while C-S1-DEL's bid at 0.60 share has more headroom and matches the incrementality-weighted score."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 526,
+    "cost_usd": 0.00078256,
+    "wall_clock_s": 5.3824160419999885
+  }
+}

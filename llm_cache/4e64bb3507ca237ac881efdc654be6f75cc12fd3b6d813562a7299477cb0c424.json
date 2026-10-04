@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.9,
+    "rationale": "Both the mechanical leader score (0.2599 vs 0.2402) and the substantially higher slot1_share_7d (0.97 vs 0.43) clearly favor C-S3-HYD. The metrics align with the mechanical pick, providing strong justification to select it over the near-tie candidate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1396,
+    "cost_usd": 0.021996,
+    "wall_clock_s": 15.36152054099989
+  }
+}

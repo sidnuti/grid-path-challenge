@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.58,
+    "rationale": "Mechanical score favors C-S1-PUN (0.6220 vs 0.5915) per explicit instruction to default to the mechanical pick in near-ties. Although C-S3-PUN holds a higher slot 1 share (0.89 vs 0.69), the composite score integrates conversion, ASP, and incrementality, providing a more complete measure of incremental value for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1787,
+    "cost_usd": 0.027855,
+    "wall_clock_s": 20.861158083999953
+  }
+}

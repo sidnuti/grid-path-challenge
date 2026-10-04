@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.75,
+    "rationale": "Although C-S3-MUM holds a marginally higher mechanical leader_score (1.1439 vs 1.0836), C-S1-MUM demonstrates a substantially higher slot1_share_7d (0.94 vs 0.48). This overwhelming advantage in actual slot capture indicates stronger market control and performance stability, clearly favoring C-S1-MUM over the mechanically selected candidate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1583,
+    "cost_usd": 0.024795,
+    "wall_clock_s": 16.719562583000084
+  }
+}

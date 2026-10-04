@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.6,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "Reach z-score of 3.627 is a large, flagged deviation (~3.6 baseline sigmas), and the own-action confound flag is False, so this is unlikely to be the harness's own prior bid/budget change landing in the data. OSA z-score of 0.0 rules out an organic supply-side driver. The concurrent CPM decline (z=-2.006) alongside the reach surge is most consistent with a genuine market shift \u2014 likely a competitor bid pullback / competition softening letting this cell win more impressions at lower clearing prices, rather than pure demand heat (which would typically push CPM up). A real, reactive-worthy market signal in the surge direction."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 889,
+    "cost_usd": 0.00127146,
+    "wall_clock_s": 8.305064541999855
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-S2-GENERIC",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "R:C-S2-BLR",
+          "R:C-S2-HYD",
+          "R:C-S2-PUN",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Drive incremental volume on body wash generics across cities; portfolio ROAS supported by high iROAS (>2.5)."
+      },
+      {
+        "id": "RB-S4-GENERIC",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-HYD",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture shower gel demand efficiently; aligns with scale roles and avoids over-spend on saturated cells."
+      },
+      {
+        "id": "RB-BUDGET-S1-DEL-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S1"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Unconstrain budget for efficient soap campaigns that ran out repeatedly (7 days); preserves ROAS cushion while lifting off-take."
+      },
+      {
+        "id": "RB-BUDGET-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Lift budget cap for fund-status shower gel in Mumbai; recent run-outs support increase without breaching headroom."
+      },
+      {
+        "id": "LM-DEL-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01",
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership from S3 to S2 on Delhi brand searches; S2 has higher incremental score and avoids internal cannibalization."
+      },
+      {
+        "id": "LM-HYD-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K05",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Make S4 lead Hyderabad generic shower gel; corrects wrong holder and captures highest incremental value per impression."
+      },
+      {
+        "id": "LM-DEL-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K10",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer competition keyword leadership to S4 in Delhi; S4 demonstrates superior incremental revenue and cleared G7 thresholds."
+      },
+      {
+        "id": "LM-BLR-K09-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K09",
+          "C:C-S3-BLR/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reallocate Bangalore competition traffic to S3; resolves wrong-holder allocation without violating G7 thresholds."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Reduced bid raise sizes to small to stay within the \u20b9584 daily allowance while preserving incremental growth potential on scale-tier Body Wash and Shower Gel generics. Executed four high-confidence contested market reallocations to transfer leadership to the highest-incremental SKUs where previous assignments were suboptimal. Unconstrained budgets for top-performing Soap funds to capture residual demand without risking ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11666,
+    "tokens_out": 8331,
+    "cost_usd": 0.00143301,
+    "wall_clock_s": 86.55538825000008
+  }
+}

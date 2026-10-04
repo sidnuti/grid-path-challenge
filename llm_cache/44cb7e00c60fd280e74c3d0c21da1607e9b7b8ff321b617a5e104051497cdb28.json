@@ -1,0 +1,159 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K05",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S4 Shower Gel where incremental revenue per impression (score 1.987) beats incumbent S2 Body Wash (1.405), capturing higher-mroas volume on generic search."
+      },
+      {
+        "id": "INT-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K10",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move competitor keyword K10 lead from S2 to S4 (iota 1.00, iroas 6.45) to maximize truly incremental sales in DEL."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01",
+          "C:C-S2-HYD/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct misallocated brand keyword K01 leadership from S1 Soap (iroas 1.38) to S2 Body Wash (iroas 5.88), lifting Hyderabad baseline returns."
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K09",
+          "C:C-S1-MUM/K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer competition K09 leadership from weak S3 Soap (iroas 1.00) to efficient S1 Soap (iroas 2.26, iota 1.00) in Mumbai."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-mroas generic keyword with ample slot-1 headroom (0.62). Drives incremental off-take while staying within \u20b9300 allowance."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise bid on S4 Mumbai generic K05 (iroas 5.31, mroas_up20 6.57) which has cleared goal and room at slot-1 share 0.65."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-DEL/K10",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bid on competitor K10 (iota 1.00, iroas 6.45, slot-1 share 0.44) to capture full incremental demand in Delhi."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release budget cap on Fund-campaign that ran out 7 consecutive days. Recovers high-iota (0.76) generic and competition volume without triggering allowance breach."
+      }
+    ],
+    "stance": [],
+    "notes": "Replaced previous over-allowance and G3-blocked intents with targeted market leadership shifts to best-incrementality SKUs and conservative-sized bid/budget lifts on scale campaigns with verified headroom. Prioritized K05/K10 generic & competitor keywords on S4 (scale) where mroas_up20 and iota are strongest, keeping total delta safely under \u20b9300/day while protecting the ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12451,
+    "tokens_out": 8666,
+    "cost_usd": 0.0015001099999999998,
+    "wall_clock_s": 88.58483008300004
+  }
+}

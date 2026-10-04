@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 7.5,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "The stark divergence between a massive reach surge (z=5.88) and a significant CPM drop (z=-2.67) indicates expanded inventory supply or reduced competitive pressure, allowing higher volume at lower costs. With the own-action confound flag explicitly false, this pattern strongly points to a market price/competition shift rather than a pure demand spike or internal measurement artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1973,
+    "cost_usd": 0.030927,
+    "wall_clock_s": 20.7309485830001
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "I-MKT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shifts slot leadership to S1 which has higher incremental score (1.061) than current holder S3 (0.685)."
+      },
+      {
+        "id": "I-MKT-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Moves leadership to S1 (score 0.986) over S3 (score 0.719) in DEL generic search."
+      },
+      {
+        "id": "I-MKT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "S1 (score 0.929) displaces S5 (holder) as best incremental performer in MUM soap generic."
+      },
+      {
+        "id": "I-MKT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "S1 (score 0.735) takes lead over S3 (holder, score 0.515) in PUN generic."
+      },
+      {
+        "id": "I-MKT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "S4 (score 1.332) leads S2 (holder, score 0.846) in PUN body wash generic."
+      },
+      {
+        "id": "I-MKT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "S3 (score 0.465) corrects wrong holder S1 (score 0.365) in PUN competition."
+      },
+      {
+        "id": "I-BUD-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Funds capped efficient fund (iroas 2.96) running out daily to capture lost offtake."
+      },
+      {
+        "id": "I-BUD-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Funds capped efficient fund (iroas 2.42) running out daily in BLR."
+      },
+      {
+        "id": "I-BUD-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-PUN"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Aggressively scales hyper-efficient scale candidate (iroas 6.0) with available budget."
+      },
+      {
+        "id": "I-BUD-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Adds budget to scale role (iroas 2.33) to support growth."
+      },
+      {
+        "id": "I-BID-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-DEL/K04",
+          "C:C-S1-DEL/K07"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Increases bids on high-mroas generic cells to win additional share."
+      },
+      {
+        "id": "I-BID-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-BLR/K07"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Boosts competitiveness on efficient generic cells in BLR."
+      },
+      {
+        "id": "I-BID-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S3-DEL/K04"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Supports scale role with targeted bid lift on effective generic terms."
+      },
+      {
+        "id": "I-BID-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Maximizes high-iota shower gel sales in PUN via generic bid increase."
+      },
+      {
+        "id": "I-HLD-01",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Prevents wasteful spend on low-incrementality kids soap (iroas 1.32) running out."
+      },
+      {
+        "id": "I-HLD-02",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Holds weak kids soap campaign (iroas 0.77) to conserve portfolio efficiency."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Prioritized correcting contested markets where weaker SKUs held slot 1, significantly improving incremental allocation. Funded daily-running-out efficient brands (S1 DEL/BLR) and scaled highest-iota opportunity (S4 PUN). Targeted bid lifts restricted to generic keywords to protect portfolio ROAS while driving volume."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 22563,
+    "tokens_out": 20129,
+    "cost_usd": 0.00329366,
+    "wall_clock_s": 156.96476608300003
+  }
+}

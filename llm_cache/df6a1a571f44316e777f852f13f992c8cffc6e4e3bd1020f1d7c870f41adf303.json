@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score pick C-S2-HYD (1.9290) narrowly beats C-S4-HYD (1.8856), a ~2% gap within score noise. C-S4's higher slot1_share (0.71 vs 0.38) suggests current visibility, but share alone doesn't clearly outweigh the mechanical score's inclusion of incrementality, so the default is to protect the mechanical leader's bid."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 409,
+    "tokens_out": 1275,
+    "cost_usd": 0.00174508,
+    "wall_clock_s": 11.336121958999911
+  }
+}

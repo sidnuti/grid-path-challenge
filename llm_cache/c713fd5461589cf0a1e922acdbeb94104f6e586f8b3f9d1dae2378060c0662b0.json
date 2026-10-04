@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "Following the instruction to prefer the mechanical score in near-ties, C-S1-MUM (0.2309) is selected over C-S3-MUM (0.2125). Although C-S3-MUM demonstrates superior top-slot dominance (0.92 vs 0.56), the mechanical delta is marginal, and deferring to the primary metric reduces strategic noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1867,
+    "cost_usd": 0.029055,
+    "wall_clock_s": 17.491136208
+  }
+}

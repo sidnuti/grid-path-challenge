@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.75,
+    "confidence": 0.6,
+    "rationale": "The raise passes the mechanical guardrail (CLEARS) and is a modest +10% step, and tier B with 17 orders in 28 days provides moderate evidence, so the recommendation is not baseless. However, the shrunk realised dROAS of 1.59 sits well below the 2.22 goal (~71% of target), meaning the cell is materially underperforming on efficiency while the proposal asks for more spend per click. That gap argues for dampening rather than taking the full raise, but not for a large override: apply 0.75 of the proposed +40 INR raise (to roughly INR 420) with moderate confidence, keeping close to the mechanical recommendation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 447,
+    "tokens_out": 757,
+    "cost_usd": 0.00111164,
+    "wall_clock_s": 7.149443750000046
+  }
+}

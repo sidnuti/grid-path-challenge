@@ -1,0 +1,325 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-YIELD-S1-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Steps back S1 to stop bleeding budget on lower-iota share; prepares ground for S4 conquest."
+      },
+      {
+        "id": "INT-LEAD-S4-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secures slot 1 for S4, the highest incremental revenue driver in BLR K01."
+      },
+      {
+        "id": "INT-YIELD-S3-DEL-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reclaims DEL K01 impressions from S3 to allow S4 to lead, maximizing iota."
+      },
+      {
+        "id": "INT-LEAD-S4-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establishes S4 as primary winner in DEL K01, capturing high-value generic traffic."
+      },
+      {
+        "id": "INT-YIELD-S5-MUM-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stops low-iota kids soap from dominating adult soap searches in MUM."
+      },
+      {
+        "id": "INT-LEAD-S3-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Positions S3 Soap to win MUM K03, aligning with superior incremental return."
+      },
+      {
+        "id": "INT-YIELD-S1-HYD-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Yields HYD K01 generic space from S1 to allow S4 conquest."
+      },
+      {
+        "id": "INT-LEAD-S4-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Makes S4 Shower Gel the leader in HYD K01, improving overall portfolio iroas."
+      },
+      {
+        "id": "INT-YIELD-S1-HYD-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Steps back S1 Soap in HYD K03 to correct wrong-holder mismatch."
+      },
+      {
+        "id": "INT-LEAD-S3-HYD-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Promotes S3 Soap to slot 1 in HYD K03, the highest incremental producer."
+      },
+      {
+        "id": "INT-YIELD-S1-HYD-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Corrects HYD K04 holder mismatch, freeing impressions for S3."
+      },
+      {
+        "id": "INT-LEAD-S3-HYD-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Ensures S3 wins HYD K04 with superior incremental efficiency."
+      },
+      {
+        "id": "INT-YIELD-S2-PUN-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stops Body Wash from competing directly against higher-iota Shower Gel in PUN."
+      },
+      {
+        "id": "INT-LEAD-S4-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establishes S4 dominance in PUN K05, capturing margin-rich incrementality."
+      },
+      {
+        "id": "INT-RAISE-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": 5,
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure page-5 positioning for S4 generic search in DEL, leveraging high iota (1.0) and strong mroas_up20."
+      },
+      {
+        "id": "INT-RAISE-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": 5,
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Protects mid-tier visibility for S4 in MUM generic, preserving incremental volume."
+      },
+      {
+        "id": "INT-RAISE-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": 5,
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Maintains competitive placement for S4 in BLR generic where slot-1 share is currently low."
+      },
+      {
+        "id": "INT-RAISE-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "target_slot": 5,
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Stabilize S2 Body Wash positioning in DEL K06 to preserve baseline off-take without overbidding."
+      },
+      {
+        "id": "INT-CUT-S1-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce waste on consistently run-out hold unit (iroas 1.90); frees allowance for higher-iota allocations."
+      },
+      {
+        "id": "INT-CUT-S1-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim unprofitable BLR exposure to protect portfolio direct ROAS floor while redirecting capital."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Plan prioritizes correcting 14 misallocated contested markets where wrong holders dominated, shifting impressions to higher-iota SKUs (S4/Shower Gel & S3/Soap). Concurrently trims two perennially run-out hold campaigns (S1-DEL, S1-BLR) to safeguard the razor-thin portfolio ROAS floor (4.6276 vs 4.6258). Remaining allowance is deployed surgically via small target-slot raises on high-iota generic cells with proven clearance headroom."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11761,
+    "tokens_out": 9804,
+    "cost_usd": 0.0016273499999999998,
+    "wall_clock_s": 79.664585875
+  }
+}

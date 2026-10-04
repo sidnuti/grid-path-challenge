@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 6.36,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score is highly significant (6.356), confirming a strong surge. CPM remains statistically neutral (-0.813), which rules out a dominant price or competition-driven shift. The explicit absence of the own-action confound flag verifies this is not a mechanical artifact from the harness's recent bid or budget adjustments. The isolation of the reach spike to a genuine external supply or platform signal warrants immediate attention."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1284,
+    "cost_usd": 0.020592,
+    "wall_clock_s": 13.256616583999971
+  }
+}

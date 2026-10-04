@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.75,
+    "rationale": "The mechanical scores are nearly identical (0.1847 vs 0.1862), making the ranking noisy. C-S3-BLR breaks the tie by demonstrating a substantially higher slot1_share_7d (0.86 vs 0.60), indicating stronger ad placement stability and market alignment. This secondary signal reinforces the slight mechanical edge, justifying its selection as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1493,
+    "cost_usd": 0.023445,
+    "wall_clock_s": 16.14757687499997
+  }
+}

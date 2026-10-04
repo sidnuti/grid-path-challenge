@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.65,
+    "rationale": "Per instructions to default to the mechanical pick in near-ties, C-S3-MUM leads based on a higher leader_score (0.2985 vs 0.2730). Although C-S1-MUM achieves a substantially higher slot1_share (0.91 vs 0.68), the gap in the composite metric (conversion x ASP x incrementality) remains sufficient to maintain the mechanical assignment without clear overriding evidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2210,
+    "cost_usd": 0.0342,
+    "wall_clock_s": 19.91698233299985
+  }
+}

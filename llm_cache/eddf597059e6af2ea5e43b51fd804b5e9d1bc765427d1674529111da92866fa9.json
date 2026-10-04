@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.6,
+    "rationale": "Retain the mechanical pick: C-S2-BLR leads on leader_score (0.7896 vs 0.7383), reflecting better conversion x ASP x incrementality. C-S4-BLR's higher slot1_share_7d (0.91) shows it already dominates top-slot delivery and can hold without bid protection; this does not clearly overturn the mechanical leader despite the near-tie, hence moderate confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 1164,
+    "cost_usd": 0.00158043,
+    "wall_clock_s": 9.775497416000007
+  }
+}

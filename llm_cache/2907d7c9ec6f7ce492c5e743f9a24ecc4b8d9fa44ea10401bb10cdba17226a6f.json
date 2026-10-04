@@ -1,0 +1,277 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift lead from S1(96%) to S4(score 2.333) to capture higher incremental revenue per impression."
+      },
+      {
+        "id": "YM-DEL-K01-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S3 to avoid cannibalization while S4 leads."
+      },
+      {
+        "id": "LM-HYD-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take lead from S1(96%) to S4(score 2.243)."
+      },
+      {
+        "id": "YM-HYD-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S1 bid share to lower CPC and reallocate budget."
+      },
+      {
+        "id": "LM-MUM-K01-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder; S3(score 2.327) beats S4(94%)."
+      },
+      {
+        "id": "YM-MUM-K01-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S4 to prevent overlap."
+      },
+      {
+        "id": "LM-BLR-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take lead from S1(94%) to S4(score 2.190)."
+      },
+      {
+        "id": "YM-BLR-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield slots to S4 for better incremental yield."
+      },
+      {
+        "id": "LM-BLR-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift lead to S4(score 1.980) over S2(88%)."
+      },
+      {
+        "id": "YM-BLR-K05-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S2 share to lower cost and improve portfolio ROAS."
+      },
+      {
+        "id": "LM-MUM-K03-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder; S3(score 0.790) beats S5(88%)."
+      },
+      {
+        "id": "YM-MUM-K03-S5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back low-incrementality S5 from contested generic search."
+      },
+      {
+        "id": "RB-S4-HYD",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase visibility for high-iRoas (8.90) scale campaign; leverage 3 bid-headroom cells."
+      },
+      {
+        "id": "RB-S4-MUM",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capitalize on strong scale role (iroas 6.24) and 2 bid-headroom cells."
+      },
+      {
+        "id": "CB-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free allowance by trimming low-iRoas (0.95) trim campaign with excess reach."
+      },
+      {
+        "id": "CB-S1-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Protect portfolio ROAS floor by cutting capped+weak hold campaign."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Portfolio direct ROAS is virtually at floor (4.6276 vs 4.6258); budget cuts on low-iRoAS trims/holds free allowance to safely raise bids on high-incrementality Shower Gel scale campaigns. Contest corrections redirect spend to the highest incremental revenue-per-impression SKUs across major cities."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10845,
+    "tokens_out": 10624,
+    "cost_usd": 0.00170647,
+    "wall_clock_s": 82.403882667
+  }
+}

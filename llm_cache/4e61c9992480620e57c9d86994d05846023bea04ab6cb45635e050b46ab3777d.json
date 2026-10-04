@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.5,
+    "rationale": "Mechanical scoring identifies C-S1-MUM as the leader. With only an ~8% margin over C-S3-MUM, the ranking reflects significant noise and a near-tie condition. Although C-S3-MUM holds a slightly higher slot1 share, this difference does not conclusively override the established mechanical hierarchy. Prioritizing the mechanical pick maintains consistent bid-protection logic and avoids unnecessary flipping based on marginal volatility."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1448,
+    "cost_usd": 0.022842,
+    "wall_clock_s": 14.471284832999999
+  }
+}

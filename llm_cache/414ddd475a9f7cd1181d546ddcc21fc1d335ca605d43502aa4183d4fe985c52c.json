@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 0.8,
+    "confidence": 0.45,
+    "rationale": "Low order volume (22 over 28 days) creates high variance in realized dROAS, weakening confidence in the mechanical recommendation. A slight dampening of the proposed raise mitigates adjustment risk on noisy signals while preserving necessary competitive momentum. Limited data points cap overall certainty."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 1957,
+    "cost_usd": 0.03075,
+    "wall_clock_s": 25.146399541999926
+  }
+}

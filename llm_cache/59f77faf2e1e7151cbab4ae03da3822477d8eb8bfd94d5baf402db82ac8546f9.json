@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "Although leader_scores are closely matched (0.2413 vs 0.2268), C-S1-HYD exhibits a dominant slot1_share_7d of 0.96 compared to 0.34 for C-S3-HYD. This strong empirical visibility advantage confirms C-S1-HYD is successfully capturing the majority of high-value impressions, validating the mechanical scoring preference and warranting a confident leader pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1610,
+    "cost_usd": 0.025206,
+    "wall_clock_s": 15.175719417000039
+  }
+}

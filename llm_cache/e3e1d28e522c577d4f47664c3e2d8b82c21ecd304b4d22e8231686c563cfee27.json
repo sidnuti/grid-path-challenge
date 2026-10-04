@@ -1,0 +1,348 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-LEAD-BLR-K02-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 leadership from S3 to S1 (score 0.642 vs 0.000) to capture superior incremental revenue in contested generic market."
+      },
+      {
+        "id": "INT-LEAD-DEL-K02-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Replace S3 holder with S1 (gap 1.00) to maximize incremental yield on Soap brand queries."
+      },
+      {
+        "id": "INT-LEAD-BLR-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Elevate S4 ShG el to leader over S2 (gap 0.48, score 2.914 vs 1.525); S4 is scale/irote 4.91, ensuring strong incrementality."
+      },
+      {
+        "id": "INT-LEAD-MUM-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer leadership to S4 (score 2.040) to drive volume where it converts best; S2 holder yields disproportionately."
+      },
+      {
+        "id": "INT-LEAD-PUN-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct major misallocation (gap 0.50); S4 ShG el dominates incremental ROI vs S2 competitor targeting."
+      },
+      {
+        "id": "INT-LEAD-HYD-K03-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move leadership from S1 (trim) to S3 (fund, iroas 3.23) where incremental revenue per impression is marginally higher."
+      },
+      {
+        "id": "INT-LEAD-BLR-K01-S5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Capture highest incremental rev/impression (S5 score 1.455) despite hold role; overrides S3 holder inefficiency."
+      },
+      {
+        "id": "INT-LEAD-DEL-K01-S5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Align leadership with S5 (score 1.379) to maximize share gains on high-intent generic queries."
+      },
+      {
+        "id": "INT-LEAD-MUM-K01-S5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Shift lead to S5 (score 1.327) for optimal incremental capture in competitive Soap landscape."
+      },
+      {
+        "id": "INT-BID-HYD-K03-S5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S5-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S5-HYD/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up medium on K03 where iroas (4.81) significantly exceeds droas (3.81); strong incremental lift anticipated."
+      },
+      {
+        "id": "INT-BID-HYD-K03-S1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-HYD/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase bid on CLEARS cell with mroas_up20 (5.27) > droas (4.99); efficient marginal return."
+      },
+      {
+        "id": "INT-BID-PUN-K05-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Leverage exceptional iroas (6.05) and saturated market position to capture residual demand efficiently."
+      },
+      {
+        "id": "INT-BID-PUN-K05-S2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient spend on Body Wash generic; iroas 4.71 supports moderate expansion."
+      },
+      {
+        "id": "INT-BID-MUM-K06-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push volume on ShG el generic where iroas 4.89 and droas 9.47 indicate strong margin buffer."
+      },
+      {
+        "id": "INT-BID-BLR-K06-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Maintain momentum on high-converting generic cell; iroas 4.91 validates further bid allocation."
+      },
+      {
+        "id": "INT-BID-DEL-K06-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Defend top-share position on saturated market with robust iroas (3.95) and healthy droas (11.49)."
+      },
+      {
+        "id": "INT-BUDGET-HYD-S1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund status with 6 run-out days signals unmet efficient demand; expand capacity to absorb allowance."
+      },
+      {
+        "id": "INT-CUT-PUN-K03-S5",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S5-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce bleed on HOLD SKU with MISSES verdict and low iota (0.68); preserves portfolio margin."
+      },
+      {
+        "id": "INT-CUT-BLR-K03-S5",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S5-BLR/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim weak performance on K03 (iroas 1.99, MISSES); reallocate allowance to higher-return cells."
+      },
+      {
+        "id": "INT-CUT-DEL-K09-S3",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Stop inefficient competition spend on HOLD SKU; MISSES verdict indicates poor incremental payoff."
+      }
+    ],
+    "stance": [],
+    "notes": "Prioritized correcting contested market misallocations by directing slot-1 leadership to SKUs with demonstrably higher incremental revenue per impression, particularly elevating efficient Scales/Saturates over Trims/Holds. Paired these structural fixes with tactical bid lifts on high-iota/mroas-up20 cells and budget expansion on the verified HYD fund, while pruning low-value competition/generic spend on underperforming holds to safeguard portfolio ROAS above floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11136,
+    "tokens_out": 11454,
+    "cost_usd": 0.0018230999999999998,
+    "wall_clock_s": 106.4596120000001
+  }
+}

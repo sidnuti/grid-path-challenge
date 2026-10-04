@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.72,
+    "rationale": "Default to mechanical pick C-S3-MUM; the gap (0.1984 vs 0.1866) is modest but corroborating evidence supports it \u2014 C-S3-MUM already holds 88% of slot1 vs 55% for C-S1-MUM, making it the natural incumbent to protect while C-S1-MUM holds rather than raises."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 337,
+    "tokens_out": 574,
+    "cost_usd": 0.00084219,
+    "wall_clock_s": 5.159348499999965
+  }
+}

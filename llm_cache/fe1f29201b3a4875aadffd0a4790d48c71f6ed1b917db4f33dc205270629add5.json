@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "Mechanical leader C-S1-HYD (0.6953) narrowly edges C-S3-HYD (0.6808), and the evidence corroborates it: slot1_share_7d of 0.88 vs 0.64 suggests S1 is effectively owning the top position, so protecting its bid is consistent with observed placement strength. C-S5-HYD is well behind on both metrics and clearly a follower."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 364,
+    "tokens_out": 372,
+    "cost_usd": 0.0005996800000000001,
+    "wall_clock_s": 3.390223874999947
+  }
+}

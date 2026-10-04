@@ -1,0 +1,200 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-budget-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "restore daily delivery capacity for funded Body Wash campaign after 7 run-out days"
+      },
+      {
+        "id": "int-budget-s4-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "prevent stockouts and capture full shower gel demand in Mumbai fund"
+      },
+      {
+        "id": "int-bid-s2-blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "increase incremental generic share efficiently (mroas 6.44) without breaching slot caps"
+      },
+      {
+        "id": "int-bid-s2-hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "capture high-value generic impressions at low CPM baseline"
+      },
+      {
+        "id": "int-bid-s3-del-k03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "boost scale on clearing generic cell to support overall soap category volume"
+      },
+      {
+        "id": "int-lead-del-k01-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "install highest-incremental Shower Gel as dominant SKU, displacing lower-iroas Soap"
+      },
+      {
+        "id": "int-lead-hyd-k01-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "correct wrong holder S1, shift brand search dominance to S4 for better ROAS"
+      },
+      {
+        "id": "int-lead-mum-k10-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "place efficient Body Wash competitor bid leader at top, yielding less effective S4"
+      },
+      {
+        "id": "int-yield-mum-k10-s4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "step back Shower Gel share to accommodate higher-iota Body Wash leadership"
+      },
+      {
+        "id": "int-lead-blr-k02-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "install correct Soap leader S3 over S1 to maximize incremental brand value"
+      },
+      {
+        "id": "int-lead-pun-k02-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "redirect Pune brand dominance to efficient S3 holder"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Allocates remaining runheadroom to fund replenishment and high-iota generic raises for Scale/Fund portfolios. Corrects 6 misplaced market holders across key metros to capture incremental share efficiently while holding trivial Kids Soap spend flat."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11028,
+    "tokens_out": 10020,
+    "cost_usd": 0.0016334400000000001,
+    "wall_clock_s": 87.35042270899999
+  }
+}

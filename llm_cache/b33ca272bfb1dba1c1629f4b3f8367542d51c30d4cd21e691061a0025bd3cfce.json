@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.7,
+    "rationale": "Mechanical score slightly favors C-S1-BLR. This is strongly corroborated by its significantly higher slot1_share_7d (0.89 vs 0.48), demonstrating established dominance in this market. With no clear evidence overturning the mechanical metric, C-S1-BLR is selected as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1539,
+    "cost_usd": 0.024135,
+    "wall_clock_s": 16.226073708000058
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BD-RAISE-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funded campaign ran out budget daily; high iroas (3.92) warrants additional allocation to capture incremental volume."
+      },
+      {
+        "id": "BD-RAISE-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funded, ran out 7d; steady iroas (2.20). Add budget to sustain efficient off-take."
+      },
+      {
+        "id": "BD-RAISE-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funded, ran out 7d; strong iroas (2.56). Scale spend to meet demand."
+      },
+      {
+        "id": "BD-RAISE-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funded, ran out 7d; decent iroas (2.04). Supplement to prevent stock-outs of reach."
+      },
+      {
+        "id": "MK-LEAD-S1-DEL-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K09",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Displace S3 holder (iroas 0.79) with S1 (iroas 2.05) on competition keyword for better incremental returns."
+      },
+      {
+        "id": "MK-LEAD-S2-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift generic share from S4 to S2 (iroas 4.48 vs 3.27) to maximize ROI on high-volume searches."
+      },
+      {
+        "id": "BID-RAISE-S2-BLR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Efficient scale role (iroas 3.89) with bid headroom; push into tier-1 slots on generics (iota=1.00) to capture volume."
+      },
+      {
+        "id": "BID-RAISE-S4-MUM",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale campaign (iroas 2.56) with headroom; increase visibility on high-value generic keywords."
+      },
+      {
+        "id": "BID-RAISE-S2-PUN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Top iroas in portfolio (4.48); bid up to secure premium placement on generic terms."
+      },
+      {
+        "id": "HOLDSLOW-HYD-DUPE",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "OSA 0.42 (<60%) prohibits increases; halt bidding/budget to avoid wasted spend and protect ROAS floor."
+      },
+      {
+        "id": "HOLD-WEAK-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Campaign ran out budget but shows weak incrementality (iroas 1.79); restrict spend while monitoring recovery."
+      }
+    ],
+    "stance": [],
+    "notes": "Plan pivots from previously rejected brand-keyword leads to high-incrementality generic/competition opportunities and targeted budget boosts on consistently out-of-stock funded campaigns. Maintains strict adherence to OSA guardrails and portfolio ROAS floor by capping weak/low-availability spend."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11301,
+    "tokens_out": 8628,
+    "cost_usd": 0.00146067,
+    "wall_clock_s": 67.83025475
+  }
+}

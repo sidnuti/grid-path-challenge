@@ -1,0 +1,346 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Aligns market leadership to highest incremental value SKU in BLR generic."
+      },
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shifts brand leadership to most efficient Body Wash SKU in HYD."
+      },
+      {
+        "id": "LM-MUM-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Corrects misaligned holder in MUM brand search to best performer."
+      },
+      {
+        "id": "LM-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Establishes Shower Gel dominance in MUM generic market."
+      },
+      {
+        "id": "LM-MUM-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secures competitor keyword leadership for top Shower Gel ROI."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Moves PUN brand volume to highest incremental Body Wash SKU."
+      },
+      {
+        "id": "LM-PUN-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Captures PUN brand second keyword with Soap leader."
+      },
+      {
+        "id": "SC-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalizes on scale status and high mROAS up-lift for Body Wash."
+      },
+      {
+        "id": "SC-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases efficient generic capture for Body Wash."
+      },
+      {
+        "id": "SC-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bids up high-value generic term in efficient Market."
+      },
+      {
+        "id": "SC-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S4-BLR/K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverages scale role for Shower Gel generic growth."
+      },
+      {
+        "id": "SC-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S4-BLR/K06",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expands efficient Shower Gel presence in BLR."
+      },
+      {
+        "id": "SC-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S4-HYD/K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drives incremental revenue via efficient generic bid increase."
+      },
+      {
+        "id": "SC-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S4-HYD/K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grows Shower Gel sales in HYD efficiently."
+      },
+      {
+        "id": "SC-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-HYD/K05",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Utilizes scale capacity in HYD with strong mROAS."
+      },
+      {
+        "id": "SC-S1-PUN-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S1-PUN/K03",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increases generic soap capture in efficient scale portfolio."
+      },
+      {
+        "id": "SC-S1-MUM-K04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S1-MUM/K04",
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bids up clearing generic cell in scalable Market."
+      },
+      {
+        "id": "BU-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Funds capped efficient Soap account in HYD."
+      },
+      {
+        "id": "BU-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Supports funded Shower Gel demand in MUM."
+      },
+      {
+        "id": "BU-S2-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Prevents stockout impact on efficient Body Wash bids."
+      },
+      {
+        "id": "CU-S3-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Recaptures low-value spend from trim Soap sub-category."
+      },
+      {
+        "id": "CU-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trims weak Soap performance impacting portfolio ROAS."
+      },
+      {
+        "id": "CU-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduces loss-making generic exposure in Soap."
+      }
+    ],
+    "stance": [],
+    "notes": "Corrected market holder mismatches by leading the highest incremental SKU in each contested city/keyword pair. Aggressively funded efficient scale and fund portfolios while trimming low-ROAS trim segments to protect the portfolio floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23777,
+    "tokens_out": 18604,
+    "cost_usd": 0.00313183,
+    "wall_clock_s": 173.3416044170001
+  }
+}

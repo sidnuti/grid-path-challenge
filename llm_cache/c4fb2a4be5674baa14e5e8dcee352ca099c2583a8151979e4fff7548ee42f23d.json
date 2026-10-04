@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.9,
+    "rationale": "The mechanical score favors C-S1-MUM, and its significantly higher slot1_share_7d (0.89 vs 0.49) confirms it has secured stronger ad placement and market traction. Since the operational evidence aligns with and reinforces the mechanical calculation, there is no justification to override it."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1417,
+    "cost_usd": 0.022305,
+    "wall_clock_s": 15.014816333999988
+  }
+}

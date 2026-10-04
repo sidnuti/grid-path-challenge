@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical scores are virtually tied (diff 0.0002), falling within expected noise. However, C-S1-HYD demonstrates substantially stronger execution with a 0.96 slot1 share versus 0.36 for C-S3-HYD. Retaining the mechanical leader preserves established auction dominance, minimizes impression displacement risk, and leverages the incumbent's proven conversion efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1283,
+    "cost_usd": 0.020301,
+    "wall_clock_s": 12.664448708999998
+  }
+}

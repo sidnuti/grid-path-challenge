@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S5-PUN",
+    "confidence": 0.8,
+    "rationale": "The mechanical pick C-S5-PUN leads with a score of 0.6133 versus a near-tie at 0.5663 for C-S3-PUN. Despite the small numerical gap, slot1_share_7d heavily favors C-S5-PUN (0.96 vs 0.21), providing clear corroborating evidence that the mechanical score accurately reflects its dominant market position. No evidence contradicts the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1677,
+    "cost_usd": 0.026421,
+    "wall_clock_s": 18.080416332999988
+  }
+}

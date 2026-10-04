@@ -1,0 +1,172 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "RS2_DEL_MUM_HYD_K05_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": [
+            "C-S2-DEL",
+            "C-S2-MUM",
+            "C-S2-HYD"
+          ],
+          "keyword_id": [
+            "K05",
+            "K06"
+          ]
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "K:Body Wash:generic",
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase incremental revenue on high-iRoAS Body Wash generic queries where slot-1 share is below the 80% block threshold."
+      },
+      {
+        "id": "RS2_BLR_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": [
+            "C-S2-BLR"
+          ],
+          "keyword_id": [
+            "K06"
+          ]
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up generic capacity in BLR while respecting the 80% slot-1 guardrail on K05."
+      },
+      {
+        "id": "RS4_MUM_BLR_K05_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": [
+            "C-S4-MUM",
+            "C-S4-BLR"
+          ],
+          "keyword_id": [
+            "K05",
+            "K06"
+          ]
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage fund status and strong generic iRoAS (4.22) to capture incremental share without hitting slot-constraints."
+      },
+      {
+        "id": "BRZ_FUNDCAP_RELEASE",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": [
+            "C-S4-DEL",
+            "C-S4-HYD",
+            "C-S3-HYD"
+          ]
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-HYD",
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Remove daily caps on fund-role campaigns that experienced run-outs, preserving incremental sales momentum into the final run."
+      },
+      {
+        "id": "CB_SOAP_COMP_PRUNE",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": [
+            "C-S1-DEL",
+            "C-S1-MUM",
+            "C-S1-BLR",
+            "C-S1-HYD",
+            "C-S1-PUN",
+            "C-S3-DEL",
+            "C-S3-MUM",
+            "C-S3-BLR",
+            "C-S3-HYD",
+            "C-S3-PUN"
+          ],
+          "keyword_id": [
+            "K09",
+            "K10"
+          ]
+        },
+        "size": "large",
+        "evidence_refs": [
+          "K:Soap:competition",
+          "DROAS_floor"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate severe low-iRoAS (0.22) Soap competition waste to protect portfolio direct ROAS above the 4.17 floor and reallocate allowance."
+      },
+      {
+        "id": "HL_KIDS_SOAP_RUNWAY",
+        "verb": "hold",
+        "scope": {
+          "sku_id": [
+            "S5"
+          ]
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Freeze lowest-iRoAS Kids Soap activity to conserve budget headroom for top-tier Body Wash and Shower Gel performers."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Concentrates remaining allowance on high-incrementality Body Wash and Shower Gel categories while aggressively pruning low-value Soap competition bids to guarantee the direct ROAS floor. Contest reshuffles are avoided given the terminal run timing and near-tie marginal gains."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11212,
+    "tokens_out": 9090,
+    "cost_usd": 0.00151806,
+    "wall_clock_s": 82.06462058400007
+  }
+}

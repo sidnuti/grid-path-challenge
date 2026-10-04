@@ -1,0 +1,290 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reallocate shower gel impressions from S3 to efficient S4 on DEL brand searches."
+      },
+      {
+        "id": "INT-02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S3 soap on DEL brand to avoid cannibalization and protect S4 offtake."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift HYD brand impressions to high-iota S4 shower gel over S2 body wash."
+      },
+      {
+        "id": "INT-04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S2 HYD spend on brand queries to favor S4 incrementality."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture more DEL shower gel brand volume; slot share is low (16%) and mroas strong."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up competition keywords on high-iota (1.0) HYD shower gel queries."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand reach on PUN generic showers where slot share is 56% and mroas exceeds threshold."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-HYD/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund scale-position HYD soap generic searches with healthy incremental lift."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Alleviate daily stock-outs for top-performing DEL shower gel campaign; consumes ~230 allowance."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent MUM shower gel fund-runout; costs ~95 allowance."
+      },
+      {
+        "id": "INT-11",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim BLR soap budget to reclaim allowance; lower iroas compared to S4 shower gel."
+      },
+      {
+        "id": "INT-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Take PUN brand leadership for S4 shower gel, displacing lower-iota S1 soap."
+      },
+      {
+        "id": "INT-13",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S1 PUN soap brand bidding to reduce overlap and focus on incremental S4 wins."
+      },
+      {
+        "id": "INT-14",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure DEL generic search leadership for S1 soap where margin allows, displacing S3."
+      },
+      {
+        "id": "INT-15",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S3 DEL generic exposure on overlapping queries."
+      },
+      {
+        "id": "INT-16",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead DEL competition segment for S1 soap, freeing S3 for other matchups."
+      },
+      {
+        "id": "INT-17",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S3 DEL competition shares to improve portfolio efficiency."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S3",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritized S4 shower gel across key cities via budget lifts and contested-market reallocation to maximize incremental offtake within the \u20b9300/day allowance. Yielded lower-iota siblings (S3, S1, S2) on specific DEL/HYD/PUN keyword pairings to suppress internal cannibalization without sacrificing coverage."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11559,
+    "tokens_out": 11992,
+    "cost_usd": 0.00190573,
+    "wall_clock_s": 103.89788487499999
+  }
+}

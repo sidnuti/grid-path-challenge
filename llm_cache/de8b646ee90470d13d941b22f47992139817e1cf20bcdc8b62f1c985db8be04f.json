@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.55,
+    "rationale": "Mechanical scoring gives C-S3-HYD a marginal edge (0.7636 vs 0.7512). Given the explicit directive to prefer the mechanical pick in near-ties with noisy scores, we designate it as the leader. While C-S1-HYD demonstrates superior slot dominance (0.85 vs 0.56), the mechanical metric serves as the primary tiebreaker here."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1966,
+    "cost_usd": 0.030546,
+    "wall_clock_s": 19.087337332999994
+  }
+}

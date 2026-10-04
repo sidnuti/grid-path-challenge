@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.65,
+    "rationale": "The mechanical score favors C-S2-PUN by a marginal ~1.6%, indicating high noise. However, C-S4-PUN holds a dominant 0.92 slot1 share versus 0.61 for its sibling, providing clear evidence of superior market positioning and impression capture. This substantial difference in slot share outweighs the negligible scoring gap, making C-S4-PUN the more stable and justified leader choice."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1833,
+    "cost_usd": 0.028545,
+    "wall_clock_s": 18.090627625000025
+  }
+}

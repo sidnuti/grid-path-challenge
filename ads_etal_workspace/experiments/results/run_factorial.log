@@ -1,0 +1,7 @@
+code hash 63196db22b74; 6 simulations, 4 workers
+[1/6] ('no_gate_no_cuts', 42, 'dev', 34.4)
+[2/6] ('no_gate_no_cuts', 23, 'dev', 34.8)
+[3/6] ('no_gate_no_cuts', 11, 'dev', 35.3)
+[4/6] ('no_gate_no_cuts', 7, 'dev', 35.7)
+[5/6] ('no_gate_no_cuts', 101, 'dev', 29.0)
+[6/6] ('no_gate_no_cuts', 202, 'dev', 29.6)

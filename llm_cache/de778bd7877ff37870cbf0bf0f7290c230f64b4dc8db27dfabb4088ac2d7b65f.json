@@ -1,0 +1,311 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "raise-s4-del-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental Shower Gel competitive demand"
+      },
+      {
+        "id": "raise-s4-mum-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand share on high-incrementality generic search"
+      },
+      {
+        "id": "raise-s4-mum-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Win competitive impressions efficiently"
+      },
+      {
+        "id": "raise-s4-blr-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure incremental share in BLR comp segment"
+      },
+      {
+        "id": "raise-s4-hyd-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase visibility on competitor terms"
+      },
+      {
+        "id": "raise-s4-pun-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow off-take via comp keywords"
+      },
+      {
+        "id": "raise-s2-mum-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage high Body Wash generic iroas"
+      },
+      {
+        "id": "raise-s2-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Gain incremental reach on generic term"
+      },
+      {
+        "id": "raise-s2-blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient generic spend"
+      },
+      {
+        "id": "raise-s2-blr-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental body wash demand"
+      },
+      {
+        "id": "raise-s2-hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive off-take on high-iota generic"
+      },
+      {
+        "id": "raise-s2-hyd-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase winning rate on generic query"
+      },
+      {
+        "id": "raise-s2-pun-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand presence on generic search"
+      },
+      {
+        "id": "cut-s1-del-k09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-DEL/K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce waste on low-iota competition keyword"
+      },
+      {
+        "id": "cut-s1-mum-k09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-MUM/K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stop funding unprofitable comp impressions"
+      },
+      {
+        "id": "cut-s3-del-k09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Preserve portfolio ROAS by trimming weak comp spend"
+      },
+      {
+        "id": "cut-s5-del-k03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S5-DEL/K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate negative-iota generic drain"
+      },
+      {
+        "id": "cut-s5-mum-k03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S5-MUM/K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free budget from low-value kids soap generics"
+      },
+      {
+        "id": "cut-s1-del-k04",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-DEL/K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct MISSES-tier overspend on generic"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Budget raises omitted due to <2 run-out days; bid adjustments optimize remaining headroom in high-iota Shower Gel and Body Wash segments while safeguarding portfolio ROAS floor through targeted cuts on low-incrementality soap/kids competition and generic keywords."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11750,
+    "tokens_out": 10609,
+    "cost_usd": 0.00173167,
+    "wall_clock_s": 83.86803345900012
+  }
+}

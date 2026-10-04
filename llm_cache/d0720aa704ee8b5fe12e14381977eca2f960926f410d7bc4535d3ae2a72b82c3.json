@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical score slightly favors C-S3-MUM (0.7253 vs 0.6965). While the narrow margin suggests noise, the higher mechanical pick is retained per instructions, supported by C-S3-MUM's stronger market position evidenced by a higher slot1_share_7d (0.87 vs 0.65)."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1413,
+    "cost_usd": 0.022245,
+    "wall_clock_s": 14.776092209000126
+  }
+}

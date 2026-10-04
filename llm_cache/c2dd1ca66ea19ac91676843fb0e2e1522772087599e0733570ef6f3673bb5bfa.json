@@ -1,0 +1,217 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "BGT-R1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "expected_effect": "Prevent budget exhaustion for efficient fund market; sustain Soap off-take."
+      },
+      {
+        "id": "BGT-R2-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "expected_effect": "Fund high-iRoA Body Wash spend; maintain BLR volume."
+      },
+      {
+        "id": "BID-S4-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S4-MUM",
+          "R:S4-BLR",
+          "R:S4-PUN",
+          "C:S4-MUM/K05",
+          "C:S4-BLR/K05"
+        ],
+        "expected_effect": "Capture incremental demand in scale cities; leverage strong Shower Gel iroas (>5)."
+      },
+      {
+        "id": "BID-S2-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:S2-DEL",
+          "R:S2-BLR",
+          "R:S2-HYD",
+          "C:S2-DEL/K05",
+          "C:S2-BLR/K05"
+        ],
+        "expected_effect": "Fund/Scale efficient Body Wash spend; expand footprint in competitive generic space."
+      },
+      {
+        "id": "LD-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "expected_effect": "Reassign ownership to S4 (score 2.134) from S2 to maximize incremental revenue per impression."
+      },
+      {
+        "id": "LD-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "expected_effect": "Reassign ownership to S4 (score 3.102) from S2 for superior incrementality."
+      },
+      {
+        "id": "LD-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "expected_effect": "Reassign ownership to S2 (score 2.095) from S4 to capture higher incremental value."
+      },
+      {
+        "id": "LD-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "expected_effect": "Reassign ownership to S4 (score 2.064) from S2 to optimize delivery."
+      },
+      {
+        "id": "LD-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Reassign ownership to S2 (score 1.929) from S1 for better incremental returns."
+      },
+      {
+        "id": "LD-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "expected_effect": "Reassign ownership to S4 (score 3.151) from S2 to secure premium placement."
+      },
+      {
+        "id": "CUT-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "expected_effect": "Reduce low-iRoA Soap spend to protect portfolio ROAS floor."
+      },
+      {
+        "id": "CUT-S3-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "expected_effect": "Reduce weak Soap spend to reallocate allowance to efficient channels."
+      },
+      {
+        "id": "CUT-S5-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "expected_effect": "Trim low-iRoA Kids Soap exposure; improve blended ROAS."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Portfolio sits precisely at the ROAS floor; targeted cuts to weak trim markets protect margin while funded scale moves utilize the daily allowance efficiently. Market leadership shifts realign high-city x keyword combinations to SKUs with demonstrably higher incremental revenue per impression."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10825,
+    "tokens_out": 9609,
+    "cost_usd": 0.0015739200000000001,
+    "wall_clock_s": 94.62600062499996
+  }
+}

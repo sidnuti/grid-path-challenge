@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.8,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach shows a highly significant surge (z=3.796, flagged) while CPM remains moderately elevated but unflagged (z=2.304), and the own-action confound is absent. This pattern strongly indicates a genuine demand-side shift driving impression volume upward without proportional price inflation, ruling out artifact from prior bids."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1984,
+    "cost_usd": 0.031092,
+    "wall_clock_s": 18.051972416999888
+  }
+}

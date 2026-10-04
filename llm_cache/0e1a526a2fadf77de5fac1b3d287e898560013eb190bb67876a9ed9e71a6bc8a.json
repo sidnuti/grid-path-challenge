@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.6,
+    "rationale": "The mechanical scores are in a near-tie (0.3003 vs 0.2755), introducing noise into a purely algorithmic pick. However, C-S1-HYD shows a substantially higher slot 1 share (0.94 vs 0.59), indicating stronger real-world market dominance and more consistent capture of premium ad placements. This clear positional advantage justifies overriding the slight mechanical deficit and treating C-S1-HYD as the market leader for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 2162,
+    "cost_usd": 0.033486,
+    "wall_clock_s": 23.53445775
+  }
+}

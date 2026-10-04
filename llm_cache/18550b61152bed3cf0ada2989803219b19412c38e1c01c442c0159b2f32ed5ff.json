@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.55,
+    "rationale": "Mechanical scoring slightly favors C-S2-PUN (2.0005 vs 1.9772). Although C-S4-PUN holds a substantially higher slot1_share_7d (0.88 vs 0.62), indicating stronger impression positioning, the narrow score differential and inherent measurement noise support retaining the mechanical leader. Following the directive to default to the mechanical pick in near-ties absent overwhelming contrary evidence, C-S2-PUN remains the recommended leader for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1926,
+    "cost_usd": 0.02994,
+    "wall_clock_s": 16.903468125000018
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.9,
+    "rationale": "Mechanical leader_score selected C-S3-BLR with 1.1814 over a near-tie candidate C-S2-BLR at 1.1492. C-S3-BLR\u2019s slot1_share_7d (0.89) vastly exceeds C-S2-BLR\u2019s (0.23), strongly validating the mechanical score and justifying protection of C-S3-BLR's bid."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1224,
+    "cost_usd": 0.019626,
+    "wall_clock_s": 10.998926166999922
+  }
+}

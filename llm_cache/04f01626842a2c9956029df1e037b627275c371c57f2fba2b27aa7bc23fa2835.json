@@ -1,0 +1,211 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Maximize budget for highly efficient scale/fund shower gel campaign in Mumbai within daily allowance limits."
+      },
+      {
+        "id": "INT-02",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce spend on low-incrementality kids soap in Mumbai to reallocate funds to higher-ROI channels."
+      },
+      {
+        "id": "INT-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim budget on kids soap Hyderabad due to trim role and low iroas."
+      },
+      {
+        "id": "INT-04",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim budget on kids soap Pune due to trim role and low iroas."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-mroas generic shower gel search volume in Delhi with available bid headroom."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient generic shower gel bidding in Bangalore."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase competitive position for generic body wash in Bangalore."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up generic body wash in Pune where mroas significantly exceeds baseline."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage strong mroas (7.86) and bid headroom to grow generic body wash volume in Hyderabad."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-BLR/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Utilize funded status and bid headroom to capture generic soap demand in Bangalore."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Reallocated budget from low-incrementality Kids Soap (trim) campaigns to high-scale Shower Gel and Body Wash campaigns. Bid increases target generic keywords with mroas substantially above the portfolio median, preserving the direct ROAS floor while expanding incremental reach. Daily budget raise for Mumbai Shower Gel remains within the \u20b9300 allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10933,
+    "tokens_out": 10300,
+    "cost_usd": 0.00166699,
+    "wall_clock_s": 102.837080125
+  }
+}

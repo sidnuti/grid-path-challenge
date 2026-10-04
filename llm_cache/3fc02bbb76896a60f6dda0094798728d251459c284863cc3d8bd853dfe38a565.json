@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.6,
+    "rationale": "Per instructions, the mechanical leader_score prefers C-S4-PUN (0.6591 vs 0.5941). While C-S2-PUN shows a substantially higher slot share (0.94 vs 0.59), suggesting stronger impression dominance, the mechanical metric combines conversion, ASP, and incrementality which directly targets profitability. Without explicit evidence that C-S2's efficiency vastly outperforms C-S4 despite the lower score, adhering to the mechanical pick is advised."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2027,
+    "cost_usd": 0.031455,
+    "wall_clock_s": 21.69996362500001
+  }
+}

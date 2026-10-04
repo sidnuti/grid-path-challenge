@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.5,
+    "rationale": "Mechanical leader_score places a narrow lead on C-S1-DEL (0.2942 vs 0.2660). Despite C-S3-DEL's stronger historical slot 1 presence (0.91 vs 0.54), the scores represent a near-tie where the mechanical calculation takes precedence per instructions. Defaulting to the mechanically ranked leader ensures consistency while acknowledging the competitive dynamic."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 2379,
+    "cost_usd": 0.036732,
+    "wall_clock_s": 22.271371375
+  }
+}

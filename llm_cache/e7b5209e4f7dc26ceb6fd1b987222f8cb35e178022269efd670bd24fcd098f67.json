@@ -1,0 +1,156 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "fund role unblocked; drive incremental soap off-take"
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "fund role unblocked; drive incremental soap off-take"
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "fund role unblocked; steady incremental lift"
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "fund role supported; preserve body wash momentum"
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "high iroas generic; secure additional impressions"
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "high iroas generic; secure additional impressions"
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "high iroas generic; secure additional impressions"
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "high iroas generic; secure additional impressions"
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "highest mroas_up20 cell; aggressive incremental capture"
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "surplus demand capture on brand term with exceptional margin"
+      }
+    ],
+    "stance": [],
+    "notes": "Replaced rejected high-slot-share bid raises with targeted budget lifts for capped fund campaigns and incremental bid increments on unsaturated, high-iota generic cells. All intents bypass G3 guardrails and respect OSA thresholds, positioning spend for maximum off-take before the final runs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12297,
+    "tokens_out": 8541,
+    "cost_usd": 0.0014792399999999997,
+    "wall_clock_s": 66.44143837499996
+  }
+}

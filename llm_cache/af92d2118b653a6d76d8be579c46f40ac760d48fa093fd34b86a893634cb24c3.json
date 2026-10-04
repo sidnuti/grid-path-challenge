@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "The mechanical leader_score already favors C-S1-MUM (0.3735 vs 0.3401). This selection is strongly corroborated by the performance metric slot1_share_7d, where C-S1-MUM holds a dominant 0.92 compared to C-S3-MUM's 0.66, indicating significantly better ad position capture and market control for this SKU/keyword pair. There is no evidence to override the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 754,
+    "cost_usd": 0.01236,
+    "wall_clock_s": 7.511152999999922
+  }
+}

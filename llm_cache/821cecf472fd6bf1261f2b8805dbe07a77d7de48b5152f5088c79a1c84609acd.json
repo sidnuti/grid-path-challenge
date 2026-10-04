@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.8,
+    "rationale": "Mechanical scores are nearly identical (1.4501 vs 1.4454), confirming high noise as noted. C-S4-PUN holds both the marginally higher mechanical score and significantly greater slot1_share_7d (0.87 vs 0.60), indicating stronger established placement and market control. Selecting it as leader leverages existing efficiency and minimizes internal bidding conflict."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1504,
+    "cost_usd": 0.02361,
+    "wall_clock_s": 14.455113499999982
+  }
+}

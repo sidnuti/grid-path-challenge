@@ -1,0 +1,153 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-c3-del-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Free allowance by reducing weak trim spend (iroas 2.62); safeguards portfolio ROAS."
+      },
+      {
+        "id": "cut-c3-mum-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Free allowance; C-S3-MUM is trim with iroas 2.94."
+      },
+      {
+        "id": "cut-c2-mum-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Free allowance; C-S2-MUM is trim with lowest iroas (2.04)."
+      },
+      {
+        "id": "raise-c1-del-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Capture high-volume demand; fund role ran out budget 7d, iroas 4.13."
+      },
+      {
+        "id": "raise-c4-blr-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Support efficient fund (iroas 5.67) consistently running out 5d."
+      },
+      {
+        "id": "raise-c2-del-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund high-iota body wash demand; ran out 5d, iroas 4.99."
+      },
+      {
+        "id": "raise-c1-hyd-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure remaining HYD demand; ran out 7d, iroas 4.27."
+      },
+      {
+        "id": "raise-c4-del-k06-bid",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase incremental spend on high-iota (0.80) high-iroas (7.83) generic cell."
+      },
+      {
+        "id": "raise-c4-mum-k06-bid",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capitalize on top-tier iroas (8.94) and high iota (0.80) in MUM shower gel."
+      },
+      {
+        "id": "raise-c5-hyd-k01-bid",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S5-HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S5-HYD/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-iroas (9.38) brand demand in HYD kids soap."
+      }
+    ],
+    "stance": [],
+    "notes": "Cut weak trim campaigns to liberate allowance, redirecting capital to efficient fund campaigns that consistently exhaust budget and scale cells with superior incremental returns. Bid raises target specific high-iota, high-iroas keywords to maximize additive offtake while keeping portfolio ROAS securely above the floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12090,
+    "tokens_out": 10482,
+    "cost_usd": 0.0017253600000000002,
+    "wall_clock_s": 84.314922209
+  }
+}

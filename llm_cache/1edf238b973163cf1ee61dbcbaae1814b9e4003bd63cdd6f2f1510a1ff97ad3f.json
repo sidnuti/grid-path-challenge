@@ -1,0 +1,307 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-budget-blr-kids",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce bleed from lowest portfolio iROAS (0.76); preserves headroom for higher-value SKUs."
+      },
+      {
+        "id": "cut-budget-del-kids",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim weak Kids Soap segment (iroas 1.30); minimizes organic displacement risk."
+      },
+      {
+        "id": "cut-budget-mum-soap",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Downsize trim-rated Soap campaign (iroas 1.55); protects overall ROAS floor."
+      },
+      {
+        "id": "cut-budget-blr-soap-sat",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Release capacity from hold-rated Soap variant (iroas 1.69) to reserve budget."
+      },
+      {
+        "id": "cut-budget-hyd-soap",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Cap expenditure on trim-rated Soap (iroas 1.96); maintains portfolio efficiency."
+      },
+      {
+        "id": "cut-budget-mum-bw",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Hold-rated Body Wash segment (iroas 1.77) downsized to conserve spend allowance."
+      },
+      {
+        "id": "hold-fund-del-sg",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S4-DEL/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Freeze high-iROAS fund (5.00) to prevent unauthorized raises given strict daily allowance."
+      },
+      {
+        "id": "hold-fund-mum-sg",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S4-MUM/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Preserve capital for top-tier Shower Gel performance (iroas 5.37) without overshooting budget."
+      },
+      {
+        "id": "hold-fund-del-soap",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-DEL/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Maintain stable fund position (iroas 2.46); avoids disruptive bid moves when allowance is exhausted."
+      },
+      {
+        "id": "hold-fund-blr-soap",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-BLR/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lock fund budget (iroas 2.03) to sustain baseline volume while reallocating elsewhere."
+      },
+      {
+        "id": "lead-s1-blr-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct misplaced holder; shifts impressions to highest incremental revenue SKU (score 0.893) zero marginal cost."
+      },
+      {
+        "id": "lead-s1-del-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect generic search share to S1 (score 0.811) improving click-to-order path efficiency."
+      },
+      {
+        "id": "lead-s1-del-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Yield S3 lead; install S1 (score 0.846) as primary receiver for DEL generic traffic."
+      },
+      {
+        "id": "lead-s1-del-k09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate competition keyword share to S1 (score 0.356) over S3 to strengthen defensive positioning."
+      },
+      {
+        "id": "lead-s1-mum-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Overturn S5 holder; promote S1 (score 0.788) capturing superior incremental yield."
+      },
+      {
+        "id": "lead-s1-mum-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Replace S3 with S1 leader (score 0.997) to maximize generic conversion rates in MUM."
+      },
+      {
+        "id": "lead-s1-pun-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct market assignment; drive PUN generic traffic to S1 (score 0.606) for better ROI."
+      },
+      {
+        "id": "lead-s4-pun-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 competitor slot; elevate S4 Shower Gel (score 0.790) to capture premium intent traffic."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Tight daily allowance (\u20b974) forces capital preservation through targeted cuts and freezes on low-iROAS segments, while market-leadership shifts reallocate existing impression flow to highest-yielding SKUs at near-zero marginal cost. Portfolio ROAS floor is protected by halting budget exhaustion on fund variants and pruning weak Kids Soap/Soap competition exposure."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11325,
+    "tokens_out": 7467,
+    "cost_usd": 0.00131046,
+    "wall_clock_s": 70.02401458299994
+  }
+}

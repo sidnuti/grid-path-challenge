@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.65,
+    "rationale": "The mechanical scores are a near-tie (0.2727 vs 0.2549, within noise), so the tie-break signal matters: C-S3-MUM holds 92% of slot-1 impressions over 7d versus 57% for C-S1-MUM, making it the de facto top-slot incumbent whose bid actually secures the market's visibility. Protecting C-S3-MUM's bid preserves the dominant position, while C-S1-MUM holds without raising."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 1340,
+    "cost_usd": 0.00180043,
+    "wall_clock_s": 11.488237999999996
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.62,
+    "rationale": "Mechanical leader_score marginally favours C-S3-PUN (0.8190 vs 0.8159) and the supporting evidence does not clearly favour C-S1-PUN: C-S3-PUN already holds a dominant 0.90 slot1 share versus 0.53, so protecting its bid defends the established market position. Near-tie in score keeps confidence moderate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 388,
+    "cost_usd": 0.0006104299999999999,
+    "wall_clock_s": 3.90862370800005
+  }
+}

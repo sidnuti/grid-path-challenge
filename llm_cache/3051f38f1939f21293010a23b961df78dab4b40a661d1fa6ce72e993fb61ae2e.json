@@ -1,0 +1,290 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Cap consistent daily runout on highest-iroas fund campaign"
+      },
+      {
+        "id": "int2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Close budget gap in scalable body wash market"
+      },
+      {
+        "id": "int3",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "expected_effect": "Free allowance by reducing underperforming trim spend"
+      },
+      {
+        "id": "int4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Win incremental competitor auctions in Delhi"
+      },
+      {
+        "id": "int5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental shower gel competitor demand in Mumbai"
+      },
+      {
+        "id": "int6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift impression share to best incremental SKU S2 on generic keyword"
+      },
+      {
+        "id": "int7",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back low-incrementality kids soap from generic keyword"
+      },
+      {
+        "id": "int8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Take lead on shower gel generic keyword in Delhi"
+      },
+      {
+        "id": "int9",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back body wash to allow shower gel leadership"
+      },
+      {
+        "id": "int10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Lead shower gel on generic keyword in Mumbai"
+      },
+      {
+        "id": "int11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Yield generic keyword share to shower gel"
+      },
+      {
+        "id": "int12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Lead shower gel on generic keyword in Pune"
+      },
+      {
+        "id": "int13",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Yield generic keyword share to shower gel"
+      },
+      {
+        "id": "int14",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Win competitor keyword auctions in Mumbai"
+      },
+      {
+        "id": "int15",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back competitor keyword share in Mumbai"
+      },
+      {
+        "id": "int16",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Win competitor keyword auctions in Pune"
+      },
+      {
+        "id": "int17",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back competitor keyword share in Pune"
+      },
+      {
+        "id": "int18",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "expected_effect": "Reduce brand displacement spend in Delhi"
+      },
+      {
+        "id": "int19",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "expected_effect": "Reduce brand displacement spend in Mumbai"
+      },
+      {
+        "id": "int20",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Correct market holder on soap generic keyword in Bangalore"
+      },
+      {
+        "id": "int21",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back incorrect holder share in Bangalore"
+      },
+      {
+        "id": "int22",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "expected_effect": "Optimize low-incrementality brand spend in Pune"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritizes highest incremental return by funding efficient fund/scale campaigns, capturing competitor keywords with iota near 1, and correcting misallocated contest markets. Brand bids trimmed to curb organic displacement. Net allowance usage kept conservative to guarantee floor compliance while maximizing weekly offtake growth."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12227,
+    "tokens_out": 10567,
+    "cost_usd": 0.00174052,
+    "wall_clock_s": 95.56091987499997
+  }
+}

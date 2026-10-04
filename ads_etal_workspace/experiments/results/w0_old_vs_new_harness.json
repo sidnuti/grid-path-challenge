@@ -1,0 +1,148 @@
+{
+  "summary": [
+    {
+      "comparison": "old_l0_vs_baseline",
+      "mean_pct": 0.8240153494790348,
+      "t95": "0.55 \u2026 1.10",
+      "p": 0.03125,
+      "min": 0.35511020492122736,
+      "max": 1.1159044914675897
+    },
+    {
+      "comparison": "new_l0_vs_baseline",
+      "mean_pct": 0.23374868148812178,
+      "t95": "0.07 \u2026 0.40",
+      "p": 0.03125,
+      "min": 0.09689686425908839,
+      "max": 0.4554486679775538
+    },
+    {
+      "comparison": "no_gate_vs_baseline",
+      "mean_pct": 1.081720261898167,
+      "t95": "0.77 \u2026 1.39",
+      "p": 0.03125,
+      "min": 0.5602936464529584,
+      "max": 1.3709414533161768
+    },
+    {
+      "comparison": "old_l0_vs_new_l0",
+      "mean_pct": 0.5888401029789936,
+      "t95": "0.40 \u2026 0.78",
+      "p": 0.03125,
+      "min": 0.25796338223380566,
+      "max": 0.7858502623301344
+    },
+    {
+      "comparison": "old_l0_vs_no_gate",
+      "mean_pct": -0.2548442297529448,
+      "t95": "-0.36 \u2026 -0.15",
+      "p": 0.03125,
+      "min": -0.4292545832281114,
+      "max": -0.15610004750196138
+    },
+    {
+      "comparison": "old_spend_vs_new_l0_pct",
+      "mean_pct": 6.9706922619037694,
+      "t95": "5.36 \u2026 8.58",
+      "p": 0.03125,
+      "min": 5.096692232723554,
+      "max": 9.09607201978031
+    }
+  ],
+  "per_seed": [
+    {
+      "seed": 7,
+      "old_l0_vs_baseline": 0.35511020492122736,
+      "new_l0_vs_baseline": 0.09689686425908839,
+      "old_l0_vs_new_l0": 0.25796338223380566,
+      "old_l0_vs_no_gate": -0.20404021715878518,
+      "no_gate_vs_baseline": 0.5602936464529584,
+      "old_spend_vs_new_l0_pct": 5.398480579176579,
+      "old_floor_met": true,
+      "old_margin": 0.258,
+      "new_margin": 0.36599999999999966,
+      "old_actions_shipped": 64,
+      "new_actions_shipped": 59
+    },
+    {
+      "seed": 11,
+      "old_l0_vs_baseline": 0.6994211623486901,
+      "new_l0_vs_baseline": 0.12751769539449676,
+      "old_l0_vs_new_l0": 0.5711751176075364,
+      "old_l0_vs_no_gate": -0.2953099331062359,
+      "no_gate_vs_baseline": 0.9976773357276869,
+      "old_spend_vs_new_l0_pct": 5.096692232723554,
+      "old_floor_met": true,
+      "old_margin": 0.601,
+      "new_margin": 0.5389999999999997,
+      "old_actions_shipped": 103,
+      "new_actions_shipped": 103
+    },
+    {
+      "seed": 23,
+      "old_l0_vs_baseline": 0.8874074531841192,
+      "new_l0_vs_baseline": 0.10076532627312229,
+      "old_l0_vs_new_l0": 0.7858502623301344,
+      "old_l0_vs_no_gate": -0.15610004750196138,
+      "no_gate_vs_baseline": 1.045138963103942,
+      "old_spend_vs_new_l0_pct": 9.09607201978031,
+      "old_floor_met": true,
+      "old_margin": 0.367,
+      "new_margin": 0.41800000000000015,
+      "old_actions_shipped": 99,
+      "new_actions_shipped": 91
+    },
+    {
+      "seed": 42,
+      "old_l0_vs_baseline": 0.9504467438862685,
+      "new_l0_vs_baseline": 0.3935087518910585,
+      "old_l0_vs_new_l0": 0.5547549825871689,
+      "old_l0_vs_no_gate": -0.25428147388938394,
+      "no_gate_vs_baseline": 1.207799427962697,
+      "old_spend_vs_new_l0_pct": 7.441039998583321,
+      "old_floor_met": true,
+      "old_margin": 0.44399999999999995,
+      "new_margin": 0.5359999999999996,
+      "old_actions_shipped": 74,
+      "new_actions_shipped": 68
+    },
+    {
+      "seed": 101,
+      "old_l0_vs_baseline": 0.9358020410663137,
+      "new_l0_vs_baseline": 0.22835478313341095,
+      "old_l0_vs_new_l0": 0.7058354489242413,
+      "old_l0_vs_no_gate": -0.4292545832281114,
+      "no_gate_vs_baseline": 1.3709414533161768,
+      "old_spend_vs_new_l0_pct": 6.79292910498468,
+      "old_floor_met": true,
+      "old_margin": 0.2270000000000003,
+      "new_margin": 0.24399999999999977,
+      "old_actions_shipped": 82,
+      "new_actions_shipped": 63
+    },
+    {
+      "seed": 202,
+      "old_l0_vs_baseline": 1.1159044914675897,
+      "new_l0_vs_baseline": 0.4554486679775538,
+      "old_l0_vs_new_l0": 0.6574614241910748,
+      "old_l0_vs_no_gate": -0.19007912363319113,
+      "no_gate_vs_baseline": 1.3084707448255406,
+      "old_spend_vs_new_l0_pct": 7.998939636174174,
+      "old_floor_met": true,
+      "old_margin": 0.33699999999999974,
+      "new_margin": 0.4319999999999995,
+      "old_actions_shipped": 68,
+      "new_actions_shipped": 58
+    }
+  ],
+  "checks": [
+    {
+      "seed": 7,
+      "baseline_identical": true
+    }
+  ],
+  "_code_hashes_seen": [
+    "0b73557",
+    "63196db22b74"
+  ]
+}

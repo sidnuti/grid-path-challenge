@@ -1,0 +1,428 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free \u20b9~450/day; S1-BLR is hold with 7 run-outs and low iroas (1.86)."
+      },
+      {
+        "id": "I2",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free \u20b9~450/day; S1-MUM is hold with 7 run-outs and weak incremental performance."
+      },
+      {
+        "id": "I3",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free \u20b9~600/day; S3-DEL is hold with 4 run-outs and low iroas (1.29)."
+      },
+      {
+        "id": "I4",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free \u20b9~900/day; S3-MUM is trim with high spend share but weak iroas (1.24)."
+      },
+      {
+        "id": "I5",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free \u20b9~100/day; S5-DEL is hold with low iroas (1.23) and minimal off-take."
+      },
+      {
+        "id": "I6",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent unsafe scaling; OSA 0.42 blocks increases per guardrails."
+      },
+      {
+        "id": "I7",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Allocate freed budget to efficient fund campaign with high droas (10.19) and 7 run-out days."
+      },
+      {
+        "id": "I8",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Allocate freed budget to efficient fund campaign with high iroas (4.51) and 7 run-out days."
+      },
+      {
+        "id": "I9",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Allocate freed budget to efficient fund campaign with 3 run-out days and solid iroas (2.79)."
+      },
+      {
+        "id": "I10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+10% bid captures high-incrementality generic demand; predicted mroas 12.30 vs current iroas 2.39."
+      },
+      {
+        "id": "I11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+10% bid targets scaled Body Wash generic slot; mroas 5.06 supports efficiency."
+      },
+      {
+        "id": "I12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "+10% bid pushes Soap generic leader; iroas 1.96 with 70% incrementality (iota=0.70)."
+      },
+      {
+        "id": "I13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "+10% bid leverages Shower Gel generic elasticity; mroas 9.99 confirms upside."
+      },
+      {
+        "id": "I14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "+10% bid maintains Body Wash generic competitiveness; iroas 4.17 already strong."
+      },
+      {
+        "id": "I15",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift S2 into slot-1 for generic soap queries in BLR; S2 score 1.023 vs S1 0.071 maximizes incremental revenue."
+      },
+      {
+        "id": "I16",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S1 steps back in BLR generic, reducing wasteful displacement on low-iota brand-adjacent search."
+      },
+      {
+        "id": "I17",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move S1 to slot-1 for DEL generic; S1 score 0.792 beats S3 holder 0.494 significantly."
+      },
+      {
+        "id": "I18",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S3 cedes ground in DEL generic, conserving budget for higher-value placements."
+      },
+      {
+        "id": "I19",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Install S2 as DEL generic leader; score 1.063 dominates current S1 holder."
+      },
+      {
+        "id": "I20",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S1 yields DEL generic to avoid cannibalizing S2 incremental volume."
+      },
+      {
+        "id": "I21",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S2 dominance in PUN generic; score 1.032 vs S1 0.069."
+      },
+      {
+        "id": "I22",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S1 steps back in PUN generic, preserving budget for scalable inventory."
+      },
+      {
+        "id": "I23",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S1 takes MUM generic leadership; score 0.646 clears S3 holder 0.501."
+      },
+      {
+        "id": "I24",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S3 yields MUM generic slot to reduce low-ROAS displacement waste."
+      },
+      {
+        "id": "I25",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-BLR/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "+10% bid on S1-BLR generic where cleared verdict and 70% iota support marginal gain before full budget phase-down."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Funds high-iota generic scales and contested market winners by cutting oversized hold/trim campaigns and respecting S2-HYD OSA guardrail. Budget reallocation strictly targets campaigns with \u22652 run-out days while bid lifts focus on cleared cells with proven incrementality to preserve portfolio DROAS above 4.58."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11182,
+    "tokens_out": 10877,
+    "cost_usd": 0.00174947,
+    "wall_clock_s": 108.62805512500006
+  }
+}

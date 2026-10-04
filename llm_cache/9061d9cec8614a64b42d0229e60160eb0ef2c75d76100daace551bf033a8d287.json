@@ -1,0 +1,202 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "lm-del-k05-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift dominance to Shower Gel S4 which has significantly higher incremental score than current holder S2."
+      },
+      {
+        "id": "lm-hyd-k01-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture best incremental value with S4 over S2 in Delhi generic search."
+      },
+      {
+        "id": "lm-hyd-k04-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfer leadership from S3 to S1 to maximize incremental returns in Soap generic slot."
+      },
+      {
+        "id": "lm-mum-k03-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move market leader from weak performer S5 to high-score S1 in Soap generic."
+      },
+      {
+        "id": "lm-mum-k04-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Realign leadership from S3 to superior S1 for better incrementality."
+      },
+      {
+        "id": "lm-pun-k01-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Surrender S1 dominance to S4 which delivers superior incremental revenue per impression."
+      },
+      {
+        "id": "lm-pun-k03-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift control from S3 to S1 in Soap generic to improve overall efficiency."
+      },
+      {
+        "id": "lm-pun-k05-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Allow S4 to lead Body Wash generic over S2, capturing higher value."
+      },
+      {
+        "id": "b-c-s1-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unblock fully funded efficient Soap campaign in Delhi which ran out of budget every day last week."
+      },
+      {
+        "id": "b-c-s1-blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Release capacity for efficient Fund campaign in Bangalore after 7-day run-out streak."
+      },
+      {
+        "id": "b-c-s3-hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Ensure budget availability for efficient Hyderabad Soap campaign that consistently hits cap."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "other",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Prioritize market realignment to highest incremental SKUs where 'wrong_holder' flags are true. Simultaneously raise budgets for Fund campaigns running dry to capture full efficient volume."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 22366,
+    "tokens_out": 17248,
+    "cost_usd": 0.0029132200000000002,
+    "wall_clock_s": 139.845414209
+  }
+}

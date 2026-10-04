@@ -1,0 +1,254 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-BID-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL/K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase spend on generic searches with slot1 share at 60%; predicted mroas_up20 (5.29) exceeds campaign iroas (4.83)."
+      },
+      {
+        "id": "INT-BID-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR/K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume via generic term at 61% slot share; mroas_up20 (6.33) significantly above campaign iroas (3.90)."
+      },
+      {
+        "id": "INT-BID-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD/K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up under-monetized generic cell (56% slot share); mroas_up20 (5.67) > campaign iroas (4.65)."
+      },
+      {
+        "id": "INT-BID-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL/K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Shower Gel generic spend at 65% slot share; strong mroas uplift (7.74) justifies medium raise."
+      },
+      {
+        "id": "INT-BID-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD/K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage high incremental return on generic searches; mroas_up20 (7.17) well above campaign iroas (5.02)."
+      },
+      {
+        "id": "INT-BUD-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Provide headroom for efficient fund campaign that has run out every day this week, capturing residual demand without risking ROAS floor."
+      },
+      {
+        "id": "INT-BUD-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Small buffer for efficient fund campaign with recent run-outs; keeps spend aligned with capacity while preserving portfolio efficiency."
+      },
+      {
+        "id": "INT-CONT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign leadership to highest-incrementality SKU (S2 score 1.577) over incumbent S4, shifting competitive advantage efficiently."
+      },
+      {
+        "id": "INT-CONT-02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back competitor SKU (S4) to prevent internal cannibalization and free impression share for S2."
+      },
+      {
+        "id": "INT-CONT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Install Shower Gel (S4) as market leader over Body Wash (S2) where S4 demonstrates superior incremental revenue per impression."
+      },
+      {
+        "id": "INT-CONT-04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce body wash ad load in Delhi generic searches to prevent self-auction and improve aggregate portfolio ROI."
+      },
+      {
+        "id": "INT-CONT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct misallocation by placing highest-scoring SKU (S2) at the top of branded queries in Hyderabad."
+      },
+      {
+        "id": "INT-CONT-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Decrease soap dominance on branded searches where body wash shows higher conversion value per click."
+      },
+      {
+        "id": "INT-CONT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Flip leadership in Punjab branded searches to S2, maximizing incremental revenue on high-intent traffic."
+      },
+      {
+        "id": "INT-CONT-08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Withdraw soap from top bidding position on branded terms to reduce wasteful displacement in competitive local landscape."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Resolved four incorrect market holders identified in the brief by swapping lead/yield rights to higher-incrementality SKUs. Directed bid increases exclusively to generic keywords with sub-80% slot penetration and demonstrated mroas upside, while bypassing OSA-flagged anomalies. Fund budget raises absorb consistent daily run-outs within strict allowance limits."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11701,
+    "tokens_out": 11764,
+    "cost_usd": 0.00188035,
+    "wall_clock_s": 88.63662795899995
+  }
+}

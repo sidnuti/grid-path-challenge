@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.7,
+    "rationale": "Mechanical leader_score slightly favors C-S4-PUN, which is further corroborated by its substantially higher slot1_share_7d (0.88 vs 0.59), indicating a stronger existing market position that warrants protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 815,
+    "cost_usd": 0.013275,
+    "wall_clock_s": 8.360141957999986
+  }
+}

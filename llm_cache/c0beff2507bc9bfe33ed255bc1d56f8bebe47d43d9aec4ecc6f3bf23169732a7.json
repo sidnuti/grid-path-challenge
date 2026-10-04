@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "Although the mechanical leader scores for C-S1-MUM and C-S3-MUM are nearly tied (0.6830 vs 0.6827), C-S1-MUM holds a clear advantage with a significantly higher slot1 share (0.88 vs 0.67). This strong positional dominance validates the mechanical pick, warranting a high-confidence leadership assignment."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1419,
+    "cost_usd": 0.022407,
+    "wall_clock_s": 12.680693333000136
+  }
+}

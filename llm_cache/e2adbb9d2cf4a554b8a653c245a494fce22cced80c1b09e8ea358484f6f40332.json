@@ -1,0 +1,170 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "RAISE-S4-DEL-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Large bid increase on generic terms with mroas 7.6\u201310.1 and slot headroom <60%; captures incremental volume efficiently."
+      },
+      {
+        "id": "RAISE-S2-MUM-KW",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06",
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Medium bid lift across generic and competition keywords where slot-1 share is below threshold; supports scale role with iroas 2.66."
+      },
+      {
+        "id": "RAISE-S4-BLR-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase spend on generic terms leveraging high incrementality (iota 0.51) and clear slot headroom (56\u201365%)."
+      },
+      {
+        "id": "LEAD-S2-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01",
+          "C:C-S2-HYD/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer leadership to S2 (highest incremental score 0.992) from S1; K01 is CLEARED and supports BODY_WASH scaling."
+      },
+      {
+        "id": "LEAD-S2-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move K05 leadership to S2 (score 1.180) over S4 to maximize incremental yield in HYD body wash."
+      },
+      {
+        "id": "LEAD-S3-PUN-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03",
+          "C:C-S3-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift K03 leadership to S3 (score 0.748) from S1; clears goal constraint and improves incremental share in PUN soap."
+      },
+      {
+        "id": "CUT-C-S2-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Release daily allowance from capped fund campaign to reallocate toward scale opportunities."
+      },
+      {
+        "id": "CUT-C-S3-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free remaining allowance from efficient but capped fund campaign to support higher-ROAS scale cells."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Dropped all previously rejected leads and raises caused by MISSES verdicts or \u226580% slot-1 share. Reallocation focuses on cleared scale campaigns with clear bid headroom and corrects three misplaced market holders in HYD/PUN to boost incremental ROI while protecting portfolio floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11685,
+    "tokens_out": 7766,
+    "cost_usd": 0.0013601300000000002,
+    "wall_clock_s": 65.76235495800006
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.62,
+    "rationale": "Defaulting to the mechanical leader_score pick (0.8801 vs 0.8261). The slot1_share evidence does not clearly favour C-S1-DEL: its 0.94 top-slot share suggests it already dominates the auction with limited incremental headroom, whereas C-S3-DEL's 0.58 share is consistent with the higher incrementality component driving its leader score. Confidence is tempered because the score gap (~0.054) is a near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 615,
+    "cost_usd": 0.00089381,
+    "wall_clock_s": 5.337318249999953
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.7,
+    "rationale": "C-S1-PUN has a marginally higher mechanical score, but C-S3-PUN's dominant slot1_share_7d (0.92 vs 0.47) provides clear evidence of superior actual market visibility and performance. This positional advantage outweighs the noise in the near-tie mechanical scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1834,
+    "cost_usd": 0.028632,
+    "wall_clock_s": 20.908856958000115
+  }
+}

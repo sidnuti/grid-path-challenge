@@ -1,0 +1,24 @@
+run 1: fallback=False surge_flags=0 (own-confound 0) actions=12 {'M_Base': 10, 'M_Explore': 2}
+run 2: fallback=False surge_flags=3 (own-confound 2) actions=26 {'M_Base': 13, 'M_Reprice': 6, 'M_Budget': 6, 'M_Explore': 1}
+run 3: fallback=False surge_flags=7 (own-confound 6) actions=15 {'M_Base': 11, 'M_Budget': 3, 'M_Explore': 1}
+run 4: fallback=False surge_flags=1 (own-confound 1) actions=8 {'M_Base': 8}
+run 5: fallback=False surge_flags=0 (own-confound 0) actions=6 {'M_Base': 6}
+run 6: fallback=False surge_flags=2 (own-confound 0) actions=9 {'M_Base': 9}
+SUMMARY {'direct_roas': 5.158, 'roas_floor': 4.721, 'roas_constraint_met': True}
+  run 1 L1_value: calls=2 prompt_chars=3491
+  run 1 L3_sibling: calls=11 prompt_chars=14956
+  run 1 L4_explore: calls=3 prompt_chars=4119
+  run 2 L1_value: calls=1 prompt_chars=1743
+  run 2 L3_sibling: calls=6 prompt_chars=8055
+  run 2 L4_explore: calls=3 prompt_chars=4121
+  run 3 L2_shock: calls=1 prompt_chars=1652
+  run 3 L3_sibling: calls=2 prompt_chars=2656
+  run 3 L4_explore: calls=3 prompt_chars=4121
+  run 4 L3_sibling: calls=2 prompt_chars=2656
+  run 4 L4_explore: calls=3 prompt_chars=4121
+  run 5 L3_sibling: calls=2 prompt_chars=2656
+  run 5 L4_explore: calls=3 prompt_chars=4121
+  run 6 L2_shock: calls=1 prompt_chars=1653
+  run 6 L3_sibling: calls=1 prompt_chars=1328
+  run 6 L4_explore: calls=3 prompt_chars=4121
+TOTAL {'L1_value': 3, 'L3_sibling': 24, 'L4_explore': 18, 'L2_shock': 2} chars {'L1_value': 5234, 'L3_sibling': 32307, 'L4_explore': 24724, 'L2_shock': 3305}

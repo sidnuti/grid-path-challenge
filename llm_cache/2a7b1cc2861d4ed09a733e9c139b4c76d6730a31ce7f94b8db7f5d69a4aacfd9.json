@@ -1,0 +1,143 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "CB-S1-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free ~\u20b9530/day allowance by reducing low-iROAS (1.78) hold spend that ran out 6/7 days."
+      },
+      {
+        "id": "CB-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free ~\u20b9225/day allowance by trimming weakest portfolio iROAS (1.19) while consistently capping."
+      },
+      {
+        "id": "CB-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Preserve cash by dropping near-zero incrementality (iROAS 0.95) on saturated/displaced kids soap demand."
+      },
+      {
+        "id": "RB-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental volume in scaled DEL body wash with strong mroas_up20 (3.80) and iota (0.62)."
+      },
+      {
+        "id": "RB-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Expand share in scalable MUM generic market with high predicted uplift (mroas_up20 5.84, iota 0.62)."
+      },
+      {
+        "id": "RB-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage top-tier efficiency (mroas_up20 6.79) in BLR shower gel without hitting slot-1 cap (67%)."
+      },
+      {
+        "id": "LM-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership from S4 to S2 where incremental value per impression is higher (gap 0.10), yielding S4 to avoid cannibalization."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "S5",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Reallocated ~\u20b9800/day from low-iROAS hold campaigns (MUM/BLR soaps & kids) to efficient scale cells with verified incrementality (iota > 0.6) and available slot share. Resolved MUM:K05 contest by promoting highest-value S2, replacing prior rejected MISSES/THIN bids and respecting strict daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11433,
+    "tokens_out": 7582,
+    "cost_usd": 0.00132865,
+    "wall_clock_s": 62.436362333000034
+  }
+}

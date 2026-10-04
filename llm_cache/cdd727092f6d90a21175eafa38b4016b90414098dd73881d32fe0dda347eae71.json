@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "C-S1-HYD leads on the mechanical score and demonstrates a decisive advantage in slot1_share_7d (0.88 vs 0.52), indicating superior sustained placement performance. Both signals align, justifying retention of the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1399,
+    "cost_usd": 0.022041,
+    "wall_clock_s": 15.160605124999847
+  }
+}

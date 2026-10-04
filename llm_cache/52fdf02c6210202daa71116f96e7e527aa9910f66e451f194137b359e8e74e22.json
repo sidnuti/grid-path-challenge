@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "C-S3-MUM holds the highest mechanical leader_score (1.7739), narrowly edging C-S2-MUM (1.7658) by only 0.0081, confirming the stated near-tie where the metric is noisy. Per instructions, we default to the mechanical pick absent decisive counterevidence. Although C-S2 shows a slightly higher 7-day slot 1 share (0.28 vs 0.20), this marginal positional lift does not clearly outweigh the underlying conversion, ASP, and incrementality signals baked into the score, justifying a moderate confidence of 0.6."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1839,
+    "cost_usd": 0.028851,
+    "wall_clock_s": 19.406520750000027
+  }
+}

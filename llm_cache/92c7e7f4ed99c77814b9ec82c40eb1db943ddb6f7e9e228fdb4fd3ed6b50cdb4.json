@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S2-MUM",
+    "confidence": 0.65,
+    "rationale": "Mechanical scoring favors C-S2-MUM with a marginally higher leader_score (1.2525 vs 1.1814), representing a narrow ~5.6% difference consistent with noisy near-ties. Although C-S3-MUM exhibits a dominant slot share (0.94 vs 0.29), indicating current impression capture, C-S2-MUM's superior composite metric suggests greater incremental value and efficiency, justifying adherence to the mechanical pick for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2544,
+    "cost_usd": 0.039426,
+    "wall_clock_s": 23.635332250000147
+  }
+}

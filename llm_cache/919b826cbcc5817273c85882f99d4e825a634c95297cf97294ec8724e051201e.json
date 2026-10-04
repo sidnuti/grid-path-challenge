@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.7,
+    "rationale": "Mechanical leader_score favours C-S3-HYD (0.8122 vs 0.7509), and since this score already embeds conversion, ASP, and incrementality, it should be preferred unless evidence clearly favours the alternative. C-S1-HYD's higher slot1_share_7d (0.90 vs 0.65) indicates it currently dominates top-slot impressions, but that alone does not establish superior incrementality or value, so it does not clearly override the mechanical pick. Sticking with the score leader at moderate confidence given the narrow margin."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 340,
+    "tokens_out": 525,
+    "cost_usd": 0.00078205,
+    "wall_clock_s": 4.562661374999834
+  }
+}

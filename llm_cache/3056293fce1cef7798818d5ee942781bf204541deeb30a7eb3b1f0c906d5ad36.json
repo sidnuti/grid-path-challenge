@@ -1,0 +1,127 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM:DEL:K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Transfer slot-1 dominance to S2 on brand queries where incremental revenue per impression is highest; corrects wrong_holder flag."
+      },
+      {
+        "id": "LM:MUM:K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Align Mumbai brand search leadership with S2's stronger iROAS (3.74) vs incumbent; improves portfolio-level incrementality."
+      },
+      {
+        "id": "RB:S2-DEL-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up high-iota generic & competition cells to capture efficient spend; iROAS 3.36 comfortably exceeds portfolio floor."
+      },
+      {
+        "id": "RB:S2-PUN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale Pune body wash spend into remaining budget headroom; iROAS 4.06 supports aggressive lift with minimal risk."
+      },
+      {
+        "id": "CB:S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reclaim allowance by truncating chronically out-of-budget, low-iROAS (~0.94) soap allocations; frees ~420 INR/day for efficient channels."
+      },
+      {
+        "id": "HLD:S2-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Enforce OSA supply guardrail (3d OSA 0.42); prevent costly bid pushes until shelf availability recovers >0.60."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": null,
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": null,
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": null,
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": null,
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocating allowance from inefficient Soap (S3) to high-iROAS Body Wash (S2) via bid lifts and contest corrections. Holding HYD supply risks due to OSA breaches. Portfolio ROAS shielded by prioritizing cells with strong iROAS/IOTA signals over raw direct ROAS."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10971,
+    "tokens_out": 7590,
+    "cost_usd": 0.0013158299999999998,
+    "wall_clock_s": 74.22107145799998
+  }
+}

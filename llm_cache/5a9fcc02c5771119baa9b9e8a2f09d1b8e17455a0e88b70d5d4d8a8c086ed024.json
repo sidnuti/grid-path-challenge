@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "The mechanical leader score favors C-S1-MUM, which is strongly corroborated by its dominant 95% share of position 1 impressions over the past 7 days versus only 26% for C-S3-MUM. This confirms C-S1-MUM's established dominance and justifies protecting its bid."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1418,
+    "cost_usd": 0.02232,
+    "wall_clock_s": 13.911522083000023
+  }
+}

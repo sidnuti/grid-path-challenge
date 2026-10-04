@@ -1,0 +1,178 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unblock efficient fund campaign running out daily; adds incremental volume without risking ROAS floor."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-mroas (6.63) generic search in Delhi with strong iota (0.71)."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient body wash generic in Bangalore; slot-1 share (0.62) below 80% cap."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase competitive generic visibility in Mumbai; high mroas_up20 (5.74)."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Target competitor keyword with perfect iota (1.00); purely incremental demand."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign top slot to S2 (score 1.359) over S4 to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT-07",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step S4 back from K05 to prevent internal cannibalization and lower effective CPCs."
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead shower gel in K06 where S4 holds superior incremental score (1.258 vs 1.004)."
+      },
+      {
+        "id": "INT-09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 from K06 to optimize auction efficiency and reduce wasted ad spend."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale high-return shower gel generic in Hyderabad; strong mroas (7.77) and healthy OSA (0.92)."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused allowance deployment on high-iota generic and competitor keywords with sub-80% slot-1 caps to drive purely incremental off-take. Resolved Delhi contests to place best-incremental SKUs in slot-1 while stepping back weaker siblings. S3-HYD budget lift addresses persistent daily sell-outs in a funded, efficient campaign."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12145,
+    "tokens_out": 10347,
+    "cost_usd": 0.00170946,
+    "wall_clock_s": 95.93049924999991
+  }
+}

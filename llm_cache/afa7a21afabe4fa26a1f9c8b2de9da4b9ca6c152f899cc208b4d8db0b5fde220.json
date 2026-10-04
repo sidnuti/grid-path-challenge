@@ -1,0 +1,298 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "budget_scale_s2",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S2"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:S2-DEL",
+          "R:S2-MUM",
+          "R:S2-BLR",
+          "R:S2-HYD",
+          "R:S2-PUN",
+          "M:DEL:K05",
+          "M:HYD:K01",
+          "M:HYD:K05",
+          "M:PUN:K01",
+          "M:PUN:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds highly incremental Body Wash campaigns (iroas 4.0-4.7) that frequently run out, enabling incremental share gains across cities."
+      },
+      {
+        "id": "budget_support_s1",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S1"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:S1-DEL",
+          "R:S1-BLR",
+          "R:S1-HYD",
+          "R:S1-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Prevents stockouts in efficient Soap campaigns (iroas 2.5-3.3) that ran out budget 2-7 days ago, preserving baseline sales."
+      },
+      {
+        "id": "bid_up_s2_generic",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:S2-DEL/K05",
+          "C:S2-DEL/K06",
+          "C:S2-MUM/K05",
+          "C:S2-MUM/K06",
+          "C:S2-BLR/K06",
+          "C:S2-HYD/K05",
+          "C:S2-HYD/K06",
+          "C:S2-PUN/K05",
+          "C:S2-PUN/K06"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Captures additional inventory auctions where S2 sits at 56-75% slot share with strong mroas_up20 (>4) and high iota (>0.8)."
+      },
+      {
+        "id": "lead_s2_del_k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": 1,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfers leading position from S4 to S2 where incremental revenue per impression is highest (score 1.527 vs 1.452), boosting off-take."
+      },
+      {
+        "id": "yield_s4_del_k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Steps Shower Gel back in DEL:K05 to avoid internal cannibalization and preserve portfolio ROAS."
+      },
+      {
+        "id": "lead_s2_hyd_k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": 1,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Gives body wash top slot in HYD:K05 where it leads incrementally (1.605 vs 1.471), increasing volume."
+      },
+      {
+        "id": "yield_s4_hyd_k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduces Shower Gel bid pressure in HYD:K05, freeing efficiency margin."
+      },
+      {
+        "id": "lead_s2_pun_k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": 1,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Applies market-leading Body Wash positioning in PUN:K05 (1.601 vs 1.475) to drive incremental off-take."
+      },
+      {
+        "id": "yield_s4_pun_k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yields Shower Gel in PUN:K05 to prevent wasteful displacement."
+      },
+      {
+        "id": "lead_s2_hyd_k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": null,
+        "target_slot": 1,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shifts brand keyword leadership to Body Wash in HYD where it generates higher incremental revenue (1.046 vs 0.966)."
+      },
+      {
+        "id": "yield_s1_hyd_k01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Steps Soap back on HYD brand keyword to protect overall campaign eROAS."
+      },
+      {
+        "id": "lead_s2_pun_k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": null,
+        "target_slot": 1,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Dominates PUN brand keyword with Body Wash (1.444 vs 0.974), maximizing incremental lift."
+      },
+      {
+        "id": "yield_s1_pun_k01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yields Soap in PUN brand search, reallocating auction space to higher-value sibling."
+      },
+      {
+        "id": "cut_inefficient",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": [
+            "C-S3-DEL",
+            "C-S3-MUM",
+            "C-S3-BLR",
+            "C-S3-HYD",
+            "C-S3-PUN",
+            "C-S5-DEL",
+            "C-S5-MUM",
+            "C-S5-BLR",
+            "C-S5-HYD",
+            "C-S5-PUN"
+          ]
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:S3-DEL",
+          "R:S3-MUM",
+          "R:S3-BLR",
+          "R:S3-HYD",
+          "R:S3-PUN",
+          "R:S5-DEL",
+          "R:S5-MUM",
+          "R:S5-BLR",
+          "R:S5-HYD",
+          "R:S5-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trims low-incrementality Soap and Kids Soap campaigns (iroas 0.58-1.73, mostly trim/hold) to recover ~\u20b92,250 daily allowance for high-efficiency S2 scaling."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Corrected 5 internal market mismatches by promoting Body Wash (S2) to lead positions where its incremental score exceeds siblings, while yielding lower-value SKUs. Simultaneously freed budget capacity by cutting underperforming Soap/Kids campaigns and redirected savings to scale high-iroas Body Wash budgets and generic bid headroom. All actions respect slot-1 guards and OSA thresholds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11240,
+    "tokens_out": 9349,
+    "cost_usd": 0.00155257,
+    "wall_clock_s": 89.10875075000013
+  }
+}

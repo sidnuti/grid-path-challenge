@@ -1,0 +1,10 @@
+== seed 7  (scripts/sizing_siblings_probe.py 7, HTNToolsOnly, dev scenario)
+run allowance  sel_dspend  n_sel/n_raises  overshoot  precheck_drop  WL_leader_raised  hold
+1   0.00       0.0         0 / 15          False      0              0                 60
+2   0.00       0.0         0 / 16          False      0              0                 58
+3   158.98     4446.8      20 / 20         True       5              5                 57
+4   312.31     1107.9      7 / 7           True       5              0                 60
+5   564.67     1620.2      6 / 6           True       3              0                 56
+6   577.19     534.9       6 / 6           False      3              1                 56
+(max rows per (campaign,keyword,action_type) group = 1 in every run; proposed == final in every run)
+Note: run-6 allowance was 577.19 before M3's S10 change (run 6 now uses frac=1.0; see decision_funnel_seed_7.txt).

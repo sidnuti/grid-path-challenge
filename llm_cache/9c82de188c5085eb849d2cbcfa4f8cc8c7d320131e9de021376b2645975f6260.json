@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.6,
+    "rationale": "Mechanical score slightly favors C-S1-PUN. While C-S3-PUN shows a higher slot1 share (0.88 vs 0.70), the 0.02 gap in leader_score is within noise margins, so maintaining the mechanical preference aligns with instructions while noting S3's strong market position."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1547,
+    "cost_usd": 0.024255,
+    "wall_clock_s": 17.976515999999947
+  }
+}

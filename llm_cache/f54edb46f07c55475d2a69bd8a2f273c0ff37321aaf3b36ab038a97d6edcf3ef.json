@@ -1,0 +1,228 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-BUDGET-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume for high-ROAS fund SKU; utilizes budget headroom without threatening floor."
+      },
+      {
+        "id": "INT-BUDGET-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure run-out demand in efficient BLR body wash market; supports scale trajectory."
+      },
+      {
+        "id": "INT-BUDGET-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Fund soap demand with stable iroas (>median); prevents stockouts in hyderabad."
+      },
+      {
+        "id": "INT-BUDGET-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Fund soap demand in pune; maintains portfolio ROAS floor while capturing share."
+      },
+      {
+        "id": "INT-BID-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push efficient generic/comp bids to gain share in cleared slots; drives incremental orders."
+      },
+      {
+        "id": "INT-BID-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale shower gel bids; high iota and cleared verdicts support uplift without diluting ROAS."
+      },
+      {
+        "id": "INT-BID-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bids in mumbai body wash where scale role and iroas 4.56 allow profitable expansion."
+      },
+      {
+        "id": "INT-BID-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage high iroas (5.02) and cleared generic slots in hyderabad for off-take growth."
+      },
+      {
+        "id": "INT-LEAD-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift dominant share from S1 to higher-IRR S2 in hyderabad generic search."
+      },
+      {
+        "id": "INT-LEAD-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder in pune; S2 demonstrates superior incremental value over S1."
+      },
+      {
+        "id": "INT-LEAD-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Optimize competition share in pune toward efficient S2 bidder for incremental lift."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Focused budget and bid expansions on fund/scale portfolios (S2/S4) with verified run-out history and cleared verdicts. Resolved three contested markets where S2 demonstrated superior incremental revenue per impression. Trim/hold campaigns preserved to protect portfolio ROAS floor of 4.8155 while utilizing available spend allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11195,
+    "tokens_out": 9569,
+    "cost_usd": 0.00157982,
+    "wall_clock_s": 78.28950341699999
+  }
+}

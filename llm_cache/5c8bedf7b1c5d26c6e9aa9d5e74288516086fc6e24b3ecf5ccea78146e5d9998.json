@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.1,
+    "direction": "surge",
+    "confidence": 0.75,
+    "rationale": "Reach shows a strongly flagged statistical surge (z=3.101) while CPM (-0.683) and OSA (0.0) remain within normal variance. This pattern indicates a genuine demand-driven volume increase rather than competitive pricing or internal bidding artifacts. Lack of own-action confound reinforces this interpretation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 2032,
+    "cost_usd": 0.031812,
+    "wall_clock_s": 18.854855084000064
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.8,
+    "rationale": "C-S1-BLR is selected as the leader. Although the mechanical leader scores for the top two candidates are closely aligned, creating uncertainty, C-S1-BLR holds a dominant 7-day slot 1 share (0.87 compared to 0.41 for the runner-up). This clear empirical advantage validates the mechanical pick and warrants protecting its bid."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1745,
+    "cost_usd": 0.027297,
+    "wall_clock_s": 15.958343333999892
+  }
+}

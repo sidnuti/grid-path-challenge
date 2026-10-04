@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.95,
+    "rationale": "S4 holds the highest mechanical leader score (1.8233) and demonstrates overwhelming dominance with a 98% slot1 share over the last 7 days, compared to 18% for the runner-up. The additional slot performance data strongly validates the mechanical ranking, making S4 the clear choice."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1342,
+    "cost_usd": 0.021396,
+    "wall_clock_s": 12.599807374999955
+  }
+}

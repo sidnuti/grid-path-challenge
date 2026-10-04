@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.6,
+    "rationale": "The mechanical scores for C-S4-HYD (2.2430) and C-S3-HYD (2.1757) are nearly tied. Both candidates exhibit an identical 0.12 slot1_share metric, offering no clear secondary signal to overturn the mechanical ranking. Following the directive to prefer the mechanical pick when evidence does not strongly favor the alternative, C-S4-HYD is selected as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 1679,
+    "cost_usd": 0.026466,
+    "wall_clock_s": 18.928409165999994
+  }
+}

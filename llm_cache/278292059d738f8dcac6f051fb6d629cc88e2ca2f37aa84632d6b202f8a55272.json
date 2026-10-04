@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.8,
+    "rationale": "Realized dROAS of 4.70 substantially exceeds the target of 3.15, indicating strong efficiency that supports scaling spend. The mechanism clearance reinforces this positive signal. Applying the full proposed raise captures upside while maintaining conservative dampening discipline."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 464,
+    "tokens_out": 1555,
+    "cost_usd": 0.024717,
+    "wall_clock_s": 17.003533166000125
+  }
+}

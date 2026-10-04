@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Although C-S3-HYD has a marginally higher mechanical leader_score (0.8122 vs 0.7509), C-S1-HYD commands a substantially higher slot1_share_7d (0.90 vs 0.65). This dominant top-position capture indicates superior real-world conversion efficiency, stronger brand momentum for SKU S1, and lower wasted spend on non-premium placements. Protecting C-S1-HYD stabilizes proven volume and captures maximum value, clearly outweighing the noisy mechanical advantage of C-S3-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1560,
+    "cost_usd": 0.024456,
+    "wall_clock_s": 15.849971124999968
+  }
+}

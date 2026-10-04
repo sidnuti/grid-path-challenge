@@ -1,0 +1,266 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT_01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Clear daily cap on fund campaign; unlocks immediate incremental BW volume."
+      },
+      {
+        "id": "INT_02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Clear daily cap on fund campaign; secures incremental SG sales in HYD."
+      },
+      {
+        "id": "INT_03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03",
+          "C:C-S1-DEL/K07"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bid on efficient Soap generics (iota 0.82, iroas 2.81-4.49); captures incremental volume without brand displacement risk."
+      },
+      {
+        "id": "INT_04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S1-BLR/K03",
+          "C:C-S1-BLR/K07"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient BLR Soap generics (iota 0.82, iroas 2.25-4.14); leverages existing bid headroom."
+      },
+      {
+        "id": "INT_05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S1-HYD/K03",
+          "C:C-S1-HYD/K04",
+          "C:C-S1-HYD/K07"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Raise bids on HYD Soap generics (iroas 3.02-5.65, iota 0.82); maximizes incremental return."
+      },
+      {
+        "id": "INT_06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Push highest iroas bucket (SG generic, iroas 5.86-7.86, iota 0.76); drives outsized incremental revenue."
+      },
+      {
+        "id": "INT_07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental steal share (iota 1.0 implied, iroas 2.24); low direct ROAS masks true value."
+      },
+      {
+        "id": "INT_08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale high-return SG generics in MUM (iroas 6.16-7.52, iota 0.76)."
+      },
+      {
+        "id": "INT_09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale high-return SG generics in BLR (iroas 6.07-7.59, iota 0.76)."
+      },
+      {
+        "id": "INT_10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bids on efficient BW generics (iroas 4.87-3.35, iota 0.85); clears remaining cap."
+      },
+      {
+        "id": "INT_11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Target competitor traffic (iota 1.0, iroas 2.83); pure incremental conversion."
+      },
+      {
+        "id": "INT_12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale BW generics in MUM (iroas 3.81-4.33, iota 0.85)."
+      },
+      {
+        "id": "INT_13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture competitor search volume (iota 1.0, iroas 3.44)."
+      },
+      {
+        "id": "INT_14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale efficient BLR BW generics (iroas 5.49-3.60, iota 0.85)."
+      },
+      {
+        "id": "INT_15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental competitor capture (iota 1.0, iroas 3.20)."
+      },
+      {
+        "id": "INT_16",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05",
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale HYD BW generics (iroas 5.33-5.18, iota 0.85)."
+      },
+      {
+        "id": "INT_17",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "High-iota competitor steal (iota 1.0, iroas 4.94)."
+      }
+    ],
+    "notes": "Deploy full 1437 INR/day allowance into highest incremental buckets (Shower Gel & Body Wash generic/competition, efficient Soap generics). Fund campaigns raised to clear caps. Bid raises focus on cells with iota \u22650.75 and iroas \u22652.5, ensuring portfolio ROAS remains safely above the 4.0858 floor while maximizing off-take across the final two runs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12107,
+    "tokens_out": 10746,
+    "cost_usd": 0.00176019,
+    "wall_clock_s": 85.18759016699994
+  }
+}

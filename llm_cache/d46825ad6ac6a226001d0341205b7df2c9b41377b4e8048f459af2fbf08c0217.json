@@ -1,0 +1,258 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental Soap demand in top city; budget capped frequently (7d) with healthy iROAS (2.60)."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free up scaled demand in BLR; budget constrained with iROAS meeting portfolio median."
+      },
+      {
+        "id": "INT-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove weak Kids Soap spend (iROAS 1.36) to protect portfolio ROAS floor and free daily allowance."
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S1 Soap where it holds highest incremental score vs S3; improves incremental conversion."
+      },
+      {
+        "id": "INT-05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S3 Soap in DEL generic to reduce internal cannibalization and waste."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct misallocated leader S3->S1 in DEL K04; S1 holds superior incremental score."
+      },
+      {
+        "id": "INT-07",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce S3 overlap in DEL K04."
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift generic body-wash search wins to S4 Shower Gel where incremental score vastly outperforms S2."
+      },
+      {
+        "id": "INT-09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S2 Body Wash in DEL K05 to stop inefficient overlap."
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fix wrong holder in BLR K04; S1 Soap leads incremental score over S3."
+      },
+      {
+        "id": "INT-11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S3 overlap in BLR K04."
+      },
+      {
+        "id": "INT-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture MUM generic body-wash search via S4 which outscores S2 significantly."
+      },
+      {
+        "id": "INT-13",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S2 in MUM K05."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Budget shifted toward budget-constrained efficient Soap campaigns (DEL/BLR) while cutting weak Kids Soap spend in DEL to preserve portfolio ROAS floor and stay within daily allowance. Internal contests realigned to highest incremental-score SKUs (S1/S4) to suppress wasteful overlap and lift true iROAS contribution across major cities."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11158,
+    "tokens_out": 10467,
+    "cost_usd": 0.00169545,
+    "wall_clock_s": 98.21279570899999
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.55,
+    "rationale": "Following the instruction to prefer the mechanical score in a near-tie, as the higher slot1 share for S3 does not clearly override the conversion-ASP-incrementality composite metric."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1306,
+    "cost_usd": 0.02064,
+    "wall_clock_s": 13.601971874999947
+  }
+}

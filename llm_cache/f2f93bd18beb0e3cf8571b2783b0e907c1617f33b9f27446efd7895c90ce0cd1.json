@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score selects C-S3-MUM with a narrow margin (0.6779 vs 0.6418). While C-S1-MUM demonstrates a noticeably higher slot1 share (0.89 vs 0.66), the composite metric remains the primary tie-breaker. Adhering to the mechanical pick maintains consistency given the scoring noise in this near-tie scenario."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1771,
+    "cost_usd": 0.027687,
+    "wall_clock_s": 16.8923917919999
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.7,
+    "rationale": "The mechanical leader_score is nearly tied, making it noisy for decision-making. However, C-S2-HYD demonstrates a substantially higher slot1_share_7d (0.90 vs 0.63), indicating stronger auction dominance and market penetration. This clear operational advantage favors selecting C-S2-HYD as the leader despite a marginally lower mechanical score."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1753,
+    "cost_usd": 0.027351,
+    "wall_clock_s": 19.534837125000024
+  }
+}

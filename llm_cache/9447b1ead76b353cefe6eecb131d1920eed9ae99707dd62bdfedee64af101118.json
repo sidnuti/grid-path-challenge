@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 5.0 is far beyond noise thresholds (~2-3), indicating a genuine deviation. CPM z-score of 0.0 means prices/auction pressure were flat, ruling out a price or competition shift and pointing to a pure demand/volume surge. Own-action confound flag is false, so this is unlikely to be the harness's own prior bid/budget change landing in the data. The pattern (reach surge with unchanged CPM, no confound) is most consistent with a real exogenous demand shift worth reacting to, e.g., raising budget to capture the extra volume at current cost efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 432,
+    "tokens_out": 638,
+    "cost_usd": 0.00095734,
+    "wall_clock_s": 5.394612666000057
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieve budget cap on high-ROAS fund campaign; expected +\u20b9110 spend, +incremental off-take via efficient generic cells."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieve budget cap on efficient fund campaign; expected +\u20b980 spend, maintains ROAS contribution."
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund run-out efficient unit; expected +\u20b980 spend, drives conversion on competitive market."
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "C:C-S4-HYD/K05",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental volume on high-mroas generic cell (8.01); marginal spend increase within allowance."
+      },
+      {
+        "id": "INT-5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Win higher share on efficient generic cell (mroas 9.96); displaces low-value competitors."
+      },
+      {
+        "id": "INT-6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure incremental bids on strong generic performer (mroas 5.57); aligns with budget raise."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Dropped prior rejected brand-keyword raises for S4 (low incrementality, compiler flag). Focused on relieving budget caps on top fund candidates (S4-DEL, S4-BLR, S2-MUM) and raising bids on high-mroas generic cells to capture incremental demand. Total planned spend addition ~\u20b9270, safely within \u20b9300 allowance. High droas/iioas profile preserves ROAS > floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11152,
+    "tokens_out": 8137,
+    "cost_usd": 0.00139237,
+    "wall_clock_s": 77.36011774999997
+  }
+}

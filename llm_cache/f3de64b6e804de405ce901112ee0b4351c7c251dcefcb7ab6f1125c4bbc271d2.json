@@ -1,0 +1,319 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "run3-bud-s4hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Allocate remaining allowance to highest iroAS shower gel fund campaign in South; removes 7d budget constraint."
+      },
+      {
+        "id": "run3-bud-s4blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund second-highest iroAS shower gel SKU (5.64) in BLR; prevents run-out and drives incremental growth."
+      },
+      {
+        "id": "run3-bud-s1del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Stabilize Soap DEL fund (iroas 3.06) following 7 consecutive run-out days."
+      },
+      {
+        "id": "run3-bud-s2del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Support Body Wash DEL fund (iroas 3.05) following 6 consecutive run-out days."
+      },
+      {
+        "id": "run3-bid-s4hyd-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture highly incremental competitor traffic (iota 1.00, iroas 6.85) at low slot share."
+      },
+      {
+        "id": "run3-bid-s5hyd-k01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S5-HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S5-HYD/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Defend high-value brand search in HYD Kids Soap (iroas 6.18) with bid headroom."
+      },
+      {
+        "id": "run3-bid-s1del-k04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand generic demand safely at 54% slot1 share (iroas 5.92)."
+      },
+      {
+        "id": "run3-bid-s3hyd-k03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-HYD/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient generic search in HYD Soap (iroas 5.39, slot1 55%)."
+      },
+      {
+        "id": "run3-bid-s3hyd-k04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-HYD/K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow efficient generic segment (iroas 5.62, slot1 75%)."
+      },
+      {
+        "id": "run3-bid-s4del-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Acquire pure incrementality from competitor keywords (iota 1.00, iroas 4.31)."
+      },
+      {
+        "id": "run3-bid-s2del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase generic share in DEL Body Wash (iroas 3.54, slot1 47%)."
+      },
+      {
+        "id": "run3-bid-s2del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand generic volume efficiently (iroas 3.80, slot1 58%)."
+      },
+      {
+        "id": "run3-lead-s2blr-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift Slot 1 to highest incremental revenue SKU (S2 score 1.111) over lower-efficiency S1."
+      },
+      {
+        "id": "run3-lead-s5del-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Optimize delivery for DEL K01 contest (S5 score 1.277 beats S4)."
+      },
+      {
+        "id": "run3-lead-s3del-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct S1 holder dominance; S3 score 1.252 delivers better ROI."
+      },
+      {
+        "id": "run3-lead-s1del-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Elevate S1 to slot 1 over S3; highest incremental revenue per impression."
+      },
+      {
+        "id": "run3-lead-s5hyd-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Replace S4 holder with higher-efficiency S5 (score 1.212)."
+      },
+      {
+        "id": "run3-lead-s3hyd-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Take slot 1 from S1; S3 score 1.380 maximizes incremental value."
+      },
+      {
+        "id": "run3-lead-s3hyd-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Optimize HYD K04 contest leader to S3 (score 1.494)."
+      },
+      {
+        "id": "run3-lead-s1pun-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift leadership from S5 to S1 for better incremental returns."
+      },
+      {
+        "id": "run3-lead-s1pun-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct S3 holder; S1 score 1.476 offers superior efficiency."
+      }
+    ],
+    "stance": [],
+    "notes": "Focus budget on high-iRoAS Shower Gel funds in the South to absorb today's allowance, while aggressively scaling incremental generic and competitor bids across key cities. Realigning market leadership corrects ROAS drag from inefficient SKU-holder mismatches."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 26383,
+    "tokens_out": 23153,
+    "cost_usd": 0.00380138,
+    "wall_clock_s": 199.95214854199992
+  }
+}

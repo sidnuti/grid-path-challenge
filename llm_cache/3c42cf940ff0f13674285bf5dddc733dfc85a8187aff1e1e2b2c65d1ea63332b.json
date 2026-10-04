@@ -1,0 +1,402 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot leadership from S1 to S2 where incremental score is higher (1.153 vs 0.669)"
+      },
+      {
+        "id": "LM-HYD-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K04",
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder; S1 leads over S3 with better incremental revenue per impression"
+      },
+      {
+        "id": "LM-HYD-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K09",
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder; S1 leads over S3 in competition segment"
+      },
+      {
+        "id": "LM-MUM-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K10",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership from S2 to S4 where shower gel captures higher incremental value"
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder; S2 body wash outperforms S4 shower gel in generic reach"
+      },
+      {
+        "id": "LM-PUN-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K04",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder; S1 soap leads S3 with higher incremental score"
+      },
+      {
+        "id": "CB-S3MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance by reducing spend on a trim campaign with low iroas (1.23) and repeated MISSES"
+      },
+      {
+        "id": "CB-S3DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance by reducing spend on a hold campaign with weak incrementality (iroas 1.52)"
+      },
+      {
+        "id": "CB-S5BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Modest reduction on a hold kids-soap campaign (iroas 1.38) to preserve budget headroom"
+      },
+      {
+        "id": "HL-S3HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Block raises on a hold campaign facing MISSES and low iroas (1.55)"
+      },
+      {
+        "id": "HL-S3PUN",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Block raises on a trim campaign with weak performance"
+      },
+      {
+        "id": "HL-S5DEL",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Block raises on a hold kids-soap campaign (iroas 1.69) to curb displacement"
+      },
+      {
+        "id": "HL-S5MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Block raises on a hold kids-soap campaign (iroas 1.51)"
+      },
+      {
+        "id": "HL-S5HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Block raises on a trim kids-soap campaign"
+      },
+      {
+        "id": "HL-S5PUN",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Block raises on a trim kids-soap campaign"
+      },
+      {
+        "id": "RB-S2MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up efficient scale cell; mroas_up20=6.42 supports incremental growth"
+      },
+      {
+        "id": "RB-S2MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up efficient scale cell; mroas_up20=4.62 supports incremental growth"
+      },
+      {
+        "id": "RB-S4BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up shower gel scale cell; high generic iroas (6.55) drives true incrementality"
+      },
+      {
+        "id": "RB-S4BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up shower gel scale cell; strong mroas_up20=3.39 confirms upside"
+      },
+      {
+        "id": "RB-S4HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up shower gel scale cell; high generic iroas (6.55) drives true incrementality"
+      },
+      {
+        "id": "RB-S4HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up shower gel scale cell; strong efficiency supports expansion"
+      },
+      {
+        "id": "RB-S2HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up body wash scale cell; high generic iroas (3.78) ensures positive ROI"
+      },
+      {
+        "id": "RB-S2HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up body wash scale cell; mroas_up20=4.49 confirms margin safety"
+      },
+      {
+        "id": "RB-S2PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up body wash scale cell; high generic iroas (3.78) drives volume"
+      },
+      {
+        "id": "RB-S2PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up body wash scale cell; mroas_up20=4.33 validates bid increase"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "*",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Frees 539 INR allowance via targeted cuts and holds on trim/hold campaigns, then reallocates to scale-efficient BW/SG generic keywords. Contest markets corrected to highest-incrementality SKUs, avoiding low-iota competitor battles to protect portfolio ROAS."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11188,
+    "tokens_out": 10109,
+    "cost_usd": 0.00164981,
+    "wall_clock_s": 80.06800245900013
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "The mechanical score slightly favors C-S1-HYD, and it strongly outperforms the competitor in slot1_share_7d (0.88 vs 0.52), providing clear evidence to uphold the mechanical recommendation despite the near-tie scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 674,
+    "cost_usd": 0.011166,
+    "wall_clock_s": 6.811664624999992
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "expected_effect": "Shift leadership to highest incremental SKU S2, improving off-take efficiency."
+      },
+      {
+        "id": "LM-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "expected_effect": "Correct wrong holder S5, promote S1 to slot 1 for better conversion."
+      },
+      {
+        "id": "LM-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "expected_effect": "Shift leadership to S4, capturing higher incremental volume in DEL."
+      },
+      {
+        "id": "LM-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Promote S2 over S1 in HYD for superior incremental score."
+      },
+      {
+        "id": "LM-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "expected_effect": "Replace S3 leader with S1 to secure top placement on competition queries."
+      },
+      {
+        "id": "LM-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "expected_effect": "Take brand leadership from S3, reinforcing category dominance."
+      },
+      {
+        "id": "LM-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "expected_effect": "Lead competition queries from S1, displacing less efficient S3."
+      },
+      {
+        "id": "LM-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "expected_effect": "Shift shower gel leadership to S4 for better incremental match."
+      },
+      {
+        "id": "LM-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Promote S2 body wash over S4 in PUN to win high-value generic traffic."
+      },
+      {
+        "id": "LM-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "expected_effect": "Secure soap brand leadership from S3."
+      },
+      {
+        "id": "LM-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "expected_effect": "Take generic leadership from S3 in PUN."
+      },
+      {
+        "id": "LM-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "expected_effect": "Shift shower gel generic leadership to S4."
+      },
+      {
+        "id": "LM-13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "expected_effect": "Lead competition traffic for shower gel in PUN."
+      },
+      {
+        "id": "BD-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM/K06"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "expected_effect": "Capture incremental demand on generic queries with unused bid headroom."
+      },
+      {
+        "id": "BD-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL/K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "expected_effect": "Increase visibility for high-iota shower gel generic searches."
+      },
+      {
+        "id": "BD-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM/K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "expected_effect": "Push shower gel generic bids to capitalize on slot availability."
+      },
+      {
+        "id": "BD-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD/K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "expected_effect": "Leverage scale role headroom on efficient generic queries."
+      },
+      {
+        "id": "BD-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN/K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "expected_effect": "Raise bids on high-performing generic slots with positive mroas_up20."
+      },
+      {
+        "id": "BG-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "expected_effect": "Unblock efficient fund campaign after exhausting budget 7 days ago."
+      },
+      {
+        "id": "BG-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "expected_effect": "Allocate additional funds to high-iROAS body wash campaign."
+      },
+      {
+        "id": "BG-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "expected_effect": "Small increase to prevent stockout on efficient soap campaign."
+      },
+      {
+        "id": "BG-04",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "confidence": 0.6,
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "expected_effect": "Reclaim allowance from underperforming hold campaign."
+      },
+      {
+        "id": "BG-05",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "confidence": 0.6,
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "expected_effect": "Free budget by reducing weak trim/hold spend."
+      },
+      {
+        "id": "BG-06",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "confidence": 0.6,
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "expected_effect": "Cut low-iota kids soap spend to preserve portfolio roas."
+      },
+      {
+        "id": "BG-07",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "confidence": 0.6,
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "expected_effect": "Reduce budget on underperforming kids soap to offset new spend."
+      }
+    ],
+    "notes": "Corrected market leadership across all flagged wrong-holder contests to prioritize the highest-incremental SKUs. Raised bids only on scale-role generic cells with proven headroom and positive predicted lift, while trimming budgets from hold/trim campaigns to conserve allowance and protect the portfolio DRoAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11501,
+    "tokens_out": 11049,
+    "cost_usd": 0.0017814,
+    "wall_clock_s": 93.38297975
+  }
+}

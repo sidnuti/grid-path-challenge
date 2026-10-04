@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.6,
+    "direction": "surge",
+    "confidence": 0.75,
+    "rationale": "High reach z-score (3.627) indicates a statistically significant upward deviation, and the absence of an own-action confound suggests this is a genuine external signal. The simultaneous drop in CPM (-2.006) hints at favorable demand or competitive shifts driving volume up at lower cost."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 985,
+    "cost_usd": 0.016107,
+    "wall_clock_s": 10.263657792000004
+  }
+}

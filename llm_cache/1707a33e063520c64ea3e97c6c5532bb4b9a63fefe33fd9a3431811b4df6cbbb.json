@@ -1,0 +1,185 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "bid-s2-mum-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund highest-iroas Body Wash generic inventory; expect +\u20b9180 incrementality at ROAS >5.0"
+      },
+      {
+        "id": "bid-s2-del-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic demand; +\u20b9150 incrementality projected"
+      },
+      {
+        "id": "bid-s2-blr-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up high-iroas generic slots; +\u20b9140 incrementality projected"
+      },
+      {
+        "id": "bid-s2-pun-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand footprint on top-performing generic queries; +\u20b9120 incrementality"
+      },
+      {
+        "id": "bid-s4-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture high mroas_up20 shower gel share; +\u20b9110 incrementality"
+      },
+      {
+        "id": "bid-s4-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage peak delta revenue per impression; +\u20b9100 incrementality"
+      },
+      {
+        "id": "bid-s4-blr-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure efficient share in competitive shower gel segment; +\u20b990 incrementality"
+      },
+      {
+        "id": "bid-s4-pun-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Win incremental orders at lowest CPC in market; +\u20b985 incrementality"
+      },
+      {
+        "id": "bid-s1-pun-k09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Top-up high-iroas competitor conquest with remaining allowance; +\u20b960 incrementality"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "all",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "all",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Deployed to highest iroas/mroas_up20 generic buckets across Soap/Body Wash/Shower Gel portfolios; explicitly avoided OSA-blocked HYD Body Wash. Plan consumes ~\u20b9630 of the \u20b9764 allowance, preserving guardrails while maximizing late-run cumulative offtake."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12542,
+    "tokens_out": 9131,
+    "cost_usd": 0.00156329,
+    "wall_clock_s": 89.17307233300005
+  }
+}

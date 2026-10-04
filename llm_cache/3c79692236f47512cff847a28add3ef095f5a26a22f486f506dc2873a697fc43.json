@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.85,
+    "rationale": "The mechanical pick (C-S4-HYD) leads by only ~0.06 points, well within noise margins for a near-tie. However, C-S2-HYD dominates in slot1_share_7d (0.94 vs 0.21), indicating vastly superior and consistent top-auction visibility. This strong positional dominance suggests C-S2-HYD's true underlying performance is more stable and efficient, clearly favoring it over the mechanically-selected C-S4-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 2133,
+    "cost_usd": 0.033276,
+    "wall_clock_s": 21.773545000000013
+  }
+}

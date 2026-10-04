@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.66,
+    "rationale": "Scores are a near-tie (0.1862 vs 0.1846), so defaulting to the mechanical pick C-S3-BLR. Its much higher 7d slot1 share (0.86 vs 0.60) indicates it already dominates top-of-page visibility, so its bid is the one effectively driving the market and should be protected; C-S1-BLR can hold."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 337,
+    "tokens_out": 367,
+    "cost_usd": 0.0005834400000000001,
+    "wall_clock_s": 3.5845435410000164
+  }
+}

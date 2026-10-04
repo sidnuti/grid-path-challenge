@@ -1,0 +1,196 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "L1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 share to higher-iota shower gel in Bangalore generic search.",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ]
+      },
+      {
+        "id": "L2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental delivery demand with efficient shower gel over body wash.",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ]
+      },
+      {
+        "id": "L3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Maximize incremental shower gel capture in Hyderabad brand search.",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ]
+      },
+      {
+        "id": "L4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Win Pune brand searches with higher-value shower gel.",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ]
+      },
+      {
+        "id": "L5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Promote efficient body wash over shower gel in Pune generic search.",
+        "evidence_refs": [
+          "M:PUN:K05"
+        ]
+      },
+      {
+        "id": "L6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Lead Pune generic keyword 06 with superior shower gel incrementality.",
+        "evidence_refs": [
+          "M:PUN:K06"
+        ]
+      },
+      {
+        "id": "B1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "expected_effect": "Fund incremental shower gel offtake growth in Delhi within allowance.",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ]
+      },
+      {
+        "id": "B2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "small",
+        "confidence": 0.6,
+        "expected_effect": "Support high-iROAS body wash scaling in Hyderabad.",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ]
+      },
+      {
+        "id": "C1",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "expected_effect": "Reallocate budget from low-incrementality Mumbai soap to scale SKUs.",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ]
+      },
+      {
+        "id": "C2",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "expected_effect": "Reduce weak kids soap spend to protect portfolio ROAS floor.",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ]
+      },
+      {
+        "id": "CB1",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09",
+          "keyword_type": "competition"
+        },
+        "size": "small",
+        "confidence": 0.6,
+        "expected_effect": "Lower bid on losing competitor cell to curb ad waste.",
+        "evidence_refs": [
+          "C:C-S1-DEL/K09"
+        ]
+      },
+      {
+        "id": "H1",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "confidence": 0.6,
+        "expected_effect": "Prevent aggressive bidding on consistently weak Delhi soap campaign."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Reallocates spend from low-iota Soap and Kids SKUs to high-iROAS Shower Gel and Body Wash campaigns, while fixing six incorrect market holders to maximize incremental share. Net daily spend increase is minimal (+8 INR), preserving robust margin on the remaining runs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11081,
+    "tokens_out": 8084,
+    "cost_usd": 0.0013833500000000002,
+    "wall_clock_s": 65.71757779200004
+  }
+}

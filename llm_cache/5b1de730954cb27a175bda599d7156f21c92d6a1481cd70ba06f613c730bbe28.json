@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.6,
+    "rationale": "C-S3 holds the highest mechanical leader_score (1.5906), narrowly edging out C-S2 (1.5651). Per the explicit instruction to default to the mechanical pick in noisy near-ties absent clear contradictory evidence, C-S3 is selected. Although C-S1 exhibits a dominant slot1_share (0.94), its substantially lower composite score indicates weaker overall value generation or potential bid saturation, making it less optimal as the protected leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1883,
+    "cost_usd": 0.029511,
+    "wall_clock_s": 17.96341262499999
+  }
+}

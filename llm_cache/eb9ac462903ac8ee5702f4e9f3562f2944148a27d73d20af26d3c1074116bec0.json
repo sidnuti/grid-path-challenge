@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-DEL",
+    "confidence": 0.7,
+    "rationale": "C-S4-DEL has a higher mechanical leader score (1.6877 vs 1.5492) and a substantially higher top-slot share (0.86 vs 0.64), indicating stronger recent conversion velocity and auction success. This aligns with the mechanical ranking and supports designating it as the protected leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 549,
+    "cost_usd": 0.009282,
+    "wall_clock_s": 5.136658500000067
+  }
+}

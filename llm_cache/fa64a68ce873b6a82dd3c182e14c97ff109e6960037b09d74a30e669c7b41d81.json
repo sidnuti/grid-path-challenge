@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.7,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 3.724 is strongly flagged, indicating a significant deviation well beyond baseline noise. Absence of an own-action confound and clear mechanical surge point to an external demand shift. Flat CPM and OSA z-scores suggest the shock primarily impacted inventory/volume rather than pricing dynamics."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1398,
+    "cost_usd": 0.022302,
+    "wall_clock_s": 15.662590458999944
+  }
+}

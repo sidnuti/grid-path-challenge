@@ -1,0 +1,120 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-S1-DEL-L",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped-efficient soap campaign running out of budget daily; drives incremental off-take while staying within ROAS floor."
+      },
+      {
+        "id": "budget-S1-BLR-L",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped-efficient soap campaign running out of budget daily; maximizes spend on efficient generic/brand mix in BLR."
+      },
+      {
+        "id": "budget-S1-HYD-M",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Top up funding for HYD soap campaign to capture remaining efficient demand ahead of final runs."
+      },
+      {
+        "id": "bid-S4-MUM-K10-M",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Raise bid on high-iota competition keyword (iota=1.00, iroas=6.67) to win truly incremental orders at 36% slot."
+      },
+      {
+        "id": "bid-S4-HYD-K10-M",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aggressive bid lift on competition keyword with perfect incrementality (iota=1.00, iroas=7.14) and room at 58% slot."
+      },
+      {
+        "id": "bid-S4-PUN-K10-S",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-PUN/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Targeted bid increase on THIN competition cell featuring exceptional iroas (12.15) and iota 1.00 to extract maximum value."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Spend allocation focused on funding three run-out Fund campaigns (S1-DEL, S1-BLR, S1-HYD) to utilize core allowance. Remaining capacity directed to Shower Gel competition keywords (S4) where iota is 1.00 and iroas exceeds 6x, ensuring maximum incremental offtake while preserving portfolio ROAS margin above the floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12807,
+    "tokens_out": 9787,
+    "cost_usd": 0.00165652,
+    "wall_clock_s": 93.08050954099997
+  }
+}

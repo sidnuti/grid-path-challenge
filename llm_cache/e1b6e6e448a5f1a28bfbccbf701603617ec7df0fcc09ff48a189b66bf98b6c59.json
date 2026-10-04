@@ -1,0 +1,374 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BUD-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture remaining demand in Delhi fund market; improve iROAS contribution."
+      },
+      {
+        "id": "BUD-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fully fund highest iROAS portfolio segment; maximize incremental Shower Gel sales."
+      },
+      {
+        "id": "BUD-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free allowance from capped weak Body Wash market."
+      },
+      {
+        "id": "BUD-04",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Eliminate low-incrementality Kids Soap spend in high-competition Delhi."
+      },
+      {
+        "id": "BUD-05",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Stop bleeding on underperforming Kids Soap Bangalore market."
+      },
+      {
+        "id": "CON-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Displace S3 on contested competitor term; unlock higher incremental revenue per impression."
+      },
+      {
+        "id": "CON-02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S3 to avoid self-competition and wasted bid spend."
+      },
+      {
+        "id": "CON-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder on Delhi competitor keyword."
+      },
+      {
+        "id": "CON-04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce inefficient sibling bidding."
+      },
+      {
+        "id": "CON-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure top position on generic term where S4 leads incrementally."
+      },
+      {
+        "id": "CON-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield generic ground to S4 where it has clear score advantage."
+      },
+      {
+        "id": "BD-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push efficient generic body wash cell upward without hitting slot-cap."
+      },
+      {
+        "id": "BD-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incremental lift on scalable shower gel generic term."
+      },
+      {
+        "id": "HLD-01",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Block raises on trim market to preserve portfolio headroom."
+      },
+      {
+        "id": "HLD-02",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Maintain trim stance on low-iROAS Mumbai soap."
+      },
+      {
+        "id": "HLD-03",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Prevent overspend on held soap market."
+      },
+      {
+        "id": "HLD-04",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Stabilize Hyderabad trim market."
+      },
+      {
+        "id": "HLD-05",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free allowance from Pune trim market."
+      },
+      {
+        "id": "HLD-06",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Lock trim stance on weak kids soap market."
+      },
+      {
+        "id": "HLD-07",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Stabilize Hyderabad kids soap spend."
+      },
+      {
+        "id": "HLD-08",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Cap spend on lowest ROI kids soap market."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "S3",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "S5",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Run 5 reallocates budget from trimmed Kids/Soap markets to efficiently scaling Shower Gel and Body Wash funds. Contested markets corrected to align winners with highest incremental scores. Bid bumps target open slots in high-yield generic terms while respecting slot-cap guardrails and OSA thresholds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11134,
+    "tokens_out": 8467,
+    "cost_usd": 0.00143473,
+    "wall_clock_s": 78.81840129199998
+  }
+}

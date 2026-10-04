@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "C-S1-MUM holds the higher mechanical leader_score and dominates the top slot with 95% share, validating the mechanical pick and indicating strong natural performance that requires protection rather than aggressive bidding from competitors."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1000,
+    "cost_usd": 0.01605,
+    "wall_clock_s": 9.585974834000126
+  }
+}

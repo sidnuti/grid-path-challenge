@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.85,
+    "rationale": "C-S3-MUM holds both a higher mechanical leader score (0.7212 vs 0.6806) and a significantly better historical slot1 share (0.87 vs 0.65). The supporting performance metrics align with and reinforce the mechanical ranking, providing clear evidence to prioritize this SKU as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1664,
+    "cost_usd": 0.02601,
+    "wall_clock_s": 17.89335516699998
+  }
+}

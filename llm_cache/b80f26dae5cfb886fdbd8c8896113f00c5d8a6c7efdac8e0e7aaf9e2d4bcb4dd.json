@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "While the leader_scores are nearly tied, C-S1-HYD dominates with a slot1_share_7d of 0.96 compared to 0.34 for C-S3-HYD. Retaining the mechanically favored campaign preserves momentum and protects a bid that is already effectively securing top placement, whereas shifting leadership would undermine the stronger performer without clear upside."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 859,
+    "cost_usd": 0.013941,
+    "wall_clock_s": 9.221061208999998
+  }
+}

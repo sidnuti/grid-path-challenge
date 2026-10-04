@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.8,
+    "rationale": "Mechanical scores for S2 (1.75) and S3 (1.66) are nearly tied, introducing noise. S3's slot1_share_7d (0.95) is vastly superior to S2's (0.36), indicating clear auction dominance and market leadership that outweighs the slight mechanical deficit."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 421,
+    "tokens_out": 2174,
+    "cost_usd": 0.033873,
+    "wall_clock_s": 22.738841957999966
+  }
+}

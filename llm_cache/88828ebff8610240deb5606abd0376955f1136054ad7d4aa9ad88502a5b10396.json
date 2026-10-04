@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach exhibits a strong 5.0 z-score surge while CPM and OSA remain at baseline. The absence of an own-action confound flag and lack of CPM pressure strongly suggest a genuine exogenous demand shift rather than a bidding artifact or competitive price war."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 441,
+    "tokens_out": 1661,
+    "cost_usd": 0.026238,
+    "wall_clock_s": 15.26392266699986
+  }
+}

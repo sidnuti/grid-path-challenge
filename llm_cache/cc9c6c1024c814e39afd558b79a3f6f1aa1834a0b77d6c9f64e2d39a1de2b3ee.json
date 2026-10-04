@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.72,
+    "rationale": "Mechanical leader_score favours C-S3-DEL (0.2106 vs 0.1966), a near-tie within noise, but the corroborating evidence supports it: C-S3-DEL already holds 91% of slot-1 impressions over 7d versus 55% for C-S1-DEL, so it is the incumbent whose bid should be protected while C-S1-DEL holds. No evidence clearly favours the alternative."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 336,
+    "tokens_out": 377,
+    "cost_usd": 0.0005955699999999999,
+    "wall_clock_s": 3.602189040999974
+  }
+}

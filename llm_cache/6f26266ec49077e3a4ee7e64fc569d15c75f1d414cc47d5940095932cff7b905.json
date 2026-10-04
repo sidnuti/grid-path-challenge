@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.85,
+    "rationale": "C-S1-DEL ranks highest on both leader_score and slot1_share_7d, with a clear margin over the runner-up. This consistent outperformance strongly validates the mechanical selection and justifies protecting its bid."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 373,
+    "tokens_out": 1390,
+    "cost_usd": 0.021969,
+    "wall_clock_s": 15.23110404099998
+  }
+}

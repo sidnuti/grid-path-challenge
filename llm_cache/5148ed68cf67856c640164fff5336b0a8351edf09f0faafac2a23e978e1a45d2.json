@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.65,
+    "rationale": "Although C-S4-BLR holds a marginally higher mechanical leader_score (1.2024 vs 1.0884), the scores constitute a noisy near-tie. C-S2-BLR exhibits substantially stronger practical market leadership with a 0.86 slot1_share_7d compared to 0.72, indicating it reliably captures premium ad placement. In a noisy near-tie, superior observed positional dominance warrants overriding the mechanical composite, making C-S2-BLR the appropriate bid-protected leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2420,
+    "cost_usd": 0.03735,
+    "wall_clock_s": 23.61678916599999
+  }
+}

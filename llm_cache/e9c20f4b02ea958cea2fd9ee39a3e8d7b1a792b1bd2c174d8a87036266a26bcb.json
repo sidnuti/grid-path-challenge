@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 9.5,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Extreme +12.3\u03c3 reach spike paired with a substantial -5.3\u03c3 CPM drop and neutral OSA strongly points to a genuine external demand shift or supply influx. The absence of an own-action confound confirms the movement is not an internal bidding artifact, validating it as a real market shock worth acting on."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 443,
+    "tokens_out": 1020,
+    "cost_usd": 0.016629,
+    "wall_clock_s": 10.519289125
+  }
+}

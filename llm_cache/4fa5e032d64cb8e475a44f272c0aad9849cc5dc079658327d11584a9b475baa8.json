@@ -1,0 +1,56 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-s2-del-run1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "expected_effect": "Absorb allowance into efficient fund campaign (iroas 4.99) that has run out of budget 5 of last 7 days to drive incremental body wash sales."
+      },
+      {
+        "id": "budget-s4-blr-run1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "expected_effect": "Absorb allowance into efficient fund campaign (iroas 5.67) with recent run-outs to scale shower gel volume in BLR safely above ROAS floor."
+      },
+      {
+        "id": "bid-s1-mum-k03-run1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-MUM/K03"
+        ],
+        "expected_effect": "Target high-incrementality generic keyword (iota 1.00, mroas_up20 3.66) where S1 holds only 31% slot-1 share to capture incremental market share in MUM."
+      }
+    ],
+    "notes": "Strategic allocation of the 300 INR daily allowance targets two budget-capped fund campaigns and one scale campaign with clear bid headroom. All selections show strong iroas and iota, ensuring incremental off-take growth while maintaining portfolio ROAS above the defined floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24091,
+    "tokens_out": 18546,
+    "cost_usd": 0.00313371,
+    "wall_clock_s": 161.604862917
+  }
+}

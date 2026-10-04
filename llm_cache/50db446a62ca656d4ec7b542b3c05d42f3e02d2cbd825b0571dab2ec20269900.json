@@ -1,0 +1,213 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift impression share to highest-incremental SKU S1 in Delhi generic search."
+      },
+      {
+        "id": "INT-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reclaim top slot in Hyderabad for efficient Soap demand capture."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move shower gel leader to S4 for stronger incremental lift."
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate shower gel visibility in Bangalore to drive cross-sell."
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture leading position in Pune generic queries with strongest iROAS asset."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure shower gel leadership in Pune for efficient growth."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM",
+          "C:C-S1-MUM/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale efficient generic volume in Mumbai; CLEARS verdict, scale role."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up high-mroas shower gel generic cell in Bangalore."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Grow efficient body wash demand in Hyderabad; iROAS 2.90."
+      },
+      {
+        "id": "INT-10",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce wasted spend; hold role, iROAS 1.59, ran out 6/7 days."
+      },
+      {
+        "id": "INT-11",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Drop trim-tier spend; iROAS 1.24, freeing allowance for scale actions."
+      },
+      {
+        "id": "INT-12",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Prune hold-tier Kids Soap budget; low iROAS 1.79, releases \u20b9300 day allowance."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Cuts on hold/trim campaigns (S3-MUM, S5-MUM, S5-DEL) free the \u20b9300/day allowance to fund targeted bid raises on scale roles and lead-market shifts in DEL/HYD/PUN. Allocation prioritizes high iROAS/iOTA cells while preserving portfolio direct ROAS above the 4.17 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11301,
+    "tokens_out": 10143,
+    "cost_usd": 0.00165762,
+    "wall_clock_s": 75.93437504200001
+  }
+}

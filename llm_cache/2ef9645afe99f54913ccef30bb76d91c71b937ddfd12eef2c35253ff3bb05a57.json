@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "The mechanical score favors C-S1-MUM (0.6295 vs 0.5822), and this is strongly reinforced by its dominant slot1_share_7d of 0.91 compared to 0.44 for the nearest competitor. This indicates stable top-positioning and validates the mechanical pick despite the narrow numerical gap."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1564,
+    "cost_usd": 0.024582,
+    "wall_clock_s": 14.47126275000005
+  }
+}

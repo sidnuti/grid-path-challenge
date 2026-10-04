@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.5,
+    "confidence": 0.5,
+    "rationale": "Current realized dROAS (1.72) is materially below the goal (2.22); implementing a full bid raise risks further efficiency dilution. While low order volume (19) creates measurement noise, halving the proposed raise mitigates the risk of accelerating spend during a period of underperformance while preserving some algorithmic momentum."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 474,
+    "tokens_out": 3181,
+    "cost_usd": 0.049137,
+    "wall_clock_s": 36.857620459
+  }
+}

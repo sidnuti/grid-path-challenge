@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 0.9,
+    "confidence": 0.7,
+    "rationale": "Order volume is low (19), making the dROAS estimate highly volatile. Realized dROAS (1.72) trails the 2.22 target, indicating potential inefficiency with aggressive bidding. Applied a modest dampener to preserve upside while reducing exposure to uncertain signals."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 474,
+    "tokens_out": 1796,
+    "cost_usd": 0.028362,
+    "wall_clock_s": 21.60186920900003
+  }
+}

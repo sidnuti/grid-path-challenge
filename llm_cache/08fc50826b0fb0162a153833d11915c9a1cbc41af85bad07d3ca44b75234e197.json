@@ -1,0 +1,141 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "RAISE-S1-DEL-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Win incremental impressions on high-value brand term with currently low slot share."
+      },
+      {
+        "id": "RAISE-S1-MUM-K02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-MUM",
+          "C:C-S1-MUM/K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental demand on branded query where current position is weak."
+      },
+      {
+        "id": "RAISE-S1-HYD-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-HYD",
+          "C:C-S1-HYD/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand reach on efficient brand keyword with significant slot deficit."
+      },
+      {
+        "id": "CUT-S1-MUM-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-MUM/K09",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce wasteful spend on low-incrementality competition queries to protect DROAS floor."
+      },
+      {
+        "id": "CUT-S1-DEL-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-DEL/K09",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stop budget bleed on underperforming competitor targeting."
+      },
+      {
+        "id": "YIELD-S3-DEL-K02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back weaker holder to prevent redundant bidding against dominant, higher-ROAS S1."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Dropped all previously rejected leads and budget raises due to failed goals, insufficient run-outs, or lack of allowance. Focused execution on high-incrementality brand keyword raises where slot share is low, alongside targeted competition bid cuts to defend the DROAS floor. Yielded market on weaker S3 holders in contested DEL/HYD brand queries to streamline spend efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11338,
+    "tokens_out": 9040,
+    "cost_usd": 0.0015153400000000002,
+    "wall_clock_s": 75.89076295899997
+  }
+}

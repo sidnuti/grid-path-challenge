@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score slightly favors C-S4-BLR (1.8840 vs 1.8389). Despite C-S2-BLR's higher recent slot share, the near-tie in core efficiency metrics aligns with preferring the mechanical pick when clear evidence does not strongly contradict it. Protecting the slight efficiency edge of C-S4-BLR optimizes return for this market."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 867,
+    "cost_usd": 0.014055,
+    "wall_clock_s": 9.440807833000008
+  }
+}

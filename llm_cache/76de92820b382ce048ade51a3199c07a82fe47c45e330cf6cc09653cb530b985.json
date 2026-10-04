@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.85,
+    "rationale": "C-S4-PUN has the highest leader_score (1.8233), though C-S2-PUN (1.7079) is close enough to be a noisy near-tie. However, C-S4-PUN also holds a dominant 0.98 slot1 share over the last 7 days vs C-S2-PUN's 0.18, corroborating the mechanical pick with clear behavioral evidence. Default to the mechanical leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 404,
+    "tokens_out": 392,
+    "cost_usd": 0.00063948,
+    "wall_clock_s": 3.510135959000081
+  }
+}

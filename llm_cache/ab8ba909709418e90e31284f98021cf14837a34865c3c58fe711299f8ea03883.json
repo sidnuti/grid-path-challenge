@@ -1,0 +1,179 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce Kids Soap spend across cities. Low iROAS (~1.0) and high displacement risk threaten the fragile portfolio ROAS floor at 4.587. Freed budget protects against overspend."
+      },
+      {
+        "id": "INT-2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift brand search leadership to Shower Gel (score 1.865), the highest incremental revenue driver in Delhi, displacing lower-efficiency Soap competitors."
+      },
+      {
+        "id": "INT-3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture Mumbai brand search intent with efficient Shower Gel inventory over weaker holders."
+      },
+      {
+        "id": "INT-4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect Hyderabad brand queries to top incremental SKU S4."
+      },
+      {
+        "id": "INT-5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong-holder in Pune for brand searches, moving traffic to S4."
+      },
+      {
+        "id": "INT-6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Promote efficient generic Soap holder S3 in Bangalore to maximize incremental lift over weaker S5."
+      },
+      {
+        "id": "INT-7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fix wrong holder for generic searches in Hyderabad."
+      },
+      {
+        "id": "INT-8",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce spend on competitor keywords where direct ROAS is low and iota is high (displacement), protecting portfolio efficiency."
+      },
+      {
+        "id": "INT-9",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-DEL/K03",
+          "C:C-S3-DEL/K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim MISSES verdict cells in Delhi that show poor return relative to goal, defending the strict ROAS floor."
+      },
+      {
+        "id": "INT-10",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block all increases on Kids Soap campaigns until broader portfolio metrics recover well above floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "S5",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "S4",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Portfolio ROAS sits dangerously close to the 4.587 floor (headroom 0.0). Immediate budget contraction on low-iROAS Kids Soap (INT-1) and trimmed competitor/generic spending in Delhi (INT-8, INT-9) safeguards the floor. Shifting brand query leadership to Shower Gel (INT-2 to 5) captures the highest incremental revenue per impression without additional net spend."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23350,
+    "tokens_out": 16745,
+    "cost_usd": 0.00287735,
+    "wall_clock_s": 136.38736516599988
+  }
+}

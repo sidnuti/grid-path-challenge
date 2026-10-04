@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.8,
+    "rationale": "Mechanical leader C-S1-PUN retains the pick; its negligible score advantage is strongly corroborated by a substantially higher slot1_share_7d (0.86 vs 0.58), confirming dominant auction positioning and mitigating score noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1433,
+    "cost_usd": 0.022545,
+    "wall_clock_s": 15.202514500000007
+  }
+}

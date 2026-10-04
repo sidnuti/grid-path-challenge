@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.6,
+    "rationale": "C-S1-HYD holds a vastly superior top-slot share (0.85 vs 0.56), signaling stronger auction efficiency and brand visibility. Given the near-tie in mechanical scores, this clear performance advantage justifies overriding the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1285,
+    "cost_usd": 0.020331,
+    "wall_clock_s": 12.323264082999998
+  }
+}

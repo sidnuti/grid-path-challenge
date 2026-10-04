@@ -1,0 +1,201 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase brand visibility for Body Wash in DEL where iroas=6.12."
+      },
+      {
+        "id": "int-2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental competition share in DEL (iota=0.89)."
+      },
+      {
+        "id": "int-3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Grow brand search capture in BLR (iroas=5.14)."
+      },
+      {
+        "id": "int-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Win incremental competitor orders in BLR (iota=0.89)."
+      },
+      {
+        "id": "int-5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale high-iRoAS brand bids in HYD (iroas=7.42)."
+      },
+      {
+        "id": "int-6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Aggressively scale efficient generic spend for Shower Gel in DEL (mroas=7.35)."
+      },
+      {
+        "id": "int-7",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove budget cap for highly efficient fund campaign that ran out 4 of last 7 days."
+      },
+      {
+        "id": "int-8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Assign slot leadership to S2 which holds highest incremental score (1.938)."
+      },
+      {
+        "id": "int-9",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step S4 back to preserve slot 1 for higher-IROAS S2."
+      },
+      {
+        "id": "int-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift body wash dominance to S2 in DEL on brand search."
+      },
+      {
+        "id": "int-11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S4 overlap in DEL:K01 to lower internal CPC drag."
+      },
+      {
+        "id": "int-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Make S4 the leader for shower gel generic in MUM where it holds best incremental revenue."
+      },
+      {
+        "id": "int-13",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 from MUM:K05 to prevent cannibalization."
+      }
+    ],
+    "stance": [],
+    "notes": "Focused spend allocation on high-iota brand and competition keywords across scalable Body Wash campaigns in DEL, BLR, and HYD. Raised budget on C-S2-DEL to prevent early run-outs. Resolved internal SKU conflicts in BLR:K01, DEL:K01, and MUM:K05 by shifting leadership to the SKU with the highest incremental score, preserving ROAS while increasing effective reach."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12500,
+    "tokens_out": 11600,
+    "cost_usd": 0.001883,
+    "wall_clock_s": 104.49870308300001
+  }
+}

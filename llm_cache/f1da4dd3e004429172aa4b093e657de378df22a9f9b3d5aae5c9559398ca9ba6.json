@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.6,
+    "direction": "surge",
+    "confidence": 0.88,
+    "rationale": "Reach z-score of 4.586 is a large, highly significant deviation, well beyond noise thresholds. CPM is essentially flat (z=0.203) and OSA is unchanged (z=0.0), indicating the reach surge occurred at stable prices \u2014 consistent with a genuine demand-side or inventory-availability shift rather than a price/competition cost shock. The own-action confound flag is False, so this is unlikely to be the harness's own prior bid/budget change landing in the data. The decoupled pattern (big reach move, no price move) supports a real market surge in available reach."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 432,
+    "tokens_out": 466,
+    "cost_usd": 0.0007423400000000001,
+    "wall_clock_s": 4.221490915999993
+  }
+}

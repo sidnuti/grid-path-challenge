@@ -1,0 +1,190 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "CB-S1-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free budget/headroom; hold role with low iroas (1.90) and fully capped. Redirects spend to efficient cells."
+      },
+      {
+        "id": "CB-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free budget/headroom; hold role, weak iroas (1.42), ran out 5/7 days. Reduces bleed on low-incrementality spend."
+      },
+      {
+        "id": "CB-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget/headroom; hold role, iroas 0.90, ran out 6/7. Trims inefficient Soap generic/brand overlap."
+      },
+      {
+        "id": "RT-S2-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unblock efficient fund SKU; ran out 7/7, high iroas (3.79). Budget lift enables bid captures on wide-open generic cells."
+      },
+      {
+        "id": "RB-S2-DEL",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale incremental generic demand in DEL; slot shares ~60%, mroas_up20 >4.5, CLEARS verdict."
+      },
+      {
+        "id": "RB-S2-MUM",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow off-take for efficient scale SKU in MUM; generic cells well below 80% cap, high incremental yield."
+      },
+      {
+        "id": "RB-S2-HYD",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05",
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture white-space in HYD generic; slot shares 55-65%, iroas 3.98, strong mroas projections."
+      },
+      {
+        "id": "RB-S2-PUN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand efficient scale presence in PUN; generic cells open, avoids blocked brand/competition slots."
+      },
+      {
+        "id": "RB-S2-BLR",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage newly freed budget for precise bid lifts; generic slots at 53-59%, high mroas_up20."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "defend_min",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "hold",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Dropped previously rejected intents due to blocked slots (\u226580%), MISSES verdicts, and insufficient run-out days for budget raises. Shifted spend from underperforming hold/trim Soap campaigns (DEL, BLR, HYD) to high-iROAS Body Wash generic cells where slot capacity remains open. This rebalance preserves the 4.82 direct ROAS floor while expanding true incremental offtake across the remaining 3 runs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11408,
+    "tokens_out": 9839,
+    "cost_usd": 0.00162131,
+    "wall_clock_s": 97.07565054200006
+  }
+}

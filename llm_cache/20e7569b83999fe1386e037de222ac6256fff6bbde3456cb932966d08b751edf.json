@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach exhibits a strong positive deviation (z=5.0, flagged) while CPM remains neutral (z=0.0) and the own-action confound is absent. This decoupling strongly indicates a genuine demand or inventory surge rather than competitive pricing dynamics or self-referential measurement artifacts."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 441,
+    "tokens_out": 1659,
+    "cost_usd": 0.026208,
+    "wall_clock_s": 17.57183150000003
+  }
+}

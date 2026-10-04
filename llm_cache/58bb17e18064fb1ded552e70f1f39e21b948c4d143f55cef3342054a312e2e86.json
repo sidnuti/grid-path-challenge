@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10,
+    "direction": "surge",
+    "confidence": 0.82,
+    "rationale": "Reach spike of 11.5 sigma far exceeds noise thresholds, and the own-action confound flag is false with OSA flat (z=0.0), so this is unlikely to be the harness reacting to its own prior bid/budget move. CPM is slightly down (z=-1.87) rather than elevated, which argues against a price/competition shock and is consistent with a genuine demand/volume expansion: far more auction availability arriving at unchanged or marginally cheaper prices. Magnitude clamps near the top of the scale given the extreme z-score; confidence slightly tempered because CPM did not confirm the surge upward."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 432,
+    "tokens_out": 754,
+    "cost_usd": 0.0011023399999999998,
+    "wall_clock_s": 7.9654610830000365
+  }
+}

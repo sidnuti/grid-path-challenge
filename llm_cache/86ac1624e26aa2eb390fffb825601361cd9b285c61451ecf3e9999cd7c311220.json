@@ -1,0 +1,234 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-BUD-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture full daily demand for efficient fund; drive incremental off-take."
+      },
+      {
+        "id": "INT-BUD-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Expand high-IoTA competitor spend; protect incremental share."
+      },
+      {
+        "id": "INT-BUD-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Maximize efficient fund spend; align with headroom."
+      },
+      {
+        "id": "INT-BUD-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fuel constrained efficient fund in BLR."
+      },
+      {
+        "id": "INT-BUD-05",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Modest boost for recently run-out shower gel fund."
+      },
+      {
+        "id": "INT-BUD-06",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Stabilize budget for PUN soap fund."
+      },
+      {
+        "id": "INT-BID-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Leverage scale headroom and high mroas_up20 to increase incremental orders."
+      },
+      {
+        "id": "INT-BID-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase competitive bid share in high-potential MUM body wash."
+      },
+      {
+        "id": "INT-BID-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Push efficient HYD body wash towards saturation."
+      },
+      {
+        "id": "INT-LEAD-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Correct wrong-holder status; shift slot leadership to S2 (best incremental score)."
+      },
+      {
+        "id": "INT-LEAD-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift leadership from S5 to S1 (best incremental score)."
+      },
+      {
+        "id": "INT-LEAD-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift leadership from S2 to S1 (best incremental score)."
+      },
+      {
+        "id": "INT-LEAD-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift leadership from S2 to S1 (best incremental score)."
+      },
+      {
+        "id": "INT-LEAD-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift leadership from S3 to S1 (best incremental score)."
+      },
+      {
+        "id": "INT-LEAD-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift leadership from S4 to S1 (best incremental score)."
+      },
+      {
+        "id": "INT-LEAD-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift leadership from S3 to S1 (best incremental score)."
+      }
+    ],
+    "notes": "Concentrates spend on fund campaigns that consistently run out and scale campaigns with proven bid headroom and high mroas_up20. Resolves 7 contested markets where a weaker SKU held the leading impression share, capturing truly incremental traffic. Portfolio ROAS buffer remains sufficient to absorb increased efficient spend while meeting the floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12222,
+    "tokens_out": 9576,
+    "cost_usd": 0.00161154,
+    "wall_clock_s": 85.47674433399999
+  }
+}

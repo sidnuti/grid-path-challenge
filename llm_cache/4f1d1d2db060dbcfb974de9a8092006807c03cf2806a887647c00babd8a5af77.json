@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.6,
+    "rationale": "Realised dROAS (1.975) trails the 2.22 target, signaling margin pressure at current bid levels. With only 23 recent orders, performance volatility is high and marginal return estimates are noisy. Accepting the full +10% raise risks further efficiency degradation before stable scaling is confirmed. Dampening to 0.7x the proposed delta cautiously limits upside exposure while remaining aligned with the campaign\u2019s growth directive."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 461,
+    "tokens_out": 1924,
+    "cost_usd": 0.030243,
+    "wall_clock_s": 20.37708699999996
+  }
+}

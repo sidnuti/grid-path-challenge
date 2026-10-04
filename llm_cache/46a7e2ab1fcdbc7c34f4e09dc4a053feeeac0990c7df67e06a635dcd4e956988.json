@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.72,
+    "rationale": "Mechanical leader_score favors C-S3-BLR (0.7778 vs 0.7284). Although the margin is narrow and the score is noisy, the corroborating evidence points the same way: C-S3-BLR also holds the higher 7-day slot1 share (0.86 vs 0.72), indicating stronger current position in the auction. No evidence clearly favors C-S1-BLR, so the mechanical pick stands."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 313,
+    "cost_usd": 0.0005166799999999999,
+    "wall_clock_s": 3.168625417000044
+  }
+}

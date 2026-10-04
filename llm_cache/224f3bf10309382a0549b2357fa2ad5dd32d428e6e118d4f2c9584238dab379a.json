@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.8,
+    "rationale": "C-S3-BLR has the higher mechanical leader_score (0.7778 vs 0.7284) and stronger performance on slot1_share_7d (0.86 vs 0.72), fully supporting the mechanical pick with no overriding evidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1421,
+    "cost_usd": 0.022365,
+    "wall_clock_s": 12.472577041000022
+  }
+}

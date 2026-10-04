@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.5,
+    "confidence": 0.45,
+    "rationale": "Low 28-day order count (17) creates high volume volatility, making efficiency metrics unstable. Realised dROAS (1.59) sits well below the 2.22 target, indicating that additional spend from a bid raise is likely to worsen rather than improve returns. Dampening the +10% mechanical increase reduces exposure to inefficient auction pressure while preserving optionality if performance stabilises."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 2290,
+    "cost_usd": 0.035745,
+    "wall_clock_s": 24.89872129200012
+  }
+}

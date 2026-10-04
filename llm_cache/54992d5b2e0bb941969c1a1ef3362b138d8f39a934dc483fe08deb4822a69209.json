@@ -1,0 +1,231 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BUD-S1DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unblocks efficient Soap ads that ran out of budget 7 days ago; adds high baseline volume."
+      },
+      {
+        "id": "BUD-S1HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funds strong brand/generic mix in Hyderabad; clears 7-day budget cap."
+      },
+      {
+        "id": "BUD-S2DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Supports Body Wash fund campaign that capped 5 days ago; sustains efficient spend."
+      },
+      {
+        "id": "BID-S4PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Aggressively captures slot-1 volume at exceptional mroas_up20 (12.15) for Shower Gel in Pune."
+      },
+      {
+        "id": "BID-S4HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Maximizes high-return generic share in Hyderabad; mroas_up20 9.09 justifies large lift."
+      },
+      {
+        "id": "BID-S4BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secures premium generic inventory in Bangalore with mroas_up20 7.14."
+      },
+      {
+        "id": "BID-S4DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lifts bid on profitable Delhi generic cell (mroas_up20 7.01) to capture additional demand."
+      },
+      {
+        "id": "LD-BLR-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shifts leadership to best-incremental SKU S4 in Bangalore brand search."
+      },
+      {
+        "id": "YL-BLR-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Steps back weaker S1 bid in BLR:K01 to reduce internal cannibalization."
+      },
+      {
+        "id": "LD-DEL-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assigns Delhi brand leadership to highest-scoring SKU S4."
+      },
+      {
+        "id": "YL-DEL-K01-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yields DEL:K01 from S2 to prevent overlap and improve overall click-through efficiency."
+      },
+      {
+        "id": "LD-DEL-K02-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Takes Delhi secondary brand slot with strongest performer S1."
+      },
+      {
+        "id": "YL-DEL-K02-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Steps back S3 in DEL:K02 to cede space to higher ROI asset."
+      },
+      {
+        "id": "LD-HYD-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Moves Hyderabad brand leadership to S4 based on superior incremental score."
+      },
+      {
+        "id": "YL-HYD-K01-S5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduces S5 share in HYD:K01 to free impression budget for better-converting SKUs."
+      }
+    ],
+    "stance": [],
+    "notes": "Allocated allowance toward unfunded efficient campaigns (S1-DEL, S1-HYD, S2-DEL) and scaled bids on Shower Gel generic cells with top-tier mroas_up20 (PUN, HYD, BLR, DEL). Restructured ownership across major contested brand markets to route traffic to best-incremental SKUs (S4/S1), preventing internal competition while preserving protected brand/competitor assets and maintaining ROAS floor safety."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12110,
+    "tokens_out": 10894,
+    "cost_usd": 0.00177952,
+    "wall_clock_s": 83.08383941599999
+  }
+}

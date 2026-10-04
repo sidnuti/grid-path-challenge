@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach jumped 5 standard deviations while CPM and OSA are unflagged (z=0.0) and the own-action confound flag is false. A flat CPM rules out a price/competition-driven move, and no own bid/budget change is showing up in the data, so the clean 5\u03c3 reach surge reads as a genuine demand shift (more auctions/impressions) rather than a harness confound or noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 431,
+    "tokens_out": 404,
+    "cost_usd": 0.00066447,
+    "wall_clock_s": 3.9613404589999845
+  }
+}

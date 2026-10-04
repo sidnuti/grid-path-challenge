@@ -1,0 +1,196 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reclaim incremental share in BLR generic contest; S4 has highest i-rev/impression score over S2."
+      },
+      {
+        "id": "INT-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder in BLR soap competition; S1 delivers higher incremental ROI than S3."
+      },
+      {
+        "id": "INT-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift soap generic ownership to S1 (best i-rev) in DEL."
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take generic body wash leadership in DEL to S4 (scale tier) for maximum incremental output."
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Correct wrong holder in DEL soap competition; S1 leads on incremental value."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move soap generic leadership to S1 in MUM."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Correct wrong holder in MUM soap competition; S1 delivers better iROAS."
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Acquire shower gel brand leadership in PUN from S1; S4 has superior incremental revenue per impression."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-mroas generic cell (5.71) in scale-tier DEL shower gel campaign; low absolute cost well within allowance."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push efficient generic spend in MUM shower gel (mroas 6.35); supports scale role."
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K07",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture high incremental lift (mroas_up20 7.06) in thin-delivery generic cell; minimal budget impact."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "hold",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Corrected all flagged wrong-holder contests to route impressions to the SKU with the highest incremental revenue score. Reserved aggressive bid raises for two highly efficient Shower Gel generic cells (DEL/MUM) and one thin but high-mroas Soap cell (PUN), keeping total projected addition well under the \u20b9300 daily allowance. Dropped previously rejected broad campaign raises to stay within limits while protecting portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11111,
+    "tokens_out": 9633,
+    "cost_usd": 0.0015856199999999998,
+    "wall_clock_s": 92.17553066699998
+  }
+}

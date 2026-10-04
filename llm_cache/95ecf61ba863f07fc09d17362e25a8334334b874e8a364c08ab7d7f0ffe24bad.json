@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.65,
+    "rationale": "Mechanical leader_score favours C-S2-PUN (1.6131) over near-tie C-S4-PUN (1.4817). The supporting evidence does not clearly favour the runner-up: C-S4-PUN's 7d slot1_share (0.19) is below C-S2-PUN's (0.27), and the only high slot1_share candidate (C-S1-PUN, 0.94) trails on score by a wide margin. Default to the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 405,
+    "tokens_out": 604,
+    "cost_usd": 0.00090485,
+    "wall_clock_s": 4.254617291999921
+  }
+}

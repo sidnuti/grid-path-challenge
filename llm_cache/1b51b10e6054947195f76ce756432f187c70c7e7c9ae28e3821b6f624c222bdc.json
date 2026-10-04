@@ -1,0 +1,421 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 leadership to S2 (Body Wash), which has the highest incremental revenue per impression in this contested market."
+      },
+      {
+        "id": "LM-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reallocate lead to S3 (Soap), correcting the misplaced holder S1."
+      },
+      {
+        "id": "LM-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move leadership to S4 (Shower Gel) where it scores highest incrementally."
+      },
+      {
+        "id": "LM-BLR-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Direct spend to S3, the superior incremental performer over S1."
+      },
+      {
+        "id": "LM-DEL-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; transfer lead to S3 for better incremental yield."
+      },
+      {
+        "id": "LM-DEL-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S3, closing the gap with S1 and improving portfolio iROAS."
+      },
+      {
+        "id": "LM-DEL-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reassign lead to S3 where incremental value per impression is highest."
+      },
+      {
+        "id": "LM-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfer leadership to S4 (Shower Gel) to capture superior incrementality."
+      },
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move lead from S1 to S2 (Body Wash), significantly boosting incremental reach."
+      },
+      {
+        "id": "LM-HYD-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct misallocation; S3 edges out S1 on incremental score."
+      },
+      {
+        "id": "LM-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift lead to S2 where it narrowly beats S4 on incremental performance."
+      },
+      {
+        "id": "LM-HYD-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect spend to S3, the more efficient competitor keyword leader."
+      },
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Take lead from S3 to S2, leveraging higher incremental conversion."
+      },
+      {
+        "id": "LM-MUM-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move leadership to S3 for better incremental returns over S1."
+      },
+      {
+        "id": "LM-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift lead to S2, capitalizing on its superior incremental score."
+      },
+      {
+        "id": "LM-MUM-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reallocate lead to S3, the clearer winner on incremental metrics."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfer leadership from S5 to S2, driving meaningful incremental growth."
+      },
+      {
+        "id": "LM-PUN-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct holder mismatch; S3 provides stronger incremental lift than S1."
+      },
+      {
+        "id": "LM-PUN-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move lead to S3, securing the highest incremental value in this tight contest."
+      },
+      {
+        "id": "LM-PUN-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:PUN:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect leadership to S3, improving competition keyword efficiency."
+      },
+      {
+        "id": "RB-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up high-iota competition cell to capture remaining efficient demand within allowance."
+      },
+      {
+        "id": "RB-DEL-GEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bid on S4 shower gel competition keyword (iota 0.87) to maximize incremental sales."
+      },
+      {
+        "id": "RB-HYD-GEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10",
+          "M:HYD:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Aggressively bid on top-scoring competition cell to drive volume while maintaining ROAS floor."
+      },
+      {
+        "id": "RB-PUN-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10",
+          "M:PUN:K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Modest bid increase on efficient competition keyword to secure top slots without overspending."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocated market leadership across all cities to the SKU with the highest incremental revenue per impression, resolving 20 wrong-holder mismatches flagged in the contested market matrix. Augmented with targeted bid raises on high-iota competition cells in scale campaigns to exhaust the daily allowance efficiently without breaching the direct ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11193,
+    "tokens_out": 9007,
+    "cost_usd": 0.0015067000000000001,
+    "wall_clock_s": 68.37366862499994
+  }
+}

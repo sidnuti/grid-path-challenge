@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "The mechanical scores are nearly identical (1.5556 vs 1.5629), creating significant noise. However, C-S1-HYD exhibits a dominant 0.96 slot1_share_7d compared to 0.37 for C-S2-HYD, clearly demonstrating it actually controls the top impression real estate in this market. This decisive behavioral evidence overrides the marginal mechanical tie, favoring C-S1-HYD as the true leader to protect."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 1529,
+    "cost_usd": 0.024216,
+    "wall_clock_s": 16.547684667
+  }
+}

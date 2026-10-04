@@ -1,0 +1,272 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "CUT-S1-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce inefficiency and preserve portfolio ROAS; S1 is trim with low iroas."
+      },
+      {
+        "id": "CUT-S1-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance and cut low-incremental Soap spend in MUM."
+      },
+      {
+        "id": "CUT-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Trim weak Soap presence in BLR to protect ROAS floor."
+      },
+      {
+        "id": "CUT-S5-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Hold/weak Kids Soap SKU; reduce spend to reallocate to efficient categories."
+      },
+      {
+        "id": "CUT-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Cut marginal Kids Soap budget in BLR."
+      },
+      {
+        "id": "CUT-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Significant cut for trim SKU with lowest iroas (0.73) to stabilize ROAS."
+      },
+      {
+        "id": "CUT-S5-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Large cut for trim SKU; frees substantial allowance."
+      },
+      {
+        "id": "RAISE-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up efficient Scale cell with high mroas_up20 (11.06) and iota 0.25."
+      },
+      {
+        "id": "RAISE-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund role with headroom; raise on high-return generic keyword."
+      },
+      {
+        "id": "RAISE-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale role; bid up generic Body Wash with strong iroas 1.99 and iota 0.49."
+      },
+      {
+        "id": "RAISE-S3-MUM-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-MUM/K03",
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale role; increase share on generic Soap where cell clears goal and iota is 0.68."
+      },
+      {
+        "id": "YLD-S5-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S5 wrongly holds slot-1; yield to best-performing S4 (score 2.336)."
+      },
+      {
+        "id": "YLD-S5-BLR-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S5 incorrectly leads generic contest; yield to higher-iota S3."
+      },
+      {
+        "id": "YLD-S1-DEL-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S1 holds wrongly in DEL generic; yield to S3 which maximizes incremental share."
+      },
+      {
+        "id": "YLD-S1-DEL-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct misallocation in DEL generic contest away from S1 toward S3."
+      },
+      {
+        "id": "YLD-S1-HYD-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Stop S1 bleed in HYD generic; allow higher-score sibling to capture share."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Plan defends the ROAS floor by cutting low-iota trim/hold SKUs (S1, S5) and reallocating allowance to efficient Scale/Fund campaigns (S4, S2, S3) via targeted bid raises on high mroas_up20 generic cells. Yield intents correct contested market misallocations where S1/S5 incorrectly hold slot-1 against higher incremental performers, stopping waste without triggering G7 violations or exceeding the 300 INR daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11266,
+    "tokens_out": 7831,
+    "cost_usd": 0.00135601,
+    "wall_clock_s": 63.63292345900001
+  }
+}

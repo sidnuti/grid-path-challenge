@@ -1,0 +1,103 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase incremental competition spend on high-iota shower gel in DEL"
+      },
+      {
+        "id": "I2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental MUM competitor demand for shower gel"
+      },
+      {
+        "id": "I3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure BLR competition share with strong iroas"
+      },
+      {
+        "id": "I4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Boost high-iota generic reach in PUN shower gel"
+      },
+      {
+        "id": "I5",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Remove budget cap for efficient fund campaign in BLR body wash"
+      },
+      {
+        "id": "I6",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Remove budget cap for efficient fund campaign in HYD soap"
+      }
+    ],
+    "notes": "Focused allowance on S4 competition/generic cells with iota \u2265 0.93 and iroas > 4.0 to maximize incremental off-take. Raised budgets on running-out fund campaigns (S2-BLR, S1-HYD) to utilize remaining \u20b9300 headroom without breaching caps.",
+    "stance": []
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11986,
+    "tokens_out": 6491,
+    "cost_usd": 0.00120341,
+    "wall_clock_s": 58.214059542
+  }
+}

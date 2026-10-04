@@ -1,0 +1,173 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "i1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "shift impression share to S2 (highest incremental revenue) in HYD K01, yielding S1"
+      },
+      {
+        "id": "i2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "capture branded search dominance in PUN with higher-incrementality S2"
+      },
+      {
+        "id": "i3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "allow S4 to lead DEL K06 (generic), closing 0.48 gap and capturing superior iROAS"
+      },
+      {
+        "id": "i4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "grow incremental shower gel sales in DEL on brand terms; iroas 5.21, slot1 share 45%"
+      },
+      {
+        "id": "i5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "expand footprints on generic body wash in BLR; iroas 3.86, well below slot1 saturation"
+      },
+      {
+        "id": "i6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "secure top impressions for S2 generic queries in PUN; clean clearance, high iota"
+      },
+      {
+        "id": "i7",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "prevent ad stockouts in BLR shower gel (7 run-out days); supports fund role growth"
+      },
+      {
+        "id": "i8",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "free allowance from trim-rated kids soap inventory; recycles spend to scale winners"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Replaced rejected slot-target and zero-gain bids with focused lead/yield market reallocations and small, cleared-cell raises on high-iota SKUs. Maintained portfolio ROAS headroom via trimmed kids soap budgets and strict adherence to OSA/guardrails."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11329,
+    "tokens_out": 11048,
+    "cost_usd": 0.0017761100000000002,
+    "wall_clock_s": 82.29021341600003
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "+40% bid lifts incremental revenue; ~\u20b9115/day spend."
+      },
+      {
+        "id": "RB-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "+40% bid captures volume efficiently; ~\u20b966/day spend."
+      },
+      {
+        "id": "RB-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "+40% bid secures incremental share; ~\u20b969/day spend."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Allocated the full \u20b9300 daily allowance to high-iROAS (7.90) Shower Gel generic cells to drive incremental off-take while protecting the tight 4.6258 portfolio ROAS floor. Dropped contested market leads on brand keywords due to low iota and previous rejection; maintained status quo where MISSES verdicts block leadership."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11085,
+    "tokens_out": 8326,
+    "cost_usd": 0.00141493,
+    "wall_clock_s": 67.048858625
+  }
+}

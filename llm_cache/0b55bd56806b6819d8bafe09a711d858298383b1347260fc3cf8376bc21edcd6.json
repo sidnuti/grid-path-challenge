@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.5,
+    "confidence": 0.4,
+    "rationale": "Realised dROAS (1.88) trails goal (2.22), indicating existing margin pressure; with only 24 recent orders, performance signals are noisy and prone to variance. A full bid raise risks further eroding profitability without proven incremental efficiency gains. Dampen the proposed step by half to preserve capital until stronger efficiency evidence emerges, while staying within the cleared guardrails."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 1621,
+    "cost_usd": 0.025734,
+    "wall_clock_s": 19.897463625
+  }
+}

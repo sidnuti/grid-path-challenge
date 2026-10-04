@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.6,
+    "rationale": "The top two campaigns show a near-tie in mechanical score (C-S1-BLR: 1.2843 vs C-S3-BLR: 1.1928). While C-S3-BLR demonstrates a higher slot1_share_7d (0.86), this observational metric does not clearly outweigh the underlying economic efficiency captured by the mechanical formula (conversion x ASP x incrementality). Adhering to the directive to default to the mechanical pick in ambiguous cases, C-S1-BLR is designated as the leader for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1990,
+    "cost_usd": 0.030972,
+    "wall_clock_s": 21.62058758399985
+  }
+}

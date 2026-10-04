@@ -1,0 +1,320 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "b-up-blr-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "expected_effect": "Unblock daily cap for efficient Soap-BLR."
+      },
+      {
+        "id": "b-up-hyd-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "expected_effect": "Unblock daily cap for efficient Soap-HYD."
+      },
+      {
+        "id": "b-up-pun-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "expected_effect": "Unblock daily cap for efficient Soap-PUN."
+      },
+      {
+        "id": "b-up-blr-s2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "expected_effect": "Unblock daily cap for efficient BodyWash-BLR."
+      },
+      {
+        "id": "c-cut-s3",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "expected_effect": "Release cash from weak-trim Soap SKUs; lifts portfolio DRoAS margin."
+      },
+      {
+        "id": "c-cut-s5",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "small",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "expected_effect": "Release cash from low-incremental Kids SKUs; preserves headroom."
+      },
+      {
+        "id": "bid-up-s2-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "evidence_refs": [
+          "K:Body Wash:generic"
+        ],
+        "expected_effect": "Push high-iRoAS Body Wash generic bids toward top slots; grows off-take."
+      },
+      {
+        "id": "bid-up-s4-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "evidence_refs": [
+          "K:Shower Gel:generic"
+        ],
+        "expected_effect": "Push high-iRoAS Shower Gel generic bids upward; expands volume efficiently."
+      },
+      {
+        "id": "mkt-del-k05-yld",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "expected_effect": "Step back inefficient shower gel holder; frees impressions for superior body wash."
+      },
+      {
+        "id": "mkt-del-k05-lad",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "expected_effect": "Install optimal body wash leader on DEL generic; maximizes incremental revenue."
+      },
+      {
+        "id": "mkt-hyd-k01-yld",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Step back soap holder; yields space to higher-value body wash."
+      },
+      {
+        "id": "mkt-hyd-k01-lad",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Lead HYD brand search for S2; captures efficient conversion."
+      },
+      {
+        "id": "mkt-hyd-k05-yld",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "expected_effect": "Yield shower gel holder to body wash leader in Hyd generic."
+      },
+      {
+        "id": "mkt-hyd-k05-lad",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "expected_effect": "Lead HYD K05 for S2; secures top incremental position."
+      },
+      {
+        "id": "mkt-pun-k01-yld",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Yield PUN soap brand slot to superior body wash."
+      },
+      {
+        "id": "mkt-pun-k01-lad",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Lead PUN K01 for S2; drives efficient conversion."
+      },
+      {
+        "id": "mkt-pun-k05-yld",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "expected_effect": "Yield PUN K05 shower gel slot."
+      },
+      {
+        "id": "mkt-pun-k05-lad",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "expected_effect": "Lead PUN K05 for S2; captures high-iRoAS volume."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Shift leadership in contested markets to high-iRoAS Body Wash SKUs to maximize incremental value. Unblocking budgets for funded campaigns while cutting weak trim/hold portfolios improves overall ROAS headroom and protects the floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24172,
+    "tokens_out": 19096,
+    "cost_usd": 0.00320764,
+    "wall_clock_s": 142.97855037499994
+  }
+}

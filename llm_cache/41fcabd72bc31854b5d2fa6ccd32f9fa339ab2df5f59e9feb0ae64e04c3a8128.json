@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-DEL",
+    "confidence": 0.9,
+    "rationale": "C-S4-DEL holds the highest mechanical leader score (1.6460) and commands a dominant 92% slot-1 share over the last 7 days, strongly indicating it is already winning auctions and converting efficiently. No evidence provided overrides this clear mechanical advantage."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 421,
+    "tokens_out": 1438,
+    "cost_usd": 0.022833,
+    "wall_clock_s": 13.937295833000007
+  }
+}

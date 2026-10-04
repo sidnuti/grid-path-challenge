@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "The mechanical score slightly favors C-S1-HYD, and the significantly higher slot1_share_7d (0.96 vs 0.34) provides strong empirical confirmation that C-S1-HYD currently dominates inventory placement, justifying it as the clear leader despite the near-tie in base scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1372,
+    "cost_usd": 0.021636,
+    "wall_clock_s": 13.613468124999997
+  }
+}

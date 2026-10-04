@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.7,
+    "rationale": "Realised dROAS (4.79) significantly exceeds the target (3.15), indicating strong efficiency that supports increasing spend to capture more volume. The mechanical +20% step is conservative relative to the efficiency margin. With only 21 orders in the evaluation window, signal noise is expected, so adhering to the baseline recommendation avoids aggressive adjustments on limited data. Multiplier set to 1.0 with moderate confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 474,
+    "tokens_out": 1732,
+    "cost_usd": 0.027402,
+    "wall_clock_s": 16.84745112500002
+  }
+}

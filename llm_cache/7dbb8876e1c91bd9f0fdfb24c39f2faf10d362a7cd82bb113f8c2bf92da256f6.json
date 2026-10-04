@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.9,
+    "confidence": 0.5,
+    "rationale": "Only 10 orders in the trailing window indicates low sample size and high signal volatility, reducing trust in the mechanical raise despite the realised dROAS marginally exceeding the target. Applied mild dampening to the proposed raise to protect against noise-driven variance while preserving competitive positioning."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 475,
+    "tokens_out": 1541,
+    "cost_usd": 0.02454,
+    "wall_clock_s": 16.198947333000007
+  }
+}

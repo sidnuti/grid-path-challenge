@@ -1,0 +1,73 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "br-del-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevents budget run-out in Delhi Soap (7/7 days capped) to preserve top-tier iroas and baseline offtake."
+      },
+      {
+        "id": "br-blr-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funds Bangalore Soap campaign after 7 consecutive days of running out, maintaining efficient delivery without risking missed goals."
+      },
+      {
+        "id": "br-del-s4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Uncaps Delhi Shower Gel budget (7/7 days capped) to sustain high-incremental volume and support portfolio ROAS floor."
+      },
+      {
+        "id": "bd-blr-s4k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalizes on Bangalore Scale campaign bid headroom to capture incremental Shower Gel volume where slot-1 share lags (0.48) but marginal return is strong."
+      }
+    ],
+    "stance": [],
+    "notes": "Prioritized funding three Fund campaigns (Delhi/Bangalore Soap, Delhi Shower Gel) that ran out of budget for 7 straight days to lock in baseline offtake and protect the direct ROAS floor. Paired this with a targeted bid lift on Bangalore Shower Gel generic to exploit scale-campaign headroom and capture incremental share where slot-1 presence is currently weak. Total planned lift remains well within the \u20b9614.78 allowance, ensuring safe progression toward later-run aggressive spend windows."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12492,
+    "tokens_out": 6575,
+    "cost_usd": 0.00122951,
+    "wall_clock_s": 67.57343341699993
+  }
+}

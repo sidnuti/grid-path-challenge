@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.82,
+    "rationale": "C-S1-DEL is the mechanical leader_score pick (0.8279 vs 0.8007), a near-tie, and the supporting evidence does not favour the alternative: C-S1-DEL also dominates slot1 share (0.90 vs 0.72), indicating it owns the top position and is the natural bid-protected leader. No evidence clearly favours C-S3-DEL, so the mechanical pick stands."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 337,
+    "tokens_out": 293,
+    "cost_usd": 0.00049094,
+    "wall_clock_s": 2.961829625000064
+  }
+}

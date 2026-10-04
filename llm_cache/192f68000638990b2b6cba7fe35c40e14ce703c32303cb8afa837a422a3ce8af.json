@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "Scores are a near-tie (1.6942 vs 1.6529, ~2.5% gap), so default to the mechanical pick C-S4-BLR. S2's much higher slot1_share (0.84 vs 0.58) reflects strong incumbency on top impression but does not clearly indicate higher incrementality or value, so it is not decisive enough to override the mechanical leader. Moderate confidence given the tight score gap and S2's dominant slot-1 presence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 776,
+    "cost_usd": 0.00109543,
+    "wall_clock_s": 7.945170125000004
+  }
+}

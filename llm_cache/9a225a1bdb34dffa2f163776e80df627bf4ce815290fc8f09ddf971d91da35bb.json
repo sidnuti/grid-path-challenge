@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.8,
+    "rationale": "Mechanical scores are effectively tied (0.6037 vs 0.6038), but C-S3-BLR shows a drastically higher slot1_share_7d (0.95 vs 0.55), indicating superior consistent market positioning and stability, making it the clearer choice for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1408,
+    "cost_usd": 0.02217,
+    "wall_clock_s": 13.397736375000001
+  }
+}

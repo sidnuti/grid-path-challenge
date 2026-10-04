@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader_score selects C-S4-BLR (1.7866 vs 1.7009). While C-S2-BLR shows a higher slot1_share_7d (0.87 vs 0.65), the scores fall in a narrow near-tie and the mechanical metric already integrates conversion, ASP, and incrementality. Per the instruction to default to the mechanical pick unless evidence strongly favors the alternative, C-S4-BLR is retained with moderate confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1806,
+    "cost_usd": 0.02814,
+    "wall_clock_s": 17.006007958000055
+  }
+}

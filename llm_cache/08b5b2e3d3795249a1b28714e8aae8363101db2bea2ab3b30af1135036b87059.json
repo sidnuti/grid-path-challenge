@@ -1,0 +1,151 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "CB-DEL-S3",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "frees capital from weak trim SKU"
+      },
+      {
+        "id": "CB-MUM-S3",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "frees capital from underperforming hold SKU"
+      },
+      {
+        "id": "RB-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "captures incremental Soap demand; fund role ran out 7d"
+      },
+      {
+        "id": "RB-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "captures incremental Shower Gel demand; fund role ran out 7d"
+      },
+      {
+        "id": "BB-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "bids up high mroas generic cell below slot-1 cap"
+      },
+      {
+        "id": "BB-PUN-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "increments efficient generic share on fund SKU"
+      },
+      {
+        "id": "BB-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "targets high mroas generic cell for Shower Gel"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "explore"
+      }
+    ],
+    "notes": "Shifted budget from weak trim/hold SKUs (S3 DEL/MUM) to efficient running funds (S1 DEL, S4 BLR) that consistently hit capacity. Replaced costly LM attempts with precise small-size bid lifts on high-mroas generic cells that cleared G7 goals and sit below the 80% slot-1 cap. Stance locks protect ROAS floor while allowing generic scale where incrementality is proven."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11479,
+    "tokens_out": 8184,
+    "cost_usd": 0.00140829,
+    "wall_clock_s": 79.01065645899996
+  }
+}

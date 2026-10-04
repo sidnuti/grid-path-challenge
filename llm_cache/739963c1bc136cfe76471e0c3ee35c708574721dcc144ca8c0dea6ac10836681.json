@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.6,
+    "rationale": "Realised dROAS (1.72) exceeds the 1.45 goal, confirming efficiency to justify expanding volume. The low order count (12 in 28 days) indicates limited sample size and higher volatility. Adhering to the full mechanical +10% raise balances the positive signal with statistical caution, avoiding unnecessary over-scaling on noisy data."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 463,
+    "tokens_out": 2190,
+    "cost_usd": 0.034239,
+    "wall_clock_s": 23.370116458999988
+  }
+}

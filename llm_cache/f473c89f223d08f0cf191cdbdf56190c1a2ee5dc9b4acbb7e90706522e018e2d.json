@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.7,
+    "rationale": "Prefer the mechanical pick: C-S1-PUN's leader_score (0.6220) leads C-S3-PUN (0.5915) by ~5%, and the extra slot1 share for C-S3 (0.89 vs 0.69) does not clearly overturn it \u2014 C-S1 delivers a higher conversion x ASP x incrementality value with fewer slot1 impressions, implying better marginal efficiency per bid. No evidence here clearly favours switching to C-S3-PUN."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 1248,
+    "cost_usd": 0.0016854300000000001,
+    "wall_clock_s": 10.90177124999991
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "Although C-S2-BLR holds a slight mechanical edge, C-S4-BLR exhibits a substantially higher slot1 share (0.87 vs 0.63), indicating superior positioning and market capture. In a near-tie, consolidating leadership on the higher-share SKU mitigates internal bidding competition, improves cost efficiency, and better protects top-of-funnel visibility."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1801,
+    "cost_usd": 0.028065,
+    "wall_clock_s": 17.55964108300003
+  }
+}

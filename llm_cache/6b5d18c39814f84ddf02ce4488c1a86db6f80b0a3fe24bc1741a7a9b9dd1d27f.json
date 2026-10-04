@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score favors C-S1-MUM (0.2395 vs 0.2287). The higher slot1_share_7d for C-S3-MUM (0.92 vs 0.46) does not clearly override the mechanical pick, so default to the mechanical leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 557,
+    "cost_usd": 0.0008213099999999999,
+    "wall_clock_s": 4.818409832999919
+  }
+}

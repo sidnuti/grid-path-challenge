@@ -1,0 +1,130 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-s5-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free ~\u20b9575/day by trimming low-iota Kids Soap demand; reduces portfolio ROAS drag."
+      },
+      {
+        "id": "cut-s5-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free ~\u20b9100/day by capping inefficient Kids Soap allocation in Bangalore."
+      },
+      {
+        "id": "lead-s4-mum-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift Shower Gel leadership in Mumbai generic search to highest-incremental SKU (S4); displaces S2 efficiently."
+      },
+      {
+        "id": "lead-s4-del-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Consolidate Delhi Shower Gel generic ownership under S4; improves incremental revenue concentration."
+      },
+      {
+        "id": "raise-s4-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture unfilled impressions at 57% slot-share; leverages allowance freed by S5 cuts."
+      },
+      {
+        "id": "raise-s4-blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up on 72% slot-share generic cell in scale city to secure volume without hitting cap."
+      },
+      {
+        "id": "hold-s3-mum",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Prevent automatic bid expansion on capped, weak-market campaign; stabilizes portfolio ROAS."
+      },
+      {
+        "id": "hold-s2-mum",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Block further spend on trimmed Body Wash asset; preserves efficiency margin."
+      }
+    ],
+    "notes": "Freed ~\u20b9675/day via targeted cuts on low-iota Kids Soap campaigns to offset the strict \u20b9300 allowance constraint. Reallocated capacity to scale Shower Gel assets (S4) via lead_market and mid-tier bid raises on sub-capacity generic cells. All raises target CLEARS/A-tier cells with slot shares below 80% to comply with guardrails and avoid prior G3/G7 rejections.",
+    "stance": []
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11285,
+    "tokens_out": 7108,
+    "cost_usd": 0.00126259,
+    "wall_clock_s": 60.123493667000005
+  }
+}

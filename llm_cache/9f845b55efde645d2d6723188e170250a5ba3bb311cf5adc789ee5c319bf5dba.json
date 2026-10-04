@@ -1,0 +1,193 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "CUT-S5-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release ~\u20b940/day allowance from low-incrementality hold without dropping below min budget."
+      },
+      {
+        "id": "CUT-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reallocate budget from underperforming hold (iroas 0.77)."
+      },
+      {
+        "id": "CUT-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reallocate budget from underperforming hold."
+      },
+      {
+        "id": "CUT-S5-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reallocate budget from underperforming hold."
+      },
+      {
+        "id": "CUT-S5-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reallocate budget from trim with poorest incrementality."
+      },
+      {
+        "id": "BUD-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prevent daily stock-outs for efficient fund (ran out 7/7 days)."
+      },
+      {
+        "id": "BUD-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cap run-outs for efficient fund (ran out 7/7 days)."
+      },
+      {
+        "id": "BID-S2-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure additional incremental impressions on scalable generic cell with bid headroom."
+      },
+      {
+        "id": "BID-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage highest portfolio iroas (3.15) on scalable body wash generic cell."
+      },
+      {
+        "id": "BID-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up scalable shower gel cell with strong iroas (2.77) and available slot share."
+      },
+      {
+        "id": "LM-BLR-K06-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong-holder inefficiency by shifting dominant impression share to higher-incrementality SKU S2."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Net budget delta is +\u20b910/day, keeping total change well within the \u20b9300 allowance while stabilizing two run-out funds. Bid increases target scalable cells below the 80% slot-1 threshold to avoid hard blocks. Market lead corrects a known wrong-holder inefficiency in BLR:K06, prioritizing incremental revenue over legacy allocation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11475,
+    "tokens_out": 10432,
+    "cost_usd": 0.00170041,
+    "wall_clock_s": 84.929673041
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.65,
+    "rationale": "The mechanical leader scores are nearly tied (0.1701 vs 0.1744), but C-S3-BLR holds a substantially higher slot1_share_7d (0.88 vs 0.57). This indicates significantly stronger top-slot dominance and market control, which clearly favors C-S3-BLR as the preferred leader when breaking the mechanical near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1540,
+    "cost_usd": 0.02415,
+    "wall_clock_s": 16.918003
+  }
+}

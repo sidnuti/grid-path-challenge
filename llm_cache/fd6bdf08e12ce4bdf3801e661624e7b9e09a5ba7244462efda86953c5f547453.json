@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.8,
+    "rationale": "C-S3-HYD has the highest mechanical leader score and significantly outperforms the runner-up in slot1_share_7d (0.84 vs 0.61), providing clear evidence to uphold the mechanical pick despite the close scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1706,
+    "cost_usd": 0.026721,
+    "wall_clock_s": 17.75469166700009
+  }
+}

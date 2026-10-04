@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.8,
+    "rationale": "The mechanical leader is C-S2-PUN (score 1.1813), which narrowly outperforms C-S4-PUN (1.1407). C-S2-PUN also holds a significantly higher 7-day slot1_share (0.26 vs 0.18), demonstrating better ad positioning and conversion capture. The combined metrics strongly support retaining the mechanical pick as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1244,
+    "cost_usd": 0.019926,
+    "wall_clock_s": 10.960210582999991
+  }
+}

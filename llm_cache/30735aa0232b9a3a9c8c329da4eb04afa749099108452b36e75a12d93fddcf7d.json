@@ -1,0 +1,234 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-S4-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Seize optimal share in contestable HYD shower gel search where S4 holds highest incremental score; improves overall ad efficiency."
+      },
+      {
+        "id": "LM-S2-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture top position on branded body wash in PUN; S2 outperforms incumbent holder on incremental revenue per impression."
+      },
+      {
+        "id": "LM-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Flip near-tie contest in MUM generic body wash to S2, which shows superior incrementality; lifts portfolio iROAS."
+      },
+      {
+        "id": "RA-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05",
+          "city_id": "DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase bid on generic body wash in DEL; slot-1 share at 0.66 leaves clear headroom to improve volume without triggering saturation blocks."
+      },
+      {
+        "id": "RA-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05",
+          "city_id": "MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up generic body wash in MUM where predicted mROAS(+20%) strongly supports incremental growth."
+      },
+      {
+        "id": "RA-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05",
+          "city_id": "HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Support lead_market initiative by lifting bid on generic shower gel in HYD to reinforce position and capture surplus reach."
+      },
+      {
+        "id": "RB-C-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Unlock unspent demand; ran out of budget 7 of last 7 days while maintaining high iROAS (4.65)."
+      },
+      {
+        "id": "HOLD-S2-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Freeze spending pending inventory restock (3-day OSA 0.42); complies with G4 guardrail and prevents wasteful bid escalation."
+      },
+      {
+        "id": "HOLD-S5-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.65,
+        "expected_effect": "Cap Kids Soap exposure in MUM given low iROAS (1.44); reallocates capital to scale-efficient Body Wash/Shower Gel campaigns."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritize high-iROAS segments (Body Wash, Shower Gel) with targeted lead_market and bid raises where slot-share headroom exists. Freeze S2-HYD and low-efficiency Kids Soap spends to protect portfolio ROAS floor and comply with OSA guardrails."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11801,
+    "tokens_out": 9173,
+    "cost_usd": 0.00154652,
+    "wall_clock_s": 82.45355845900008
+  }
+}

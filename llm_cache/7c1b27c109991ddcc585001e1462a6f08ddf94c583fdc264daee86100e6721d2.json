@@ -1,0 +1,124 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "CUT-S1-BRAND",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S1",
+          "keyword_type": "brand"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "R:C-S1-MUM",
+          "R:C-S1-BLR",
+          "R:C-S1-PUN",
+          "K:Soap:brand"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shed low-incrementality brand clicks to protect portfolio ROAS floor and free allowance."
+      },
+      {
+        "id": "RISE-S4-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-MUM",
+          "R:C-S4-BLR",
+          "R:C-S4-HYD",
+          "R:C-S4-PUN",
+          "K:Shower Gel:generic",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture high-iRoAS incremental volume on scale/saturated Shower Gel campaigns."
+      },
+      {
+        "id": "RISE-S2-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "R:C-S2-MUM",
+          "R:C-S2-BLR",
+          "R:C-S2-HYD",
+          "R:C-S2-PUN",
+          "K:Body Wash:generic",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Grow efficient offtake on fund/scale Body Wash campaigns leveraging 4.78 iRoAS."
+      },
+      {
+        "id": "RISE-S5-HYD",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-HYD",
+          "K:Kids Soap:generic",
+          "C:C-S5-HYD/K01",
+          "C:C-S5-HYD/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage strong local performance and available bid headroom in Hyderabad."
+      },
+      {
+        "id": "TOPUP-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore daily allowance for the heavily out-spent fund campaign to capture missed incremental sales."
+      }
+    ],
+    "stance": [],
+    "notes": "Removed previously flagged market leads and saturated-cell raises. Shifts spend from low-incrementality S1 brand bids to high-iRoAS S4/S2 generic pools, while topping up the heavily out-spent S2-DEL fund budget to secure incremental offtake near the ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11249,
+    "tokens_out": 8899,
+    "cost_usd": 0.0014943400000000003,
+    "wall_clock_s": 78.3080023340001
+  }
+}

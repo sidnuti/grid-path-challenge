@@ -1,0 +1,195 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "int-01",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block budget and bid increases on low-incrementality Kids Soap campaigns to preserve portfolio ROAS margin."
+      },
+      {
+        "id": "int-02",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Stabilize weak soap campaigns; prevents wasteful competition spend and frees daily allowance for efficient scales."
+      },
+      {
+        "id": "int-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental body wash demand in Bangalore; generic cells show strong mroas_up20 (>3.5) and clear goals."
+      },
+      {
+        "id": "int-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Drive shower gel offtake in Hyderabad; high iota and generic clarity support efficient bid expansion."
+      },
+      {
+        "id": "int-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K03",
+          "C:C-S1-PUN/K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure incremental soap share in Punjab; role is scale with available bid headroom."
+      },
+      {
+        "id": "int-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD",
+          "C:C-S1-HYD/K07"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage THIN but highly efficient generic cell (mroas_up20=7.92) to grow volume without sacrificing ROAS."
+      },
+      {
+        "id": "int-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01",
+          "C:C-S4-HYD/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Assign brand search leadership to the highest incremental SKU (S4) in Hyderabad."
+      },
+      {
+        "id": "int-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01",
+          "C:C-S4-PUN/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Align brand search leadership with best incremental performer in Punjab."
+      },
+      {
+        "id": "int-09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce inefficient competition spend on soap in Delhi."
+      },
+      {
+        "id": "int-10",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-MUM/K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim wasted competition spend in Mumbai."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Replaced previously rejected S1 lead attempts on MISSES cells (G7 violation) with targeted bid raises on verified scale campaigns (S2-BLR, S4-HYD, S1-PUN, S1-HYD) and corrected market contests where S4 demonstrates superior incrementality. Applied broad holds on S3/S5 portfolios to eliminate weak competition/brand spend, protecting the direct ROAS floor while remaining comfortably within the \u20b9300 daily budget allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11333,
+    "tokens_out": 7862,
+    "cost_usd": 0.0013620500000000003,
+    "wall_clock_s": 78.88969266699996
+  }
+}

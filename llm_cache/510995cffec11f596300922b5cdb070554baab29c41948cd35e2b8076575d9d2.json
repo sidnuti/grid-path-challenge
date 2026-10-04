@@ -1,0 +1,140 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-S4-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift market leadership from S5 to S4 to capture higher incremental revenue on BLR generic queries."
+      },
+      {
+        "id": "LM-S4-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift market leadership from S2 to S4 on BLR generic queries where S4 demonstrates superior incrementality."
+      },
+      {
+        "id": "LM-S2-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.75,
+        "expected_effect": "Shift market leadership from S4 to S2 on DEL brand queries to leverage S2's higher iROAS in this contested slot."
+      },
+      {
+        "id": "LM-S4-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift market leadership from S2 to S4 on DEL generic queries to maximize shower gel off-take."
+      },
+      {
+        "id": "LM-S4-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift market leadership from S2 to S4 on MUM generic queries."
+      },
+      {
+        "id": "LM-S4-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.75,
+        "expected_effect": "Shift market leadership from S2 to S4 on PUN generic queries."
+      },
+      {
+        "id": "LM-S4-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.75,
+        "expected_effect": "Shift market leadership from S2 to S4 on PUN generic queries."
+      },
+      {
+        "id": "BID-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "confidence": 0.75,
+        "expected_effect": "Aggressively increase bid on high-mROAS (9.85) generic cell with positional headroom to secure top visibility."
+      },
+      {
+        "id": "BID-S4-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "confidence": 0.75,
+        "expected_effect": "Aggressively increase bid on highest-mROAS (10.19) generic cell to capture incremental volume."
+      },
+      {
+        "id": "BID-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "expected_effect": "Moderate bid increase on efficient generic queries to expand reach without overspending the daily allowance."
+      },
+      {
+        "id": "BID-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "expected_effect": "Solidify position on efficient body wash generic queries with strong mROAS (5.13)."
+      }
+    ],
+    "notes": "Prioritizes correcting wrong-holder market contest mismatches to reallocate impression costs to higher-incrementality SKUs, supplementing with targeted bid raises on the most efficient generic cells with available positional headroom. Actions respect OSA thresholds and stay within the \u20b9300/day allowance to protect the portfolio Direct ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11117,
+    "tokens_out": 8439,
+    "cost_usd": 0.0014305799999999999,
+    "wall_clock_s": 67.16498033299999
+  }
+}

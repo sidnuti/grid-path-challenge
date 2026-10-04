@@ -1,0 +1,223 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale high-mROI generic shower gel in DEL; mroas_up20=7.67."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture competitive volume with full incrementality (iota=1.0)."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage BLR bid headroom to grow shower gel generic off-take."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Utilize highest bid headroom (4 cells) to scale generic body wash sales."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up generic shower gel in MUM where droas exceeds threshold."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Scale generic body wash in PUN using available headroom cells."
+      },
+      {
+        "id": "INT-07",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Step back S3 from MUM brand search to allow higher-IOTA S2 to compete."
+      },
+      {
+        "id": "INT-08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Free shelf space for S2, the best incremental performer in PUN brand queries."
+      },
+      {
+        "id": "INT-09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Transfer generic soap share to S3, improving market ROI."
+      },
+      {
+        "id": "INT-10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Correct misallocation in BLR generic soap; S3 leads incrementality."
+      },
+      {
+        "id": "INT-11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Shift MUM generic soap traffic to S3 to capture better incremental value."
+      },
+      {
+        "id": "INT-12",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce wasted spend on underperforming soap brand; S1 ran out 7 consecutive days."
+      },
+      {
+        "id": "INT-13",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Conserve budget on hold-role campaign with consistent run-outs."
+      },
+      {
+        "id": "INT-14",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Tighten spend on PUN soap hold; reallocate to scale SKUs."
+      }
+    ],
+    "notes": "Prioritizes scaling efficient scale-role SKUs on generic/competition keywords with open bid headroom and <80% slot-1 share. Yields inefficient holders in contested markets to redirect traffic to higher-iOTA competitors. Cuts budgets on persistent run-out hold roles to preserve direct ROAS above floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11296,
+    "tokens_out": 11538,
+    "cost_usd": 0.0018388200000000001,
+    "wall_clock_s": 108.67072608299998
+  }
+}

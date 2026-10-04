@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.78,
+    "rationale": "Mechanical leader_score picks C-S3-PUN (0.6945 vs 0.6868), a near-tie, so defer to the mechanical pick. The supporting evidence does not favour the alternative: C-S3-PUN also has the higher 7-day slot1 share (0.89 vs 0.66), consistent with it holding the top-slot position whose bid should be protected."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 362,
+    "cost_usd": 0.0005779299999999999,
+    "wall_clock_s": 3.422687167000049
+  }
+}

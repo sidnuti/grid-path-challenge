@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.75,
+    "rationale": "C-S4-BLR is the mechanical leader with the highest leader_score. It also demonstrates a stronger slot1_share_7d (0.31) compared to the runner-up C-S2-BLR (0.23), indicating a more robust market position and lower cannibalization risk. No clear evidence supports overriding the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1543,
+    "cost_usd": 0.024411,
+    "wall_clock_s": 16.07642750000001
+  }
+}

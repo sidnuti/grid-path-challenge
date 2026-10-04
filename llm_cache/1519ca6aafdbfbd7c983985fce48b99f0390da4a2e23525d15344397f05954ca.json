@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.9,
+    "rationale": "The mechanical leader_score already favors C-S1-PUN (0.2436 vs 0.2299), and this candidate shows a vastly superior slot1_share_7d (0.93 vs 0.50), confirming strong market capture and validating the mechanical pick over the near-tie range."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 559,
+    "cost_usd": 0.009435,
+    "wall_clock_s": 6.260234374999982
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "Mechanical score marginally favors C-S4-BLR (1.6942 vs 1.6529) in a near-tie. Following the explicit directive to prefer the mechanical pick when scores are closely matched, it is selected as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1566,
+    "cost_usd": 0.02454,
+    "wall_clock_s": 14.571828499999981
+  }
+}

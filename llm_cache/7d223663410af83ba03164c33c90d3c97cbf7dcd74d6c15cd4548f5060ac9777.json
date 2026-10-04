@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.6,
+    "rationale": "While C-S4-BLR holds a marginally higher mechanical score, C-S2-BLR demonstrates substantially stronger auction dominance with a 0.86 slot1_share compared to 0.65. In a near-tie, selecting the campaign that consistently captures the top position minimizes bid volatility, preserves conversion efficiency, and better stabilizes brand market share."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1472,
+    "cost_usd": 0.02313,
+    "wall_clock_s": 14.836647625000069
+  }
+}

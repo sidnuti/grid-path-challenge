@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.5,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach exhibits a highly significant positive deviation (z=4.52, flagged) consistent with a clear surge. The own-action confound flag is false and CPM remains stable (z\u2248-1.0), ruling out internal bid/budget feedback loops or pricing wars. This pattern strongly indicates a genuine exogenous demand or inventory availability shift driving the increased reach."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1188,
+    "cost_usd": 0.019152,
+    "wall_clock_s": 11.906848042000036
+  }
+}

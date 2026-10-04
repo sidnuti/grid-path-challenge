@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.75,
+    "rationale": "Both the mechanical leader score and slot1 share favor C-S3-PUN. The higher score (0.6840 vs 0.6628) combined with a substantially stronger top-slot presence (0.89 vs 0.66) confirms it as the stable leader, validating the mechanical pick despite the narrow differential."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1667,
+    "cost_usd": 0.026055,
+    "wall_clock_s": 17.363989291999815
+  }
+}

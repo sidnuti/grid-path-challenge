@@ -1,0 +1,267 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "lead-s1-del-contests",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "evidence_refs": [
+          "M:DEL:K03",
+          "M:DEL:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect SPLV from S3/S5 to S1 in DEL generic/comp markets where S1 holds highest incremental score, improving portfolio iROAS and offtake."
+      },
+      {
+        "id": "lead-s1-mum-contests",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "evidence_refs": [
+          "M:MUM:K04",
+          "M:MUM:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S1 as primary bidder in MUM contested generic/comp slots, displacing lower-iota S3."
+      },
+      {
+        "id": "lead-s1-hyd-contests",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure high-incrementality SPLV for S1 in HYD K03 contest vs S3."
+      },
+      {
+        "id": "lead-s1-pun-contests",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "evidence_refs": [
+          "M:PUN:K03",
+          "M:PUN:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead SPLV for S1 in PUN generic/comp contests against S3 to maximize efficient offtake."
+      },
+      {
+        "id": "yield-s3-contests",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "evidence_refs": [
+          "M:DEL:K03",
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S3 bids in DEL where S1 dominates incrementally, preventing wasted spend."
+      },
+      {
+        "id": "yield-s3-mum",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "evidence_refs": [
+          "M:MUM:K04",
+          "M:MUM:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S3-MUM CPLV in contested slots to free budget for higher-iota S1/S4."
+      },
+      {
+        "id": "yield-s3-hyd",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S3-HYD from K03 contest to S1 leader."
+      },
+      {
+        "id": "yield-s3-pun",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "evidence_refs": [
+          "M:PUN:K03",
+          "M:PUN:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Pull S3-PUN back from generic contests to protect portfolio ROAS floor."
+      },
+      {
+        "id": "lead-s4-del-contests",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "evidence_refs": [
+          "M:DEL:K05",
+          "M:DEL:K06",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Make S4 primary bidder in DEL body wash/competition markets, capitalizing on >1.0 incrementality score vs S2."
+      },
+      {
+        "id": "lead-s4-mum-contests",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure SPLV leadership for S4 in MUM K06 contest against S2."
+      },
+      {
+        "id": "lead-s4-blr-contests",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S4-BLR as market leader in K05 generic contest."
+      },
+      {
+        "id": "yield-s2-contests",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "evidence_refs": [
+          "M:DEL:K05",
+          "M:DEL:K06",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S2-DEL from generic/comp slots where S4 holds superior incremental revenue per impression."
+      },
+      {
+        "id": "yield-s2-mum",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S2-MUM from K06 contest to prevent bid friction and preserve efficiency."
+      },
+      {
+        "id": "yield-s2-blr",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S2-BLR SPLV in K05 to allow S4 leader to capture incremental volume."
+      },
+      {
+        "id": "cut-weak-trim-skus",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Deflate bids on persistently weak trim SKUs (S2-DEL, S5-MUM, S5-BLR) to lower portfolio drag on iROAS."
+      },
+      {
+        "id": "raise-scale-bids-s1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM",
+          "R:C-S1-BLR",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Incremental bid uplift on efficient S1 scale campaigns to capture available demand without breaching slot-concentration guardrails."
+      },
+      {
+        "id": "raise-budget-funds",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Top up budget on capped-efficient fund SKUs that exhausted daily caps consistently (>2 run-out days), preserving off-take velocity near ROAS floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "yield"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Market corrections reallocate SPLV to highest-incrementality SKUs (S1, S4) across DEL/MUM/HYD/PUN/BLR, directly lifting portfolio iROAS while protecting the tight 4.172 floor. Bid/budget leverages are kept conservative to stay within the 300 INR daily allowance and guardrail limits."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10908,
+    "tokens_out": 9223,
+    "cost_usd": 0.00152623,
+    "wall_clock_s": 92.599116041
+  }
+}

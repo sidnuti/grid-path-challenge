@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach is 5 SD above baseline (strongly flagged) while CPM and OSA z-scores are flat, indicating volume moved without any price or competition response. The own-action confound flag is false, so this is unlikely to be the harness's own prior bid/budget change landing. A large reach surge at unchanged CPM is most consistent with a genuine demand-side shock (expanded query/auction volume) rather than a price/competition shift or self-inflicted artifact; flat CPM slightly tempers confidence since some demand shocks do drag price up."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 431,
+    "tokens_out": 434,
+    "cost_usd": 0.00070197,
+    "wall_clock_s": 4.79592075000005
+  }
+}

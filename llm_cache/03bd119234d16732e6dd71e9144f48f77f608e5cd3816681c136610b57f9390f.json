@@ -1,0 +1,96 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "IB-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Fund efficient Body Wash scale in DEL; drives incremental volume within allowance.",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ]
+      },
+      {
+        "id": "IB-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient Body Wash demand in BLR; OSA healthy (0.94).",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ]
+      },
+      {
+        "id": "IB-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "confidence": 0.75,
+        "expected_effect": "Grow Soap share in BLR where iroas supports scaling; uses remaining allowance.",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ]
+      },
+      {
+        "id": "IH-01",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Block raises pending OSA recovery from 0.42 to >0.60; prevents wasted spend on unavailable inventory.",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K01",
+          "A:C-S2-HYD/K05"
+        ]
+      },
+      {
+        "id": "IM-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Shift impression dominance to highest-incrementality SKU in contested generic auction; improves portfolio iroas.",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Allocating daily allowance (\u2248\u20b9800) across three efficient scale campaigns while protecting against OSA stockouts in HYD. Resolving one contested market to maximize incremental ROAS; trimming low-incrementality Soap competition broadly."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11186,
+    "tokens_out": 7777,
+    "cost_usd": 0.00134659,
+    "wall_clock_s": 66.48949283299999
+  }
+}

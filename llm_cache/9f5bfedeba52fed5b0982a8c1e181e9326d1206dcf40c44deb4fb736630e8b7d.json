@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.9,
+    "confidence": 0.4,
+    "rationale": "Realised dROAS (1.975) underperforms the 2.22 target, and 28-day order count is low (23), indicating thin signal-to-noise ratio. Uncertainty is high, so rather than make an aggressive adjustment, I apply a mild dampener to preserve the mechanic's directional intent while limiting efficiency dilution from added volume."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 461,
+    "tokens_out": 2405,
+    "cost_usd": 0.037458,
+    "wall_clock_s": 29.535499584000036
+  }
+}

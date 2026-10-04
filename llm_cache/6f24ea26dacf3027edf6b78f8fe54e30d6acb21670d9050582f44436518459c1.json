@@ -1,0 +1,89 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-BID-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental generic demand with spare slot-share; high mroas_up20 (7.71)."
+      },
+      {
+        "id": "INT-BID-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S4-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental generic demand; high mroas_up20 (7.38)."
+      },
+      {
+        "id": "INT-BID-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S4-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental generic demand; slot 79% leaves room for bid lift."
+      },
+      {
+        "id": "INT-BID-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient Body Wash generic with strong mroas (5.80)."
+      },
+      {
+        "id": "INT-BID-S2-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:S2-HYD/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient Body Wash generic; slot 69% leaves room, strong mroas (4.17)."
+      }
+    ],
+    "notes": "Allocating remaining \u20b9355 allowance to high-mroas generic keywords where slot-1 share remains below the 80% raise block. Focusing on S4 (Shower Gel) and S2 (Body Wash) scale campaigns to maximize incremental iroas. Avoiding S4 K10 raises per G3 slot-1 saturation; prioritizing spend execution over conservative banking as instructed."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12387,
+    "tokens_out": 8858,
+    "cost_usd": 0.00152315,
+    "wall_clock_s": 73.6603913749999
+  }
+}

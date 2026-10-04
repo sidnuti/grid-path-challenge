@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 5.0 is strongly flagged, indicating a substantial statistical deviation well beyond typical noise. CPM and OSA z-scores are unflagged (0.0), ruling out price/competition shifts or audience supply changes. The own-action confound is false, eliminating a self-referential bid/budget feedback loop. Together, these signals point to a genuine demand-side surge rather than a mechanical artifact or market pricing shift."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1735,
+    "cost_usd": 0.027345,
+    "wall_clock_s": 15.441769083000054
+  }
+}

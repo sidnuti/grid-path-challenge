@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.75,
+    "rationale": "C-S4-HYD holds the slight edge in mechanical score (2.2430 vs 2.1757). Since the top candidates are nearly tied and share identical slot1_share_7d metrics, there is no clear evidence to override the mechanical selection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 1495,
+    "cost_usd": 0.023706,
+    "wall_clock_s": 16.181761500000007
+  }
+}

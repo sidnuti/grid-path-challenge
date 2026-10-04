@@ -1,0 +1,325 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K05-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impression share from S4 to more efficient S2 on Body Wash generic search in Bangalore"
+      },
+      {
+        "id": "YM-BLR-K05-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back Shower Gel share to allow Body Wash to capture higher incrementality"
+      },
+      {
+        "id": "LM-BLR-K10-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K10",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prioritize S2 over S4 on competitor terms in Bangalore for better incremental revenue"
+      },
+      {
+        "id": "YM-BLR-K10-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K10",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S4 competition spend to favor S2 conversion efficiency"
+      },
+      {
+        "id": "LM-MUM-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take top placement on Mumbai generic search from weak S1 to scalable S4"
+      },
+      {
+        "id": "YM-MUM-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release Mumbai generic impression share from holding S1"
+      },
+      {
+        "id": "LM-MUM-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead Mumbai generic term over S2 where S4 holds higher incremental score"
+      },
+      {
+        "id": "YM-MUM-K06-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield Mumbai generic share to S4 for optimized off-take"
+      },
+      {
+        "id": "LM-PUN-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K04",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Correct wrong holder in Pune generic search to S1"
+      },
+      {
+        "id": "YM-PUN-K04-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K04",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Step back weak S3 position to prevent inefficiency"
+      },
+      {
+        "id": "LM-PUN-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift Pune generic contest from S2 to more efficient S4"
+      },
+      {
+        "id": "YM-PUN-K06-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release Pune generic share to S4"
+      },
+      {
+        "id": "RB-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bid on scalable Body Wash generic cell to capture remaining allowance"
+      },
+      {
+        "id": "RB-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Boost visibility on high-ioTA generic term in Bangalore"
+      },
+      {
+        "id": "RB-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Raise bid on efficient Shower Gel generic cell to drive Mumbai off-take"
+      },
+      {
+        "id": "RB-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture additional incremental volume on Mumbai generic search"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      }
+    ],
+    "notes": "Final run prioritizes reallocating impression share in contested markets to highest incremental SKUs (S2/S4) and deploys targeted bid lifts on efficient generic cells. All actions stay within OSA thresholds and portfolio ROAS guardrails while maximizing remaining allowance usage."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10970,
+    "tokens_out": 11379,
+    "cost_usd": 0.00180837,
+    "wall_clock_s": 104.9140402500002
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.55,
+    "rationale": "Mechanical leader_score selects C-S2-PUN (1.1979) over the near-tie C-S3-PUN (1.1048). While C-S3 shows a notably higher slot1_share_7d (0.22 vs 0.04), indicating stronger visible placement, the composite score differential is minimal. Following the directive to prefer the mechanical pick in noisy near-ties unless evidence overwhelmingly favors the alternative, C-S2-PUN is retained as the leader to protect."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2685,
+    "cost_usd": 0.041541,
+    "wall_clock_s": 27.889762709000024
+  }
+}

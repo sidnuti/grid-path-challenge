@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.85,
+    "rationale": "The mechanical score slightly favors C-S3-PUN (0.6945 vs 0.6868). Although it is a near-tie, C-S3-PUN shows substantially stronger recent market execution with an 89% top-slot share compared to 66%, providing clear evidence to uphold the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1327,
+    "cost_usd": 0.020955,
+    "wall_clock_s": 15.24461599999995
+  }
+}

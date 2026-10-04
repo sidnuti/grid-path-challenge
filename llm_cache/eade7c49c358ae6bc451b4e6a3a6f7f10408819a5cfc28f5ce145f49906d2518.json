@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.65,
+    "rationale": "leader_scores are an exact tie (1.0638), so the mechanical score provides no signal. The only distinguishing evidence, slot1_share_7d, clearly favours C-S4-BLR (0.85 vs 0.62), indicating it already dominates the top ad slot in this market and is the de facto visibility leader. Protecting its bid preserves that captured top-slot presence, while C-S2-BLR can hold without losing the market position."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 390,
+    "cost_usd": 0.0006129299999999999,
+    "wall_clock_s": 4.864585915999896
+  }
+}

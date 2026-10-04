@@ -1,0 +1,6 @@
+code hash 63196db22b74; 5 simulations, 2 workers
+[1/5] ('l0rec', 11, 'dev', 114.7)
+[2/5] ('l0rec', 23, 'dev', 114.8)
+[3/5] ('l0rec', 42, 'dev', 113.4)
+[4/5] ('l0rec', 101, 'dev', 117.8)
+[5/5] ('l0rec', 202, 'dev', 100.9)

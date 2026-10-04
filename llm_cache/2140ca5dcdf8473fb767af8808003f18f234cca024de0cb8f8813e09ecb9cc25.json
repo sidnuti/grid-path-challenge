@@ -1,0 +1,208 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlock budget for top-performing shower gel in MUM; iroas 5.79, ran out 7d."
+      },
+      {
+        "id": "int-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "compiler_refuses": true,
+        "confidence": 0.9,
+        "expected_effect": "Fund constrained high-iota shower gel delivery in BLR."
+      },
+      {
+        "id": "int-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure incremental share for shower gel in HYD."
+      },
+      {
+        "id": "int-4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lift body wash cap in DEL; efficient fund role iroas 2.41."
+      },
+      {
+        "id": "int-5",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund body wash in MUM; strong incremental unit share."
+      },
+      {
+        "id": "int-6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up highest iroas non-capped cell for DEL shower gel; exploits bid headroom."
+      },
+      {
+        "id": "int-7",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental generic demand in BLR body wash."
+      },
+      {
+        "id": "int-8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Shift slot-1 to S1 where it maximizes incremental value over trim S3."
+      },
+      {
+        "id": "int-9",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Step back lower-iota S3 to free impression share for S1."
+      },
+      {
+        "id": "int-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Lead S1 in MUM generic K04; beats incumbent S3 on incremental score."
+      },
+      {
+        "id": "int-11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Yield MUM K04 share from S3 to S1."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "soap",
+        "keyword_type": "all",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "shower_gel",
+        "keyword_type": "all",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "body_wash",
+        "keyword_type": "all",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "kids_soap",
+        "keyword_type": "all",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "explore"
+      }
+    ],
+    "notes": "Aggressively deploying the \u20b9300 daily allowance toward high-iota Shower Gel and Body Wash SKUs to maximize incremental offtake. Budgets unlocked on capped fund campaigns running out consistently; bids scaled efficiently on unconstrained scale roles. Contest interventions reallocate impression share to higher-value S1 SKUs in BLR/MUM without risking the portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12029,
+    "tokens_out": 9427,
+    "cost_usd": 0.00158638,
+    "wall_clock_s": 89.771325708
+  }
+}

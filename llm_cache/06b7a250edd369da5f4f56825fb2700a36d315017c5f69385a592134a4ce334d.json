@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.9,
+    "rationale": "C-S4-BLR has the highest mechanical leader_score (1.6086) and dominates slot visibility with a 0.97 slot1_share_7d. It significantly outpaces the runner-up C-S2-BLR (1.4600), making it the clear and reliable mechanical pick without needing deviation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1462,
+    "cost_usd": 0.023196,
+    "wall_clock_s": 13.53333729100001
+  }
+}

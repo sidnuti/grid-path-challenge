@@ -1,0 +1,527 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "i01_cut_budget_s5mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM",
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "sub_category": "Kids Soap"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM",
+          "K:Kids Soap:generic",
+          "C:C-S5-MUM/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim droas 1.76 / iroas 0.97 campaign funding 5.9% of spend for 0.7% offtake; frees allowance and lifts portfolio droas toward floor margin."
+      },
+      {
+        "id": "i02_cut_bid_s5mum_k03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-MUM",
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S5-MUM/K03",
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "MISSES cell at droas 1.47 (779/wk) is the largest Kids Soap waste line; shifts remainder to K08 which CLEARS at droas 4.76."
+      },
+      {
+        "id": "i03_cut_budget_s5blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR",
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "sub_category": "Kids Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Hold role, iroas 0.90, ran_out 4/7 yet droas 1.79; recycling this budget beats letting it run out daily."
+      },
+      {
+        "id": "i04_cut_budget_s5del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL",
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "sub_category": "Kids Soap"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "C:C-S5-DEL/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Hold role with iroas 1.17 and MISSED brand cell; small trim frees room without collapsing defensive presence."
+      },
+      {
+        "id": "i05_cut_budget_s3del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "sub_category": "Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K03",
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Largest budget (2900) in a trim campaign at iroas 1.76 with K03 and K09 MISSES; proportional cut is the biggest single droas-floor relief."
+      },
+      {
+        "id": "i06_cut_bid_s3del_k03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-DEL/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "MISSES generic at 899/wk (droas 3.03 vs goal 3.68); reallocates campaign spend toward K04 which CLEARS with mroas_up20 4.61."
+      },
+      {
+        "id": "i07_cut_budget_s3mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "sub_category": "Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM",
+          "C:C-S3-MUM/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim campaign droas 2.62 / iroas 1.33 with K09 competition at droas 1.17 (657/wk); cut funds stronger cells and lifts floor."
+      },
+      {
+        "id": "i08_cut_bid_s3mum_k09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09",
+          "keyword_type": "competition"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S3-MUM/K09",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Worst big competition cell (droas 1.17, spend 657/wk); even at iota 1.00 revenue-per-rupee is far below floor."
+      },
+      {
+        "id": "i09_cut_budget_s3blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "sub_category": "Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR",
+          "C:C-S3-BLR/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Classic hold: runs out 7/7 days but iroas 1.39 and K03 MISSES at droas 2.64 vs 5.30; stop funding a structurally weak market."
+      },
+      {
+        "id": "i10_raise_budget_s1pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "sub_category": "Soap"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K04",
+          "C:C-S1-PUN/K09"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Fund role (iroas 2.15, droas 4.88) with 3 run-out days qualifies for budget raise; small increment respects the 367/day allowance."
+      },
+      {
+        "id": "i11_raise_bid_s1del_k03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K03",
+          "M:DEL:K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Fund campaign's lead generic: droas 3.38 clears goal, mroas_up20 3.75, iota 0.91, slot1 0.79 just under block threshold; S1 is rightful DEL K03 holder."
+      },
+      {
+        "id": "i12_raise_bid_s4del_k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K06",
+          "M:DEL:K06",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Best raise on the board: droas 7.92, mroas_up20 8.42, iota 0.79, slot1 0.64; supports S4 taking K06 leadership from S2 (0.600 vs 2.134)."
+      },
+      {
+        "id": "i13_raise_bid_s4mum_k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "T:MUM:K05",
+          "M:MUM:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Droas 7.23, iroas 4.47 campaign, slot1 0.63, reach trend +0.25; backs the lead_market flip of K05 from S2 to S4."
+      },
+      {
+        "id": "i14_raise_bid_s4hyd_k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05",
+          "T:HYD:K05",
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Droas 8.88 in the highest-iroas campaign (6.01), slot1 0.61, reach trend +0.17; solidifies S4 leadership on K05."
+      },
+      {
+        "id": "i15_raise_bid_s4blr_k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05",
+          "M:BLR:K05"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Droas 6.38, slot1 0.62; supports taking BLR K05 leadership from S2 (1.738 vs 0.866)."
+      },
+      {
+        "id": "i16_raise_bid_s4mum_k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Fully incremental conquest (iota 1.00) at droas 6.45 vs goal 1.55, slot1 0.58 with bid headroom."
+      },
+      {
+        "id": "i17_raise_bid_s4blr_k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K10"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Fully incremental competition cell (iota 1.00), droas 5.32 vs goal 1.76, slot1 0.60; cheap true-offtake growth."
+      },
+      {
+        "id": "i18_raise_bid_s4mum_k01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01",
+          "keyword_type": "brand"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K01"
+        ],
+        "confidence": 0.65,
+        "expected_effect": "Brand droas 25.46 with mroas_up20 31.77 and slot1 only 0.33; low iota but this raise actively repairs portfolio droas, buying floor headroom for generic raises."
+      },
+      {
+        "id": "i19_lead_s4mum_k05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05",
+          "R:C-S4-MUM",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Wrong holder: S2 holds 83% at score 0.945 vs S4 1.932; S4 takes slot 1 and siblings step back, lifting incremental revenue per impression."
+      },
+      {
+        "id": "i20_lead_s4hyd_k05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05",
+          "R:C-S4-HYD",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "S2 holds 84% at 0.923 vs S4 2.049; flip leadership to the 6.01-iroas Shower Gel SKU."
+      },
+      {
+        "id": "i21_lead_s4del_k06",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K06",
+          "R:C-S4-DEL",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "S2 holds 88% at 0.600 vs S4 2.134 \u2014 largest gap among wrong holders; pairs with the K06 bid raise."
+      },
+      {
+        "id": "i22_lead_s4blr_k05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05",
+          "R:C-S4-BLR",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "S2 holds 84% at 0.866 vs S4 1.738; consolidate Shower Gel generic leadership in BLR."
+      },
+      {
+        "id": "i23_yield_s5mum_k03",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S5-MUM",
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K03",
+          "C:C-S5-MUM/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "S5 holds 81% with worst score (0.286 vs S1 0.839) and a MISSES droas 1.47 cell; stepping back aligns the market with the budget cuts."
+      },
+      {
+        "id": "i24_yield_s5hyd_k01",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S5-HYD",
+          "sku_id": "S5",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01",
+          "C:C-S5-HYD/K01",
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.65,
+        "expected_effect": "S5 holds 95% of brand K01 with the worst score (0.286 vs S2 1.212) and MISSES verdict; yielding shifts impressions to stronger siblings."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "scale",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "saturated",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "saturated",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "hold",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Cut Kids Soap and weak S3 Soap (esp. droas ~1 competition and MISSED generics) to lift portfolio droas above the 4.6258 floor margin and free allowance, then concentrate raises and market leadership on S4 Shower Gel generics/competition (iroas 4.5-6.3, iota 0.79-1.0) where S2 wrongly holds K05/K06. Raise total is sized near the 367/day allowance with the S1-PUN fund budget raise first; overflow should be dropped by the guardrails."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 9452,
+    "tokens_out": 18912,
+    "cost_usd": 0.027137239999999997,
+    "wall_clock_s": 129.13666979200002
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-S3-budgets",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free ~10k INR daily allowance by reducing low-iROAS soap spend across cities."
+      },
+      {
+        "id": "cut-S5-budgets",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free ~4k INR daily allowance by reducing low-iROAS kids soap spend across cities."
+      },
+      {
+        "id": "hold-S2-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent wasteful spending and reach drops given OSA_3D < 0.60 and prior own-action confounds."
+      },
+      {
+        "id": "raise-S2-MUM-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture additional high-iROAS Body Wash volume in Mumbai where budget recently capped."
+      },
+      {
+        "id": "raise-S2-DEL-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05,K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Push efficient Generic bids to secure incremental Body Wash offtake in Delhi."
+      },
+      {
+        "id": "raise-S2-BLR-comp",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up competitor keyword where slot-1 share is manageable and iota=1.00 for pure incrementality."
+      },
+      {
+        "id": "raise-S2-PUN-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale Pune generic reach with high predicted mroas_up20 while staying under slot-1 cap."
+      },
+      {
+        "id": "raise-S2-MUM-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Incrementally bid up Mumbai generic channel to leverage raised budget cap."
+      },
+      {
+        "id": "raise-S4-HYD-generic-comp",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06,K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06",
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Extract incremental Shower Gel orders in Hyderabad via generic and competition channels."
+      },
+      {
+        "id": "raise-S4-PUN-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase scalable Pune generic impressions for Shower Gel to drive top-line volume."
+      },
+      {
+        "id": "lead-S4-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign slot leadership to Shower Gel over Soap in Pune Brand search to capture highest incremental value."
+      }
+    ],
+    "stance": [],
+    "notes": "Reallocates daily allowance from low-iROAS Sub Categories (S3/S5) to high-iROAS growth pockets (S2/S4) to maximize total SKU offtake over the final two runs. Holds S2-HYD strictly due to OSA_3D < 60% constraint. Leads contested Pune Brand market with S4 to optimize incremental yield while portfolio direct ROAS remains safely above floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11136,
+    "tokens_out": 9949,
+    "cost_usd": 0.0016274500000000001,
+    "wall_clock_s": 84.41366529100002
+  }
+}

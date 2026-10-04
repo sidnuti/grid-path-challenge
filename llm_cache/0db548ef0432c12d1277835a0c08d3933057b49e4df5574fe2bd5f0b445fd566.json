@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.5,
+    "rationale": "Mechanical scoring selects C-S3-BLR (1.5906) over C-S2-BLR (1.5651) by a negligible 0.0255 margin, confirming substantial score noise. Although C-S2-BLR demonstrates materially higher slot1 share (0.50 vs 0.16), indicating stronger auction capture, the explicit directive prefers the mechanical leader absent overwhelmingly contrary signals. Thus, C-S3-BLR is retained as leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2927,
+    "cost_usd": 0.045171,
+    "wall_clock_s": 27.748620458999994
+  }
+}

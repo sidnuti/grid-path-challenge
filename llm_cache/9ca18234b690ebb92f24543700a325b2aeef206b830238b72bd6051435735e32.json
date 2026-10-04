@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.62,
+    "rationale": "Mechanical leader_score favours C-S1-MUM (0.7830 vs 0.7190 for C-S3-MUM). The near-tie invites scrutiny, but C-S3-MUM's edge is only its slightly higher 7d slot1 share (0.54 vs 0.45), a marginal, current-position signal that reflects past bidding rather than economic value; C-S1-MUM's higher conversion x ASP x incrementality score is the better basis for deciding whose bid to protect. C-S5-MUM is far behind on score and is not a contender."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 361,
+    "tokens_out": 549,
+    "cost_usd": 0.00081982,
+    "wall_clock_s": 5.063614999999999
+  }
+}

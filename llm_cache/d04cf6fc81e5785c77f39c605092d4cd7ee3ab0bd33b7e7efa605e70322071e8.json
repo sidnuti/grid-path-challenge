@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-DEL",
+    "confidence": 0.65,
+    "rationale": "C-S2-DEL holds the higher mechanical leader_score (0.9482 vs 0.8809), which serves as the primary decision criterion. Although C-S4-DEL shows a notably higher slot1 share (0.83 vs 0.67), this typically indicates stronger bid volume or auction aggression rather than superior conversion or average selling price. Following the explicit instruction to retain the mechanical pick unless evidence clearly favors the alternative, and given the narrow margin, the initial selection is maintained."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 1548,
+    "cost_usd": 0.024267,
+    "wall_clock_s": 14.550946958000054
+  }
+}

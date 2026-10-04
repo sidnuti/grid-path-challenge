@@ -1,0 +1,130 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-RB-C-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unseal efficient soap ad capacity in DEL; campaign ran out 7/7 days with iroas 2.89."
+      },
+      {
+        "id": "INT-RB-C-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unseal efficient shower gel ad capacity in DEL; campaign ran out 3/7 days with iroas 2.81."
+      },
+      {
+        "id": "INT-LM-S4-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impressions to S4 (score 1.202) currently blocked by S2 holder."
+      },
+      {
+        "id": "INT-LM-S4-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impressions to S4 (score 1.305) currently blocked by S2 holder."
+      },
+      {
+        "id": "INT-LM-S4-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impressions to S4 (score 1.062) currently blocked by S2 holder."
+      },
+      {
+        "id": "INT-LM-S4-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impressions to S4 (score 1.595) currently blocked by S2 holder."
+      },
+      {
+        "id": "INT-LM-S1-HYD-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impressions to S1 (score 1.017) currently blocked by S3 holder."
+      },
+      {
+        "id": "INT-LM-S1-MUM-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impressions to S1 (score 1.026) currently blocked by S3 holder."
+      }
+    ],
+    "stance": [],
+    "notes": "Exhausted the \u20b9300 allowance via medium budget raises on two 'fund' campaigns in DEL (C-S1-DEL and C-S4-DEL) that consistently ran out and clear goals. Allocated zero additional spend to bid adjustments to avoid guardrail triggers; instead, corrected five contested markets where lower-iota SKUs improperly held slots, driving incremental revenue efficiency without risking the ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12549,
+    "tokens_out": 8013,
+    "cost_usd": 0.0014181600000000001,
+    "wall_clock_s": 67.82158841699999
+  }
+}

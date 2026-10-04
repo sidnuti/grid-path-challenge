@@ -1,0 +1,186 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "CUT-S1-MUM-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Free significant allowance headroom by reducing inefficient trim-scope spend"
+      },
+      {
+        "id": "CUT-S1-BLR-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Free additional allowance headroom; S1-BLR underperforming iroas relative to S4/S2"
+      },
+      {
+        "id": "LM-DEL-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Displace S2 on DEL generic; S4 has superior incremental revenue score (2.057)"
+      },
+      {
+        "id": "LM-MUM-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture share in MUM generic where S4 incrementality drives highest value"
+      },
+      {
+        "id": "LM-PUN-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K05",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift PUN generic leadership to S4 (best score 2.134); high iroas environment"
+      },
+      {
+        "id": "LM-PUN-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Win adjacent generic term in PUN; large score gap vs holder S2"
+      },
+      {
+        "id": "LM-MUM-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure MUM K06 share; S4 score 3.102 far exceeds S2"
+      },
+      {
+        "id": "LM-DEL-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take DEL brand leadership from S4; S2 body wash brand iroas highly efficient"
+      },
+      {
+        "id": "LM-HYD-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01",
+          "C:C-S2-HYD/K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S2 dominance on HYD brand search; S2 score 1.929 vs S1 0.454"
+      },
+      {
+        "id": "RB-S2-BLR-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stop persistent budget exhaustion (ran_out_7d=7); S2-BLR is efficient scale/fund"
+      },
+      {
+        "id": "LM-BLR-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate S4 leadership on BLR K05; minor bid optimization to maintain lead"
+      }
+    ],
+    "stance": [],
+    "notes": "Aggressively cut low-performing trim budgets (S1-MUM, S1-BLR) to generate sufficient allowance headroom (~\u20b92000 freed). Redirected this liquidity into lead_market actions that shift keyword share to high-iroas S4 and S2 SKUs (specifically Body Wash and Shower Gel generic terms), maximizing total incremental off-take while protecting portfolio ROAS."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 22883,
+    "tokens_out": 13196,
+    "cost_usd": 0.0024019700000000002,
+    "wall_clock_s": 132.22884595799997
+  }
+}

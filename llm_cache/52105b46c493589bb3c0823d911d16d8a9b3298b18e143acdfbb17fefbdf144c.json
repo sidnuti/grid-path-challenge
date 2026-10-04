@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.9,
+    "rationale": "C-S3-HYD maintains the highest mechanical leader_score and substantially leads in slot1_share_7d compared to the runner-up, indicating a stronger, more stable ad position that justifies protecting its bid over the near-tie candidate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1178,
+    "cost_usd": 0.018801,
+    "wall_clock_s": 12.927130124999962
+  }
+}

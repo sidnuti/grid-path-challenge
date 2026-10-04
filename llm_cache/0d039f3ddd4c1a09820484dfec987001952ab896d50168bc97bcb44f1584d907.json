@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.7,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Significant reach spike (z=3.72) with unflagged CPM/OSA and no own-action confound points to a genuine external demand shift or favorable competitive environment rather than internal bidding artifacts."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1274,
+    "cost_usd": 0.020442,
+    "wall_clock_s": 14.34536799999995
+  }
+}

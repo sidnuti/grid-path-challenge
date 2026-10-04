@@ -1,0 +1,353 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund role with high iroas (3.60) and 7 run-outs; lifts volume within allowance."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund role, iroas 4.09, capped; captures incremental demand."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund role, iroas 5.58, high iota; expands reach efficiently."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund role, iroas 5.01; unlocks incremental shower gel share."
+      },
+      {
+        "id": "INT-05",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Hold/trim, low iroas 0.74; frees allowance for higher-value SKUs."
+      },
+      {
+        "id": "INT-06",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Hold/trim, low iroas 0.76; reallocates budget to scalable assets."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "High iota (0.85), mroas_up20 4.56; strengthens generic capture."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Strong incremental returns; wins additional high-intent impressions."
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "High iroas (5.58), iota 0.80; defends slot position on profitable generics."
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Top-tier mroas_up20 (8.56); accelerates incremental shower gel growth."
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Corrects wrong holder; S2 body wash brand has 11x higher iroas than soap."
+      },
+      {
+        "id": "INT-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shifts brand leadership to highest incremental revenue per impression."
+      },
+      {
+        "id": "INT-13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K06",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "S4 shower gel generic yields 2.4x incremental score vs sibling leader."
+      },
+      {
+        "id": "INT-14",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aligns brand contest with best incremental performance (score 2.378)."
+      },
+      {
+        "id": "INT-15",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Maximizes brand search efficiency in Pune by awarding slot to S2."
+      },
+      {
+        "id": "INT-16",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K04",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Underbidding generic (MISSES, droas 3.62 vs goal 5.06); close gap to reclaim volume."
+      },
+      {
+        "id": "INT-17",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K07",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Strong iota (0.70), CLEARS; pushes efficient spend deeper into generic tier."
+      },
+      {
+        "id": "INT-18",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K03",
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale role, iroas 1.90; maintains competitive positioning on core generic."
+      },
+      {
+        "id": "INT-19",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale role with healthy iroas (1.63); secures generic visibility."
+      },
+      {
+        "id": "INT-20",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale role, iroas 4.63, iota 0.85; amplifies efficient generic conquest."
+      },
+      {
+        "id": "INT-21",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "High iota (0.85), CLEARS; protects incremental revenue on competing generics."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocated brand and generic contest leadership to SKUs with highest incremental revenue scores (S2, S4), resolving multiple wrong-holder inefficiencies. Raised budgets on consistently capping fund roles (S2/S4 in DEL/MUM/BLR) and trimmed low-incrementality kids soap to respect the daily allowance while preserving portfolio direct ROAS above floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11101,
+    "tokens_out": 10282,
+    "cost_usd": 0.0016696900000000001,
+    "wall_clock_s": 85.32813545800002
+  }
+}

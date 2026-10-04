@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.8,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach exhibits a strong statistical deviation (z=3.796, flagged=True) pointing to a genuine external surge. CPM is elevated but not flagged (z=2.304) and OSA is flat (z=0.0), ruling out price or share-of-ad changes. With no own-action confound present and mechanical read confirming a surge, this reflects a real market demand or competition shift."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1635,
+    "cost_usd": 0.025857,
+    "wall_clock_s": 17.51210520799998
+  }
+}

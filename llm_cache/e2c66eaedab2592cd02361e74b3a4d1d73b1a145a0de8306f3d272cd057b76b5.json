@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.45,
+    "rationale": "Low order volume (17) increases metric variance and reduces reliability of short-term signals. Realized dROAS (1.56) sits well below the target (2.22), creating tension with a mechanical raise recommendation. Dampening the proposed +5% step preserves upside testing while limiting exposure to potential inefficiency. Confidence is moderated by sparse historical data and sub-goal ROAS."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 464,
+    "tokens_out": 1865,
+    "cost_usd": 0.029367,
+    "wall_clock_s": 20.744190166999942
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "CM-BLR-K03-Lead",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "expected_effect": "Shift slot leadership to highest incremental score (0.762)"
+      },
+      {
+        "id": "CM-BLR-K03-Yield",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "expected_effect": "Reduce unprofitable hold by weak incumbent"
+      },
+      {
+        "id": "CM-HYD-K01-Lead",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Correct wrong holder; S2 leads on incremental value (1.303)"
+      },
+      {
+        "id": "CM-HYD-K01-Yield",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Step back S1 to avoid self-cannibalization and improve margins"
+      },
+      {
+        "id": "CM-MUM-K02-Lead",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "expected_effect": "Reclaim brand dominance lost to low-value S3"
+      },
+      {
+        "id": "CM-MUM-K02-Yield",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "expected_effect": "Trim S3 brand exposure where incrementality is nil"
+      },
+      {
+        "id": "CM-MUM-K06-Lead",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "expected_effect": "Establish shower gel leadership with top-tier mroas_up20 (3.265)"
+      },
+      {
+        "id": "CM-MUM-K06-Yield",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "expected_effect": "Yield generic body wash slot to maximize category total off-take"
+      },
+      {
+        "id": "CM-PUN-K01-Lead",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Fix wrong holder; S2 captures high-value brand searches"
+      },
+      {
+        "id": "CM-PUN-K01-Yield",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Free S4 budget for more efficient non-brand slots"
+      },
+      {
+        "id": "CM-PUN-K02-Lead",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "expected_effect": "Reassert efficient brand control over weak S3"
+      },
+      {
+        "id": "CM-PUN-K02-Yield",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "expected_effect": "Stop low-iota bleeding from S3 in PUN"
+      },
+      {
+        "id": "SC-S2-DEL-Generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on iroas 3.80 and strong headroom; drive incremental volume"
+      },
+      {
+        "id": "SC-S2-MUM-Generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient MUM performance within allowance"
+      },
+      {
+        "id": "SC-S4-BLR-Generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage shower gel momentum and high iroas (4.75)"
+      },
+      {
+        "id": "SC-S4-HYD-Generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Maximize category leader in HYD with best-in-class iroas (5.64)"
+      },
+      {
+        "id": "SC-S1-PUN-General",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Modest uplift in scale campaign with ample bid headroom"
+      },
+      {
+        "id": "SC-S2-PUN-General",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Incremental growth in PUN body wash tier"
+      },
+      {
+        "id": "SC-S1-MUM-General",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.65,
+        "expected_effect": "Conservative push to stay within efficiency bounds"
+      },
+      {
+        "id": "HOLD-S5-Kids",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "confidence": 0.6,
+        "expected_effect": "Protect portfolio ROAS by freezing incremental spend on low-iota kids soap"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritize market leadership corrections in contested segments to maximize incremental revenue per impression. Scale high-iroas campaigns (Body Wash/Shower Gel generics) within the daily spend allowance while holding low-incrementality Kids Soap to safeguard the portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11189,
+    "tokens_out": 11517,
+    "cost_usd": 0.00183288,
+    "wall_clock_s": 103.72929166599988
+  }
+}

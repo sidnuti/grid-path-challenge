@@ -1,0 +1,316 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "MKT-DEL-K01-L",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Shift incremental volume to highest ROI SKU for city-brand searches.",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ]
+      },
+      {
+        "id": "MKT-DEL-K01-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Step back lower-efficiency SKU to avoid cannibalization.",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ]
+      },
+      {
+        "id": "MKT-BLR-K04-L",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Capture top incremental value in BLR generic query.",
+        "evidence_refs": [
+          "M:BLR:K04"
+        ]
+      },
+      {
+        "id": "MKT-BLR-K04-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Free impressions for higher-iROAS competitor auction.",
+        "evidence_refs": [
+          "M:BLR:K04"
+        ]
+      },
+      {
+        "id": "MKT-MUM-K05-L",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Lead market on high-value Body Wash generic in MUM.",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ]
+      },
+      {
+        "id": "MKT-MUM-K05-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Reduce overlap in saturated shower gel segment.",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ]
+      },
+      {
+        "id": "MKT-HYD-K03-L",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Secure incremental volume in HYD soap generic market.",
+        "evidence_refs": [
+          "M:HYD:K03"
+        ]
+      },
+      {
+        "id": "MKT-HYD-K03-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Redirect budget to superior incrementality.",
+        "evidence_refs": [
+          "M:HYD:K03"
+        ]
+      },
+      {
+        "id": "BUD-S1-DEL-R",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Fund daily stock-outs to capture efficient overflow demand.",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ]
+      },
+      {
+        "id": "BUD-S4-DEL-R",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Align budget with rapid turnover capacity.",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ]
+      },
+      {
+        "id": "BID-S3-DEL-K03-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Increase win rate on high-iROAS generic soap queries.",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "K:Soap:generic"
+        ]
+      },
+      {
+        "id": "BID-S3-DEL-K04-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Deepen coverage on profitable generic term.",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "K:Soap:generic"
+        ]
+      },
+      {
+        "id": "BID-S2-DEL-K06-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Scale wins on strong body wash generic performance.",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "K:Body Wash:generic"
+        ]
+      },
+      {
+        "id": "BID-S2-BLR-K05-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Push incremental growth in efficient BLR market.",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "K:Body Wash:generic"
+        ]
+      },
+      {
+        "id": "BID-S2-HYD-K05-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Capitalize on high iROAS in scaled HYD campaign.",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "K:Body Wash:generic"
+        ]
+      },
+      {
+        "id": "BID-S1-DEL-K09-C",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "expected_effect": "Remove low-incrementality competition spend to protect ROAS floor.",
+        "evidence_refs": [
+          "K:Soap:competition"
+        ]
+      },
+      {
+        "id": "BID-S3-DEL-K09-C",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "expected_effect": "Reallocate inefficient competition clicks to generic queries.",
+        "evidence_refs": [
+          "K:Soap:competition"
+        ]
+      },
+      {
+        "id": "BID-S2-DEL-K01-C",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "expected_effect": "Trim high-displacement brand traffic with poor iROAS.",
+        "evidence_refs": [
+          "K:Body Wash:brand"
+        ]
+      },
+      {
+        "id": "BID-S4-DEL-K01-C",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "expected_effect": "Stop overbidding on captive brand traffic.",
+        "evidence_refs": [
+          "K:Shower Gel:brand"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritizing incremental growth by correcting market leadership gaps and funding high-iROAS generic queries, while systematically cutting low-incrementality brand and competition spend to maintain the 4.17 ROAS floor. Budget concentrates on top-funding SKUs to eliminate daily stock-outs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11187,
+    "tokens_out": 11428,
+    "cost_usd": 0.00182125,
+    "wall_clock_s": 96.41668991700004
+  }
+}

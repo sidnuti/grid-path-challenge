@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "High reach z-score (5.0) with neutral CPM and OSA, plus absence of an own-action confound, strongly indicates a genuine demand surge rather than price competition or mechanical bias."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 441,
+    "tokens_out": 1433,
+    "cost_usd": 0.022818,
+    "wall_clock_s": 13.044588541000167
+  }
+}

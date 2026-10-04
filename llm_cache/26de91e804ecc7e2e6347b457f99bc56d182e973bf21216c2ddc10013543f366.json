@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score gives C-S1-PUN a modest edge (0.622 vs 0.592), consistent with a near-tie. Following the instruction to prefer the mechanical selection unless evidence clearly overrides it, we retain C-S1-PUN. Although C-S3-PUN shows higher slot1_share (0.89 vs 0.69), the composite leader_score likely captures broader value metrics (conversion x ASP x incrementality) that justify maintaining the current leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1671,
+    "cost_usd": 0.026115,
+    "wall_clock_s": 18.615131375000146
+  }
+}

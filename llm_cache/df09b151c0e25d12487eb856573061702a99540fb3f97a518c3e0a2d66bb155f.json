@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 6.9,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "Concurrent strong surges in reach (+3.70\u03c3) and CPM (+6.87\u03c3) with no own-action confound flag point to a genuine external market shock. The magnitude and direction suggest either a broad demand increase or intensified competitive bidding driving up both inventory access and unit prices."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1879,
+    "cost_usd": 0.029517,
+    "wall_clock_s": 16.773202832999914
+  }
+}

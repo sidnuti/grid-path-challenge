@@ -1,0 +1,189 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "L1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 dominance to S4 Shower Gel in DEL competition, leveraging higher incremental score (0.884 vs 0.648) while maintaining CLEARS status."
+      },
+      {
+        "id": "L2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move brand leadership to S2 Body Wash in HYD, aligning with highest incremental value (1.308 vs 0.226) and capturing THIN-inventory opportunity."
+      },
+      {
+        "id": "L3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead slot-1 for S4 Shower Gel in MUM generic, capturing superior incremental lift (1.542 vs 0.873) without breaching MISSES thresholds."
+      },
+      {
+        "id": "B1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Unfreeze capped efficient fund in HYD Soap to prevent stockout-driven lost reach, utilizing available daily allowance."
+      },
+      {
+        "id": "R1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05",
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Modest bid bump on HYD Body Wash generic cells to capture open slot-1 share and high iota lift (0.65)."
+      },
+      {
+        "id": "R2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase bids in BLR Body Wash generic inventory where slot-1 share remains open (<80%)."
+      },
+      {
+        "id": "R3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale DEL Shower Gel generic bids efficiently to claim additional impressions at 59% slot-1 share."
+      },
+      {
+        "id": "R4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Capture incremental volume in BLR Shower Gel generic slots without exposing low-iota brand keywords."
+      },
+      {
+        "id": "R5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Gain ground in PUN Body Wash generic segment across cleared inventory with strong mroas_up20 signals."
+      },
+      {
+        "id": "R6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Targeted DEL Body Wash generic expansion at 61% slot-1 share, preserving portfolio ROAS by excluding brand/displacement cells."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Corrected previous rejections by dropping low-iota brand raises and targeting only CLEARS cells with demonstrable slot-1 headroom. Lead-market actions reallocate ownership to higher-scoring SKUs in DEL/HYD/MUM contested markets without violating MISSES guardrails. Bid scopes restricted to generic keyword type to maximize true incrementality (iota 0.54-0.65) and protect the 4.17 portfolio ROAS floor against organic displacement."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11366,
+    "tokens_out": 10650,
+    "cost_usd": 0.00172548,
+    "wall_clock_s": 107.09521816699998
+  }
+}

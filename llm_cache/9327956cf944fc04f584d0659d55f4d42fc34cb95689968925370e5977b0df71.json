@@ -1,0 +1,177 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-BUDGET-FUND1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlock capped budget for efficient fund SKU to drive incremental offtake within daily allowance."
+      },
+      {
+        "id": "INT-BUDGET-FUND2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unblock budget for high-fund Hyderabad campaign to sustain efficient volume growth."
+      },
+      {
+        "id": "INT-BID-SCALE1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bid on high-iota generic body wash cell to capture more incremental impressions without slot-1 saturation."
+      },
+      {
+        "id": "INT-BID-SCALE2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up efficient Pune soap generic cell to leverage strong iroas and bid headroom."
+      },
+      {
+        "id": "INT-CONTEST-LEAD1",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot leadership to S2, which has the highest incremental revenue per impression in this contested market."
+      },
+      {
+        "id": "INT-CONTEST-LEAD2",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure slot 1 for S4 shower gel where it holds a decisive incremental advantage over incumbent S2."
+      },
+      {
+        "id": "INT-CONTEST-LEAD3",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move Delhi soap generic leadership from S3 to S1, capturing the best incremental ROI per impression."
+      },
+      {
+        "id": "INT-CONTEST-YIELD1",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S1 brand keyword to allow the identified best-holder to compete for efficient traffic."
+      },
+      {
+        "id": "INT-HOLD-WEAK1",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prevent bid/budget escalation on low-incrementality kids soap campaign to protect portfolio ROAS floor."
+      },
+      {
+        "id": "INT-HOLD-WEAK2",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Freeze spending controls on Bangalore kids soap to stop inefficient allocation."
+      },
+      {
+        "id": "INT-CUT-TRIM1",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce overspend on Mumbai trim SKU to reallocate allowance to higher-efficiency funds and scales."
+      }
+    ],
+    "stance": [],
+    "notes": "Capitalized on fund run-outs with targeted budget unlocks while maintaining strict ROAS guardrails. Realigned contested market leadership to highest IoTA SKUs and paused escalation on weak hold/trim roles to preserve headroom for efficient scale campaigns."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11166,
+    "tokens_out": 9820,
+    "cost_usd": 0.0016115800000000003,
+    "wall_clock_s": 91.85292691699988
+  }
+}

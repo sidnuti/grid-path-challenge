@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.6,
+    "confidence": 0.6,
+    "rationale": "Verdict CLEARS but with razor-thin headroom: shrunk dROAS 1.487 vs goal 1.45 (~2.5% buffer). A full +10% raise likely pushes marginal traffic against that thin margin. With tier B evidence and only 10 orders in 28 days, the dROAS estimate carries real sampling uncertainty, so a sub-goal outcome is plausible. Dampen the raise to ~60% (bid \u2248 INR 371) to follow the CLEARS direction while preserving ROAS headroom; confidence moderate given the small order count."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 452,
+    "tokens_out": 880,
+    "cost_usd": 0.00126724,
+    "wall_clock_s": 7.263394833000007
+  }
+}

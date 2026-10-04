@@ -1,0 +1,87 @@
+displacement (clipped 0..1): {'S1': {'brand': 1.0, 'generic': 0.37, 'competition': 0.25}, 'S2': {'brand': 0.65, 'generic': 0.3, 'competition': 0.06}, 'S3': {'brand': 0.86, 'generic': 0.71, 'competition': 0.0}, 'S4': {'brand': 0.78, 'generic': 0.52, 'competition': 0.32}, 'S5': {'brand': 0.79, 'generic': 0.43, 'competition': -0.0}}
+
+## SKU tiers (warm-up per day)
+       sub_category  asp_inr  launch_age_days    offtake  offtake_share  spend_share  invest_ratio  ad_share  droas  iroas  generic_org_rank  runout_rate  organic_trend_pct  reach_trend_pct
+sku_id                                                                                                                                                                                       
+S1             Soap      172              900  155346.71           0.38         0.25          0.67      0.13   4.25   1.53              4.67         0.61              -0.43            21.31
+S3             Soap      149             1200  100191.86           0.25         0.32          1.31      0.21   3.47   0.95              3.50         0.20               2.64            -6.31
+S2        Body Wash      279              540   76994.04           0.19         0.14          0.77      0.23   6.56   3.80              6.50         0.20              -3.87             1.38
+S4       Shower Gel      424              300   64735.71           0.16         0.14          0.88      0.35   8.50   3.31              6.00         0.00               3.30            -0.94
+S5        Kids Soap      126               45   10665.00           0.03         0.14          5.28      0.51   2.07   0.99             13.00         0.49              -1.11            -7.09
+
+## SKU x keyword type: direct vs incremental ROAS
+               spend                       droas                     iroas                    
+keyword_type   brand competition  generic  brand competition generic brand competition generic
+sku_id                                                                                        
+S1            538.98     1226.68  3052.03  16.77        0.82    3.41  0.00        0.62    2.17
+S2            370.84      591.97  1771.35  18.33        1.45    5.81  6.42        1.36    4.07
+S3            634.34     1863.75  3600.39  14.02        0.79    3.00  1.98        0.79    0.86
+S4            365.67      824.58  1466.62  24.93        2.28    7.90  5.42        1.54    3.79
+S5            187.33         NaN  2424.70   7.57         NaN    1.65  1.55         NaN    0.94
+
+## Sub-category x keyword type: incremental ROAS
+keyword_type  brand  competition  generic
+sub_category                             
+Body Wash      6.42         1.36     4.07
+Kids Soap      1.55          NaN     0.94
+Shower Gel     5.42         1.54     3.79
+Soap           1.07         0.72     1.46
+
+## SKU x city (warm-up per day), sorted by offtake
+         offtake  offtake_share  cum_offtake_share  spend_share  droas  iroas  ad_share  runout  util   osa  cells  cells_bid_headroom
+sc                                                                                                                                    
+S1-DEL  49302.57           0.12               0.12         0.05   3.48   1.87      0.06    1.00  1.00  0.93      6                   4
+S1-MUM  38091.86           0.09               0.21         0.06   3.99   1.17      0.13    0.00  0.76  0.94      6                   2
+S1-BLR  33355.71           0.08               0.30         0.06   4.44   1.60      0.15    1.00  1.00  0.92      6                   3
+S3-DEL  32897.07           0.08               0.38         0.13   4.38   1.11      0.32    0.00  0.83  0.94      5                   0
+S3-MUM  24457.29           0.06               0.44         0.09   2.50   0.81      0.17    0.00  0.72  0.94      5                   1
+S2-DEL  24452.36           0.06               0.50         0.06   6.36   3.86      0.28    0.00  0.63  0.90      4                   1
+S4-DEL  22350.86           0.05               0.55         0.05   6.56   2.90      0.26    0.00  0.76  0.95      4                   1
+S3-BLR  21264.43           0.05               0.60         0.06   2.64   0.79      0.13    1.00  1.00  0.93      5                   0
+S1-HYD  20326.71           0.05               0.65         0.06   4.48   1.58      0.24    0.39  0.96  0.91      6                   1
+S2-BLR  18055.29           0.04               0.70         0.04   7.16   3.98      0.30    0.00  0.56  0.96      4                   1
+S2-MUM  17865.96           0.04               0.74         0.02   5.61   3.32      0.13    1.00  1.00  0.93      4                   2
+S4-MUM  15354.86           0.04               0.78         0.04  11.25   3.50      0.54    0.00  0.77  0.90      4                   2
+S1-PUN  14269.86           0.03               0.81         0.03   5.34   1.55      0.18    0.64  0.99  0.92      6                   2
+S4-BLR  13522.57           0.03               0.85         0.03   6.84   2.90      0.32    0.00  0.51  0.92      4                   1
+S3-HYD  12186.07           0.03               0.88         0.02   3.86   0.98      0.10    0.00  0.82  0.91      5                   2
+S2-HYD   9625.50           0.02               0.90         0.01   5.76   3.33      0.16    0.00  0.45  0.92      4                   2
+S3-PUN   9387.00           0.02               0.92         0.03   3.79   1.04      0.25    0.00  0.81  0.93      5                   1
+S4-HYD   8616.29           0.02               0.94         0.02   9.63   4.45      0.32    0.00  0.71  0.88      4                   3
+S2-PUN   6994.93           0.02               0.96         0.01   8.16   4.38      0.26    0.00  0.56  0.91      4                   2
+S4-PUN   4891.14           0.01               0.97         0.01  11.74   4.58      0.31    0.00  0.32  0.78      4                   2
+S5-DEL   3037.50           0.01               0.98         0.02   2.98   1.20      0.39    1.00  1.00  0.88      3                   2
+S5-MUM   3028.50           0.01               0.99         0.07   1.66   0.89      0.68    0.32  0.96  0.92      3                   1
+S5-BLR   2214.00           0.01               0.99         0.03   1.57   0.87      0.35    1.00  1.00  0.90      3                   1
+S5-HYD   1480.50           0.00               1.00         0.02   3.19   1.22      0.74    0.11  0.85  0.94      3                   2
+S5-PUN    904.50           0.00               1.00         0.01   2.24   1.14      0.31    0.00  0.32  0.93      3                   1
+
+Pareto: top 5/25 SKU x city = 44% of offtake, 39% of spend
+
+## Roles (rule: run-out >= 50% of days, iROAS vs median 1.58 )
+                        n  offtake_share  spend_share  iroas
+role                                                        
+fund budget             3           0.25         0.13   1.87
+hold budget             4           0.10         0.13   1.03
+scale bids / keywords  10           0.35         0.32   3.68
+trim / re-mix           8           0.30         0.42   1.07
+sc         S1-DEL         S1-MUM       S1-BLR         S3-DEL         S3-MUM                 S2-DEL                 S4-DEL       S3-BLR                 S1-HYD                 S2-BLR       S2-MUM                 S4-MUM       S1-PUN                 S4-BLR         S3-HYD                 S2-HYD         S3-PUN                 S4-HYD                 S2-PUN                 S4-PUN       S5-DEL         S5-MUM       S5-BLR         S5-HYD         S5-PUN
+role  fund budget  trim / re-mix  fund budget  trim / re-mix  trim / re-mix  scale bids / keywords  scale bids / keywords  hold budget  scale bids / keywords  scale bids / keywords  fund budget  scale bids / keywords  hold budget  scale bids / keywords  trim / re-mix  scale bids / keywords  trim / re-mix  scale bids / keywords  scale bids / keywords  scale bids / keywords  hold budget  trim / re-mix  hold budget  trim / re-mix  trim / re-mix
+
+## Contested markets: spend leader is the best-incremental SKU in 25/40
+city_id keyword_id spend_leader  leader_iroas best_iroas_sku  best_iroas  match keyword_type
+    BLR        K04           S3          0.98             S1        2.19  False      generic
+    DEL        K01           S3          1.64             S2        6.53  False        brand
+    DEL        K03           S3          0.89             S1        1.98  False      generic
+    DEL        K04           S3          1.24             S1        2.13  False      generic
+    DEL        K10           S4          1.27             S2        1.39  False  competition
+    HYD        K01           S1          0.00             S2        6.26  False        brand
+    HYD        K05           S4          4.53             S2        5.06  False      generic
+    HYD        K10           S2          1.38             S4        2.75  False  competition
+    MUM        K03           S5          0.77             S1        1.71  False      generic
+    MUM        K04           S3          0.81             S1        1.92  False      generic
+    PUN        K01           S1          0.00             S2        7.65  False        brand
+    PUN        K03           S3          0.83             S1        1.46  False      generic
+    PUN        K05           S2          5.22             S4        5.31  False      generic
+    PUN        K09           S1          0.80             S3        1.44  False  competition
+    PUN        K10           S2          1.75             S4        3.45  False  competition

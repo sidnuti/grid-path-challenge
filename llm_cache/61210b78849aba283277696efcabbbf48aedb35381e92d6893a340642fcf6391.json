@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "Near-tie in leader_score (0.2274 vs 0.2242); mechanical pick C-S1-HYD retained. Slot1_share_7d corroborates: C-S1-HYD already holds slot 1 at 0.96 vs 0.34, so it is the natural bid to protect while C-S3-HYD holds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 328,
+    "cost_usd": 0.00053617,
+    "wall_clock_s": 3.1855597499999817
+  }
+}

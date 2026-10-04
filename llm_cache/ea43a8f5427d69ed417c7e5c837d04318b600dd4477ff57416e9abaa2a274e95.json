@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.6,
+    "rationale": "Following the explicit instruction to prefer the mechanical leader_score in a near-tie scenario. C-S3-DEL has a higher composite score (0.8801 vs 0.8261), and no provided evidence definitively overrides it despite C-S1-DEL's higher slot1_share."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 1238,
+    "cost_usd": 0.019617,
+    "wall_clock_s": 12.080481125000006
+  }
+}

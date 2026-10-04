@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.9,
+    "rationale": "Mechanical scoring favors C-S2-HYD with a marginally higher leader_score (0.8688 vs 0.8443). The difference is small enough that supporting operational signals is prudent, and C-S2-HYD shows a decisive advantage in real-world execution with a much higher Slot 1 share (0.91 vs 0.49). This indicates stronger auction participation and efficiency for C-S2-HYD, making it the clear choice for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 774,
+    "cost_usd": 0.012666,
+    "wall_clock_s": 8.248973624999962
+  }
+}

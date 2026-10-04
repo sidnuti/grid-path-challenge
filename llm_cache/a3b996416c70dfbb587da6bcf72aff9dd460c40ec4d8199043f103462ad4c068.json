@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.55,
+    "rationale": "C-S3-HYD holds the highest mechanical leader_score (0.5377), narrowly exceeding C-S1-HYD (0.5299) by less than 1.5%. Per the instruction to prefer the mechanical pick in near-ties, it is retained as leader. C-S1-HYD's higher slot1_share_7d indicates strong current visibility, but does not conclusively override the composite scoring model."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 2479,
+    "cost_usd": 0.038316,
+    "wall_clock_s": 26.637947292000007
+  }
+}

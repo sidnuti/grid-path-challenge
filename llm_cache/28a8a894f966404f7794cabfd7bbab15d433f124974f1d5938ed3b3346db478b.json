@@ -1,0 +1,105 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "RS-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental Shower Gel volume in Hyderabad on high-iota generic term; iROAS 7.02 supports safe budget expansion."
+      },
+      {
+        "id": "RS-02",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure additional impression share on secondary generic term in HYD; strong mroas_up20 indicates room to bid without cannibalization."
+      },
+      {
+        "id": "RS-03",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive efficient off-take in Pune where shower gel iROAS exceeds 7.0; osa_3d 0.78 permits upward movement."
+      },
+      {
+        "id": "LM-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01",
+          "keyword_type": "brand"
+        },
+        "target_slot": 1,
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Displace lower-incrementality Body Wash share from branded searches in HYD; aligns with S4 leadership score (1.706 vs 0.339)."
+      },
+      {
+        "id": "LM-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "target_slot": 1,
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong-holder status in PUN competition market; shifts spend to Shower Gel with 1.00 iota and higher iROAS."
+      }
+    ],
+    "stance": [],
+    "notes": "Focused budget allocation on Shower Gel (S4) in Hyderabad and Pune where incremental ROAS consistently exceeds 7.0, safely supporting the 4.62 floor. Replaced previously rejected broad brand/competitor raises with targeted market-leadership moves and small generic bid lifts that stay well within the \u20b9300 allowance and avoid already-saturated slot-1 cells."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11523,
+    "tokens_out": 7205,
+    "cost_usd": 0.0012823399999999999,
+    "wall_clock_s": 59.346154458
+  }
+}

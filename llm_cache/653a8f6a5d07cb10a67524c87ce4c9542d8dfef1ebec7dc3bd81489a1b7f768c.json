@@ -1,0 +1,65 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Release budget cap on DEL fund campaign, capturing ~\u20b9200 daily spend to drive incremental off-take."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Release budget cap on HYD fund campaign, capturing ~\u20b955 daily spend."
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Release budget cap on PUN fund campaign, capturing ~\u20b940 daily spend."
+      }
+    ],
+    "stance": [],
+    "notes": "Allocated full day's allowance via budget raises on three fund campaigns that ran out 7 consecutive days. This removes artificial caps on efficient spend, driving incremental off-take while keeping portfolio ROAS safely above the 4.17 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12059,
+    "tokens_out": 8114,
+    "cost_usd": 0.00141659,
+    "wall_clock_s": 69.701659958
+  }
+}

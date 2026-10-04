@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.6,
+    "rationale": "Mechanical scoring favors C-S1-DEL (0.9921 vs 0.9479). While C-S3-DEL exhibits a higher slot1 share (0.72 vs 0.53), the score gap is narrow and consistent with stated noise levels for a near-tie. Adhering to the directive to prefer the mechanical pick in the absence of clearly dominant evidence maintains algorithmic consistency and protects the optimized bid strategy."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 373,
+    "tokens_out": 2334,
+    "cost_usd": 0.036129,
+    "wall_clock_s": 22.930901040999984
+  }
+}

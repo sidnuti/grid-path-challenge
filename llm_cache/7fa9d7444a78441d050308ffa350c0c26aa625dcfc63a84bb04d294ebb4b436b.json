@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.62,
+    "rationale": "Following the mechanical pick: C-S1-BLR's leader_score (0.3681) exceeds C-S3-BLR's (0.3323), and the gap (~10% relative) is not negligible. The only extra evidence, slot1_share_7d, does not clearly favour C-S3-BLR \u2014 its 0.90 share indicates it already owns slot 1 and needs little bid protection, whereas C-S1-BLR at 0.48 has more at stake in bid headroom. Defaulting to the mechanical leader per instructions."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 601,
+    "cost_usd": 0.0008766799999999999,
+    "wall_clock_s": 5.503185209000037
+  }
+}

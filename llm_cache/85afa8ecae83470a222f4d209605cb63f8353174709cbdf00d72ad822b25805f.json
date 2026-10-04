@@ -1,0 +1,242 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LB-S1-HYD-LRG",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Restore funding to depleted fund campaign in HYD; captures immediate incremental revenue at strong iroas."
+      },
+      {
+        "id": "LB-S1-PUN-MD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Cover persistent budget shortfall in PUN; maintains efficient spend on brand/generic overlap."
+      },
+      {
+        "id": "RB-S2-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up top-tier competition cell (iroas 5.15, iota 1.00) to capture incremental volume."
+      },
+      {
+        "id": "RB-S2-BLR-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bid on highly incremental competition keyword (iroas 5.13); campaign has headroom."
+      },
+      {
+        "id": "RB-S2-HYD-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale spend on strong competition cell (iroas 5.41, iota 1.00) in scale campaign."
+      },
+      {
+        "id": "RB-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Targeted lift on high-mroas generic cell (iroas 7.47) in scale campaign."
+      },
+      {
+        "id": "LM-S4-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong market holder; S4 score 2.972 dominates S2 (1.136)."
+      },
+      {
+        "id": "LM-S4-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S4 (score 2.622) from underperforming sibling S2; maximizes incremental revenue per impression."
+      },
+      {
+        "id": "YS4-BLR-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S4 in favor of S2, which has higher incremental score (1.605 vs 1.537)."
+      },
+      {
+        "id": "LS2-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S2 as leader in BLR K05 contest to maximize incremental value."
+      },
+      {
+        "id": "YS4-DEL-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield DEL K10 to S2 which scores higher (0.806 vs 0.623)."
+      },
+      {
+        "id": "LS2-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead DEL K10 with S2 for better incremental return."
+      },
+      {
+        "id": "YS4-HYD-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield HYD K10 to S2 which scores higher (0.867 vs 0.825)."
+      },
+      {
+        "id": "LS2-HYD-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead HYD K10 with S2 for better incremental return."
+      },
+      {
+        "id": "YS4-PUN-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield PUN K10 to S2 which scores higher (0.684 vs 0.611)."
+      },
+      {
+        "id": "LS2-PUN-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead PUN K10 with S2 for better incremental return."
+      }
+    ],
+    "stance": [],
+    "notes": "Funded depleted campaigns and raised bids on high-iota competition keywords to drive incremental growth. Shifted contest leadership to highest-scoring SKUs across contested markets."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 26179,
+    "tokens_out": 20362,
+    "cost_usd": 0.0034324299999999998,
+    "wall_clock_s": 158.79032812499997
+  }
+}

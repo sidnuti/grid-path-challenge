@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "While the top two leader_scores are nearly tied, C-S1-HYD demonstrates a significantly higher slot1_share_7d (0.87 vs 0.56), indicating more consistent dominance in premium auction positions. This strong secondary signal confirms C-S1-HYD as the definitive market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1465,
+    "cost_usd": 0.023106,
+    "wall_clock_s": 16.206368083000143
+  }
+}

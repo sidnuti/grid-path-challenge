@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.6,
+    "rationale": "Tier B with 19 orders in 28 days gives moderate but not strong evidence, so the CLEARS verdict deserves partial trust. However, the shrunk realised dROAS (1.72) sits roughly 23% below the 2.22 goal, meaning efficiency headroom is thin before this raise; a full +10% step risks pushing the cell further from target. Dampening to ~70% of the proposed raise (an effective ~+7% bid) balances respecting the mechanical clearance against the below-goal efficiency signal, with moderate confidence given no explicit volatility data was provided."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 450,
+    "tokens_out": 970,
+    "cost_usd": 0.001379,
+    "wall_clock_s": 8.546272625000029
+  }
+}

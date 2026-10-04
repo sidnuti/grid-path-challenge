@@ -1,0 +1,190 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "i-cut-s3-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Release ~\u20b9300/day allowance; eliminate low-iROAS soap drag and protect portfolio ROAS floor."
+      },
+      {
+        "id": "i-cut-s5-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stop bleed from lowest-iROAS kids soap; recover headroom without sacrificing core categories."
+      },
+      {
+        "id": "i-rai-s2-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S2"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Inject freed allowance into high-runout body wash campaigns (IROAS ~2.6-3.0) to capture incremental demand."
+      },
+      {
+        "id": "i-rai-s4-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S4"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Allocate freed allowance to highest-iROAS shower gel campaigns (4.5-5.5); priority growth lever."
+      },
+      {
+        "id": "i-hld-s1-campaigns",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S1"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "R:C-S1-MUM",
+          "R:C-S1-BLR",
+          "R:C-S1-HYD",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Block new budget/bid increases on scale-labeled but marginally incremental soap until iROAS stabilizes above 2.0."
+      },
+      {
+        "id": "i-lmk-s4-blr-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure lead position for S4 on high-iota generic term; displace lower-value S2 incumbent."
+      },
+      {
+        "id": "i-lmk-s4-del-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Align leadership with best incremental revenue holder for shower gel generic queries."
+      },
+      {
+        "id": "i-yld-s3-del-k02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S3 brand holder; allow S1 (higher iROAS) to capture branded demand efficiently."
+      },
+      {
+        "id": "i-yld-s3-hyd-k02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect high-intent search to efficient S1; conserve S3 budget for generic segments."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": null,
+        "sku_role": "S3",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": null,
+        "sku_role": "S1",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": null,
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": null,
+        "sku_role": "S2",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": null,
+        "sku_role": "S5",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Headroom is zero; portfolio ROAS sits barely above floor. We cut S3/S5 budgets to reclaim allowance, redirecting funds to S4 (highest iROAS ~4.5-5.5) and S2 (proven run-out efficiency). S1 campaigns are held to prevent dilution while marginal. Market leadership is re-aligned so S4 leads high-iota generic queries and S3 yields branded slots to stronger S1 incumbents."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10796,
+    "tokens_out": 10516,
+    "cost_usd": 0.00169096,
+    "wall_clock_s": 87.717951417
+  }
+}

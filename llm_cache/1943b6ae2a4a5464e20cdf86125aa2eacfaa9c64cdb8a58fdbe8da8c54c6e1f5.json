@@ -1,0 +1,259 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift brand contest leadership in DEL from S1 to highly efficient S2 Body Wash."
+      },
+      {
+        "id": "LM-BLR-K05-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:BLR:K05",
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture top slot in BLR generic segment where S2 significantly outperforms current holder S4."
+      },
+      {
+        "id": "LM-DEL-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:DEL:K10",
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect DEL competition traffic to shower gel S4, leveraging high incremental value."
+      },
+      {
+        "id": "LM-HYD-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:HYD:K06",
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Overcome S2 dominance in HYD generic by elevating S4 which has superior incremental returns."
+      },
+      {
+        "id": "LM-PUN-K03-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:PUN:K03",
+          "R:C-S3-PUN",
+          "C:C-S3-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure soap generic leadership in PUN for S3, closing the gap with S1."
+      },
+      {
+        "id": "RB-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Aggressive bid lift on verified clemency cell with 4.23x predicted revenue uplift and strong incrementality."
+      },
+      {
+        "id": "RB-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale exposure in BLR generic segment backed by exceptional 6.85x multiplier and 0.72 iota."
+      },
+      {
+        "id": "RB-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Target highest projected return cell (10.04x mroas) in HYD shower gel generic without violating OSA limits."
+      },
+      {
+        "id": "RB-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand footprint in PUN generic market utilizing 7.36x predicted return coefficient."
+      },
+      {
+        "id": "RB-S4-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bid competitiveness in DEL competition segment where S4 shows near-zero cannibalization (0.96 iota)."
+      },
+      {
+        "id": "RB-S3-BLR-K04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-BLR/K04",
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Moderate lift on SOAP generic with 4.55x multiplier to support scale role position."
+      },
+      {
+        "id": "RB-S2-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Improve impression capture in MUM generic body wash segment with proven 3.99x return forecast."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Revised plan removes all MISSES/OSA-blocked targets and focuses lead_market actions on verified CLEARS contested markets where our SKUs hold higher incremental scores. Bid raises target high-mroas cells within the 911 INR daily allowance, prioritizing scale-role accounts to protect portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25148,
+    "tokens_out": 20208,
+    "cost_usd": 0.00338148,
+    "wall_clock_s": 154.286458917
+  }
+}

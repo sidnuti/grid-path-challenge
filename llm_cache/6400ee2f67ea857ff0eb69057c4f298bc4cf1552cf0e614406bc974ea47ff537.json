@@ -1,0 +1,299 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM_BLR_K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S5"
+      },
+      {
+        "id": "LM_BLR_K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_DEL_K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_DEL_K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_DEL_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S4"
+      },
+      {
+        "id": "LM_DEL_K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_HYD_K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_HYD_K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S4"
+      },
+      {
+        "id": "LM_HYD_K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_MUM_K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S5"
+      },
+      {
+        "id": "LM_MUM_K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_MUM_K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_MUM_K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S4"
+      },
+      {
+        "id": "LM_PUN_K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S5"
+      },
+      {
+        "id": "LM_PUN_K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_PUN_K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_PUN_K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S1"
+      },
+      {
+        "id": "LM_PUN_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S4"
+      },
+      {
+        "id": "LM_PUN_K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S4"
+      },
+      {
+        "id": "LM_PUN_K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to higher iROAS S4"
+      }
+    ],
+    "notes": "Corrected 20 misallocated contested markets to maximize incremental revenue per impression. Internal reallocation preserves total spend while lifting portfolio iROAS and protecting the direct ROAS floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24718,
+    "tokens_out": 20093,
+    "cost_usd": 0.0033536300000000002,
+    "wall_clock_s": 168.835877084
+  }
+}

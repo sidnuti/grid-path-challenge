@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.9,
+    "rationale": "The mechanical leader_score slightly favors C-S3-PUN (0.6162 vs 0.6057), and this is strongly corroborated by its dominant slot1_share_7d of 0.91 versus 0.40 for the nearest competitor. This significant real-world advantage in ad positioning validates the mechanical selection over the tightly matched scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1585,
+    "cost_usd": 0.024897,
+    "wall_clock_s": 14.491353332999992
+  }
+}

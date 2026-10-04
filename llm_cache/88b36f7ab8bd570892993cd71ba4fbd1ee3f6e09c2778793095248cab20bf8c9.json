@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.95,
+    "rationale": "Both the mechanical leader score (0.9227 vs 0.8725) and slot 1 share (0.87 vs 0.59) clearly favor C-S3-DEL, confirming it as the dominant candidate for this market."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 656,
+    "cost_usd": 0.010887,
+    "wall_clock_s": 6.327027208000004
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.52,
+    "rationale": "The mechanical score slightly favors C-S3-PUN (0.5052 vs 0.4715). Although C-S1-PUN commands a higher recent slot share (0.82 vs 0.66), the margin between candidates is narrow and the scoring formula already weights conversion and ASP. Following the directive to defer to the mechanical pick unless evidence strongly opposes it, C-S3-PUN is selected as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1755,
+    "cost_usd": 0.027375,
+    "wall_clock_s": 20.189533500000152
+  }
+}

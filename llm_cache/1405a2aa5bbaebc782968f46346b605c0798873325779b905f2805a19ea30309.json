@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.85,
+    "rationale": "The mechanical leader score slightly favors C-S3-HYD (1.4815 vs 1.4085). This is strongly corroborated by the slot1_share_7d metric, where C-S3-HYD holds 0.93 compared to C-S1-HYD's 0.60, indicating superior market dominance and justifying its selection as the bid-protected leader despite the narrow mechanical tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1163,
+    "cost_usd": 0.018501,
+    "wall_clock_s": 10.318770916999938
+  }
+}

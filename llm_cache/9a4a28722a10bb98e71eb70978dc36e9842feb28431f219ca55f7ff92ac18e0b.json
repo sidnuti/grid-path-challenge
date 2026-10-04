@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.7,
+    "rationale": "The mechanical scores are a near-tie (0.2377 vs 0.2345, ~1.4% apart), within the noise band, so the tie-break evidence governs. C-S3-BLR holds 88% of slot1 share over 7d versus 54% for C-S1-BLR \u2014 a decisive gap indicating C-S3-BLR is the de facto incumbent winning the top slot for BLR/K09. Protecting its bid preserves that dominance, while designating C-S1-BLR to hold rather than raise prevents sibling cannibalization on the same keyword. Evidence clearly favours the non-mechanical candidate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 2123,
+    "cost_usd": 0.00277918,
+    "wall_clock_s": 17.134223250000105
+  }
+}

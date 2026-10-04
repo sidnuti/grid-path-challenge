@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.8,
+    "rationale": "While C-S2-BLR holds a marginally higher mechanical leader score (0.7896 vs 0.7383), C-S4-BLR captures top-slot visibility at a rate of 0.91 compared to 0.68. This substantial difference in slot1 share indicates stronger bidding dominance and market control, clearly favoring C-S4-BLR as the appropriate campaign to protect in this near-tie scenario."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2039,
+    "cost_usd": 0.031635,
+    "wall_clock_s": 19.430604874999972
+  }
+}

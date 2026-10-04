@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.6,
+    "rationale": "Retains the mechanically superior candidate C-S2-PUN, which edges out C-S4-PUN on the core efficiency metric (conversion x ASP x incrementality). While C-S4-PUN shows a higher slot1 share (0.92 vs 0.61), this likely reflects current bid positioning or aggressive impression capture rather than intrinsic profitability. Given the near-tie and explicit directive to prefer the mechanical pick absent clear contrary evidence, protecting C-S2-PUN optimizes market economics. Confidence is set at 0.6 to reflect the tight score differential and competing slot-share signal."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1487,
+    "cost_usd": 0.023355,
+    "wall_clock_s": 15.588012166999988
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to S1, the highest incremental revenue SKU in DEL generic market."
+      },
+      {
+        "id": "I2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to S1 in HYD generic market to capture best incrementality."
+      },
+      {
+        "id": "I3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S1 to allow S3 to lead in HYD competition market."
+      },
+      {
+        "id": "I4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to S1 in PUN generic market."
+      },
+      {
+        "id": "I5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S1 to allow S3 to lead in PUN competition market."
+      },
+      {
+        "id": "I6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bid on clearing generic cell in DEL Body Wash scale role to grow off-take."
+      },
+      {
+        "id": "I7",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bid on generic cell in MUM Body Wash scale role."
+      },
+      {
+        "id": "I8",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bid on generic cell in BLR Body Wash scale role."
+      },
+      {
+        "id": "I9",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-PUN/K05",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bid on generic cell in PUN Body Wash scale role."
+      },
+      {
+        "id": "I10",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce spend on weak Kids Soap campaign to preserve portfolio ROAS headroom."
+      },
+      {
+        "id": "I11",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce spend on weak Kids Soap campaign to preserve portfolio ROAS headroom."
+      },
+      {
+        "id": "I12",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce spend on weak Kids Soap campaign to preserve portfolio ROAS headroom."
+      },
+      {
+        "id": "I13",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce spend on weak Kids Soap campaign to preserve portfolio ROAS headroom."
+      },
+      {
+        "id": "I14",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce spend on weak Kids Soap campaign to preserve portfolio ROAS headroom."
+      }
+    ],
+    "notes": "Resolve 5 flagged wrong-holder situations in contested markets by shifting lead/yield rights to the highest-incrementality SKUs. Scale Body Wash campaigns in top cities via targeted generic bid increases on clearing cells with strong mRoAS. Trim underperforming Kids Soap budgets across cities to conserve allowance and protect direct ROAS above the 4.63 floor.",
+    "stance": []
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11155,
+    "tokens_out": 9766,
+    "cost_usd": 0.0016042300000000001,
+    "wall_clock_s": 75.401729375
+  }
+}

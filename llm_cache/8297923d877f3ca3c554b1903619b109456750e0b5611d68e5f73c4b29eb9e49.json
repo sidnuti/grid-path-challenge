@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "The mechanical leader C-S1-HYD holds both the highest leader_score and a substantially higher slot1_share_7d (0.88 vs 0.64), indicating superior premium placement capture and consistent execution. The narrow mechanical score delta is offset by this clear performance advantage, making it the optimal protected bid target."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1212,
+    "cost_usd": 0.019311,
+    "wall_clock_s": 13.185383416999997
+  }
+}

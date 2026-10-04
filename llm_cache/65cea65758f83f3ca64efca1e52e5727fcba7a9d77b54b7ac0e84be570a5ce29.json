@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach shows a substantial positive deviation (z=5.0) with no concurrent price or efficiency changes (CPM/OSA z=0.0), strongly indicating a genuine volume or demand-side shift. The absence of an own-action confound flag supports treating this as an external market signal rather than a self-referential artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 885,
+    "cost_usd": 0.014595,
+    "wall_clock_s": 10.362285665999934
+  }
+}

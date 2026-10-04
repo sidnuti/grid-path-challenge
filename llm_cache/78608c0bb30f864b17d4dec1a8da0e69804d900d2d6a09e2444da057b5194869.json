@@ -1,0 +1,205 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "S2-DEL-SCALE",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive incremental off-take in scaled Body Wash campaign DEL; high mroas_up20 on generics supports bid increase."
+      },
+      {
+        "id": "S1-PUN-SCALE",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Soap generic reach in PUN where iroas 2.12 and multiple bid headroom cells exist."
+      },
+      {
+        "id": "S2-PUN-SCALE",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture high-value incremental demand for Body Wash generic in PUN."
+      },
+      {
+        "id": "S4-HYD-SCALE",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage scale role in HYD shower gel; target available bid headroom on K05."
+      },
+      {
+        "id": "S5-DEL-TRIM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "C:C-S5-DEL/K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove persistent underperformance (iroas 1.20) to safeguard portfolio floor."
+      },
+      {
+        "id": "S5-BLR-TRIM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cut weak Kids Soap spend in BLR that consistently drains budget with low iroas."
+      },
+      {
+        "id": "S3-DEL-TRIM",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce trim-tier Soap exposure in DEL to improve blended metrics."
+      },
+      {
+        "id": "S2-HYD-HOLD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Freeze all changes due to severe OSA shortfall (0.42) and anomalous conversion drops."
+      },
+      {
+        "id": "BLR-K05-YIELD",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back S2 to cede dominance to higher-scoring S4 in contested generic shower gel term."
+      },
+      {
+        "id": "BLR-K05-LEAD",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": null,
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Position S4 at top for maximum incremental revenue per impression in BLR:K05."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Removed previously rejected saturated-blr generic raise. Focused budget/headroom on validated scale roles (S2-DEL, S1-PUN, S2-PUN, S4-HYD) while cutting persistently weak Kids Soap spend to protect the 4.63 roas floor. Explicitly froze S2-HYD due to critical availability loss."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11205,
+    "tokens_out": 6782,
+    "cost_usd": 0.00121781,
+    "wall_clock_s": 58.80791183400001
+  }
+}

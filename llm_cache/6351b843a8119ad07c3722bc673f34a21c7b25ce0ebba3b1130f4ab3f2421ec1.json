@@ -1,0 +1,227 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lift constrained fund budget to capture incremental Soap volume in DEL"
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lift constrained fund budget to capture incremental Soap volume in HYD"
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lift constrained fund budget to secure Shower Gel orders in DEL"
+      },
+      {
+        "id": "INT-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift Soap generic leadership from S5 to higher-iota S1"
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect competition spend to S1, displacing inefficient S3"
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Win Shower Gel competition battle against S2 in DEL"
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Take Soap generic leadership from S3 in MUM"
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure Shower Gel generic dominance over S2 in MUM"
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aggressively bid up high-iota competition cell (0.94) currently below slot-1"
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S1-DEL/K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Raise bid on S1 competition cell (0.81 iota) with significant slot-1 headroom"
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up Body Wash competition in BLR (iroas 4.00, iota 0.79)"
+      },
+      {
+        "id": "INT-12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up Body Wash competition in HYD (iroas 4.29, iota 0.79)"
+      },
+      {
+        "id": "INT-13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase spend on high-iota generic cell with ranking capacity"
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase spend on high-iota generic cell with ranking capacity"
+      },
+      {
+        "id": "INT-15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Boost high-iota generic spend on constrained fund campaign"
+      }
+    ],
+    "stance": [],
+    "notes": "Run 1 pace allows moderate budget expansion on constrained fund campaigns while aggressively winning contested auctions and bidding up high-iota competition/generic cells. Brand keywords with zero incrementality are excluded to protect portfolio ROAS. Spend is intentionally restrained in this window to compound growth capital for heavy deployment in runs 4-6."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11911,
+    "tokens_out": 9570,
+    "cost_usd": 0.00160143,
+    "wall_clock_s": 89.03977125
+  }
+}

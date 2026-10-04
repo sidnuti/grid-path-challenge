@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "The reach z-score of 5.0 indicates a strong statistical anomaly. With CPM unchanged and the own-action confound flag false, the surge is not driven by internal bid shifts or pricing pressure, pointing instead to a genuine external demand or supply shock boosting reach volumes."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1654,
+    "cost_usd": 0.02613,
+    "wall_clock_s": 18.725404249999883
+  }
+}

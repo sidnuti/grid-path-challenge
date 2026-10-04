@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.8,
+    "rationale": "Mechanical leader_score favors C-S3-PUN (1.0305 vs 0.9675), and the corroborating evidence points the same way: its 7-day slot-1 share (0.89) is far above C-S1-PUN's (0.55), indicating stronger incumbent visibility in this market. Nothing favors switching to C-S1-PUN, so keep the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 362,
+    "cost_usd": 0.0005779299999999999,
+    "wall_clock_s": 3.2542112090000046
+  }
+}

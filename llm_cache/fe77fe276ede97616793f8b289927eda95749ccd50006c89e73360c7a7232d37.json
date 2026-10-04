@@ -1,0 +1,95 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "city_id": "PUN",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental demand on highest iroas generic keyword in Pune.",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ]
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "city_id": "MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Scale incremental revenue on efficient Mumbai generic keyword.",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ]
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Increase spend allocation on Delhi high-volume shower gel generic term.",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ]
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "city_id": "BLR",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Win additional share of search on Bangalore high-iota generic keyword.",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Concentrating the 300 INR daily allowance on S4 Shower Gel generic keywords where iota is 1.00 and iroas exceeds 5.5. Bids are increased on cleared, unconstrained cells to drive truly incremental offtake while preserving the tight 4.6258 ROAS floor. Budget raises omitted as campaigns have not reported run-outs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12103,
+    "tokens_out": 9608,
+    "cost_usd": 0.0016121299999999998,
+    "wall_clock_s": 95.83355129200001
+  }
+}

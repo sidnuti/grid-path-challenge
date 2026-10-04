@@ -1,0 +1,320 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "L1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift body wash leadership in Delhi to capture highest incremental revenue per impression"
+      },
+      {
+        "id": "L2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift body wash leadership in Bangalore to capture highest incremental revenue per impression"
+      },
+      {
+        "id": "L3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift body wash leadership in Hyderabad to capture highest incremental revenue per impression"
+      },
+      {
+        "id": "L4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift body wash leadership in Pune to capture highest incremental revenue per impression"
+      },
+      {
+        "id": "L5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift body wash leadership in Mumbai to capture highest incremental revenue per impression"
+      },
+      {
+        "id": "L6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore soap market leadership in Delhi generic category to optimal holder"
+      },
+      {
+        "id": "L7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore soap market leadership in Delhi competition category to optimal holder"
+      },
+      {
+        "id": "L8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore soap market leadership in Hyderabad generic category to optimal holder"
+      },
+      {
+        "id": "L9",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore soap market leadership in Mumbai brand category to optimal holder"
+      },
+      {
+        "id": "L10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore soap market leadership in Mumbai generic category to optimal holder"
+      },
+      {
+        "id": "L11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore soap market leadership in Pune generic category to optimal holder"
+      },
+      {
+        "id": "H1",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K01",
+          "A:C-S2-HYD/K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Block all bid/budget increases until 3-day OSA recovers above 60%"
+      },
+      {
+        "id": "B1",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free budget capacity by trimming weak performer; improves portfolio ROAS headroom"
+      },
+      {
+        "id": "B2",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free budget capacity by trimming weak performer; improves portfolio ROAS headroom"
+      },
+      {
+        "id": "U1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up efficient generic cell with strong mROAS (+5.06) and iota (1.00)"
+      },
+      {
+        "id": "U2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up competition cell with high iota (0.97) and available slot headroom"
+      },
+      {
+        "id": "U3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up shower gel generic cell with highest predicted mROAS (+12.30) in portfolio"
+      },
+      {
+        "id": "U4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up shower gel generic cell with strong mROAS (+9.99) and clean slot share"
+      },
+      {
+        "id": "U5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up Delhi competition cell to capture volume while maintaining clean slot position"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "all",
+        "sku_role": "S5",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Corrected prior rejections by restricting slot-1 leadership exclusively to cells meeting CLEARS/Tier A status and avoiding \u226580% slot-share blockers. Aligned market ownership to highest-IOTA SKUs per M-matrix flags. Preserved portfolio ROAS floor by cutting trim-tier budgets and halting S2-HYD spend pending OSA recovery, reallocating saved capacity to scale-tier cells with confirmed marginal lift."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11338,
+    "tokens_out": 11943,
+    "cost_usd": 0.00189273,
+    "wall_clock_s": 92.21534470799998
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-S2-RB-ALL",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "R:C-S2-MUM",
+          "R:C-S2-BLR",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture scalable volume on highly efficient Body Wash SKUs across all cities while respecting bid caps."
+      },
+      {
+        "id": "INT-MKT-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; shift allocation to highest incremental Shower Gel SKU."
+      },
+      {
+        "id": "INT-MKT-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; prioritize Shower Gel over Body Wash for incremental lift."
+      },
+      {
+        "id": "INT-MKT-MUM-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reclaim leadership from low-iota S3 to stronger S1 brand signal."
+      },
+      {
+        "id": "INT-CUT-S5",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate chronic loss leaders in Kids Soap, freeing ~\u20b92500/day for portfolio reallocation."
+      },
+      {
+        "id": "INT-CUT-S3",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim weak Soap/competition exposure, protecting ROAS floor."
+      },
+      {
+        "id": "INT-S4-HYD-RB",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Expand high-iota reach in HYD where S4 is funded and efficient."
+      }
+    ],
+    "notes": "Aggressively fund S2 (Body Wash) scaling and resolve three contested market misallocations to maximize incremental ROI. Simultaneously cut S5 and S3 budgets to stop bleed on low-iroas generics and competition terms, safeguarding the portfolio ROAS floor ahead of final runs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11122,
+    "tokens_out": 8069,
+    "cost_usd": 0.0013826300000000001,
+    "wall_clock_s": 69.13357316700001
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 2.72,
+    "direction": "surge",
+    "confidence": 0.75,
+    "rationale": "Flagged positive reach z-score with no own-action confound indicates a genuine demand or supply-side shift rather than internal bidding artifacts. Stable CPM/OSA suggests the surge is driven by increased winning auctions or volume expansion rather than cost inflation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1640,
+    "cost_usd": 0.025932,
+    "wall_clock_s": 17.44633991699999
+  }
+}

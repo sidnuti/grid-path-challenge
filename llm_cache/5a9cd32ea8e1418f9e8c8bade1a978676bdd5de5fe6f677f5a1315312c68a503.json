@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.8,
+    "rationale": "Mechanical leader_score pick C-S1-DEL leads (0.7291 vs 0.6899), and the supporting evidence reinforces it rather than overturning it: its 7d slot1 share of 0.92 vs 0.57 for C-S3-DEL indicates S1 already owns the top position for this city-keyword, so protecting its bid while C-S3-DEL holds is consistent with both the score and the share data. The score gap is modest (~0.04), keeping confidence below high."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 309,
+    "cost_usd": 0.00051131,
+    "wall_clock_s": 3.7190800410000975
+  }
+}

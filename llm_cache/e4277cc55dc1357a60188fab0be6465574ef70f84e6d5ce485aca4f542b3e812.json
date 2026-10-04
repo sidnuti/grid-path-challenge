@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-DEL",
+    "confidence": 0.6,
+    "rationale": "C-S4-DEL holds the highest mechanical leader_score (2.33 vs 2.15), aligning with the explicit instruction to prefer the mechanical pick in near-ties. Although C-S3-DEL dominates visibility (96% slot share), S4's superior efficiency-weighted performance justifies bid protection. Confidence is moderate due to the significant slot-share gap that introduces selection noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 421,
+    "tokens_out": 2368,
+    "cost_usd": 0.036783,
+    "wall_clock_s": 29.200167375000007
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 0.95,
+    "confidence": 0.5,
+    "rationale": "Realised dROAS (1.72) exceeds the 1.45 target, validating the directional intent to raise bids to capture higher-value volume. However, only 12 orders in 28 days indicates sparse conversion history and high estimation variance. Per the dampening guidance for uncertain conditions, the multiplier remains close to 1.0 to avoid amplifying noise while preserving the baseline mechanical recommendation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 463,
+    "tokens_out": 2405,
+    "cost_usd": 0.037464,
+    "wall_clock_s": 25.132080083000005
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-S2-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift Body Wash generic leadership to highest-iota SKU S2 in DEL."
+      },
+      {
+        "id": "YM-S4-DEL-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S4 share in DEL Body Wash generic to accommodate S2."
+      },
+      {
+        "id": "LM-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move MUM Body Wash generic leadership to S2."
+      },
+      {
+        "id": "YM-S4-MUM-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S4 in MUM Body Wash generic."
+      },
+      {
+        "id": "LM-S4-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Promote Shower Gel S4 to lead Body Wash generic K06 in BLR due to higher incremental score."
+      },
+      {
+        "id": "YM-S2-BLR-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S2 in BLR K06 for S4."
+      },
+      {
+        "id": "LM-S4-HYD-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead HYD Body Wash generic on S4 for superior incrementality."
+      },
+      {
+        "id": "YM-S2-HYD-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 in HYD K06."
+      },
+      {
+        "id": "LM-S4-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture PUN Body Wash generic on S4."
+      },
+      {
+        "id": "YM-S2-PUN-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 in PUN K06."
+      },
+      {
+        "id": "LM-S3-DEL-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder in DEL Soap generic; promote S3."
+      },
+      {
+        "id": "YM-S5-DEL-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S5 in DEL Soap generic K03."
+      },
+      {
+        "id": "LM-S4-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure DEL Body Wash competition space on highest-iota SKU S4."
+      },
+      {
+        "id": "YM-S2-DEL-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 in DEL K10."
+      },
+      {
+        "id": "RB-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase CPM on efficient Body Wash generic cell with iota 0.76 and mroas_up20 6.31."
+      },
+      {
+        "id": "RB-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up DEL Body Wash generic K06 to capture incremental volume."
+      },
+      {
+        "id": "RB-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise bid on Shower Gel generic K06 in BLR (mroas_up20 7.48) after winning lead_market."
+      },
+      {
+        "id": "RB-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up HYD Shower Gel generic K05 (mroas_up20 7.63) to exploit efficiency."
+      },
+      {
+        "id": "RB-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise HYD Shower Gel generic K06 (mroas_up20 9.62) for maximum incremental return."
+      },
+      {
+        "id": "RB-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase MUM Body Wash generic bids on scale-role S2."
+      },
+      {
+        "id": "RB-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Moderate PUN Body Wash generic increase to protect ROAS while growing volume."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Reallocating budget across contested markets to highest-iota SKUs while increasing bids on efficient scale-role cells to drive incremental offtake within the 7.75k daily allowance and maintain direct ROAS above the 4.17 floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25076,
+    "tokens_out": 23295,
+    "cost_usd": 0.00378063,
+    "wall_clock_s": 193.88225412499992
+  }
+}

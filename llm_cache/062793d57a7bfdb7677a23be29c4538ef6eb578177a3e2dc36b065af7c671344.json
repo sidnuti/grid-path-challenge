@@ -1,0 +1,297 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BDG-R-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM/",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental demand for fund role with 7/7 run-outs; small budget lift keeps spend predictable."
+      },
+      {
+        "id": "BDG-R-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR/",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Stop daily run-outs for high-iroas fund role; supports off-take growth without exceeding allowance."
+      },
+      {
+        "id": "BDG-R-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL/",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure headroom for efficient fund role (iroas 2.96) running out daily."
+      },
+      {
+        "id": "BID-U-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-incrementality generic cell (iota 0.79, mroas_up20 8.00) to grow off-take efficiently."
+      },
+      {
+        "id": "BID-U-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Target scaled cell with strong marginal return (mroas_up20 8.68); drives incremental revenue."
+      },
+      {
+        "id": "BID-U-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise bid on high-performing generic keyword; complements K05 lift for HYD scale role."
+      },
+      {
+        "id": "BID-U-S4-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase visibility on scaled generic keyword; supports off-take share growth in PUN."
+      },
+      {
+        "id": "BID-U-S4-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up scaled generic cell with high marginal return (mroas_up20 10.67)."
+      },
+      {
+        "id": "LD-S4-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Award slot 1 to S4 (score 2.482) over S2 (0.898); shifts impressions to highest incremental value."
+      },
+      {
+        "id": "YL-S2-MUM-K06",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S2 to conserve budget and align with lead decision."
+      },
+      {
+        "id": "LD-S4-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S4 (score 1.787 vs S2 1.214) for better incremental ROI."
+      },
+      {
+        "id": "YL-S2-DEL-K05",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 to S4 in DEL K05 to optimize portfolio iroas."
+      },
+      {
+        "id": "LD-S4-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead S4 in BLR K06 where it dominates incremental value (score 3.006 vs S2 0.954)."
+      },
+      {
+        "id": "YL-S2-BLR-K06",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S2 to S4 in BLR K06, freeing budget for higher-ROAS display."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": null,
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": null,
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": null,
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": null,
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Portfolio ROAS sits tightly above floor (4.0874 vs 4.0858); plan restricts budget bids to small/+10% on daily run-outs and targets medium/+20% bid lifts only on high-iota Shower Gel cells. Contest corrections cede impressions to S4 where incremental score exceeds S2, preserving margin while growing total off-take. Total projected incremental spend ~210 INR/day, comfortably under the 300 INR allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11023,
+    "tokens_out": 9276,
+    "cost_usd": 0.0015365700000000001,
+    "wall_clock_s": 73.726357
+  }
+}

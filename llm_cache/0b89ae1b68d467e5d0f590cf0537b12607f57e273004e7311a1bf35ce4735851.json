@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.5,
+    "rationale": "Realised dROAS of 1.78 trails the 2.22 goal, supporting the mechanical direction to adjust bids. However, the 28-day order count of 22 indicates a relatively small sample, which increases variance in the performance signal. With limited data and no cross-run context, I defer to the base recommendation without amplification or reduction. Confidence is moderate due to sample constraints."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 2027,
+    "cost_usd": 0.031824,
+    "wall_clock_s": 23.80224295800008
+  }
+}

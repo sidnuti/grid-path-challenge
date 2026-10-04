@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.6,
+    "confidence": 0.65,
+    "rationale": "Realised dROAS (1.59) is substantially below the target (2.22), indicating current pricing efficiency is suboptimal despite clearing the mechanical gate. The profitability gap warrants dampening the proposed +10% raise to limit margin erosion while still preserving some incremental test exposure. Confidence is moderate given the modest recent order volume and reliance on a single mechanical run."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 1328,
+    "cost_usd": 0.021315,
+    "wall_clock_s": 16.24695112500001
+  }
+}

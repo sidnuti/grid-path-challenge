@@ -1,0 +1,101 @@
+{
+  "by_type": [
+    {
+      "action_type": "increase_budget",
+      "n": 32.0,
+      "true_dspend_sum": 40717.940000000046,
+      "pred_dspend_sum": 10297.990000000002,
+      "true_dspend_ratio": 3.9539696581565957,
+      "true_dspend_corr": 0.6663599750667046,
+      "true_drev_sum": 164320.0,
+      "pred_drev_sum": 55556.32,
+      "true_drev_ratio": 2.9577193017824075,
+      "true_drev_corr": 0.39544239077532173,
+      "true_dofftake_sum": 71770.0,
+      "offtake_per_rupee": 1.7626137275117533,
+      "adrev_per_rupee": 4.035567614668125
+    },
+    {
+      "action_type": "increase_cpm",
+      "n": 39.0,
+      "true_dspend_sum": 9430.609999999957,
+      "pred_dspend_sum": 6406.24,
+      "true_dspend_ratio": 1.4720975174205084,
+      "true_dspend_corr": 0.21967236185946046,
+      "true_drev_sum": 40990.0,
+      "pred_drev_sum": 44251.83,
+      "true_drev_ratio": 0.9262893760551824,
+      "true_drev_corr": 0.019002834441527304,
+      "true_dofftake_sum": 29630.0,
+      "offtake_per_rupee": 3.1418964414815305,
+      "adrev_per_rupee": 4.346484479795071
+    },
+    {
+      "action_type": "reduce_cpm",
+      "n": 250.0,
+      "true_dspend_sum": -96455.68000000014,
+      "pred_dspend_sum": -44281.35,
+      "true_dspend_ratio": 2.1782461465154097,
+      "true_dspend_corr": 0.29110517237210076,
+      "true_drev_sum": -120454.0,
+      "pred_drev_sum": -117090.51999999999,
+      "true_drev_ratio": 1.0287254681250029,
+      "true_drev_corr": 0.23771591884332047,
+      "true_dofftake_sum": -72454.0,
+      "offtake_per_rupee": 0.751163643240086,
+      "adrev_per_rupee": 1.2488015221083903
+    }
+  ],
+  "by_method": [
+    {
+      "method": "M_Base",
+      "n": 250.0,
+      "true_dspend_sum": -96455.68000000014,
+      "pred_dspend_sum": -44281.35,
+      "true_dspend_ratio": 2.1782461465154097,
+      "true_dspend_corr": 0.29110517237210076,
+      "true_drev_sum": -120454.0,
+      "pred_drev_sum": -117090.51999999999,
+      "true_drev_ratio": 1.0287254681250029,
+      "true_drev_corr": 0.23771591884332047,
+      "true_dofftake_sum": -72454.0,
+      "offtake_per_rupee": 0.751163643240086,
+      "adrev_per_rupee": 1.2488015221083903
+    },
+    {
+      "method": "M_Budget",
+      "n": 32.0,
+      "true_dspend_sum": 40717.940000000046,
+      "pred_dspend_sum": 10297.990000000002,
+      "true_dspend_ratio": 3.9539696581565957,
+      "true_dspend_corr": 0.6663599750667046,
+      "true_drev_sum": 164320.0,
+      "pred_drev_sum": 55556.32,
+      "true_drev_ratio": 2.9577193017824075,
+      "true_drev_corr": 0.39544239077532173,
+      "true_dofftake_sum": 71770.0,
+      "offtake_per_rupee": 1.7626137275117533,
+      "adrev_per_rupee": 4.035567614668125
+    },
+    {
+      "method": "M_Reprice",
+      "n": 39.0,
+      "true_dspend_sum": 9430.609999999957,
+      "pred_dspend_sum": 6406.24,
+      "true_dspend_ratio": 1.4720975174205084,
+      "true_dspend_corr": 0.21967236185946046,
+      "true_drev_sum": 40990.0,
+      "pred_drev_sum": 44251.83,
+      "true_drev_ratio": 0.9262893760551824,
+      "true_drev_corr": 0.019002834441527304,
+      "true_dofftake_sum": 29630.0,
+      "offtake_per_rupee": 3.1418964414815305,
+      "adrev_per_rupee": 4.346484479795071
+    }
+  ],
+  "sizing_spearman": 0.406316711966241,
+  "n_actions": 321,
+  "_code_hashes_seen": [
+    "63196db22b74"
+  ]
+}

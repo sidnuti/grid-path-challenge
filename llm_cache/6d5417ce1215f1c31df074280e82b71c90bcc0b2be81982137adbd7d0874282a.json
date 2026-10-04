@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "C-S1-MUM has the highest mechanical leader_score (0.6830 vs 0.6827). Given the near-tie, its substantially higher slot1_share_7d (0.88 vs 0.67) provides clear evidence that it is more dominant and stable in the prime position, making it the stronger candidate for leadership."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1438,
+    "cost_usd": 0.022692,
+    "wall_clock_s": 13.559523874999968
+  }
+}

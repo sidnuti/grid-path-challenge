@@ -1,0 +1,117 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-FUND-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove daily cap constraint on efficient Soap portfolio to capture remaining incremental volume"
+      },
+      {
+        "id": "INT-FUND-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped efficient footprint in Pune to prevent run-out loss"
+      },
+      {
+        "id": "INT-FUND-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Allocate additional allowance to Hyderabad Soap which consistently clears goal"
+      },
+      {
+        "id": "INT-BID-S4-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10",
+          "C:C-S4-MUM/K10",
+          "C:C-S4-BLR/K10",
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Aggressively bid on Shower Gel competitor keywords with iota ~0.98 and high mroas_up20 to maximize true incremental off-take"
+      },
+      {
+        "id": "INT-YIELD-S2-DEL-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back Body Wash competitor slot to cede space to S4 which yields higher incremental revenue per impression"
+      },
+      {
+        "id": "INT-LEAD-S4-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push Shower Gel to slot-1 in Delhi competitor pool to capture highest ROI impressions"
+      }
+    ],
+    "stances": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Run 5 of 6 requires aggressive allowance deployment. Budgets raised on fully-funded efficient SKUs (S1-DEL, S1-PUN, S3-HYD) to absorb daily caps. Bids tightened on S4 competitor keywords where iota approaches unity and direct ROAS overstates organic cannibalization. Contest realignment in DEL K10 shifts impressions to the higher iroas SKU."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12180,
+    "tokens_out": 9171,
+    "cost_usd": 0.0015576300000000002,
+    "wall_clock_s": 91.14488266700005
+  }
+}

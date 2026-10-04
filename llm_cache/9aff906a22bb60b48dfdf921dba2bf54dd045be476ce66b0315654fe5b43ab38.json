@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.12,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 4.12 indicates a sharp >4SD deviation, clearly flagged as a genuine market shock. CPM and OSA remain unflagged, and the own-action confound flag is false, effectively ruling out internal bid/budget adjustments or competitive pricing shifts. The sustained surge direction points to an exogenous demand expansion or inventory availability change."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 2155,
+    "cost_usd": 0.033657,
+    "wall_clock_s": 22.14023249999991
+  }
+}

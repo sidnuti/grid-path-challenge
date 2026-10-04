@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.9,
+    "rationale": "C-S1-HYD aligns with the mechanical leader and demonstrates a significantly stronger market capture metric with a 0.87 slot1_share compared to the nearest competitor's 0.56. This reinforces its dominant position and justifies maintaining it as the protected leader over the closely-scored S3 variant."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1010,
+    "cost_usd": 0.016281,
+    "wall_clock_s": 11.430336916999977
+  }
+}

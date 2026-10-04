@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.55,
+    "rationale": "Mechanical score is higher (0.9768 vs 0.9304). Following the explicit instruction to prefer the mechanical pick in near-ties, this campaign is selected despite the lower slot 1 share, which may stem from strategic bid pacing or weighting nuances rather than inferior market leadership."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1906,
+    "cost_usd": 0.029646,
+    "wall_clock_s": 19.10241454200002
+  }
+}

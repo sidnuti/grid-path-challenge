@@ -1,0 +1,177 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "CUT-S3-DEL-BUD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Frees ~855 INR/day allowance by cutting low-iota trim soap ads; redirects pool to high-value fund/scale roles."
+      },
+      {
+        "id": "INC-S4-BLR-BUD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Relieves chronic budget cap (7/7 run-outs) on efficient fund shower gel; captures missed incremental orders."
+      },
+      {
+        "id": "BID-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bids up highly scalable generic cell (mroas 10.74); secures volume at target slot without breaching DOAS floor."
+      },
+      {
+        "id": "BID-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bids up efficient BLR generic cell (mroas 9.95); drives incremental revenue growth on cleared cells."
+      },
+      {
+        "id": "BID-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 5,
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expands fund shower gel generic reach (iroas 4.67); leverages freed allowance for positive ROI lift."
+      },
+      {
+        "id": "YLD-DEL-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Steps back body wash share to allow higher-score shower gel to lead DEL generic contest; optimizes market-level ROI."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Shifted budget from low-incrementality Trim soap to high-iota Fund/Scale body wash and shower gel cells. Relieved chronic caps on efficient SKUs while using freed allowance to capture incremental volume. Contested market yield aligns delivery with highest incremental scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10877,
+    "tokens_out": 10740,
+    "cost_usd": 0.00172251,
+    "wall_clock_s": 103.29490716599999
+  }
+}

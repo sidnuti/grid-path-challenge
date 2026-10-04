@@ -1,0 +1,177 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BR-C-S1-HYD-LG",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped, efficient Soap campaign in HYD (ran out 7/7 days, iroas 3.34). Unlocks full daily spend capacity."
+      },
+      {
+        "id": "RB-S2-PUN-K10-LG",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:S2-PUN/K10",
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Aggressively bid up high-iroas (7.80), iota-1.00 competitor keyword in scaled Body Wash SKU. Shifts impression share to incremental demand."
+      },
+      {
+        "id": "RB-S4-PUN-K06-LG",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:S4-PUN/K06",
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise bid on top-performing generic keyword (iroas 9.95) for saturated Shower Gel in PUN. Captures high-value incremental volume."
+      },
+      {
+        "id": "RB-S4-HYD-K06-MD",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S4-HYD/K06",
+          "M:HYD:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Moderate bid increase on efficient generic keyword (iroas 8.04) in scaled HYD campaign. Supports incremental growth within allowance."
+      },
+      {
+        "id": "RB-S2-DEL-K10-MD",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-DEL/K10",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Medium raise on iota-1.00 competition keyword (iroas 5.15) in DEL Body Wash. Targets uncontested incremental share."
+      },
+      {
+        "id": "RB-S4-MUM-K10-LG",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:S4-MUM/K10",
+          "M:MUM:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Large raise on shower gel competition keyword (iroas 3.74, iota 0.75) in MUM. Aligns spend with scaled capacity."
+      },
+      {
+        "id": "LM-S1-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Corrects wrong-holder allocation. Promotes S1 (score 0.970) to slot 1 over S3, maximizing incremental revenue per impression for Soap generic."
+      },
+      {
+        "id": "LM-S1-PUN-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shifts leadership from S3 to S1 (score 0.876 vs 0.236) in PUN Soap generic contest. Frees efficient budget for higher-yielding placements."
+      },
+      {
+        "id": "LM-S4-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Moves slot 1 from S2 to S4 (score 2.972 vs 1.136) in MUM Body Wash generic. Maximizes conversion value in a competitive cluster."
+      },
+      {
+        "id": "LM-S2-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfers dominance from S4 to S2 (score 0.806 vs 0.623) in DEL Shower Gel competition. Boosts incremental order flow."
+      },
+      {
+        "id": "LM-S2-HYD-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Promotes S2 over S4 in HYD competition (score 0.867 vs 0.825). Optimizes impression routing for maximum incremental return."
+      }
+    ],
+    "notes": "Deploying roughly \u20b9750 of today's \u20b9761 allowance toward high-iroas competitor and generic keywords in scaled/funded campaigns, prioritizing iota-1.00 cells and correcting five misallocated contested markets. Budget cap lifted on HYD fund campaign to prevent artificial throttling on run-5."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12178,
+    "tokens_out": 9046,
+    "cost_usd": 0.0015413199999999999,
+    "wall_clock_s": 73.83458674999997
+  }
+}

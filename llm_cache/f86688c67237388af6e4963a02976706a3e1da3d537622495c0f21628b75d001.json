@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "The mechanical leader_score explicitly favors C-S1-HYD by a narrow margin. Although C-S3-HYD shows a higher slot 1 share, the directive to prefer the mechanical pick in near-ties and its stronger overall score justify designating C-S1-HYD as the leader to preserve current optimization momentum."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 2640,
+    "cost_usd": 0.040731,
+    "wall_clock_s": 28.50031762499998
+  }
+}

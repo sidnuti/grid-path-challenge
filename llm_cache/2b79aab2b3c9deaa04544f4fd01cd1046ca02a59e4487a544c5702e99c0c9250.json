@@ -1,0 +1,251 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Install highest-incrementality SKU S4 as market leader in BLR generic, displacing inefficient S2."
+      },
+      {
+        "id": "YM-01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S2 to stop bleeding budget on lower-value impressions."
+      },
+      {
+        "id": "LM-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure ShG dominance in DEL generic where S4 holds superior incremental score."
+      },
+      {
+        "id": "YM-02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce S2 generic bid share to improve portfolio efficiency."
+      },
+      {
+        "id": "LM-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture top placement in MUM generic for ShG, maximizing high-mroas volume."
+      },
+      {
+        "id": "YM-03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Yield market share for S2 to prevent overpaying in weaker contest."
+      },
+      {
+        "id": "LM-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assert BW leadership in PUN brand search where S2 shows highest ROI."
+      },
+      {
+        "id": "YM-04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Retreat S1 Soap from contested PUN brand space to fund higher-iROAS SKUs."
+      },
+      {
+        "id": "CB-01",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prune inefficient Soap budget (iroas 0.97); frees allowance for scale plays."
+      },
+      {
+        "id": "CB-02",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stop negative-incremental bleed (iroas 0.67); protects direct ROAS floor."
+      },
+      {
+        "id": "CB-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove capped-but-weak Soap budget (iroas 0.93); reallocate capital."
+      },
+      {
+        "id": "RB-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund scale-ready ShG leader in MUM; robust iroas 4.68 safely absorbs extra spend."
+      },
+      {
+        "id": "RB-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on ShG scale opportunity in HYD; strong unit economics support expansion."
+      },
+      {
+        "id": "RB-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fuel Body Wash growth in PUN; iroas 4.23 confirms efficient scalability."
+      },
+      {
+        "id": "RT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental ShG generic demand; mroas_up20 6.80 indicates strong lift."
+      },
+      {
+        "id": "RT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand BW generic coverage efficiently; mroas_up20 5.82 supports margin expansion."
+      },
+      {
+        "id": "RT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlock incremental BW generic share in PUN; mroas_up20 6.48 confirms upside."
+      }
+    ],
+    "notes": "Corrected misallocated market leadership across six contested city-keyword markets to prioritize highest incremental SKUs. Cut three underperforming Soap holdings to protect the ROAS floor, redirecting funds to scale-ready Body Wash and Shower Gel campaigns."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24350,
+    "tokens_out": 18759,
+    "cost_usd": 0.0031691700000000002,
+    "wall_clock_s": 164.10876183300002
+  }
+}

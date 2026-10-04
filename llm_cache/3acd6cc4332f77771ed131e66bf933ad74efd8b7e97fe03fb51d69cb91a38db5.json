@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.75,
+    "rationale": "C-S2-HYD holds the highest mechanical leader_score (2.2347); although C-S3-HYD is a near-tie at 2.1003, the corroborating slot1_share_7d evidence favours C-S2-HYD (0.37 vs 0.14), so the mechanical pick stands."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 407,
+    "tokens_out": 486,
+    "cost_usd": 0.00075809,
+    "wall_clock_s": 4.644894499999964
+  }
+}

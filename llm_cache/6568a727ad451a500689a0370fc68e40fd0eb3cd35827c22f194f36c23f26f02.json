@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.75,
+    "confidence": 0.4,
+    "rationale": "Realized dROAS exceeds goal, justifying a bid increase. Only 10 orders in 28 days introduces significant statistical noise. Dampening the proposed raise slightly to reduce exposure to volatility while maintaining positive momentum."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 475,
+    "tokens_out": 1614,
+    "cost_usd": 0.025635,
+    "wall_clock_s": 15.73976166700001
+  }
+}

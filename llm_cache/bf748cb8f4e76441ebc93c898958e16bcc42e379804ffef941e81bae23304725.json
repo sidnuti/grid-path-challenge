@@ -1,0 +1,391 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-s3-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; iROAS 1.32 is trim-level performance"
+      },
+      {
+        "id": "cut-s3-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; iROAS 1.12 is trim-level performance"
+      },
+      {
+        "id": "cut-s3-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free allowance; iROAS 1.36 is trim-level performance"
+      },
+      {
+        "id": "cut-s5-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free allowance; low incremental value"
+      },
+      {
+        "id": "cut-s5-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free allowance; low incremental value"
+      },
+      {
+        "id": "cut-s5-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free allowance; low incremental value"
+      },
+      {
+        "id": "rai-s4-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-upside incremental generic volume (mROAS 8.0)"
+      },
+      {
+        "id": "rai-s4-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Defend slot efficiency on high-ROAS generic key"
+      },
+      {
+        "id": "rai-s4-hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-upside incremental generic volume (mROAS 8.68)"
+      },
+      {
+        "id": "rai-s4-hyd-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Defend slot efficiency on high-ROAS generic key"
+      },
+      {
+        "id": "rai-s4-pun-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-upside incremental generic volume"
+      },
+      {
+        "id": "rai-s4-pun-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-PUN/K06",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push to slot 1 on strong generic auction (mROAS 10.67)"
+      },
+      {
+        "id": "lmk-s4-blr-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher iROAS shower gel; boost incremental off-take"
+      },
+      {
+        "id": "lmk-s4-blr-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher iROAS shower gel; boost incremental off-take"
+      },
+      {
+        "id": "lmk-s4-hyd-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher iROAS shower gel; boost incremental off-take"
+      },
+      {
+        "id": "lmk-s4-hyd-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher iROAS shower gel; boost incremental off-take"
+      },
+      {
+        "id": "lmk-s4-mum-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher iROAS shower gel; boost incremental off-take"
+      },
+      {
+        "id": "lmk-s4-pun-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher iROAS shower gel; boost incremental off-take"
+      },
+      {
+        "id": "lmk-s2-pun-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct holder to stronger competitor keyword performer"
+      },
+      {
+        "id": "rai-s2-blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage scale role on efficient generic key"
+      },
+      {
+        "id": "rai-s2-blr-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage scale role on efficient generic key"
+      },
+      {
+        "id": "rai-s2-pun-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage scale role on efficient generic key"
+      },
+      {
+        "id": "rai-s2-pun-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage scale role on efficient generic key"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "S2",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritized high-iROAS Shower Gel generic auctions and corrected multiple wrong-holder contests in Body Wash and Soap. Aggressively cut low-performing Soap (S3) and Kids (S5) budgets to preserve the 300 INR daily raise allowance without breaching the direct ROAS floor, avoiding previous G5 budget-runout rejections."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11083,
+    "tokens_out": 11806,
+    "cost_usd": 0.00186727,
+    "wall_clock_s": 90.983472667
+  }
+}

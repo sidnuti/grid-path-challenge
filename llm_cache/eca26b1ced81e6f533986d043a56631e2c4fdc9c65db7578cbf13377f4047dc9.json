@@ -1,0 +1,155 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Primary allowance consumer; funds highest-share Soap SKU with 7/7 run-outs and strong iroas margin."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure capacity for BLR fund run; meets 2-day exhaustion rule without breaching daily allowance."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund Hyderabad growth efficiently; preserves headroom for competitive bid lifts."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Controlled top-up for Body Wash fund to support incremental generic wins."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lift cleared generic keyword with 0.57 slot1 share, 0.91 iota, and 4.84 iroas for incremental capture."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Target highest mroas_up20*iota cell (7.34) in efficient fund; fully incremental share."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secondary generic bid lift on cleared cell with 1.00 iota and moderate slot share (0.59)."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aggressive competitor keyword bid on lowest slot1 share (0.40) in fund; 1.00 iota ensures pure incrementality."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct displaced holder status; install highest-scoring SKU (S1) at slot 1 to reclaim efficient share."
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure lead position in HYD where S1 holds best incremental score despite current weak holder placement."
+      }
+    ],
+    "notes": "Revised plan drops all G3 slot-1 block rejections and allowance breaches from prior run. Concentrates ~930 INR of the 1230 INR allowance into efficient fund budget raises (S1-DEL/BLR/HYD, S2-DEL) and pairs with targeted bid lifts on cleared cells with sub-80% slot1 shares and high iota. Lead market actions correct three wrongful keyword holders to align slot allocation with incremental scoring."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12524,
+    "tokens_out": 8931,
+    "cost_usd": 0.00153675,
+    "wall_clock_s": 89.79676270800007
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.4,
+    "direction": "surge",
+    "confidence": 0.88,
+    "rationale": "Reach z-score of 5.431 is an extreme deviation (>5 baseline SDs), indicating a genuine reach surge. CPM is essentially flat (z=-0.316), which rules out a price or competition shift as the driver \u2014 a bid/competition move would typically move CPM alongside reach. Own-action confound flag is False and OSA z-score is 0.0, so the harness's own prior bid/budget changes are unlikely to explain this. The pattern (large reach move, stable price, no self-action artifact) is most consistent with a real demand-side market shock."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 457,
+    "cost_usd": 0.0007314600000000001,
+    "wall_clock_s": 4.120145500000035
+  }
+}

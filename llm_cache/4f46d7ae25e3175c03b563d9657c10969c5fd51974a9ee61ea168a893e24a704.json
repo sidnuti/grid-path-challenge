@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.65,
+    "rationale": "The mechanical leader_score identifies C-S1-MUM as the top candidate (1.0753 vs 1.0702 for C-S2-MUM). Given the marginal difference and absence of clear operational advantages for competitors, retaining the mechanical pick maintains consistency. Higher slot shares for C-S4/S5 do not offset their significantly lower efficiency scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1832,
+    "cost_usd": 0.028746,
+    "wall_clock_s": 15.848128041999985
+  }
+}

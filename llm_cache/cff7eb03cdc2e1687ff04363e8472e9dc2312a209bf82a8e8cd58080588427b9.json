@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.8,
+    "rationale": "Mechanical leader_score favors C-S4-PUN (1.5783 vs 1.5020), and corroborating evidence strengthens it: C-S4-PUN holds a much higher 7-day slot1 share (0.88 vs 0.59), indicating stronger current visibility and dominance for the PUN/K05 slot. No evidence favors the near-tie alternative, so the mechanical pick stands."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 263,
+    "cost_usd": 0.00045418,
+    "wall_clock_s": 3.3334005839999463
+  }
+}

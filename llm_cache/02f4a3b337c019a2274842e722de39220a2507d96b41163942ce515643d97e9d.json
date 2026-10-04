@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Extreme reach z-score (11.34) with flagged status indicates a substantial market demand or supply shift. Stable CPM z-score (0.54) rules out pure bid/competition artifacts. No own-action confound detected, confirming an external market driver for the observed surge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 445,
+    "tokens_out": 1648,
+    "cost_usd": 0.026055,
+    "wall_clock_s": 15.218308084
+  }
+}

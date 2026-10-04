@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.65,
+    "rationale": "Mechanical leader_score ranks C-S3-BLR highest (0.5765) versus a close runner-up (0.5372). Adhering to the directive to trust the mechanical metric in near-ties, combined with its strong 71% slot1 share, makes it the optimal candidate for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1763,
+    "cost_usd": 0.027567,
+    "wall_clock_s": 18.705350125000052
+  }
+}

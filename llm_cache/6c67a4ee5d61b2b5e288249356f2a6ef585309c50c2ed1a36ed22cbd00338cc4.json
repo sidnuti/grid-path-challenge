@@ -1,0 +1,242 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT_LEAD_S4_DEL_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Shift generic Body Wash share from S2 to S4 (score 2.833 vs 0.739) to maximize incremental revenue per impression."
+      },
+      {
+        "id": "INT_LEAD_S4_MUM_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Recover high-gap share (0.70) for S4 in MUM generic Body Wash."
+      },
+      {
+        "id": "INT_LEAD_S4_BLR_K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Capture S4 leadership in BLR generic Body Wash (score 2.153 vs 0.737)."
+      },
+      {
+        "id": "INT_LEAD_S1_MUM_K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S1 as leader in MUM generic Soap (score 0.967 vs 0.667) to drive efficient volume."
+      },
+      {
+        "id": "INT_LEAD_S1_MUM_K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Displace S5 with S1 in MUM generic Soap (score 0.837 vs 0.241)."
+      },
+      {
+        "id": "INT_BUDGET_RAISE_S1_DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Utilize spend allowance on efficient Fund SKU (iroas 2.57) which has exhausted budget daily for last 7 days."
+      },
+      {
+        "id": "INT_BUDGET_RAISE_S1_BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase spend capacity for efficient Fund SKU in BLR (ran out 7/7 days)."
+      },
+      {
+        "id": "INT_BUDGET_RAISE_S1_PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Modest budget increase for Fund SKU in PUN (ran out 2/7 days) to capture marginal share."
+      },
+      {
+        "id": "INT_BUDGET_CUT_S5_DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce spend on weak Hold SKU (Kids Soap) to free allowance for higher iroas investments."
+      },
+      {
+        "id": "INT_BUDGET_CUT_S5_BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim ineffective Kids Soap spend in BLR."
+      },
+      {
+        "id": "INT_BUDGET_CUT_S3_BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital from Trim SKU in BLR."
+      },
+      {
+        "id": "INT_BID_RAISE_S4_HYD_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Aggressive bid lift on highly efficient Shower Gel generic (predicted mroas 9.16) in Scale campaign."
+      },
+      {
+        "id": "INT_BID_RAISE_S4_HYD_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Maximize share gain on Shower Gel generic K06 (predicted mroas 9.37)."
+      },
+      {
+        "id": "INT_BID_RAISE_S4_MUM_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise bid on Shower Gel generic K06 (mroas 7.57) in Scale campaign."
+      },
+      {
+        "id": "INT_BID_RAISE_S1_HYD_K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bids on efficient Soap generic in Scale campaign (iroas 2.48 across category)."
+      },
+      {
+        "id": "INT_BID_RAISE_S1_HYD_K04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume on Soap generic K04 in Scale campaign."
+      }
+    ],
+    "notes": "Prioritized lead_market interventions in high-gap contested markets where S4/Shower Gel and S1/Soap hold superior incremental value. Increased budgets on efficient Fund campaigns and raised bids on high-yield Shower Gel generics to leverage spend allowance while maintaining portfolio ROAS above the floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 22369,
+    "tokens_out": 20274,
+    "cost_usd": 0.0033066899999999997,
+    "wall_clock_s": 160.304115583
+  }
+}

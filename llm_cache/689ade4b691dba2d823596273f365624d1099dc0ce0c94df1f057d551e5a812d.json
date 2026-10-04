@@ -1,0 +1,377 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "b-del-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget capacity for capped-efficient Soap brand; fund budget ran out 7/7d."
+      },
+      {
+        "id": "b-blr-s1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release budget cap for efficient Soap campaign; fund ran out 7/7d."
+      },
+      {
+        "id": "b-del-s4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Cap lift for highest-iroas fund (4.78); ran out 7/7d."
+      },
+      {
+        "id": "b-mum-s4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Minor buffer for efficient Shower Gel fund; ran out 3/7d."
+      },
+      {
+        "id": "l-del-k04-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 leadership to S1 (score 0.895 vs 0.646) to capture higher incremental revenue per impression."
+      },
+      {
+        "id": "y-del-k04-s3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S3 bid interference in DEL:K04; frees impression share for leading SKU."
+      },
+      {
+        "id": "l-del-k09-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong-holder; S1 leads incrementally despite tight gap (0.01)."
+      },
+      {
+        "id": "y-del-k09-s3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S3 in DEL:K09 competition segment."
+      },
+      {
+        "id": "l-mum-k04-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S1 leadership (score 1.056 vs 0.618); improves incremental yield."
+      },
+      {
+        "id": "y-mum-k04-s3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S3 share in MUM:K04 to prevent inefficient overlap."
+      },
+      {
+        "id": "l-mum-k09-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Align leadership with incremental best in MUM competition."
+      },
+      {
+        "id": "y-mum-k09-s3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S3 footprint in MUM:K09."
+      },
+      {
+        "id": "l-hyd-k10-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move Shower Gel S4 to slot-1 in HYD:K10 (score 0.790 vs 0.688); captures full iota incrementality."
+      },
+      {
+        "id": "y-hyd-k10-s2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield Body Wash S2 share in HYD:K10 to avoid cannibalization."
+      },
+      {
+        "id": "l-pun-k10-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead S4 in PUN:K10 competition (score 0.795 vs 0.466); maximizes high-iota spend."
+      },
+      {
+        "id": "y-pun-k10-s2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S2 in PUN:K10 to concentrate bids on stronger SKU."
+      },
+      {
+        "id": "lb-blr-k04-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fix wrong-holder; S1 score 0.957 exceeds S3 0.616."
+      },
+      {
+        "id": "y-blr-k04-s3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield S3 in BLR:K04 to reduce waste."
+      },
+      {
+        "id": "lb-blr-k09-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Align BLR competition leadership with incremental best."
+      },
+      {
+        "id": "y-blr-k09-s3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S3 interference in BLR:K09."
+      },
+      {
+        "id": "b-s4blr-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase CPA on iota=1.00 competition cell (iroas 5.29) to capture scale headroom."
+      },
+      {
+        "id": "h-s4hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-mroas generic cell (mroas_up20 9.58, iroas 6.41) in scale role."
+      },
+      {
+        "id": "h-s4hyd-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up strong generic cell (mroas_up20 9.88, iroas 6.70) in scale role."
+      },
+      {
+        "id": "p-s2pun-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture iota=1.00 competition incrementality (iroas 6.47) in scale budget."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Prioritized budget raises for four fund campaigns that routinely hit caps, freeing efficient spend to flow. Aggressively corrected six wrong-holder contested markets to shift slot-1 leadership to SKUs with higher incremental scores (iroas/iota). Added targeted bid increases on iota-1 competition cells and top-tier generic opportunities in scale roles to push incremental offtake within the daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12087,
+    "tokens_out": 10000,
+    "cost_usd": 0.0016626100000000001,
+    "wall_clock_s": 76.196372166
+  }
+}

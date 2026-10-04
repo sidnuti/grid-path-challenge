@@ -1,0 +1,321 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "L-BLR-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift impression dominance to highest incremental SKU (S1) in contested market."
+      },
+      {
+        "id": "L-BLR-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder; allocate budget to efficient Shower Gel SKU (S4)."
+      },
+      {
+        "id": "L-BLR-K09-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture competitive traffic with higher-value Soap SKU (S1)."
+      },
+      {
+        "id": "L-DEL-K09-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fix contested market leader to maximize DEL competitive share."
+      },
+      {
+        "id": "L-MUM-K09-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect MUM competitive spend to premium Soap SKU (S1)."
+      },
+      {
+        "id": "L-PUN-K03-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate generic Soap volume under best-incremental SKU (S1)."
+      },
+      {
+        "id": "B-S2-DEL-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "expected_effect": "Increase incremental reach in scalable Body Wash market; code drops capped cells."
+      },
+      {
+        "id": "B-S2-BLR-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K10"
+        ],
+        "expected_effect": "Capture remaining Headroom in BLR Body Wash; improves iROAS alignment."
+      },
+      {
+        "id": "B-S4-MUM-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM/"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "expected_effect": "Boost high-iROAS Shower Gel in scaled MUM market."
+      },
+      {
+        "id": "B-S3-HYD-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S3-HYD",
+          "C:C-S3-HYD/K09"
+        ],
+        "expected_effect": "Utilize 3 bid-headroom cells in HYD Soap scale campaign."
+      },
+      {
+        "id": "B-S2-HYD-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K10"
+        ],
+        "expected_effect": "Expand HYD Body Wash coverage on efficient competition/generic keywords."
+      },
+      {
+        "id": "B-S2-PUN-R",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K10"
+        ],
+        "expected_effect": "Maximize PUN Body Wash offtake with 4 headroom cells."
+      },
+      {
+        "id": "B-S1-DEL-BR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K01"
+        ],
+        "expected_effect": "Push fund-capped Soap in DEL; protects high-volume brand/search."
+      },
+      {
+        "id": "B-S1-BLR-BR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S1-BLR",
+          "C:C-S1-BLR/K09"
+        ],
+        "expected_effect": "Fill BLR fund gaps on cleared competition keywords."
+      },
+      {
+        "id": "B-S1-PUN-BR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN/"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K09"
+        ],
+        "expected_effect": "Support fund-level Soap in PUN with headroom availability."
+      },
+      {
+        "id": "B-S1-DEL-RA",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL/"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K03"
+        ],
+        "expected_effect": "Unlock significant daily volume; ran out 7/7 days, high iROAS foundation."
+      },
+      {
+        "id": "B-S1-BLR-RA",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR/"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "expected_effect": "Sustain fund pacing; ran out 4/7 days."
+      },
+      {
+        "id": "B-S1-PUN-RA",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN/"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "expected_effect": "Extend PUN reach; ran out 3/7 days."
+      },
+      {
+        "id": "B-S4-DEL-RA",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL/"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "expected_effect": "Capitalize on fund status and 2/7 run-outs."
+      },
+      {
+        "id": "B-S4-HYD-RA",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD/"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "expected_effect": "Hyd Shower Gel runs out consistently; strong iROAS (4.53) justifies expansion."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Reallocating six contested markets to correct incremental leaders, scaling efficient fund/scale campaign bids, and expanding budgets for frequently capped portfolios. Stance trims low-iROAS trim segments to protect floor ROAS while maximizing allowance utilization."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11489,
+    "tokens_out": 9947,
+    "cost_usd": 0.0016377800000000001,
+    "wall_clock_s": 96.74974195799996
+  }
+}

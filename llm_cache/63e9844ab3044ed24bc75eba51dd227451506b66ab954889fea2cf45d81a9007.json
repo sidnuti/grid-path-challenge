@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.6,
+    "rationale": "Leader scores are a near-tie (0.6769 vs 0.6567), within expected noise. Per policy, default to the mechanical pick C-S1-PUN. C-S3-PUN's higher slot1_share_7d (0.88 vs 0.70) is noted but is a single positional signal and does not clearly outweigh the composite score, which already folds in conversion, ASP, and incrementality."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 454,
+    "cost_usd": 0.0006929299999999999,
+    "wall_clock_s": 4.311317790999965
+  }
+}

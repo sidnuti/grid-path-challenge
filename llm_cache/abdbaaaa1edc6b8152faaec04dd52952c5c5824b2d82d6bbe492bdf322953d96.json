@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.72,
+    "rationale": "Mechanical score already favours C-S3-PUN (0.6796 vs 0.6471), and the supplementary evidence reinforces it: its 7-day slot-1 share (0.89) is far above C-S1-PUN's (0.66), indicating it owns the top impression and its bid is the one worth protecting."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 309,
+    "cost_usd": 0.00051168,
+    "wall_clock_s": 3.095217249999905
+  }
+}

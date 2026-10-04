@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical scores are nearly tied, but C-S3-HYD dominates slot1 share at 94% versus 39%, signaling clear superior auction performance and market leadership. The positional advantage overrides the marginal score difference."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1234,
+    "cost_usd": 0.019566,
+    "wall_clock_s": 12.196288665999873
+  }
+}

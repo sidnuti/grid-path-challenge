@@ -1,0 +1,158 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K02-S3",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "shift slot 1 to S3, increasing incremental off-take"
+      },
+      {
+        "id": "LM-DEL-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "secure best incremental ROI position for S4"
+      },
+      {
+        "id": "LM-PUN-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "win contested generic auction with highest mroas"
+      },
+      {
+        "id": "BID-S1-BLR-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR",
+          "C:C-S1-BLR/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "capture incremental volume within ROAS floor"
+      },
+      {
+        "id": "BID-S4-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "leverage high incrementality and efficiency for portfolio growth"
+      },
+      {
+        "id": "RB-C-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "relieve daily budget cap for efficient fund without breaching allowance"
+      },
+      {
+        "id": "CB-C-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "protect portfolio DOTRAS floor by shedding low-iota spend"
+      },
+      {
+        "id": "H-TRIMS-DEL",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "prevent inefficient scaling on trim SKU"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Dropped previously rejected intents due to allowance caps, zero-incrementality brand bids, and blocking OSA anomalies. Focused bid growth on high-iota generic cells in scale candidates (S1-BLR, S4-PUN) and corrected three contested market holders where S3/S4 clearly outperformed incumbents. Held trim campaign C-S3-DEL and cut budget on weak S5-MUM to safeguard the DOTRAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11376,
+    "tokens_out": 9063,
+    "cost_usd": 0.00151947,
+    "wall_clock_s": 71.73847024999998
+  }
+}

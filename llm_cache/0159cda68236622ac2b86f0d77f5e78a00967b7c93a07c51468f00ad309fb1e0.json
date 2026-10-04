@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical pick C-S1-HYD is retained. The score gap over C-S3-HYD is modest (0.7039 vs 0.6611, ~0.043), but the corroborating evidence does not favor the challenger: C-S1-HYD also holds a substantially higher 7-day slot1 share (0.88 vs 0.64), indicating it genuinely owns the top auction position in this market, and C-S5-HYD is far behind on both metrics (0.3764, 0.63). No evidence clearly favors C-S3-HYD, so the near-tie does not justify overriding the mechanical leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 364,
+    "tokens_out": 565,
+    "cost_usd": 0.00084093,
+    "wall_clock_s": 4.770379708000064
+  }
+}

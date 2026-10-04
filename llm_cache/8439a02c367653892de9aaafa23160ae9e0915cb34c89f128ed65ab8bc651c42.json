@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.75,
+    "rationale": "The mechanical scores for C-S3 (0.6479) and C-S1 (0.6419) differ by less than 1%, indicating substantial noise in the tiebreaker. However, C-S1 demonstrates a decisive advantage in actual market execution with an 88% slot1 share compared to 42% for C-S3. This clear evidence of superior auction capture overrides the negligible mechanical difference, making C-S1 the appropriate leader to protect."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 2801,
+    "cost_usd": 0.043137,
+    "wall_clock_s": 25.87845941700016
+  }
+}

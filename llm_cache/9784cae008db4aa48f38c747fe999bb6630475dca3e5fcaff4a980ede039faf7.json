@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.9,
+    "rationale": "C-S2-PUN holds the highest mechanical leader_score and stronger slot1_share compared to the runner-up C-S4-PUN. This aligns with the mechanical pick and shows clear dominance in key performance metrics."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1351,
+    "cost_usd": 0.021531,
+    "wall_clock_s": 12.268767083000029
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.7,
+    "rationale": "Top two leader_scores are a near-tie (1.5749 vs 1.5101, ~4% apart, within mechanical noise), so the tiebreaker signal applies: C-S2-HYD already holds 94% of slot 1 over 7d versus C-S4-HYD's 21%, making it the de facto market leader whose bid should be protected; C-S4's slightly higher score with minimal slot-1 presence suggests an inflated/noisy score with no incumbent position to defend."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 409,
+    "tokens_out": 835,
+    "cost_usd": 0.0011950799999999998,
+    "wall_clock_s": 9.023081124999976
+  }
+}

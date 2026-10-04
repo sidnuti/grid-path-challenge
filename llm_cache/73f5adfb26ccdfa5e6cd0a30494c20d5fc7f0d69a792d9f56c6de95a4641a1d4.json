@@ -1,0 +1,203 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "run3-budget-s4blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore daily ad volume for SHG-Fund BLR to prevent missed auctions; high iroas 5.64 supports spend."
+      },
+      {
+        "id": "run3-budget-s4hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund continuous delivery for SHG-Capital HYD; ran out 7d, iroas 5.25."
+      },
+      {
+        "id": "run3-budget-s1hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure Soap-Fund HYD inventory; consistent run-outs justify budget expansion."
+      },
+      {
+        "id": "run3-bid-s4blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase share on high-iota generic queries; predicted mroas 6.53 drives incremental growth."
+      },
+      {
+        "id": "run3-bid-s4blr-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental volume on efficient generic terms; iroas 7.78."
+      },
+      {
+        "id": "run3-bid-s4hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale winning generic placements in capital; iroas 7.40."
+      },
+      {
+        "id": "run3-bid-s4hyd-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-margin generic traffic; iroas 7.31."
+      },
+      {
+        "id": "run3-bid-s4mum-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fine-tune allocation on scale campaign generic term; iroas 5.38."
+      },
+      {
+        "id": "run3-bid-s4mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Add incremental share on premium generic keyword; iroas 8.29."
+      },
+      {
+        "id": "run3-bid-s4del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Utilize remaining allowance on Delhi generic traffic; iroas 5.12."
+      },
+      {
+        "id": "run3-bid-s4del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture efficient generic impressions; iroas 9.07."
+      },
+      {
+        "id": "run3-budget-s4mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Top up scale campaign budget after recent run-out; supports overall volume push."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "all",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "all",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Allocate the full daily allowance into high-iota Shower Gel generic bids and fund campaigns that consistently exhausted budgets. Bid raises capture incremental market share where mroas exceeds 5, while budget raises prevent missed-auction drag on profitable roles. Portfolio ROAS floor remains secured by the high aggregate iroas profile."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12162,
+    "tokens_out": 9654,
+    "cost_usd": 0.0016198800000000002,
+    "wall_clock_s": 88.32791600000002
+  }
+}

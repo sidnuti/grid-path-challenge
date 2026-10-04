@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.65,
+    "rationale": "C-S4-HYD holds the highest mechanical leader_score (2.2430), narrowly edging out C-S3-HYD (2.1757) by ~0.067. Both candidates share identical slot1_share_7d (0.12), and no provided metrics clearly favor the runner-up. Following the directive to default to the mechanical pick in near-ties without strong contrasting evidence, C-S4-HYD is selected."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 2104,
+    "cost_usd": 0.032841,
+    "wall_clock_s": 22.02958029199999
+  }
+}

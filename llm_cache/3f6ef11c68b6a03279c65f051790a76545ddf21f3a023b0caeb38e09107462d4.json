@@ -1,0 +1,299 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "BR-C-S2-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental share on competitor terms with low slot-1 share and high iota (0.92)."
+      },
+      {
+        "id": "BR-C-S4-MUM-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Drive incremental volume on Shower Gel generic terms where bid headroom exists."
+      },
+      {
+        "id": "BR-C-S4-HYD-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase visibility on high-share-open brand term for scale-rated campaign."
+      },
+      {
+        "id": "BR-C-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Extract incremental growth from efficient Body Wash generic cell."
+      },
+      {
+        "id": "BR-C-S4-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secure more impressions on high-iota generic term with clear bid room."
+      },
+      {
+        "id": "BR-C-S2-MUM-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Boost incremental reach on scalable Body Wash generic queries."
+      },
+      {
+        "id": "LY-HYD-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back from market leader to cede place to higher-incremental S2."
+      },
+      {
+        "id": "LM-HYD-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take slot-1 leadership to maximize incremental revenue per impression."
+      },
+      {
+        "id": "LY-HYD-K05-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield market leadership to better-performing S2 on generic query."
+      },
+      {
+        "id": "LM-HYD-K05-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Assume leadership to capture higher incremental share on K05."
+      },
+      {
+        "id": "LY-MUM-K10-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back from mismatched holder on competition term."
+      },
+      {
+        "id": "LM-MUM-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Lead competition market to higher-value S4 SKU."
+      },
+      {
+        "id": "LY-PUN-K01-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder by yielding to superior S2."
+      },
+      {
+        "id": "LM-PUN-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Seize leadership on K01 to drive higher incremental output."
+      },
+      {
+        "id": "LY-PUN-K05-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield market position to higher-scoring S2."
+      },
+      {
+        "id": "LM-PUN-K05-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take slot-1 to maximize ROI on generic query."
+      },
+      {
+        "id": "LY-PUN-K06-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Yield leadership to better-performing S4 on K06."
+      },
+      {
+        "id": "LM-PUN-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Lead market to capture highest incremental revenue per impression."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritize incremental growth on scale roles with clear bid headroom (<80% slot-1) and correct misallocated market leadership to maximize true incrementality (iroas) while preserving ROAS buffer. Bid increases targeted at cells with CLEARS verdicts and positive mroas_up20."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11153,
+    "tokens_out": 11771,
+    "cost_usd": 0.0018648199999999999,
+    "wall_clock_s": 88.35488954100015
+  }
+}

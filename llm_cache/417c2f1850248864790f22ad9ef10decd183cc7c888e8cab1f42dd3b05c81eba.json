@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.9,
+    "confidence": 0.75,
+    "rationale": "Realized dROAS of 4.96 substantially exceeds the goal of 3.15, supporting increased spend. However, low recent order volume (23) introduces statistical noise, warranting slight dampening of the full proposed raise to balance upside capture with execution risk."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 1667,
+    "cost_usd": 0.026424,
+    "wall_clock_s": 16.75334029200002
+  }
+}

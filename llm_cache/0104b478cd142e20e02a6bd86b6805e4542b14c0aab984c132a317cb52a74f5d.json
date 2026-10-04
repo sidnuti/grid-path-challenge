@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.6,
+    "rationale": "The leader scores are a near-tie (0.6591 vs 0.5941), a gap small enough to fall within the mechanical score's noise. The decisive tiebreaker evidence clearly favours C-S2-PUN: it already holds 94% of slot1 share versus 59% for C-S4-PUN, making it the de facto market leader whose bid should be protected to preserve incumbency and avoid intra-brand bidding pressure. C-S4-PUN's modest score edge is likely noise, partly since its lower impression share makes its metrics less stable. C-S4-PUN should hold rather than raise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 2669,
+    "cost_usd": 0.00346168,
+    "wall_clock_s": 22.79416445799984
+  }
+}

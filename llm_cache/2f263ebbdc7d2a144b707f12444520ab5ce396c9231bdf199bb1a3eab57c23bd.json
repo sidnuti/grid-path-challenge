@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.75,
+    "rationale": "Mechanical leader_score already favours C-S2-BLR (1.8969 vs 1.8516); the near-tie is resolved in its favour since its 7d slot1 share (0.84 vs 0.58) clearly corroborates stronger top-slot presence, supporting it as the protected bid leader for BLR/K05."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 267,
+    "cost_usd": 0.00045918,
+    "wall_clock_s": 3.350805874999992
+  }
+}

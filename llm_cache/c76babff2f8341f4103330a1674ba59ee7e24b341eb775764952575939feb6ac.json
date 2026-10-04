@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.65,
+    "rationale": "Mechanical scores are nearly tied, but C-S3-DEL demonstrates substantially higher top-slot dominance (91% vs 54%), indicating stronger actual market positioning and stability for this keyword and city."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 1846,
+    "cost_usd": 0.028737,
+    "wall_clock_s": 17.31357058399999
+  }
+}

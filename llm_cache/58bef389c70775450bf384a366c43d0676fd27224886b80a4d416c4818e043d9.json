@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.6,
+    "rationale": "Only 23 orders in 28 days provides sparse data, making the dROAS estimate volatile despite being well above the 3.15 goal. To balance the desire to scale a profitable cell with the risk of overpaying during low-volume noise, I dampen the mechanical +20% raise to 0.7x."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 2018,
+    "cost_usd": 0.031689,
+    "wall_clock_s": 21.537191208999957
+  }
+}

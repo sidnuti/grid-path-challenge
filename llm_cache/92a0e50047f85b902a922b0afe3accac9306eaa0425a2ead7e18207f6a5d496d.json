@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader C-S3-BLR holds a narrow lead over C-S2-BLR (1.5906 vs 1.5651). Following the instruction to prefer the mechanical score in near-tie scenarios, C-S3-BLR is selected. Confidence is modest due to the minimal performance gap between the top two candidates."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 849,
+    "cost_usd": 0.014001,
+    "wall_clock_s": 9.065580915999988
+  }
+}

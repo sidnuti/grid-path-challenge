@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "Reach is 5 sigma above baseline, a strong flagged deviation, and the own-action confound flag is false, so this is unlikely to be the harness's own prior bid/budget move landing. Flat CPM (z=0) and flat OSA (z=0) rule out a price/competition shift as the driver; the pattern most consistent with a genuine demand/volume surge in impressions available at unchanged prices. Magnitude set at ~5 matching the reach z-score. Confidence slightly below maximum because the CPM silence leaves a small chance of a benign inventory expansion rather than a demand shock."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 431,
+    "tokens_out": 487,
+    "cost_usd": 0.00076822,
+    "wall_clock_s": 4.701179166999964
+  }
+}

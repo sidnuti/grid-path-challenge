@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.0,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "Reach shows a clear statistical surge (z\u22483.0) while CPM stays flat (z=0.631), indicating expanded impression availability rather than aggressive bidder competition or a confounded own-action effect. This divergence points to a genuine underlying demand shift in the market."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1460,
+    "cost_usd": 0.023232,
+    "wall_clock_s": 18.210120583000162
+  }
+}

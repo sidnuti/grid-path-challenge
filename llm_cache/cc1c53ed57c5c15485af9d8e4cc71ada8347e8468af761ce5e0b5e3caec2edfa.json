@@ -1,0 +1,366 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BID-S2PUN-K06-L",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental Body Wash volume in Pune via high-iota generic cell; leverages scale role headroom (iroas 6.68)."
+      },
+      {
+        "id": "BID-S2PUN-K10-M",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase competition exposure for S2 in Pune; high slot-1 share gap indicates room for growth."
+      },
+      {
+        "id": "BID-S2DEL-K05-L",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale Delhi Body Wash generic acquisition; strong iroas (4.72) and open slot share support large move."
+      },
+      {
+        "id": "BID-S2DEL-K06-L",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aggressive bid lift on secondary generic in Delhi to maximize incremental revenue per impression."
+      },
+      {
+        "id": "BID-S2DEL-K10-M",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Moderate competition expansion in Delhi; complements K05/K06 generic push."
+      },
+      {
+        "id": "BID-S2MUM-K05-M",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Unlock Mumbai generic reach for S2; slot-1 share at 0.48 provides clear upside."
+      },
+      {
+        "id": "BID-S2MUM-K06-M",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Medium bid lift on Mumbai second generic to sustain scale trajectory within guardrails."
+      },
+      {
+        "id": "BID-S2MUM-K10-M",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Mumbai competition footprint for Body Wash; supports portfolio off-take growth."
+      },
+      {
+        "id": "BG-S1HYD-M",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unblock Hyderabad Soap demand; ran out budget 7/7 days with strong direct ROAS (4.85)."
+      },
+      {
+        "id": "BG-S4HYD-M",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund Hyderabad Shower Gel growth; ran out 7/7 days, high direct ROAS (8.25), iroas 4.70."
+      },
+      {
+        "id": "BG-S4BLR-M",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Release capped Hyderabad Shower Gel efficiency; ran out 6/7 days, portfolio anchor."
+      },
+      {
+        "id": "CUT-S3DEL-M",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Recapture allowance from low-efficiency Delhi Soap hold; iroas 1.56 drags portfolio average."
+      },
+      {
+        "id": "CUT-S3MUM-M",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free capital from trimmed Mumbai Soap bucket; weak incremental return (iroas 1.71)."
+      },
+      {
+        "id": "CUT-S3BLR-S",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Minor allowance restoration from low-performing Bangalore Soap trim."
+      },
+      {
+        "id": "LM-S1HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reassign brand leadership to highest-incremental S1 in Hyderabad, improving ROI efficiency."
+      },
+      {
+        "id": "YM-S5HYD-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S5 Kids Soap from HYD K01 to allow S1 leadership; maintains coverage safely."
+      },
+      {
+        "id": "LM-S1HYD-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift HYD competition lead from weaker S3 to efficient S1 fund campaign."
+      },
+      {
+        "id": "YM-S3HYD-K09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce S3 exposure in HYD K09; reallocates impressions to higher-value sibling."
+      },
+      {
+        "id": "LM-S2BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong-holder: promote S2 Body Wash to K05 leadership in Bangalore (score 2.097 vs S4 1.890)."
+      },
+      {
+        "id": "YM-S4BLR-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S4 from BLR K05; maintains presence while S2 captures top incremental position."
+      },
+      {
+        "id": "HOLD-S2HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Block all bid/budget increases for Hyderabad Body Wash; 3-day OSA at 0.42 violates 60% floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Plan pivots to aggressive scaling of high-iota S2 Body Wash cells across DEL/PUN/MUM while securing budget headroom for capped fund campaigns (S1-HYD, S4-HYD, S4-BLR). Contested market corrections (HYD K01/K09, BLR K05) reallocate impressions to superior incrementality. Hard stop on S2-HYD due to sub-60% OSA trims execution risk, while trimmed/hold buckets release allowance to preserve portfolio direct ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11316,
+    "tokens_out": 10695,
+    "cost_usd": 0.0017298300000000001,
+    "wall_clock_s": 95.97850387500011
+  }
+}

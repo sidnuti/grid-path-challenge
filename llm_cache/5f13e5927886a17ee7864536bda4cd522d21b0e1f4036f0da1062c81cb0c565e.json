@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.9,
+    "rationale": "The mechanical pick C-S1-HYD holds a higher leader score (0.2413 vs 0.2268) and strongly validates this position with a 96% slot 1 share over the last 7 days, compared to only 34% for C-S3-HYD. This clear performance gap confirms C-S1-HYD's dominance in the market, so there is no justification to override the mechanical selection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 711,
+    "cost_usd": 0.011721,
+    "wall_clock_s": 6.232803124999975
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 0.8,
+    "confidence": 0.35,
+    "rationale": "Low order volume (17 in 28D) limits signal reliability despite shrinkage adjustments. Partial dampening applied to avoid overreacting to statistical noise while maintaining alignment with the mechanical direction."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 1778,
+    "cost_usd": 0.028065,
+    "wall_clock_s": 21.19194666700014
+  }
+}

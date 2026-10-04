@@ -1,0 +1,387 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "BDG-CUT-S5",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free allowance headroom by trimming low-incrementality Kids Soap spend."
+      },
+      {
+        "id": "BDG-CUT-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate budget from weak incrementality SKU."
+      },
+      {
+        "id": "BDG-CUT-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate budget from weak incrementality SKU."
+      },
+      {
+        "id": "BDG-CUT-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift spend from trim role to efficient fund campaigns."
+      },
+      {
+        "id": "BDG-CUT-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift spend from trim role to efficient fund campaigns."
+      },
+      {
+        "id": "BDG-CUT-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift spend from trim role to efficient fund campaigns."
+      },
+      {
+        "id": "BDG-CUT-S3-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift spend from trim role to efficient fund campaigns."
+      },
+      {
+        "id": "BDG-RAISE-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand spend on fund campaign with proven run-out capacity and scalable competition keyword."
+      },
+      {
+        "id": "BDG-RAISE-S1-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand fund campaign budget utilizing freed headroom."
+      },
+      {
+        "id": "BDG-RAISE-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Grow highest-iroas fund campaign to capture additional demand."
+      },
+      {
+        "id": "BD-BID-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase win rate on efficient generic keyword with clear headroom."
+      },
+      {
+        "id": "BD-BID-S2-MUM-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental volume on competition keyword (iota=1.00)."
+      },
+      {
+        "id": "BD-BID-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage scale role and high predicted ROI (mroas_up20) to drive offtake."
+      },
+      {
+        "id": "BD-BID-S4-HYD-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure incremental sales on competition keyword with strong upside."
+      },
+      {
+        "id": "BD-BID-S2-PUN-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capitalize on iota=1.00 and available slot position."
+      },
+      {
+        "id": "CTR-LEAD-S4-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; shift impression share to highest incremental SKU."
+      },
+      {
+        "id": "CTR-YIELD-S2-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weaker sibling to improve portfolio incrementality."
+      },
+      {
+        "id": "CTR-LEAD-S2-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S2 body wash drives higher incremental value than S4 shower gel here."
+      },
+      {
+        "id": "CTR-YIELD-S4-MUM-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weaker sibling."
+      },
+      {
+        "id": "CTR-LEAD-S4-HYD-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Align leader with best incremental score (0.601 vs 0.579)."
+      },
+      {
+        "id": "CTR-YIELD-S2-HYD-K10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weaker sibling."
+      },
+      {
+        "id": "CTR-LEAD-S4-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S4 holds decisive incremental edge."
+      },
+      {
+        "id": "CTR-YIELD-S2-PUN-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back weaker sibling."
+      },
+      {
+        "id": "CTR-LEAD-S1-BLR-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Replace trimmed S3 with efficient S1 on competitor keywords."
+      },
+      {
+        "id": "CTR-YIELD-S3-BLR-K09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce wasteful spend on low-iota SKU."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "S5",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Consolidated budget from low-iroas trim SKUs (S3, S5) to fund efficient campaigns (S1-DEL, S1-PUN, S4-DEL) within allowance limits. Corrected four contested markets where incumbent holders were outperformed on incremental value, and selectively raised bids on high-upside, non-capped generic/competition cells to maximize off-take without breaching ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11139,
+    "tokens_out": 10184,
+    "cost_usd": 0.00165809,
+    "wall_clock_s": 91.45540012499993
+  }
+}

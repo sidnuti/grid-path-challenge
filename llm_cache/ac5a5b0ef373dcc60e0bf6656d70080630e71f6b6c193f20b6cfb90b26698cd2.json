@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score favors C-S3-MUM (0.2985 vs 0.2730); the gap is modest but the only counter-evidence (C-S1-MUM's higher slot1 share of 0.91) reflects incumbent position rather than superior economics or incrementality, so it does not clearly override the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 922,
+    "cost_usd": 0.00127793,
+    "wall_clock_s": 8.368739916999857
+  }
+}

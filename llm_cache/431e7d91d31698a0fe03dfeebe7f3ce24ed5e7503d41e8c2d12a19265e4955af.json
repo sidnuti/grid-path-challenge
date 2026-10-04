@@ -1,0 +1,294 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K01",
+          "K:Body Wash:brand"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture high-value incremental brand demand with exceptional mroas_up20 (29.64)."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand share of voice on efficient generic searches to boost incremental unit sales."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure incremental volume in high-intent generic queries without overshooting budget."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive incremental growth in Bangalore where role is scale and iroas is strong."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on efficient generic bidding room in Bangalore."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K03",
+          "K:Soap:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage scale role and clear verdict to pull incremental generic volume."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Boost incremental reach in Hyderabad on high-iroas generic cells."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Maximize high-incrementality Shower Gel generic performance in Pune."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K06",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift competitive slot to highest-IoT shower gel SKU (score 1.678) to capture incremental revenue."
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K01",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Place best-performing Shower Gel SKU in position 1 to displace less efficient siblings."
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder in Pune brand market to highest incremental SKU."
+      },
+      {
+        "id": "INT-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K10",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield Shower Gel to lead Body Wash SKU which has superior incremental score (0.763 vs 0.593)."
+      },
+      {
+        "id": "INT-13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K03",
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Replace underperforming Soap holder with S1 who holds the incremental advantage."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Prevent budget exhaustion in Hyderabad Shower Gel campaign to sustain incremental lift."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Final run prioritizes reallocating spend toward high-iota scale roles and correcting contested markets to maximize incremental offtake. Direct ROAS headroom remains positive, allowing targeted bid expansion on CLEARS cells while yielding weak market holders."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11117,
+    "tokens_out": 9396,
+    "cost_usd": 0.00155499,
+    "wall_clock_s": 72.90278579099993
+  }
+}

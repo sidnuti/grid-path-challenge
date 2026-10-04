@@ -1,0 +1,195 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BUDGET-R-C-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "expected_effect": "Unblock budget cap for efficient Delhi Soap spend"
+      },
+      {
+        "id": "BUDGET-R-C-S1-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "expected_effect": "Free budget for consistent BLR Soap performance"
+      },
+      {
+        "id": "BUDGET-R-C-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "expected_effect": "Top up shower gel budget in DEL"
+      },
+      {
+        "id": "BID-R-C-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "expected_effect": "+6.7x incremental ROI on Body Wash generic"
+      },
+      {
+        "id": "BID-R-C-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "expected_effect": "+4.2x incremental ROI on Body Wash generic"
+      },
+      {
+        "id": "BID-R-C-S2-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "expected_effect": "+4.3x incremental ROI on Body Wash generic"
+      },
+      {
+        "id": "BID-R-C-S2-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "expected_effect": "+3.1x incremental ROI on Body Wash generic"
+      },
+      {
+        "id": "BID-R-C-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "expected_effect": "+9.7x incremental ROI on Shower Gel generic"
+      },
+      {
+        "id": "BID-R-C-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "expected_effect": "+10.1x incremental ROI on Shower Gel generic"
+      },
+      {
+        "id": "BID-R-C-S1-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K05"
+        ],
+        "expected_effect": "+3.3x incremental ROI on Soap generic"
+      },
+      {
+        "id": "BUDGET-C-C-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "expected_effect": "Reduce waste on trimming del soap"
+      },
+      {
+        "id": "BUDGET-C-C-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "expected_effect": "Reduce waste on trimming mum soap"
+      },
+      {
+        "id": "BUDGET-C-C-S5-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "expected_effect": "Free headroom from low-iota kids soap"
+      },
+      {
+        "id": "BUDGET-C-C-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "expected_effect": "Free headroom from low-iota kids soap"
+      }
+    ],
+    "stance": [],
+    "notes": "Shifted focus to high mroas generic keywords with healthy slot dispersion to secure predictable incrementality, while funding run-outs for efficient fund/scale SKUs and pruning low-value trim budgets to stay within the 1.6k allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11217,
+    "tokens_out": 8861,
+    "cost_usd": 0.0014884400000000002,
+    "wall_clock_s": 66.94883012499997
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "lead-s1-mum-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift Soap generic share to efficient S1 holder (score 0.807 vs S5)",
+        "evidence_refs": [
+          "M:MUM:K03",
+          "R:C-S1-MUM"
+        ]
+      },
+      {
+        "id": "lead-s1-mum-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift Soap generic share to efficient S1 holder (score 0.932 vs S3)",
+        "evidence_refs": [
+          "M:MUM:K04",
+          "R:C-S1-MUM"
+        ]
+      },
+      {
+        "id": "yield-s2-del-k01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back S2 Body Wash to let S4 lead",
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S2-DEL"
+        ]
+      },
+      {
+        "id": "yield-s3-del-k09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back S3 Soap competition to let S1 lead",
+        "evidence_refs": [
+          "M:DEL:K09",
+          "R:C-S3-DEL"
+        ]
+      },
+      {
+        "id": "raise-s4-blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Increase share on Shower Gel generic with high mroas_up20 (6.78) for scaling SKU",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "M:BLR:K05"
+        ]
+      },
+      {
+        "id": "raise-s4-blr-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Expand efficient generic spend in scalable Shower Gel portfolio",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ]
+      },
+      {
+        "id": "cut-s5-brand",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S5",
+          "keyword_type": "brand"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Prune low-iota Kids Soap brand clicks to preserve allowance for efficient SKUs",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Concentrates spend correction on contested market leader swaps and high-efficiency generic cells while strictly respecting the \u20b9300 daily allowance. Prunes low-incrementality Kids Soap brand bids and avoids budget raises on campaigns with recent run-outs to maintain portfolio direct ROAS above floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11439,
+    "tokens_out": 7332,
+    "cost_usd": 0.0012963299999999998,
+    "wall_clock_s": 77.17426916599999
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "CM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Assign slot-1 ownership to highest-incremental Soap SKU (S1) in Delhi brand search."
+      },
+      {
+        "id": "CM-BLR-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct ownership gap; S1 leads incremental revenue over S3 in BLR brand queries."
+      },
+      {
+        "id": "CM-BLR-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect Soap generic demand to optimal SKU S1 in Bangalore."
+      },
+      {
+        "id": "CM-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Award Shower Gel dominance in high-intent generic basket in Bangalore."
+      },
+      {
+        "id": "CM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S1 leadership in DEL brand search despite narrow margin."
+      },
+      {
+        "id": "CM-DEL-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture DEL generic market share with superior ROI alignment to S1."
+      },
+      {
+        "id": "CM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure S1 lead in MUM brand search following marginal gap analysis."
+      },
+      {
+        "id": "CM-MUM-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Optimize MUM generic allocation toward S1 incrementality."
+      },
+      {
+        "id": "CM-PUN-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer competition keyword leadership to efficient Body Wash SKU in Pune."
+      },
+      {
+        "id": "BR-BUD-S2",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S2"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Unblock constrained budget for consistently run-out funds (7/7 days)."
+      },
+      {
+        "id": "BR-BUD-S4",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S4"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand capital for high-ROAS Shower Gel funds exhausting daily limits."
+      },
+      {
+        "id": "BR-BID-S2",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase competitive positioning for efficient Body Wash portfolio."
+      },
+      {
+        "id": "BR-BID-S4",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on top-tier Shower Gel incrementality across cities."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "S1",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Prioritize market realignment to maximize incrementality (iroas) by correcting wrong holders in key cities. Support efficient funds (S2, S4) with budget increases to prevent run-outs."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23894,
+    "tokens_out": 15637,
+    "cost_usd": 0.0027496300000000003,
+    "wall_clock_s": 147.078992584
+  }
+}

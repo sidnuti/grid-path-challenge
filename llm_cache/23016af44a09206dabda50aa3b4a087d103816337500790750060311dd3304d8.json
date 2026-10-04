@@ -1,0 +1,213 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-S3-BUDGET-CUT",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL,C-S3-BLR,C-S3-MUM,C-S3-HYD,C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-BLR",
+          "R:C-S3-MUM",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Free substantial daily allowance and lift portfolio ROAS by shedding weak, non-scaling soap inventory."
+      },
+      {
+        "id": "INT-S5-BUDGET-CUT",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL,C-S5-BLR,C-S5-MUM,C-S5-HYD,C-S5-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-BLR",
+          "R:C-S5-MUM",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Preserve incrementality budget by reducing highly cannibalized kids soap exposure."
+      },
+      {
+        "id": "INT-BLR-K01-LEAD-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer slot-1 dominance from S4 to S1, aligning inventory with highest incremental revenue per impression."
+      },
+      {
+        "id": "INT-BLR-K01-YIELD-S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S4 share to prevent internal bidding wars and improve cross-category efficiency."
+      },
+      {
+        "id": "INT-DEL-K02-LEAD-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-value brand searches in Delhi with S1 instead of weaker S3 placement."
+      },
+      {
+        "id": "INT-DEL-K02-YIELD-S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce S3 visibility in Delhi brand term to protect margin and redirect clicks to S1."
+      },
+      {
+        "id": "RAISE-S4-DEL-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05,K06"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incrementally expand shower gel generic footprint in Delhi on verified efficient cells."
+      },
+      {
+        "id": "RAISE-S4-MUM-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05,K06"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure additional shower gel volume in Mumbai where iROAS exceeds 4.4."
+      },
+      {
+        "id": "RAISE-S2-BLR-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05,K06"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage Body Wash scale role in Bangalore to capture efficient generic demand."
+      },
+      {
+        "id": "RAISE-S1-HYD-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K03,K04"
+        },
+        "size": "small",
+        "target_slot": null,
+        "evidence_refs": [
+          "R:C-S1-HYD",
+          "C:C-S1-HYD/K03",
+          "C:C-S1-HYD/K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Grow Soap share in Hyderabad via generic keywords aligned with fundable, efficient profile."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "scale",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Budget reallocation shifts funds from consistently weak S3/S5 buckets to high-iROAS S4/S2/S1 scales. Contested market corrections align slot-1 ownership with highest incremental revenue skus. Small bid lifts on cleared generic cells capture upside without violating daily spend allowances."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11141,
+    "tokens_out": 9744,
+    "cost_usd": 0.00160095,
+    "wall_clock_s": 87.21718116599999
+  }
+}

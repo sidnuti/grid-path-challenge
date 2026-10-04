@@ -1,0 +1,236 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "b-c-s4-del-small",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reallocate freed budget from trimmed campaigns to highest-incrementality Shower Gel campaign. Meets \u22652 run-out day requirement. Stays within \u20b9781 daily allowance."
+      },
+      {
+        "id": "c-c-s5-del-small",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from weak Kids Soap campaign (iroas 1.31, held position)."
+      },
+      {
+        "id": "c-c-s3-mum-small",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from trimming Soap campaign (iroas 1.44, weak direct ROAS displacement)."
+      },
+      {
+        "id": "lm-hyd-k01-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong-holder market: S4 Shower Gel captures slot 1 over S2 Body Wash, leveraging higher incremental score (1.806 vs 0.675). OSA 0.88 satisfies supply constraint."
+      },
+      {
+        "id": "lm-pun-k01-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong-holder market: S4 Shower Gel leads S1 Soap on generic brand term. OSA 0.78 clears supply gate. Gap 0.34 warrants shift."
+      },
+      {
+        "id": "lm-pun-k05-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong-holder market: S4 Shower Gel leads S2 Body Wash on generic. High incremental value justifies slot shift."
+      },
+      {
+        "id": "lm-mum-k03-s1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong-holder market: S1 Soap leads S5 Kids Soap on generic. S1 incremental score 0.929 vs 0.257. OSA 0.91 supports bid."
+      },
+      {
+        "id": "rb-s4-hyd-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale efficient Shower Gel Hyderabad campaign (iroas 6.63, role: scale). Raises on CLEARS generic cells to capture incremental demand without violating MISSES guardrails."
+      },
+      {
+        "id": "rb-s4-mum-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale efficient Shower Gel Mumbai campaign (iroas 5.22, role: scale). Targets CLEARS generic keywords."
+      },
+      {
+        "id": "rb-s2-hyd-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05",
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash Hyderabad campaign (iroas 2.54, role: scale). Expands share on profitable generic terms."
+      },
+      {
+        "id": "rb-s1-hyd-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD",
+          "C:C-S1-HYD/K03",
+          "C:C-S1-HYD/K07"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient Soap Hyderabad campaign (iroas 2.24, role: scale). Fills bid headroom on clear generic cells."
+      },
+      {
+        "id": "rb-s4-pun-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Shower Gel Pune campaign (iroas 7.11, role: scale). OSA 0.78 clears 60% threshold."
+      },
+      {
+        "id": "rb-s2-pun-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient Body Wash Pune campaign (iroas 2.63, role: scale). Increases bid on clear generic keywords."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "S5",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Budget shifts prioritize high-iROAS Shower Gel (S4) campaigns while cutting low-efficiency Kids Soap (S5) and weak Soap (S3) exposure. Contestated markets with wrong holders are corrected via lead_market to align slot 1 with highest incremental revenue SKUs, respecting OSA >60% gates. MISSES verdict cells are excluded from bid raises to comply with guardrails."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11314,
+    "tokens_out": 10754,
+    "cost_usd": 0.00173744,
+    "wall_clock_s": 93.88131116699998
+  }
+}

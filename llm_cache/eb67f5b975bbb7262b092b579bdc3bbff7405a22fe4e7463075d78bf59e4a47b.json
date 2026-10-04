@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.8,
+    "rationale": "While the mechanical scores are near-tied, C-S3-PUN commands a dominant 92% top slot share compared to 41% for C-S1-PUN, indicating superior market control and stability. This clear positional advantage overrides the marginal mechanical difference, making it the stronger strategic leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1568,
+    "cost_usd": 0.02457,
+    "wall_clock_s": 17.744903000000022
+  }
+}

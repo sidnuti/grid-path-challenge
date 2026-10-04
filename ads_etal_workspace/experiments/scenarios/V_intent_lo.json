@@ -1,0 +1,93 @@
+{
+  "name": "V_intent_lo",
+  "note": "experiments variant of dev: keyword intent x0.8",
+  "keywords": {
+    "K01": {
+      "intent": 1.92,
+      "incrementality": 0.15
+    },
+    "K02": {
+      "intent": 2.08,
+      "incrementality": 0.18
+    },
+    "K03": {
+      "intent": 0.72,
+      "incrementality": 0.55
+    },
+    "K04": {
+      "intent": 0.8,
+      "incrementality": 0.55
+    },
+    "K05": {
+      "intent": 0.8,
+      "incrementality": 0.6
+    },
+    "K06": {
+      "intent": 0.84,
+      "incrementality": 0.6
+    },
+    "K07": {
+      "intent": 0.92,
+      "incrementality": 0.5
+    },
+    "K08": {
+      "intent": 0.96,
+      "incrementality": 0.7
+    },
+    "K09": {
+      "intent": 0.4,
+      "incrementality": 0.85
+    },
+    "K10": {
+      "intent": 0.36,
+      "incrementality": 0.85
+    }
+  },
+  "appeal": {
+    "S1": 1.0,
+    "S2": 0.95,
+    "S3": 1.0,
+    "S4": 0.9,
+    "S5": 1.1
+  },
+  "organic_damp": {
+    "max_organic_rank": 3,
+    "factor": 0.6
+  },
+  "auction_sigma": 0.3,
+  "noise": {
+    "searches_sigma": 0.1,
+    "price_sigma": 0.08,
+    "organic_sigma": 0.06,
+    "weekend_lift": 1.12
+  },
+  "shocks": [
+    {
+      "kind": "osa",
+      "sku_id": "S2",
+      "city_id": "HYD",
+      "from_run": 3,
+      "to_run": 3,
+      "osa": 0.42
+    },
+    {
+      "kind": "price",
+      "city_id": "MUM",
+      "keyword_ids": [
+        "K05",
+        "K06"
+      ],
+      "from_run": 4,
+      "mult": 1.35
+    },
+    {
+      "kind": "demand",
+      "keyword_ids": [
+        "K03",
+        "K04"
+      ],
+      "from_run": 5,
+      "mult": 1.15
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-BUDGET-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Restore capacity for high-iROAS fund SKU; ran out 7/7 days"
+      },
+      {
+        "id": "INT-BUDGET-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Modest funding bump for efficient delivery channel within daily allowance"
+      },
+      {
+        "id": "INT-BID-S2-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06",
+          "M:BLR:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume in tight generic contest (slot1=0.64)"
+      },
+      {
+        "id": "INT-BID-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Drive high predicted revenue lift (mroas_up20=12.23) via medium bid bump"
+      },
+      {
+        "id": "INT-BID-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Improve slot position on efficient generic term (iota=0.66)"
+      },
+      {
+        "id": "INT-BID-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift ownership to higher slot on efficient generic term (slot1=0.49)"
+      },
+      {
+        "id": "INT-LEAD-S2-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assign top slot to best incremental revenue SKU"
+      },
+      {
+        "id": "INT-LEAD-S2-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Consolidate leadership on highly efficient generic term"
+      },
+      {
+        "id": "INT-LEAD-S2-PUN-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure top position on competitor search"
+      },
+      {
+        "id": "INT-LEAD-S2-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Align market ownership with highest incremental performer"
+      },
+      {
+        "id": "INT-LEAD-S2-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reallocate top slot to Body Wash for higher ROI"
+      },
+      {
+        "id": "INT-LEAD-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Optimize slot allocation for stronger category unit"
+      },
+      {
+        "id": "INT-LEAD-S2-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Resolve near-tie contest favoring S2"
+      }
+    ],
+    "stance": [],
+    "notes": "Fixed rejected bids by targeting under-saturated generic cells (K06/K05) and pivoted contest leadership to S2 where incremental scores are higher. Budgets raised for depleted funds stay within daily allowance; all OSA checks pass (>0.85)."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11212,
+    "tokens_out": 9821,
+    "cost_usd": 0.0016130900000000002,
+    "wall_clock_s": 91.746955458
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds budget constraint for efficient delivery; budget ran out 7d."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlocks spend for high-ROAS Shower Gel fund; ran out 4d."
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Captures incremental competition traffic (iota=1.00); scale role."
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverages high predicted mroas_up20 (6.61); scale role."
+      },
+      {
+        "id": "INT-5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secures fully incremental competition bids (iota=1.00); scale role."
+      },
+      {
+        "id": "INT-6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Corrects wrong holder; S4 (best inc rev) takes slot 1 from inefficient S2."
+      },
+      {
+        "id": "INT-7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shifts competition traffic to higher iroas S1 from low-ROAS S3."
+      },
+      {
+        "id": "INT-8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Takes top brand share from S2 in HYD; S4 has superior score (1.853 vs 0.656)."
+      },
+      {
+        "id": "INT-9",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Freezes weak trim portfolio to protect portfolio direct ROAS floor."
+      },
+      {
+        "id": "INT-10",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Freezes weak trim portfolio to protect portfolio direct ROAS floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "all",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "all",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "all",
+        "sku_role": "S5",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Focused on funding efficient 'fund' campaigns and activating bid room on 'scale' cells with verified incrementality. Corrected three wrong-holder contested markets to push volume to highest incremental SKUs. Held weak trim campaigns to safeguard the 4.63 direct ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11239,
+    "tokens_out": 9442,
+    "cost_usd": 0.00156463,
+    "wall_clock_s": 84.84064062499999
+  }
+}

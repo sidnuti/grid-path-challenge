@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.62,
+    "rationale": "Default to the mechanical pick: C-S1-BLR leads on leader_score (0.7188 vs 0.6768), a ~6% gap that is non-trivial but within noise given the near-tie warning. The only contrary evidence is slot1_share_7d (0.82 vs 0.60), but slot dominance reflects current placement intensity rather than conversion value or incrementality, which are already embedded in leader_score. S3's high slot1 share could even indicate saturated visibility, so it does not clearly overturn the mechanical leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 647,
+    "cost_usd": 0.00093418,
+    "wall_clock_s": 6.577659833000098
+  }
+}

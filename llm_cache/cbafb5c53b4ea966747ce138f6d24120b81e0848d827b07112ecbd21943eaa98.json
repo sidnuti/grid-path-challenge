@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.5,
+    "rationale": "Realized dROAS (1.975) falls below the 2.22 target, indicating margin pressure. Combined with low historical order volume (23 over 28 days), signal stability is weak. Dampening the proposed raise mitigates further profitability erosion while preserving partial upward mobility."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 461,
+    "tokens_out": 2224,
+    "cost_usd": 0.034743,
+    "wall_clock_s": 25.667182749999938
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.6,
+    "rationale": "Top two scores are a near-tie (0.5377 vs 0.5299), so default to the mechanical pick C-S3-HYD. C-S1-HYD's higher slot1_share_7d (0.89 vs 0.67) shows positional dominance but is not clear evidence it should lead: already winning slot 1 most of the time implies lower headroom and is consistent with the incrementality component that pushed C-S3's score slightly ahead. C-S5-HYD (0.2813) is well behind."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 364,
+    "tokens_out": 1374,
+    "cost_usd": 0.0018521800000000001,
+    "wall_clock_s": 12.205976625000005
+  }
+}

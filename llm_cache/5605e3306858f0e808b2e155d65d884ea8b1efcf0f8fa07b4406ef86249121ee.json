@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.7,
+    "rationale": "While C-S3-PUN holds a marginally higher leader_score, C-S1-PUN shows substantially greater market dominance with a slot1_share_7d of 0.85 versus 0.61. This significant visibility advantage compensates for the near-tie in the noisy mechanical metric, making C-S1-PUN the stronger practical leader for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1681,
+    "cost_usd": 0.026265,
+    "wall_clock_s": 18.481562625000038
+  }
+}

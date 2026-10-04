@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.72,
+    "rationale": "Verdict CLEARS with shrunk dROAS 4.22 vs goal 3.15 (~34% headroom) on 15 orders in 28 days \u2014 adequate evidence for tier B and the shrinkage already tempers the estimate. The +20% proposed raise is within a normal step; take it in full."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 447,
+    "tokens_out": 477,
+    "cost_usd": 0.00076164,
+    "wall_clock_s": 5.477092625000068
+  }
+}

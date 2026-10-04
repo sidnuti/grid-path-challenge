@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.52,
+    "rationale": "Top candidates C-S2-HYD and C-S4-HYD show a near-tie on the mechanical leader_score (1.929 vs 1.886, ~2.2% gap). Per instructions, the mechanical preference is maintained. While C-S4-HYD demonstrates substantially higher slot1_share_7d (0.71 vs 0.38), indicating stronger positional dominance, the marginal score advantage and explicit directive to favor the mechanical pick in noisy ties lead to selecting C-S2-HYD as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 2051,
+    "cost_usd": 0.032046,
+    "wall_clock_s": 22.052234250000083
+  }
+}

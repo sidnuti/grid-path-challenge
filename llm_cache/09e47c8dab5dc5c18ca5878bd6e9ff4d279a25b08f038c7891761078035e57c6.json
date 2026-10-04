@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.55,
+    "rationale": "Leader scores are nearly tied (0.8497 vs 0.8292), differing by only ~2.4%. While C-S3-BLR shows a notably higher slot1 share (0.83 vs 0.60), suggesting stronger real-world visibility, the mechanical score narrowly favors C-S1-BLR. Per instructions to prefer the mechanical pick in near-ties unless evidence overwhelmingly favors the alternative, C-S1-BLR is selected."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2129,
+    "cost_usd": 0.032985,
+    "wall_clock_s": 21.76522449999993
+  }
+}

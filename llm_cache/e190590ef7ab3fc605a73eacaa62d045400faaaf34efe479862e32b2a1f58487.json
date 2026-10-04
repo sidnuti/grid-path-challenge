@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.9,
+    "rationale": "The mechanical pick C-S1-BLR holds a higher base score (0.4211 vs 0.3853) and is decisively reinforced by its dominant 7-day top slot share (0.90 vs 0.46). This strong positional advantage indicates superior ad relevance and stability, clearly favoring C-S1-BLR as the market leader despite the narrow score differential."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1397,
+    "cost_usd": 0.022005,
+    "wall_clock_s": 14.914340000000038
+  }
+}

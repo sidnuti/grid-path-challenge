@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.68,
+    "rationale": "Leader scores are a near-tie (0.7512 vs 0.7636), well within noise. The only distinguishing evidence, slot1_share_7d, clearly favours C-S1-HYD (0.85 vs 0.56): it is the established slot-1 incumbent, so protecting its bid preserves the market position, while C-S3-HYD holds rather than raises, avoiding a self-defeating bidding war."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 1066,
+    "cost_usd": 0.00145867,
+    "wall_clock_s": 8.822783208999994
+  }
+}

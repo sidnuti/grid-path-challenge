@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.85,
+    "rationale": "C-S3-HYD has the highest leader_score (0.6547 vs 0.6015) and the gap is not a near-tie; its slot1_share_7d (0.84 vs 0.60) corroborates dominance, so no evidence overrides the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 363,
+    "tokens_out": 227,
+    "cost_usd": 0.00041806,
+    "wall_clock_s": 2.532423124999923
+  }
+}

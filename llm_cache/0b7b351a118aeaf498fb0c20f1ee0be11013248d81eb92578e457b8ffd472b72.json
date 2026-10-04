@@ -1,0 +1,93 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-RB-S2DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+~150 INR/day spend on high-incrementality competitor keyword (iroas 7.41, iota 1.00)"
+      },
+      {
+        "id": "INT-RB-S4PUN-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-PUN/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+~50 INR/day spend on top-tier competitor keyword (iroas 9.51, iota 0.95)"
+      },
+      {
+        "id": "INT-RB-S2DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "+~70 INR/day spend on efficient generic keyword (mroas_up20 7.39, iroas 3.55)"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "S2",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "S4",
+        "stance": "conquest"
+      }
+    ],
+    "notes": "Allocated the full 300 INR daily allowance to the highest incremental return cells: competitor keywords S2-DEL/K10 and S4-PUN/K10, plus efficient generic S2-DEL/K05. Targeted high-iota/iroas spend avoids brand keyword displacement. Stances establish lead-market hierarchy for contested SKUs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12122,
+    "tokens_out": 7987,
+    "cost_usd": 0.0014019699999999998,
+    "wall_clock_s": 69.29948504200001
+  }
+}

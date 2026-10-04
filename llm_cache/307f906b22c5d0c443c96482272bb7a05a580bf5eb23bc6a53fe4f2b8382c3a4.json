@@ -1,0 +1,80 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Scale incremental Shower Gel volume via highest-iota generic keywords across all cities.",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-MUM",
+          "R:C-S4-HYD",
+          "R:C-S4-BLR",
+          "R:C-S4-PUN"
+        ]
+      },
+      {
+        "id": "I2",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Capture 100% incremental competitor traffic where Shower Gel shows strongest iroas.",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-MUM",
+          "R:C-S4-HYD"
+        ]
+      },
+      {
+        "id": "I3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Release budget cap on top-performing Delhi campaign to absorb extra bid spend.",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ]
+      },
+      {
+        "id": "I4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Release budget cap for Mumbai campaign to match efficiency spikes.",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ]
+      }
+    ],
+    "notes": "Channel the full daily allowance into Shower Gel (S4) generic and competition keywords, which deliver perfect incrementality (iota=1.00) and market-leading iroas (up to 9.72). Budget raises unblock DEL/MUM caps that previously constrained volume, ensuring spend translates directly into incremental off-take while safely preserving portfolio ROAS margin.",
+    "stance": []
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12179,
+    "tokens_out": 5999,
+    "cost_usd": 0.00114524,
+    "wall_clock_s": 57.063897
+  }
+}

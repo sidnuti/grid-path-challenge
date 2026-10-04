@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-DEL",
+    "confidence": 0.8,
+    "rationale": "C-S4-DEL is the mechanical pick (0.6690 vs 0.6566) and the secondary evidence reinforces it: its 7-day slot1 share is 0.93 vs 0.45 for C-S2-DEL, indicating it already owns the top impression slot for this DEL/K10 market. No evidence favors the challenger, so protect C-S4-DEL as leader; the score margin is narrow, hence moderate-high rather than full confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 384,
+    "cost_usd": 0.0006050599999999999,
+    "wall_clock_s": 3.5419989160000114
+  }
+}

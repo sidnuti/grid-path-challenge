@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-MUM",
+    "confidence": 0.8,
+    "rationale": "C-S2-MUM has the highest mechanical score (1.6692), but C-S4-MUM is in a near-tie (1.5045) and holds a decisive 97% slot1_share_7d. This overwhelming position share provides clear evidence of structural market dominance and lower volatility, outweighing the marginal mechanical score difference and making C-S4 the more stable and effective leader for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2573,
+    "cost_usd": 0.039861,
+    "wall_clock_s": 26.311977249999984
+  }
+}

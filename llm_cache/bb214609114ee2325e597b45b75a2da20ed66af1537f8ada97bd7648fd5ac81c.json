@@ -1,0 +1,258 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase efficient fund spend, drive incremental soap volume."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture highest incremental competitor impressions (iota=1.00)."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Sustain hyderabad soap fund without blocking."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale body wash efficiently in blr."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale body wash efficiently in hyd."
+      },
+      {
+        "id": "INT-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back non-leading soap SKU in contested blr market."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Make kids soap lead contest with higher incremental score."
+      },
+      {
+        "id": "INT-08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield soap from kids soap leader in hyd contest."
+      },
+      {
+        "id": "INT-09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield branded soap in mumbai to better incremental holder."
+      },
+      {
+        "id": "INT-10",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K04"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-MUM/K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Stop spend on miss-target generic cell (droas<goal)."
+      },
+      {
+        "id": "INT-11",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-MUM/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Prune underperforming generic cell in hold campaign."
+      },
+      {
+        "id": "INT-12",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-MUM",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S5-MUM/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim miss-target brand cell to protect roas."
+      },
+      {
+        "id": "INT-13",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block budget/bid increases on trim campaign to preserve portfolio efficiency."
+      },
+      {
+        "id": "INT-14",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Top up budget for fund to prevent early run-outs."
+      },
+      {
+        "id": "INT-15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand scale budget into pun body wash generic demand."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Focus shifts from bleeding trim/hold cells to scaling verified funds and scales while correcting three misallocated contested markets. Portfolio ROAS is protected by pruning MISSES cells and capping C-S5-MUM activity."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11181,
+    "tokens_out": 9769,
+    "cost_usd": 0.0016054,
+    "wall_clock_s": 76.91040883400001
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Unblock cap on highly efficient fund campaign to capture remaining allowance-driven demand.",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "allowance_inr_day"
+        ]
+      },
+      {
+        "id": "int-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Scale shower gel spend in Hyderabad where fund status and iroas=5.51 justify additional investment.",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ]
+      },
+      {
+        "id": "int-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Lift body wash budget in Delhi to maximize efficient fund performance.",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ]
+      },
+      {
+        "id": "int-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Shift premium brand search share from low-incrementality Soap(S1) to scalable Shower Gel(S4).",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ]
+      },
+      {
+        "id": "int-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Take dominant generic position in Delhi against Body Wash(S2), leveraging higher incremental revenue per impression.",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ]
+      },
+      {
+        "id": "int-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Secure Pune brand searches for Shower Gel, displacing weaker Soap(S1) contender.",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ]
+      },
+      {
+        "id": "int-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Lead Hyderabad brand queries with S4 to consolidate market share and incremental volume.",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ]
+      },
+      {
+        "id": "int-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Reclaim competition traffic in Mumbai for Body Wash where S2 holds superior incremental score.",
+        "evidence_refs": [
+          "M:MUM:K10"
+        ]
+      },
+      {
+        "id": "int-09",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Free capital from trim-grade soap campaign bleeding efficiency; reallocate to fund/scale products.",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ]
+      },
+      {
+        "id": "int-10",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Reduce low-iroas soap spend in Hyderabad to protect portfolio ROAS floor.",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ]
+      },
+      {
+        "id": "int-11",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "expected_effect": "Drastically curtail kids soap budget given trim role and near-zero incrementality on brand/generic terms.",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "K:Kids Soap:brand"
+        ]
+      },
+      {
+        "id": "int-12",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5",
+          "keyword_type": "brand"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Block further bid/budget escalation on low-iota Kids Soap brand queries to prevent ROAS dilution.",
+        "evidence_refs": [
+          "K:Kids Soap:brand"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Redirect budget exclusively through fund campaigns that have consistently hit caps, ensuring compliance with run-out constraints. Aggressively contest high-value keyword slots to shift share toward scalable Shower Gel, while cutting low-incrementality trim SKUs to safeguard the 4.08 ROAS floor on the final run."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10896,
+    "tokens_out": 9296,
+    "cost_usd": 0.0015353600000000002,
+    "wall_clock_s": 92.24574000000007
+  }
+}

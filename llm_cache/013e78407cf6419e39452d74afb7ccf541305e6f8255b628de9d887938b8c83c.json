@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.05,
+    "confidence": 0.75,
+    "rationale": "Tier B cell with a healthy 21 orders/28d sample and a shrunk dROAS of 4.80 vs goal 3.15 (~52% headroom), so the mechanical CLEARS verdict is well supported. Even at the full +20% raise, implied dROAS (~4.0) stays comfortably above goal. The modest step size and moderate tier justify taking essentially the full raise with only a slight premium for the strong margin; avoiding >1.1 to respect tier-B volatility."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 449,
+    "tokens_out": 741,
+    "cost_usd": 0.0010923800000000002,
+    "wall_clock_s": 6.741362083000013
+  }
+}

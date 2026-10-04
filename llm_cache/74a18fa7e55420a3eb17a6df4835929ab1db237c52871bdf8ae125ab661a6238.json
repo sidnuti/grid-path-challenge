@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.75,
+    "rationale": "C-S1-PUN holds the higher mechanical leader_score (1.1939 vs 1.1395), aligning with the instruction to prefer the mechanical pick in near-ties. C-S3-PUN\u2019s higher slot1_share (0.95) indicates it already secures top visibility, reducing the need for aggressive bid protection. Prioritizing the more conversion-and-revenue-optimized C-S1-PUN better balances market share acquisition with efficient spend."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1656,
+    "cost_usd": 0.02589,
+    "wall_clock_s": 15.617655709000019
+  }
+}

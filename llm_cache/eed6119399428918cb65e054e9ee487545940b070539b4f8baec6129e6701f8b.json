@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.85,
+    "rationale": "C-S3-HYD holds the highest mechanical leader_score (0.6547) and the largest slot1_share_7d (0.84), clearly outperforming the other candidates and justifying its selection as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1105,
+    "cost_usd": 0.017706,
+    "wall_clock_s": 11.853964792000056
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "bgt-up-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Recover budget-runout volume; stabilize daily delivery for primary fund SKU."
+      },
+      {
+        "id": "bid-up-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL/",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture efficient generic traffic at 71% slot-1; boost ROAS margin."
+      },
+      {
+        "id": "bgt-up-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Address 4-day run-out streak; maintain fund status with minimal allowance consumption."
+      },
+      {
+        "id": "bid-up-S2-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL/",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Win high-incrementality (iota=1.00) competition queries at safe slot share."
+      },
+      {
+        "id": "yield-S4-MUM-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back incumbent to S2 which demonstrates superior incremental score (1.677 vs 0.671)."
+      },
+      {
+        "id": "yield-S5-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Release weak hold SKU to allow fund SKU S4 to contest brand query efficiently."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused allowance on two primary 'fund' SKUs with proven run-out frequency to recover baseline volume. Paired budget lifts with bid increases on cells safely below the 80% slot-cap and showing strong mROAS/incrementality. Yielded two misaligned contested markets to improve structural efficiency without immediate spend inflation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11453,
+    "tokens_out": 9686,
+    "cost_usd": 0.0016027699999999999,
+    "wall_clock_s": 82.05433333299993
+  }
+}

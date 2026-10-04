@@ -1,0 +1,169 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int_1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlock full daily cap for Hyderabad Soap fund; ran out budget all 7 days, iRoas 3.31."
+      },
+      {
+        "id": "int_2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund Hyderabad Shower Gel cap; ran out 2/7 days, high iRoas 5.59, clears goal."
+      },
+      {
+        "id": "int_3",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale Pune Body Wash aggressively; top portfolio iRoas (6.16), efficient bid headroom exists."
+      },
+      {
+        "id": "int_4",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale Hyderabad Body Wash; strong iRoas 4.32, fills allowance with high-return volume."
+      },
+      {
+        "id": "int_5",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale Bangalore Body Wash; iRoas 3.79, positive margin contribution."
+      },
+      {
+        "id": "int_6",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale Mumbai Body Wash; iRoas 3.33, uses remaining budget room efficiently."
+      },
+      {
+        "id": "int_7",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce overlap for Pune generic search; step back Kids Soap to allow dominant S1 Soap to lead slot."
+      },
+      {
+        "id": "int_8",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Eliminate inefficient internal competition in Pune; S1 holds superior incremental score over S3."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Deploy maximum allowable budget into HYD funds (C-S1, C-S4) to satisfy run-out constraints and drive high-margin volume. Scale bids across S2 Body Wash cities leveraging superior iRoas compared to other sub-categories. Resolve Pune contestation to shift impression share to the winning SKU, improving overall campaign efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12124,
+    "tokens_out": 6856,
+    "cost_usd": 0.001255,
+    "wall_clock_s": 64.60561487500001
+  }
+}

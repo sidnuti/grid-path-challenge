@@ -1,0 +1,217 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-CUT-S3-ALL-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "expected_effect": "Eliminate chronic ROAS drag from underperforming trim/hold SKUs, releasing ~\u20b9800/day headroom to protect portfolio floor."
+      },
+      {
+        "id": "INT-RAISE-S2-DEL-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "expected_effect": "Fund efficient fund role in DEL; ran out 7/7 days, iroas 2.66."
+      },
+      {
+        "id": "INT-RAISE-S2-BLR-BUDGET",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "expected_effect": "Fund scale role in BLR; iroas 2.78, bid headroom available."
+      },
+      {
+        "id": "INT-LEAD-S1-GEN-DEL",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04",
+          "keyword_type": "generic"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "expected_effect": "Route DEL generic impressions to S1 (score 0.745) over S3 to capture higher incremental revenue."
+      },
+      {
+        "id": "INT-LEAD-S1-GEN-BLR",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03",
+          "keyword_type": "generic"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "expected_effect": "Correct BLR generic wrong holder; S1 score 0.673 dominates S5."
+      },
+      {
+        "id": "INT-LEAD-S1-GEN-MUM",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04",
+          "keyword_type": "generic"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "expected_effect": "S1 leads MUM generic competition, displacing lower-IROAS S3."
+      },
+      {
+        "id": "INT-LEAD-S4-GEN-DEL",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "expected_effect": "S4 (score 1.636) leads DEL generic over S2 for maximum incremental lift."
+      },
+      {
+        "id": "INT-LEAD-S4-GEN-BLR",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "expected_effect": "S4 leads BLR generic; score 1.518 vs S2 1.261."
+      },
+      {
+        "id": "INT-LEAD-S4-BRAND-PUN",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01",
+          "keyword_type": "brand"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "S4 leads PUN brand search, capturing high-intent shoppers over S1."
+      },
+      {
+        "id": "INT-LEAD-S2-COMP-PUN",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "expected_effect": "S2 leads PUN competition keyword, beating S4 on incremental value."
+      },
+      {
+        "id": "INT-CUT-BID-S3-DEL-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K09",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S3-DEL/K09"
+        ],
+        "expected_effect": "Reduce bleed on high-spend MISSES competition cell with DRoAS 1.18."
+      },
+      {
+        "id": "INT-CUT-BID-S3-MUM-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K09",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S3-MUM/K09"
+        ],
+        "expected_effect": "Reduce bleed on high-spend MISSES competition cell with DRoAS 1.12."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "",
+        "sku_role": "any",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Portfolio ROAS safeguarded by cutting budget on chronically underperforming S3 (trim/hold) campaigns while funding efficient S2/S1 run-outs in DEL/BLR. Contested markets systematically corrected to route impressions to the highest-incrementality SKU per city/keyword, maximizing total off-take within the \u20b9300/day allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11079,
+    "tokens_out": 9383,
+    "cost_usd": 0.00155216,
+    "wall_clock_s": 77.18764374999999
+  }
+}

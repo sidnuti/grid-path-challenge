@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.95,
+    "confidence": 0.7,
+    "rationale": "Realised dROAS significantly exceeds goal (4.35 vs 3.15), validating the algorithm's upward direction. However, the absolute order volume is low (17 in 28 days), introducing short-term volatility despite the shrunk metric. A slight dampener (0.95x) preserves most of the proposed lift while limiting capital exposure during this sparse-data period, aligning with a conservative bias when evidence is mixed."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 2074,
+    "cost_usd": 0.032529,
+    "wall_clock_s": 20.681857665999985
+  }
+}

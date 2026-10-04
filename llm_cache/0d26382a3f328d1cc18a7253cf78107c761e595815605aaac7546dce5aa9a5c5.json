@@ -1,0 +1,274 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "lead_hyd_k05_s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfer market leadership to S4 Shower Gel where incremental score is highest."
+      },
+      {
+        "id": "yield_hyd_k05_s2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S2 Body Wash to allow S4 leadership."
+      },
+      {
+        "id": "lead_hyd_k10_s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift competitor search leadership to S4 Shower Gel."
+      },
+      {
+        "id": "yield_hyd_k10_s2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Yield S2 Body Wash on competitor terms."
+      },
+      {
+        "id": "lead_pun_k10_s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S4 Shower Gel as market leader in Pune competitor search."
+      },
+      {
+        "id": "yield_pun_k10_s2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Yield S2 Body Wash in Pune."
+      },
+      {
+        "id": "lead_hyd_k01_s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move brand search leadership to S3 Soap in Hyderabad."
+      },
+      {
+        "id": "yield_hyd_k01_s2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back S2 Body Wash brand search."
+      },
+      {
+        "id": "bid_up_s4_hyd_k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Shower Gel:generic",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bid on high-incremental generic term K06."
+      },
+      {
+        "id": "bid_up_s4_hyd_k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Shower Gel:generic",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Boost generic K05 bid to capture efficient volume."
+      },
+      {
+        "id": "bid_up_s4_hyd_k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Shower Gel:competition",
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise bid on competitor term K10 with perfect iota."
+      },
+      {
+        "id": "budget_up_s4_mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Top up budget for S4 Mumbai fund campaign to prevent stockouts."
+      },
+      {
+        "id": "budget_up_s3_hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Add budget to S3 Hyderabad fund campaign."
+      },
+      {
+        "id": "bid_up_s3_blr_k09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Soap:competition",
+          "C:C-S3-BLR/K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale competitor bidding in Bangalore where incrementality is highest."
+      },
+      {
+        "id": "bid_up_s1_del_k07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Soap:generic",
+          "C:C-S1-DEL/K07"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Raise bid on high-return generic term K07."
+      },
+      {
+        "id": "bid_up_s4_mum_k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bid on high-mroas generic K06 in Mumbai."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Realized market leadership shifts to highest incremental SKUs in Hyderabad and Pune. Allocated allowance towards high-iota competitor bids and high-mroas generic terms in funded campaigns to maximize off-take safely."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25573,
+    "tokens_out": 23105,
+    "cost_usd": 0.00377084,
+    "wall_clock_s": 182.049331833
+  }
+}

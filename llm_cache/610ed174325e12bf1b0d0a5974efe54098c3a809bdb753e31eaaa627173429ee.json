@@ -1,0 +1,155 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BUDGET_SCALE_S1_HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Funds efficient scale role with incremental capacity; fits within allowance."
+      },
+      {
+        "id": "BUDGET_CUT_HOLD_S3_BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Frees budget from hold role that consistently ran out of funds."
+      },
+      {
+        "id": "BUDGET_CUT_HOLD_S5_DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL/"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Conserves budget from weak hold/trim role with low iroas."
+      },
+      {
+        "id": "BID_RAISE_S1_HYD_K04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD/",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Captures incremental volume on clearing cell with high iota and bid headroom."
+      },
+      {
+        "id": "BID_RAISE_S4_HYD_K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD/",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Drives incremental shower gel sales via competitor targeting with full iota."
+      },
+      {
+        "id": "LEAD_S4_DEL_K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Corrects wrong holder; shifts share to higher-incrementality S4."
+      },
+      {
+        "id": "LEAD_S1_BLR_K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Wins contested generic term; S1 holds better incremental position than S3."
+      },
+      {
+        "id": "LEAD_S1_DEL_K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Steps over wrong holder S3 near tie; secures incremental soap share."
+      },
+      {
+        "id": "LEAD_S1_MUM_K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Displaces S5 holder; aligns spend with higher-value S1 brand strategy."
+      },
+      {
+        "id": "HOLD_ANOMALOUS_S1_MUM_K03",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-MUM/",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "A:C-S1-MUM/K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stops wasteful bidding on zero-availability cell caused by prior action; saves budget for healthy cells."
+      }
+    ],
+    "notes": "Prioritized scale role funding through targeted budget reallocation from hold/trim portfolios. Corrected four misplaced market leaders to boost true incremental revenue. Paused zero-OSA anomaly to prevent wasted spend and comply with guardrails. All changes stay within the \u20b9300 daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11538,
+    "tokens_out": 8223,
+    "cost_usd": 0.0014151300000000001,
+    "wall_clock_s": 69.085504584
+  }
+}

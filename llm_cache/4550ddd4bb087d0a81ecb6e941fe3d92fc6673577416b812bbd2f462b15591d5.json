@@ -1,0 +1,131 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-fund-c1-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restore daily ad capacity; iROAS 1.94 supports incremental volume without breaching ROAS floor."
+      },
+      {
+        "id": "budget-fund-c1-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Prevent daily stock-outs in Punjab; preserves brand equity and incremental sales."
+      },
+      {
+        "id": "bid-scale-c2-del-k01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Expand win rate on brand cell with predicted mROAS uplift of 30.7x; captures high-incremental demand."
+      },
+      {
+        "id": "budget-cut-c1-hyd",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital from trim-tier Hyderabad campaign with sub-median iROAS (1.69)."
+      },
+      {
+        "id": "budget-cut-c3-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift spend away from underperforming trim tier toward higher-yield scale opportunities."
+      },
+      {
+        "id": "budget-cut-c5-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce portfolio drag from hold-tier Kids Soap with low incremental return (iroas 1.38)."
+      },
+      {
+        "id": "budget-cut-c5-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Optimize efficiency by trimming low-iROAS exposure in Bangalore kids category."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Capital reallocated from low-iROAS trim/hold campaigns to fund-and-scale opportunities with validated incremental uplift. Bid expansion restricted to cleared cells with explicit mROAS confirmation to safeguard direct ROAS floor above margin threshold."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11340,
+    "tokens_out": 6949,
+    "cost_usd": 0.0012435699999999998,
+    "wall_clock_s": 60.23960308400001
+  }
+}

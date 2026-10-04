@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.8,
+    "rationale": "Strong reach z-score (5.0) with flat CPM and no own-action confound indicates a genuine external demand or inventory surge, not a pricing shift or internal bidding artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1506,
+    "cost_usd": 0.02391,
+    "wall_clock_s": 14.823511292000148
+  }
+}

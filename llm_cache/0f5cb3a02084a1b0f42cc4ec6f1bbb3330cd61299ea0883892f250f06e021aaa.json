@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical leader C-S1-HYD holds a slight edge in leader_score and decisively leads in slot1_share_7d (0.91 vs 0.60). With no contradictory signals and strong secondary metric support, the mechanical pick is retained with moderate-high confidence despite the near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1084,
+    "cost_usd": 0.017316,
+    "wall_clock_s": 10.673663749999946
+  }
+}

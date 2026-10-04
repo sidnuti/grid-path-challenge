@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.85,
+    "rationale": "While the mechanical scores for S1 and S3 are near-ties (0.6057 vs 0.6162), C-S3-PUN holds a substantially higher slot1_share_7d (0.91 vs 0.40), indicating stronger bid competitiveness and position stability. This additional signal validates the mechanical preference for C-S3-PUN over S1."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1539,
+    "cost_usd": 0.024207,
+    "wall_clock_s": 14.103624874999994
+  }
+}

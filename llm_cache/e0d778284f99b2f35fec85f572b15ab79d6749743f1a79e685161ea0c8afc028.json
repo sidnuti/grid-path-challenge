@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.7,
+    "rationale": "Tier B evidence with 20 orders in 28 days gives a moderately reliable read, and the shrunk realised dROAS (4.70) clears the goal (3.15) by ~49%, indicating comfortable headroom for the +20% raise. Verdict is CLEARS with no volatility red flags, so take the full proposed raise; confidence held below top tier given only moderate order volume and single-cell scope."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 446,
+    "tokens_out": 659,
+    "cost_usd": 0.00098877,
+    "wall_clock_s": 6.474803207999912
+  }
+}

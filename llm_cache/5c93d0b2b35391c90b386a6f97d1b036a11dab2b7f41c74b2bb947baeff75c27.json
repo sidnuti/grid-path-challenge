@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "Mechanical scores are nearly tied (1.5629 vs 1.5556), but C-S1-HYD holds a vastly higher slot1_share_7d (0.96 vs 0.37), indicating substantially stronger real-world auction dominance and top-slot visibility. Given the marginal score difference, this clear positional advantage clearly favors C-S1-HYD as the true market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 1343,
+    "cost_usd": 0.021426,
+    "wall_clock_s": 16.09977595800001
+  }
+}

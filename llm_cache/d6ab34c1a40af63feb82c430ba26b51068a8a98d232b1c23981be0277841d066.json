@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.6,
+    "rationale": "Mechanical scoring identifies C-S3-PUN as the leader with a slightly higher score (0.1820 vs 0.1645). Adhering to the directive to prefer the mechanical pick in near-ties absent clear contradictory evidence, C-S3-PUN is selected to protect bid efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2022,
+    "cost_usd": 0.03138,
+    "wall_clock_s": 20.48616633300003
+  }
+}

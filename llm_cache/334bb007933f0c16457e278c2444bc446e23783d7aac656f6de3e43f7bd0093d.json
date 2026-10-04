@@ -1,0 +1,354 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-C-S1-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "city_id": "BLR",
+          "sub_category": "Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unblock efficient fund campaign that ran out 4/7 days, preserving share in high-value generic segments."
+      },
+      {
+        "id": "RB-C-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "city_id": "DEL",
+          "sub_category": "Body Wash"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Funds run-out cap for highly efficient Body Wash fund; supports incremental K05/K06 expansion."
+      },
+      {
+        "id": "RB-C-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "city_id": "HYD",
+          "sub_category": "Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieves budget cap on 7-run-out fund campaign; maintains defensive generic position."
+      },
+      {
+        "id": "BID-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05",
+          "city_id": "DEL",
+          "sku_id": "S4",
+          "sub_category": "Shower Gel"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Targeted bid lift on high-incrementality generic cell (mroas 8.35, iota 0.68) with 64% slot-1 share."
+      },
+      {
+        "id": "BID-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05",
+          "city_id": "MUM",
+          "sku_id": "S4",
+          "sub_category": "Shower Gel"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Drive incremental Shower Gel off-take on strong generic demand (mroas 9.25) below slot-cap threshold."
+      },
+      {
+        "id": "BID-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05",
+          "city_id": "BLR",
+          "sku_id": "S4",
+          "sub_category": "Shower Gel"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale efficient Shower Gel generic share capture (mroas 9.25) without breaching 80% slot limit."
+      },
+      {
+        "id": "BID-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05",
+          "city_id": "HYD",
+          "sku_id": "S2",
+          "sub_category": "Body Wash"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Modest lift on high-iota Body Wash generic cell (iota 0.99, mroas 4.92) to support scale posture."
+      },
+      {
+        "id": "BID-S4-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05",
+          "city_id": "PUN",
+          "sku_id": "S4",
+          "sub_category": "Shower Gel"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Test incremental capacity on Shower Gel generic with healthy OSA (0.78) and room under slot cap."
+      },
+      {
+        "id": "YM-S4-HYD-K05",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05",
+          "city_id": "HYD",
+          "sku_id": "S4",
+          "sub_category": "Shower Gel"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:HYD:K05",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back wrong-holder Shower Gel SKU to cede incremental share to more efficient Body Wash leader."
+      },
+      {
+        "id": "LM-S2-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05",
+          "city_id": "HYD",
+          "sku_id": "S2",
+          "sub_category": "Body Wash"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:HYD:K05",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Position top-incrementality Body Wash SKU as slot-1 holder in HYD K05, capturing displaced demand efficiently."
+      },
+      {
+        "id": "YM-S4-MUM-K05",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05",
+          "city_id": "MUM",
+          "sku_id": "S4",
+          "sub_category": "Shower Gel"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:MUM:K05",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield inefficient Shower Gel holder to maximize incremental conversion through Body Wash leader."
+      },
+      {
+        "id": "LM-S2-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05",
+          "city_id": "MUM",
+          "sku_id": "S2",
+          "sub_category": "Body Wash"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:MUM:K05",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure slot leadership for MUM K05 with superior incremental yield, protecting portfolio iROAS."
+      },
+      {
+        "id": "YM-S1-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K01",
+          "city_id": "BLR",
+          "sku_id": "S1",
+          "sub_category": "Soap"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:BLR:K01",
+          "C:C-S1-BLR/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce displacement-heavy Soap brand share in BLR K01 where incrementality (iota 0.23) is minimal."
+      },
+      {
+        "id": "YM-S1-MUM-K01",
+        "verb": "yield_market",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K01",
+          "city_id": "MUM",
+          "sku_id": "S1",
+          "sub_category": "Soap"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:MUM:K01",
+          "C:C-S1-MUM/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim low-iota Soap brand occupancy in MUM K01 to preserve direct ROAS floor."
+      },
+      {
+        "id": "CB-C-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "city_id": "BLR",
+          "sub_category": "Soap"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Defend portfolio ROAS by reducing spend on persistent trim segment with lowest iROAS (1.54)."
+      },
+      {
+        "id": "CB-C-S3-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "city_id": "HYD",
+          "sub_category": "Soap"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Conserve capital on underperforming Soap trim campaign (iroas 1.60) to offset scale bids elsewhere."
+      },
+      {
+        "id": "CB-C-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM",
+          "city_id": "MUM",
+          "sub_category": "Kids Soap"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lower bleed on trim Kids Soap campaign (iroas 1.90) while preserving core category coverage."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Budget increases confined strictly to fund campaigns running out daily. Market leadership shifts optimize incremental yield in contested Body Wash generic slots, while yields reduce low-iota Soap brand displacement."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25678,
+    "tokens_out": 16615,
+    "cost_usd": 0.00293029,
+    "wall_clock_s": 123.05351766699982
+  }
+}

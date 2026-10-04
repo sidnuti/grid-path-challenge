@@ -1,0 +1,35 @@
+sku x city FE + day FE {'brand': np.float64(-0.895), 'generic': np.float64(-0.487), 'competition': np.float64(-0.01), 'osa': np.float64(42.707)}
+sku x city FE + dow {'brand': np.float64(-0.891), 'generic': np.float64(-0.496), 'competition': np.float64(-0.025), 'osa': np.float64(41.576)}
+per SKU: {'S1': {'brand': np.float64(-1.08), 'generic': np.float64(-0.37), 'competition': np.float64(-0.25)}, 'S2': {'brand': np.float64(-0.65), 'generic': np.float64(-0.3), 'competition': np.float64(-0.06)}, 'S3': {'brand': np.float64(-0.86), 'generic': np.float64(-0.71), 'competition': np.float64(0.14)}, 'S4': {'brand': np.float64(-0.78), 'generic': np.float64(-0.52), 'competition': np.float64(-0.32)}, 'S5': {'brand': np.float64(-0.79), 'generic': np.float64(-0.43), 'competition': np.float64(0.0)}}
+                    first_week  weeks  max_pct
+city_id keyword_id                            
+DEL     K08                  6      4    108.0
+BLR     K08                  5      5     65.0
+DEL     K07                  6      4     64.0
+BLR     K07                  4      6     48.0
+MUM     K05                  5      5     42.0
+        K06                  5      5    -41.0
+BLR     K04                  8      2     40.0
+HYD     K10                  6      1    -39.0
+        K05                  4      5     33.0
+DEL     K04                  8      2     31.0
+BLR     K09                  8      1     26.0
+action_type         increase_cpm  reduce_cpm
+city_id keyword_id                          
+BLR     K03                    0          13
+        K04                    1           1
+MUM     K03                    1           6
+        K04                    0           2
+        K08                    0           1
+DEL     K03                    1           9
+        K04                    1           2
+CPM change, top: phase                   e      w   pct
+city_id keyword_id                    
+HYD     K05         280.1  252.8  10.8
+BLR     K03         264.7  291.2  -9.1
+        K01         197.2  215.7  -8.6
+        K02         199.0  215.9  -7.9
+MUM     K01         198.6  215.1  -7.7
+HYD     K01         177.6  191.0  -7.0
+DEL     K05         297.7  319.7  -6.9
+HYD     K06         307.1  288.1   6.6

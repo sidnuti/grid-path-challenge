@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.6,
+    "rationale": "Defaulting to the mechanical pick C-S1-BLR, which leads on leader_score (0.7936 vs 0.7713), a composite of conversion, ASP, and incrementality. The gap is modest (near-tie), and C-S3-BLR's higher slot1_share_7d (0.86 vs 0.70) offers some support for it, but that signal alone is not clear enough to override the mechanical leader selection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 547,
+    "cost_usd": 0.00080918,
+    "wall_clock_s": 6.014339834000111
+  }
+}

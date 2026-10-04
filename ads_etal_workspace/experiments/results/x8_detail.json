@@ -1,0 +1,5650 @@
+{
+  "worlds": [
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "vs_l0_pct": -0.18586351139555646,
+      "vs_baseline_pct": -0.08914674305080528,
+      "droas": 5.407,
+      "floor_met": true,
+      "margin": 0.8719999999999999,
+      "l0_margin": 0.36599999999999966,
+      "spend_vs_l0_pct": -9.096320276348601,
+      "ad_units_vs_l0_pct": -8.677153893522927,
+      "organic_vs_l0_pct": 1.5359706560829967,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 171438,
+      "tokens_out": 141427,
+      "usd": 0.02352865,
+      "llm_wall_s": 593.427,
+      "shipped": 155,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "vs_l0_pct": 0.14396810340757682,
+      "vs_baseline_pct": 0.27166938360965176,
+      "droas": 4.994,
+      "floor_met": true,
+      "margin": 0.9879999999999995,
+      "l0_margin": 0.5389999999999997,
+      "spend_vs_l0_pct": -8.713813101665814,
+      "ad_units_vs_l0_pct": -1.8855177496622022,
+      "organic_vs_l0_pct": 0.13331684052833026,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 198633,
+      "tokens_out": 163419,
+      "usd": 0.02720346,
+      "llm_wall_s": 1140.0629999999999,
+      "shipped": 186,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "vs_l0_pct": -0.13874430715780095,
+      "vs_baseline_pct": -0.03811878703847693,
+      "droas": 4.774,
+      "floor_met": true,
+      "margin": 0.6840000000000002,
+      "l0_margin": 0.41800000000000015,
+      "spend_vs_l0_pct": -4.697337667689016,
+      "ad_units_vs_l0_pct": -4.671241974762008,
+      "organic_vs_l0_pct": 0.6430684367720874,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 176505,
+      "tokens_out": 140200,
+      "usd": 0.02352115,
+      "llm_wall_s": 1196.369,
+      "shipped": 175,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "vs_l0_pct": -0.4283853860556297,
+      "vs_baseline_pct": -0.036562368150527824,
+      "droas": 5.379,
+      "floor_met": true,
+      "margin": 0.6579999999999995,
+      "l0_margin": 0.5359999999999996,
+      "spend_vs_l0_pct": -7.527846365550239,
+      "ad_units_vs_l0_pct": -4.402971552817537,
+      "organic_vs_l0_pct": 0.4060544112911124,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 200946,
+      "tokens_out": 169971,
+      "usd": 0.02812461,
+      "llm_wall_s": 1442.7510000000002,
+      "shipped": 183,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "vs_l0_pct": 0.12334473011492708,
+      "vs_baseline_pct": 0.35198117683929997,
+      "droas": 5.097,
+      "floor_met": true,
+      "margin": 0.6000000000000005,
+      "l0_margin": 0.24399999999999977,
+      "spend_vs_l0_pct": -2.89122211575622,
+      "ad_units_vs_l0_pct": -0.8013765978367782,
+      "organic_vs_l0_pct": 0.22358445865908738,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 176450,
+      "tokens_out": 137601,
+      "usd": 0.02318163,
+      "llm_wall_s": 1106.1100000000001,
+      "shipped": 154,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "vs_l0_pct": -0.06925451621612178,
+      "vs_baseline_pct": 0.38587873298980835,
+      "droas": 5.535,
+      "floor_met": true,
+      "margin": 0.7050000000000001,
+      "l0_margin": 0.4319999999999995,
+      "spend_vs_l0_pct": -5.525063057674984,
+      "ad_units_vs_l0_pct": -4.558225150164697,
+      "organic_vs_l0_pct": 0.8378277045539839,
+      "llm_calls": 12,
+      "defaults": 1,
+      "tokens_in": 159607,
+      "tokens_out": 138153,
+      "usd": 0.0227481,
+      "llm_wall_s": 1402.966,
+      "shipped": 155,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "vs_l0_pct": 0.11841618196886117,
+      "vs_baseline_pct": 0.21542778779506389,
+      "droas": 5.138,
+      "floor_met": true,
+      "margin": 0.6029999999999998,
+      "l0_margin": 0.36599999999999966,
+      "spend_vs_l0_pct": -1.343487094967022,
+      "ad_units_vs_l0_pct": -3.6220119800705386,
+      "organic_vs_l0_pct": 0.7966414969982738,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 171303,
+      "tokens_out": 141918,
+      "usd": 0.02358843,
+      "llm_wall_s": 625.858,
+      "shipped": 126,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "vs_l0_pct": 0.046008234394379066,
+      "vs_baseline_pct": 0.17358459842908847,
+      "droas": 4.664,
+      "floor_met": true,
+      "margin": 0.6579999999999995,
+      "l0_margin": 0.5389999999999997,
+      "spend_vs_l0_pct": -3.3359675680090684,
+      "ad_units_vs_l0_pct": -1.6275641813045083,
+      "organic_vs_l0_pct": 0.14018884261741693,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 172452,
+      "tokens_out": 144496,
+      "usd": 0.02395804,
+      "llm_wall_s": 1015.689,
+      "shipped": 141,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "vs_l0_pct": -0.8127670756834737,
+      "vs_baseline_pct": -0.712820736806008,
+      "droas": 4.576,
+      "floor_met": true,
+      "margin": 0.48599999999999977,
+      "l0_margin": 0.41800000000000015,
+      "spend_vs_l0_pct": -7.734177924778651,
+      "ad_units_vs_l0_pct": -7.64334735443879,
+      "organic_vs_l0_pct": 0.8331308858624986,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 174963,
+      "tokens_out": 146086,
+      "usd": 0.02424007,
+      "llm_wall_s": 1253.4060000000002,
+      "shipped": 120,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "vs_l0_pct": -0.4361057151041847,
+      "vs_baseline_pct": -0.04431307736956214,
+      "droas": 5.141,
+      "floor_met": true,
+      "margin": 0.41999999999999993,
+      "l0_margin": 0.5359999999999996,
+      "spend_vs_l0_pct": -3.9476820072175345,
+      "ad_units_vs_l0_pct": -3.847315334903667,
+      "organic_vs_l0_pct": 0.4788641677984762,
+      "llm_calls": 12,
+      "defaults": 1,
+      "tokens_in": 187200,
+      "tokens_out": 155399,
+      "usd": 0.02581787,
+      "llm_wall_s": 1301.6079999999997,
+      "shipped": 130,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "vs_l0_pct": -1.0035184429919908,
+      "vs_baseline_pct": -0.7774552422227687,
+      "droas": 5.107,
+      "floor_met": true,
+      "margin": 0.6100000000000003,
+      "l0_margin": 0.24399999999999977,
+      "spend_vs_l0_pct": -15.006527023546724,
+      "ad_units_vs_l0_pct": -13.284169124877089,
+      "organic_vs_l0_pct": 2.3765103056147874,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 175477,
+      "tokens_out": 142333,
+      "usd": 0.0237676,
+      "llm_wall_s": 1181.298,
+      "shipped": 145,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "vs_l0_pct": -0.42976586665877115,
+      "vs_baseline_pct": 0.023725438403654486,
+      "droas": 5.389,
+      "floor_met": true,
+      "margin": 0.5590000000000002,
+      "l0_margin": 0.4319999999999995,
+      "spend_vs_l0_pct": -8.425143112803536,
+      "ad_units_vs_l0_pct": -9.964154233675648,
+      "organic_vs_l0_pct": 1.818417789057758,
+      "llm_calls": 12,
+      "defaults": 0,
+      "tokens_in": 162326,
+      "tokens_out": 140511,
+      "usd": 0.02313621,
+      "llm_wall_s": 1164.3220000000001,
+      "shipped": 114,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 7,
+      "vs_l0_pct": 0.0,
+      "vs_baseline_pct": 0.09689686425908839,
+      "droas": 4.901,
+      "floor_met": true,
+      "margin": 0.36599999999999966,
+      "l0_margin": 0.36599999999999966,
+      "spend_vs_l0_pct": 0.0,
+      "ad_units_vs_l0_pct": 0.0,
+      "organic_vs_l0_pct": 0.0,
+      "llm_calls": 31,
+      "defaults": 0,
+      "tokens_in": 12101,
+      "tokens_out": 49272,
+      "usd": 0.00676839,
+      "llm_wall_s": 339.77199999999993,
+      "shipped": 59,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 11,
+      "vs_l0_pct": -0.0018433154319263956,
+      "vs_baseline_pct": 0.1256720294092295,
+      "droas": 4.546,
+      "floor_met": true,
+      "margin": 0.54,
+      "l0_margin": 0.5389999999999997,
+      "spend_vs_l0_pct": -0.007909634422420542,
+      "ad_units_vs_l0_pct": 0.01228350325512828,
+      "organic_vs_l0_pct": -0.005497601671267116,
+      "llm_calls": 31,
+      "defaults": 0,
+      "tokens_in": 11556,
+      "tokens_out": 41958,
+      "usd": 0.00580122,
+      "llm_wall_s": 295.38199999999995,
+      "shipped": 104,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 23,
+      "vs_l0_pct": 0.07563282217304401,
+      "vs_baseline_pct": 0.17647436010619355,
+      "droas": 4.502,
+      "floor_met": true,
+      "margin": 0.4119999999999999,
+      "l0_margin": 0.41800000000000015,
+      "spend_vs_l0_pct": 0.9793828101865687,
+      "ad_units_vs_l0_pct": 1.018375027673235,
+      "organic_vs_l0_pct": -0.15147834288409268,
+      "llm_calls": 64,
+      "defaults": 0,
+      "tokens_in": 24786,
+      "tokens_out": 101667,
+      "usd": 0.01396029,
+      "llm_wall_s": 1027.8439999999998,
+      "shipped": 94,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 42,
+      "vs_l0_pct": -0.00492243536328596,
+      "vs_baseline_pct": 0.3885669463138175,
+      "droas": 5.256,
+      "floor_met": true,
+      "margin": 0.5350000000000001,
+      "l0_margin": 0.5359999999999996,
+      "spend_vs_l0_pct": -0.011650295302623181,
+      "ad_units_vs_l0_pct": -0.012079482998128555,
+      "organic_vs_l0_pct": 0.0,
+      "llm_calls": 40,
+      "defaults": 0,
+      "tokens_in": 15818,
+      "tokens_out": 65415,
+      "usd": 0.008978490000000002,
+      "llm_wall_s": 654.8160000000003,
+      "shipped": 69,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 101,
+      "vs_l0_pct": 0.0,
+      "vs_baseline_pct": 0.22835478313341095,
+      "droas": 4.741,
+      "floor_met": true,
+      "margin": 0.24399999999999977,
+      "l0_margin": 0.24399999999999977,
+      "spend_vs_l0_pct": 0.0,
+      "ad_units_vs_l0_pct": 0.0,
+      "organic_vs_l0_pct": 0.0,
+      "llm_calls": 31,
+      "defaults": 0,
+      "tokens_in": 11871,
+      "tokens_out": 46005,
+      "usd": 0.006336780000000001,
+      "llm_wall_s": 462.71700000000004,
+      "shipped": 63,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 202,
+      "vs_l0_pct": 0.0,
+      "vs_baseline_pct": 0.4554486679775538,
+      "droas": 5.262,
+      "floor_met": true,
+      "margin": 0.4319999999999995,
+      "l0_margin": 0.4319999999999995,
+      "spend_vs_l0_pct": 0.0,
+      "ad_units_vs_l0_pct": 0.0,
+      "organic_vs_l0_pct": 0.0,
+      "llm_calls": 40,
+      "defaults": 0,
+      "tokens_in": 15376,
+      "tokens_out": 60848,
+      "usd": 0.00837152,
+      "llm_wall_s": 606.4080000000001,
+      "shipped": 58,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 1,
+      "seed": 7,
+      "vs_l0_pct": 0.0,
+      "vs_baseline_pct": 0.09689686425908839,
+      "droas": 4.901,
+      "floor_met": true,
+      "margin": 0.36599999999999966,
+      "l0_margin": 0.36599999999999966,
+      "spend_vs_l0_pct": 0.0,
+      "ad_units_vs_l0_pct": 0.0,
+      "organic_vs_l0_pct": 0.0,
+      "llm_calls": 31,
+      "defaults": 0,
+      "tokens_in": 12101,
+      "tokens_out": 49427,
+      "usd": 0.00678854,
+      "llm_wall_s": 339.0669999999999,
+      "shipped": 59,
+      "fallback_runs": 0
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 2,
+      "seed": 7,
+      "vs_l0_pct": 0.0,
+      "vs_baseline_pct": 0.09689686425908839,
+      "droas": 4.901,
+      "floor_met": true,
+      "margin": 0.36599999999999966,
+      "l0_margin": 0.36599999999999966,
+      "spend_vs_l0_pct": 0.0,
+      "ad_units_vs_l0_pct": 0.0,
+      "organic_vs_l0_pct": 0.0,
+      "llm_calls": 31,
+      "defaults": 0,
+      "tokens_in": 12101,
+      "tokens_out": 52432,
+      "usd": 0.007179189999999999,
+      "llm_wall_s": 367.84,
+      "shipped": 59,
+      "fallback_runs": 0
+    }
+  ],
+  "runs": [
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 23,
+      "repair_intents": 4,
+      "rejected": 10,
+      "from_intents": 21,
+      "l0_overridden": 4,
+      "l0_held": 6,
+      "allowance_used": 717.65,
+      "allowance_total": 809.04,
+      "shipped": 24,
+      "verbs": {
+        "lead_market": 12,
+        "hold": 10,
+        "raise_bid": 3
+      },
+      "actions": {
+        "increase_cpm": 5,
+        "reduce_cpm": 19
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7,
+        "G: already at slot  on >= % of impressions": 2,
+        "over allowance": 1
+      },
+      "notes": "Focused spend on S4 scale campaigns with highest iroas (>5.5) and positive reach trends, using target_slot 5 to bypass the 80% raise cap. Corrected HYD branded search wrong-holder to maximize incremental value while stay",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 20,
+      "first_plan_intents": 16,
+      "repair_intents": 10,
+      "rejected": 12,
+      "from_intents": 16,
+      "l0_overridden": 5,
+      "l0_held": 0,
+      "allowance_used": 1261.67,
+      "allowance_total": 1319.21,
+      "shipped": 25,
+      "verbs": {
+        "lead_market": 9,
+        "raise_budget": 2,
+        "cut_budget": 5,
+        "raise_bid": 3,
+        "hold": 1
+      },
+      "actions": {
+        "increase_cpm": 3,
+        "increase_budget": 1,
+        "reduce_cpm": 18,
+        "reduce_budget": 3
+      },
+      "top_rejections": {
+        "unknown campaign": 6,
+        "no predicted gain from this raise": 5,
+        "leader S cannot take slot": 1
+      },
+      "notes": "Prioritized scale role funding through targeted budget reallocation from hold/trim portfolios. Corrected four misplaced market leaders to boost true incremental revenue. Paused zero-OSA anomaly to prevent wasted spend an",
+      "stance": []
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 18,
+      "repair_intents": 10,
+      "rejected": 5,
+      "from_intents": 17,
+      "l0_overridden": 4,
+      "l0_held": 2,
+      "allowance_used": 1169.78,
+      "allowance_total": 1209.73,
+      "shipped": 27,
+      "verbs": {
+        "lead_market": 6,
+        "yield_market": 5,
+        "raise_bid": 6,
+        "cut_budget": 4,
+        "raise_budget": 2,
+        "hold": 2
+      },
+      "actions": {
+        "increase_cpm": 6,
+        "increase_budget": 1,
+        "reduce_cpm": 16,
+        "reduce_budget": 4
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4,
+        "over allowance": 1
+      },
+      "notes": "Focused on funding efficient 'fund' campaigns and activating bid room on 'scale' cells with verified incrementality. Corrected three wrong-holder contested markets to push volume to highest incremental SKUs. Held weak tr",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "S1",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S1",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "all",
+          "sku_role": "S2",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "all",
+          "sku_role": "S4",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "all",
+          "sku_role": "S5",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 19,
+      "first_plan_intents": 9,
+      "repair_intents": 10,
+      "rejected": 13,
+      "from_intents": 23,
+      "l0_overridden": 5,
+      "l0_held": 2,
+      "allowance_used": 1835.09,
+      "allowance_total": 2590.28,
+      "shipped": 30,
+      "verbs": {
+        "lead_market": 4,
+        "cut_bid": 2,
+        "raise_budget": 3,
+        "cut_budget": 3,
+        "hold": 2,
+        "raise_bid": 4,
+        "yield_market": 1
+      },
+      "actions": {
+        "increase_budget": 5,
+        "increase_cpm": 7,
+        "reduce_cpm": 16,
+        "reduce_budget": 2
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7,
+        "G: already at slot  on >= % of impressions": 5,
+        "no budget change possible": 1
+      },
+      "notes": "Removed previously rejected saturated-blr generic raise. Focused budget/headroom on validated scale roles (S2-DEL, S1-PUN, S2-PUN, S4-HYD) while cutting persistently weak Kids Soap spend to protect the 4.63 roas floor. E",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 18,
+      "repair_intents": 15,
+      "rejected": 7,
+      "from_intents": 20,
+      "l0_overridden": 7,
+      "l0_held": 0,
+      "allowance_used": 1484.94,
+      "allowance_total": 2156.93,
+      "shipped": 22,
+      "verbs": {
+        "lead_market": 6,
+        "yield_market": 5,
+        "raise_bid": 7,
+        "raise_budget": 4,
+        "cut_budget": 3
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "increase_budget": 4,
+        "reduce_cpm": 11,
+        "reduce_budget": 3
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "G: cell misses goal": 1
+      },
+      "notes": "Prioritized funding for fund SKUs running dry and targeted bid lifts on scale cells with proven mroas uplift. Removed previously rejected budget/bid actions on saturated slots and adjusted lead_market targets to exclude ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 19,
+      "first_plan_intents": 7,
+      "repair_intents": 12,
+      "rejected": 9,
+      "from_intents": 16,
+      "l0_overridden": 3,
+      "l0_held": 0,
+      "allowance_used": 2230.03,
+      "allowance_total": 14170.08,
+      "shipped": 27,
+      "verbs": {
+        "raise_budget": 7,
+        "raise_bid": 4,
+        "lead_market": 5,
+        "hold": 1,
+        "cut_budget": 2
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "increase_budget": 5,
+        "reduce_budget": 2,
+        "reduce_cpm": 16
+      },
+      "top_rejections": {
+        "G: ran out on fewer than  of the last  days": 5,
+        "no predicted gain from this raise": 4
+      },
+      "notes": "Revised plan drops previously rejected brand-lead intents in favor of targeted generic bid-ups and budget reallocations toward scale-tier SKUs. Contested markets on generic K05 shifted to S4 where incremental scores are ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 21,
+      "repair_intents": 6,
+      "rejected": 1,
+      "from_intents": 31,
+      "l0_overridden": 12,
+      "l0_held": 2,
+      "allowance_used": 2089.64,
+      "allowance_total": 3923.01,
+      "shipped": 44,
+      "verbs": {
+        "lead_market": 8,
+        "cut_bid": 4,
+        "cut_budget": 7,
+        "hold": 2,
+        "raise_budget": 1,
+        "raise_bid": 3
+      },
+      "actions": {
+        "increase_cpm": 9,
+        "increase_budget": 4,
+        "reduce_cpm": 25,
+        "reduce_budget": 6
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Shifted budget from low-incrementality Trim soap to high-iota Fund/Scale body wash and shower gel cells. Relieved chronic caps on efficient SKUs while using freed allowance to capture incremental volume. Contested market",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 20,
+      "repair_intents": 18,
+      "rejected": 4,
+      "from_intents": 20,
+      "l0_overridden": 7,
+      "l0_held": 0,
+      "allowance_used": 1365.71,
+      "allowance_total": 1415.26,
+      "shipped": 33,
+      "verbs": {
+        "lead_market": 2,
+        "yield_market": 8,
+        "raise_budget": 7,
+        "raise_bid": 8
+      },
+      "actions": {
+        "increase_cpm": 7,
+        "increase_budget": 3,
+        "reduce_cpm": 23
+      },
+      "top_rejections": {
+        "over allowance": 2,
+        "no predicted gain from this raise": 2
+      },
+      "notes": "Focused purely on raising budget for fully-funded campaigns and bidding up efficiently clearing generic cells across S2 and S4 portfolios. Avoided contested leader changes and blocked cells from prior run. Headroom suppo",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "high_iroas",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "high_iroas",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 15,
+      "first_plan_intents": 10,
+      "repair_intents": 12,
+      "rejected": 7,
+      "from_intents": 8,
+      "l0_overridden": 3,
+      "l0_held": 1,
+      "allowance_used": 850.01,
+      "allowance_total": 1141.36,
+      "shipped": 20,
+      "verbs": {
+        "lead_market": 6,
+        "yield_market": 2,
+        "raise_bid": 4,
+        "raise_budget": 3
+      },
+      "actions": {
+        "increase_budget": 3,
+        "increase_cpm": 2,
+        "reduce_cpm": 15
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5,
+        "G: already at slot  on >= % of impressions": 2
+      },
+      "notes": "Prioritized scaling high-iROAS SKUs (S1, S2, S4) on CLEARS generic and brand keywords while resolving budget bottlenecks in fund roles. Dropped rejected S3/S5 budget cuts and lead attempts on MISSES cells to maintain com",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "scale",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 22,
+      "repair_intents": 16,
+      "rejected": 7,
+      "from_intents": 16,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1304.71,
+      "allowance_total": 1888.48,
+      "shipped": 28,
+      "verbs": {
+        "lead_market": 12,
+        "yield_market": 13
+      },
+      "actions": {
+        "increase_cpm": 1,
+        "increase_budget": 3,
+        "reduce_cpm": 24
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7
+      },
+      "notes": "Respects G4 OSA block for S2-HYD (0.42) by avoiding bid increases there and using only yield mechanisms. Aligns four contested markets by shifting leadership to highest-IOTA SKUs. Cuts lean/trim portfolios (S1-BLR, S3-DE",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 18,
+      "repair_intents": 17,
+      "rejected": 12,
+      "from_intents": 24,
+      "l0_overridden": 1,
+      "l0_held": 4,
+      "allowance_used": 1558.78,
+      "allowance_total": 2634.75,
+      "shipped": 26,
+      "verbs": {
+        "lead_market": 12,
+        "raise_bid": 10,
+        "hold": 2,
+        "yield_market": 1
+      },
+      "actions": {
+        "increase_cpm": 8,
+        "increase_budget": 1,
+        "reduce_cpm": 17
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 6,
+        "no predicted gain from this raise": 6
+      },
+      "notes": "Focused bid raises on high-iRoAS generic cells in Scale campaigns to maximize incremental volume through run 6. Resolved contested market misallocations via precise lead/yield moves, explicitly yielding S1 on DEL:K04 to ",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 17,
+      "first_plan_intents": 10,
+      "repair_intents": 10,
+      "rejected": 9,
+      "from_intents": 31,
+      "l0_overridden": 10,
+      "l0_held": 0,
+      "allowance_used": 1086.8,
+      "allowance_total": 18876.71,
+      "shipped": 35,
+      "verbs": {
+        "lead_market": 5,
+        "raise_bid": 8,
+        "cut_bid": 2,
+        "yield_market": 2
+      },
+      "actions": {
+        "increase_cpm": 3,
+        "increase_budget": 1,
+        "reduce_cpm": 31
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 8,
+        "G: already at slot  on >= % of impressions": 1
+      },
+      "notes": "Dropped previously rejected intents (overlapping leads, slot-capped bids, zero-gain markets). Concentrated bid lifts on high-iota generic cells with proven scale roles and confirmed slot headroom (<80%). Corrected two mi",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 13,
+      "repair_intents": 14,
+      "rejected": 5,
+      "from_intents": 14,
+      "l0_overridden": 9,
+      "l0_held": 0,
+      "allowance_used": 403.37,
+      "allowance_total": 672.18,
+      "shipped": 26,
+      "verbs": {
+        "raise_bid": 5,
+        "lead_market": 6,
+        "yield_market": 7,
+        "hold": 1,
+        "cut_budget": 3,
+        "raise_budget": 3
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "increase_budget": 1,
+        "reduce_cpm": 18,
+        "reduce_budget": 3
+      },
+      "top_rejections": {
+        "G: ran out on fewer than  of the last  days": 3,
+        "over allowance": 1,
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Reallocated \u20b9~900+/day from inefficient Hold/Fund campaigns to Scale campaigns to expand incremental offtake while staying within the \u20b9300 allowance via strategic cuts. Corrected market leadership across BLR, DEL, and MU",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 23,
+      "repair_intents": 14,
+      "rejected": 3,
+      "from_intents": 20,
+      "l0_overridden": 6,
+      "l0_held": 0,
+      "allowance_used": 790.51,
+      "allowance_total": 990.26,
+      "shipped": 30,
+      "verbs": {
+        "lead_market": 10,
+        "yield_market": 12,
+        "cut_budget": 3
+      },
+      "actions": {
+        "increase_cpm": 5,
+        "increase_budget": 1,
+        "reduce_cpm": 21,
+        "reduce_budget": 3
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 2,
+        "leader S cannot take slot": 1
+      },
+      "notes": "Corrected slot leadership across 5 contested markets where wrong holders were draining incremental efficiency. Adjusted budgets to fund high-velocity performers while trimming weak holds, staying within allowance and avo",
+      "stance": [
+        {
+          "sub_category": "soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "conquest"
+        },
+        {
+          "sub_category": "shower gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "body wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 23,
+      "first_plan_intents": 25,
+      "repair_intents": 8,
+      "rejected": 6,
+      "from_intents": 16,
+      "l0_overridden": 4,
+      "l0_held": 0,
+      "allowance_used": 1118.99,
+      "allowance_total": 1129.81,
+      "shipped": 26,
+      "verbs": {
+        "raise_budget": 2,
+        "lead_market": 3,
+        "yield_market": 4,
+        "hold": 3,
+        "cut_budget": 4,
+        "raise_bid": 6,
+        "cut_bid": 1
+      },
+      "actions": {
+        "increase_budget": 2,
+        "increase_cpm": 2,
+        "reduce_cpm": 19,
+        "reduce_budget": 3
+      },
+      "top_rejections": {
+        "over allowance": 3,
+        "no predicted gain from this raise": 3
+      },
+      "notes": "Reallocated allowance toward proven scale markets (S2 generic, S3 PUN) and fully incremental competition share (S4 DEL competition) while trimming inefficient S1-MUM spend. Bid adjustments respect slot-share guardrails a",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 10,
+      "first_plan_intents": 5,
+      "repair_intents": 8,
+      "rejected": 1,
+      "from_intents": 8,
+      "l0_overridden": 2,
+      "l0_held": 0,
+      "allowance_used": 902.57,
+      "allowance_total": 1092.42,
+      "shipped": 20,
+      "verbs": {
+        "hold": 1,
+        "lead_market": 4,
+        "yield_market": 1,
+        "raise_bid": 4
+      },
+      "actions": {
+        "increase_cpm": 5,
+        "increase_budget": 1,
+        "reduce_cpm": 14
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Previous budget raises for C-S2-DEL, C-S2-BLR, and C-S3-BLR were dropped due to insufficient run-out days (G5 rule). Execution pivots to correcting misplaced contested-market leadership and lifting bids on cleared generi",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 24,
+      "repair_intents": 13,
+      "rejected": 9,
+      "from_intents": 35,
+      "l0_overridden": 7,
+      "l0_held": 0,
+      "allowance_used": 1581.81,
+      "allowance_total": 1856.5,
+      "shipped": 42,
+      "verbs": {
+        "lead_market": 17,
+        "raise_bid": 8
+      },
+      "actions": {
+        "increase_cpm": 11,
+        "reduce_cpm": 31
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 8,
+        "over allowance": 1
+      },
+      "notes": "Shifted aggression to cleared, high-iota cells with slot-1 share below 80% to satisfy G3 guardrails while avoiding previously rejected MISSES/THIN targets. Preserved budget by halting low-ROI holds/trims and defending S3",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "any",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 18,
+      "repair_intents": 25,
+      "rejected": 22,
+      "from_intents": 24,
+      "l0_overridden": 4,
+      "l0_held": 4,
+      "allowance_used": 4934.09,
+      "allowance_total": 11948.41,
+      "shipped": 31,
+      "verbs": {
+        "raise_bid": 8,
+        "raise_budget": 3,
+        "lead_market": 10,
+        "yield_market": 3,
+        "hold": 1
+      },
+      "actions": {
+        "increase_cpm": 14,
+        "increase_budget": 7,
+        "reduce_cpm": 10
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 12,
+        "no predicted gain from this raise": 7,
+        "leader S cannot take slot": 3
+      },
+      "notes": "Resolved all 12 flagged wrong-holder contests to route impressions to the highest incremental SKU. Directed remaining headroom into S2/S4 cells with clear slot capacity and strong iroas, avoiding previously rejected satu",
+      "stance": [
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "fund",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 15,
+      "repair_intents": 11,
+      "rejected": 9,
+      "from_intents": 22,
+      "l0_overridden": 7,
+      "l0_held": 5,
+      "allowance_used": 1175.14,
+      "allowance_total": 1256.91,
+      "shipped": 28,
+      "verbs": {
+        "lead_market": 14,
+        "raise_bid": 5,
+        "hold": 4,
+        "cut_bid": 2
+      },
+      "actions": {
+        "increase_cpm": 9,
+        "reduce_cpm": 19
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 5,
+        "no predicted gain from this raise": 3,
+        "over allowance": 1
+      },
+      "notes": "Prioritizes correcting wrong-holder market contest mismatches to reallocate impression costs to higher-incrementality SKUs, supplementing with targeted bid raises on the most efficient generic cells with available positi",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 15,
+      "repair_intents": 15,
+      "rejected": 6,
+      "from_intents": 20,
+      "l0_overridden": 7,
+      "l0_held": 1,
+      "allowance_used": 246.87,
+      "allowance_total": 396.89,
+      "shipped": 31,
+      "verbs": {
+        "raise_budget": 5,
+        "cut_budget": 10,
+        "lead_market": 5,
+        "yield_market": 5
+      },
+      "actions": {
+        "increase_budget": 2,
+        "increase_cpm": 1,
+        "reduce_cpm": 19,
+        "reduce_budget": 9
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4,
+        "over allowance": 2
+      },
+      "notes": "Focused cuts on low-iota Soap SKUs (S1, S3) across metros to free ample allowance. Redirected savings to fund budgets for out-of-stock-prone Body Wash campaigns (S2) and bid up high-incrementality generic/competition cel",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "best",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 25,
+      "repair_intents": 9,
+      "rejected": 5,
+      "from_intents": 24,
+      "l0_overridden": 8,
+      "l0_held": 0,
+      "allowance_used": 1305.09,
+      "allowance_total": 1794.86,
+      "shipped": 37,
+      "verbs": {
+        "yield_market": 8,
+        "lead_market": 7,
+        "cut_budget": 5,
+        "raise_budget": 3,
+        "raise_bid": 2
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "increase_budget": 5,
+        "reduce_cpm": 23,
+        "reduce_budget": 5
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5
+      },
+      "notes": "Dropped previously rejected intents due to blocked slots (\u226580%), MISSES verdicts, and insufficient run-out days for budget raises. Shifted spend from underperforming hold/trim Soap campaigns (DEL, BLR, HYD) to high-iROAS",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 24,
+      "first_plan_intents": 20,
+      "repair_intents": 9,
+      "rejected": 10,
+      "from_intents": 21,
+      "l0_overridden": 5,
+      "l0_held": 0,
+      "allowance_used": 1215.61,
+      "allowance_total": 1419.03,
+      "shipped": 27,
+      "verbs": {
+        "lead_market": 9,
+        "raise_bid": 6,
+        "cut_budget": 6,
+        "raise_budget": 1,
+        "hold": 2
+      },
+      "actions": {
+        "increase_budget": 1,
+        "increase_cpm": 6,
+        "reduce_cpm": 14,
+        "reduce_budget": 6
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "G: already at slot  on >= % of impressions": 3,
+        "over allowance": 1
+      },
+      "notes": "Prioritize high-iROAS segments (Body Wash, Shower Gel) with targeted lead_market and bid raises where slot-share headroom exists. Freeze S2-HYD and low-efficiency Kids Soap spends to protect portfolio ROAS floor and comp",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 25,
+      "repair_intents": 17,
+      "rejected": 7,
+      "from_intents": 16,
+      "l0_overridden": 2,
+      "l0_held": 0,
+      "allowance_used": 1578.63,
+      "allowance_total": 1721.82,
+      "shipped": 24,
+      "verbs": {
+        "lead_market": 10,
+        "yield_market": 9,
+        "cut_budget": 4,
+        "raise_bid": 2
+      },
+      "actions": {
+        "increase_cpm": 3,
+        "increase_budget": 2,
+        "reduce_cpm": 15,
+        "reduce_budget": 4
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7
+      },
+      "notes": "Corrected misallocated market leadership across six contested city-keyword markets to prioritize highest incremental SKUs. Cut three underperforming Soap holdings to protect the ROAS floor, redirecting funds to scale-rea",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "any",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 15,
+      "repair_intents": 22,
+      "rejected": 8,
+      "from_intents": 25,
+      "l0_overridden": 4,
+      "l0_held": 1,
+      "allowance_used": 2821.07,
+      "allowance_total": 10527.81,
+      "shipped": 36,
+      "verbs": {
+        "lead_market": 19,
+        "raise_budget": 3,
+        "raise_bid": 3
+      },
+      "actions": {
+        "increase_cpm": 7,
+        "increase_budget": 6,
+        "reduce_cpm": 23
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7,
+        "leader S cannot take slot": 1
+      },
+      "notes": "Fixed previous rejections by replacing ineffective raise_bids on brand/competitor cells with lead_market directives for contested markets where wrong holders existed. Added targeted bid increases only on high-incremental",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 17,
+      "first_plan_intents": 8,
+      "repair_intents": 10,
+      "rejected": 5,
+      "from_intents": 13,
+      "l0_overridden": 3,
+      "l0_held": 6,
+      "allowance_used": 361.35,
+      "allowance_total": 390.84,
+      "shipped": 17,
+      "verbs": {
+        "cut_budget": 4,
+        "lead_market": 3,
+        "raise_bid": 5,
+        "hold": 5
+      },
+      "actions": {
+        "increase_cpm": 3,
+        "reduce_budget": 4,
+        "reduce_cpm": 10
+      },
+      "top_rejections": {
+        "over allowance": 3,
+        "no predicted gain from this raise": 2
+      },
+      "notes": "Dropped S3 leadership bids that triggered MISSES/blockers. Reduced raise count and applied holds to Trim campaigns to conserve the \u20b9300/day allowance while pushing high-iroas mROAS cells. Portfolio ROAS floor protected.",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 20,
+      "first_plan_intents": 15,
+      "repair_intents": 11,
+      "rejected": 5,
+      "from_intents": 17,
+      "l0_overridden": 4,
+      "l0_held": 1,
+      "allowance_used": 352.26,
+      "allowance_total": 360.01,
+      "shipped": 26,
+      "verbs": {
+        "raise_budget": 3,
+        "lead_market": 6,
+        "cut_budget": 7,
+        "hold": 1,
+        "raise_bid": 3
+      },
+      "actions": {
+        "increase_budget": 2,
+        "increase_cpm": 1,
+        "reduce_cpm": 16,
+        "reduce_budget": 7
+      },
+      "top_rejections": {
+        "over allowance": 3,
+        "no predicted gain from this raise": 2
+      },
+      "notes": "Net budget delta is +\u20b910/day, keeping total change well within the \u20b9300 allowance while stabilizing two run-out funds. Bid increases target scalable cells below the 80% slot-1 threshold to avoid hard blocks. Market lead ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 21,
+      "repair_intents": 11,
+      "rejected": 12,
+      "from_intents": 26,
+      "l0_overridden": 4,
+      "l0_held": 0,
+      "allowance_used": 612.69,
+      "allowance_total": 639.86,
+      "shipped": 33,
+      "verbs": {
+        "lead_market": 11,
+        "cut_budget": 6,
+        "raise_bid": 6,
+        "raise_budget": 2
+      },
+      "actions": {
+        "increase_cpm": 5,
+        "reduce_cpm": 23,
+        "reduce_budget": 5
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "unknown campaign": 3,
+        "over allowance": 3
+      },
+      "notes": "Replaced rejected leads/budget bumps on MISSES or under-runout campaigns with targeted bid expansions on CLEARING cells below the 80% slot threshold and two qualified budget unlocks. Added market-leadership corrections w",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 16,
+      "repair_intents": 11,
+      "rejected": 9,
+      "from_intents": 21,
+      "l0_overridden": 5,
+      "l0_held": 3,
+      "allowance_used": 1288.73,
+      "allowance_total": 1416.06,
+      "shipped": 27,
+      "verbs": {
+        "cut_budget": 3,
+        "raise_budget": 7,
+        "lead_market": 6,
+        "yield_market": 4,
+        "raise_bid": 3,
+        "hold": 2
+      },
+      "actions": {
+        "increase_budget": 5,
+        "increase_cpm": 5,
+        "reduce_budget": 3,
+        "reduce_cpm": 14
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5,
+        "G: already at slot  on >= % of impressions": 4
+      },
+      "notes": "Plan pivots from previously rejected brand-keyword leads to high-incrementality generic/competition opportunities and targeted budget boosts on consistently out-of-stock funded campaigns. Maintains strict adherence to OS",
+      "stance": []
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 18,
+      "repair_intents": 21,
+      "rejected": 9,
+      "from_intents": 15,
+      "l0_overridden": 10,
+      "l0_held": 0,
+      "allowance_used": 1425.64,
+      "allowance_total": 1483.51,
+      "shipped": 21,
+      "verbs": {
+        "raise_budget": 7,
+        "raise_bid": 9,
+        "cut_budget": 3,
+        "lead_market": 3,
+        "yield_market": 3
+      },
+      "actions": {
+        "increase_budget": 3,
+        "increase_cpm": 6,
+        "reduce_budget": 3,
+        "reduce_cpm": 9
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5,
+        "over allowance": 3,
+        "G: already at slot  on >= % of impressions": 1
+      },
+      "notes": "Removed previously rejected intents caused by slot saturation or zero predicted gain. Focused remaining allowance on high-mroas generic cells and resolved internal contest misallocations where S2/S4 swapped leadership ba",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 16,
+      "repair_intents": 12,
+      "rejected": 10,
+      "from_intents": 17,
+      "l0_overridden": 8,
+      "l0_held": 0,
+      "allowance_used": 3232.94,
+      "allowance_total": 10101.18,
+      "shipped": 30,
+      "verbs": {
+        "raise_budget": 10,
+        "raise_bid": 8,
+        "cut_budget": 3,
+        "yield_market": 3,
+        "lead_market": 1
+      },
+      "actions": {
+        "increase_budget": 8,
+        "increase_cpm": 8,
+        "reduce_cpm": 11,
+        "reduce_budget": 3
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "G: already at slot  on >= % of impressions": 4
+      },
+      "notes": "Plan shifts spend from capping inefficient holds/trims to funding 5 frequent run-outs and raising bids on 5 scale cells with >56% slot headroom and CLEARS verdicts. Two lead_market actions correct misplaced ownership in ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 24,
+      "first_plan_intents": 21,
+      "repair_intents": 6,
+      "rejected": 8,
+      "from_intents": 26,
+      "l0_overridden": 6,
+      "l0_held": 1,
+      "allowance_used": 795.28,
+      "allowance_total": 993.74,
+      "shipped": 32,
+      "verbs": {
+        "cut_budget": 4,
+        "raise_budget": 1,
+        "raise_bid": 4,
+        "lead_market": 12,
+        "cut_bid": 2,
+        "yield_market": 1
+      },
+      "actions": {
+        "increase_cpm": 6,
+        "increase_budget": 1,
+        "reduce_budget": 4,
+        "reduce_cpm": 21
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7,
+        "over allowance": 1
+      },
+      "notes": "Dropped all previously rejected leads and budget raises due to failed goals, insufficient run-outs, or lack of allowance. Focused execution on high-incrementality brand keyword raises where slot share is low, alongside t",
+      "stance": [
+        {
+          "sub_category": "soap",
+          "keyword_type": "brand",
+          "sku_role": "fund",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "soap",
+          "keyword_type": "generic",
+          "sku_role": "fund",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "shower gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "body wash",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 19,
+      "first_plan_intents": 11,
+      "repair_intents": 10,
+      "rejected": 4,
+      "from_intents": 9,
+      "l0_overridden": 4,
+      "l0_held": 4,
+      "allowance_used": 468.94,
+      "allowance_total": 477.29,
+      "shipped": 14,
+      "verbs": {
+        "raise_budget": 4,
+        "raise_bid": 3,
+        "lead_market": 6,
+        "yield_market": 1,
+        "hold": 4,
+        "cut_budget": 1
+      },
+      "actions": {
+        "increase_cpm": 2,
+        "increase_budget": 2,
+        "reduce_cpm": 9,
+        "reduce_budget": 1
+      },
+      "top_rejections": {
+        "over allowance": 2,
+        "leader S cannot take slot": 1,
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Allocated budget room to top-performing fund campaigns while freezing inefficient SKUs to safeguard the ROAS floor. Targeted bid increases only on verified efficient cells with adequate inventory and slot headroom, and r",
+      "stance": []
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 25,
+      "repair_intents": 22,
+      "rejected": 3,
+      "from_intents": 23,
+      "l0_overridden": 6,
+      "l0_held": 0,
+      "allowance_used": 1302.22,
+      "allowance_total": 1475.04,
+      "shipped": 30,
+      "verbs": {
+        "raise_budget": 4,
+        "cut_budget": 5,
+        "lead_market": 8,
+        "yield_market": 7,
+        "raise_bid": 1
+      },
+      "actions": {
+        "increase_budget": 4,
+        "increase_cpm": 5,
+        "reduce_cpm": 16,
+        "reduce_budget": 5
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 3
+      },
+      "notes": "Prioritized fund/scale campaigns within allowance using small budget raises and targeted bid lifts on high-mroas/iota cells. Avoided S5 leads per G7 constraint. Trimmed hold/weak budgets to free room and protect portfoli",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 16,
+      "first_plan_intents": 7,
+      "repair_intents": 12,
+      "rejected": 3,
+      "from_intents": 15,
+      "l0_overridden": 5,
+      "l0_held": 0,
+      "allowance_used": 1331.34,
+      "allowance_total": 1682.35,
+      "shipped": 25,
+      "verbs": {
+        "hold": 2,
+        "lead_market": 6,
+        "raise_budget": 2,
+        "cut_budget": 6
+      },
+      "actions": {
+        "increase_cpm": 2,
+        "increase_budget": 3,
+        "reduce_cpm": 14,
+        "reduce_budget": 6
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 2,
+        "leader S cannot take slot": 1
+      },
+      "notes": "Prioritize budget raises on fully run-out fund campaigns (S2-DEL, S1-HYD) to capture efficient volume while trimming S3 and S5 to safeguard the ROAS floor. Resolve top contested markets for S5 and S3 to lift incremental ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "weak",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "efficient",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 16,
+      "first_plan_intents": 14,
+      "repair_intents": 5,
+      "rejected": 18,
+      "from_intents": 24,
+      "l0_overridden": 9,
+      "l0_held": 0,
+      "allowance_used": 2295.64,
+      "allowance_total": 2375.67,
+      "shipped": 28,
+      "verbs": {
+        "yield_market": 4,
+        "lead_market": 2,
+        "raise_budget": 3,
+        "cut_budget": 2,
+        "raise_bid": 4,
+        "cut_bid": 1
+      },
+      "actions": {
+        "increase_cpm": 8,
+        "increase_budget": 1,
+        "reduce_cpm": 17,
+        "reduce_budget": 2
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 10,
+        "over allowance": 5,
+        "no predicted gain from this raise": 3
+      },
+      "notes": "Removed previously flagged market leads and saturated-cell raises. Shifts spend from low-incrementality S1 brand bids to high-iRoAS S4/S2 generic pools, while topping up the heavily out-spent S2-DEL fund budget to secure",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 20,
+      "first_plan_intents": null,
+      "repair_intents": null,
+      "rejected": 10,
+      "from_intents": 14,
+      "l0_overridden": 4,
+      "l0_held": 0,
+      "allowance_used": 2685.07,
+      "allowance_total": 11245.25,
+      "shipped": 26,
+      "verbs": {
+        "lead_market": 9,
+        "raise_bid": 7,
+        "raise_budget": 1,
+        "cut_bid": 3
+      },
+      "actions": {
+        "increase_cpm": 8,
+        "increase_budget": 5,
+        "reduce_cpm": 13
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5,
+        "leader S cannot take slot": 3,
+        "G: already at slot  on >= % of impressions": 2
+      },
+      "notes": "Prioritized correcting contested market misallocations by directing slot-1 leadership to SKUs with demonstrably higher incremental revenue per impression, particularly elevating efficient Scales/Saturates over Trims/Hold",
+      "stance": []
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 23,
+      "repair_intents": 4,
+      "rejected": 10,
+      "from_intents": 21,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 508.44,
+      "allowance_total": 809.04,
+      "shipped": 21,
+      "verbs": {
+        "lead_market": 12,
+        "hold": 10,
+        "raise_bid": 3
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "reduce_cpm": 17
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7,
+        "G: already at slot  on >= % of impressions": 2,
+        "over allowance": 1
+      },
+      "notes": "Focused spend on S4 scale campaigns with highest iroas (>5.5) and positive reach trends, using target_slot 5 to bypass the 80% raise cap. Corrected HYD branded search wrong-holder to maximize incremental value while stay",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 13,
+      "repair_intents": 13,
+      "rejected": 7,
+      "from_intents": 19,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 883.95,
+      "allowance_total": 963.38,
+      "shipped": 19,
+      "verbs": {
+        "raise_budget": 2,
+        "cut_budget": 2,
+        "lead_market": 11,
+        "yield_market": 5,
+        "raise_bid": 4,
+        "hold": 1
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "increase_budget": 2,
+        "reduce_cpm": 11,
+        "reduce_budget": 2
+      },
+      "top_rejections": {
+        "over allowance": 3,
+        "no predicted gain from this raise": 3,
+        "leader S cannot take slot": 1
+      },
+      "notes": "Bid increases target high-mroas cells safely below the 80% slot-1 guardrail and OSA floor. Contested market realignments displace lower-IOTA siblings to maximize incremental revenue without breaching the \u20b9300 daily allow",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "conquest"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 21,
+      "first_plan_intents": 11,
+      "repair_intents": 13,
+      "rejected": 11,
+      "from_intents": 21,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1479.69,
+      "allowance_total": 1630.74,
+      "shipped": 21,
+      "verbs": {
+        "lead_market": 11,
+        "raise_budget": 2,
+        "cut_budget": 2,
+        "raise_bid": 6
+      },
+      "actions": {
+        "increase_cpm": 7,
+        "increase_budget": 1,
+        "reduce_cpm": 11,
+        "reduce_budget": 2
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 5,
+        "no predicted gain from this raise": 5,
+        "over allowance": 1
+      },
+      "notes": "Budget shifts prioritize high-iROAS Shower Gel (S4) campaigns while cutting low-efficiency Kids Soap (S5) and weak Soap (S3) exposure. Contestated markets with wrong holders are corrected via lead_market to align slot 1 ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "S4",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "other",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 11,
+      "repair_intents": 18,
+      "rejected": 4,
+      "from_intents": 21,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1089.33,
+      "allowance_total": 1339.36,
+      "shipped": 21,
+      "verbs": {
+        "cut_budget": 12,
+        "hold": 1,
+        "raise_budget": 9,
+        "raise_bid": 2,
+        "lead_market": 1
+      },
+      "actions": {
+        "increase_budget": 5,
+        "increase_cpm": 2,
+        "reduce_budget": 11,
+        "reduce_cpm": 3
+      },
+      "top_rejections": {
+        "G: ran out on fewer than  of the last  days": 3,
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Pivoted budget from OSA-constrained S2-HYD and trim tiers (S3/S5) to high-frequency run-out scales/funds (S2/S4/S1). Replaced risky specific-keyword scopes with campaign-level budget adjustments to guarantee compiler acc",
+      "stance": []
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 15,
+      "repair_intents": 14,
+      "rejected": 6,
+      "from_intents": 23,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1819.95,
+      "allowance_total": 1956.66,
+      "shipped": 23,
+      "verbs": {
+        "raise_bid": 9,
+        "lead_market": 7,
+        "raise_budget": 5,
+        "cut_budget": 4
+      },
+      "actions": {
+        "increase_budget": 3,
+        "increase_cpm": 9,
+        "reduce_cpm": 8,
+        "reduce_budget": 3
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4,
+        "scope matches no active cell": 1,
+        "no budget change possible": 1
+      },
+      "notes": "Shifted focus to high mroas generic keywords with healthy slot dispersion to secure predictable incrementality, while funding run-outs for efficient fund/scale SKUs and pruning low-value trim budgets to stay within the 1",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "high_iroas",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 23,
+      "first_plan_intents": 14,
+      "repair_intents": 13,
+      "rejected": 7,
+      "from_intents": 21,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1713.11,
+      "allowance_total": 10442.17,
+      "shipped": 21,
+      "verbs": {
+        "raise_bid": 9,
+        "lead_market": 9,
+        "raise_budget": 5
+      },
+      "actions": {
+        "increase_cpm": 5,
+        "increase_budget": 4,
+        "reduce_cpm": 12
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 7
+      },
+      "notes": "Focused on replenishing heavily constrained funds and scaling efficient bid cells with ample slot-1 headroom. Corrected key contested markets to align with incremental ROI leaders. Avoided saturated cells and MISSES verd",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 21,
+      "repair_intents": 6,
+      "rejected": 1,
+      "from_intents": 31,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1296.16,
+      "allowance_total": 3923.01,
+      "shipped": 31,
+      "verbs": {
+        "lead_market": 8,
+        "cut_bid": 4,
+        "cut_budget": 7,
+        "hold": 2,
+        "raise_budget": 1,
+        "raise_bid": 3
+      },
+      "actions": {
+        "increase_cpm": 8,
+        "increase_budget": 1,
+        "reduce_cpm": 16,
+        "reduce_budget": 6
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Shifted budget from low-incrementality Trim soap to high-iota Fund/Scale body wash and shower gel cells. Relieved chronic caps on efficient SKUs while using freed allowance to capture incremental volume. Contested market",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 15,
+      "first_plan_intents": 11,
+      "repair_intents": 8,
+      "rejected": 5,
+      "from_intents": 13,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 326.76,
+      "allowance_total": 327.43,
+      "shipped": 13,
+      "verbs": {
+        "raise_budget": 4,
+        "raise_bid": 3,
+        "lead_market": 6,
+        "hold": 1,
+        "yield_market": 1
+      },
+      "actions": {
+        "increase_cpm": 2,
+        "increase_budget": 2,
+        "reduce_cpm": 9
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 2,
+        "no predicted gain from this raise": 2,
+        "over allowance": 1
+      },
+      "notes": "Replaced rejected leads on MISSES cells and overspent budget raises with targeted budget releases for funded SKUs, safe bid lifts on CLEARS generic cells, and high-ROI market share shifts. Maintains portfolio iROAS floor",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 19,
+      "first_plan_intents": 15,
+      "repair_intents": 6,
+      "rejected": 8,
+      "from_intents": 27,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1025.52,
+      "allowance_total": 1273.27,
+      "shipped": 27,
+      "verbs": {
+        "raise_budget": 6,
+        "lead_market": 8,
+        "cut_budget": 3,
+        "raise_bid": 1,
+        "yield_market": 1
+      },
+      "actions": {
+        "increase_budget": 5,
+        "increase_cpm": 2,
+        "reduce_budget": 10,
+        "reduce_cpm": 10
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4,
+        "unknown campaign": 3,
+        "unknown city BLR,DEL,HYD,MUM": 1
+      },
+      "notes": "Plan shifts budget and bids from trimmed/low-iota segments to scale campaigns and high-mroas generic cells. Contested market leaders adjusted only where cells CLEAR G7 guardrails, avoiding prior slot-1 failures. Budget c",
+      "stance": [
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "best",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "efficient",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "fund",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 18,
+      "repair_intents": 13,
+      "rejected": 4,
+      "from_intents": 29,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 2293.14,
+      "allowance_total": 3011.3,
+      "shipped": 29,
+      "verbs": {
+        "raise_budget": 7,
+        "lead_market": 7,
+        "cut_bid": 3,
+        "hold": 1,
+        "raise_bid": 7
+      },
+      "actions": {
+        "increase_budget": 5,
+        "increase_cpm": 6,
+        "reduce_cpm": 18
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4
+      },
+      "notes": "Dropped all previously rejected intents due to G4 (S2-HYD OSA < 60%), G7 (cell misses goal), G3 (>=80% slot-1), or flat predictions. Shifted focus to K05 generic keywords across scale/fund campaigns where mroas_up20 is p",
+      "stance": []
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 22,
+      "first_plan_intents": 17,
+      "repair_intents": 11,
+      "rejected": 11,
+      "from_intents": 18,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 724.55,
+      "allowance_total": 1860.35,
+      "shipped": 18,
+      "verbs": {
+        "lead_market": 9,
+        "yield_market": 4,
+        "raise_bid": 7,
+        "cut_budget": 2
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "reduce_cpm": 13,
+        "reduce_budget": 1
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "G: already at slot  on >= % of impressions": 4,
+        "no budget change possible": 1
+      },
+      "notes": "Focused plan for run 5 corrects prior misallocations by redirecting leadership to highest-incrementality SKUs in contested generic keywords and raising bids only on cleared cells with verified headroom (<80% slot share).",
+      "stance": [
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "best",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "best",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 22,
+      "first_plan_intents": 12,
+      "repair_intents": 11,
+      "rejected": 6,
+      "from_intents": 23,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1241.61,
+      "allowance_total": 12243.92,
+      "shipped": 23,
+      "verbs": {
+        "raise_budget": 5,
+        "lead_market": 10,
+        "cut_budget": 2,
+        "hold": 1,
+        "raise_bid": 3,
+        "yield_market": 1
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "increase_budget": 3,
+        "reduce_cpm": 14,
+        "reduce_budget": 2
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6
+      },
+      "notes": "Allocates remaining runheadroom to fund replenishment and high-iota generic raises for Scale/Fund portfolios. Corrects 6 misplaced market holders across key metros to capture incremental share efficiently while holding t",
+      "stance": [
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "conquest"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "fund",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 24,
+      "first_plan_intents": 5,
+      "repair_intents": 20,
+      "rejected": 6,
+      "from_intents": 23,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 644.07,
+      "allowance_total": 879.83,
+      "shipped": 23,
+      "verbs": {
+        "raise_bid": 8,
+        "cut_budget": 5,
+        "yield_market": 6,
+        "lead_market": 3,
+        "hold": 2
+      },
+      "actions": {
+        "increase_cpm": 6,
+        "reduce_cpm": 12,
+        "reduce_budget": 5
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 3,
+        "no predicted gain from this raise": 2,
+        "over allowance": 1
+      },
+      "notes": "Reallocation strategy uses market yields and targeted bid lifts to shift share from inefficient body wash and kids soap pockets toward high-incrementality shower gel and soap generics. Budget cuts and holds on trim/hold ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 19,
+      "repair_intents": 22,
+      "rejected": 6,
+      "from_intents": 19,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 873.68,
+      "allowance_total": 3889.03,
+      "shipped": 19,
+      "verbs": {
+        "lead_market": 13,
+        "yield_market": 7,
+        "cut_bid": 4,
+        "hold": 1
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "reduce_cpm": 15
+      },
+      "top_rejections": {
+        "leader S cannot take slot": 4,
+        "no predicted gain from this raise": 2
+      },
+      "notes": "Corrected contested market holders to align with highest incremental score per M-ref data. Used small budget raises across four fund campaigns to stay within the \u20b9300 daily allowance while relieving hard caps. Raised bid",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 19,
+      "repair_intents": 12,
+      "rejected": 3,
+      "from_intents": 22,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1520.48,
+      "allowance_total": 1641.54,
+      "shipped": 22,
+      "verbs": {
+        "lead_market": 4,
+        "yield_market": 4,
+        "raise_budget": 6,
+        "raise_bid": 6,
+        "cut_bid": 3,
+        "cut_budget": 2
+      },
+      "actions": {
+        "increase_budget": 4,
+        "increase_cpm": 6,
+        "reduce_cpm": 10,
+        "reduce_budget": 2
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 2,
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Prioritized efficient scales (S2-HYD, S2-DEL) and structural market corrections (S4\u2192S2 leadership) to maximize incremental offtake. Pruned exhausted holds to preserve daily allowance for high-ROI raises.",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 24,
+      "first_plan_intents": 19,
+      "repair_intents": 10,
+      "rejected": 7,
+      "from_intents": 19,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 700.95,
+      "allowance_total": 863.42,
+      "shipped": 19,
+      "verbs": {
+        "lead_market": 8,
+        "yield_market": 5,
+        "cut_budget": 4,
+        "cut_bid": 1,
+        "raise_bid": 6
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "reduce_budget": 4,
+        "reduce_cpm": 11
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5,
+        "leader S cannot take slot": 1,
+        "over allowance": 1
+      },
+      "notes": "Removed all previously rejected intents. Realized contested market leadership to SKUs with highest incremental scores (S2, S3, S4) to maximize portfolio iROAS. Directed targeted bid increases only on efficient, non-satur",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 22,
+      "repair_intents": 14,
+      "rejected": 2,
+      "from_intents": 21,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1051.14,
+      "allowance_total": 1275.55,
+      "shipped": 21,
+      "verbs": {
+        "cut_budget": 9,
+        "raise_bid": 10,
+        "yield_market": 4,
+        "lead_market": 2
+      },
+      "actions": {
+        "increase_cpm": 8,
+        "reduce_budget": 9,
+        "reduce_cpm": 4
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 2
+      },
+      "notes": "Prioritizes scaling efficient scale-role SKUs on generic/competition keywords with open bid headroom and <80% slot-1 share. Yields inefficient holders in contested markets to redirect traffic to higher-iOTA competitors. ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S3",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S1",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "S2",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "S4",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "S5",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 21,
+      "repair_intents": 13,
+      "rejected": 5,
+      "from_intents": 16,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1127.73,
+      "allowance_total": 8400.95,
+      "shipped": 16,
+      "verbs": {
+        "lead_market": 12,
+        "yield_market": 7,
+        "raise_bid": 3,
+        "raise_budget": 3
+      },
+      "actions": {
+        "increase_cpm": 6,
+        "increase_budget": 3,
+        "reduce_cpm": 7
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 3,
+        "leader S cannot take slot": 2
+      },
+      "notes": "Replaced rejected market leads with targeted budget unsealing for exhausted fund/hold campaigns and corrected ownership across 9 contested markets where incumbent holders were demonstrably weaker. Bid adjustments kept mi",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 22,
+      "first_plan_intents": 16,
+      "repair_intents": 11,
+      "rejected": 6,
+      "from_intents": 23,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 362.01,
+      "allowance_total": 388.92,
+      "shipped": 23,
+      "verbs": {
+        "lead_market": 15,
+        "cut_budget": 5,
+        "raise_bid": 1,
+        "raise_budget": 1
+      },
+      "actions": {
+        "increase_cpm": 5,
+        "reduce_budget": 5,
+        "reduce_cpm": 13
+      },
+      "top_rejections": {
+        "over allowance": 4,
+        "no predicted gain from this raise": 2
+      },
+      "notes": "Aggressively cut low-performing trim budgets (S1-MUM, S1-BLR) to generate sufficient allowance headroom (~\u20b92000 freed). Redirected this liquidity into lead_market actions that shift keyword share to high-iroas S4 and S2 ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 18,
+      "repair_intents": 25,
+      "rejected": 8,
+      "from_intents": 25,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 720.63,
+      "allowance_total": 961.21,
+      "shipped": 25,
+      "verbs": {
+        "lead_market": 23,
+        "cut_bid": 2
+      },
+      "actions": {
+        "increase_cpm": 5,
+        "reduce_cpm": 20
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "leader S cannot take slot": 2
+      },
+      "notes": "Corrected market leadership across all flagged wrong-holder contests to prioritize the highest-incremental SKUs. Raised bids only on scale-role generic cells with proven headroom and positive predicted lift, while trimmi",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "conquest"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "S2",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "S4",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 21,
+      "first_plan_intents": 13,
+      "repair_intents": 14,
+      "rejected": 5,
+      "from_intents": 18,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 718.73,
+      "allowance_total": 732.2,
+      "shipped": 18,
+      "verbs": {
+        "lead_market": 12,
+        "raise_bid": 1,
+        "yield_market": 8
+      },
+      "actions": {
+        "increase_cpm": 3,
+        "reduce_cpm": 15
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4,
+        "over allowance": 1
+      },
+      "notes": "Prioritized correcting misallocated contest markets (wrong_holder=True) by yielding from inefficient incumbents and leading with higher-iota SKUs. Avoided forcing leads on MISSES-verdict cells to prevent G7 compliance fa",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 9,
+      "repair_intents": 21,
+      "rejected": 10,
+      "from_intents": 19,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1272.47,
+      "allowance_total": 1350.54,
+      "shipped": 19,
+      "verbs": {
+        "raise_bid": 4,
+        "lead_market": 6,
+        "hold": 1,
+        "cut_bid": 2,
+        "raise_budget": 2,
+        "yield_market": 4,
+        "cut_budget": 6
+      },
+      "actions": {
+        "increase_cpm": 2,
+        "increase_budget": 2,
+        "reduce_cpm": 9,
+        "reduce_budget": 6
+      },
+      "top_rejections": {
+        "over allowance": 4,
+        "no predicted gain from this raise": 3,
+        "G: already at slot  on >= % of impressions": 2
+      },
+      "notes": "Dropped INT-R3 and INT-R4 due to G3 guardrail (\u226580% slot-1 share blocks raises); dropped INT-L2 due to lack of predicted gain and THIN verdict. Plan shifts K05 generic leadership to S2 (Body Wash) in BLR/DEL/HYD/PUN wher",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 24,
+      "first_plan_intents": 11,
+      "repair_intents": 15,
+      "rejected": 22,
+      "from_intents": 13,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 998.47,
+      "allowance_total": 1008.06,
+      "shipped": 13,
+      "verbs": {
+        "raise_budget": 4,
+        "raise_bid": 9,
+        "lead_market": 7,
+        "yield_market": 4
+      },
+      "actions": {
+        "increase_cpm": 4,
+        "increase_budget": 1,
+        "reduce_cpm": 8
+      },
+      "top_rejections": {
+        "unknown campaign": 7,
+        "G: already at slot  on >= % of impressions": 6,
+        "no predicted gain from this raise": 6
+      },
+      "notes": "Resolved four incorrect market holders identified in the brief by swapping lead/yield rights to higher-incrementality SKUs. Directed bid increases exclusively to generic keywords with sub-80% slot penetration and demonst",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 18,
+      "first_plan_intents": null,
+      "repair_intents": null,
+      "rejected": 9,
+      "from_intents": 32,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 2283.49,
+      "allowance_total": 6301.97,
+      "shipped": 32,
+      "verbs": {
+        "raise_budget": 4,
+        "cut_budget": 2,
+        "raise_bid": 2,
+        "yield_market": 5,
+        "lead_market": 5
+      },
+      "actions": {
+        "increase_cpm": 10,
+        "increase_budget": 4,
+        "reduce_budget": 10,
+        "reduce_cpm": 8
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 5,
+        "no predicted gain from this raise": 4
+      },
+      "notes": "Shift leadership in contested markets to high-iRoAS Body Wash SKUs to maximize incremental value. Unblocking budgets for funded campaigns while cutting weak trim/hold portfolios improves overall ROAS headroom and protect",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 24,
+      "repair_intents": 16,
+      "rejected": 5,
+      "from_intents": 27,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 641.45,
+      "allowance_total": 731.96,
+      "shipped": 27,
+      "verbs": {
+        "cut_budget": 4,
+        "raise_budget": 5,
+        "lead_market": 7,
+        "yield_market": 9
+      },
+      "actions": {
+        "increase_budget": 5,
+        "increase_cpm": 2,
+        "reduce_budget": 8,
+        "reduce_cpm": 12
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4,
+        "over allowance": 1
+      },
+      "notes": "Plan defends the ROAS floor by cutting low-iota trim/hold SKUs (S1, S5) and reallocating allowance to efficient Scale/Fund campaigns (S4, S2, S3) via targeted bid raises on high mroas_up20 generic cells. Yield intents co",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "best",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 22,
+      "first_plan_intents": 14,
+      "repair_intents": 11,
+      "rejected": 12,
+      "from_intents": 16,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 562.83,
+      "allowance_total": 669.62,
+      "shipped": 16,
+      "verbs": {
+        "raise_bid": 7,
+        "raise_budget": 5,
+        "lead_market": 8,
+        "yield_market": 2
+      },
+      "actions": {
+        "increase_budget": 5,
+        "increase_cpm": 1,
+        "reduce_cpm": 10
+      },
+      "top_rejections": {
+        "over allowance": 8,
+        "no predicted gain from this raise": 3,
+        "G: already at slot  on >= % of impressions": 1
+      },
+      "notes": "Prioritized high-iota generic keywords in scale/fund roles while strictly respecting slot-1 occupancy and allowance guardrails. Resolved four contest misallocations by yielding lower-marginal Shower Gel SKUs to higher-ma",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S1,S3",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "S2",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "S4",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 23,
+      "repair_intents": 11,
+      "rejected": 8,
+      "from_intents": 32,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 2104.08,
+      "allowance_total": 2143.59,
+      "shipped": 24,
+      "verbs": {
+        "lead_market": 9,
+        "raise_bid": 2,
+        "cut_budget": 10,
+        "raise_budget": 4
+      },
+      "actions": {
+        "reduce_budget": 8,
+        "reduce_cpm": 16
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 4,
+        "no budget change possible": 2,
+        "over allowance": 2
+      },
+      "notes": "Prioritized budget relief for exhausted fund cities and aggressive trimming of low-incrementality Kids Soap campaigns. Focused bid raises on cleared, high-iota generic cells with available headroom.",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 25,
+      "repair_intents": 19,
+      "rejected": 2,
+      "from_intents": 26,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1478.4,
+      "allowance_total": 1480.2,
+      "shipped": 26,
+      "verbs": {
+        "cut_budget": 5,
+        "raise_budget": 2,
+        "raise_bid": 5,
+        "lead_market": 8,
+        "yield_market": 5
+      },
+      "actions": {
+        "increase_budget": 2,
+        "increase_cpm": 7,
+        "reduce_budget": 5,
+        "reduce_cpm": 12
+      },
+      "top_rejections": {
+        "leader S cannot take slot": 1,
+        "no predicted gain from this raise": 1
+      },
+      "notes": "Corrected prior rejections by restricting slot-1 leadership exclusively to cells meeting CLEARS/Tier A status and avoiding \u226580% slot-share blockers. Aligned market ownership to highest-IOTA SKUs per M-matrix flags. Prese",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 23,
+      "first_plan_intents": 18,
+      "repair_intents": 11,
+      "rejected": 10,
+      "from_intents": 39,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1563.04,
+      "allowance_total": 3452.13,
+      "shipped": 39,
+      "verbs": {
+        "raise_bid": 2,
+        "cut_bid": 4,
+        "raise_budget": 2,
+        "cut_budget": 7,
+        "lead_market": 8
+      },
+      "actions": {
+        "increase_cpm": 12,
+        "increase_budget": 2,
+        "reduce_cpm": 18,
+        "reduce_budget": 7
+      },
+      "top_rejections": {
+        "G: already at slot  on >= % of impressions": 5,
+        "no predicted gain from this raise": 4,
+        "leader S cannot take slot": 1
+      },
+      "notes": "Corrects known wrong-holder misallocations by routing high-iota keywords to efficient scale/fund SKUs (S1, S4) while trimming low-value hold/trim spend (S3, S5) to protect the direct ROAS floor. Market shifts reallocate ",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "fund",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "trim"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 22,
+      "repair_intents": 22,
+      "rejected": 9,
+      "from_intents": 13,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 339.4,
+      "allowance_total": 9014.47,
+      "shipped": 13,
+      "verbs": {
+        "lead_market": 6,
+        "yield_market": 6,
+        "raise_bid": 13
+      },
+      "actions": {
+        "increase_cpm": 6,
+        "reduce_cpm": 7
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "G: already at slot  on >= % of impressions": 3
+      },
+      "notes": "Plan targets cells with verified bid headroom and slot shares under 80% to avoid previous G3 rejections. Contested markets with misaligned ownership are corrected via lead_market calls. Budgets are raised exclusively for",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "hold",
+          "stance": "defend_min"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 1,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 21,
+      "first_plan_intents": 15,
+      "repair_intents": 10,
+      "rejected": 6,
+      "from_intents": 15,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1313.18,
+      "allowance_total": 1499.55,
+      "shipped": 15,
+      "verbs": {
+        "cut_budget": 6,
+        "raise_budget": 4,
+        "lead_market": 8,
+        "yield_market": 3
+      },
+      "actions": {
+        "increase_budget": 3,
+        "increase_cpm": 2,
+        "reduce_cpm": 5,
+        "reduce_budget": 5
+      },
+      "top_rejections": {
+        "lead_market needs sku_id, city_id and keyword": 6
+      },
+      "notes": "Revised plan removes rejected raises on saturated/MISSES cells and focuses on fixing market share inefficiencies via lead_market actions where incumbent holders lack incremental value. Budget shifts unlock highly constra",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S1",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S3",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "S4",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "S5",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 2,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 20,
+      "first_plan_intents": 9,
+      "repair_intents": 15,
+      "rejected": 6,
+      "from_intents": 17,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 368.08,
+      "allowance_total": 420.47,
+      "shipped": 17,
+      "verbs": {
+        "lead_market": 9,
+        "raise_budget": 2,
+        "cut_budget": 2,
+        "yield_market": 4,
+        "raise_bid": 3
+      },
+      "actions": {
+        "increase_cpm": 6,
+        "reduce_cpm": 9,
+        "reduce_budget": 2
+      },
+      "top_rejections": {
+        "over allowance": 3,
+        "no predicted gain from this raise": 3
+      },
+      "notes": "Corrected previous allowance violations by cutting low-performing hold/trim budgets first, then raising fund/scale campaigns that meet the \u22652 run-out rule. Resolved top contested markets where wrong holders held premium ",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "conquest"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 3,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 20,
+      "repair_intents": 19,
+      "rejected": 12,
+      "from_intents": 35,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1046.69,
+      "allowance_total": 1094.97,
+      "shipped": 35,
+      "verbs": {
+        "lead_market": 18,
+        "raise_budget": 4,
+        "cut_budget": 3
+      },
+      "actions": {
+        "increase_cpm": 7,
+        "increase_budget": 3,
+        "reduce_budget": 3,
+        "reduce_cpm": 22
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 11,
+        "over allowance": 1
+      },
+      "notes": "Plans shifts capital from holding/low-iota campaigns (S3/S5) to fund/scale roles, while correcting contest markets where higher-iROAS SKUs are disadvantaged. Bid raises focus on thin cells with clear mROAS upside and avo",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "S1",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "S3",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S1",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "S3",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "S4",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "*",
+          "sku_role": "*",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 4,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 15,
+      "repair_intents": 21,
+      "rejected": 7,
+      "from_intents": 20,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 1174.95,
+      "allowance_total": 1179.38,
+      "shipped": 20,
+      "verbs": {
+        "lead_market": 6,
+        "raise_budget": 5,
+        "cut_budget": 6,
+        "raise_bid": 8
+      },
+      "actions": {
+        "increase_budget": 3,
+        "increase_cpm": 5,
+        "reduce_cpm": 7,
+        "reduce_budget": 5
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 6,
+        "over allowance": 1
+      },
+      "notes": "Plan pivots to aggressive scaling of high-iota S2 Body Wash cells across DEL/PUN/MUM while securing budget headroom for capped fund campaigns (S1-HYD, S4-HYD, S4-BLR). Contested market corrections (HYD K01/K09, BLR K05) ",
+      "stance": [
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "fund",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "conquest"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "saturated",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "brand",
+          "sku_role": "fund",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "lead"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "fund",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "trim",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 5,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 25,
+      "first_plan_intents": 15,
+      "repair_intents": 17,
+      "rejected": 5,
+      "from_intents": 15,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 740.27,
+      "allowance_total": 1305.28,
+      "shipped": 15,
+      "verbs": {
+        "lead_market": 7,
+        "cut_budget": 4,
+        "raise_bid": 7,
+        "hold": 2,
+        "raise_budget": 3,
+        "yield_market": 2
+      },
+      "actions": {
+        "increase_budget": 3,
+        "increase_cpm": 3,
+        "reduce_cpm": 5,
+        "reduce_budget": 4
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5
+      },
+      "notes": "Budget increases confined strictly to fund campaigns running out daily. Market leadership shifts optimize incremental yield in contested Body Wash generic slots, while yields reduce low-iota Soap brand displacement.",
+      "stance": [
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Kids Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        }
+      ]
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "run": 6,
+      "shipped_from": "compiler",
+      "fallback": null,
+      "intents": 19,
+      "first_plan_intents": 16,
+      "repair_intents": 8,
+      "rejected": 6,
+      "from_intents": 12,
+      "l0_overridden": 0,
+      "l0_held": 0,
+      "allowance_used": 61.18,
+      "allowance_total": 7281.65,
+      "shipped": 12,
+      "verbs": {
+        "lead_market": 7,
+        "yield_market": 6,
+        "raise_bid": 4,
+        "hold": 1,
+        "cut_budget": 1
+      },
+      "actions": {
+        "increase_cpm": 2,
+        "reduce_cpm": 9,
+        "reduce_budget": 1
+      },
+      "top_rejections": {
+        "no predicted gain from this raise": 5,
+        "G: already at slot  on >= % of impressions": 1
+      },
+      "notes": "Deployed spend room into high-iota generic cells across Scale campaigns and corrected contested market leadership to highest-incrementality SKUs. Held/trimmed weaker holdings to protect portfolio floor ROAS while maximiz",
+      "stance": [
+        {
+          "sub_category": "Soap",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "defend_min"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "generic",
+          "sku_role": "any",
+          "stance": "hold"
+        },
+        {
+          "sub_category": "Soap",
+          "keyword_type": "competition",
+          "sku_role": "any",
+          "stance": "trim"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "brand",
+          "sku_role": "any",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Body Wash",
+          "keyword_type": "competition",
+          "sku_role": "scale",
+          "stance": "conquest"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic",
+          "sku_role": "scale",
+          "stance": "scale"
+        },
+        {
+          "sub_category": "Shower Gel",
+          "keyword_type": "competition",
+          "sku_role": "scale",
+          "stance": "conquest"
+        }
+      ]
+    }
+  ],
+  "leaves": [
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 7,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 11,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 23,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 42,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 101,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "rep": 0,
+      "seed": 202,
+      "L2P_plan:ok": 6,
+      "L2P_repair:default": 1,
+      "L2P_repair:ok": 5,
+      "default_reasons": {
+        "ValueError": 1
+      }
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 7,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 11,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 23,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 42,
+      "L2P_plan:ok": 6,
+      "L2P_repair:default": 1,
+      "L2P_repair:ok": 5,
+      "default_reasons": {
+        "validation failed": 1
+      }
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 101,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "rep": 0,
+      "seed": 202,
+      "L2P_plan:ok": 6,
+      "L2P_repair:ok": 6,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 7,
+      "L1_value:ok": 2,
+      "L2_shock:ok": 4,
+      "L3_sibling:ok": 24,
+      "L6_review:ok": 1,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 11,
+      "L2_shock:ok": 3,
+      "L3_sibling:ok": 27,
+      "L6_review:ok": 1,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 23,
+      "L1_value:ok": 6,
+      "L2_shock:ok": 10,
+      "L3_sibling:ok": 46,
+      "L6_review:ok": 2,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 42,
+      "L1_value:ok": 6,
+      "L2_shock:ok": 6,
+      "L3_sibling:ok": 27,
+      "L6_review:ok": 1,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 101,
+      "L1_value:ok": 1,
+      "L2_shock:ok": 8,
+      "L3_sibling:ok": 21,
+      "L6_review:ok": 1,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 0,
+      "seed": 202,
+      "L2_shock:ok": 3,
+      "L3_sibling:ok": 35,
+      "L6_review:ok": 2,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 1,
+      "seed": 7,
+      "L1_value:ok": 2,
+      "L2_shock:ok": 4,
+      "L3_sibling:ok": 24,
+      "L6_review:ok": 1,
+      "default_reasons": {}
+    },
+    {
+      "arm": "l12_llm",
+      "rep": 2,
+      "seed": 7,
+      "L1_value:ok": 2,
+      "L2_shock:ok": 4,
+      "L3_sibling:ok": 24,
+      "L6_review:ok": 1,
+      "default_reasons": {}
+    }
+  ],
+  "ci": [
+    {
+      "arm": "l12_llm",
+      "worlds": 6,
+      "mean_vs_l0": 0.011477845229638609,
+      "ci95": "-0.02 \u2026 0.04",
+      "p_signflip": 1.0,
+      "better": 1,
+      "mean_spend_vs_l0": 0.15997048007692083,
+      "mean_margin": 0.4214999999999998,
+      "mean_l0_margin": 0.4224999999999997
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "worlds": 6,
+      "mean_vs_l0": -0.0924891478837675,
+      "ci95": "-0.32 \u2026 0.13",
+      "p_signflip": 0.375,
+      "better": 2,
+      "mean_spend_vs_l0": -6.408600430780812,
+      "mean_margin": 0.7511666666666666,
+      "mean_l0_margin": 0.4224999999999997
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "worlds": 6,
+      "mean_vs_l0": -0.41962211401253,
+      "ci95": "-0.89 \u2026 0.05",
+      "p_signflip": 0.125,
+      "better": 2,
+      "mean_spend_vs_l0": -6.632164121887089,
+      "mean_margin": 0.5559999999999999,
+      "mean_l0_margin": 0.4224999999999997
+    }
+  ],
+  "mix": [
+    {
+      "arm": "l2p_aug_llm",
+      "seed": 7,
+      "\u0394\u20b9/d brand": -197.0,
+      "\u0394\u20b9/d competition": -354.0,
+      "\u0394\u20b9/d generic": -1120.0,
+      "\u0394\u20b9/d S1": 26.0,
+      "\u0394\u20b9/d S2": -406.0,
+      "\u0394\u20b9/d S3": -1490.0,
+      "\u0394\u20b9/d S4": 474.0,
+      "\u0394\u20b9/d S5": -276.0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "seed": 11,
+      "\u0394\u20b9/d brand": -49.0,
+      "\u0394\u20b9/d competition": -1795.0,
+      "\u0394\u20b9/d generic": 227.0,
+      "\u0394\u20b9/d S1": -53.0,
+      "\u0394\u20b9/d S2": 775.0,
+      "\u0394\u20b9/d S3": -2100.0,
+      "\u0394\u20b9/d S4": 182.0,
+      "\u0394\u20b9/d S5": -420.0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "seed": 23,
+      "\u0394\u20b9/d brand": -131.0,
+      "\u0394\u20b9/d competition": -439.0,
+      "\u0394\u20b9/d generic": -315.0,
+      "\u0394\u20b9/d S1": -231.0,
+      "\u0394\u20b9/d S2": -71.0,
+      "\u0394\u20b9/d S3": -761.0,
+      "\u0394\u20b9/d S4": 298.0,
+      "\u0394\u20b9/d S5": -119.0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "seed": 42,
+      "\u0394\u20b9/d brand": -180.0,
+      "\u0394\u20b9/d competition": -149.0,
+      "\u0394\u20b9/d generic": -961.0,
+      "\u0394\u20b9/d S1": -387.0,
+      "\u0394\u20b9/d S2": -97.0,
+      "\u0394\u20b9/d S3": -472.0,
+      "\u0394\u20b9/d S4": -57.0,
+      "\u0394\u20b9/d S5": -278.0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "seed": 101,
+      "\u0394\u20b9/d brand": -168.0,
+      "\u0394\u20b9/d competition": -158.0,
+      "\u0394\u20b9/d generic": -253.0,
+      "\u0394\u20b9/d S1": 596.0,
+      "\u0394\u20b9/d S2": 332.0,
+      "\u0394\u20b9/d S3": -1004.0,
+      "\u0394\u20b9/d S4": -127.0,
+      "\u0394\u20b9/d S5": -376.0
+    },
+    {
+      "arm": "l2p_aug_llm",
+      "seed": 202,
+      "\u0394\u20b9/d brand": -167.0,
+      "\u0394\u20b9/d competition": -158.0,
+      "\u0394\u20b9/d generic": -710.0,
+      "\u0394\u20b9/d S1": 338.0,
+      "\u0394\u20b9/d S2": -143.0,
+      "\u0394\u20b9/d S3": -960.0,
+      "\u0394\u20b9/d S4": 250.0,
+      "\u0394\u20b9/d S5": -518.0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "seed": 7,
+      "\u0394\u20b9/d brand": -150.0,
+      "\u0394\u20b9/d competition": -277.0,
+      "\u0394\u20b9/d generic": 181.0,
+      "\u0394\u20b9/d S1": 368.0,
+      "\u0394\u20b9/d S2": -290.0,
+      "\u0394\u20b9/d S3": -839.0,
+      "\u0394\u20b9/d S4": 410.0,
+      "\u0394\u20b9/d S5": 104.0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "seed": 11,
+      "\u0394\u20b9/d brand": -118.0,
+      "\u0394\u20b9/d competition": -1493.0,
+      "\u0394\u20b9/d generic": 992.0,
+      "\u0394\u20b9/d S1": -127.0,
+      "\u0394\u20b9/d S2": -162.0,
+      "\u0394\u20b9/d S3": -981.0,
+      "\u0394\u20b9/d S4": 471.0,
+      "\u0394\u20b9/d S5": 180.0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "seed": 23,
+      "\u0394\u20b9/d brand": -107.0,
+      "\u0394\u20b9/d competition": 49.0,
+      "\u0394\u20b9/d generic": -1399.0,
+      "\u0394\u20b9/d S1": -1021.0,
+      "\u0394\u20b9/d S2": -317.0,
+      "\u0394\u20b9/d S3": -312.0,
+      "\u0394\u20b9/d S4": 39.0,
+      "\u0394\u20b9/d S5": 155.0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "seed": 42,
+      "\u0394\u20b9/d brand": -196.0,
+      "\u0394\u20b9/d competition": -310.0,
+      "\u0394\u20b9/d generic": -171.0,
+      "\u0394\u20b9/d S1": 127.0,
+      "\u0394\u20b9/d S2": -310.0,
+      "\u0394\u20b9/d S3": -296.0,
+      "\u0394\u20b9/d S4": -254.0,
+      "\u0394\u20b9/d S5": 57.0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "seed": 101,
+      "\u0394\u20b9/d brand": -395.0,
+      "\u0394\u20b9/d competition": -347.0,
+      "\u0394\u20b9/d generic": -2263.0,
+      "\u0394\u20b9/d S1": -1266.0,
+      "\u0394\u20b9/d S2": 304.0,
+      "\u0394\u20b9/d S3": -1499.0,
+      "\u0394\u20b9/d S4": -224.0,
+      "\u0394\u20b9/d S5": -320.0
+    },
+    {
+      "arm": "l2p_nat_llm",
+      "seed": 202,
+      "\u0394\u20b9/d brand": -161.0,
+      "\u0394\u20b9/d competition": 159.0,
+      "\u0394\u20b9/d generic": -1575.0,
+      "\u0394\u20b9/d S1": 766.0,
+      "\u0394\u20b9/d S2": -39.0,
+      "\u0394\u20b9/d S3": -1846.0,
+      "\u0394\u20b9/d S4": 145.0,
+      "\u0394\u20b9/d S5": -602.0
+    }
+  ],
+  "_code_hashes_seen": [
+    "4f8b8d70cdcb",
+    "951690e77e25",
+    "9b13104d1e6c",
+    "c6db3cafe0e1"
+  ]
+}

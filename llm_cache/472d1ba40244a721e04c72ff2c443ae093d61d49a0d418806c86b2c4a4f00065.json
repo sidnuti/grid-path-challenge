@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "Mechanical scoring favors C-S1-HYD with a narrow margin (~4.6%). While C-S3-HYD demonstrates a significantly higher slot1 share (0.83 vs 0.62), suggesting strong ad positioning, the scores represent a noisy near-tie. Following the directive to prefer the mechanical pick absent clear contrary evidence, C-S1-HYD is selected. Confidence is tempered due to the proximity of the scores and the competing positional advantage of C-S3-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1978,
+    "cost_usd": 0.030801,
+    "wall_clock_s": 21.335609875000046
+  }
+}

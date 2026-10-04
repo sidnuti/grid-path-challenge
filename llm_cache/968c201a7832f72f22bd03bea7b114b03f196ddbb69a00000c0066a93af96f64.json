@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.9,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Strong positive reach deviation (z=5.88) alongside a notable CPM drop (-2.67), with a clear absence of own-action confound, indicates a genuine external market shift rather than internal bidding artifacts. The pattern aligns with a demand/inventory surge increasing impression volume while reducing competitive cost."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1601,
+    "cost_usd": 0.025347,
+    "wall_clock_s": 14.124716167000031
+  }
+}

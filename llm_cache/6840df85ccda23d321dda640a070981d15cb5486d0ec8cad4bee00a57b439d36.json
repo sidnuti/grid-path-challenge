@@ -1,0 +1,152 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR,MUM,PUN",
+          "keyword_type": "generic,competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "R:C-S2-MUM",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental offtake growth in efficient Body Wash segments; iroas 3.15-5.29 supports portfolio floor."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM,BLR,PUN",
+          "keyword_type": "generic,competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "R:C-S4-BLR",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture high-iota Shower Gel demand; strong iroas 5.23-6.03 with minimal displacement risk."
+      },
+      {
+        "id": "INT-03",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL,MUM,BLR,HYD"
+        },
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Block inefficient spend in low-iota Soap markets; preserves allowance for higher-value SKUs."
+      },
+      {
+        "id": "INT-04",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K06",
+          "A:C-S2-HYD/K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Enforce OSA guardrail (osa_3d=0.42); prevents wasted impressions and respects increase block rule."
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to S2 (score 2.224) over S4 in generic searches; maximizes incremental revenue per impression."
+      },
+      {
+        "id": "INT-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder; place best incremental performer S5 in slot-1 for branded kid soap searches."
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Align slot-1 with S1 (score 0.945) over S5 in generic searches; captures highest incremental yield."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "weak",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "efficient",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Prioritizing high-iota incrementality (S2, S4) to drive offtake while protecting the direct ROAS floor. Held inefficient Soap spend (S3) and enforced OSA constraint on S2-HYD. Corrected several wrong-holder contest markets to ensure the highest incremental SKU leads. Own-action anomalies ignored as instructed."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11145,
+    "tokens_out": 9138,
+    "cost_usd": 0.00152229,
+    "wall_clock_s": 70.836345209
+  }
+}

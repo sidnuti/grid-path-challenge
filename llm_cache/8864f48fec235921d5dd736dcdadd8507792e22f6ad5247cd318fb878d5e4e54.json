@@ -1,0 +1,366 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "cut_S1MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from trim campaign to reallocate."
+      },
+      {
+        "id": "cut_S1BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from trim campaign to reallocate."
+      },
+      {
+        "id": "cut_S5MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from trim campaign to reallocate."
+      },
+      {
+        "id": "cut_S5BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from trim campaign to reallocate."
+      },
+      {
+        "id": "cut_S3MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from hold campaign to reallocate."
+      },
+      {
+        "id": "hold_S2HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "O:S2-HYD<0.60"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block raises due to low 3-day OSA (0.42)."
+      },
+      {
+        "id": "raise_S2BLR_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bids on efficient generic cell (iroas 4.26)."
+      },
+      {
+        "id": "raise_S2BLR_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bids on efficient generic cell (iroas 4.26)."
+      },
+      {
+        "id": "raise_S2PUN_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bids on high iroas generic cell (4.77)."
+      },
+      {
+        "id": "raise_S2DEL_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bids on efficient generic cell (iroas 3.56)."
+      },
+      {
+        "id": "raise_S2DEL_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bids on efficient generic cell (iroas 3.56)."
+      },
+      {
+        "id": "lead_BLR_K02_S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leader to best incremental SKU (score 0.725)."
+      },
+      {
+        "id": "yield_BLR_K02_S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back poor performer from leading position."
+      },
+      {
+        "id": "lead_BLR_K05_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leader to best incremental SKU (score 1.603)."
+      },
+      {
+        "id": "yield_BLR_K05_S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back poor performer from leading position."
+      },
+      {
+        "id": "lead_DEL_K03_S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leader to best incremental SKU (score 0.784)."
+      },
+      {
+        "id": "yield_DEL_K03_S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back poor performer from leading position."
+      },
+      {
+        "id": "lead_DEL_K04_S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leader to best incremental SKU (score 0.772)."
+      },
+      {
+        "id": "yield_DEL_K04_S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back poor performer from leading position."
+      },
+      {
+        "id": "lead_MUM_K01_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leader to best incremental SKU (score 0.912)."
+      },
+      {
+        "id": "yield_MUM_K01_S3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back poor performer from leading position."
+      },
+      {
+        "id": "lead_MUM_K04_S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift leader to best incremental SKU (score 0.757)."
+      },
+      {
+        "id": "yield_MUM_K04_S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back poor performer from leading position."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "hold",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Realigned contested markets to maximize incremental revenue per impression. Consolidated budget from underperforming trim/hold campaigns to fund scale positions while respecting OSA caps."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11197,
+    "tokens_out": 11328,
+    "cost_usd": 0.0018085500000000001,
+    "wall_clock_s": 90.31439908300013
+  }
+}

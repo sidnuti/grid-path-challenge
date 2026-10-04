@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.6,
+    "rationale": "Scores are a near-tie (~4% apart), so defaulting to the mechanical pick C-S4-HYD. C-S2-HYD's 0.90 slot1_share indicates it already dominates slot 1, implying a saturated position with limited marginal upside; C-S4-HYD's combination of higher leader_score (better conversion x ASP x incrementality) and more headroom (0.63 share) gives it the stronger case for bid protection. No evidence clearly overrides the mechanical choice."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 2054,
+    "cost_usd": 0.00269367,
+    "wall_clock_s": 18.2343474999999
+  }
+}

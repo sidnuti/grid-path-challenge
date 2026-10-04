@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "The mechanical leader score slightly favors C-S1-HYD, and the significantly higher slot 1 share (0.88 vs 0.64 for the nearest competitor) provides strong reinforcing evidence of superior market execution, justifying its selection as the leader despite the narrow score difference."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1290,
+    "cost_usd": 0.020481,
+    "wall_clock_s": 13.44426041700001
+  }
+}

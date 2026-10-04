@@ -1,0 +1,274 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "MKT-BLR-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Route branded traffic to highest iroas SKU S1"
+      },
+      {
+        "id": "MKT-BLR-K02-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back inefficient holder S3"
+      },
+      {
+        "id": "MKT-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Route generic traffic to leader S1"
+      },
+      {
+        "id": "MKT-BLR-K03-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Release weak holder S5"
+      },
+      {
+        "id": "MKT-DEL-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder on brand query"
+      },
+      {
+        "id": "MKT-DEL-K02-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back inefficient holder S3"
+      },
+      {
+        "id": "MKT-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Route branded traffic to scale SKU S1"
+      },
+      {
+        "id": "MKT-HYD-K01-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back saturated holder S2"
+      },
+      {
+        "id": "MKT-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Route branded traffic to leader S1"
+      },
+      {
+        "id": "MKT-MUM-K01-Y",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back saturated holder S4"
+      },
+      {
+        "id": "BID-S1-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S1",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03",
+          "C:C-S1-MUM/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental volume on high-iota generic queries"
+      },
+      {
+        "id": "BID-S2-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient body wash spend within budget heads"
+      },
+      {
+        "id": "BID-S4-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Grow shower gel offtake on clearing generic cells"
+      },
+      {
+        "id": "BDG-S5-CUT",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-PUN",
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Conserve budget from trim roles to fund scale SKUs"
+      },
+      {
+        "id": "BDG-S3-CUT",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce weak soap spend in DEL to free allowance"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S3",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritized correcting contested markets where weaker SKUs held prime slots over higher iroas leaders. Directed remaining allowance toward generic bid increases for scale/fund SKUs while cutting budget for trim roles to protect portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23809,
+    "tokens_out": 19518,
+    "cost_usd": 0.0032516100000000003,
+    "wall_clock_s": 158.99501058299998
+  }
+}

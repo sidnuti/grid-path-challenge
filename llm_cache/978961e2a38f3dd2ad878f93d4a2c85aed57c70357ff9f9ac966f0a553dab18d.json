@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.55,
+    "rationale": "Mechanical score favors C-S2-BLR (2.0861 vs 1.8964). Despite the near-tie, instructions prioritize the mechanical pick absent clear contrary evidence."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 787,
+    "tokens_out": 2731,
+    "cost_usd": 0.043326,
+    "wall_clock_s": 28.530688042000065
+  }
+}

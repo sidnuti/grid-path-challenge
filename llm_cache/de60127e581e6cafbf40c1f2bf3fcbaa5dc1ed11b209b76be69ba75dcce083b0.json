@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical score slightly favors C-S1-MUM, but C-S3-MUM's 7-day Slot 1 share is significantly higher (0.90 vs 0.49), indicating it actually dominates auctions. Given the near-tie in scores, practical win-rate evidence overrides the slight mechanical advantage."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1359,
+    "cost_usd": 0.021435,
+    "wall_clock_s": 15.778451041999915
+  }
+}

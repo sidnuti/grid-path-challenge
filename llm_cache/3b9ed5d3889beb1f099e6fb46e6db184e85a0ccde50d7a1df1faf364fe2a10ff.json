@@ -1,0 +1,361 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect brand-impressions to S4 which yields 1.32x incremental revenue vs S1 in DEL."
+      },
+      {
+        "id": "LM-DEL-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong-holder: S3 leads DEL K02 on score vs S1."
+      },
+      {
+        "id": "LM-DEL-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate generic K04 delivery to S1 for optimal fill rate."
+      },
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-value SHG brand searches with best-in-class SHG inventory."
+      },
+      {
+        "id": "LM-HYD-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Replace S1 leader with higher-score S3 in HYD K02."
+      },
+      {
+        "id": "LM-MUM-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Align MUM K02 winner to S3 to improve incremental yield."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Maximize SHG off-take in PUN brand queries where S4 dominates incrementality."
+      },
+      {
+        "id": "LM-PUN-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct PUN K02 holder to S3 per score ranking."
+      },
+      {
+        "id": "LM-BLR-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift BLR K02 leadership to S3 to capture higher incremental value."
+      },
+      {
+        "id": "LM-BLR-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Realign BLR competitor K09 to S1 for tighter relevance match."
+      },
+      {
+        "id": "RAISE-S2-DEL-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "K:Body Wash:generic",
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Accelerate efficient BW generic demand in DEL; mroas_up20 > 4.2 confirms profitability."
+      },
+      {
+        "id": "RAISE-S4-DEL-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "K:Shower Gel:generic",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bid up SHG generic queries where iota 0.57 delivers strong incremental revenue."
+      },
+      {
+        "id": "RAISE-S2-MUM-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Expand BW generic capture in MUM; clearances confirm capacity."
+      },
+      {
+        "id": "RAISE-S4-MUM-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "K:Shower Gel:generic",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Scale SHG generic spend in MUM leveraging 4.11 iroas efficiency."
+      },
+      {
+        "id": "RAISE-S2-BLR-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase BW generic bids in BLR to capture residual high-ROI volume."
+      },
+      {
+        "id": "RAISE-S4-HYD-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Push SHG generic acquisition in HYD; clean verdicts allow medium step."
+      },
+      {
+        "id": "HOLD-S3-TRIM",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Freeze bid expansion on trim-tier Soap assets to protect portfolio ROAS floor."
+      },
+      {
+        "id": "HOLD-S5-TRIM",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Block incremental spend on Kids Soap trim units whose iroas < 1.0 dilutes margins."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused bid expansion on high-iota Body Wash & Shower Gel generic queries across scale-tier cities to drive incremental offtake. Corrected 9 contested-market misallocations to route impressions to highest-scoring SKUs. Freezed trim-tier S3/S5 bidding to safeguard the 4.09 ROAS floor during the final run cycle."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11153,
+    "tokens_out": 8118,
+    "cost_usd": 0.0013899300000000002,
+    "wall_clock_s": 75.17773333299999
+  }
+}

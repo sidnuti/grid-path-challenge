@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.75,
+    "rationale": "The mechanical leader_score is nearly identical (1.2873 vs 1.2716), making the mechanical pick unreliable due to noise. However, C-S4-PUN holds a substantial advantage in slot1_share_7d (0.92 vs 0.61), indicating stronger visibility and likely more efficient impression capture. This clear secondary evidence justifies overriding the marginal mechanical preference to designate C-S4-PUN as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1433,
+    "cost_usd": 0.022545,
+    "wall_clock_s": 14.93999749999989
+  }
+}

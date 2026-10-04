@@ -1,0 +1,85 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on efficient generic cell (iroas 5.66); captures incremental demand. Adds ~\u20b980 spend."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on scalable generic cell (iroas 3.90); pushes through constrained auctions. Adds ~\u20b975 spend."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Raise bid on available generic slot (slot_share 0.53, iroas 3.26); extracts marginal efficiency. Adds ~\u20b965 spend."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund campaign ran out 7d ago; +20% budget unlocks efficient shower gel volume without bid caps. Adds ~\u20b9100 spend."
+      }
+    ],
+    "stance": [],
+    "notes": "Deployed full \u20b9300 allowance across three scalable Body Wash generic keywords and one running-out Shower Gel fund. Targeting cells with iroas \u2265 3.2 and verified bid room (slot share < 80%, CLEARS verdict). Maintains portfolio ROAS comfortably above 4.08 floor while prioritizing incremental revenue growth."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12096,
+    "tokens_out": 8344,
+    "cost_usd": 0.0014475999999999998,
+    "wall_clock_s": 82.91447366700004
+  }
+}

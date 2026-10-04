@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach surged by 5 standard deviations while CPM and OSA remained neutral, with no own-action confound detected. The isolated, high-magnitude reach spike strongly indicates a genuine demand or inventory availability shift rather than pricing changes or bid-feedback loops."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1241,
+    "cost_usd": 0.019935,
+    "wall_clock_s": 11.981401167000058
+  }
+}

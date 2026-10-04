@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "Although the mechanical scores for C-S1-MUM and C-S3-MUM are closely matched (0.6295 vs 0.5822), C-S1-MUM demonstrates overwhelming dominance in slot1_share_7d (0.91 vs 0.44). This clear market positioning validates the mechanical ranking and justifies protecting its bid while competitors hold."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1529,
+    "cost_usd": 0.024057,
+    "wall_clock_s": 13.95036479199996
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "lead_DEL_K05_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "expected_effect": "Shift generic impression share to S2 (scale) over S4 (fund) due to higher incremental revenue per impression."
+      },
+      {
+        "id": "lead_HYD_K01_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Lead S2 (scale) in body wash brand searches over S1 (fund) for better ROI."
+      },
+      {
+        "id": "lead_HYD_K05_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "expected_effect": "Capture body wash generic demand with S2 (scale) over S4 (scale)."
+      },
+      {
+        "id": "lead_MUM_K05_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "expected_effect": "Allocate body wash generic impressions to S2 (scale) ahead of S4 (saturated)."
+      },
+      {
+        "id": "lead_PUN_K01_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Prioritize S2 (scale) over S5 (hold) in body wash brand market."
+      },
+      {
+        "id": "lead_PUN_K02_S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "expected_effect": "Establish S1 (hold) leadership in soap brand over S3 (hold) where marginally more effective."
+      },
+      {
+        "id": "lead_PUN_K03_S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "expected_effect": "Take soap generic leadership with S3 over S1 in Punjab for improved share."
+      },
+      {
+        "id": "lead_PUN_K09_S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:PUN:K09"
+        ],
+        "expected_effect": "Lead S1 in soap competition queries over S3 to protect portfolio share."
+      },
+      {
+        "id": "lead_BLR_K05_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "expected_effect": "Secure body wash generic dominance with S2 (scale) against S4 (saturated)."
+      },
+      {
+        "id": "budget_raise_C-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "expected_effect": "Remove budget cap for efficient shower gel fund in DEL; ran out 4 of 7 days."
+      },
+      {
+        "id": "budget_raise_C-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "expected_effect": "Unlock additional efficient spend for soap fund in HYD; ran out 7 of 7 days."
+      },
+      {
+        "id": "budget_raise_C-S3-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "expected_effect": "Increase budget for soap fund in HYD; consistently hits delivery limits."
+      },
+      {
+        "id": "hold_C-S2-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "confidence": 0.95,
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K01",
+          "A:C-S2-HYD/K05",
+          "A:C-S2-HYD/K06"
+        ],
+        "expected_effect": "Freeze increases to avoid wasted spend while 3-day OSA remains critically low (0.42)."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "trim",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Replaced rejected lead/raise intents with targeted market leadership shifts favoring scale/fund SKUs with higher incremental scores. Raised budgets for underspent funds in DEL and HYD. Held the severely stock-constrained HYD body wash campaign to preserve direct ROAS floor and stop bleeding on unavailable inventory."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11319,
+    "tokens_out": 11250,
+    "cost_usd": 0.00180207,
+    "wall_clock_s": 82.75450950000004
+  }
+}

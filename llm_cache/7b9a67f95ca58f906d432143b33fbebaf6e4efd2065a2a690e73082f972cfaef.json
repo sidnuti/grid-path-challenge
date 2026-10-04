@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.55,
+    "rationale": "Mechanical leader_score selects C-S3-PUN by a narrow margin (0.2345 vs 0.2296). While C-S1-PUN exhibits a higher slot1 share (0.85 vs 0.61), this metric alone does not clearly override the algorithmic ranking in this near-tie scenario. Retaining the mechanical pick with moderate confidence to account for scoring noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2022,
+    "cost_usd": 0.03138,
+    "wall_clock_s": 19.660564625000006
+  }
+}

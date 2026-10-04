@@ -1,0 +1,322 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BUD-R-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture unmet demand; fund status with iroas 2.62 supports increased spend."
+      },
+      {
+        "id": "BUD-R-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund status, 7 run-outs in 7d. Headroom allows efficient volume growth."
+      },
+      {
+        "id": "BUD-R-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "High incremental value (iroas 5.23); added budget drives profitable sales."
+      },
+      {
+        "id": "BUD-R-4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund shower gel; strong iroas 4.59 justifies budget lift."
+      },
+      {
+        "id": "BUD-C-1",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Hold status with poor iroas 0.69. Large cut reallocates funds to efficient SKUs."
+      },
+      {
+        "id": "BUD-C-2",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Hold status; iroas 2.24 below median. Trim waste while maintaining base visibility."
+      },
+      {
+        "id": "BUD-C-3",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Hold status; iroas 2.20. Reduce burn to protect portfolio ROAS."
+      },
+      {
+        "id": "BID-R-1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Generic body wash cell CLEARS with 56% slot1 and mroas_up20 5.01. Bid lift captures incremental orders."
+      },
+      {
+        "id": "BID-R-2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "High incrementality (iota 0.83) and mroas 6.85. 53% slot1 share provides headroom."
+      },
+      {
+        "id": "BID-R-3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale status with 60% slot1. Generic keyword drives solid efficiency gains."
+      },
+      {
+        "id": "BID-R-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-BLR/K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Competition keyword CLEARS with 62% slot1. Bid uplift improves market capture."
+      },
+      {
+        "id": "BID-R-5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "CLEARS generic cell, 55% slot1, mroas 3.69. Efficient raise for incremental growth."
+      },
+      {
+        "id": "MK-L-1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01",
+          "C:C-S1-DEL/K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S1 dominates incremental value in DEL generic market. Displace S4 to capture top slot efficiently."
+      },
+      {
+        "id": "MK-Y-1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step back from K01 DEL to avoid internal cannibalization; let S1 lead."
+      },
+      {
+        "id": "MK-L-2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01",
+          "C:C-S1-MUM/K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S1 has highest score in MUM K01. Align ownership to maximize incremental reach."
+      },
+      {
+        "id": "MK-Y-2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S4 yields K01 MUM to cede leadership to S1."
+      },
+      {
+        "id": "MK-L-3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S4 holds highest incremental score for shower gel generics in MUM. Secure slot dominance."
+      },
+      {
+        "id": "MK-Y-3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S2 yields K05 MUM to allow higher-value S4 to lead."
+      },
+      {
+        "id": "MK-L-4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10",
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S2 is best performer for body wash competition in PUN. Take leadership to capture conversion."
+      },
+      {
+        "id": "MK-Y-4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S4 yields K10 PUN to avoid misallocation of spend in weaker category match."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "saturated",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocated budget from low-iroas holds to fund SKUs with proven incrementality. Aligned contested markets per M-table scores to prevent internal cannibalization. Only raised bids on CLEARS cells with <80% slot1 share to stay within guardrails and preserve portfolio ROAS above floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 26154,
+    "tokens_out": 20585,
+    "cost_usd": 0.00346067,
+    "wall_clock_s": 149.89893033299995
+  }
+}

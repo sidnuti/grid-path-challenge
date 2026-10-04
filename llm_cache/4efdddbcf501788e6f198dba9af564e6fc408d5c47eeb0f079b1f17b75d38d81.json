@@ -1,0 +1,116 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift ownership of DEL brand query to higher-incrementality S4, displacing inefficient S2 traffic."
+      },
+      {
+        "id": "LM-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move BLR generic award to S4 which offers superior incremental revenue per impression over S2."
+      },
+      {
+        "id": "LM-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct misallocation in MUM where S1 leads on incremental value but loses auction share to S5."
+      },
+      {
+        "id": "LM-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture missing incremental value in BLR generic K04 by reinstating S1 as leader over S3."
+      },
+      {
+        "id": "RB-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Deepen bids on high mROAS (>6x) generic cells for S4, capitalizing on scale posture and high incrementality."
+      },
+      {
+        "id": "BU-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Unblock fully exhausted efficient capacity in DEL Soap to sustain top-of-funnel volume."
+      },
+      {
+        "id": "BU-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Release budget constraint on S1-BLR (7/7 run-outs) to preserve efficiency-capped momentum."
+      }
+    ],
+    "notes": "Prioritized market reallocation to fix documented wrong-holder inefficiencies across DEL, BLR, and MUM. Paired with targeted bid deepening on high-mROAS S4 generic queries and controlled budget lifts on fully sold-out efficient Soap campaigns. All moves respect OSA guardrails and stay within daily allowance; expected portfolio ROAS impact is neutral-to-positive given selective focus on >2x iroas increments."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 22359,
+    "tokens_out": 20792,
+    "cost_usd": 0.00337373,
+    "wall_clock_s": 156.120274834
+  }
+}

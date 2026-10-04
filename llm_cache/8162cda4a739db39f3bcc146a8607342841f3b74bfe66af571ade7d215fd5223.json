@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical score slightly favors S4, but S2 demonstrates significantly higher slot 1 share (0.90 vs 0.63), indicating stronger auction dominance and efficiency. Given the near-tie in scores, protecting the campaign with established visibility reduces wasted spend and leverages its proven performance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1354,
+    "cost_usd": 0.021366,
+    "wall_clock_s": 13.904130124999938
+  }
+}

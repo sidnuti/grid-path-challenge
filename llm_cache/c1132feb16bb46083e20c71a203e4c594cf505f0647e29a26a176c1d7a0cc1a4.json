@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.65,
+    "rationale": "C-S1-DEL holds the higher mechanical leader score and demonstrates stronger market positioning with a higher slot 1 share. This aligns with the mechanical recommendation, making it the safer choice despite the narrow margin."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 1088,
+    "cost_usd": 0.017367,
+    "wall_clock_s": 11.995866290999857
+  }
+}

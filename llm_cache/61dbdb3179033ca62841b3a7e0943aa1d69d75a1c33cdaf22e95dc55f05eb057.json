@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.65,
+    "rationale": "Realised dROAS (4.22) comfortably exceeds goal (3.15), supporting the full proposed raise. Modest 28-day order volume (15) creates baseline variance, keeping confidence moderate and favoring the mechanical estimate over further escalation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 2247,
+    "cost_usd": 0.035124,
+    "wall_clock_s": 23.779958667000074
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlocks daily capacity for high-iROAS Shower Gel MUM; prevents stock-out driven loss."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Restores full ad spend capacity for efficient BLR Shower Gel campaign."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds high-capacity Body Wash DEL campaign to maintain incremental market share."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Captures additional volume on top-performing generic term with 8.0 MROAS uplift."
+      }
+    ],
+    "notes": "Prioritized budget raises on fund campaigns with depleted capacity (7/7 run-outs) to immediately restore off-take velocity. Supplemental bid adjustment targets a high-iota, high-MROAS generic cell in DEL with available slot-share headroom. Total incremental cost kept within the 300 INR daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12328,
+    "tokens_out": 6345,
+    "cost_usd": 0.00119469,
+    "wall_clock_s": 64.98911641700002
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.75,
+    "rationale": "Mechanical leader score slightly favors C-S3-MUM (0.2904 vs 0.2724), aligning with its substantially higher 7-day slot 1 share (0.92 vs 0.65). This indicates a stronger existing market position and more reliable performance, reinforcing the mechanical pick for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1460,
+    "cost_usd": 0.02295,
+    "wall_clock_s": 14.756583625000076
+  }
+}

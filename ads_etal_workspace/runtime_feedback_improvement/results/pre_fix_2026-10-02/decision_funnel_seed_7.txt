@@ -1,0 +1,9 @@
+== scripts/decision_funnel.py 7  (HTNToolsOnly, dev scenario, after M3 S10 headroom change)
+run day cells CLEARS MISSES THIN tierA tierB tierC held reprice budget raise_dspend allowance headroom droas_to_date floor_m comp_cuts base_cuts precheck_dropped drop_reasons emitted shipped
+1  28  110 66 18 26 87 20 3 60 10 5 2861 0.00    0.00    4.6276 4.6258 1 4 0 {}       5  5
+2  35  110 68 16 26 89 19 2 58 11 5 3480 0.00    0.00    4.6244 4.6258 0 8 0 {}       8  8
+3  42  110 68 16 26 86 19 5 57 13 7 4447 158.98  794.90  4.7257 4.6258 0 9 5 {G3: 5}  24 24
+4  49  110 68 15 27 87 17 6 60 5  2 1108 312.31  1561.56 4.7550 4.6258 1 7 5 {G3: 5}  10 10
+5  56  110 70 13 27 90 15 5 56 4  2 1620 564.67  2823.35 4.7999 4.6258 1 6 3 {G3: 3}  10 10
+6  63  110 71 14 25 88 16 6 56 5  1 535  3847.93 3847.93 4.8128 4.6258 0 6 3 {G3: 3}  9  9
+SUMMARY offtake_inr_per_day=410878 warmup_offtake_inr_per_day=407933 ad_spend_inr_per_day=19233 direct_roas=4.821 roas_floor=4.535 roas_constraint_met=True actions_shipped=66 actions_proposed=66

@@ -1,0 +1,375 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-s2-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove budget cap on efficient Body Wash MUM; ran out 7/7 days, iroas 4.70"
+      },
+      {
+        "id": "budget-s1-hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieve budget constraint on Soap HYD; ran out 7/7, iroas 1.87"
+      },
+      {
+        "id": "budget-s1-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieve budget constraint on Soap PUN; ran out 7/7, iroas 2.19"
+      },
+      {
+        "id": "budget-s4-blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Add capacity to Shower Gel BLR; ran out 3/7, iroas 2.32"
+      },
+      {
+        "id": "bid-s2-del-k01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01",
+          "keyword_type": "brand"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Acquire top slot for highly incremental Body Wash brand in DEL; iroas 5.45"
+      },
+      {
+        "id": "bid-s2-blr-k01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K01",
+          "keyword_type": "brand"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-BLR/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure slot 1 for efficient Body Wash brand in BLR; iroas 4.41"
+      },
+      {
+        "id": "bid-s2-pun-k01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K01",
+          "keyword_type": "brand"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-PUN/K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Top slot for efficient Body Wash brand in PUN; iroas 4.39"
+      },
+      {
+        "id": "bid-s4-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push Shower Gel generic to slot 1; iroas 2.74, slot1 share 0.71"
+      },
+      {
+        "id": "bid-s4-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push Shower Gel generic to slot 1; iroas 3.96, slot1 share 0.66"
+      },
+      {
+        "id": "bid-s4-del-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture slot 1 for competitor keyword with high iota/incrementality; iroas 4.84"
+      },
+      {
+        "id": "bid-s4-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take top slot for Shower Gel generic in MUM; iroas 4.13, share 0.59"
+      },
+      {
+        "id": "bid-s4-hyd-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead Shower Gel generic in HYD; iroas 2.96, share 0.58"
+      },
+      {
+        "id": "bid-s4-hyd-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead Shower Gel generic in HYD; iroas 3.65, share 0.47"
+      },
+      {
+        "id": "bid-s4-pun-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K10",
+          "keyword_type": "competition"
+        },
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-PUN/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Acquire slot 1 for competitor keyword with excellent incrementality; iroas 6.60"
+      },
+      {
+        "id": "lead-s2-blr-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to S2 (score 1.48) which beats current holder S4 significantly"
+      },
+      {
+        "id": "lead-s1-blr-k02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move leadership to S1 (score 0.26) over ineffective S3 holder (score 0)"
+      },
+      {
+        "id": "lead-s4-blr-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:BLR:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Pass leadership to S4 (score 0.93) over S2; better incremental efficiency"
+      },
+      {
+        "id": "lead-s2-del-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Grant S2 leadership (score 1.59) over wrong-holder S3; maximizes ROAS"
+      },
+      {
+        "id": "lead-s4-del-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfer S4 leadership (score 0.80) from S2 for better incremental return"
+      },
+      {
+        "id": "lead-s1-hyd-k02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Switch leader to S1 (score 0.26) replacing underperforming S3"
+      },
+      {
+        "id": "lead-s1-hyd-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take leadership from S5 to S1; S1 holds highest score 0.51 in HYD"
+      },
+      {
+        "id": "lead-s2-mum-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Award S2 leadership (score 2.14) over S4; massive incrementality gap"
+      },
+      {
+        "id": "lead-s2-pun-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Give S2 leadership (score 1.45) away from S1 for superior performance"
+      },
+      {
+        "id": "lead-s2-pun-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Switch to S2 (score 1.62) over S4 holder; drives high ROI traffic"
+      },
+      {
+        "id": "lead-s2-pun-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfer S2 leadership (score 1.61) over S4 for optimal market capture"
+      }
+    ],
+    "notes": "Prioritized budget lifts on capping Fund SKUs (S2-MUM, S1-HYD, S1-PUN) and raised competitive/generic bids where iroas and iota signal high incremental value. Realigned market leadership in 11 contested instances to winners with superior incremental scores, driving efficient spend across Body Wash and Shower Gel portfolios."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24964,
+    "tokens_out": 22544,
+    "cost_usd": 0.0036796400000000005,
+    "wall_clock_s": 199.64447033299996
+  }
+}

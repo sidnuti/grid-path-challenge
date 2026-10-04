@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.7,
+    "confidence": 0.5,
+    "rationale": "The mechanical model clears a bid increase to defend share on a competition keyword, but realized dROAS (1.87) misses the target (2.22) by ~16%, indicating efficiency headwinds that would be exacerbated by a full step-up. Recent order volume (22) also limits statistical certainty. Rather than fully endorsing or flatly rejecting the +10% proposal, a moderate dampener tests incremental reach while constraining downside risk on profitability."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 1422,
+    "cost_usd": 0.022725,
+    "wall_clock_s": 17.095503291
+  }
+}

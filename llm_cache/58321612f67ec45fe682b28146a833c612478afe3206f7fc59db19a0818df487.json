@@ -1,0 +1,231 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reassigns impressions from lower-value S3 to highest-incremental S2 in contested BLR market."
+      },
+      {
+        "id": "LM-DEL-K03-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03",
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reassigns impressions from S1 to superior-performing S3 on generic queries in DEL."
+      },
+      {
+        "id": "LM-DEL-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shifts leadership to S4 which demonstrates higher incremental revenue per impression than S2."
+      },
+      {
+        "id": "LM-MUM-K05-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Captures lead on high-volume generic keyword for S2 over S4."
+      },
+      {
+        "id": "RB-S2-DEL-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increases competitive positioning on brand keyword where slot share is manageable."
+      },
+      {
+        "id": "RB-S2-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Improves acquisition on competition keyword with strong incremental ROI."
+      },
+      {
+        "id": "RB-S3-DEL-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secures broader visibility on brand search within safe slot margins."
+      },
+      {
+        "id": "RB-S3-DEL-K02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K02"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverages brand second-keyword opportunity with existing bid headroom."
+      },
+      {
+        "id": "RB-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Fights for incremental volume on generic query away from saturation ceiling."
+      },
+      {
+        "id": "RB-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Capitalizes on generic keyword efficiency before hitting slot-cap thresholds."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Removed all previously rejected intents. Realized contested market leadership to SKUs with highest incremental scores (S2, S3, S4) to maximize portfolio iROAS. Directed targeted bid increases only on efficient, non-saturated cells within scale-qualified accounts, respecting MISSION guardrails and avoiding low-OSA segments (S2-HYD)."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11364,
+    "tokens_out": 11085,
+    "cost_usd": 0.00178197,
+    "wall_clock_s": 87.27211320899994
+  }
+}

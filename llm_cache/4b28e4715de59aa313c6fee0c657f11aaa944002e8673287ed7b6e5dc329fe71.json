@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 5.0 is far beyond noise (~5 baseline SDs) and clearly flagged. CPM z-score of 0.0 and OSA z-score of 0.0 indicate no price or auction-competition movement, ruling out a price/competition-driven explanation. Own-action confound flag is False, so this is not the harness's own prior bid/budget change landing in the data. The pattern \u2014 a large reach surge with flat prices and no self-confound \u2014 is most consistent with a genuine demand/availability shift in this cell, worth reacting to."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 431,
+    "tokens_out": 467,
+    "cost_usd": 0.0007432200000000001,
+    "wall_clock_s": 4.7237187079999785
+  }
+}

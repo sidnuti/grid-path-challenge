@@ -1,0 +1,223 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-budget-s3-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Stop budget bleed on weak SKU; frees daily allowance for efficient spend."
+      },
+      {
+        "id": "cut-budget-s3-blr",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Same; protects portfolio ROAS floor by reducing low-iota exposure."
+      },
+      {
+        "id": "hold-c1-hyd",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Block raises on low-incrementality brand queries; preserves ROAS margin."
+      },
+      {
+        "id": "hold-c1-pun",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Cap S1 brand spend to maintain portfolio direct ROAS at floor."
+      },
+      {
+        "id": "lead-s4-del-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift brand share to highest incremental SKU (S4 over S5/S2)."
+      },
+      {
+        "id": "lead-s4-del-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S4 leads generic competition; leverages higher iota than S2."
+      },
+      {
+        "id": "lead-s4-mum-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate S4 leadership in MUM on K05; corrects wrong holder."
+      },
+      {
+        "id": "lead-s4-mum-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S4 leads K06; avoids volume dilution on high-value generic."
+      },
+      {
+        "id": "lead-s4-mum-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S4 leads competition query; captures incremental share from S2."
+      },
+      {
+        "id": "lead-s4-pun-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead S4 over S2 in PUN on K05 where S4 score is superior."
+      },
+      {
+        "id": "lead-s4-pun-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead S4 over S2 in PUN on K06."
+      },
+      {
+        "id": "lead-s4-pun-k10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead S4 over S2 in PUN on K10."
+      },
+      {
+        "id": "raise-bid-s4-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Push to slot 1 on high-iota generic; drives off-take within strict allowance."
+      },
+      {
+        "id": "raise-bid-s2-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Maintain S2 visibility adjacent to S4 leadership; conservative cost impact."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Cut S3 budgets to halt low-iota leakage and free the 300 INR daily allowance. Lead S4 across contested markets where its incremental score exceeds siblings, protecting the portfolio ROAS floor while concentrating spend on high-growth SKUs. Only targeted raises remain, sized to respect the tight allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11098,
+    "tokens_out": 9357,
+    "cost_usd": 0.0015493500000000001,
+    "wall_clock_s": 90.88978808399997
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.6,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 3.627 is strongly flagged, confirming a statistically significant volume spike. The own-action confound flag is false, ruling out internal bid/budget mechanics. The unflagged negative CPM z-score suggests pricing or competition did not drive the move, pointing instead to a genuine external demand or supply shift. High confidence in a market-driven surge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 2066,
+    "cost_usd": 0.032322,
+    "wall_clock_s": 19.286603540999977
+  }
+}

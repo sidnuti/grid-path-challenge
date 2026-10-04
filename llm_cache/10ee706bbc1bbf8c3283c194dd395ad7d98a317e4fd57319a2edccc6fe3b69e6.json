@@ -1,0 +1,249 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "expected_effect": "Funds capped Body Wash campaign running out of budget, unlocking efficient scale."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "expected_effect": "Releases budget ceiling for efficient Scale role, capturing incremental demand."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "expected_effect": "Addresses 7-day run-out, stabilizing Fund role without breaking ROAS floor."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "expected_effect": "Clears 5-day run-out barrier, preserving efficient Soap spend."
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "expected_effect": "Increases capture on high-mroas Shower Gel generic cell with strong incremental share."
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "expected_effect": "Secures top impressions on high-return Shower Gel generic in BLR market."
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "expected_effect": "Maximizes spend on the highest portfolio iroas segment (Shower Gel PUN)."
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "expected_effect": "Strengthens position in high-volume MUM generic market for Shower Gel."
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "expected_effect": "Assigns slot 1 leadership to Shower Gel where it delivers superior incremental value."
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "expected_effect": "Shifts market leadership to Shower Gel to maximize iroas in MUM generic segment."
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "expected_effect": "Enables Body Wash to lead DEL brand market where its incremental return exceeds rivals."
+      },
+      {
+        "id": "INT-12",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "expected_effect": "Steps back Shower Gel to prevent internal cannibalization and optimize allocation."
+      },
+      {
+        "id": "INT-13",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-MUM/K03"
+        ],
+        "expected_effect": "Removes overspend on MISSES generic cell, freeing allowance for higher-iroas placements."
+      },
+      {
+        "id": "INT-14",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-MUM/K03"
+        ],
+        "expected_effect": "Trims weak competitor generic bid, protecting portfolio ROAS floor."
+      },
+      {
+        "id": "INT-15",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S5-BLR/K03"
+        ],
+        "expected_effect": "Cuts high-spend MISSES Kids Soap cell, reallocating capital to core SKUs."
+      },
+      {
+        "id": "INT-16",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-BLR/K03"
+        ],
+        "expected_effect": "Reduces bleed on underperforming BLR generic, supporting overall efficiency."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritized allowance on Shower Gel and Body Wash generic/competition segments where iroas and iota are strongest. Replaced previous cell-level cuts on fund/protected assets with targeted budget raises. Trimmed high-spend MISSES generic cells to safeguard ROAS floor while maximizing incremental offtake."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12035,
+    "tokens_out": 11227,
+    "cost_usd": 0.00182056,
+    "wall_clock_s": 106.66087737499998
+  }
+}

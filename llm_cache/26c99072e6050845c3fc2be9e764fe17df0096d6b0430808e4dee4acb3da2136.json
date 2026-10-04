@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.5,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "High flagged reach z-score (4.516) with no own-action confound indicates a genuine external market event. Lack of CPM compression flags points to a demand-driven volume surge rather than a pricing/competition shift or internal bidding artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1751,
+    "cost_usd": 0.027597,
+    "wall_clock_s": 16.716840166999987
+  }
+}

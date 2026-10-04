@@ -1,0 +1,424 @@
+{
+  "forecast": [
+    {
+      "stratum": "not_run_out",
+      "pred_spend": 404063.93,
+      "real_spend": 240279.27,
+      "pred_rev": 2719193.37,
+      "real_rev": 1386162.1428571427,
+      "spend_real/pred": 0.5946565683306599,
+      "rev_real/pred": 0.509769609675513
+    },
+    {
+      "stratum": "ran_out",
+      "pred_spend": 213314.51,
+      "real_spend": 105442.75285714286,
+      "pred_rev": 1091714.15,
+      "real_rev": 531944.5714285715,
+      "spend_real/pred": 0.4943065188446058,
+      "rev_real/pred": 0.48725627622264633
+    }
+  ],
+  "forecast_tier": [
+    {
+      "stratum": "not_run_out",
+      "tier": "A",
+      "cell_runs": 1241,
+      "pred_spend": 371330.51,
+      "real_spend": 221398.74285714285,
+      "pred_rev": 2559282.88,
+      "real_rev": 1318868.2857142857,
+      "spend_real/pred": 0.5962309503120087,
+      "rev_real/pred": 0.5153272801614981,
+      "droas_real": 5.956981817937797,
+      "droas_pred": 6.892196604044197
+    },
+    {
+      "stratum": "not_run_out",
+      "tier": "B",
+      "cell_runs": 295,
+      "pred_spend": 27719.43,
+      "real_spend": 15952.657142857142,
+      "pred_rev": 131773.31,
+      "real_rev": 59890.857142857145,
+      "spend_real/pred": 0.5755045158885714,
+      "rev_real/pred": 0.4544991481420414,
+      "droas_real": 3.754287239206008,
+      "droas_pred": 4.753824663782769
+    },
+    {
+      "stratum": "not_run_out",
+      "tier": "C",
+      "cell_runs": 105,
+      "pred_spend": 5013.99,
+      "real_spend": 2927.87,
+      "pred_rev": 28137.18,
+      "real_rev": 7403.0,
+      "spend_real/pred": 0.5839401355008685,
+      "rev_real/pred": 0.2631038362764143,
+      "droas_real": 2.528459255363114,
+      "droas_pred": 5.611734367240461
+    },
+    {
+      "stratum": "ran_out",
+      "tier": "A",
+      "cell_runs": 602,
+      "pred_spend": 189215.88,
+      "real_spend": 95592.26,
+      "pred_rev": 1028514.5,
+      "real_rev": 509257.5714285714,
+      "spend_real/pred": 0.5052021003733935,
+      "rev_real/pred": 0.495138932342297,
+      "droas_real": 5.327393362481141,
+      "droas_pred": 5.4356669218249545
+    },
+    {
+      "stratum": "ran_out",
+      "tier": "B",
+      "cell_runs": 134,
+      "pred_spend": 22503.88,
+      "real_spend": 9138.945714285714,
+      "pred_rev": 57890.340000000004,
+      "real_rev": 21081.285714285714,
+      "spend_real/pred": 0.40610533447057634,
+      "rev_real/pred": 0.36415895491865674,
+      "droas_real": 2.3067524825464396,
+      "droas_pred": 2.572460393496588
+    },
+    {
+      "stratum": "ran_out",
+      "tier": "C",
+      "cell_runs": 16,
+      "pred_spend": 1594.75,
+      "real_spend": 711.5471428571428,
+      "pred_rev": 5309.3099999999995,
+      "real_rev": 1605.7142857142856,
+      "spend_real/pred": 0.44618099567778197,
+      "rev_real/pred": 0.30243370338410935,
+      "droas_real": 2.2566520037825017,
+      "droas_pred": 3.3292428280294715
+    }
+  ],
+  "iota": [
+    {
+      "type": "brand",
+      "n": 180,
+      "mean_est": 0.23806611111111112,
+      "mean_true_inc": 0.1413018365656199,
+      "mean_true_eff": 0.11613247238808708,
+      "mae_vs_eff": 0.17283917771133545,
+      "bias_vs_eff": 0.12193363872302404,
+      "corr_eff": 0.02030915641681927
+    },
+    {
+      "type": "competition",
+      "n": 144,
+      "mean_est": 0.8152229166666667,
+      "mean_true_inc": 0.8553654916953914,
+      "mean_true_eff": 0.8553654916953914,
+      "mae_vs_eff": 0.18098844520343838,
+      "bias_vs_eff": -0.04014257502872475,
+      "corr_eff": 0.03307341072335058
+    },
+    {
+      "type": "generic",
+      "n": 180,
+      "mean_est": 0.6832466666666667,
+      "mean_true_inc": 0.5781424287056112,
+      "mean_true_eff": 0.5427620254725753,
+      "mae_vs_eff": 0.19516335923064992,
+      "bias_vs_eff": 0.14048464119409132,
+      "corr_eff": -0.07122094686536717
+    }
+  ],
+  "iota_run": [
+    {
+      "run": 1,
+      "n": 84,
+      "mae_vs_eff": 0.1980230329390367,
+      "bias": 0.09697253885108015
+    },
+    {
+      "run": 2,
+      "n": 84,
+      "mae_vs_eff": 0.1802423843298223,
+      "bias": 0.0646701578986992
+    },
+    {
+      "run": 3,
+      "n": 84,
+      "mae_vs_eff": 0.17039842220961335,
+      "bias": 0.06458682456536587
+    },
+    {
+      "run": 4,
+      "n": 84,
+      "mae_vs_eff": 0.1941385296707549,
+      "bias": 0.10043325313679445
+    },
+    {
+      "run": 5,
+      "n": 84,
+      "mae_vs_eff": 0.18545512415995727,
+      "bias": 0.08173325313679444
+    },
+    {
+      "run": 6,
+      "n": 84,
+      "mae_vs_eff": 0.1705852776295356,
+      "bias": 0.08511301504155634
+    }
+  ],
+  "siblings": [
+    {
+      "near_tie": false,
+      "markets": 1259,
+      "leader_correct": 0.7013502779984114,
+      "mean_value_ratio": 0.9195391507220434
+    },
+    {
+      "near_tie": true,
+      "markets": 181,
+      "leader_correct": 0.56353591160221,
+      "mean_value_ratio": 0.8798491614669426
+    }
+  ],
+  "headroom": [
+    {
+      "run": 1,
+      "headroom_inr_day": 0.0,
+      "allowance_inr_day": 300.0,
+      "shipped_raise_pred_dspend": 218.365
+    },
+    {
+      "run": 2,
+      "headroom_inr_day": 913.5016666666667,
+      "allowance_inr_day": 303.31333333333333,
+      "shipped_raise_pred_dspend": 219.08833333333334
+    },
+    {
+      "run": 3,
+      "headroom_inr_day": 1827.4016666666666,
+      "allowance_inr_day": 408.8433333333333,
+      "shipped_raise_pred_dspend": 218.4416666666667
+    },
+    {
+      "run": 4,
+      "headroom_inr_day": 3064.115,
+      "allowance_inr_day": 612.8233333333334,
+      "shipped_raise_pred_dspend": 498.83666666666664
+    },
+    {
+      "run": 5,
+      "headroom_inr_day": 4831.448333333333,
+      "allowance_inr_day": 966.29,
+      "shipped_raise_pred_dspend": 679.615
+    },
+    {
+      "run": 6,
+      "headroom_inr_day": 6644.243333333333,
+      "allowance_inr_day": 6644.243333333333,
+      "shipped_raise_pred_dspend": 2690.943333333333
+    }
+  ],
+  "headroom_end": [
+    {
+      "seed": 7,
+      "end_slack_inr_total": 62346.2008158766,
+      "end_margin": 0.36599999999999966
+    },
+    {
+      "seed": 11,
+      "end_slack_inr_total": 104823.41037443816,
+      "end_margin": 0.5389999999999997
+    },
+    {
+      "seed": 23,
+      "end_slack_inr_total": 80828.01288508566,
+      "end_margin": 0.41800000000000015
+    },
+    {
+      "seed": 42,
+      "end_slack_inr_total": 81679.12693285325,
+      "end_margin": 0.5359999999999996
+    },
+    {
+      "seed": 101,
+      "end_slack_inr_total": 45613.337651767884,
+      "end_margin": 0.24399999999999977
+    },
+    {
+      "seed": 202,
+      "end_slack_inr_total": 70331.256873706,
+      "end_margin": 0.4319999999999995
+    }
+  ],
+  "precheck": [
+    {
+      "proposed": 442,
+      "shipped": 442,
+      "blocked": 0,
+      "dropped_by_precheck": 130
+    }
+  ],
+  "shocks": [
+    {
+      "kind": "demand",
+      "tp": 14,
+      "fn": 105,
+      "fp_before_onset": 4,
+      "fp_elsewhere": 38,
+      "recall": 0.11764705882352941,
+      "precision": 0.25
+    },
+    {
+      "kind": "osa",
+      "tp": 24,
+      "fn": 0,
+      "fp_before_onset": 0,
+      "fp_elsewhere": 0,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    {
+      "kind": "price",
+      "tp": 19,
+      "fn": 25,
+      "fp_before_onset": 4,
+      "fp_elsewhere": 208,
+      "recall": 0.4318181818181818,
+      "precision": 0.08225108225108226
+    }
+  ],
+  "shock_lead": [
+    {
+      "seed": 7,
+      "kind": "demand",
+      "onset_day": 56,
+      "first_detect_obs_day": 63,
+      "lead_days": 7
+    },
+    {
+      "seed": 7,
+      "kind": "osa",
+      "onset_day": 42,
+      "first_detect_obs_day": 49,
+      "lead_days": 7
+    },
+    {
+      "seed": 7,
+      "kind": "price",
+      "onset_day": 49,
+      "first_detect_obs_day": 56,
+      "lead_days": 7
+    },
+    {
+      "seed": 11,
+      "kind": "demand",
+      "onset_day": 56,
+      "first_detect_obs_day": 63,
+      "lead_days": 7
+    },
+    {
+      "seed": 11,
+      "kind": "osa",
+      "onset_day": 42,
+      "first_detect_obs_day": 49,
+      "lead_days": 7
+    },
+    {
+      "seed": 11,
+      "kind": "price",
+      "onset_day": 49,
+      "first_detect_obs_day": 63,
+      "lead_days": 14
+    },
+    {
+      "seed": 23,
+      "kind": "demand",
+      "onset_day": 56,
+      "first_detect_obs_day": 63,
+      "lead_days": 7
+    },
+    {
+      "seed": 23,
+      "kind": "osa",
+      "onset_day": 42,
+      "first_detect_obs_day": 49,
+      "lead_days": 7
+    },
+    {
+      "seed": 23,
+      "kind": "price",
+      "onset_day": 49,
+      "first_detect_obs_day": 56,
+      "lead_days": 7
+    },
+    {
+      "seed": 42,
+      "kind": "demand",
+      "onset_day": 56,
+      "first_detect_obs_day": 63,
+      "lead_days": 7
+    },
+    {
+      "seed": 42,
+      "kind": "osa",
+      "onset_day": 42,
+      "first_detect_obs_day": 49,
+      "lead_days": 7
+    },
+    {
+      "seed": 42,
+      "kind": "price",
+      "onset_day": 49,
+      "first_detect_obs_day": 56,
+      "lead_days": 7
+    },
+    {
+      "seed": 101,
+      "kind": "demand",
+      "onset_day": 56,
+      "first_detect_obs_day": 63,
+      "lead_days": 7
+    },
+    {
+      "seed": 101,
+      "kind": "osa",
+      "onset_day": 42,
+      "first_detect_obs_day": 49,
+      "lead_days": 7
+    },
+    {
+      "seed": 101,
+      "kind": "price",
+      "onset_day": 49,
+      "first_detect_obs_day": 56,
+      "lead_days": 7
+    },
+    {
+      "seed": 202,
+      "kind": "demand",
+      "onset_day": 56,
+      "first_detect_obs_day": 63,
+      "lead_days": 7
+    },
+    {
+      "seed": 202,
+      "kind": "osa",
+      "onset_day": 42,
+      "first_detect_obs_day": 49,
+      "lead_days": 7
+    },
+    {
+      "seed": 202,
+      "kind": "price",
+      "onset_day": 49,
+      "first_detect_obs_day": 56,
+      "lead_days": 7
+    }
+  ],
+  "_code_hashes_seen": [
+    "63196db22b74"
+  ]
+}

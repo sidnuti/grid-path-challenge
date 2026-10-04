@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.55,
+    "rationale": "Scores are statistically indistinguishable (<3.5% gap), rendering the mechanical tie ineffective. C-S3-DEL's significantly higher slot1_share (0.93 vs 0.60) indicates it is already capturing disproportionate top-tier inventory. Elevating the campaign that dominates visible real estate aligns better with market leadership and bid-protection goals than adhering to a negligible mechanical edge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 1747,
+    "cost_usd": 0.027252,
+    "wall_clock_s": 17.533837500000004
+  }
+}

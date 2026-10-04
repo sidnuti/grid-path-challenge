@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.75,
+    "rationale": "The mechanical score is nearly tied, but S2 exhibits a substantially higher top slot share (0.81 vs 0.66), reflecting stronger actual ad positioning and visibility. Prioritizing the campaign that currently dominates top slots mitigates scoring noise and preserves existing market share."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1182,
+    "cost_usd": 0.018786,
+    "wall_clock_s": 11.016417375000003
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.05,
+    "confidence": 0.7,
+    "rationale": "Cell CLEARS with strong headroom: shrunk realised dROAS 4.96 is ~57% above the 3.15 goal, so the +20% raise has room to work without breaching efficiency targets. Order volume (23 in 28 days) is adequate for tier B, supporting signal reliability. Take the full raise with a slight extension, kept modest given tier B shrinkage and typical volatility at this spend level."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 450,
+    "tokens_out": 570,
+    "cost_usd": 0.000879,
+    "wall_clock_s": 5.56324758300002
+  }
+}

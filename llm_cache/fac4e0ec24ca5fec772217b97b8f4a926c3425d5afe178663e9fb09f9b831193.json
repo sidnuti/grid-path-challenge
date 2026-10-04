@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 9.0,
+    "direction": "surge",
+    "confidence": 0.95,
+    "rationale": "Extreme reach z-score (11.42) paired with significant CPM compression (-3.31) and a false own-action confound flag strongly indicates a genuine market demand or liquidity surge. The mechanics align with an external shock rather than a bidding feedback loop."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 445,
+    "tokens_out": 1735,
+    "cost_usd": 0.02736,
+    "wall_clock_s": 16.63786204200005
+  }
+}

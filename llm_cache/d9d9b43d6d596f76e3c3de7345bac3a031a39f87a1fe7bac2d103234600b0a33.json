@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.85,
+    "rationale": "C-S2-BLR holds the higher mechanical score and demonstrates significantly better market presence with a 0.93 slot 1 share versus 0.49 for C-S4-BLR, providing strong evidence to retain the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1190,
+    "cost_usd": 0.0189,
+    "wall_clock_s": 13.26921091700001
+  }
+}

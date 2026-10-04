@@ -1,0 +1,313 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "lm-s2-blr-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shifts slot-1 to S2 (highest incremental score 2.463), yielding S4/S1/S3/S5 to capture higher iroas on body wash queries."
+      },
+      {
+        "id": "lm-s2-del-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Allocates slot-1 to S2 (score 2.568) over incumbent S1 to maximize incremental revenue."
+      },
+      {
+        "id": "lm-s2-hyd-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Moves leadership to S2 (score 3.196) where iroas is maximized."
+      },
+      {
+        "id": "lm-s2-mum-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S2 leads (score 2.309) replacing S4 to capture truly incremental demand."
+      },
+      {
+        "id": "lm-s2-pun-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "S2 takes slot-1 (score 2.339) driving higher incremental return than S1."
+      },
+      {
+        "id": "lm-s1-del-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Corrects holder to S1 (score 0.910) over S3 for better soap incrementality."
+      },
+      {
+        "id": "lm-s1-mum-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S1 leads (score 0.977) over S3 to improve generic soap efficiency."
+      },
+      {
+        "id": "lm-s4-pun-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "S4 leads (score 1.746) over S2 in shower gel generic to capture highest mroas."
+      },
+      {
+        "id": "bf-c-s4-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlocks budget cap for fund campaign with mroas_up20 ~8.0-8.5; clears 7-day run-out streak."
+      },
+      {
+        "id": "bf-c-s4-blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases spend for highly efficient fund campaign (mroas ~7.8); supports scaled offtake."
+      },
+      {
+        "id": "bf-c-s4-hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Funds top mroas performer (8.35) across 7-day run-out; prioritizes shower gel growth."
+      },
+      {
+        "id": "bf-c-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Relieves cap on fund campaign with iota=1.00 competitor cells; captures pure incremental body wash volume."
+      },
+      {
+        "id": "rb-c-s4-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bids up efficient scale cell (mroas 7.00) to expand high-return generic shower gel share."
+      },
+      {
+        "id": "rb-c-s4-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increases bid on secondary generic (mroas 4.49) to sustain scale campaign momentum."
+      },
+      {
+        "id": "rb-c-s1-hyd-k07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-HYD/K07"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Targets high iroas 6.30 thin cell to capture additional incremental soap sales efficiently."
+      },
+      {
+        "id": "rb-c-s1-pun-k07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K07"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-PUN/K07"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bids up scale generic cell (iroas 4.97) to leverage idle bid headroom."
+      },
+      {
+        "id": "rb-c-s2-blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increases investment on scale body wash generic (iroas 5.25, iota 0.81)."
+      },
+      {
+        "id": "hold-c-s3-del",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K03",
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Blocks further raises on weak trim campaign (iroas 0.79, multiple MISSES) to preserve allowance for higher-roi buckets."
+      },
+      {
+        "id": "hold-c-s5-del",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "C:C-S5-DEL/K01"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Freezes budget/bid changes on low-incrementality kids soap (brand iroas 0.47) to prevent organic displacement waste."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Corrected contested markets to route slot-1 to the SKUs with the highest incremental revenue per impression (S2 body wash on generic queries, S1 soap, S4 shower gel). Directed budget raises toward fund campaigns exhibiting the highest mroas_up20 and consistent run-outs, while topping up scale campaigns with verified high iroas. Held weak trim campaigns to conserve the day's allowance for incremental growth."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12157,
+    "tokens_out": 8095,
+    "cost_usd": 0.0014170600000000002,
+    "wall_clock_s": 76.30140499999993
+  }
+}

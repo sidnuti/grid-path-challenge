@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.7,
+    "rationale": "C-S1-HYD leads mechanically on both leader_score (0.6615 vs 0.6284) and slot1_share_7d (0.63 vs 0.56). Given the narrow margin and absence of contradictory signals, adhering to the mechanical pick remains optimal despite inherent scoring noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1580,
+    "cost_usd": 0.024831,
+    "wall_clock_s": 16.663991958999986
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader_score gives C-S1-BLR a marginal advantage. While C-S3-BLR shows a substantially higher slot share, the composite metric heavily weights conversion value and incrementality, making C-S1-BLR the robust choice to prioritize in this near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1743,
+    "cost_usd": 0.027195,
+    "wall_clock_s": 20.377580792000003
+  }
+}

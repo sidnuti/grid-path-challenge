@@ -1,0 +1,153 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "raise-budget-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Absorb excess demand; fund campaign ran out 7 of last 7 days supports +30% budget."
+      },
+      {
+        "id": "raise-budget-s4-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cover afternoon/evening demand; funded campaign ran out 4 of last 7 days."
+      },
+      {
+        "id": "raise-bid-blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental generic demand; mroas_up20=5.95, slot1_share=0.55 leaves headroom."
+      },
+      {
+        "id": "raise-bid-blr-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental body wash sales; strong mroas and iota=0.68, share 0.55 safe for raise."
+      },
+      {
+        "id": "raise-bid-pun-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale efficient generic conquest in Pune; high predictivity and clean CLEARS tier."
+      },
+      {
+        "id": "raise-bid-mum-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow shower gel off-take; high iota (0.76) and share 0.65 permits increase."
+      },
+      {
+        "id": "raise-bid-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure top slots for generic shower gel; strong incrementality and slot share <80%."
+      },
+      {
+        "id": "hold-s2-hyd",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "expected_effect": "Block automated increases while 3-day OSA remains at 0.42 (below 0.60 threshold)."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Replaced OSA-blocked and high-slot-share bid raises with efficient sub-80% share cells across BLR, PUN, and MUM. Budget scaled on fund campaigns with verified run-outs; HYD body wash held pending restock to protect inventory health and portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11425,
+    "tokens_out": 9814,
+    "cost_usd": 0.00161857,
+    "wall_clock_s": 77.96783537500005
+  }
+}

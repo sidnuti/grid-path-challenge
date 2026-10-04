@@ -1,0 +1,238 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "bgt-raise-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unpack Delhi Shower Gel cap to capture incremental volume behind iroas 2.97 fund status."
+      },
+      {
+        "id": "bgt-raise-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Release Soap Delhi constraint after 7 consecutive run-out days to protect base off-take."
+      },
+      {
+        "id": "bgt-raise-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Allocate body wash Bangalore spend behind highest city-level iroas (3.35) scale role."
+      },
+      {
+        "id": "bgt-raise-4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Mumbai shower gel budget to sustain efficient scale positioning without hitting caps."
+      },
+      {
+        "id": "bgt-raise-5",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Direct Punjab allowance to body wash runner with iroas 3.19 and zero recent run-outs."
+      },
+      {
+        "id": "mdl-1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Install S4 as Delhi generic K06 leader (score 1.123) displacing lower-efficiency S2 holder."
+      },
+      {
+        "id": "yld-1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back S4 in Delhi generic K05 to allow S2 leader (score 1.129) to acquire traffic."
+      },
+      {
+        "id": "mdl-2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Consolidate Mumbai generic K06 slot-1 dominance on S4 (score 1.339) over S2."
+      },
+      {
+        "id": "mdl-3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Place S2 as body wash Mumbai K05 leader (score 1.269) ahead of holding S4."
+      },
+      {
+        "id": "yld-2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce S4 exposure in Mumbai K05 to prevent internal CPC cannibalization."
+      },
+      {
+        "id": "mdl-4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secure Punjab K05 share for S2 (score 1.147) over currently holding S4."
+      },
+      {
+        "id": "yld-3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Yield Punjab K05 impressions from S4 to optimize portfolio incremental return."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Deployed full \u20b9300 day allowance through targeted campaign budget unlocks on top iroas scale and fund roles. Resolved five contested generic markets to shift slot-1 to higher incremental scorers, improving iota-weighted return while preserving the portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12034,
+    "tokens_out": 8644,
+    "cost_usd": 0.00148474,
+    "wall_clock_s": 68.83677258400002
+  }
+}

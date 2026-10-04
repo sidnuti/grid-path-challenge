@@ -1,0 +1,175 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BUDGET-S1-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unblock budget cap for efficient fund campaign (iroas 2.05) to capture incremental volume."
+      },
+      {
+        "id": "BUDGET-S1-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lift budget for fund campaign (iroas 1.81) to recover lost reach."
+      },
+      {
+        "id": "BUDGET-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Small lift for fund campaign with highest portfolio iroas (4.40)."
+      },
+      {
+        "id": "HOLD-S2-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K05"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Block all increases due to critical OSA dip (0.42) caused by prior policy, preserving cash until stock recovers."
+      },
+      {
+        "id": "LEAD-BLR-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift ownership to highest incremental scorer (S1) to improve impression efficiency."
+      },
+      {
+        "id": "LEAD-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder (S2) with superior S4 score to boost incremental revenue."
+      },
+      {
+        "id": "LEAD-HYD-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reassign ownership to S4 for higher incremental yield."
+      },
+      {
+        "id": "LEAD-HYD-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Align competition traffic with highest iroas holder (S4)."
+      },
+      {
+        "id": "LEAD-PUN-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move generic ownership to S1 where incremental value is highest."
+      },
+      {
+        "id": "LEAD-PUN-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure competition keyword for top performer S4 in PUN."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "*",
+        "sku_role": "*",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "*",
+        "sku_role": "*",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "*",
+        "sku_role": "*",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Prioritize budget raises for cap-hit fund campaigns with strong incremental returns (iroas > 1.8). Realign contested markets where wrong holders are wasting impressions. Hold C-S2-HYD due to critical stock deficiency (osa 0.42) to prevent wasted spend until replenished."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11110,
+    "tokens_out": 10231,
+    "cost_usd": 0.00166333,
+    "wall_clock_s": 96.30954804200007
+  }
+}

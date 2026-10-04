@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.9,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Extreme positive reach deviation (z=5.876) combined with a statistically significant CPM drop (z=-2.665) and absent own-action confound points to a genuine external market shock, likely a demand surge or supply influx driving volume down price. The mechanical direction confirms a surge, and the signal strength supports high confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 641,
+    "cost_usd": 0.010947,
+    "wall_clock_s": 8.280702625000004
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader score (0.2309 vs 0.2125) slightly favors C-S1-MUM. Although C-S3-MUM captures significantly more slot-1 share (0.92 vs 0.56), the incremental profitability metric remains higher for C-S1-MUM. Following the directive to prefer the mechanical leader in near-ties absent clear overriding evidence. C-S3-MUM's high visibility warrants monitoring rather than immediate leadership transfer."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1904,
+    "cost_usd": 0.02961,
+    "wall_clock_s": 17.01765949999998
+  }
+}

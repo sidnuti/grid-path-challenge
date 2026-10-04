@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader_score narrowly favors C-S1-HYD (1.1232 vs 1.1120, ~1% margin). While C-S3-HYD commands a significantly higher slot1_share_7d (0.87 vs 0.56), this does not strongly override the primary scoring metric. Per instructions, the mechanical pick is preferred in a near-tie scenario. Confidence is moderate due to the small differential and noisy nature of the score."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1045,
+    "cost_usd": 0.016731,
+    "wall_clock_s": 11.920954583000139
+  }
+}

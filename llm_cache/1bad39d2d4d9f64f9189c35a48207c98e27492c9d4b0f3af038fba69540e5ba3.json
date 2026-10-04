@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.75,
+    "rationale": "C-S1-DEL holds the highest mechanical leader score and also demonstrates a substantially better slot1_share_7d (0.77 vs 0.68) than its closest competitor. Given the near-tie on the primary metric and stronger secondary performance signal, the mechanical preference is upheld."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 373,
+    "tokens_out": 1589,
+    "cost_usd": 0.024954,
+    "wall_clock_s": 14.72049287499999
+  }
+}

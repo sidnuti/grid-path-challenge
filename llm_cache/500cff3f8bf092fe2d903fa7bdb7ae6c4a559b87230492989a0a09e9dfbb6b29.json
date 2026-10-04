@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 10.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 12.26 is extremely elevated and formally flagged, with no own-action confound present. Stable CPM alongside a mechanical surge reading points to a genuine demand-driven volume spike rather than a pricing shift or internal bid feedback loop."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 445,
+    "tokens_out": 1646,
+    "cost_usd": 0.026025,
+    "wall_clock_s": 16.869533291999915
+  }
+}

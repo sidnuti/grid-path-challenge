@@ -1,0 +1,242 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "lm-blr-k01-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01",
+          "C:S2-BLR/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift slot-1 to S2 (score 1.331) on CLEARS brand cell to capture incremental value"
+      },
+      {
+        "id": "lm-del-k01-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01",
+          "C:S2-DEL/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Replace S5 holder with best S2 on scalable brand keyword"
+      },
+      {
+        "id": "lm-del-k02-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02",
+          "C:S3-DEL/K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move lead to S3 (score 1.318) on CLEARS brand cell for Soap scale role"
+      },
+      {
+        "id": "lm-del-k10-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10",
+          "C:S4-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take competition leadership for S4 (iota 1.00, score 1.121)"
+      },
+      {
+        "id": "lm-hyd-k05-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05",
+          "C:S4-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead HYD generic market where S4 holds best incremental score"
+      },
+      {
+        "id": "lm-hyd-k09-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09",
+          "C:S3-HYD/K09"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Secure lead on HYD competition keyword for scale-ready S3"
+      },
+      {
+        "id": "lm-pun-k09-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:PUN:K09",
+          "C:S3-PUN/K09"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Lead PUN competition market where S3 outperforms holder S1"
+      },
+      {
+        "id": "rb-s2del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+20% bid lift on high mroas_up20 (6.41) CLEARS generic cell"
+      },
+      {
+        "id": "rb-s2del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+20% bid lift on profitable DEL body wash generic"
+      },
+      {
+        "id": "rb-s3del-k04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S3-DEL/K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+20% bid lift on DEL soap generic with strong iota (0.70)"
+      },
+      {
+        "id": "rb-s2mum-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+20% bid lift on high-iota MUM body wash generic"
+      },
+      {
+        "id": "rb-s3blr-k04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S3-BLR/K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+20% bid lift on BLR soap generic scale candidate"
+      },
+      {
+        "id": "rb-s2blr-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "+20% bid lift on BLR body wash generic with top mroas_up20 (7.00)"
+      },
+      {
+        "id": "rb-s4hyd-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:S4-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "+40% bid lift on HYD shower gel generic (mroas_up20 10.76)"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "All previously rejected intents targeting MISSES-goal cells or exceeding allowance have been dropped. This run prioritizes lead_market placements exclusively on CLEARS cells where wrong_holder=True, paired with targeted raise_bid lifts on high-iota SCALE campaign cells. Budgets are held flat to stay within the \u20b9606.58 daily allowance while maximizing incremental conversion efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11420,
+    "tokens_out": 9239,
+    "cost_usd": 0.0015436699999999998,
+    "wall_clock_s": 72.42548420899993
+  }
+}

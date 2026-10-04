@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader scores are identical. C-S4-BLR holds a significantly higher slot1_share_7d (0.85 vs 0.62), indicating stronger auction capture and premium impression dominance for this city-keyword pair, which cleanly breaks the tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 677,
+    "cost_usd": 0.011205,
+    "wall_clock_s": 8.76240724999991
+  }
+}

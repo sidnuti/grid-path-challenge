@@ -1,0 +1,213 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-LEAD-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shifts HYD K05 share to S4 (highest incremental score), automatically yielding S2 without manual bid cuts."
+      },
+      {
+        "id": "INT-LEAD-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Corrects wrong-holder contest in PUN K05; S4 captures slot 1 for superior iROAS."
+      },
+      {
+        "id": "INT-S2-RB-GEN-DEL",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Unlocks capacity for Scale-campaign S2 DEL generic queries; iROAS 2.64 supports uplift."
+      },
+      {
+        "id": "INT-S2-RB-GEN-MUM",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Gains incremental reach for S2 MUM generic; avoids brand displacement drag."
+      },
+      {
+        "id": "INT-S2-RB-GEN-BLR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Extracts remaining scale potential in BLR generic; clean CLEARS verdicts across cells."
+      },
+      {
+        "id": "INT-S4-RB-GEN-PUN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalizes on peak iROAS 6.13 and spare allowance; OSA 0.78 permits increase."
+      },
+      {
+        "id": "INT-S1-BUD-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Prevents premature run-outs in Fund-market DEL; preserves stable base demand capture."
+      },
+      {
+        "id": "INT-S1-BUD-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Matches BLR Fund demand profile; stabilizes spend against 7-run run-out history."
+      },
+      {
+        "id": "INT-S1-BUD-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secures coverage in PUN Fund city; avoids missed sales from budget caps."
+      },
+      {
+        "id": "INT-S3-CUT-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduces drag from Trim-role HYD soap; frees allowance for Scale campaigns."
+      },
+      {
+        "id": "INT-S3-CUT-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.65,
+        "expected_effect": "Modest reduction on inefficient DEL soap; reallocates margin to higher-iROAS SKUs."
+      },
+      {
+        "id": "INT-S5-CUT-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.65,
+        "expected_effect": "Trims low-iROAS kids soap; protects portfolio DRoAS floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Dropped all previously rejected intents targeting saturated cells or zero-gain raises. Redirected headroom to Scale campaigns (S2, S4-PUN) via targeted generic bid lifts, while stabilizing Fund campaigns (S1) through budget raises. Trimmed inefficient Trim/S3/S5 budgets to protect portfolio DRoAS and corrected two wrong-holder contests (HYD/PUN K05) via lead_market calls."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11495,
+    "tokens_out": 9347,
+    "cost_usd": 0.00155996,
+    "wall_clock_s": 75.14168358400002
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.9,
+    "rationale": "C-S1-BLR aligns with the mechanical leader selection and demonstrates a substantially higher slot share (0.89 vs 0.48), indicating stronger ad positioning and conversion capture. Given the narrow mechanical tie, this slot dominance provides clear additional evidence to protect bids for C-S1-BLR over C-S3-BLR."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1665,
+    "cost_usd": 0.026025,
+    "wall_clock_s": 17.164863458000013
+  }
+}

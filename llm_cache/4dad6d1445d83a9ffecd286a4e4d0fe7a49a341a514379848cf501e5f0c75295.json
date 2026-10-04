@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.85,
+    "rationale": "C-S1-MUM holds a dominant 0.95 slot1_share compared to 0.44 for C-S3-MUM, indicating far more consistent top-ad position dominance. Despite the marginal mechanical score lead for C-S3, the positional consistency strongly favors C-S1-MUM as the reliable market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1339,
+    "cost_usd": 0.021135,
+    "wall_clock_s": 13.248087833
+  }
+}

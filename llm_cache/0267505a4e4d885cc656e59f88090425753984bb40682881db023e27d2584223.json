@@ -1,0 +1,322 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift branded soap search leadership to higher-iota Body Wash SKU for better incrementality."
+      },
+      {
+        "id": "LM-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong-holder for Shower Gel generic to capture superior incremental revenue."
+      },
+      {
+        "id": "LM-HYD-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Adjust competitor keyword allocation to marginally better SKU maintaining balance."
+      },
+      {
+        "id": "LM-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Realign Soap generic market to highest-score leader."
+      },
+      {
+        "id": "LM-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure incrementality for Body Wash generic in tight-market contest."
+      },
+      {
+        "id": "LM-MUM-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Adjust competitor keyword allocation to marginally better SKU."
+      },
+      {
+        "id": "LM-MUM-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture shower gel competitor traffic on superior SKU."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Major re-alignment of branded Soap search to highest-iota Body Wash SKU."
+      },
+      {
+        "id": "LM-PUN-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Return Soap generic contest to correct incumbent."
+      },
+      {
+        "id": "RA-S2-DEL",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand efficient reach on Body Wash generics with strong mroas_up20 signal."
+      },
+      {
+        "id": "RA-S2-MUM",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push incremental volume in scale-eligible Mumbai Body Wash inventory."
+      },
+      {
+        "id": "RA-S2-BLR",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale Bangalore Body Wash generic reach efficiently."
+      },
+      {
+        "id": "RA-S4-HYD",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage Hyderabad shower gel scale position with verified mroas uplift."
+      },
+      {
+        "id": "RA-S4-PUN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Maximize high-iroas showergel generic exposure in Pune."
+      },
+      {
+        "id": "CU-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Deprioritize low-iroas trim segment to preserve budget for scale campaigns."
+      },
+      {
+        "id": "CU-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce waste in underperforming Soap inventory without impacting top-line."
+      },
+      {
+        "id": "CU-S3-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free allowance for efficient allocation away from weak Hyderabad soap."
+      },
+      {
+        "id": "CU-S3-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate spend from low-iroas Pune trim market."
+      },
+      {
+        "id": "CU-S1-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift funds from trim market to scale opportunities."
+      },
+      {
+        "id": "CU-S2-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Release budget constrained by OSA below 60% to maintain efficient portfolio mix."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Market leader realignments shift share to highest-incrementality SKUs. Budget consolidation from trim/OSA-constrained campaigns protects portfolio ROAS while funding efficient scale."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24732,
+    "tokens_out": 21299,
+    "cost_usd": 0.00351083,
+    "wall_clock_s": 184.81605779100005
+  }
+}

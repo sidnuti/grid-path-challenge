@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.72,
+    "rationale": "C-S4-PUN has the marginally higher leader_score (1.4501 vs 1.4454), and its much higher slot1 share (0.87 vs 0.60) corroborates it as the dominant listing for this market. Default to the mechanical pick absent contrary evidence; confidence tempered by the near-tie in score."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 273,
+    "cost_usd": 0.00046631,
+    "wall_clock_s": 2.7001515419999578
+  }
+}

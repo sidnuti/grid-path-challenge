@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.6,
+    "rationale": "Mechanical score slightly favors C-S3-PUN. Its substantially higher slot 1 share (0.90 vs 0.53) confirms it already captures the majority of visibility, making it the natural market leader. Given the negligible score difference, trusting the mechanical pick reinforced by real-world auction performance is optimal."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1404,
+    "cost_usd": 0.02211,
+    "wall_clock_s": 16.416529374999982
+  }
+}

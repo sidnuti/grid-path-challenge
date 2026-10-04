@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.7,
+    "rationale": "The mechanical leader score directly ranks C-S1-BLR higher (0.7188 vs 0.6768), reflecting a stronger composite of conversion, ASP, and incrementality. Per instructions to prefer the mechanical calculation in near-ties, C-S1-BLR remains the optimal choice to protect, ensuring stable market coverage without triggering inefficient bid escalation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2632,
+    "cost_usd": 0.04053,
+    "wall_clock_s": 26.40534520799997
+  }
+}

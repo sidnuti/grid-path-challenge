@@ -1,0 +1,157 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-S2-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure highest incremental revenue source for Body Wash generic searches in Bangalore, displacing weaker sibling bids."
+      },
+      {
+        "id": "LM-S4-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Appoint Shower Gel as market leader for Delhi generic searches due to superior incremental score (1.762 vs 1.638)."
+      },
+      {
+        "id": "LM-S2-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong-holder in Hyderabad; S2 yields higher incremental value than S4."
+      },
+      {
+        "id": "RB-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase capture of incremental Body Wash demand in Mumbai via efficient generic keyword."
+      },
+      {
+        "id": "RB-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Boost incremental reach in Bangalore generic segment."
+      },
+      {
+        "id": "RB-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand incremental volume in Hyderabad where bid headroom exists."
+      },
+      {
+        "id": "RB-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage healthy OSA and clear verdict to grow incremental off-take in Pune."
+      },
+      {
+        "id": "RB-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture high-mroas_up20 Shower Gel generic searches in Mumbai safely under 80% slot cap."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Dropped all previously rejected budget raises as none of the target campaigns met the >=2 run-out threshold this run. Pivoted to aggressive bid lifts and contested-market corrections on high-iota generic keywords (K05) for Body Wash and Shower Gel, aligning with the \u20b91068 daily allowance and preserving portfolio direct ROAS above the 4.08 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11177,
+    "tokens_out": 7661,
+    "cost_usd": 0.00133124,
+    "wall_clock_s": 79.48831904200006
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.8,
+    "rationale": "The mechanical score favors C-S1-BLR, which is strongly corroborated by its significantly higher slot1_share_7d (0.90 vs 0.49). This indicates superior visibility and conversion efficiency, making it the clear candidate for bid protection despite the close mechanical tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1406,
+    "cost_usd": 0.02214,
+    "wall_clock_s": 12.922798874999899
+  }
+}

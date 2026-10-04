@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.75,
+    "rationale": "The mechanical leader score slightly favors C-S1-MUM (0.4814 vs 0.4511). This recommendation is strongly supported by its significantly higher slot1_share_7d (0.89 vs 0.49), indicating it has consistently secured top ad placement and demonstrates superior market execution compared to the sibling."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 952,
+    "cost_usd": 0.01533,
+    "wall_clock_s": 9.999638000000004
+  }
+}

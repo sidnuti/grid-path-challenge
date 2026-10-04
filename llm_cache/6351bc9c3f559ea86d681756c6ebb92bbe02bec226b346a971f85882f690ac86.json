@@ -1,0 +1,131 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BID-S2MUM-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Secure incremental volume in Mumbai generic body wash search without breaching slot caps.",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K06"
+        ]
+      },
+      {
+        "id": "BID-S2BLR-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "expected_effect": "Capture remaining generic demand in Bangalore safely.",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05",
+          "C:C-S2-BLR/K06"
+        ]
+      },
+      {
+        "id": "BID-S2HYD-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "expected_effect": "Expand Hyderabad generic reach within healthy slot margins.",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05",
+          "C:C-S2-HYD/K06"
+        ]
+      },
+      {
+        "id": "BUD-S1DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "confidence": 0.9,
+        "expected_effect": "Eliminate budget-induced stock-outs for Delhi fund campaign.",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ]
+      },
+      {
+        "id": "BUD-S2BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Stabilize delivery for South West Delhi body wash.",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Shifted focus from rejected leader/misplaced raise attempts to targeted small bid lifts on high-iROAS generic Body Wash cells with confirmed headroom. Budget raises address structural caps on proven fund campaigns. Total incremental cost projected well within the \u20b9539 daily allowance, preserving portfolio DRoAS margin while maximizing incremental off-take."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11528,
+    "tokens_out": 9138,
+    "cost_usd": 0.00153378,
+    "wall_clock_s": 91.35427933400001
+  }
+}

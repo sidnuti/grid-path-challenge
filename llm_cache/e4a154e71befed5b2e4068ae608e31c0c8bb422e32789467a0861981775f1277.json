@@ -1,0 +1,285 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift slot 1 to S4 (Fund, iroas 2.71) displacing S5 (Trim). Captures superior incremental revenue per impression.",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ]
+      },
+      {
+        "id": "LM-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Move leadership to S3 over S5. S3 holds better scale position in BLR Soap contest.",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ]
+      },
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Replace S3 holder with Fund SKU S4. Maximizes SHOWER GEL incremental share in largest metro.",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ]
+      },
+      {
+        "id": "LM-DEL-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Elevate S3 over S1. Both weak, but S3 shows slightly better contest score and brand alignment.",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ]
+      },
+      {
+        "id": "LM-DEL-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Transfer generic leadership from S1 to S3. Aligns slot 1 with higher incremental revenue potential.",
+        "evidence_refs": [
+          "M:DEL:K03"
+        ]
+      },
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Fund SKU S4 overtakes S2. Secures top placement for high-value generic search term.",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ]
+      },
+      {
+        "id": "LM-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Promote S2 (Body Wash Fund) over S4. S2 demonstrates higher contest score and budget efficiency.",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ]
+      },
+      {
+        "id": "LM-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Align leadership with S2. Prevents S4 from cannibalizing S2's stronger incremental conversion path.",
+        "evidence_refs": [
+          "M:HYD:K05"
+        ]
+      },
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift HYD K01 leadership to S4 (Fund). Drives incremental Shower Gel growth away from S2 saturation.",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ]
+      },
+      {
+        "id": "BR-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Unlock incremental volume for capped Fund SKU. mroas_up20=6.31 signals strong positive ROI response.",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ]
+      },
+      {
+        "id": "BR-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Bid expansion on high-iota Fund SKU. Predicted revenue lift justifies additional allowance consumption.",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06",
+          "R:C-S4-DEL"
+        ]
+      },
+      {
+        "id": "BR-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Capture scalable demand in Mumbai. Clean clearance verdict supports moderate uplift.",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ]
+      },
+      {
+        "id": "BR-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Exploit Fund SKU headroom. Strong iroas (2.71) buffers against slight ROAS drift.",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06",
+          "R:C-S4-BLR"
+        ]
+      },
+      {
+        "id": "BR-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Aggressively fund Hyderabad's highest-irowas channel (3.57). Secure top-of-funnel incremental orders.",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05",
+          "R:C-S4-HYD"
+        ]
+      },
+      {
+        "id": "CR-S1-DEL-K09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "confidence": 0.75,
+        "expected_effect": "Eliminate highly displacing competition spend (iroas 1.00, MISSES). Frees allowance for higher-ROI channels without triggering ROAS floor breach.",
+        "evidence_refs": [
+          "C:C-S1-DEL/K09",
+          "R:C-S1-DEL"
+        ]
+      },
+      {
+        "id": "CR-S3-DEL-K03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "confidence": 0.75,
+        "expected_effect": "Reduce weak generic investment (droas 2.75 vs goal 5.84). Preserves portfolio margin while reallocating to Funds.",
+        "evidence_refs": [
+          "C:C-S3-DEL/K03",
+          "R:C-S3-DEL"
+        ]
+      },
+      {
+        "id": "CR-S5-DEL-K03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "expected_effect": "Trim low-iota Kids Soap generic cell. Defends portfolio direct ROAS floor against marginal returns.",
+        "evidence_refs": [
+          "C:C-S5-DEL/K03",
+          "R:C-S5-DEL"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "hold",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "lead"
+      }
+    ],
+    "notes": "Portfolio ROAS is critically close to floor (4.589 vs 4.587). We protect the threshold by cutting three low-iota, high-displacement waste cells and redirecting the freed allowance to four capped Fund SKUs with strong mroas_up20 (>6x) and healthy iroas (1.7-3.6). Simultaneously, we resolve 9 major market misalignments where Trims/Holds held prime slots over Funds/Scales, ensuring incremental revenue flows to the highest-performing SKUs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11036,
+    "tokens_out": 9419,
+    "cost_usd": 0.00155555,
+    "wall_clock_s": 74.1685271670001
+  }
+}

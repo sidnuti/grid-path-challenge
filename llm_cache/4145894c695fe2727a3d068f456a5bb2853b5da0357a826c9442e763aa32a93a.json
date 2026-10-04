@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.75,
+    "rationale": "Defaulting to the mechanical pick C-S3-HYD (leader_score 0.6320 vs 0.6144, a near-tie). The 7-day slot1 share corroborates it: C-S3-HYD holds 0.84 vs 0.61 for C-S1-HYD and 0.48 for C-S5-HYD, so it dominates the auction position and no evidence favours switching to the runner-up. Narrow score gap keeps confidence below high."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 364,
+    "tokens_out": 416,
+    "cost_usd": 0.00065468,
+    "wall_clock_s": 3.87143750000007
+  }
+}

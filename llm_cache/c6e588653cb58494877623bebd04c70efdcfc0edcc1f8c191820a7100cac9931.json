@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 5.0 is highly significant and flagged, indicating a sharp departure from baseline. CPM remains neutral (z=0.0), ruling out a price/competition shift, and the own-action confound flag is false. The combination strongly points to a genuine demand shift driving the surge."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1506,
+    "cost_usd": 0.02391,
+    "wall_clock_s": 17.593942416999994
+  }
+}

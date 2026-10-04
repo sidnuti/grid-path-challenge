@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-BLR",
+    "confidence": 0.5,
+    "rationale": "Mechanical score slightly favors C-S2-BLR (0.7896 vs 0.7383). While C-S4-BLR shows a higher slot1 share (0.91 vs 0.68), the score difference is marginal and falls within the expected noise for a near-tie. Following the directive to prefer the mechanical pick unless evidence strongly overrides it, C-S2-BLR is selected as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1913,
+    "cost_usd": 0.029745,
+    "wall_clock_s": 20.357364790999995
+  }
+}

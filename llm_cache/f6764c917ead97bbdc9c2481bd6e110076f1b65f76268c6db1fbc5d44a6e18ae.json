@@ -1,0 +1,177 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "bud-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "release budget constraint to capture remaining efficient off-take"
+      },
+      {
+        "id": "bud-s4-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "release budget constraint to capture remaining efficient off-take"
+      },
+      {
+        "id": "bud-s4-blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "release budget constraint to capture remaining efficient off-take"
+      },
+      {
+        "id": "bid-s4-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "incremental revenue from scalable generic demand with strong iROAS"
+      },
+      {
+        "id": "bid-s4-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "incremental revenue from scalable generic demand with strong iROAS"
+      },
+      {
+        "id": "lead-pun-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "capture high-ROI brand traffic away from lower-efficiency S1"
+      },
+      {
+        "id": "lead-hyd-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "capture high-ROI generic traffic away from S2"
+      },
+      {
+        "id": "yield-blr-k04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04",
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "step back trim SKU to reduce wasted impressions and free share for leaders"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Replaced rejected leads on MISSES cells and overspent budget raises with targeted budget releases for funded SKUs, safe bid lifts on CLEARS generic cells, and high-ROI market share shifts. Maintains portfolio iROAS floor while prioritizing Shower Gel scale and yielding weak Soap/Kids positions."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11354,
+    "tokens_out": 8235,
+    "cost_usd": 0.00141117,
+    "wall_clock_s": 74.077556292
+  }
+}

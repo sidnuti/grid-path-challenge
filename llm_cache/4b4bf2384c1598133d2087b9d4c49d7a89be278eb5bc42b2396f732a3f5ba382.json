@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-MUM",
+    "confidence": 0.85,
+    "rationale": "The mechanical scores for C-S2-MUM (1.65) and C-S4-MUM (1.51) are close, creating noise. However, C-S4-MUM holds a 97% top-slot share versus just 15% for C-S2, strongly indicating that C-S4 is the actual dominant, efficiently captured position in this market. Prioritizing C-S4 leverages proven visibility and minimizes internal cannibalization, making it the clear leader choice."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1495,
+    "cost_usd": 0.023691,
+    "wall_clock_s": 16.214716333000013
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.85,
+    "rationale": "The mechanical leader C-S4-HYD holds a slight edge in leader_score and a substantially higher slot1_share_7d (0.85 vs 0.62), confirming its stronger market position. Evidence aligns with the mechanical pick, warranting no override."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1033,
+    "cost_usd": 0.016551,
+    "wall_clock_s": 9.11351962500001
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-fund-s1-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL/"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlocks capped fund campaign; ran out of budget 7/7 days; preserves baseline incremental volume without risking ROAS floor."
+      },
+      {
+        "id": "bid-s4-del-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Aggressive bid on high-iota (1.00) competition keyword; currently at low slot share; maximizes truly incremental revenue."
+      },
+      {
+        "id": "lead-blr-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Corrects wrong holder in contested market; S1 is closest to best incremental performer; secures lead position on generic."
+      },
+      {
+        "id": "lead-del-k06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Overrides weak S2 holder; positions Shower Gel S4 as leader on generic search where incremental delta is largest."
+      },
+      {
+        "id": "bid-s4-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Pushes bid on efficient generic keyword with headroom (slot 0.67); captures remaining impression share before saturation."
+      },
+      {
+        "id": "trim-waste-k09",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Removes spend on MISSES/weak competition keyword; frees allowance to redirect toward higher-iota scales and fund budgets."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Redirected spend from bloated holds and low-iota competitors to fund unlocks and high-incrementality competition/generic keywords. Used lead_market calls to internalize share gains where our SKUs mathematically outperform siblings."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12438,
+    "tokens_out": 7703,
+    "cost_usd": 0.00137453,
+    "wall_clock_s": 77.51593995900004
+  }
+}

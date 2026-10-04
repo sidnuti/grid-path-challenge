@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.8,
+    "rationale": "Mechanical scoring selects C-S1-DEL. Despite the narrow margin in leader_score, C-S1-DEL holds a substantially higher slot-1 share (0.88 vs 0.72), indicating stronger recent dominance and lower bid efficiency risk, making it the clear candidate to protect."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 373,
+    "tokens_out": 1450,
+    "cost_usd": 0.022869,
+    "wall_clock_s": 13.935772083000018
+  }
+}

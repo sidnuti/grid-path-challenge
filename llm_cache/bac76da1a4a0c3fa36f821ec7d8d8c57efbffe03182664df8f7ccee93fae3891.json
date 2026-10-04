@@ -1,0 +1,303 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "I-CON-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift branded soap share from S5 to higher-incrementality S3 in DEL"
+      },
+      {
+        "id": "I-YLD-01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back S1 to allow S3 leadership in DEL K02"
+      },
+      {
+        "id": "I-CON-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead S3 over S1 in DEL K02 brand market"
+      },
+      {
+        "id": "I-YLD-02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S5 in DEL K01"
+      },
+      {
+        "id": "I-CON-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead S3 over S1 in MUM K02 brand market"
+      },
+      {
+        "id": "I-YLD-03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S1 in MUM K02"
+      },
+      {
+        "id": "I-CON-04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore S1 leader in MUM K04 generic market"
+      },
+      {
+        "id": "I-YLD-04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S3 in MUM K04"
+      },
+      {
+        "id": "I-CON-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Restore S1 leader in BLR K04 generic market"
+      },
+      {
+        "id": "I-YLD-05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S3 in BLR K04"
+      },
+      {
+        "id": "I-CON-06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift body wash generic share from S4 to more efficient S2 in BLR"
+      },
+      {
+        "id": "I-YLD-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S4 in BLR K05"
+      },
+      {
+        "id": "I-CON-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift branded soap share to S3 in HYD"
+      },
+      {
+        "id": "I-YLD-07",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield S1 in HYD K01"
+      },
+      {
+        "id": "I-CUT-01",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-DEL/K03",
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce inefficient generic spend on S3-DEL (MISSES verdict, low iroas)"
+      },
+      {
+        "id": "I-CUT-02",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-MUM/K03",
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce inefficient generic spend on S3-MUM (MISSES verdict, low iroas)"
+      },
+      {
+        "id": "I-CUT-03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-BLR/K03",
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce inefficient generic spend on S3-BLR (MISSES verdict, low iroas)"
+      },
+      {
+        "id": "I-CUT-04",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S5-MUM/K03",
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce inefficient generic spend on S5-MUM (MISSES verdict, low iroas)"
+      },
+      {
+        "id": "I-HOLD-01",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Block raises on S3-PUN due to hold role and weak iroas"
+      }
+    ],
+    "stance": [],
+    "notes": "Prioritized correcting wrong-holder markets to boost incremental offtake. Trimmed bids on consistently underperforming generic cells and froze budgets on weak campaigns to preserve portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24147,
+    "tokens_out": 17032,
+    "cost_usd": 0.0029385699999999997,
+    "wall_clock_s": 146.744367834
+  }
+}

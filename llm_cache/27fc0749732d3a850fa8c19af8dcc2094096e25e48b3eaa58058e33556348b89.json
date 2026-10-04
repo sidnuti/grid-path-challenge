@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "Reach z-score of 5.0 indicates a severe deviation while CPM remains at baseline (z=0.0), ruling out price-driven effects. With no own-action confound flagged, this isolates the signal as a genuine market shock, most likely a sudden increase in available inventory or favorable demand conditions driving volume without cost inflation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1941,
+    "cost_usd": 0.030435,
+    "wall_clock_s": 21.018127542000002
+  }
+}

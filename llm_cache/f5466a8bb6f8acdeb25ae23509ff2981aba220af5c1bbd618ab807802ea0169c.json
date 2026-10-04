@@ -1,0 +1,219 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BID-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "capture incremental demand on high-mroas generic shower gel queries in MUM"
+      },
+      {
+        "id": "BID-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "capture incremental demand on competitive generic term in MUM"
+      },
+      {
+        "id": "BID-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "capture incremental demand on high-mroas generic term in BLR"
+      },
+      {
+        "id": "BID-S2-BLR-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "capitalize on extreme mroas uplift on brand body wash query"
+      },
+      {
+        "id": "BID-S4-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "capture incremental demand on high-mroas generic term in PUN"
+      },
+      {
+        "id": "LEAD-S4-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "shift shower gel dominance over body wash on generic term"
+      },
+      {
+        "id": "LEAD-S4-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "shift shower gel dominance over body wash on generic term"
+      },
+      {
+        "id": "LEAD-S4-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "shift shower gel dominance over body wash on generic term"
+      },
+      {
+        "id": "LEAD-S4-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "shift shower gel dominance over body wash on generic term"
+      },
+      {
+        "id": "CUT-S3-MUM-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "free portfolio headroom from weak trim campaign"
+      },
+      {
+        "id": "CUT-S1-BLR-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "free portfolio headroom from weak trim campaign"
+      },
+      {
+        "id": "CUT-S5-MUM-BUDGET",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "free portfolio headroom from low-incrementality kids soap campaign"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Removed previously rejected raises on saturated S4-DEL/K06 (G3) and non-running-out S2-DEL (G5). Shifted tactical budget and bid aggression toward high-mroas S4/S2 cells with clear slot headroom, while executing market-leadership wins in contested generic terms to protect incrementality near the ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10925,
+    "tokens_out": 10506,
+    "cost_usd": 0.00169353,
+    "wall_clock_s": 95.31696087499995
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "Mechanical score slightly favors C-S1-HYD (0.2547 vs 0.2545). The slot1_share_7d metric is significantly higher for C-S1-HYD (0.96 vs 0.36), strongly corroborating the mechanical preference and indicating superior performance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 587,
+    "cost_usd": 0.009861,
+    "wall_clock_s": 5.711582083999986
+  }
+}

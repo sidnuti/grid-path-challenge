@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.82,
+    "rationale": "Mechanical leader_score favors C-S1-HYD (0.6085 vs 0.5731) and the corroborating evidence points the same way: it also holds a higher slot1_share_7d (0.87 vs 0.72), indicating stronger dominant-position capture for the same keyword in HYD. No evidence favors C-S3-HYD, so retain the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 302,
+    "cost_usd": 0.00050367,
+    "wall_clock_s": 2.677438875000007
+  }
+}

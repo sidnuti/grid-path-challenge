@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.65,
+    "rationale": "The mechanical leader is C-S2-HYD, but C-S4-HYD shows a substantially higher slot1_share_7d (0.71 vs 0.38), indicating stronger actual auction dominance and more consistent visibility. Given the near-tie in leader_score, the campaign securing premium placement with comparable economic efficiency is a more reliable market leader to protect."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 1811,
+    "cost_usd": 0.028446,
+    "wall_clock_s": 20.653755374999946
+  }
+}

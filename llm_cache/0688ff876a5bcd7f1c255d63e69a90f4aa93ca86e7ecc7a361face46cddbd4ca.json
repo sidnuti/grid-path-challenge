@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "Mechanical score slightly favors C-S1-HYD (0.1857 vs 0.1836). Its substantially higher slot1_share_7d (0.89 vs 0.50) demonstrates stronger ad positioning and market dominance, confirming that protecting this campaign's bid is optimal despite the narrow score gap."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 647,
+    "cost_usd": 0.010761,
+    "wall_clock_s": 6.679619375000016
+  }
+}

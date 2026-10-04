@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 6.4,
+    "direction": "surge",
+    "confidence": 0.92,
+    "rationale": "Strong positive reach z-score (6.356) with no own-action confound indicates a genuine market-driven volume increase. Insignificant CPM and OSA scores suggest pure demand expansion rather than pricing or competitive shifts."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1589,
+    "cost_usd": 0.025167,
+    "wall_clock_s": 17.605863874999955
+  }
+}

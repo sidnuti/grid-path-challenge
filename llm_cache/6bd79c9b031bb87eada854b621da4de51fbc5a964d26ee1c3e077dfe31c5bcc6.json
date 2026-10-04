@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.65,
+    "rationale": "Mechanical score slightly favors C-S1-PUN, but C-S3-PUN holds a decisive advantage in slot1_share_7d (0.89 vs 0.69). This strong top-slot dominance indicates superior current market capture and bid efficiency, providing clear evidence to override the noisy mechanical near-tie in favor of C-S3-PUN."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2114,
+    "cost_usd": 0.03276,
+    "wall_clock_s": 20.315916250000043
+  }
+}

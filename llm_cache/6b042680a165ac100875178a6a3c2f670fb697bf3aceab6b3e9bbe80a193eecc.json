@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 9.2,
+    "direction": "surge",
+    "confidence": 0.88,
+    "rationale": "Reach z-score of 11.4 is an extreme surge, and the simultaneous -3.3\u03c3 CPM decline indicates volume expanded at lower auction prices \u2014 a pattern consistent with a genuine demand spike and/or competitor exit, not a harness artifact. The own-action confound flag is false, and an own bid/budget change landing would typically raise CPM rather than depress it, ruling out self-inflicted confound. OSA at 0 is neutral and does not contradict the shock. Combined flags on both reach and CPM make this a real market shock worth reacting to; magnitude capped near the top of scale given the ~11\u03c3 reach deviation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 433,
+    "tokens_out": 572,
+    "cost_usd": 0.0008752100000000001,
+    "wall_clock_s": 5.433570707999934
+  }
+}

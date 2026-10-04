@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.85,
+    "rationale": "C-S1-PUN holds the higher mechanical leader_score (0.2436 vs 0.2299) and demonstrates substantially stronger positionality with a 0.93 slot1_share_7d compared to 0.50, confirming it as the clear market leader despite the narrow score differential."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1606,
+    "cost_usd": 0.02514,
+    "wall_clock_s": 17.859473458000025
+  }
+}

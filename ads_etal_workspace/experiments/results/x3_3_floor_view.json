@@ -1,0 +1,35 @@
+{
+  "floor": 4.338,
+  "rows": [
+    {
+      "action_type": "increase_budget",
+      "n": 32,
+      "d_spend": 40717.940000000046,
+      "d_ad_rev": 164320.0,
+      "d_offtake": 71770.0,
+      "marginal_droas": 4.035567614668125,
+      "vs_floor": -0.30243238533187533,
+      "effect_on_portfolio_roas": "dilutes"
+    },
+    {
+      "action_type": "increase_cpm",
+      "n": 39,
+      "d_spend": 9430.609999999957,
+      "d_ad_rev": 40990.0,
+      "d_offtake": 29630.0,
+      "marginal_droas": 4.346484479795071,
+      "vs_floor": 0.008484479795070499,
+      "effect_on_portfolio_roas": "raises"
+    },
+    {
+      "action_type": "reduce_cpm",
+      "n": 250,
+      "d_spend": -96455.68000000014,
+      "d_ad_rev": -120454.0,
+      "d_offtake": -72454.0,
+      "marginal_droas": 1.2488015221083903,
+      "vs_floor": -3.0891984778916095,
+      "effect_on_portfolio_roas": "raises"
+    }
+  ]
+}

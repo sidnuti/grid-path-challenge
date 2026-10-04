@@ -1,0 +1,235 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift slot leadership to S1 which has higher incremental score than current holder S3 in BLR K04."
+      },
+      {
+        "id": "LM-BLR-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Ensure Shower Gel (S4) leads BLR K05 where its incremental revenue per impression clearly outpaces S2."
+      },
+      {
+        "id": "LM-DEL-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Correct misaligned market holder; S1 drives stronger incremental share than S3 in DEL K04."
+      },
+      {
+        "id": "LM-MUM-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Align MUM K04 leadership to S1 based on marginal incremental advantage over S3."
+      },
+      {
+        "id": "LM-HYD-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture HYD K01 brand traffic with S2 Body Wash, which yields higher incremental returns than S1."
+      },
+      {
+        "id": "LM-PUN-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect PUN K01 brand searches to efficient S2 channel."
+      },
+      {
+        "id": "RB-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Aggressively bid up top-performing generic cell with high mroas_up20 and strong iota in scalable shower gel campaign."
+      },
+      {
+        "id": "RB-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Maximize volume capture in scale market via substantial bid lift on highly efficient generic keyword."
+      },
+      {
+        "id": "RB-S4-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure incremental share growth in PUN scale market with strong uplift trajectory."
+      },
+      {
+        "id": "RB-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Moderate bid increase on efficient body wash generic cell with high iota and scale role."
+      },
+      {
+        "id": "RB-S2-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K06",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage scale designation and favorable marginal ROAS to pull additional incremental orders."
+      },
+      {
+        "id": "CB-S3-TRIM",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce capital drain from weak Soap SKUs (trim/hold) across cities, preserving portfolio ROAS floor for reallocation."
+      },
+      {
+        "id": "CB-S5-TRIM",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Curtail low-incrementality Kids Soap spend universally to stabilize marginal economics and free allowance."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund/scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Strategically shift spend toward high-incrementality Shower Gel and Body Wash SKUs via targeted bid lifts and market ownership corrections, while systematically trimming weak Soap and Kids Soap budgets to protect the portfolio ROAS floor. All actions respect OSA thresholds, move limits, and current budget constraints."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11144,
+    "tokens_out": 10361,
+    "cost_usd": 0.00168125,
+    "wall_clock_s": 83.89126766599998
+  }
+}

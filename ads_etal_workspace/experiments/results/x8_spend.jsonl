@@ -1,0 +1,39 @@
+{"arm": "smoke", "seed": 7, "scenario": "dev", "calls": 1, "tokens_in": 9452, "tokens_out": 18912, "usd": 0.027137239999999997}
+{"arm": "smoke", "seed": 7, "scenario": "dev", "calls": 1, "tokens_in": 9452, "tokens_out": 2777, "usd": 0.00696849}
+{"arm": "smoke", "seed": 7, "scenario": "dev", "calls": 2, "tokens_in": 24199, "tokens_out": 21463, "usd": 0.00351616}
+{"arm": "l12_llm_r0", "seed": 11, "scenario": "dev", "calls": 31, "tokens_in": 11556, "tokens_out": 41958, "usd": 0.6640380000000002, "wall_s": 295.38199999999995}
+{"arm": "l12_llm_r0", "seed": 7, "scenario": "dev", "calls": 31, "tokens_in": 12101, "tokens_out": 49272, "usd": 0.7753829999999999, "wall_s": 339.77199999999993}
+{"arm": "l12_llm_r1", "seed": 7, "scenario": "dev", "calls": 31, "tokens_in": 12101, "tokens_out": 49427, "usd": 0.7777079999999998, "wall_s": 339.0669999999999}
+{"arm": "l12_llm_r2", "seed": 7, "scenario": "dev", "calls": 31, "tokens_in": 12101, "tokens_out": 52432, "usd": 0.8227829999999999, "wall_s": 367.84}
+{"arm": "l2p_aug_llm_r0", "seed": 7, "scenario": "dev", "calls": 15, "tokens_in": 171438, "tokens_out": 141427, "usd": 0.02352865, "wall_s": 593.427, "metered_usd": 0.02352865}
+{"arm": "l2p_nat_llm_r0", "seed": 7, "scenario": "dev", "calls": 15, "tokens_in": 171303, "tokens_out": 141918, "usd": 0.02358843, "wall_s": 625.858, "metered_usd": 0.02358843}
+{"arm": "l12_llm_r0", "seed": 42, "scenario": "dev", "calls": 40, "tokens_in": 15818, "tokens_out": 65415, "usd": 0.008978490000000002, "wall_s": 654.8160000000003, "metered_usd": 1.0286790000000003}
+{"arm": "l12_llm_r0", "seed": 23, "scenario": "dev", "calls": 64, "tokens_in": 24786, "tokens_out": 101667, "usd": 0.01396029, "wall_s": 1027.8439999999998, "metered_usd": 1.599363}
+{"arm": "l2p_nat_llm_r0", "seed": 11, "scenario": "dev", "calls": 15, "tokens_in": 172452, "tokens_out": 144496, "usd": 0.02395804, "wall_s": 1015.689, "metered_usd": 0.02395804}
+{"arm": "l12_llm_r0", "seed": 101, "scenario": "dev", "calls": 31, "tokens_in": 11871, "tokens_out": 46005, "usd": 0.006336780000000001, "wall_s": 462.71700000000004, "metered_usd": 0.7256880000000002}
+{"arm": "l2p_aug_llm_r0", "seed": 101, "scenario": "dev", "calls": 15, "tokens_in": 176450, "tokens_out": 137601, "usd": 0.02318163, "wall_s": 1106.1100000000001, "metered_usd": 0.023181629999999998}
+{"arm": "l2p_aug_llm_r0", "seed": 11, "scenario": "dev", "calls": 17, "tokens_in": 198633, "tokens_out": 163419, "usd": 0.02720346, "wall_s": 1140.0629999999999, "metered_usd": 0.027203460000000002}
+{"arm": "l2p_nat_llm_r0", "seed": 101, "scenario": "dev", "calls": 15, "tokens_in": 175477, "tokens_out": 142333, "usd": 0.0237676, "wall_s": 1181.298, "metered_usd": 0.0237676}
+{"arm": "l2p_aug_llm_r0", "seed": 23, "scenario": "dev", "calls": 15, "tokens_in": 176505, "tokens_out": 140200, "usd": 0.02352115, "wall_s": 1196.369, "metered_usd": 0.02352115}
+{"arm": "l2p_nat_llm_r0", "seed": 23, "scenario": "dev", "calls": 15, "tokens_in": 174963, "tokens_out": 146086, "usd": 0.02424007, "wall_s": 1253.4060000000002, "metered_usd": 0.024240070000000002}
+{"arm": "l2p_nat_llm_r0", "seed": 42, "scenario": "dev", "calls": 16, "tokens_in": 187200, "tokens_out": 155399, "usd": 0.02581787, "wall_s": 1301.6079999999997, "metered_usd": 0.02581787}
+{"arm": "l2p_aug_llm_r0", "seed": 42, "scenario": "dev", "calls": 17, "tokens_in": 200946, "tokens_out": 169971, "usd": 0.02812461, "wall_s": 1442.7510000000002, "metered_usd": 0.028124609999999998}
+{"arm": "l12_llm_r0", "seed": 202, "scenario": "dev", "calls": 41, "tokens_in": 15376, "tokens_out": 60848, "usd": 0.00837152, "wall_s": 606.4080000000001, "metered_usd": 0.9588480000000003}
+{"arm": "l2p_nat_llm_r0", "seed": 202, "scenario": "dev", "calls": 14, "tokens_in": 162326, "tokens_out": 140511, "usd": 0.02313621, "wall_s": 1164.3220000000001, "metered_usd": 0.023136209999999997}
+{"arm": "l2p_aug_llm_r0", "seed": 202, "scenario": "dev", "calls": 14, "tokens_in": 159607, "tokens_out": 138153, "usd": 0.0227481, "wall_s": 1402.966, "metered_usd": 0.022748100000000004}
+{"arm": "l12_llm_r1", "seed": 11, "scenario": "dev", "calls": 31, "tokens_in": 11556, "tokens_out": 45728, "usd": 0.00629132, "wall_s": 434.7429999999999, "metered_usd": 0.7205879999999999}
+{"arm": "l12_llm_r2", "seed": 11, "scenario": "dev", "calls": 34, "tokens_in": 12658, "tokens_out": 53415, "usd": 0.00732369, "wall_s": 541.038, "metered_usd": 0.839199}
+{"arm": "l2p_aug_llm_r2", "seed": 7, "scenario": "dev", "calls": 15, "tokens_in": 170775, "tokens_out": 138926, "usd": 0.02318363, "wall_s": 628.864, "metered_usd": 0.023183629999999997}
+{"arm": "l2p_nat_llm_r1", "seed": 7, "scenario": "dev", "calls": 13, "tokens_in": 146844, "tokens_out": 127070, "usd": 0.020924420000000003, "wall_s": 706.137, "metered_usd": 0.020924419999999996}
+{"arm": "l2p_aug_llm_r1", "seed": 7, "scenario": "dev", "calls": 15, "tokens_in": 171460, "tokens_out": 146765, "usd": 0.02422325, "wall_s": 725.01, "metered_usd": 0.024223249999999998}
+{"arm": "l2p_nat_llm_r1", "seed": 11, "scenario": "dev", "calls": 14, "tokens_in": 159923, "tokens_out": 130753, "usd": 0.02179558, "wall_s": 1006.337, "metered_usd": 0.021795580000000002}
+{"arm": "l2p_nat_llm_r2", "seed": 7, "scenario": "dev", "calls": 14, "tokens_in": 157486, "tokens_out": 141748, "usd": 0.02315182, "wall_s": 1048.559, "metered_usd": 0.023151820000000004}
+{"arm": "l2p_nat_llm_r1", "seed": 23, "scenario": "dev", "calls": 14, "tokens_in": 158325, "tokens_out": 142959, "usd": 0.02333442, "wall_s": 1209.118, "metered_usd": 0.02333442}
+{"arm": "l2p_aug_llm_r1", "seed": 23, "scenario": "dev", "calls": 14, "tokens_in": 162468, "tokens_out": 143353, "usd": 0.023509930000000002, "wall_s": 1210.397, "metered_usd": 0.023509930000000005}
+{"arm": "l2p_aug_llm_r1", "seed": 11, "scenario": "dev", "calls": 16, "tokens_in": 186847, "tokens_out": 147981, "usd": 0.02484294, "wall_s": 1241.7859999999998, "metered_usd": 0.02484294}
+{"arm": "l2p_nat_llm_r2", "seed": 11, "scenario": "dev", "calls": 15, "tokens_in": 171752, "tokens_out": 146443, "usd": 0.02419015, "wall_s": 1318.8669999999997, "metered_usd": 0.024190149999999997}
+{"arm": "l2p_aug_llm_r2", "seed": 11, "scenario": "dev", "calls": 17, "tokens_in": 202294, "tokens_out": 175263, "usd": 0.028853010000000002, "wall_s": 1437.1399999999999, "metered_usd": 0.02885301}
+{"arm": "l12_llm_r1", "seed": 23, "scenario": "dev", "calls": 64, "tokens_in": 24772, "tokens_out": 99485, "usd": 0.013676210000000001, "wall_s": 1036.1950000000002, "metered_usd": 1.5665909999999996}
+{"arm": "l2p_nat_llm_r2", "seed": 23, "scenario": "dev", "calls": 13, "tokens_in": 146745, "tokens_out": 125606, "usd": 0.02073113, "wall_s": 1042.8749999999998, "metered_usd": 0.02073113}
+{"arm": "l12_llm_r2", "seed": 23, "scenario": "dev", "calls": 62, "tokens_in": 23851, "tokens_out": 96379, "usd": 0.013244800000000001, "wall_s": 995.539, "metered_usd": 1.5172379999999996}
+{"arm": "l12_llm_r1", "seed": 42, "scenario": "dev", "calls": 40, "tokens_in": 15818, "tokens_out": 60940, "usd": 0.00839674, "wall_s": 654.0739999999998, "metered_usd": 0.961554}

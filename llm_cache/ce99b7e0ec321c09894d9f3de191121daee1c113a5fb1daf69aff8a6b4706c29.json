@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-MUM",
+    "confidence": 0.8,
+    "rationale": "C-S2-MUM holds both the higher mechanical leader_score and a substantially better slot1_share_7d (0.87 vs 0.69), demonstrating stronger alignment with premium placement capture and conversion potential. Both metrics corroborate the mechanical pick, warranting its selection as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1592,
+    "cost_usd": 0.02493,
+    "wall_clock_s": 16.955651625000087
+  }
+}

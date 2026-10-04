@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.7,
+    "rationale": "C-S1-MUM is the mechanical pick with the highest leader_score (0.6830), and the near-tie with C-S3-MUM (0.6827) is resolved in its favour by supporting evidence: its 7-day slot-1 share of 0.88 substantially exceeds C-S3-MUM's 0.67, indicating stronger top-slot dominance and incrementality. No evidence favours switching the pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 361,
+    "tokens_out": 352,
+    "cost_usd": 0.0005735699999999999,
+    "wall_clock_s": 3.3651253750001615
+  }
+}

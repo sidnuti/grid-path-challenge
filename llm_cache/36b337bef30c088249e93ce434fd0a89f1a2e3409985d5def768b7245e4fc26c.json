@@ -1,0 +1,229 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlock daily budget for efficient fund hitting capacity ceiling"
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Fund allocation for strong ROI market running out daily"
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Support fund with recent run-outs to sustain efficient volume"
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental share via high mroas generic and competitor keywords"
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Leverage scale position on high-iota competition and generic keywords"
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Top-slice BLR shower gel demand on efficient competitor keyword"
+      },
+      {
+        "id": "INT-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "MUM scale expansion via high-margin competitor spend"
+      },
+      {
+        "id": "INT-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "BLR body wash scale with strong competitor incremental returns"
+      },
+      {
+        "id": "INT-09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "HYD scale bid-up targeting high-iota competitor keyword"
+      },
+      {
+        "id": "INT-10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "PUN scale bid increase targeting premium incremental yields"
+      },
+      {
+        "id": "INT-11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K07"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "DEL soap scale capture via efficient generic keywords clearing goal"
+      },
+      {
+        "id": "INT-12",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Remove weak trim spend to protect portfolio ROAS floor"
+      },
+      {
+        "id": "INT-13",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR",
+          "C:C-S3-BLR/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Stop bleed on low-iota trim segment"
+      },
+      {
+        "id": "INT-14",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM",
+          "C:C-S3-MUM/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Prune underperforming market allocation"
+      },
+      {
+        "id": "INT-15",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD",
+          "C:C-S3-HYD/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Redirect resources from weak HYD soap performance"
+      }
+    ],
+    "stance": [],
+    "notes": "Shifted allowance toward high-incrementality scale campaigns (S4/S2) and funded daily-running-efficient campaigns (S1-HYD/PUN/MUM) while pruning S3 trim segments bleeding margin. Competitor keywords targeted for bid uplift leverage near-unity iota, ensuring true incremental growth without eroding the portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12146,
+    "tokens_out": 10673,
+    "cost_usd": 0.00175187,
+    "wall_clock_s": 83.28279337499998
+  }
+}

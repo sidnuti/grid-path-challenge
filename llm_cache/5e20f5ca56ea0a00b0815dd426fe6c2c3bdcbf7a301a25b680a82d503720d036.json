@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.65,
+    "rationale": "Leader scores are a near-tie (0.2942 vs 0.2660, ~10% relative gap), so the mechanical score is within noise. The evidence clearly favours C-S3-DEL: it holds 0.91 of the 7d slot1 share versus 0.54 for C-S1-DEL, meaning S3 is the de facto dominant campaign in this market. Protecting S3's bid preserves the market's top-slot position; deferring to S1 while S3 holds would risk losing 91% share coverage."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 655,
+    "cost_usd": 0.0009438099999999999,
+    "wall_clock_s": 6.362800583999984
+  }
+}

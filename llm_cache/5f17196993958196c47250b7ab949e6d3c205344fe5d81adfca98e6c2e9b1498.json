@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S5-PUN",
+    "confidence": 0.65,
+    "rationale": "The mechanical score slightly favors C-S4, but C-S5's overwhelmingly higher slot 1 share (0.96 vs 0.34) indicates true market dominance and makes it the more reliable leader to protect amid a noisy near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1537,
+    "cost_usd": 0.024321,
+    "wall_clock_s": 14.823491000000104
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Shift shower gel K05 lead to S4 (score 1.134) from S2, capturing highest incremental revenue."
+      },
+      {
+        "id": "YL-DEL-K05-S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back S2 in DEL K05 to allow S4 to optimize share and reduce waste."
+      },
+      {
+        "id": "LM-MUM-K04-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Move soap K04 leadership to S3 (score 0.738) over S1 to capture incremental lift."
+      },
+      {
+        "id": "YL-MUM-K04-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Reduce S1 competition in MUM K04 to prevent cannibalization and consolidate bids."
+      },
+      {
+        "id": "LM-PUN-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Transfer body wash K01 lead to S2 (score 1.116) from S5 for better ROI."
+      },
+      {
+        "id": "YL-PUN-K01-S5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Yield PUN K01 slot to S2 to free budget for higher-efficiency spends."
+      },
+      {
+        "id": "LM-PUN-K03-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Shift soap K03 leadership to S3 (score 0.669) over S1."
+      },
+      {
+        "id": "YL-PUN-K03-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.8,
+        "expected_effect": "Step back S1 in PUN K03 to concentrate bids on stronger performer."
+      },
+      {
+        "id": "LM-BLR-K09-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.75,
+        "expected_effect": "Take lead on BLR K09 competition from S1 to S3 where marginal revenue is higher."
+      },
+      {
+        "id": "YL-BLR-K09-S1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.75,
+        "expected_effect": "Yield BLR K09 to S3 to align with best incremental revenue per impression."
+      },
+      {
+        "id": "RI-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Increase spend on scalable S2-HYD generic K05 (mroas 6.44) to push incremental volume."
+      },
+      {
+        "id": "RI-S2-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on S2-HYD generic K06 to capture remaining bid headroom efficiently."
+      },
+      {
+        "id": "RI-S2-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Utilize S2-PUN bid headroom on clearing K06 cell for incremental growth."
+      },
+      {
+        "id": "RI-S3-PUN-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Scale S3-PUN generic K03 where role is scale and OSA is healthy."
+      },
+      {
+        "id": "RI-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Push S4-DEL K06 (mroas 9.65) to maximize fund-allocated spend efficiency."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Resolved prior rejections by removing MISSES-tier cells from lead/yield targets and fixing campaign scoping. Concentrated bid increases on SCALE/FUND roles with verified headroom, clean OSA, and high marginal ROAS. Portfolio ROAS floor maintained by trimming low-incrementality competition and holding brand displacements."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11342,
+    "tokens_out": 10497,
+    "cost_usd": 0.00170487,
+    "wall_clock_s": 89.82209675000013
+  }
+}

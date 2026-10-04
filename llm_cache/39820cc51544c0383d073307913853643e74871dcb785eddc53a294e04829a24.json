@@ -1,0 +1,280 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove weak ROI soap spend to protect portfolio ROAS"
+      },
+      {
+        "id": "cut-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove weak ROI soap spend to protect portfolio ROAS"
+      },
+      {
+        "id": "cut-S3-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove weak ROI soap spend to protect portfolio ROAS"
+      },
+      {
+        "id": "cut-S3-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove weak ROI soap spend to protect portfolio ROAS"
+      },
+      {
+        "id": "cut-S3-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Remove weak ROI soap spend to protect portfolio ROAS"
+      },
+      {
+        "id": "cut-S5-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate low-incrementality kids soap spend"
+      },
+      {
+        "id": "cut-S5-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate low-incrementality kids soap spend"
+      },
+      {
+        "id": "cut-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate low-incrementality kids soap spend"
+      },
+      {
+        "id": "cut-S5-HYD",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate low-incrementality kids soap spend"
+      },
+      {
+        "id": "cut-S5-PUN",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate low-incrementality kids soap spend"
+      },
+      {
+        "id": "raise-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale highly efficient shower gel inventory"
+      },
+      {
+        "id": "raise-S4-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale highly efficient shower gel inventory"
+      },
+      {
+        "id": "raise-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Utilize heavy run-out history for top iroas product"
+      },
+      {
+        "id": "raise-S4-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale highly efficient shower gel inventory"
+      },
+      {
+        "id": "raise-S4-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale highly efficient shower gel inventory"
+      },
+      {
+        "id": "raise-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on fund role with strong iroas"
+      },
+      {
+        "id": "raise-S2-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on scale role with strong iroas"
+      },
+      {
+        "id": "raise-S2-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on scale role with strong iroas"
+      },
+      {
+        "id": "raise-S2-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on scale role with strong iroas"
+      },
+      {
+        "id": "raise-S2-PUN",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capitalize on scale role with strong iroas"
+      }
+    ],
+    "notes": "Aggressively reallocate from consistently sub-par S3 and S5 portfolios to S4 and S2, which demonstrate superior incremental returns (iroas > 4) and clear scale/fund roles. Cuts create substantial daily allowance headroom to fund efficient growth without risking the direct ROAS floor.",
+    "stance": []
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23654,
+    "tokens_out": 18873,
+    "cost_usd": 0.0031631100000000002,
+    "wall_clock_s": 147.3358502079999
+  }
+}

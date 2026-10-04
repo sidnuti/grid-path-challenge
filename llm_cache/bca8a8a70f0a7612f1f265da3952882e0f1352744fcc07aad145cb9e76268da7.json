@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.7,
+    "rationale": "Mechanical leader_score marginally favors C-S3-MUM (0.6873 vs 0.6812), and corroborating evidence supports it: its 7-day slot-1 share (0.86) far exceeds C-S1-MUM's (0.69), indicating it already owns the top position. No evidence favors the alternative, so protect C-S3-MUM as leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 299,
+    "cost_usd": 0.00049918,
+    "wall_clock_s": 3.45469700000001
+  }
+}

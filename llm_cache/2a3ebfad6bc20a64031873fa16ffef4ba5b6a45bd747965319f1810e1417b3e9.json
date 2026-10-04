@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.65,
+    "rationale": "Low order volume (12) introduces sampling noise and volatility. Realised dROAS (1.7155) comfortably exceeds the goal (1.45), confirming the current bid remains efficient. The mechanical +10% step is appropriately conservative, so the full raise is accepted. Confidence is moderated by thin historical data, aligning with the directive to dampen rather than overreact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 463,
+    "tokens_out": 2028,
+    "cost_usd": 0.031809,
+    "wall_clock_s": 20.846983042000005
+  }
+}

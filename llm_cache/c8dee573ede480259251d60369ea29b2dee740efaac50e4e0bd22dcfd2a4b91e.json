@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.85,
+    "rationale": "C-S4-BLR has the higher mechanical leader score (1.2024 vs 1.0884). Despite the instruction noting potential noise in near-ties, the provided gap is meaningful and no opposing metrics are supplied. Adhering to the rule to prefer the mechanical pick when evidence does not clearly favor the alternative yields C-S4-BLR as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 657,
+    "cost_usd": 0.010905,
+    "wall_clock_s": 7.610899250000003
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.9,
+    "confidence": 0.65,
+    "rationale": "Order volume is low (20), introducing measurement volatility despite realised dROAS comfortably exceeding the goal. A slight dampening factor preserves upside while reducing the risk of over-adjustment on noisy signals."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 464,
+    "tokens_out": 1823,
+    "cost_usd": 0.028737,
+    "wall_clock_s": 20.822170708000158
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "int_1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unblock efficient Soap-Fund from daily cap; drives incremental reach while preserving ROAS floor."
+      },
+      {
+        "id": "int_2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cap expansion for top-performing Shower-Gel-Fund; maximizes high-iota spend within allowance."
+      },
+      {
+        "id": "int_3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Prevent daily run-out for HYD Soap-Fund with controlled budget increment."
+      },
+      {
+        "id": "int_4",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capital from low-iota Soap-Hold; reallocates to scale candidates without dropping volume."
+      },
+      {
+        "id": "int_5",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Recover overspend from persistent HYD Hold that repeatedly exhausts budget."
+      },
+      {
+        "id": "int_6",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim weak Kids-Soap-Hold budget to eliminate displacement-heavy spend."
+      },
+      {
+        "id": "int_7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Appoint efficient Body-Wash-Scale as category leader over holding competitor; captures high-iota impressions."
+      },
+      {
+        "id": "int_8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure Slot-1 for high-iroas Shower-Gel-Fund; displaces lower-incrementality sibling."
+      },
+      {
+        "id": "int_9",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Correct wrong holder in MUM; elevates Body-Wash-Scale to capture top incremental value."
+      },
+      {
+        "id": "int_10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S1-DEL/K03",
+          "C:C-S1-DEL/K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push incremental volume on cleared generic cells with strong mroas_up20 and iota."
+      },
+      {
+        "id": "int_11",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Accelerate efficient Body-Wash-Scale spend on cleared generic cell with highest predicted lift."
+      },
+      {
+        "id": "int_12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Fund-scale bid increase on cleared generic cells; expands reach while staying within tier guardrails."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocating \u20b9300/day allowance from chronically capped, low-iota Holds (S3/S5) to Funds/Scale runs. Correcting three wrong-market leaders to maximize incremental revenue per impression while keeping portfolio direct ROAS above the 4.17 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11097,
+    "tokens_out": 7127,
+    "cost_usd": 0.00125942,
+    "wall_clock_s": 62.15947208300008
+  }
+}

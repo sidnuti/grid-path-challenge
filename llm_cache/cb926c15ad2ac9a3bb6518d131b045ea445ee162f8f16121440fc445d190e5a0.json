@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.72,
+    "rationale": "Mechanical leader_score pick C-S1-HYD retained; the 1.1042 vs 1.0554 gap is a near-tie, but supporting evidence (slot1_share_7d 0.91 vs 0.60) reinforces the mechanical choice, and nothing in the data clearly favours C-S3-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 340,
+    "tokens_out": 260,
+    "cost_usd": 0.0004508,
+    "wall_clock_s": 2.784213709000028
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.75,
+    "rationale": "Mechanical scores are identical. C-S4-BLR demonstrates superior historical auction performance with a 0.85 slot 1 share compared to 0.62 for C-S2-BLR. This indicates C-S4-BLR already captures premium visibility for this keyword-city pair, making it the logical choice to protect and reducing internal bidding friction."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1578,
+    "cost_usd": 0.02472,
+    "wall_clock_s": 19.14658687499991
+  }
+}

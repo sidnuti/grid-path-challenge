@@ -1,0 +1,292 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BR-C-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Absorb allowance, fund efficient Body Wash off-take in DEL."
+      },
+      {
+        "id": "BR-C-S2-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund capped efficient Body Wash in MUM."
+      },
+      {
+        "id": "BR-C-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund Soap in HYD, efficient with budget headroom."
+      },
+      {
+        "id": "BR-C-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund Shower Gel DEL off-take."
+      },
+      {
+        "id": "BR-C-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund Shower Gel BLR off-take."
+      },
+      {
+        "id": "RB-C-S2-HYD-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bids on high-iota competition to capture incremental volume."
+      },
+      {
+        "id": "RB-C-S2-BLR-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale competition bids where iota=1.00 and role=scale."
+      },
+      {
+        "id": "RB-C-S2-PUN-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental competition orders in PUN."
+      },
+      {
+        "id": "CB-C-S3-DEL-K03",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-DEL/K03"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Cut weak generic spend missing goal, free room."
+      },
+      {
+        "id": "CB-C-S3-DEL-K04",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-DEL/K04"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Cut weak generic spend missing goal, free room."
+      },
+      {
+        "id": "BC-C-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce hold/trim footprint, reallocate to S1/S2/S4 fund candidates."
+      },
+      {
+        "id": "BC-C-S3-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim weak Soap MUM presence."
+      },
+      {
+        "id": "LM-S1-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Make S1 the market leader on K01, displacing lower-IROAS siblings."
+      },
+      {
+        "id": "LM-S1-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead S1 on K01 BLR."
+      },
+      {
+        "id": "LM-S1-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead S1 on K01 HYD."
+      },
+      {
+        "id": "LM-S1-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lead S1 on K01 MUM."
+      },
+      {
+        "id": "LM-S2-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift K06 leadership to S2 for higher incremental return."
+      },
+      {
+        "id": "LM-S2-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift K06 leadership to S2 for higher incremental return."
+      },
+      {
+        "id": "LM-S2-PUN-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift K06 leadership to S2 for higher incremental return."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Reallocating allowance toward high-iota competition cells and funded campaigns. Trimming S3 hold/trims and correcting wrong holders to lift aggregate IROAS while maintaining ROAS floor compliance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12164,
+    "tokens_out": 11624,
+    "cost_usd": 0.00187604,
+    "wall_clock_s": 93.17447987500003
+  }
+}

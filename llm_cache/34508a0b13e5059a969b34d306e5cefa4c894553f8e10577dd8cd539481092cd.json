@@ -1,0 +1,252 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "lead_DEL_K10_S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift competition traffic to higher-incrementality Shower Gel fund SKU."
+      },
+      {
+        "id": "lead_DEL_K03_S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Move generic soap search to flagship brand SKU over weak hold."
+      },
+      {
+        "id": "lead_MUM_K05_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Allocate impressions to higher-value Body Wash scale SKU."
+      },
+      {
+        "id": "lead_MUM_K06_S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Redirect competitor terms to better incrementality Shower Gel."
+      },
+      {
+        "id": "lead_DEL_K01_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Take brand lead over weaker hold SKU in Delhi."
+      },
+      {
+        "id": "raise_bid_S4_DEL_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture more generic volume on efficient fund SKU with headroom."
+      },
+      {
+        "id": "raise_bid_S2_DEL_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow incremental off-take on Body Wash scale in Delhi."
+      },
+      {
+        "id": "raise_bid_S4_MUM_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase win rate on shower gel generic search."
+      },
+      {
+        "id": "raise_bid_S2_BLR_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage BLR Body Wash scale potential on generic terms."
+      },
+      {
+        "id": "raise_bid_S1_PUN_K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Small lift on under-capacity generic cell for Soap scale."
+      },
+      {
+        "id": "cut_budget_S5_DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce wasteful spend on weak Kids Soap fund running out daily."
+      },
+      {
+        "id": "cut_budget_S3_DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim hold SKU budget to reallocate funds to scales."
+      },
+      {
+        "id": "cut_budget_S5_MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Stop drain on low-iroas Kids Soap in Mumbai."
+      },
+      {
+        "id": "hold_S3_BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Prevent bid increases on weak trim SKU in Bangalore."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "hold",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Removed previously rejected slot-1 saturated and over-budget intents. Pivoted remaining budget allowance toward S4-DEL scale, while aggressively trimming S3/S5 waste. Shifted contested markets to maximize incremental share without consuming daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11412,
+    "tokens_out": 10367,
+    "cost_usd": 0.0016900700000000001,
+    "wall_clock_s": 78.99970137500009
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "lm-del-k01-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "expected_effect": "Capture high-iota Body Wash traffic from displaced S5, lifting incremental revenue."
+      },
+      {
+        "id": "lm-del-k02-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "expected_effect": "Secure soap brand slot for scale-capable S3 over weak S1."
+      },
+      {
+        "id": "lm-del-k03-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.75,
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "expected_effect": "Redirect generic soap impression share to better incremental performer."
+      },
+      {
+        "id": "lm-del-k10-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "expected_effect": "Lock competition slot for zero-displacement S4 Shower Gel."
+      },
+      {
+        "id": "lm-hyd-k01-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "expected_effect": "Overtake S1 brand slots with high-iota S2 in Hyderabad."
+      },
+      {
+        "id": "lm-hyd-k03-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.75,
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "expected_effect": "Improve generic soap share via stronger incremental driver."
+      },
+      {
+        "id": "lm-hyd-k05-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "expected_effect": "Capture body wash-generic impressions for S4 over S2."
+      },
+      {
+        "id": "lm-hyd-k09-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.75,
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "expected_effect": "Shift competition share to better ROI holder."
+      },
+      {
+        "id": "lm-mum-k01-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "expected_effect": "Replace misaligned S3 holder with higher-scoring S2."
+      },
+      {
+        "id": "lm-mum-k02-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.75,
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "expected_effect": "Move soap brand leadership from weak S1 to scale S3."
+      },
+      {
+        "id": "lm-pun-k01-s2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Extract incremental value from S2 over low-iota S5."
+      },
+      {
+        "id": "lm-pun-k09-s3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.75,
+        "evidence_refs": [
+          "M:PUN:K09"
+        ],
+        "expected_effect": "Optimize competition allocation to better performer."
+      },
+      {
+        "id": "rb-s3del-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.65,
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K04"
+        ],
+        "expected_effect": "Increase volume on efficient generic cells with mroas_up20=3.86."
+      },
+      {
+        "id": "rb-s2del-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.65,
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "expected_effect": "Bid up high-iota generic body wash demand."
+      },
+      {
+        "id": "rb-s4del-competition",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K10"
+        ],
+        "expected_effect": "Scale zero-displacement competition clicks for maximum ROAS lift."
+      },
+      {
+        "id": "rb-s2hyd-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.65,
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05"
+        ],
+        "expected_effect": "Grow efficient generic spend in Hyderabad scale campaign."
+      },
+      {
+        "id": "cb-s5-cities",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "small",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "expected_effect": "Reduce low-iota kids soap spend, freeing allowance and protecting portfolio ROAS floor."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocated contested market leadership to high-iota Scale SKUs (S2, S3, S4) where historical holders were misaligned. Raised bids on efficient generic/competition cells with verified headroom and cleared MISSES filters. Trimmed S5 budgets to curb low-incrementality displacement, preserving portfolio ROAS well above the 4.17 floor while expanding total offtake."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11108,
+    "tokens_out": 11067,
+    "cost_usd": 0.00177195,
+    "wall_clock_s": 91.27346225000002
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.65,
+    "rationale": "Near tie in mechanical scores; however, C-S3-MUM shows a substantially higher slot1_share_7d (0.92 vs 0.46), indicating stronger and more consistent top-position visibility. This clear advantage in actual auction dominance justifies selecting it over the marginal mechanical score benefit of C-S1-MUM."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1693,
+    "cost_usd": 0.026445,
+    "wall_clock_s": 19.212651875000006
+  }
+}

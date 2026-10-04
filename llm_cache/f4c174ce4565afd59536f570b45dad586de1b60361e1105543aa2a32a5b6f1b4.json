@@ -1,0 +1,190 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase incremental sales on high-mROAS generic keyword; slot share 71% leaves room for +20% bid."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental Shower Gel demand efficiently; slot share 66% allows increase."
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale high-iroas generic keyword; efficient and within allowance."
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Raise bid on strong generic performer; avoids MISSES cells."
+      },
+      {
+        "id": "INT-5",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K01",
+          "K:Shower Gel:brand"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage high brand iroas (6.67) in MUM; low slot share permits increase."
+      },
+      {
+        "id": "INT-6",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Cap spend on trim campaign to preserve allowance for Scale/Fund campaigns and protect ROAS floor."
+      },
+      {
+        "id": "INT-7",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent budget drift on trim SKU."
+      },
+      {
+        "id": "INT-8",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block raises on weak/trim market."
+      },
+      {
+        "id": "INT-9",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent overallocation to low-iroas Kids Soap brand."
+      },
+      {
+        "id": "INT-10",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Stop spend on trim SKU."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Dropped S3 leadership bids that triggered MISSES/blockers. Reduced raise count and applied holds to Trim campaigns to conserve the \u20b9300/day allowance while pushing high-iroas mROAS cells. Portfolio ROAS floor protected."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11143,
+    "tokens_out": 10813,
+    "cost_usd": 0.00173998,
+    "wall_clock_s": 87.78136345800002
+  }
+}

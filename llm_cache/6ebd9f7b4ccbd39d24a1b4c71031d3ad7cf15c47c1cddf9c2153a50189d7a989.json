@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.7,
+    "rationale": "Top two mechanical scores are a near-tie (1.2525 vs 1.1814, ~6% apart, within noise), so the decisive evidence is slot1_share_7d: C-S3-MUM owns position 1 at 0.94 while C-S2-MUM sits at 0.29. The leader whose bid must be protected is the incumbent slot-1 holder, so the evidence clearly favours C-S3-MUM over the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 403,
+    "tokens_out": 897,
+    "cost_usd": 0.00127036,
+    "wall_clock_s": 8.538467207999929
+  }
+}

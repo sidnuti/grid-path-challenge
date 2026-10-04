@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.9,
+    "rationale": "C-S3-BLR is already the mechanical leader by score and shows a significantly higher slot1_share_7d (0.86 vs 0.60), confirming stronger ad placement performance and resolving the near-tie noise in favor of this candidate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1383,
+    "cost_usd": 0.021795,
+    "wall_clock_s": 15.772594916999992
+  }
+}

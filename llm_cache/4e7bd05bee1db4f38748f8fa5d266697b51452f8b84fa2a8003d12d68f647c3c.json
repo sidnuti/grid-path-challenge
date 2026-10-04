@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.65,
+    "rationale": "Mechanical scoring ranks C-S2-PUN highest (1.1979 vs 1.1048). Despite C-S3-PUN showing stronger historical slot1_share (0.22 vs 0.04), the instruction prioritizes the mechanical metric in near-ties absent clear overriding evidence. C-S5's high slot share appears volatile or driven by non-mechanical factors, reinforcing reliance on the top-scored candidate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2200,
+    "cost_usd": 0.034266,
+    "wall_clock_s": 21.037978917000032
+  }
+}

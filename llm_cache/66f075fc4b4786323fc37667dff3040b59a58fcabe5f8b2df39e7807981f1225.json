@@ -1,0 +1,159 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "IM-01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift Body Wash generic volume to highest incremental SKU"
+      },
+      {
+        "id": "IM-02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture BLR generic demand with S2's superior incremental score"
+      },
+      {
+        "id": "IM-03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move MUM generic allocation from S4 leader to S2 for higher ROAS"
+      },
+      {
+        "id": "IM-04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Step S2 back on DEL competition keywords to let S4 lead efficiently"
+      },
+      {
+        "id": "IB-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand reach on high-iota generic cell while staying below slot-cap"
+      },
+      {
+        "id": "IB-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-DEL/K06",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Defend DEL generic segment with strong mroas_up20 (4.21)"
+      },
+      {
+        "id": "IB-07",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-BLR/K06",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incremental lift on cleared generic cell with 71% iota"
+      },
+      {
+        "id": "IB-08",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S2-MUM/K05",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure slot gains on MUM generic with strong incrementality signal"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Previous budget raises for C-S2-DEL, C-S2-BLR, and C-S3-BLR were dropped due to insufficient run-out days (G5 rule). Execution pivots to correcting misplaced contested-market leadership and lifting bids on cleared generic cells with high iota/mroas. All targets maintain OSA > 0.88, avoiding blocking thresholds, while preserving portfolio direct ROAS above the 4.17 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11326,
+    "tokens_out": 7947,
+    "cost_usd": 0.00137289,
+    "wall_clock_s": 77.32218720799995
+  }
+}

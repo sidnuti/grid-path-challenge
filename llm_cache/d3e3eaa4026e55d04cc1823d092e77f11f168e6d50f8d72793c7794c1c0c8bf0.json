@@ -1,0 +1,280 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-R1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "UnCap efficient fund campaign; releases 5/7 run-outs to drive incremental Body Wash volume without triggering protected cell cuts."
+      },
+      {
+        "id": "INT-R2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lift ceiling on high-iroas (2.66) fund campaign; utilizes 6/7 run-out days to capture remaining incremental demand."
+      },
+      {
+        "id": "INT-R3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Expand Shower Gel Delhi budget; sustains incremental growth while staying within bid guardrails."
+      },
+      {
+        "id": "INT-R4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund cap release for Body Wash Mumbai; maintains efficiency while scaling share."
+      },
+      {
+        "id": "INT-R5",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase Shower Gel Bangalore spend; leverages 7/7 run-out days for steady incremental lift."
+      },
+      {
+        "id": "INT-R6",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Modest top-up for Hyderabad Soap fund to stabilize baseline share and protect protected cells."
+      },
+      {
+        "id": "INT-B1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase CPC on high-iota (1.00) competition keyword where slot share is healthy (53%); drives incremental orders."
+      },
+      {
+        "id": "INT-B2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Edge bid on Body Wash Pune competition (iroas 6.26) to capture price-sensitive shoppers efficiently."
+      },
+      {
+        "id": "INT-B3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Boost Shower Gel Hyderabad competition bid; low slot share (39%) leaves ample impression room with iota 1.00."
+      },
+      {
+        "id": "INT-L1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure slot 1 on Shower Gel generic query in Delhi; highest incremental revenue per impression among siblings."
+      },
+      {
+        "id": "INT-L2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Take leadership on Shower Gel generic in Hyderabad over incumbent; maximizes click-through and conversion."
+      },
+      {
+        "id": "INT-L3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead competition market in Hyderabad where S4 score exceeds S2 significantly; redirects traffic to highest converter."
+      },
+      {
+        "id": "INT-L4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct misalignment on Soap generic BLR; S1 holds best incremental position and clears goal."
+      },
+      {
+        "id": "INT-L5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Assert Soap generic leadership in Pune where S1 score edges competitors; stabilizes fund allocation."
+      },
+      {
+        "id": "INT-Y1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back on Brand keyword DEL where S3 leads; avoids wasteful impression battles and frees budget."
+      },
+      {
+        "id": "INT-Y2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield generic DEL to S2 (Body Wash) which scores higher incrementally; preserves S4 budget for stronger matchups."
+      },
+      {
+        "id": "INT-Y3",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back on PUN generic to let S2 lead; stops leakage and improves portfolio-wide marginal return."
+      },
+      {
+        "id": "INT-Y4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield PUN competition to S2; optimizes portfolio spend efficiency around body wash dominance."
+      },
+      {
+        "id": "INT-Y5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Recede on HYD competition; S3 holds stronger position, conserving S1 budget for defended generic terms."
+      }
+    ],
+    "stance": [],
+    "notes": "Replaced rejected fund-cell bid cuts/rises with targeted campaign budget raises for capped-efficient SKUs (C-S2-HYD, C-S2-DEL, C-S4-DEL, C-S2-MUM, C-S4-BLR, C-S1-HYD) to respect protected status. Removed bid increases on S4 competition cells already dominating slots (>=80%). Pivoted allowance toward high-incrementality competition bids on S2/S4 scale campaigns and corrected contested market leadership to align with highest incremental revenue per impression metrics, ensuring spend stays within the 300 INR daily allowance while protecting the direct ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12023,
+    "tokens_out": 11274,
+    "cost_usd": 0.0018263100000000003,
+    "wall_clock_s": 90.212749584
+  }
+}

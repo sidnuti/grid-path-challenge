@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical score slightly favors C-S3-HYD, but the margin is narrow. C-S1-HYD holds a decisive edge in slot1_share_7d (0.94 vs 0.60), signaling stronger ad position control and more consistent market presence. This positional dominance provides clear evidence to override the noisy mechanical tie-breaker."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 2025,
+    "cost_usd": 0.031431,
+    "wall_clock_s": 21.950530458000003
+  }
+}

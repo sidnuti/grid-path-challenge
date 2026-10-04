@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.6,
+    "rationale": "Both campaigns have an identical leader_score of 1.0638, creating a tie. C-S4-BLR holds a significantly higher slot1_share_7d (0.85 vs 0.62), indicating stronger current auction positioning and visibility. This performance metric breaks the tie in favor of C-S4-BLR."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1625,
+    "cost_usd": 0.025425,
+    "wall_clock_s": 15.961642125000026
+  }
+}

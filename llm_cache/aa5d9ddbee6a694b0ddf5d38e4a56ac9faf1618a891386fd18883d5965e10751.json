@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S5-HYD",
+    "confidence": 0.75,
+    "rationale": "While C-S4-HYD holds the marginally higher mechanical leader_score (1.3472 vs 1.3059), the near-tie indicates scoring noise. C-S5-HYD exhibits overwhelming practical dominance with a 95% slot-1 share compared to S4's 14%. This strong, sustained top-position capture strongly suggests S5 is actually driving more incremental value and stability, justifying an override of the mechanical score."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 1541,
+    "cost_usd": 0.024396,
+    "wall_clock_s": 16.07953449999991
+  }
+}

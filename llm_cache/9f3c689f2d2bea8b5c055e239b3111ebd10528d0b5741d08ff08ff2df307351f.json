@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.7,
+    "rationale": "Near-tie in mechanical leader_score (0.2762 vs 0.2664), so default to the mechanical pick C-S1-HYD. Supporting evidence reinforces this: C-S1-HYD holds a dominant slot1_share_7d of 0.94 versus 0.61, indicating it already owns the top impression position and its bid is the one worth protecting; no evidence favors flipping to C-S3-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 261,
+    "cost_usd": 0.00045242000000000004,
+    "wall_clock_s": 2.9721797920001336
+  }
+}

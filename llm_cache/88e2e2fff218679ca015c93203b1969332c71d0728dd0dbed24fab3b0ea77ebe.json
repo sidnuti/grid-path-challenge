@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.78,
+    "rationale": "Mechanical leader_score favours C-S1-MUM (0.3735 vs 0.3401), and the corroborating evidence points the same way: C-S1-MUM already holds 0.92 slot1_share_7d versus 0.66, so it is the campaign whose bid effectively controls market visibility and is worth protecting; C-S3-MUM should hold rather than raise. No evidence favours the runner-up."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 447,
+    "cost_usd": 0.00068381,
+    "wall_clock_s": 4.780190833000006
+  }
+}

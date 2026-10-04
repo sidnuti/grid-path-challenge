@@ -1,0 +1,234 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "lm-s4-del-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Realigns slot-1 share to highest-incrementality SKU (S4), boosting off-take without bidding war waste."
+      },
+      {
+        "id": "lm-s4-hyd-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Captures contested generic volume in HYD where S4 outscores S2."
+      },
+      {
+        "id": "ym-s2-del-k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Steps back S2 to let S4 lead, freeing competitive tension budget."
+      },
+      {
+        "id": "ym-s2-blr-k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yields slot priority to S4 in BLR on high-value generic query."
+      },
+      {
+        "id": "ym-s2-hyd-k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yields to S4 in HYD, reducing self-cannibalization."
+      },
+      {
+        "id": "rb-s4-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-BLR",
+          "R:C-S4-HYD",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increases visibility on high-iota generic queries for scale-role SH gel campaigns; compiler filters <=80% slot1 cells."
+      },
+      {
+        "id": "rb-s2-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "R:C-S2-PUN",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Bids up efficient generic shares for S2 scale/hold roles to capture incremental volume."
+      },
+      {
+        "id": "cb-s3-gen",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S3",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trims spend on low-iota S3 generics to protect portfolio ROAS floor."
+      },
+      {
+        "id": "cb-s5-gen",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S5",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduces bleed from underperforming Kids Soap generic clicks."
+      },
+      {
+        "id": "rbg-c-s4-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds efficient FUND role SKU that hit daily cap on 7/7 days; leverages allowance headroom."
+      },
+      {
+        "id": "rbg-c-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Top-ups capped but profitable DEL Body Wash campaign to maximize week-end off-take."
+      },
+      {
+        "id": "cbg-c-s3-pun",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Freezes weak HOLD role PUN campaign; redirects allowance to higher-iota SKUs."
+      },
+      {
+        "id": "hld-s1-brnd",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S1",
+          "keyword_type": "brand"
+        },
+        "confidence": 0.6,
+        "expected_effect": "Prevents incremental-wasting bids on high-direct-ROAS/low-iota brand queries; stabilizes S1 spend."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": null,
+        "sku_role": null,
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": null,
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": null,
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": null,
+        "sku_role": null,
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": null,
+        "sku_role": null,
+        "stance": "trim"
+      }
+    ],
+    "notes": "Dropped prior budget raises on SKUs lacking run-out thresholds and bid raises on capped/missing cells. Shifted focus to contest realignment (lead S4, yield S2 in generic K05), broad generic bid lifts on high-iota categories, and targeted budget moves on capped-efficient campaigns. Cuts on S3/S5 and S1 brand hold preserve ROAS floor while leveraging 7759 INR headroom."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11921,
+    "tokens_out": 10620,
+    "cost_usd": 0.0017382300000000001,
+    "wall_clock_s": 99.27888937500006
+  }
+}

@@ -1,0 +1,15 @@
+== scripts/sizing_inputs_dump.py  (seed 23, runs 5-6: why some candidates were not selected)
+RUN 5 allowance 1179.19
+  C-S2-MUM K05 increase_cpm    390 -> 410     dS 42.54  dR 240.13  iota 0.659
+  C-S3-DEL K04 increase_cpm    280 -> 295     dS 22.67  dR 91.16   iota 0.717
+  C-S3-MUM K04 increase_cpm    310 -> 325     dS 23.02  dR 91.02   iota 0.717
+  C-S3-BLR K04 increase_cpm    300 -> 315     dS 18.54  dR 88.47   iota 0.717
+  C-S3-PUN K04 increase_cpm    255 -> 270     dS 5.37   dR 23.29   iota 0.717
+  C-S4-HYD K06 increase_cpm    330 -> 365     dS 65.90  dR 667.65  iota 0.525
+  C-S5-DEL K08 increase_cpm    255 -> 270     dS 29.36  dR 219.01  iota 0.658
+  C-S5-DEL     increase_budget 550 -> 825     dS 0.00   dR 0.00    iota 0.524   <- dropped by the dS > 1 filter only
+  selected 7/8, sum dS 207.40; rows per group = 1
+RUN 6 allowance 1204.21
+  ... 5 bid raises (dS 6-66) + C-S1-DEL budget 3375->5062.5 (dS 723.94) + C-S3-HYD budget (256.95)
+      + C-S3-PUN budget (85.80) + C-S5-DEL budget (dS 0.00, dropped by filter)
+  selected 8/9, sum dS 1204.16 (coincidentally just under the allowance); rows per group = 1

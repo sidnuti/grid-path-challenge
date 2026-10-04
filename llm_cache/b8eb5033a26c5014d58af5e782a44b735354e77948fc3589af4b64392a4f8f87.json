@@ -1,0 +1,384 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "intent_1",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K10",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "capture high-incrementality competitor share"
+      },
+      {
+        "id": "intent_2",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K10",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "capture high-incrementality competitor share"
+      },
+      {
+        "id": "intent_3",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "capture high-incrementality competitor share"
+      },
+      {
+        "id": "intent_4",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "capture premium competitor share"
+      },
+      {
+        "id": "intent_5",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "M:DEL:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "fund efficient competitor acquisition"
+      },
+      {
+        "id": "intent_6",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "supplement competitor bid"
+      },
+      {
+        "id": "intent_7",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "raise shower gel generic/brand bids"
+      },
+      {
+        "id": "intent_8",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "raise shower gel generic/brand bids"
+      },
+      {
+        "id": "intent_9",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "raise shower gel generic/brand bids"
+      },
+      {
+        "id": "intent_10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "install best incremental SKU"
+      },
+      {
+        "id": "intent_11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "step back weaker holder"
+      },
+      {
+        "id": "intent_12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "install best incremental SKU"
+      },
+      {
+        "id": "intent_13",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "step back weaker holder"
+      },
+      {
+        "id": "intent_14",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "install best incremental SKU"
+      },
+      {
+        "id": "intent_15",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "step back weaker holder"
+      },
+      {
+        "id": "intent_16",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "install best incremental SKU"
+      },
+      {
+        "id": "intent_17",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "step back weaker holder"
+      },
+      {
+        "id": "intent_18",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "stop bleed on trim campaign with MISSES"
+      },
+      {
+        "id": "intent_19",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "stop bleed on trim campaign with MISSES"
+      },
+      {
+        "id": "intent_20",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "reduce waste on hold campaign"
+      },
+      {
+        "id": "intent_21",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "stop bleed on trim campaign"
+      },
+      {
+        "id": "intent_22",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "stop bleed on hold campaign"
+      },
+      {
+        "id": "intent_23",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "defend existing competitor share"
+      },
+      {
+        "id": "intent_24",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "boost shower gel generic in HYD"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "hold",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Shifted 1123 INR capacity toward iota=1 competition keywords and S4 shower gel generic/bid headroom while yielding sibling SKUs in contested markets. Cut three trim/hold campaigns bleeding on MISSES verdicts to preserve ROAS margin and free room for incremental spend."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25480,
+    "tokens_out": 15424,
+    "cost_usd": 0.00276952,
+    "wall_clock_s": 116.546296084
+  }
+}

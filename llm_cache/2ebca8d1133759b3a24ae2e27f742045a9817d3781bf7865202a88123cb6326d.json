@@ -1,0 +1,250 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "BUDGET-CUT-MUM-TRIM-SOAP",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free budget by reducing spend on inefficient trim market (droas 4.22, iroas 1.64)."
+      },
+      {
+        "id": "BUDGET-CUT-MUM-TRIM-SOAP-LINE",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free budget by dropping weak trim market (iroas 1.57)."
+      },
+      {
+        "id": "BUDGET-CUT-MUM-HOLD-BW",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Recover budget from hold status with low incrementality."
+      },
+      {
+        "id": "BUDGET-CUT-KIDS-HOLD-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Remove wasteful spend from Kids Soap hold in BLR."
+      },
+      {
+        "id": "BUDGET-CUT-KIDS-HOLD-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim hold spend in MUM to improve portfolio iroas."
+      },
+      {
+        "id": "BUDGET-RAISE-FUND-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale spend in high-runout fund market with robust iroas (2.73)."
+      },
+      {
+        "id": "BUDGET-RAISE-FUND-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale spend in high-runout fund market with solid iroas (2.18)."
+      },
+      {
+        "id": "BID-RAISE-SCALE-HYD-SOAP-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-HYD/K03",
+          "M:HYD:K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase bid on efficient generic keyword (mroas 3.29, iota 0.62) in scaling market."
+      },
+      {
+        "id": "BID-RAISE-SCALE-HYD-BW-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05",
+          "M:HYD:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Leverage high mroas (6.96) on Body Wash generic in scaling market."
+      },
+      {
+        "id": "BID-RAISE-SCALE-PUN-BW-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05",
+          "M:PUN:K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Maximize high mroas (9.21) on Body Wash generic in scaling market."
+      },
+      {
+        "id": "BID-RAISE-FUND-DEL-SOAP-GEN",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03",
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Defend efficient generic leadership (mroas 3.13) in flagship fund market."
+      },
+      {
+        "id": "LEAD-HYD-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Yield S2 to elevate S4 Shower Gel to slot 1 where it holds higher incremental value."
+      },
+      {
+        "id": "LEAD-PUN-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Yield S1 Soap to capture superior incremental revenue from S4 Shower Gel on brand search."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "explore"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Shifted budget from low-iroas MUM trims/holds to high-runout DEL/BLR funds and HYD/PUN scales. Resolved two contested markets by elevating higher-incrementality S4 Shower Gel. Strictly avoided MISSES-blocked cells per G7 guardrail to ensure compiler acceptance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11381,
+    "tokens_out": 9264,
+    "cost_usd": 0.00154575,
+    "wall_clock_s": 72.649674417
+  }
+}

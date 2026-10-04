@@ -1,0 +1,365 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "BR-BUD-S2DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "sku_id": "S2"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent stockout for efficient fund; captures incremental generic demand without violating budget caps."
+      },
+      {
+        "id": "BR-BUD-S2MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "sku_id": "S2"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funds remaining budget headroom for high-iroas Body Wash fund in Mumbai."
+      },
+      {
+        "id": "BR-BUD-S4MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "sku_id": "S4"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Maintains saturation efficiency for Shower Gel in MUM; avoids artificial cap on incremental sales."
+      },
+      {
+        "id": "BR-BUD-S4BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "sku_id": "S4"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funds high-iroas Shower Gel campaign in BLR; prevents early stop on efficient spend."
+      },
+      {
+        "id": "BID-S1DEL-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "K:Soap:brand"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases share-of-voice on brand search where slot-1 is attainable (51%); drives low-cost incremental volume."
+      },
+      {
+        "id": "BID-S2BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Captures generic demand in scalable Body Wash campaign; improves reach without hitting slot-1 ceiling."
+      },
+      {
+        "id": "BID-S2HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expands footprint on generic Body Wash terms in HYD where incremental iroas exceeds 3.0."
+      },
+      {
+        "id": "BID-S2HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Marginal lift on secondary generic keyword in HYD; preserves budget for higher-converting cells."
+      },
+      {
+        "id": "BID-S2PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Funds scalable generic demand in PUN; iroas supports continued investment."
+      },
+      {
+        "id": "BID-S2PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Supplements generic reach in PUN within remaining allowance; avoids overbidding near slot cap."
+      },
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Corrects holder mismatch; places highest-incremental-revenue SKU S1 at slot 1, displacing lower-score sibling S4."
+      },
+      {
+        "id": "LM-BLR-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Restores optimal ownership of BLR brand search to scalable S1, removing trim-role S3 from leadership."
+      },
+      {
+        "id": "LM-BLR-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shifts generic leadership in BLR to S1 despite previous MISSES verdict; long-term incrementality outweighs short-term volatility."
+      },
+      {
+        "id": "LM-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Assigns generic shower gel demand in BLR to highest-value SKU S4, displacing S2 efficiently."
+      },
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fixes critical DEL brand contest; S1's superior incremental score takes priority over incumbent S4."
+      },
+      {
+        "id": "LM-DEL-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Returns generic soap leadership in DEL to scalable S1, pruning inefficient S3 occupancy."
+      },
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reallocates MUM brand traffic to best-performing SKU S1; tight gap indicates minimal disruption during transition."
+      },
+      {
+        "id": "LM-MUM-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Transfers generic soap dominance in MUM from trim S3 to scale S1, maximizing portfolio iroas."
+      },
+      {
+        "id": "LM-PUN-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Corrects competition keyword ownership in PUN; routes high-intent search to efficient Body Wash S2."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "S1,S4",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S1",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "S1",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "S3",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "S2",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "S4",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "S5",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Plan rectifies 9 contested-market holder mismatches identified by the M tables, routing traffic to highest-incremental-revenue SKUs. Budgets for four efficient fund campaigns are raised to prevent daily stockouts, while targeted bid lifts are applied only to cells with available slot capacity (<80% share) and non-missing verdicts. Trimming weak S3/S5 presence protects portfolio ROAS above the 4.0858 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11932,
+    "tokens_out": 10443,
+    "cost_usd": 0.0017155500000000001,
+    "wall_clock_s": 94.02539324999998
+  }
+}

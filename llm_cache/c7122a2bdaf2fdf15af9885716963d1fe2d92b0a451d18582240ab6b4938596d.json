@@ -1,0 +1,112 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-21",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale high-mroas shower gel generic bids in Pune; strong incremental upside with healthy OSA."
+      },
+      {
+        "id": "INT-22",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture Hyderabad shower gel growth; OSA well above threshold, high predicted mroas."
+      },
+      {
+        "id": "INT-23",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Delhi body wash generic reach; efficient scale role with ample bid headroom."
+      },
+      {
+        "id": "INT-24",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase Bangalore body wash volume on generic terms; solid incremental value and OSA compliance."
+      },
+      {
+        "id": "INT-25",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct misallocated market leader; shift K05 dominance from S2 to higher-value S4 per contest scores."
+      },
+      {
+        "id": "INT-26",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Resolve wrong holder status in Pune K05; ensures S4 captures maximum incremental revenue."
+      }
+    ],
+    "stance": [],
+    "notes": "Focused bid scaling on healthy-OSA, high-incrementality generic cells for S4 and S2, strictly avoiding OSA-blocked SKUs, previously rejected high-slot-share targets, and zero-gain competition cells. Corrected two misassigned market leaders per contest diagnostics. Budget changes deferred to preserve allowance headroom across final runs while protecting portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11242,
+    "tokens_out": 6785,
+    "cost_usd": 0.00121931,
+    "wall_clock_s": 57.669219958999975
+  }
+}

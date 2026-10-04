@@ -1,0 +1,247 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-BUD-S5-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free headroom by trimming underperforming Kids Soap hold; preserves portfolio direct ROAS floor."
+      },
+      {
+        "id": "cut-BUD-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free headroom; Kids Soap hold shows low iROAS (1.30)."
+      },
+      {
+        "id": "cut-BUD-S1-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce bleed on trim SKU; minimal impact on overall reach."
+      },
+      {
+        "id": "cut-BUD-S1-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Trim weak performer; reallocates capacity to scale tiers."
+      },
+      {
+        "id": "raise-BID-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase share for highly incremental Body Wash generic; iROAS 3.76 category avg supports lift."
+      },
+      {
+        "id": "raise-BID-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture remaining generic demand; slot1 share 59% leaves ample room."
+      },
+      {
+        "id": "raise-BID-S2-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Defend competitive position; clears goal with healthy iota."
+      },
+      {
+        "id": "raise-BID-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient generic spend in top city; OSA 0.95 clears supply guardrail."
+      },
+      {
+        "id": "raise-BID-S2-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Incremental lift on secondary generic term; slot1 share 59%."
+      },
+      {
+        "id": "raise-BID-S2-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Targeted BLR generic expansion; avoids capped K05 (88% share)."
+      },
+      {
+        "id": "raise-BID-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Unlock Pune generic volume; clean cell with strong predicted mROAS."
+      },
+      {
+        "id": "raise-BID-S2-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secondary generic capture in Pune; slot1 share 61% allows growth."
+      },
+      {
+        "id": "raise-BID-S3-BLR-K04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR",
+          "C:C-S3-BLR/K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Improve BLR Soap generic position; scale tier with balanced iROAS (2.38)."
+      },
+      {
+        "id": "raise-BID-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Grow Hyderabad Shower Gel generic; strong mROAS 7.85 predicts high incrementality."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Removed previously rejected lead_market intents for BLR-K01, MUM-K01, and DEL-K03 due to MISSES/THIN verdicts and insufficient predicted gain. Allocated spend allowance efficiently into scalable Body Wash campaigns across DEL, MUM, BLR, and PUN via targeted bid increases on clear, low-share generic and competition cells. Trimmed underperforming Kids Soap and legacy Soap holds to protect direct ROAS floor while maximizing incremental off-take."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11313,
+    "tokens_out": 11037,
+    "cost_usd": 0.0017741999999999999,
+    "wall_clock_s": 100.51366195800006
+  }
+}

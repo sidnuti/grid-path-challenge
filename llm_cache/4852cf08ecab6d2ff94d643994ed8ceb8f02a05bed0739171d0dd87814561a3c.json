@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.8,
+    "rationale": "C-S4-BLR leads on both the mechanical leader_score (1.9318 vs 1.7520) and slot1_share_7d (0.31 vs 0.23) relative to the nearest competitor C-S2-BLR. Both metrics align to support selecting C-S4-BLR as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1724,
+    "cost_usd": 0.027126,
+    "wall_clock_s": 16.54201762499997
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-DEL",
+    "confidence": 0.5,
+    "rationale": "Mechanical score narrowly leads S1 (0.652 vs 0.630). While S3 holds a much higher slot1 share (0.93 vs 0.60), suggesting strong recent performance, we adhere to the directive to prefer the mechanical pick in near-ties. Confidence is set low due to the tight score gap and opposing slot-share signal."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 2653,
+    "cost_usd": 0.040842,
+    "wall_clock_s": 25.681657541999996
+  }
+}

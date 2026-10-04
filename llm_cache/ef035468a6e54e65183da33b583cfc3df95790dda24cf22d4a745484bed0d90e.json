@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.4,
+    "direction": "surge",
+    "confidence": 0.9,
+    "rationale": "The reach z-score of 5.43 is highly significant and explicitly flagged, while CPM and OSA show no meaningful deviation. With the own-action confound flag false, this strongly points to a genuine external surge in demand or available inventory rather than internal bidding artifacts or statistical noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1295,
+    "cost_usd": 0.020757,
+    "wall_clock_s": 14.326017166000156
+  }
+}

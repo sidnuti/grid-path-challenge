@@ -1,0 +1,157 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "expected_effect": "+\u20b990 spend, sustain fund role with 7d run-out history and steady iroas (2.48).",
+        "confidence": 0.8
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "expected_effect": "+\u20b9115 spend, capitalize top shower gel iroas (5.01) after 2d run-out.",
+        "confidence": 0.8
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "expected_effect": "+\u20b920 spend, capture high mroas_up20 (9.26) on cleared generic.",
+        "confidence": 0.8
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-PUN/K03"
+        ],
+        "expected_effect": "+\u20b915 spend, push volume on uncapped efficient generic (slot1 40%).",
+        "confidence": 0.75
+      },
+      {
+        "id": "INT-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "expected_effect": "+\u20b915 spend, exploit mroas_up20 (3.69) on cleared generic.",
+        "confidence": 0.75
+      },
+      {
+        "id": "INT-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S3-MUM/K03"
+        ],
+        "expected_effect": "+\u20b915 spend, add incremental volume on healthy generic bucket.",
+        "confidence": 0.7
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "expected_effect": "Shift slot-1 from S2 to S4, leveraging best incremental revenue score (2.149).",
+        "confidence": 0.9
+      },
+      {
+        "id": "INT-08",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "expected_effect": "Reclaim slot-1 from S3 to S1 (score 0.935 vs 0.737), correct competitor misalignment.",
+        "confidence": 0.9
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "expected_effect": "Overtake S5 on generic leadership (score 0.774 vs 0.248) to secure conversion volume.",
+        "confidence": 0.9
+      },
+      {
+        "id": "INT-10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "expected_effect": "Take slot-1 from S3 to S1 (score 0.922 vs 0.901), tighten competitive wedge.",
+        "confidence": 0.9
+      }
+    ],
+    "notes": "Budget raised on eligible fund campaigns meeting \u22652 run-out threshold to absorb allowance efficiently. Bid increases targeted at low-slot-share, cleared generics with proven mroas_up20 to drive incremental lift without triggering G3 block. Market leads realigned to SKUs with highest incremental scores per impression."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12597,
+    "tokens_out": 8317,
+    "cost_usd": 0.00145912,
+    "wall_clock_s": 76.377228333
+  }
+}

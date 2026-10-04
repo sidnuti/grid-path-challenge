@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.75,
+    "rationale": "While the leader scores are nearly identical, C-S1-PUN edges out with the higher mechanical score and exhibits a significantly stronger market position with a slot1_share_7d of 0.86 versus 0.58. This reinforces its stability as the lead bid holder."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 641,
+    "cost_usd": 0.010665,
+    "wall_clock_s": 6.608100082999954
+  }
+}

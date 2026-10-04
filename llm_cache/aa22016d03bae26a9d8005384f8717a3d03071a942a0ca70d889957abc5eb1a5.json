@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.65,
+    "rationale": "Scores are within noise tolerance for a near-tie. C-S2-HYD commands a significantly higher slot 1 share (0.84 vs 0.64), demonstrating superior impression capture and placement stability, which outweighs the marginal mechanical score advantage when selecting a leader to protect."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 2092,
+    "cost_usd": 0.032436,
+    "wall_clock_s": 22.442220832999965
+  }
+}

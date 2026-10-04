@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader score places C-S4-HYD ahead by a narrow margin (~3.8%), indicating a noisy near-tie as noted. Although C-S2-HYD holds a higher slot1_share (0.84 vs 0.64), this metric alone does not clearly override the weighted composite formula provided. Per the directive to default to the mechanical pick in ambiguous ties, C-S4-HYD is retained as the leader with moderate confidence due to the tight score differential."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1833,
+    "cost_usd": 0.028551,
+    "wall_clock_s": 17.47781366600003
+  }
+}

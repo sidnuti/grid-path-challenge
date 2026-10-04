@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "The mechanical score is nearly identical between C-S3-HYD (0.5377) and C-S1-HYD (0.5299), making it a true near-tie. However, C-S1-HYD holds a significantly higher Slot 1 Share (0.89 vs 0.67), demonstrating more consistent top-of-funnel visibility and click capture. In tight competitive environments, protecting the campaign that already dominates the prime position reduces fragmentation and stabilizes volume, justifying the deviation from the marginal mechanical leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1662,
+    "cost_usd": 0.026061,
+    "wall_clock_s": 16.299092583000004
+  }
+}

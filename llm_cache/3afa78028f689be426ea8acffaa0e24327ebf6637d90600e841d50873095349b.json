@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "C-S1-HYD holds both the higher mechanical leader score (0.6488 vs 0.5928) and a substantially larger 7-day slot 1 share (0.92 vs 0.64). This alignment across performance and visibility metrics provides clear evidence to confidently select it as the market leader despite the mechanical score being a near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1593,
+    "cost_usd": 0.024951,
+    "wall_clock_s": 14.621619166999992
+  }
+}

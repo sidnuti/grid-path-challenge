@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.65,
+    "rationale": "Mechanical scores are a near-tie (0.8675 vs 0.8313), within the noise band, so the tie-break evidence governs: C-S1-MUM holds 95% of slot-1 over 7d versus 24% for C-S3-MUM, making it the de facto market leader for K02 in MUM. Protecting C-S1-MUM's bid preserves the brand's dominant top-slot position; asking C-S3-MUM to hold rather than raise is low-cost given its minimal slot-1 presence. The reverse choice would constrain the entrenched incumbent from defending its share against competitor bid increases."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 2248,
+    "cost_usd": 0.0029354299999999997,
+    "wall_clock_s": 18.57152470799997
+  }
+}

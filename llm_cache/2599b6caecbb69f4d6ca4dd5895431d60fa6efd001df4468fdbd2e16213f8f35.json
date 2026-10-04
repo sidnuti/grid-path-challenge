@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.62,
+    "rationale": "Mechanical leader_score favours C-S4-BLR (1.1066 vs 1.0213, ~8% gap), which is the default pick absent clear contrary evidence. C-S2-BLR's higher slot1_share_7d (0.87 vs 0.71) shows stronger top-slot presence but does not by itself indicate higher conversion x ASP x incrementality, so it is not sufficient to override the mechanical leader. Moderate confidence reflects the non-trivial score gap combined with the slot-share counter-signal."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 834,
+    "cost_usd": 0.00116756,
+    "wall_clock_s": 7.2952162079999425
+  }
+}

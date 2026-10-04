@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.55,
+    "rationale": "Mechanical scoring model selects C-S3-HYD based on a higher leader_score. Although C-S1-HYD demonstrates stronger organic visibility (slot1_share_7d of 0.90 vs 0.65), the score difference warrants adhering to the mechanical preference without strong contradictory evidence to flip the choice."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1809,
+    "cost_usd": 0.028191,
+    "wall_clock_s": 16.89190979199998
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.9,
+    "rationale": "The mechanical leader_score favors C-S3-PUN (0.8190 vs 0.8159), and this narrow margin is decisively resolved by the slot1_share_7d metric. C-S3-PUN captures 90% of top slots versus only 53% for C-S1-PUN, confirming it as the primary performance driver for this SKU-market pair. Protecting its bid aligns with maintaining efficient volume capture while suppressing sibling cannibalization."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1654,
+    "cost_usd": 0.02586,
+    "wall_clock_s": 16.362774583000032
+  }
+}

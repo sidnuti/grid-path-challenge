@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.65,
+    "rationale": "Mechanical metric selects C-S1-BLR due to higher leader_score (1.2747 vs 1.2333). The scores represent a narrow ~3.2% gap, constituting a noisy near-tie. Although C-S3-BLR shows a significantly higher slot1_share_7d (0.84 vs 0.62), its lower score implies inferior efficiency in generating conversion value relative to presence. As there is no definitive evidence that the share advantage compensates for the value deficit, the mechanical pick is retained."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1881,
+    "cost_usd": 0.029337,
+    "wall_clock_s": 22.72660041600011
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.6,
+    "confidence": 0.7,
+    "rationale": "Although the step guardrail clears, the shrunk realised dROAS (1.23) sits ~23% below the 1.6 goal, so pushing bids higher on an under-goal cell risks worsening ROAS further. Tier B evidence with 18 orders makes the shrunk estimate moderately reliable, so the shortfall is likely real but not certain. Dampen the small +5% raise to roughly 60% of its size (\u2248 +INR 12) \u2014 enough to preserve incremental-volume probing, not enough to chase a losing ROAS position."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 443,
+    "tokens_out": 891,
+    "cost_usd": 0.0012776600000000001,
+    "wall_clock_s": 7.771720625000171
+  }
+}

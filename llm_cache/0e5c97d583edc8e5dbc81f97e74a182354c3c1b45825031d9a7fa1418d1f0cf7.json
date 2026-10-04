@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.6,
+    "rationale": "Realized dROAS (4.35) significantly exceeds the goal (3.15), validating the upward direction of the mechanical proposal. However, the low historical order volume (17) introduces estimation variance and limits statistical certainty. Following the directive to default to the mechanical suggestion when uncertain, the full proposed raise is retained with moderate confidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 1394,
+    "cost_usd": 0.022329,
+    "wall_clock_s": 15.391351332999875
+  }
+}

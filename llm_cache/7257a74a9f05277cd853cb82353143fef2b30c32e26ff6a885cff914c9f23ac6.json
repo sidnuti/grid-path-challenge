@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.85,
+    "rationale": "Mechanical leader_score pick C-S3-BLR (0.6183) edges C-S5-BLR (0.5753), and the supporting evidence confirms it: C-S3-BLR also dominates slot1_share_7d at 0.90 versus 0.29 for C-S5-BLR, indicating stronger incumbency and incrementality in the top slot. All other candidates have zero leader_score and much lower slot1 share. No evidence favours overriding the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 401,
+    "tokens_out": 326,
+    "cost_usd": 0.00055587,
+    "wall_clock_s": 4.380960582999933
+  }
+}

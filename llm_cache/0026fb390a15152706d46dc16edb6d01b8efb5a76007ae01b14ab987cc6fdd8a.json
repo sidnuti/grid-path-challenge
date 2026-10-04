@@ -1,0 +1,363 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "L-BLR-K02-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift leader to S1 (highest iroas) in wrong-holder contest"
+      },
+      {
+        "id": "L-BLR-K03-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental volume by leading with S1 over weak S5 holder"
+      },
+      {
+        "id": "L-BLR-K04-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Improve share efficiency by moving leadership to S1"
+      },
+      {
+        "id": "L-BLR-K09-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lead competition share with S1 to boost incremental orders"
+      },
+      {
+        "id": "L-DEL-K02-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong-holder (S3) and elevate S1 leader position"
+      },
+      {
+        "id": "L-DEL-K09-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture competition traffic efficiently with S1"
+      },
+      {
+        "id": "L-PUN-K10-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Major shift to S2 (iota=0.87) over S4 (iota=0.00) in competition"
+      },
+      {
+        "id": "R-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase generic reach where slot1 is 0.64 and mroas_up20=6.41"
+      },
+      {
+        "id": "R-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up under-penetrated generic cell (slot1=0.57)"
+      },
+      {
+        "id": "R-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand generic visibility in scale campaign (slot1=0.67)"
+      },
+      {
+        "id": "R-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Grow efficient generic spend where share is low (0.57)"
+      },
+      {
+        "id": "R-S2-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Moderate bid lift on generic cell (slot1=0.62)"
+      },
+      {
+        "id": "R-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Unlock incremental volume in scale campaign (slot1=0.60)"
+      },
+      {
+        "id": "R-S1-HYD-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD",
+          "keyword_id": "K01"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-HYD/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secure brand searches currently at 58% slot1 in scale campaign"
+      },
+      {
+        "id": "C-S5-DEL-B",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "C:C-S5-DEL/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce low-iota Kids Soap spend to protect portfolio ROAS floor"
+      },
+      {
+        "id": "C-S5-MUM-B",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Tighten budget on underperforming segment, freeing allowance"
+      },
+      {
+        "id": "C-S5-BLR-B",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Conserve budget on trim-tier SKU with iroas=0.74"
+      },
+      {
+        "id": "C-S3-DEL-B",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Lower exposure on trim SKU (iroas=1.40) to safeguard margin"
+      },
+      {
+        "id": "C-S3-MUM-B",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Restrict spend on weak segment (iroas=1.05)"
+      },
+      {
+        "id": "C-S3-HYD-B",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Reduce allocation to trim-tier campaign, reallocating headroom to scale"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Prioritize lead shifts to high-iota SKUs in contested markets (especially S2 PUN K10 and S1 BLR generics), bid up under-penetrated cells below 80% slot1 share, and cut low-iota Kids Soap & S3 budgets to protect the ROAS floor while staying within the daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10955,
+    "tokens_out": 10272,
+    "cost_usd": 0.0016640100000000003,
+    "wall_clock_s": 86.65358204099999
+  }
+}

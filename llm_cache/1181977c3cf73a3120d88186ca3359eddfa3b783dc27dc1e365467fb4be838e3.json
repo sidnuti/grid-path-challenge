@@ -1,0 +1,377 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "I1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Replace trailing S5 holder with highest-incrementality S1 to capture incremental Soap searches in Bangalore."
+      },
+      {
+        "id": "I2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift generic Soap visibility from S5 to S1 in BLR to improve incremental volume."
+      },
+      {
+        "id": "I3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Elevate S2 Body Wash to slot-1 in BLR K06 where it holds superior incremental revenue vs S4."
+      },
+      {
+        "id": "I4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct cannibalized brand share in DEL by positioning high-iota S1 ahead of S4."
+      },
+      {
+        "id": "I5",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect generic Soap traffic to S1 in DEL for better marginal returns."
+      },
+      {
+        "id": "I6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Displace S3 holder with higher-value S1 in DEL generic segment."
+      },
+      {
+        "id": "I7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:DEL:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate competition search capture onto efficient S1 in DEL."
+      },
+      {
+        "id": "I8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move Hyderabad brand leadership from S4 to S1 to maximize incremental reach."
+      },
+      {
+        "id": "I9",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture second brand keyword in HYD with highest-scored S1 variant."
+      },
+      {
+        "id": "I10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Overwrite S2 holder in MUM K01 with superior S1 incremental score."
+      },
+      {
+        "id": "I11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure MUM generic leadership for S1 to drive additive volume."
+      },
+      {
+        "id": "I12",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase competition bid efficiency in DEL where S1 is scale-role with full budget headroom and iota=1.00."
+      },
+      {
+        "id": "I13",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL",
+          "C:C-S1-DEL/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Boost generic bids in DEL to exploit mroas_up20=4.35 and fill remaining scale capacity."
+      },
+      {
+        "id": "I14",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push body wash generic acquisition in DEL where fund-role meets strong incremental signals."
+      },
+      {
+        "id": "I15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capitalize on DEL K06 mroas_up20=5.18 to lift total offtake efficiently."
+      },
+      {
+        "id": "I16",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR",
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Accelerate scale-role BLR body wash campaigns with proven high iroas (3.34)."
+      },
+      {
+        "id": "I17",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR",
+          "C:C-S1-BLR/K03"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Address BLR soap fund status (ran out 5/7 days) by lifting generic bids to prevent stock-out-driven impression loss."
+      },
+      {
+        "id": "I18",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Release capital from low-iota/droas trim-tier DEL variant; reallocates to higher-return S1/S2 campaigns."
+      },
+      {
+        "id": "I19",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Right-size MUM trim-tier Soap spending to protect portfolio DRoAS floor."
+      },
+      {
+        "id": "I20",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce weak BLR Soap allocation; prevents drag on incremental revenue mix."
+      },
+      {
+        "id": "I21",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Constrain hold-tier HYD Soap budget to improve overall campaign efficiency."
+      },
+      {
+        "id": "I22",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Taper low-marginal PUN Soap spend to reallocate toward scale-eligible metro markets."
+      },
+      {
+        "id": "I23",
+        "verb": "cut_budget",
+        "scope": {
+          "sub_category": "Kids Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aggregate reduction across low-incrementality Kids Soap SKUs (iroas ~0.98-1.20); safely preserves DRoAS while freeing budget for high-iota Soap/Body Wash."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Realign internal auction dominance to highest-incrementality SKUs (S1, S2) across key metros to drive additive volume. Conserve capital by trimming low-iota Kids Soap and trailing S3 variants, ensuring portfolio DRoAS remains comfortably above the 4.59 floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11045,
+    "tokens_out": 10521,
+    "cost_usd": 0.00169908,
+    "wall_clock_s": 82.81312399999996
+  }
+}

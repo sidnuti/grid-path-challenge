@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.65,
+    "rationale": "Although C-S4-HYD holds a marginally higher mechanical leader score (0.9768 vs 0.9304), C-S2-HYD demonstrates significantly stronger practical auction dominance with an 0.89 slot1_share_7d versus 0.65. This large gap in actual top-slot capture indicates the mechanical difference is likely noise and C-S2-HYD is already effectively securing premium visibility. Protecting C-S2-HYD preserves the campaign that is proven to win placements efficiently, reducing auction friction and stabilizing ROI."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1546,
+    "cost_usd": 0.024246,
+    "wall_clock_s": 15.577528084000164
+  }
+}

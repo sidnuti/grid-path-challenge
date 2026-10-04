@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 4.5,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 4.516 is strongly flagged, indicating a statistically significant traffic/demand spike. CPM remains within normal range (-0.953, unflagged), and the own-action confound is false, pointing to a genuine market demand surge rather than a bidding artifact or price competition shift."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 687,
+    "cost_usd": 0.011637,
+    "wall_clock_s": 6.473542709000014
+  }
+}

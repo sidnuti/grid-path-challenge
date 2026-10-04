@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "bid_multiplier": 0.6,
+    "confidence": 0.35,
+    "rationale": "Low order volume (10 in 28 days) creates high estimation variance, making the mechanical +10% raise risky despite being in tier B. Shrunk dROAS (~1.49) only slightly exceeds the goal (1.45), offering minimal buffer against bid-driven CPA increases. Dampening preserves profitability while allowing cautious bid exploration."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 475,
+    "tokens_out": 1532,
+    "cost_usd": 0.024405,
+    "wall_clock_s": 15.833088708999995
+  }
+}

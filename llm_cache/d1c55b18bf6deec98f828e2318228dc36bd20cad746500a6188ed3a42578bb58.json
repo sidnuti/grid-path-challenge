@@ -1,0 +1,75 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "bid-1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure incremental share on high-iota competition term in Delhi."
+      },
+      {
+        "id": "bid-2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up high-mroas generic term in Mumbai where slot-share allows."
+      },
+      {
+        "id": "bid-3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push high-mroas generic demand for Shower Gel in Hyderabad."
+      },
+      {
+        "id": "bgt-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Relieve budget cap on efficient Soap fund campaign to capture available volume."
+      }
+    ],
+    "stance": [],
+    "notes": "Corrected prior rejections by removing invalid budget raises and respecting protected/capped cells. Directed full allowance toward high-iota competition keywords and high-mroas generics to drive incremental offtake, while expanding the budget for the consistently capped efficient Delhi soap fund."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12315,
+    "tokens_out": 7682,
+    "cost_usd": 0.00136811,
+    "wall_clock_s": 66.70999341700008
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.6,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach shows a strong, flagged positive deviation (z=3.627) consistent with the mechanical surge read. The absence of an own-action confound and neutral OSA score rules out internal artifacts, pointing to a genuine external shock. The moderate CPM drop (-2.006) was not flagged, indicating the reach expansion is the dominant and reliable signal."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 2019,
+    "cost_usd": 0.031617,
+    "wall_clock_s": 21.83594375000007
+  }
+}

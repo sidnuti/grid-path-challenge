@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-PUN",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score favors C-S3-PUN (0.1820 vs 0.1645), a near-tie within noise. C-S1-PUN's higher slot1 share (0.86 vs 0.59) is notable but does not clearly outweigh the mechanical pick, which already incorporates conversion, ASP, and incrementality; per guidance, default to the mechanical leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 337,
+    "tokens_out": 543,
+    "cost_usd": 0.0008034400000000001,
+    "wall_clock_s": 4.926073083999881
+  }
+}

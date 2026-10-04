@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.8,
+    "rationale": "C-S4-BLR has the higher mechanical leader_score (1.1066 vs 1.0213). Following the instruction to prefer the mechanical pick unless clear evidence favors otherwise, it is selected as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1533,
+    "cost_usd": 0.024045,
+    "wall_clock_s": 14.450039457999992
+  }
+}

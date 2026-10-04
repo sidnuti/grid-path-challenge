@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.6,
+    "rationale": "Mechanical score favors C-S2-PUN (1.6319) over C-S4-PUN (1.4786). While C-S1-PUN exhibits a dominant slot1 share (0.94), its substantially lower composite score indicates weaker underlying conversion or ASP metrics. Adhering to the directive to prefer the mechanical selection in near-tie scenarios, C-S2-PUN remains the designated leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2256,
+    "cost_usd": 0.035106,
+    "wall_clock_s": 22.609016082999972
+  }
+}

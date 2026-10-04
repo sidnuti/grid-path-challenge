@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 5.0 is significantly elevated and flagged, indicating a substantial uplift in volume. Meanwhile, the flat CPM z-score (0.0) and lack of competitive pricing pressure rule out a market-wide bid escalation. With the own-action confound flag off, this pattern strongly points to a genuine external demand shift rather than an internal adjustment or noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1338,
+    "cost_usd": 0.02139,
+    "wall_clock_s": 12.519885417000069
+  }
+}

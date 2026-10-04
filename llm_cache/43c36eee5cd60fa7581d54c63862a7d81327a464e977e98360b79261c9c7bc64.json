@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.72,
+    "rationale": "Shrunk dROAS of 4.35 clears the 3.15 goal with ~38% headroom even after shrinkage, so the +20% raise is well-supported. Tier B and 17 orders in 28 days indicate a moderate, usable evidence base \u2014 not thin enough to dampen, not strong enough to justify exceeding the proposed step. Full raise at multiplier 1.0."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 449,
+    "tokens_out": 480,
+    "cost_usd": 0.00076613,
+    "wall_clock_s": 4.908957332999989
+  }
+}

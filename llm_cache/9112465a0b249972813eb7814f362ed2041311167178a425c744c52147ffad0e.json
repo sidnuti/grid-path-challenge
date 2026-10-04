@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.85,
+    "rationale": "The mechanical leader_score slightly favors C-S2-HYD, and this preference is strongly corroborated by its significantly higher slot1_share_7d (0.91 vs 0.49), indicating superior ad rank and bid efficiency. No evidence contradicts or clearly overrides the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1274,
+    "cost_usd": 0.020166,
+    "wall_clock_s": 12.184655124999836
+  }
+}

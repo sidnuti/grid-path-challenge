@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.6,
+    "rationale": "Mechanical scores are a near-tie (0.2661 vs 0.2819, ~6% apart), so the score difference is within noise. The slot1_share_7d evidence clearly favours C-S1-HYD: it already captures 94% of slot-1 impressions versus 60% for C-S3-HYD, making C-S1 the de facto auction leader whose bid must be protected from cannibalization by sibling raises."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 859,
+    "cost_usd": 0.0011999200000000002,
+    "wall_clock_s": 7.689121874999955
+  }
+}

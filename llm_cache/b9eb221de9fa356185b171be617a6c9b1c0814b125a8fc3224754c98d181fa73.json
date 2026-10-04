@@ -1,0 +1,212 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "fund-del-soap",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlocks efficient fund capacity exhausted over 7 days."
+      },
+      {
+        "id": "fund-mum-soap",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlocks efficient fund capacity exhausted over 7 days."
+      },
+      {
+        "id": "fund-blr-soap",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unlocks efficient fund capacity exhausted over 7 days."
+      },
+      {
+        "id": "fund-blr-kids",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds efficient Soap capacity in BLR to utilize remaining allowance."
+      },
+      {
+        "id": "fund-mum-gel",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds efficient Shower Gel capacity (ran out 2d)."
+      },
+      {
+        "id": "fund-mum-body",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds efficient Body Wash capacity exhausted over 7 days."
+      },
+      {
+        "id": "bi-del-gel-comp",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Shower Gel:competition",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases bid on competitor keyword (iota=1.00) to drive pure incremental revenue."
+      },
+      {
+        "id": "bi-mum-body-comp",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Body Wash:competition",
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increases bid on competitor keyword (iota=1.00) to drive pure incremental revenue."
+      },
+      {
+        "id": "lead-s3-blr-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shifts slot-1 to S3, the highest incremental SKU in this contested market."
+      },
+      {
+        "id": "lead-s3-hyd-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shifts slot-1 to S3, highest incremental SKU in contested market."
+      },
+      {
+        "id": "lead-s4-hyd-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shifts slot-1 to S4 (Shower Gel), highest incremental SKU in contested market."
+      },
+      {
+        "id": "hold-s2-hyd-osa",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevents bid/budget increases on campaign with critical OSA deficit (0.42)."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Run 4 of 6: deploying full allowance into efficient fund campaigns (budget raises) and high-iota competitor keywords (bid raises) to maximize incremental growth. Realizing contested markets to shift slot-1 dominance to S3/S4. Holding S2-HYD due to OSA < 0.60 constraint."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12171,
+    "tokens_out": 9964,
+    "cost_usd": 0.0016604499999999997,
+    "wall_clock_s": 87.61012604099994
+  }
+}

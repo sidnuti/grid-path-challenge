@@ -1,0 +1,213 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "cut-s3-brand-del",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_type": "brand"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Free budget by cutting lowest-iota brand spend; S3 role is trim."
+      },
+      {
+        "id": "cut-s3-brand-mum",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_type": "brand"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Free budget by cutting low-return brand keywords."
+      },
+      {
+        "id": "cut-s3-brand-blr",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "keyword_type": "brand"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Free budget by cutting low-return brand keywords."
+      },
+      {
+        "id": "cut-s3-brand-hyd",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_type": "brand"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Free budget by cutting low-return brand keywords."
+      },
+      {
+        "id": "cut-s3-brand-pun",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-PUN",
+          "keyword_type": "brand"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Free budget by cutting low-return brand keywords."
+      },
+      {
+        "id": "cut-s3-comp",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Trim weak competitor spend; S3 competition iroas < 1.0."
+      },
+      {
+        "id": "raise-bud-s1-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient SKU; ran out budget 7/7 days."
+      },
+      {
+        "id": "raise-bud-s1-hyd",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient SKU; ran out budget 7/7 days."
+      },
+      {
+        "id": "raise-bud-s1-blr-small",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Fund efficient SKU; ran out budget 6/7 days; conservative raise to fit allowance."
+      },
+      {
+        "id": "raise-bud-s4-hyd-med",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient SKU; ran out budget 4/7 days."
+      },
+      {
+        "id": "raise-bid-s4-pun-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.95,
+        "expected_effect": "Scale highest iroas cell (11.57, iota 1.00)."
+      },
+      {
+        "id": "raise-bid-s4-mum-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Scale efficient competitor cell; iroas 5.10, iota 1.00."
+      },
+      {
+        "id": "lead-del-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher-score SKU S1 over S5."
+      },
+      {
+        "id": "yield-del-k03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back lower-score SKU S5 in DEL K03."
+      },
+      {
+        "id": "lead-pun-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher-score SKU S1 over S5."
+      },
+      {
+        "id": "yield-pun-k03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back lower-score SKU S5 in PUN K03."
+      },
+      {
+        "id": "lead-mum-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Shift slot-1 to higher-score SKU S1 over S3 in MUM K03."
+      },
+      {
+        "id": "yield-mum-k03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Step back lower-score SKU S3 in MUM K03."
+      }
+    ],
+    "notes": "Prioritize high-iroas competitor keywords (especially S4-PUN/K10) and fund exhausted efficient campaigns (S1/S4 HYD/DEL). Cuts target low-incrementality S3 brand and competition spend to free room for growth without breaking ROAS floor."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24473,
+    "tokens_out": 19548,
+    "cost_usd": 0.00327543,
+    "wall_clock_s": 159.085266875
+  }
+}

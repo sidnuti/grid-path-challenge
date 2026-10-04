@@ -1,0 +1,131 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "raise-del-sw-gel-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capitalize on scale role & high incremental ROAS (mroas_up20=8.0) in DEL shower gel generic"
+      },
+      {
+        "id": "raise-del-bw-generic-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Drive efficient body wash volume in DEL generic (slot1=0.54, room to bid, mroas_up20=4.95)"
+      },
+      {
+        "id": "raise-hyd-sw-gel-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Secure incremental shower gel demand in HYD (mroas_up20=8.68, <80% slot1 share)"
+      },
+      {
+        "id": "cut-mum-soap-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Release allowance from hold-state campaign with chronic run-outs (7/7 days)"
+      },
+      {
+        "id": "cut-del-bw-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocate freed INR to higher-iroas scale campaigns while preserving DEL body wash baseline"
+      },
+      {
+        "id": "yield-blr-k05-to-s4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Cede slot 1 to superior S4 shower gel (score 1.816 vs 1.119) in contested BLR generic market"
+      },
+      {
+        "id": "hold-del-trim",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Block algorithmic bid creep on trim-severity asset to protect portfolio ROAS floor"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "all",
+        "sku_role": "all",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "all",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Focused on bid optimization across efficient scale/fund campaigns while cutting budget on chronic run-out holders to stay within the 300 INR/day allowance cap. Dropped BLR:K01 lead request due to G7 slot constraints; replaced with targeted yield on BLR:K05 to fix contestation. Portfolio direct ROAS protected by shifting spend from low-iota brand/competition cells to high-mroas generic winners."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 10888,
+    "tokens_out": 8547,
+    "cost_usd": 0.00143775,
+    "wall_clock_s": 83.9088255
+  }
+}

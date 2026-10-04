@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-DEL",
+    "confidence": 0.72,
+    "rationale": "Mechanical leader_score already favours C-S2-DEL (1.7959 vs 1.6642), and the corroborating evidence does not overturn it: C-S2-DEL holds a much larger slot1 share over 7d (0.85 vs 0.61), indicating a stronger incumbency in the DEL/K05 auction. The gap is a near-tie by score, so confidence is moderate rather than high."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 343,
+    "cost_usd": 0.00055381,
+    "wall_clock_s": 3.846551833000035
+  }
+}

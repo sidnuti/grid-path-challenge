@@ -1,0 +1,169 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "B1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund capped-efficient campaign that ran out 5/7 days; increases incremental volume without breaching margin."
+      },
+      {
+        "id": "B2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund capped-efficient campaign that ran out 7/7 days."
+      },
+      {
+        "id": "B3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund capped-efficient campaign that ran out 4/7 days."
+      },
+      {
+        "id": "B4",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund capped-efficient campaign that ran out 7/7 days."
+      },
+      {
+        "id": "H1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on competition keyword with iROAS 4.42 and slot share 0.60; drives incremental orders."
+      },
+      {
+        "id": "H2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on competition keyword with iROAS 5.45 and slot share 0.45; high incremental return."
+      },
+      {
+        "id": "H3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on competition keyword with iROAS 2.92 and slot share 0.36; funds efficient scale cell."
+      },
+      {
+        "id": "H4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on competition keyword with iROAS 2.56 and slot share 0.53; increments volume."
+      },
+      {
+        "id": "H5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Raise bid on generic keyword clearing goal with iROAS 2.96; slot share 0.66 leaves bid headroom."
+      },
+      {
+        "id": "H6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Raise bid on generic keyword clearing goal with iROAS 2.62; slot share 0.66 leaves bid headroom."
+      },
+      {
+        "id": "H7",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Raise bid on generic keyword clearing goal with iROAS 3.27; slot share 0.56 leaves bid headroom."
+      }
+    ],
+    "notes": "Prioritized budget raises for fund campaigns that recently ran out of daily budget to capture efficient incremental volume. Supplement with small bid raises on competition (K10) and generic (K06) keywords below 80% slot share where iROAS is strong. Plan fits within the \u20b9691/day allowance while targeting top incremental return cells."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12626,
+    "tokens_out": 9783,
+    "cost_usd": 0.0016505699999999999,
+    "wall_clock_s": 84.04177870799992
+  }
+}

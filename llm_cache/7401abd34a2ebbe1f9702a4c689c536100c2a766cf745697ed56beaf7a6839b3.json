@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Although C-S3-HYD has a slightly higher mechanical score, C-S1-HYD dominates with a 94% slot 1 share compared to 59%, indicating stronger real-world ad placement and conversion efficiency. This clear operational advantage justifies overriding the noisy mechanical near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1800,
+    "cost_usd": 0.028056,
+    "wall_clock_s": 17.843121083000142
+  }
+}

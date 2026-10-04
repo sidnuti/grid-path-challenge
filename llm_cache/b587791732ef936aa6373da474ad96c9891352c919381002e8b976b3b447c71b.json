@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.85,
+    "confidence": 0.65,
+    "rationale": "Realised dROAS of 4.22 comfortably exceeds the 3.15 goal, providing a healthy buffer for increased spend. However, with only 15 orders in the lookback window and a Tier B evidence rating, the performance estimate carries notable uncertainty. Slight dampening (0.85x) reduces exposure to short-term volatility while allowing the raise to test incremental volume. Maintain monitoring closely after implementation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 473,
+    "tokens_out": 2016,
+    "cost_usd": 0.031659,
+    "wall_clock_s": 19.968124417000013
+  }
+}

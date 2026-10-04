@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-MUM",
+    "confidence": 0.65,
+    "rationale": "Both the mechanical leader_score (1.9376 vs 1.7974) and the 7-day slot1_share (0.79 vs 0.59) favor C-S4-MUM. Despite the narrow margin indicating noise, the consistent directional advantage across available metrics supports selecting C-S4-MUM as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1405,
+    "cost_usd": 0.022125,
+    "wall_clock_s": 14.97744416699993
+  }
+}

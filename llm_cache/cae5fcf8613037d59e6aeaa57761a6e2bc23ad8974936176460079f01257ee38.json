@@ -1,0 +1,206 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "expected_effect": "Redirect share to highest iROAS SKU in Delhi generic soap"
+      },
+      {
+        "id": "LM-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "expected_effect": "Capture inefficient competitor traffic with high-iota Shower Gel"
+      },
+      {
+        "id": "LM-DEL-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "expected_effect": "Secure competition slots in Delhi for Shower Gel"
+      },
+      {
+        "id": "LM-PUN-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "expected_effect": "Lead generic soap search in Pune with optimal ROI"
+      },
+      {
+        "id": "RB-S4MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "expected_effect": "Increase bid on scalable generic cell with positive iROAS uplift"
+      },
+      {
+        "id": "RB-S2BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "expected_effect": "Expand reach in Bangalore body wash generic segment"
+      },
+      {
+        "id": "RB-S4BLR-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "C:C-S4-BLR/K10"
+        ],
+        "expected_effect": "Defend competition slot in Bangalore shower gel with full incrementality"
+      },
+      {
+        "id": "HD-S5DEL",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "expected_effect": "Prevent budget drain from low-incrementality kids soap; frees allowance"
+      },
+      {
+        "id": "HD-S5MUM",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "MUM"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "expected_effect": "Free daily allowance from underperforming Mumbai kids soap"
+      },
+      {
+        "id": "HD-S3MUM",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "expected_effect": "Block raises on weak hold campaign to protect portfolio ROAS"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Reallocating budget from low-incrementality Kids Soap and Mumbai hold campaigns to scale/fund opportunities in Delhi, Bangalore, and Pune. Correcting contested market ownership to prioritize highest iROAS SKUs while maintaining portfolio DRoAS above the 4.17 floor. Bids raised selectively on CLEARS cells in scale campaigns with proven bid headroom."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11166,
+    "tokens_out": 10324,
+    "cost_usd": 0.0016771000000000002,
+    "wall_clock_s": 80.55723729099998
+  }
+}

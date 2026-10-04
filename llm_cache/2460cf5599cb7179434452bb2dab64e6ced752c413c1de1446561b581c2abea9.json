@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.8,
+    "rationale": "The mechanical scores are within ~4.4% of each other, creating a noisy near-tie. However, C-S3-HYD holds a substantially higher Slot1 Share (0.83 vs 0.62), indicating stronger auction dominance and more consistent premium placement, which clearly favors it as the market leader over the mechanical pick."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 875,
+    "cost_usd": 0.014256,
+    "wall_clock_s": 12.02039570799991
+  }
+}

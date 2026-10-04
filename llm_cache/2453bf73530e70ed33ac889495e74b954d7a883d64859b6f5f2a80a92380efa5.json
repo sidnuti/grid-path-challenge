@@ -1,0 +1,232 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT01",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Deploy bulk of \u20b9333 allowance to high-iROAS fund; capitalizes on 7-day run-outs."
+      },
+      {
+        "id": "INT02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10",
+          "M:MUM:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up high-incrementality competitor terms (iota\u22481.0); secures incremental revenue."
+      },
+      {
+        "id": "INT03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental share on BLR competition keywords."
+      },
+      {
+        "id": "INT04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Defend high-incrementality HYD comp slots; drives off-take without ROAS drag."
+      },
+      {
+        "id": "INT05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale PUN competition bids to utilize remaining allowance."
+      },
+      {
+        "id": "INT06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot leadership to S4 (score 1.935 vs S2 1.432); maximizes incremental rev per impression."
+      },
+      {
+        "id": "INT07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct holder mismatch; S4 leads branded term with superior incrementality."
+      },
+      {
+        "id": "INT08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield to higher-iROAS S1; reduces weak kids soap exposure on generic term."
+      },
+      {
+        "id": "INT09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Step back low-iROAS S3 from contested generic slot to S1 leader."
+      },
+      {
+        "id": "INT10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fix wrong holder; S3 leads MUM branded term with better score."
+      },
+      {
+        "id": "INT11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Optimize PUN slot allocation to higher-value incumbent S3."
+      },
+      {
+        "id": "INT12",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Remove underperforming trim spend; lifts portfolio weighted iROAS."
+      },
+      {
+        "id": "INT13",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free capacity and reduce ROAS drag from low-roi MUM soap campaigns."
+      },
+      {
+        "id": "INT14",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Curb BLR generic/comp waste; reallocates efficiency to fundable pockets."
+      },
+      {
+        "id": "INT15",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Stop bleed on trim category; preserves margin buffer ahead of run 6."
+      }
+    ],
+    "stance": [],
+    "notes": "Run 5 of 6: aggressively allocating the \u20b9333 allowance to high-iROAS body wash competition terms and the S2-DEL budget while pruning weak S3 spend. Contested markets shifted to correct holder mismatches, ensuring best-in-class SKUs capture prime slots and maximize true incremental off-take without jeopardizing the 4.08 DOU floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12085,
+    "tokens_out": 8898,
+    "cost_usd": 0.00151929,
+    "wall_clock_s": 76.81655183399994
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.8,
+    "rationale": "While C-S2 leads mechanically by a narrow margin (1.25 vs 1.18), C-S3 captures 94% of top-slot impressions versus only 29% for C-S2. This stark disparity in actual market capture provides clear evidence that C-S3 is the functional leader, warranting bid protection to prevent self-cannibalization and maintain its dominant positioning."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2187,
+    "cost_usd": 0.034071,
+    "wall_clock_s": 20.77150554100001
+  }
+}

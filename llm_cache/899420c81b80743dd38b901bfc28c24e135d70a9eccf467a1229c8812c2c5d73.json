@@ -1,0 +1,17 @@
+{
+  "leaf": "L6_review",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "veto": false
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 441,
+    "tokens_out": 628,
+    "cost_usd": 0.010743,
+    "wall_clock_s": 7.333196833000102
+  }
+}

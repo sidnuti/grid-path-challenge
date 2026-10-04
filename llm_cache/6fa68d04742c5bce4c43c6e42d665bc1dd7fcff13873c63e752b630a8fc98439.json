@@ -1,0 +1,88 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase incremental shower gel sales in Delhi on generic search where iota is 1.00 and mroas_up20 is 9.57."
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale incremental market share for shower gel generic in Mumbai with significant bid headroom."
+      },
+      {
+        "id": "INT-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Leverage efficient generic bids in Bangalore to drive incremental off-take without hitting slot-1 ceiling."
+      },
+      {
+        "id": "INT-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-PUN",
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Deploy remaining allowance efficiently on high-margin shower gel generic searches in Pune."
+      }
+    ],
+    "stance": [],
+    "notes": "Dropped rejected intents targeting saturated slot-1 shares and the unviable S3-BLR campaign cut. Redirected the full daily allowance to S4 generic K05 cells across four major metros where campaign role is 'scale', slot-1 share is under 65%, iota is 1.00, and mroas_up20 consistently exceeds 6.4, maximizing true incremental return while maintaining the portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12249,
+    "tokens_out": 8348,
+    "cost_usd": 0.00145271,
+    "wall_clock_s": 73.74504054100001
+  }
+}

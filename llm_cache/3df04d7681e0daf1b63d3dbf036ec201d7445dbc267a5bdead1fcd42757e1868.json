@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-DEL",
+    "confidence": 0.85,
+    "rationale": "C-S2-DEL is favored as it holds both the higher mechanical leader score (1.7404 vs 1.7285) and a substantially higher slot 1 share over the past 7 days (0.84 vs 0.69), indicating stronger real-world positioning efficiency. The convergence of both metrics reinforces the mechanical recommendation."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 1230,
+    "cost_usd": 0.019497,
+    "wall_clock_s": 11.233606624999993
+  }
+}

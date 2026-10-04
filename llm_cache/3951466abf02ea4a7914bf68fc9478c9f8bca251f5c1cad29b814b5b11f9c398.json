@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.95,
+    "rationale": "C-S3-BLR leads mechanically (1.1814 vs 1.1492) and dominates position 1 share (0.89), confirming its strong execution and validating the mechanical ranking. Protecting this leader maximizes efficiency and captures dominant placement while siblings hold."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1479,
+    "cost_usd": 0.023451,
+    "wall_clock_s": 14.614775416999976
+  }
+}

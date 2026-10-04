@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.72,
+    "rationale": "Tier B cell with a moderate 12 orders in 28 days gives reasonable, though not ironclad, support for the mechanical read. Shrunk realised dROAS of 1.7155 clears the 1.45 goal with ~18% headroom, and the proposed +10% step (INR 350 -> 385) is a modest, well-sized raise rather than an aggressive jump. With shrinkage already applied and the margin comfortably above goal, there is no signal justifying dampening or amplifying the step; taking the full proposed raise is the closest-to-neutral action."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 446,
+    "tokens_out": 556,
+    "cost_usd": 0.00086002,
+    "wall_clock_s": 4.9504383750000045
+  }
+}

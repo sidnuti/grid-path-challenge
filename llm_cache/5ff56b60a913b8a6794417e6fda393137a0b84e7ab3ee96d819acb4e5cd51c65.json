@@ -1,0 +1,235 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "RB-S2-DEL-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capture incremental demand in competition keyword; high iota (0.76) and droas well above goal."
+      },
+      {
+        "id": "RB-S3-HYD-K09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K09"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD",
+          "C:C-S3-HYD/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase share in competitor keyword with strong incremental lift (iota 0.83) and clearance."
+      },
+      {
+        "id": "RB-S3-PUN-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-PUN",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN",
+          "C:C-S3-PUN/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Grow offtake in generic keyword with high iota (0.83) and clearance."
+      },
+      {
+        "id": "RB-S2-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up generic search with solid incremental return and headroom."
+      },
+      {
+        "id": "RB-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand reach in top generic keyword; efficient delta with high droas."
+      },
+      {
+        "id": "RB-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase volume in generic keyword with good iota (0.63) and clearance."
+      },
+      {
+        "id": "RB-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Push generic keyword where cell clears goal efficiently."
+      },
+      {
+        "id": "RB-S2-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Secure additional impressions in second generic keyword."
+      },
+      {
+        "id": "RB-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Capitalize on cleared generic keyword with substantial droas headroom."
+      },
+      {
+        "id": "RBUD-S3-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent budget exhaustion; campaign ran out 7 of last 7 days and plays a fund role."
+      },
+      {
+        "id": "HOLD-S1-BLR",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Block wasteful spends from trim role to preserve budget for scale initiatives."
+      },
+      {
+        "id": "HOLD-S1-MUM",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Block wasteful spends from trim role to preserve budget for scale initiatives."
+      },
+      {
+        "id": "HOLD-S1-HYD",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Block wasteful spends from hold role to preserve budget for scale initiatives."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Shifted aggression to cleared, high-iota cells with slot-1 share below 80% to satisfy G3 guardrails while avoiding previously rejected MISSES/THIN targets. Preserved budget by halting low-ROI holds/trims and defending S3-HYD against repeated run-outs."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11594,
+    "tokens_out": 10891,
+    "cost_usd": 0.00176365,
+    "wall_clock_s": 95.14893437499995
+  }
+}

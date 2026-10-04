@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-MUM",
+    "confidence": 0.55,
+    "rationale": "The mechanical leader score slightly favors C-S4-MUM (0.8035 vs 0.7926). Given the near-tie, we defer to the algorithmic composite metric over raw historical slot share, treating the marginal difference as indicative of stronger incremental value and efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1877,
+    "cost_usd": 0.029205,
+    "wall_clock_s": 20.11140070800002
+  }
+}

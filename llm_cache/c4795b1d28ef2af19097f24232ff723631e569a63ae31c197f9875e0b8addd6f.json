@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 3.1,
+    "direction": "surge",
+    "confidence": 0.75,
+    "rationale": "High reach z-score (3.101) indicates a statistically significant upward deviation. Absence of CPM/OSA flags and own-action confound points to an external market shift rather than internal bidding artifacts."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1856,
+    "cost_usd": 0.029172,
+    "wall_clock_s": 16.7963876660001
+  }
+}

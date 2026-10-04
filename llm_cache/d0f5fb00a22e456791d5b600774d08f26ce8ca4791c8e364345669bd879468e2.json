@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.75,
+    "rationale": "Although the mechanical score slightly favors C-S4-HYD, C-S2-HYD holds a substantially higher slot1 share (0.87 vs 0.64), indicating a dominant recent win rate and better placement efficiency. In this near-tie scenario, selecting the campaign with superior slot acquisition maximizes sustained visibility and aligns with optimal bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 907,
+    "cost_usd": 0.014661,
+    "wall_clock_s": 8.737034666999989
+  }
+}

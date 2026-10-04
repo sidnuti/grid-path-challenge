@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical leader_score picks C-S1-MUM (1.0753), narrowly ahead of C-S2-MUM (1.0702). The gap (~0.005) is within noise, but slot1_share_7d is nearly identical between the two (0.15 vs 0.16), so no evidence clearly favours C-S2. Remaining candidates have materially lower scores (C-S4 at 0.9708 despite high slot1 share, C-S3 at 0.0, C-S5 at 0.0859). Default to mechanical pick; moderate confidence reflects the near-tie."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 404,
+    "tokens_out": 623,
+    "cost_usd": 0.00092823,
+    "wall_clock_s": 4.80049679199999
+  }
+}

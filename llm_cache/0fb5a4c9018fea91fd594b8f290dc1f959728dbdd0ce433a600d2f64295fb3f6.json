@@ -1,0 +1,359 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LD-DEL-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift brand term leadership to S2 Body Wash (score 2.095) over S4, capturing higher incremental value."
+      },
+      {
+        "id": "LD-HYD-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Redirect Soap brand traffic to S2 Body Wash (score 1.929) for better incrementality."
+      },
+      {
+        "id": "LD-HYD-K04-S3",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong-holder on generic term; S3 Soap holds slight edge (0.802 vs 0.690)."
+      },
+      {
+        "id": "LD-BLR-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Overturn Kids Soap holder on brand term; S4 Shower Gel demonstrates superior incremental score (1.932)."
+      },
+      {
+        "id": "LD-BLR-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure Shower Gel dominance over Body Wash on generic searches (gap 0.57, score 3.151)."
+      },
+      {
+        "id": "LD-DEL-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Take generic search leadership for Shower Gel over Body Wash (score 2.057)."
+      },
+      {
+        "id": "LD-MUM-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish Shower Gel leadership on generic term against lower-iota sibling."
+      },
+      {
+        "id": "LD-MUM-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture high-iota Shower Gel volume over Body Wash competitor on generic term."
+      },
+      {
+        "id": "LD-MUM-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:MUM:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prioritize Shower Gel over Body Wash on competition term to maximize incremental revenue."
+      },
+      {
+        "id": "LD-PUN-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Win generic search leadership for Shower Gel over Body Wash (score 2.134)."
+      },
+      {
+        "id": "LD-PUN-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure Shower Gel position on generic term against lower-iota sibling."
+      },
+      {
+        "id": "LD-PUN-K10-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:PUN:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Win competition term for Shower Gel over Body Wash (score 0.995)."
+      },
+      {
+        "id": "BID-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bid on generic term where slot share is moderate (0.51) and mROAS uplift is strong (7.03)."
+      },
+      {
+        "id": "BID-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push bid to capture generic volume; high mROAS projection (6.34) and 0.54 slot1 leave headroom."
+      },
+      {
+        "id": "BID-S4-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Target generic keyword with 8.92 mROAS uplift potential; currently at 0.61 slot1."
+      },
+      {
+        "id": "BID-S4-BLR-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Raise bid on generic term with 9.85 mROAS upside; slot1 at 0.67 provides ample room."
+      },
+      {
+        "id": "BID-S4-PUN-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental gains on generic term (mROAS 7.82); slot1 at 0.60."
+      },
+      {
+        "id": "BID-S4-PUN-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Exploit highest mROAS uplift (10.19) on generic term; slot1 0.61 allows expansion."
+      },
+      {
+        "id": "BID-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase bid on Body Wash generic term with 5.13 mROAS potential and 0.56 slot1 share."
+      },
+      {
+        "id": "BID-S2-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Raise bid on high-iota (0.80) generic term with 5.90 mROAS upside."
+      },
+      {
+        "id": "BID-S2-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Body Wash generic reach where mROAS is 4.51 and slot1 is only 0.56."
+      },
+      {
+        "id": "BGT-S1-HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Release budget constraint on efficient fund SKU to prevent run-outs and capture steady volume."
+      },
+      {
+        "id": "BGT-S2-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Support Body Wash fund performance in BLR; frequent run-outs indicate unmet efficient demand."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "lead",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "lead",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Plan corrects contestable market misallocations by shifting leadership to SKUs with highest incremental scores. Bid raises target generic keywords with clear mROAS upside and slot capacity, avoiding blocked cells. Budget raises relieve constraints on efficient fund SKUs that have consistently run out."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 25199,
+    "tokens_out": 21009,
+    "cost_usd": 0.00348714,
+    "wall_clock_s": 155.46064916699993
+  }
+}

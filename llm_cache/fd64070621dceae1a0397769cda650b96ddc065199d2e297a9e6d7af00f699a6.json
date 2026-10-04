@@ -1,0 +1,255 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "budget-del-fund",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Recover volume loss from budget exhaustion; iroas 2.46 supports higher spend."
+      },
+      {
+        "id": "budget-blr-fund",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Restore efficient spend; ran out 7d, iroas 2.03."
+      },
+      {
+        "id": "budget-del-shg",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Scale highly efficient SHG spend (iroas 5.00) to drive off-take."
+      },
+      {
+        "id": "budget-hyd-soap",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Replenish efficient Soap spend in HYD (iroas 2.23)."
+      },
+      {
+        "id": "cut-mum-trim",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim weak Soap performance (iroas 1.55) to protect portfolio ROAS."
+      },
+      {
+        "id": "cut-hyd-trim",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce spend on underperforming HYD Soap role."
+      },
+      {
+        "id": "cut-blr-hold",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Stop budget drain on capped weak role (iroas 1.69)."
+      },
+      {
+        "id": "cut-pun-hold",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Free budget from constrained underperformer."
+      },
+      {
+        "id": "bid-del-bw-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental Body Wash generic demand; mroas_up20=4.13."
+      },
+      {
+        "id": "bid-del-bw-gen2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up secondary generic volume safely below 80% slot-1."
+      },
+      {
+        "id": "bid-pun-bw-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale high-incremental BW generic (mroas_up20=9.22)."
+      },
+      {
+        "id": "bid-hyd-bw-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-HYD/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Push efficient HYD BW generic spend; avoids flagged anomaly on K05."
+      },
+      {
+        "id": "bid-hyd-shg-gen",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Maximize SHG generic ROI (mroas_up20=9.49)."
+      },
+      {
+        "id": "market-pun-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift slot-1 to highest incremental SKU (S4 SHG) over S1 Soap in PUN."
+      },
+      {
+        "id": "market-hyd-s4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Claim SHG generic slot-1 in HYD; S4 iroas dominates sibling BW."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "any",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Budget reallocation prioritizes efficiently capped 'fund' roles that ran out of inventory while trimming weak 'trim/hold' SKUs to preserve portfolio ROAS above 4.63. Bid increases target clear-generic cells with high predicted mroas_up20, avoiding anomalies and MISSES-blocked slots. Market leadership shifts correct wrong-holder inefficiencies in key cities to favor SKUs with superior incremental scores."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11056,
+    "tokens_out": 11474,
+    "cost_usd": 0.0018233000000000001,
+    "wall_clock_s": 103.76628325000001
+  }
+}

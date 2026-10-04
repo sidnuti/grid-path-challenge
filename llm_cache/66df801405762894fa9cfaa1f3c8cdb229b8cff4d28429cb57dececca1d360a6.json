@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.65,
+    "rationale": "Per instructions, preferring the mechanical leader. C-S4-HYD holds the highest leader_score (1.5749), narrowly beating C-S2-HYD (1.5101). Despite C-S2-HYD's significantly higher slot1_share_7d (0.94 vs 0.21), the composite score remains the primary directive, and C-S4-HYD's marginal lead justifies it as the protected leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 2026,
+    "cost_usd": 0.031671,
+    "wall_clock_s": 22.407871999999998
+  }
+}

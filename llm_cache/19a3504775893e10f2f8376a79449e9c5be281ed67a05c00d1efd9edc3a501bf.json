@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.72,
+    "rationale": "Reach is 5 standard deviations above baseline, far beyond noise, and the own-action confound flag is false, so this is not the harness's own prior bid/budget move landing. CPM is flat at z=0.0, which rules out a price/competition shift as the driver (that would typically move price). Flat OSA alongside flat CPM points to a clean volume-side event \u2014 a genuine demand or query/inventory expansion absorbed without auction pressure. Attribution: real market surge in available reach, worth reacting to (e.g., capture volume via budget). Confidence slightly below high because a demand surge with zero CPM movement is mildly atypical, suggesting benign inventory abundance rather than auction heat."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 431,
+    "tokens_out": 671,
+    "cost_usd": 0.00099822,
+    "wall_clock_s": 6.828053249999925
+  }
+}

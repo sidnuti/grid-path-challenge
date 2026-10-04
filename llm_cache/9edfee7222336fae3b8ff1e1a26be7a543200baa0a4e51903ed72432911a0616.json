@@ -1,0 +1,280 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture Mumbai brand search with highest-incrementality Shower Gel."
+      },
+      {
+        "id": "LM-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift Soap generic leadership to efficient S3 in Mumbai."
+      },
+      {
+        "id": "LM-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Move Body Wash generic top position from S4 to higher-value S2 in Mumbai."
+      },
+      {
+        "id": "LM-MUM-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prioritize Shower Gel over Body Wash in Mumbai generic demand."
+      },
+      {
+        "id": "LM-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Win Delhi brand search with S4 Shower Gel."
+      },
+      {
+        "id": "LM-DEL-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cede Soap generic leadership in Delhi from S1 to efficient S3."
+      },
+      {
+        "id": "LM-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take Bangalore brand search with S4."
+      },
+      {
+        "id": "LM-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift Bangalore Soap generic to S3."
+      },
+      {
+        "id": "LM-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure Hyderabad brand queries for S4."
+      },
+      {
+        "id": "LM-HYD-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Prioritize S3 Soap generic in Hyderabad."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture Pune brand traffic with S4."
+      },
+      {
+        "id": "LM-PUN-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Lead Pune Soap generic searches with S3."
+      },
+      {
+        "id": "TRIM-SOAP-COMP",
+        "verb": "cut_bid",
+        "scope": {
+          "sub_category": "Soap",
+          "keyword_type": "competition"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "K:Soap:competition"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate wasteful spend on low-iota competitor terms across the Soap line."
+      },
+      {
+        "id": "TRIM-KIDS",
+        "verb": "cut_bid",
+        "scope": {
+          "sub_category": "Kids Soap"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "K:Kids Soap:generic",
+          "K:Kids Soap:brand"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce low-value Kids footprint to protect portfolio ROAS floor."
+      },
+      {
+        "id": "SCALE-S4-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fund efficient, capped S4 Delhi account to capture remaining incrementality."
+      },
+      {
+        "id": "CUT-S1-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim underperforming S1 Delhi spend to reallocate towards higher ROAS channels."
+      },
+      {
+        "id": "CUT-S1-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Pause inefficient S1 Mumbai scaling attempts."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2,S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "S4",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Final run prioritizes incrementality by shifting market leadership to highest-scoring SKUs and cutting low-iota lines. Budget rebalancing supports scaled funds while shedding inefficient S1 holds."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23362,
+    "tokens_out": 18725,
+    "cost_usd": 0.00313511,
+    "wall_clock_s": 179.18672904200002
+  }
+}

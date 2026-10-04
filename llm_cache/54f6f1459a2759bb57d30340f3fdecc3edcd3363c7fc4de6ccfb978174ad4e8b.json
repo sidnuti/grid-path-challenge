@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.55,
+    "rationale": "C-S3-MUM holds the highest mechanical leader score. Although C-S2-MUM is within a 0.46% margin and shows a higher slot 1 share, the disparity is insufficient to clearly override the mechanical ranking in a noisy near-tie scenario, consistent with the directive to prefer the mechanical pick absent strong counterevidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2618,
+    "cost_usd": 0.040536,
+    "wall_clock_s": 27.50950666600005
+  }
+}

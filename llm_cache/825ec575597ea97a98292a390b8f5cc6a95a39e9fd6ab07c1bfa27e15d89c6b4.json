@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.9,
+    "rationale": "C-S3-DEL holds the higher mechanical leader score (0.1837 vs 0.1709) and shows a markedly stronger top-position capture with a slot1_share_7d of 0.90 compared to 0.55. Both the scoring algorithm and positional dominance evidence align, making C-S3-DEL the definitive leader for this market despite the narrow score differential."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 349,
+    "tokens_out": 873,
+    "cost_usd": 0.014142,
+    "wall_clock_s": 8.904895457999999
+  }
+}

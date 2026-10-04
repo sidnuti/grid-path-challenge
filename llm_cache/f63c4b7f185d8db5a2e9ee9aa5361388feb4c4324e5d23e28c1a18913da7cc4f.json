@@ -1,0 +1,280 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "lead-s1-blr-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift top placement to highest incremental SKU S1 in BLR generic contest",
+        "evidence_refs": [
+          "M:BLR:K04"
+        ]
+      },
+      {
+        "id": "yield-s3-blr-k04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back lower-iroas sibling S3 in BLR generic contest",
+        "evidence_refs": [
+          "M:BLR:K04"
+        ]
+      },
+      {
+        "id": "lead-s1-del-k02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Secure prime placement for fund SKU S1 in DEL brand contest",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ]
+      },
+      {
+        "id": "yield-s3-del-k02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Reduce wasteful spend from hold SKU S3 in DEL brand contest",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ]
+      },
+      {
+        "id": "lead-s4-del-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Lead high-mroas SKU S4 in DEL generic contest over trim SKU S2",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ]
+      },
+      {
+        "id": "yield-s2-del-k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Yield premium inventory in DEL generic contest",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ]
+      },
+      {
+        "id": "lead-s1-hyd-k03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Capture incremental volume for fund SKU S1 in HYD generic contest",
+        "evidence_refs": [
+          "M:HYD:K03"
+        ]
+      },
+      {
+        "id": "yield-s3-hyd-k03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Free budget from lower-efficiency SKU S3 in HYD generic contest",
+        "evidence_refs": [
+          "M:HYD:K03"
+        ]
+      },
+      {
+        "id": "lead-s1-mum-k04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Fix misplaced hierarchy in MUM generic contest, prioritizing S1",
+        "evidence_refs": [
+          "M:MUM:K04"
+        ]
+      },
+      {
+        "id": "yield-s3-mum-k04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Reduce spend drag from hold SKU S3 in MUM generic contest",
+        "evidence_refs": [
+          "M:MUM:K04"
+        ]
+      },
+      {
+        "id": "lead-s4-pun-k05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Drive incrementality for scale SKU S4 in PUN generic contest",
+        "evidence_refs": [
+          "M:PUN:K05"
+        ]
+      },
+      {
+        "id": "yield-s2-pun-k05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Yield to higher-potential sibling S4 in PUN generic contest",
+        "evidence_refs": [
+          "M:PUN:K05"
+        ]
+      },
+      {
+        "id": "cut-budget-s3-mum",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Reduce daily burn on low-iroas hold campaign; frees allowance",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ]
+      },
+      {
+        "id": "cut-budget-s5-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "expected_effect": "Cut spend on hold Kids Soap campaign with low ROI; frees allowance",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ]
+      },
+      {
+        "id": "raise-budget-s1-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Expand reach for fund SKU S1 in DEL; leverages freed allowance",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ]
+      },
+      {
+        "id": "raise-bid-s1-del-k03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Push efficient generic cell past mid-tier placement without hitting slot-1 cap",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03"
+        ]
+      },
+      {
+        "id": "raise-bid-s4-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Capture high predicted mroas_up20 on generic cell with headroom",
+        "evidence_refs": [
+          "C:C-S4-MUM/K06"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "fund",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Corrected rejected intents by attaching exact sku_id, city_id, and keyword_id to all lead/yield calls. Removed bid raises on MISSES verdict and full-slot-1 cells per guardrails. Reallocated budget from low-iroas hold campaigns (S3-MUM, S5-DEL) to fund asset S1-DEL, keeping net spend reduction safely within the 300 INR allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11405,
+    "tokens_out": 10346,
+    "cost_usd": 0.00168713,
+    "wall_clock_s": 92.35306512499994
+  }
+}

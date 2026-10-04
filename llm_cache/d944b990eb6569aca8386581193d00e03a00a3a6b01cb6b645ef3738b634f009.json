@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-HYD",
+    "confidence": 0.85,
+    "rationale": "The mechanical leader_score favors C-S3-HYD. Although the scores are near-tie, C-S3-HYD demonstrates a dominant slot1_share_7d of 0.97 compared to 0.43 for C-S1-HYD, indicating superior current ad position capture and efficiency. Protecting the incumbent leader aligns with maintaining stable impressions and cost-effectiveness."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 589,
+    "cost_usd": 0.009891,
+    "wall_clock_s": 6.159635625000021
+  }
+}

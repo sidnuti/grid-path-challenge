@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "Mechanical scores are near-tie, slightly favoring C-S1-MUM. However, C-S3-MUM exhibits a significantly higher slot1 share (0.92 vs 0.46), indicating stronger current ad rank and market dominance. This evidence warrants overriding the mechanical pick to protect the more effective leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2019,
+    "cost_usd": 0.031335,
+    "wall_clock_s": 18.446083584000007
+  }
+}

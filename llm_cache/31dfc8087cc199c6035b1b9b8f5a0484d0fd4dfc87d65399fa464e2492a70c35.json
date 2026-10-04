@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.6,
+    "rationale": "Defaulting to the mechanical pick: C-S1-MUM leads on leader_score (0.2139 vs 0.1955), and that score already captures conversion, ASP, and incrementality. C-S3-MUM's much higher slot1_share_7d (0.90 vs 0.49) shows it currently dominates the top slot, but that reflects auction presence rather than value and does not clearly outweigh the score gap, so it is not strong enough to override the mechanical leader. Moderate confidence given the near-tie and S3's incumbency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 337,
+    "tokens_out": 1242,
+    "cost_usd": 0.00167719,
+    "wall_clock_s": 10.839787542000067
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.55,
+    "rationale": "Mechanical score favors C-S3-MUM by ~5.8%. Per instructions, the composite metric (conversion, ASP, incrementality) is preferred in near-ties despite C-S1-MUM\u2019s stronger slot1_share (0.90 vs 0.52), as position alone does not guarantee superior unit economics or marginal lift."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2164,
+    "cost_usd": 0.03351,
+    "wall_clock_s": 19.45239104099994
+  }
+}

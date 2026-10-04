@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.65,
+    "rationale": "Mechanical score edges out C-S1-HYD by less than 0.5%, confirming a near-tie where the metric is noisy. Per explicit instructions to prefer the mechanical pick absent clear contrary evidence, C-S2-HYD is designated leader. Notably, C-S1-HYD\u2019s substantially higher slot1 share (0.96 vs 0.37) may indicate scoring noise or allocation efficiency differences, but does not definitively override the mechanical baseline."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 2096,
+    "cost_usd": 0.032721,
+    "wall_clock_s": 24.367910041000187
+  }
+}

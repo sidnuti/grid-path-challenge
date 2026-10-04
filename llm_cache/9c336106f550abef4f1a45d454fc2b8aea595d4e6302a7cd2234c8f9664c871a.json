@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "Scores are in a noisy near-tie (0.2819 vs 0.2661). C-S1-HYD demonstrates significantly higher slot1_share_7d (0.94 vs 0.60), indicating stronger market dominance and more efficient inventory capture. This clear positional advantage outweighs the marginal mechanical deficit, making C-S1-HYD the preferred leader to prevent internal bid cannibalization and maintain auction efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 2581,
+    "cost_usd": 0.039771,
+    "wall_clock_s": 30.30781816600006
+  }
+}

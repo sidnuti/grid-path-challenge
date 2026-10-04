@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.85,
+    "rationale": "Although C-S3-BLR has a marginally higher mechanical score, the near-tie makes the ranking noisy. C-S1-BLR demonstrates decisive operational superiority with an 88% slot1 share versus 42% for C-S3-BLR, indicating stronger market control, better ad positioning, and higher stability. This clear evidence justifies overriding the mechanical tiebreaker in favor of C-S1-BLR."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1680,
+    "cost_usd": 0.026322,
+    "wall_clock_s": 16.813160166999978
+  }
+}

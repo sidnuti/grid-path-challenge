@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "Mechanical leader_score marginally favors C-S1-HYD (0.2398 vs 0.2335). In this near-tie, corroborating evidence supports the mechanical pick: C-S1-HYD's 7d slot1 share (0.88) is far above C-S3-HYD's (0.52), indicating it already dominates the auction position for this city-keyword. No evidence clearly favors C-S3-HYD, so the default to the mechanical leader holds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 429,
+    "cost_usd": 0.0006624199999999999,
+    "wall_clock_s": 3.652193167000064
+  }
+}

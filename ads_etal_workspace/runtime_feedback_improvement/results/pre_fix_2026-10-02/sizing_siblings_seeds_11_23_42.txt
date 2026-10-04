@@ -1,0 +1,23 @@
+== seed 11
+1 allow 0.0 sel_dspend 0.0 n_sel 0 / 13 overshoot False precheck_drop 0 WL_leader_raised 0 hold 60
+2 allow 276.6 sel_dspend 2662.6 n_sel 12 / 12 overshoot True precheck_drop 1 WL_leader_raised 6 hold 60
+3 allow 804.71 sel_dspend 2757.4 n_sel 7 / 7 overshoot True precheck_drop 1 WL_leader_raised 0 hold 60
+4 allow 1467.55 sel_dspend 714.9 n_sel 4 / 4 overshoot False precheck_drop 1 WL_leader_raised 2 hold 60
+5 allow 2227.22 sel_dspend 50.5 n_sel 1 / 1 overshoot False precheck_drop 0 WL_leader_raised 1 hold 59
+6 allow 2322.16 sel_dspend None n_sel None / 0 overshoot None precheck_drop 0 WL_leader_raised 0 hold 57
+== seed 23
+1 allow 0.0 sel_dspend 0.0 n_sel 0 / 17 overshoot False precheck_drop 0 WL_leader_raised 0 hold 60
+2 allow 174.22 sel_dspend 3797.0 n_sel 18 / 18 overshoot True precheck_drop 2 WL_leader_raised 8 hold 58
+3 allow 592.99 sel_dspend 1965.9 n_sel 11 / 11 overshoot True precheck_drop 4 WL_leader_raised 4 hold 60
+4 allow 743.45 sel_dspend 1350.2 n_sel 5 / 5 overshoot True precheck_drop 3 WL_leader_raised 1 hold 57
+5 allow 1179.19 sel_dspend 207.4 n_sel 7 / 8 overshoot False precheck_drop 5 WL_leader_raised 2 hold 58
+6 allow 1204.21 sel_dspend 1204.2 n_sel 8 / 9 overshoot False precheck_drop 5 WL_leader_raised 0 hold 58
+== seed 42
+1 allow 0.0 sel_dspend 0.0 n_sel 0 / 18 overshoot False precheck_drop 0 WL_leader_raised 0 hold 60
+2 allow 124.22 sel_dspend 3798.0 n_sel 18 / 18 overshoot True precheck_drop 5 WL_leader_raised 7 hold 60
+3 allow 418.17 sel_dspend 2019.0 n_sel 9 / 9 overshoot True precheck_drop 4 WL_leader_raised 1 hold 60
+4 allow 717.79 sel_dspend 114.7 n_sel 3 / 3 overshoot False precheck_drop 3 WL_leader_raised 0 hold 60
+5 allow 1082.61 sel_dspend 102.7 n_sel 3 / 3 overshoot False precheck_drop 3 WL_leader_raised 0 hold 58
+6 allow 1070.49 sel_dspend 103.9 n_sel 3 / 3 overshoot False precheck_drop 3 WL_leader_raised 0 hold 58
+
+[exited with code 0]

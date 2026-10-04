@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.75,
+    "rationale": "Although C-S4-HYD recorded a marginally higher mechanical score (1.0615 vs 1.0221), C-S2-HYD demonstrates a significantly higher slot1 share (0.90 vs 0.63), indicating stronger ad visibility and market positioning. In a near-tie scenario, this clear evidence supports selecting C-S2-HYD as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1797,
+    "cost_usd": 0.028011,
+    "wall_clock_s": 16.13617075000002
+  }
+}

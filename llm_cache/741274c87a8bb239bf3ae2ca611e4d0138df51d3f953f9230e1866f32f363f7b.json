@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.8,
+    "rationale": "C-S1-HYD retains the mechanical pick with a narrow lead in leader_score (0.6953 vs 0.6808). It is further distinguished by a significantly higher Slot 1 share (0.88 vs 0.64), confirming superior auction performance and validating it as the market leader despite the tight score differential."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1022,
+    "cost_usd": 0.016461,
+    "wall_clock_s": 10.539969374999828
+  }
+}

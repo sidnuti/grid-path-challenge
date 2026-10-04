@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "is_shock": true,
+    "magnitude": 2.72,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach shows a statistically significant surge (z=2.719, flagged True) while CPM and OSA remain within normal variance. The own-action confound is explicitly false, indicating this deviation stems from genuine external demand pressure rather than internal bidding artifacts. Magnitude aligns with the ~2.7-standard-deviation offset."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1865,
+    "cost_usd": 0.029307,
+    "wall_clock_s": 17.576996291
+  }
+}

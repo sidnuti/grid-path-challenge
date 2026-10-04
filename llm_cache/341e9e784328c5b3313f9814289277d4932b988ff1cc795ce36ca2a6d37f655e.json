@@ -1,0 +1,374 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "raise_bid",
+        "scope": {
+          "sub_category": "Body Wash",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Scale high-iota body wash demand across all cities.",
+        "evidence_refs": [
+          "K:Body Wash:generic"
+        ]
+      },
+      {
+        "id": "INT-02",
+        "verb": "raise_bid",
+        "scope": {
+          "sub_category": "Shower Gel",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Capture premium incremental shower gel searches.",
+        "evidence_refs": [
+          "K:Shower Gel:generic"
+        ]
+      },
+      {
+        "id": "INT-03",
+        "verb": "cut_bid",
+        "scope": {
+          "sub_category": "Soap",
+          "keyword_type": "competition"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Reduce CPC on low-incrementality competitor terms.",
+        "evidence_refs": [
+          "K:Soap:competition"
+        ]
+      },
+      {
+        "id": "INT-04",
+        "verb": "hold",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Free allowance from underperforming kids line while preserving coverage.",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ]
+      },
+      {
+        "id": "INT-05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift leadership to higher incremental SKU S3.",
+        "evidence_refs": [
+          "M:BLR:K02"
+        ]
+      },
+      {
+        "id": "INT-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Step back S1 in Bangalore branded search.",
+        "evidence_refs": [
+          "M:BLR:K02"
+        ]
+      },
+      {
+        "id": "INT-07",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Lead Delhi brand leadership with S4.",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ]
+      },
+      {
+        "id": "INT-08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Yield Delhi branded slot to S4.",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ]
+      },
+      {
+        "id": "INT-09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Optimize Delhi branded K02 to S3.",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ]
+      },
+      {
+        "id": "INT-10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "S1 yields Delhi K02.",
+        "evidence_refs": [
+          "M:DEL:K02"
+        ]
+      },
+      {
+        "id": "INT-11",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Move Delhi generic K04 leadership to S1.",
+        "evidence_refs": [
+          "M:DEL:K04"
+        ]
+      },
+      {
+        "id": "INT-12",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "confidence": 0.9,
+        "expected_effect": "S3 yields Delhi K04.",
+        "evidence_refs": [
+          "M:DEL:K04"
+        ]
+      },
+      {
+        "id": "INT-13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "expected_effect": "Lead Delhi generic K05 with S2.",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ]
+      },
+      {
+        "id": "INT-14",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.85,
+        "expected_effect": "S4 yields Delhi K05.",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ]
+      },
+      {
+        "id": "INT-15",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shift Hyderabad brand leadership to S4.",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ]
+      },
+      {
+        "id": "INT-16",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "S1 yields Hyderabad brand.",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ]
+      },
+      {
+        "id": "INT-17",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Lead Hyderabad K02 with S3.",
+        "evidence_refs": [
+          "M:HYD:K02"
+        ]
+      },
+      {
+        "id": "INT-18",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "S1 yields Hyderabad K02.",
+        "evidence_refs": [
+          "M:HYD:K02"
+        ]
+      },
+      {
+        "id": "INT-19",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Lead Pune brand with S4.",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ]
+      },
+      {
+        "id": "INT-20",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "S1 yields Pune brand.",
+        "evidence_refs": [
+          "M:PUN:K01"
+        ]
+      },
+      {
+        "id": "INT-21",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Lead Pune K02 with S3.",
+        "evidence_refs": [
+          "M:PUN:K02"
+        ]
+      },
+      {
+        "id": "INT-22",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.9,
+        "expected_effect": "S1 yields Pune K02.",
+        "evidence_refs": [
+          "M:PUN:K02"
+        ]
+      },
+      {
+        "id": "INT-23",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Correct Mumbai K09 leader to S1.",
+        "evidence_refs": [
+          "M:MUM:K09"
+        ]
+      },
+      {
+        "id": "INT-24",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "confidence": 0.9,
+        "expected_effect": "S3 yields Mumbai K09.",
+        "evidence_refs": [
+          "M:MUM:K09"
+        ]
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Final run reallocates budget from weak competitor and kids spend to high-iota generic categories. Market leadership corrections align SKU roles with incremental score gaps. ROAS floor maintained via targeted cuts."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24636,
+    "tokens_out": 23227,
+    "cost_usd": 0.00375859,
+    "wall_clock_s": 199.00345333300015
+  }
+}

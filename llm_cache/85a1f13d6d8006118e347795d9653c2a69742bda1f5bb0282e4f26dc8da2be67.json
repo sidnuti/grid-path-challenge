@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-DEL",
+    "confidence": 0.75,
+    "rationale": "C-S3-DEL commands 94% slot1 share versus only 15% for the mechanical leader C-S4-DEL. This overwhelming difference in impression capture clearly favors C-S3-DEL as the true, stable market leader, indicating the slight mechanical score advantage for C-S4-DEL is likely noise rather than sustainable performance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 421,
+    "tokens_out": 1999,
+    "cost_usd": 0.031248,
+    "wall_clock_s": 19.90083570799993
+  }
+}

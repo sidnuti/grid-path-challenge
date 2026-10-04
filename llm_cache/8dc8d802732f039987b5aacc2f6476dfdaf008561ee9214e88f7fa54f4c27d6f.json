@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.68,
+    "rationale": "Mechanical leader_score already favors C-S1-HYD (0.6391 vs 0.6103); while the gap is narrow, the corroborating evidence strengthens rather than contradicts it \u2014 C-S1-HYD holds a much higher 7-day slot-1 share (0.89 vs 0.68), indicating it is the established incumbent whose bid protection matters most for this HYD/K04 market. Nothing in the evidence clearly favors C-S3-HYD, so the mechanical pick stands. Confidence tempered slightly by the near-tie score gap."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 450,
+    "cost_usd": 0.00068867,
+    "wall_clock_s": 3.919010540999807
+  }
+}

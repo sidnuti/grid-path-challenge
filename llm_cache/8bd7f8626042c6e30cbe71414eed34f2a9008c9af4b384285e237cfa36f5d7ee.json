@@ -1,0 +1,171 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-budget-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05",
+          "C:C-S2-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieves budget cap on high-iota Body Wash DEL; drives incremental orders with iroas >4."
+      },
+      {
+        "id": "int-budget-s2-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-MUM",
+          "C:C-S2-MUM/K05",
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Relieves budget cap on high-iota Body Wash MUM; captures remaining demand."
+      },
+      {
+        "id": "int-budget-s4-blr",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "large",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05",
+          "C:C-S4-BLR/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Relieves budget cap on Shower Gel BLR; supports incremental scale."
+      },
+      {
+        "id": "int-budget-s4-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05",
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Moderate budget lift on Shower Gel DEL to spend allowance while preserving margin."
+      },
+      {
+        "id": "int-budget-s1-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-PUN"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-PUN",
+          "C:C-S1-PUN/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Lifts cap on Soap PUN fund; utilizes remaining allowance."
+      },
+      {
+        "id": "int-budget-s2-pun",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-PUN"
+        },
+        "size": "small",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-PUN",
+          "C:C-S2-PUN/K10"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Small lift to fully deploy the daily allowance on high-iota competition."
+      },
+      {
+        "id": "int-cut-s3-del",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "C:C-S3-DEL/K09"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trims weak Soap spend missing goal; stops bleed to fund higher-return SKUs."
+      },
+      {
+        "id": "int-hold-s2-hyd",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S2-HYD"
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "A:C-S2-HYD/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Freezes budget due to sub-60% OSA blocking increases; prevents unsafe scaling."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "fund",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Deploying the full \u20b91092/day allowance on capped, efficient Body Wash and Shower Gel campaigns with proven run-outs and high iota (>0.80). Cuts weak Soap DEL spend to stop goal-misses and reallocate room. Holds HYD due to OSA < 60% compliance block. Portfolio ROAS floor remains intact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12196,
+    "tokens_out": 9718,
+    "cost_usd": 0.0016292200000000002,
+    "wall_clock_s": 93.15512920799995
+  }
+}

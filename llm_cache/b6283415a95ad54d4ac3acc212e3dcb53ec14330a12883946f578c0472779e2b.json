@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.85,
+    "rationale": "The mechanical leader C-S1-HYD leads on both leader_score and slot1_share_7d, providing consistent signals across performance and visibility metrics. With no evidence contradicting the mechanical pick, it is retained as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1180,
+    "cost_usd": 0.018756,
+    "wall_clock_s": 10.993952167000089
+  }
+}

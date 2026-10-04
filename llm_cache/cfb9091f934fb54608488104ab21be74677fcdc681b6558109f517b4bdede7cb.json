@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.43,
+    "direction": "surge",
+    "confidence": 0.92,
+    "rationale": "Reach z-score of 5.43 is strongly flagged and exceeds typical significance thresholds, indicating a pronounced volume increase. Stable CPM (-0.316) rules out a competitive price war, and the false own-action confound confirms the signal originates externally. Combined with the explicit mechanical surge read, this is a genuine demand-side shock warranting immediate tactical response."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 444,
+    "tokens_out": 1750,
+    "cost_usd": 0.027582,
+    "wall_clock_s": 18.741114583000012
+  }
+}

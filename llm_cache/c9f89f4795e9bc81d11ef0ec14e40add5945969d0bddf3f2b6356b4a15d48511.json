@@ -1,0 +1,238 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "CU_C-S3-BLR_Budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR/"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce spend on weak iara (1.01) campaign, freeing budget capacity."
+      },
+      {
+        "id": "CU_C-S5-BLR_Budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR/"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cut low-efficiency Kids Soap BLR budget (iroas 1.39), reallocating to scale campaigns."
+      },
+      {
+        "id": "CU_C-S3-MUM_Budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Trim holding Soap MUM budget (iroas 1.37) to support incremental shifts."
+      },
+      {
+        "id": "CU_C-S1-BLR_Budget",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR/"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce trim status Soap BLR budget (iroas 1.79) to improve portfolio liquidity."
+      },
+      {
+        "id": "YL_BLR_K03_S5",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03",
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back S5 from generic BLR market where it holds slot incorrectly despite lower incremental score than S1/S3."
+      },
+      {
+        "id": "YL_MUM_K05_S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield Body Wash MUM generic space to enable S4 Shower Gel leadership."
+      },
+      {
+        "id": "YL_MUM_K06_S2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Yield Body Wash MUM generic variant 06 space to enable S4 leadership."
+      },
+      {
+        "id": "DL_MUM_K05_S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:MUM:K05",
+          "C:C-S4-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take slot 1 in MUM generic 05 for Shower Gel, leveraging high mroas (6.50) and clear verdict."
+      },
+      {
+        "id": "DL_MUM_K06_S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:MUM:K06",
+          "C:C-S4-MUM/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Take slot 1 in MUM generic 06 for Shower Gel, capturing high incremental revenue."
+      },
+      {
+        "id": "DL_PUN_K01_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01",
+          "C:C-S2-PUN/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Shift PUN brand leadership to S2 Body Wash, improving allocation efficiency."
+      },
+      {
+        "id": "RA_S2_DEL_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL/",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Increase generic spend for Fund role S2 DEL, targeting solid iara (4.01) growth."
+      },
+      {
+        "id": "RA_S4_BLR_K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR/",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up Scale role S4 BLR generic, capitalizing on highest portfolio iara (4.70)."
+      },
+      {
+        "id": "RA_S4_MUM_K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM/",
+          "keyword_id": "K01"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "C:C-S4-MUM/K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Aggressively bid brand keyword in MUM where mroas_up20 is exceptional (26.04) and slot share is low (25%)."
+      },
+      {
+        "id": "YL_PUN_K01_S4",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Step back S4 from PUN brand market to clear path for S2 leadership."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "conquest"
+      }
+    ],
+    "notes": "Prioritized budget extraction from underperforming TRIM/HOLD campaigns (BLR/MUM soaps) to restore allowance for SCALE/FUND allocations. Resolved contested market misallocations by yielding inefficient holders first, then leading winners in high-mroas cells. Avoided blocked MISSES/A-tier leads from previous run; focused raises on CLEARS/THIN cells with clear incremental upside and adequate budget headroom."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11597,
+    "tokens_out": 10100,
+    "cost_usd": 0.0016609099999999998,
+    "wall_clock_s": 80.04312854199998
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "scale-s4-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S4"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "R:C-S4-MUM",
+          "R:C-S4-BLR",
+          "R:C-S4-HYD",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift funds to high-iroas Shower Gel campaigns while respecting OSA flags."
+      },
+      {
+        "id": "scale-s2-budget",
+        "verb": "raise_budget",
+        "scope": {
+          "sku_id": "S2"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "R:C-S2-MUM",
+          "R:C-S2-BLR",
+          "R:C-S2-HYD",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Expand budget for efficient Body Wash portfolio with strong incrementality."
+      },
+      {
+        "id": "trim-s3-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S3"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "R:C-S3-MUM",
+          "R:C-S3-BLR",
+          "R:C-S3-HYD",
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Reduce capital allocation for underperforming Soap campaigns."
+      },
+      {
+        "id": "trim-s5-budget",
+        "verb": "cut_budget",
+        "scope": {
+          "sku_id": "S5"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "R:C-S5-MUM",
+          "R:C-S5-BLR",
+          "R:C-S5-HYD",
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Eliminate significant drain from Kids Soap SKUs across all cities."
+      },
+      {
+        "id": "bid-up-s4-generic",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S4",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "C:C-S4-MUM/K05",
+          "C:C-S4-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bids on generic terms to capture higher incremental volume."
+      },
+      {
+        "id": "bid-up-s2-comp",
+        "verb": "raise_bid",
+        "scope": {
+          "sku_id": "S2",
+          "keyword_type": "competition"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10",
+          "C:C-S2-BLR/K10",
+          "C:C-S2-HYD/K10"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Bid up competitor keywords where iota approaches 1.0."
+      },
+      {
+        "id": "lead-del-k01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Grant slot 1 dominance to S4 in Delhi Brand search due to superior score."
+      },
+      {
+        "id": "yield-del-k01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Step back S1 spending in Delhi Brand search to reduce cannibalization."
+      },
+      {
+        "id": "lead-mum-k02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Move leadership to S3 in Mumbai K02 for better alignment with market value."
+      },
+      {
+        "id": "yield-mum-k02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce S1 hold in Mumbai K02 where it currently over-spends relative to return."
+      },
+      {
+        "id": "lead-pun-k02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Establish S3 leadership in Pune K02 to optimize generic brand performance."
+      },
+      {
+        "id": "yield-pun-k02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Allow S1 to cede ground in Pune K02 to improve overall segment efficiency."
+      },
+      {
+        "id": "lead-hyd-k02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure S4/S3 leadership in Hyderabad K02 to prevent wasted impressions."
+      },
+      {
+        "id": "yield-hyd-k02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Yield Hyderabad K02 share from S1 to free budget for more effective bids."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Capital shifted efficiently towards Shower Gel (S4) and Body Wash (S2) where incremental returns are maximized. Contested keyword markets resolved to prioritize SKUs with the highest incremental score, preventing S1 Soap from over-bidding in segments where it lacks efficiency."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23442,
+    "tokens_out": 16343,
+    "cost_usd": 0.0028278500000000002,
+    "wall_clock_s": 126.68374575000007
+  }
+}

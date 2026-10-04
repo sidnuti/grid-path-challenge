@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.6,
+    "rationale": "Mechanical score marginally favors C-S1-HYD (1.1232 vs 1.1120). Per the explicit instruction to prefer the mechanical leader in near-ties, S1 is retained. Although C-S3-HYD demonstrates significantly stronger recent top-slot capture (0.87 vs 0.56), the underlying efficiency metric still slightly edges out S1, justifying protection of the mechanical pick amid noisy short-term signals."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 2181,
+    "cost_usd": 0.033771,
+    "wall_clock_s": 20.058351792000053
+  }
+}

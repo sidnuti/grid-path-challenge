@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.75,
+    "rationale": "Despite C-S2 holding a marginally higher mechanical score, C-S4 demonstrates substantially greater market dominance with a slot1_share_7d of 0.71 versus 0.38. This clear positional advantage makes C-S4 the more stable and efficient candidate to protect as the leader, resolving the noisy near-tie in mechanical scoring."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 427,
+    "tokens_out": 1920,
+    "cost_usd": 0.030081,
+    "wall_clock_s": 21.403547540999995
+  }
+}

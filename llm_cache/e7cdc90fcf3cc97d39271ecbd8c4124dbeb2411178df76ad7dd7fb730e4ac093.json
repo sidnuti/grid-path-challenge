@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.65,
+    "rationale": "C-S1-HYD maintains the highest mechanical leader_score. While the top two candidates are within ~3.3%, the score advantage justifies retaining the mechanical pick. C-S5-HYD shows higher slot1 share but a substantially lower composite score, indicating weaker overall conversion/ASP/incrementality efficiency."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1706,
+    "cost_usd": 0.026721,
+    "wall_clock_s": 16.48577016699994
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.6,
+    "rationale": "While the mechanical scores are nearly identical, C-S3-BLR demonstrates a significantly higher slot1 share (0.87 vs 0.59), indicating superior ad positioning and market control. This strong positional advantage justifies overriding the marginal mechanical difference to designate C-S3-BLR as the market leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1976,
+    "cost_usd": 0.03069,
+    "wall_clock_s": 22.015261874999993
+  }
+}

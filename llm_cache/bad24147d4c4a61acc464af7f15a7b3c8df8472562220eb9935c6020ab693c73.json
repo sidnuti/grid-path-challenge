@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.72,
+    "rationale": "Mechanical leader_score already favours C-S3-MUM (0.2904 vs 0.2724). The only additional evidence, slot1_share_7d (0.92 vs 0.65), also supports C-S3-MUM as the incumbent owner of the top slot, so it is the natural campaign to protect while the sibling holds. Nothing in the evidence favours C-S1-MUM, though the narrow score gap keeps confidence moderate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 338,
+    "tokens_out": 460,
+    "cost_usd": 0.00070006,
+    "wall_clock_s": 3.907790041999988
+  }
+}

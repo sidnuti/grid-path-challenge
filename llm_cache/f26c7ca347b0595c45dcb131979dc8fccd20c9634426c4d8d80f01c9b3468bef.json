@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.82,
+    "rationale": "The mechanical score slightly favors C-S4-HYD (1.7674 vs 1.7411), constituting a near-tie. However, C-S4-HYD exhibits markedly superior market execution with a 7-day slot1_share of 0.85 versus 0.62 for C-S2-HYD. This strong positional dominance indicates C-S4-HYD naturally captures premium inventory more consistently, reinforcing the mechanical pick and minimizing noise-driven bid wars. Selecting C-S4-HYD as the protected leader optimizes share of voice while respecting inherent performance differentials."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1307,
+    "cost_usd": 0.020661,
+    "wall_clock_s": 14.966927499999997
+  }
+}

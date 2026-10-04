@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.7,
+    "rationale": "Scores are a near-tie (0.2413 vs 0.2268), so the mechanical pick C-S1-HYD is retained by default. The 7-day slot-1 share reinforces this: C-S1-HYD holds 0.96 versus 0.34, so protecting its bid preserves its dominant top-slot presence, while C-S3-HYD is the natural holder."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 264,
+    "cost_usd": 0.00045617,
+    "wall_clock_s": 3.3350386249999815
+  }
+}

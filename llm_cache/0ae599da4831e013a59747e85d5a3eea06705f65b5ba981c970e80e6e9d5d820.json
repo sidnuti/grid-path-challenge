@@ -1,0 +1,160 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Absorb allowance on high-mroas generic cell (7.03); expands incremental delivery without hitting slot-cap."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-BLR/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale efficient generic bid with 5.08 iroas and verified headroom under 80% slot-share."
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Competitive bid capture on shower gel with 0.85 iota and 5.49 iroas; drives incremental share."
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "High-incrementality competitor keyword (iota 0.90) in Bombay body wash; leverages 58% slot headroom."
+      },
+      {
+        "id": "INT-5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fill remaining allowance on efficient generic key with verified CLEARS verdict."
+      },
+      {
+        "id": "INT-6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-PUN/K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incremental volume uplift on Pune body wash generic; preps capacity for runs 5-6."
+      },
+      {
+        "id": "INT-7",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S3-MUM/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Remove persistent MISSES spend dragging portfolio ROAS; protects floor margin."
+      },
+      {
+        "id": "INT-8",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S3-DEL/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Eliminate high-spend weak generic term in Delhi soap; reallocates efficiency upward."
+      },
+      {
+        "id": "INT-9",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S5-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S5-BLR/K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim Kids Soap Bangalore misfire; lifts blended ROAS without hurting protected funds."
+      },
+      {
+        "id": "INT-10",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-BLR/K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Stop bleeding on thin-margin generic bid; maintains clean spend structure."
+      }
+    ],
+    "stance": [],
+    "notes": "Aggressively allocating the 356 INR allowance to high-iota competition and unconstrained generic cells to build incremental throughput ahead of runs 5-6. Pairing with targeted cuts on persistent MISSES terms to fortify portfolio ROAS margin above the 4.81 floor while preserving protected fundamentals."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12205,
+    "tokens_out": 11570,
+    "cost_usd": 0.00187025,
+    "wall_clock_s": 94.4744092919999
+  }
+}

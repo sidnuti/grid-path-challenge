@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.75,
+    "rationale": "The mechanical scores for C-S1-MUM (0.6623) and C-S3-MUM (0.6219) are in a near-tie, reducing reliability. C-S3-MUM shows substantially stronger real-world performance with a slot1_share_7d of 0.92 versus 0.42 for C-S1-MUM, clearly indicating it currently wins more auctions and should serve as the protective leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 374,
+    "tokens_out": 1411,
+    "cost_usd": 0.022287,
+    "wall_clock_s": 13.263568833000022
+  }
+}

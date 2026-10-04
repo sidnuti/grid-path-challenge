@@ -1,0 +1,295 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-01",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduces spend on underperforming Body Wash segment; preserves budget for higher-ROAS shifts."
+      },
+      {
+        "id": "INT-02",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cuts inefficient Body Wash spend in Mumbai; maintains ROAS floor."
+      },
+      {
+        "id": "INT-03",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trims low-iota Kids Soap; frees allowance headroom."
+      },
+      {
+        "id": "INT-04",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduces weak Kids Soap presence; safeguards portfolio ROAS."
+      },
+      {
+        "id": "INT-05",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-PUN"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cuts minimal Kids Soap footprint; conserves budget for scale opportunities."
+      },
+      {
+        "id": "INT-06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "expected_effect": "S2 yields share to S4 on generic demand; captures higher incremental value without extra budget."
+      },
+      {
+        "id": "INT-07",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "expected_effect": "S2 steps back on generic term; S4 leader captures efficient impressions."
+      },
+      {
+        "id": "INT-08",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "expected_effect": "S2 yields competitor traffic to S4; improves overall category iroas."
+      },
+      {
+        "id": "INT-09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:MUM:K06"
+        ],
+        "expected_effect": "S2 yields generic share to S4 in Mumbai; optimizes incremental conversion."
+      },
+      {
+        "id": "INT-10",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "expected_effect": "S2 backs off generic term; S4 leads on higher incremental revenue per impression."
+      },
+      {
+        "id": "INT-11",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "expected_effect": "S2 yields space to S4; reallocates scarce reach to stronger SKU."
+      },
+      {
+        "id": "INT-12",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "expected_effect": "S1 Soap leads S3 on generic term; captures superior incremental ROI."
+      },
+      {
+        "id": "INT-13",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "expected_effect": "S1 displaces S3 on high-intent generic search; protects ad spend efficiency."
+      },
+      {
+        "id": "INT-14",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K03"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:DEL:K03"
+        ],
+        "expected_effect": "S1 leads S5 and S3 in Delhi generic pool; maximizes brand-safe incremental lift."
+      },
+      {
+        "id": "INT-15",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "M:BLR:K05"
+        ],
+        "expected_effect": "Moderate bid lift gains share on generic term where slot dominance is incomplete; supports scale role."
+      },
+      {
+        "id": "INT-16",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S4-DEL/K10",
+          "M:DEL:K10"
+        ],
+        "expected_effect": "Aggressive bid push on competitor term secures incremental wins; high iota confirms value."
+      },
+      {
+        "id": "INT-17",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "M:DEL:K05"
+        ],
+        "expected_effect": "Bid increase captures yielded volume; stays under slot-1 threshold to preserve auction balance."
+      },
+      {
+        "id": "INT-18",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "M:PUN:K05"
+        ],
+        "expected_effect": "Targeted bid bump reinforces S4 leadership in Pune; conservative size limits budget impact."
+      },
+      {
+        "id": "INT-19",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "expected_effect": "Prevents upward bid/budget pressure on weak Kids Soap segment; locks ROAS protection."
+      },
+      {
+        "id": "INT-20",
+        "verb": "hold",
+        "scope": {
+          "campaign_id": "C-S5-BLR"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "expected_effect": "Freezes expansion attempts on low-iota pocket; preserves portfolio efficiency."
+      }
+    ],
+    "stance": [],
+    "notes": "Reallocation strategy uses market yields and targeted bid lifts to shift share from inefficient body wash and kids soap pockets toward high-incrementality shower gel and soap generics. Budget cuts and holds on trim/hold segments safeguard the direct ROAS floor while operating well within the daily spend allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11132,
+    "tokens_out": 10716,
+    "cost_usd": 0.0017270400000000002,
+    "wall_clock_s": 91.140429208
+  }
+}

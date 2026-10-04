@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.85,
+    "rationale": "Reach z-score of 5.0 indicates a highly statistically significant positive deviation. With CPM and OSA flat and the own-action confound flag false, the pattern points to a genuine external demand surge rather than internal pacing feedback or market price changes."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 441,
+    "tokens_out": 1478,
+    "cost_usd": 0.023493,
+    "wall_clock_s": 15.605448665999802
+  }
+}

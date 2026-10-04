@@ -1,0 +1,128 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-budget-s2-del",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped efficient body wash campaign with 5 run-outs to capture high iroas incrementality."
+      },
+      {
+        "id": "int-budget-s2-mum",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund capped efficient body wash campaign with 7 run-outs to capture high iroas incrementality."
+      },
+      {
+        "id": "int-bid-s2-del-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-iroas(6.51)/iota(1.00) generic cell."
+      },
+      {
+        "id": "int-bid-s2-del-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-iroas(5.89)/iota(1.00) generic cell."
+      },
+      {
+        "id": "int-bid-s2-mum-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-iroas(5.47)/iota(1.00) generic cell."
+      },
+      {
+        "id": "int-bid-s2-mum-k06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bid up high-iroas(6.20)/iota(1.00) generic cell."
+      },
+      {
+        "id": "int-cut-s3-hyd",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cut budget on zero-incrementality soap brand spend to free allowance and protect ROAS floor."
+      },
+      {
+        "id": "int-cut-s3-pun",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cut budget on zero-incrementality soap brand spend to free allowance and protect ROAS floor."
+      }
+    ],
+    "stance": [],
+    "notes": "Concentrated allowance on fund/scale body wash campaigns (S2) which show strong iroas and high iota, ensuring maximum incremental off-take. Simultaneously cut budgets on S3 soap brand campaigns that report 0.00 iroas, preserving ROAS margin and freeing cash for higher-return spend. Previous S2-PUN budget intent dropped due to insufficient run-out days."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12258,
+    "tokens_out": 8915,
+    "cost_usd": 0.00152669,
+    "wall_clock_s": 73.8514617919999
+  }
+}

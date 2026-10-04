@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S4-DEL",
+    "confidence": 0.6,
+    "rationale": "Mechanical score slightly favors C-S4-DEL (2.3333 vs 2.1504). Although C-S3-DEL shows a vastly higher slot1 share (0.96 vs 0.16), the composite metric weights conversion, ASP, and incrementality, which drive profitable positioning. Following the directive to prefer the mechanical pick unless evidence clearly overrides it, C-S4-DEL remains the designated leader, with the slot1 discrepancy noted as a potential volume/noise artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 421,
+    "tokens_out": 2443,
+    "cost_usd": 0.037908,
+    "wall_clock_s": 28.883852333999997
+  }
+}

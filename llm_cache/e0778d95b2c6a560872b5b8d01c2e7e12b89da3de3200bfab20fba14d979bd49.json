@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 0.6,
+    "confidence": 0.6,
+    "rationale": "Realised dROAS (2.09) significantly trails the target (3.01), suggesting current bids are acquiring impressions at a cost higher than their attributed value. With only 24 orders in the lookback window, the signal is thin. Dampening the mechanical +10% raise mitigates further ROAS degradation while preserving incremental test capacity per the clearance verdict."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 1885,
+    "cost_usd": 0.02967,
+    "wall_clock_s": 20.60060866699996
+  }
+}

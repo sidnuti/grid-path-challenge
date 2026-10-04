@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.55,
+    "rationale": "The mechanical leader score identifies C-S1-MUM as the primary candidate. Although C-S3-MUM demonstrates a substantially higher Slot 1 share (0.90 vs 0.49), the economic scores remain closely aligned. In this near-tie scenario, adhering to the mechanical recommendation prioritizes the campaign with the highest calculated incremental revenue while accounting for statistical noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1983,
+    "cost_usd": 0.030795,
+    "wall_clock_s": 20.40483541699996
+  }
+}

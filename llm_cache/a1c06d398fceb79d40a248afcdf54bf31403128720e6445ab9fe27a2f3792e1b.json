@@ -1,0 +1,128 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "int-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Funds Hyderabad Soap campaign that ran out 7/7 days, unlocking budget-constrained efficient spend."
+      },
+      {
+        "id": "int-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Relieves daily cap for Body Wash Bangalore (ran out 7/7, iroas 3.53) to capture incremental volume."
+      },
+      {
+        "id": "int-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Adds capacity to Delhi Body Wash (ran out 4/7, iroas 3.71) to utilize remaining allowance."
+      },
+      {
+        "id": "int-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN"
+        },
+        "target_slot": 1,
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Bids up Shower Gel Pune generic keywords to Slot 1, leveraging iroas 4.95 and high mroas_up20."
+      },
+      {
+        "id": "int-5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "target_slot": 1,
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Pushes Body Wash Mumbai generic/comp bids to Slot 1 (iroas 4.30) to win incremental impressions."
+      },
+      {
+        "id": "int-6",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocates generic search leader in Delhi from S4 to S2 (score 2.138) for higher incremental ROI."
+      },
+      {
+        "id": "int-7",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shifts Bangalore generic leader to S2 (score 1.938) to capitalize on stronger unit economics."
+      },
+      {
+        "id": "int-8",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establishes S4 Shower Gel as Pune generic leader (score 2.262) over S2 Body Wash."
+      }
+    ],
+    "notes": "Prioritizing budget relief on capped, efficient fund campaigns (HYD, BLR, DEL) and bidding up scale campaigns (PUN, MUM) to deploy the 300 INR daily allowance on highest iroas opportunities. Market leadership reassignments shift impressions to SKUs with superior incremental scores without increasing CPC outlay."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12194,
+    "tokens_out": 9172,
+    "cost_usd": 0.0015581800000000002,
+    "wall_clock_s": 74.61282825
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-HYD",
+    "confidence": 0.75,
+    "rationale": "Mechanical score favors C-S1-HYD. Although the top two scores are within a narrow margin (~2%), C-S1-HYD has a substantially higher slot1_share_7d (0.88 vs 0.64), providing clear corroborating evidence that it is the more effective candidate to designate as leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 377,
+    "tokens_out": 1121,
+    "cost_usd": 0.017946,
+    "wall_clock_s": 12.63128258300003
+  }
+}

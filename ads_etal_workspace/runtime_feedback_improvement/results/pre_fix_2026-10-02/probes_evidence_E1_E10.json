@@ -1,0 +1,898 @@
+{
+  "E1_incrementality": {
+    "iota_by_type": [
+      {
+        "keyword_type": "brand",
+        "beta": -0.8794,
+        "iota": 0.1206,
+        "n_obs": 1750
+      },
+      {
+        "keyword_type": "competition",
+        "beta": -0.0096,
+        "iota": 0.9904,
+        "n_obs": 1750
+      },
+      {
+        "keyword_type": "generic",
+        "beta": -0.4978,
+        "iota": 0.5022,
+        "n_obs": 1750
+      }
+    ],
+    "ordering_holds": true
+  },
+  "E2_siblings": {
+    "n_cells": 110,
+    "n_contested_cells": 100,
+    "n_markets": 50,
+    "n_contested_markets": 40,
+    "wrong_leader_markets": 17
+  },
+  "E3_runouts": {
+    "warmup_days": 28,
+    "campaigns_ran_out_every_warmup_day": [
+      "C-S1-BLR",
+      "C-S1-DEL",
+      "C-S2-MUM",
+      "C-S3-BLR",
+      "C-S5-BLR",
+      "C-S5-DEL"
+    ],
+    "n_chronic": 6
+  },
+  "E4_E5_shock_recall": {
+    "per_run": [
+      {
+        "run": 1,
+        "day": 28,
+        "n_flagged": 1,
+        "flagged_cells": [
+          {
+            "campaign_id": "C-S1-PUN",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          }
+        ]
+      },
+      {
+        "run": 2,
+        "day": 35,
+        "n_flagged": 35,
+        "flagged_cells": [
+          {
+            "campaign_id": "C-S1-HYD",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-HYD",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K02",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K04",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K09",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-BLR",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-BLR",
+            "keyword_id": "K10",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K06",
+            "direction": "surge",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K10",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K05",
+            "direction": "surge",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-PUN",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-DEL",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-DEL",
+            "keyword_id": "K02",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-HYD",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-MUM",
+            "keyword_id": "K02",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-MUM",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-HYD",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-HYD",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-MUM",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-MUM",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-PUN",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-HYD",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-HYD",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-MUM",
+            "keyword_id": "K08",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          }
+        ]
+      },
+      {
+        "run": 3,
+        "day": 42,
+        "n_flagged": 18,
+        "flagged_cells": [
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-PUN",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-BLR",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K10",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-DEL",
+            "keyword_id": "K09",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-MUM",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-MUM",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-HYD",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-HYD",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-HYD",
+            "keyword_id": "K10",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-BLR",
+            "keyword_id": "K01",
+            "direction": "surge",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-BLR",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-BLR",
+            "keyword_id": "K08",
+            "direction": "surge",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-HYD",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-MUM",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-PUN",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          }
+        ]
+      },
+      {
+        "run": 4,
+        "day": 49,
+        "n_flagged": 19,
+        "flagged_cells": [
+          {
+            "campaign_id": "C-S1-BLR",
+            "keyword_id": "K01",
+            "direction": "surge",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-BLR",
+            "keyword_id": "K02",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-PUN",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-PUN",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": true
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": false,
+            "shock_osa_drop": true
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K06",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": true
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K10",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": true
+          },
+          {
+            "campaign_id": "C-S2-MUM",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-PUN",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-DEL",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-MUM",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-DEL",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-HYD",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-BLR",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-BLR",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-MUM",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-PUN",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          }
+        ]
+      },
+      {
+        "run": 5,
+        "day": 56,
+        "n_flagged": 19,
+        "flagged_cells": [
+          {
+            "campaign_id": "C-S1-DEL",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-DEL",
+            "keyword_id": "K09",
+            "direction": "surge",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K02",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-BLR",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-BLR",
+            "keyword_id": "K10",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-DEL",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-MUM",
+            "keyword_id": "K05",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-MUM",
+            "keyword_id": "K06",
+            "direction": "drop",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-DEL",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-MUM",
+            "keyword_id": "K02",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K10",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-HYD",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-MUM",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-MUM",
+            "keyword_id": "K05",
+            "direction": "drop",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-MUM",
+            "keyword_id": "K06",
+            "direction": "drop",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-HYD",
+            "keyword_id": "K03",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-MUM",
+            "keyword_id": "K03",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          }
+        ]
+      },
+      {
+        "run": 6,
+        "day": 63,
+        "n_flagged": 17,
+        "flagged_cells": [
+          {
+            "campaign_id": "C-S1-BLR",
+            "keyword_id": "K02",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-DEL",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-HYD",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K03",
+            "direction": "surge",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S1-MUM",
+            "keyword_id": "K09",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-HYD",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S2-MUM",
+            "keyword_id": "K06",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-DEL",
+            "keyword_id": "K01",
+            "direction": "surge",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-MUM",
+            "keyword_id": "K01",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S3-PUN",
+            "keyword_id": "K03",
+            "direction": "surge",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S4-BLR",
+            "keyword_id": "K05",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-DEL",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-DEL",
+            "keyword_id": "K03",
+            "direction": "none",
+            "shock_cpm": true,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-HYD",
+            "keyword_id": "K01",
+            "direction": "drop",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          },
+          {
+            "campaign_id": "C-S5-MUM",
+            "keyword_id": "K01",
+            "direction": "surge",
+            "shock_cpm": false,
+            "shock_osa_drop": false
+          }
+        ]
+      }
+    ]
+  },
+  "E9_headroom": {
+    "warmup_droas": 4.6276,
+    "post_warmup_droas": 4.9667,
+    "roas_floor": 4.5351,
+    "headroom_vs_floor": 0.4316,
+    "warmup_spend_per_day": 18919.23,
+    "post_warmup_spend_per_day": 17833.89
+  },
+  "E10_blocked_share": {
+    "per_run": [
+      {
+        "run": 1,
+        "proposed": 44,
+        "blocked_rows": 7
+      },
+      {
+        "run": 2,
+        "proposed": 31,
+        "blocked_rows": 5
+      },
+      {
+        "run": 3,
+        "proposed": 30,
+        "blocked_rows": 6
+      },
+      {
+        "run": 4,
+        "proposed": 29,
+        "blocked_rows": 4
+      },
+      {
+        "run": 5,
+        "proposed": 21,
+        "blocked_rows": 2
+      },
+      {
+        "run": 6,
+        "proposed": 21,
+        "blocked_rows": 4
+      }
+    ],
+    "total_proposed": 176,
+    "total_blocked_rows": 28,
+    "blocked_share_of_proposed": 0.1591
+  }
+}

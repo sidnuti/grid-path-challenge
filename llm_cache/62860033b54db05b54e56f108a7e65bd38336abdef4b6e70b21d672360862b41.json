@@ -1,0 +1,206 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "BID-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase share on high-iota shower gel generic queries in Delhi."
+      },
+      {
+        "id": "BID-S4-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-DEL",
+          "C:C-S4-DEL/K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture remaining incremental shower gel demand in Delhi."
+      },
+      {
+        "id": "BID-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Supplement budget-constrained body wash fund in Delhi."
+      },
+      {
+        "id": "BID-S2-DEL-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "C:C-S2-DEL/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Defend body wash position on related generic terms."
+      },
+      {
+        "id": "BUDGET-S2-DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Eliminate frequent stock-outs (ran_out_7d=6) for efficient fund SKU."
+      },
+      {
+        "id": "BUDGET-S2-MUM",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Close critical daily depletion gaps in Mumbai."
+      },
+      {
+        "id": "BUDGET-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Prevent exhaustion for high-iROAS shower gel in Bangalore."
+      },
+      {
+        "id": "LEAD-S1-BLR-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Transfer brand dominance from S4 to higher-value S1."
+      },
+      {
+        "id": "LEAD-S1-MUM-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate best-in-class incrementality on Mumbai brand search."
+      },
+      {
+        "id": "LEAD-S1-HYD-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Overtake competitor hold on Hyderabad brand queries."
+      },
+      {
+        "id": "LEAD-S4-DEL-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Assign shower gel lead on broad body wash generic term to highest ROI SKU."
+      },
+      {
+        "id": "LEAD-S4-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Consolidate shower gel positioning over body wash siblings in Delhi."
+      }
+    ],
+    "stance": [],
+    "notes": "Prioritized scaling high-iROAS SKUs (S1, S2, S4) on CLEARS generic and brand keywords while resolving budget bottlenecks in fund roles. Dropped rejected S3/S5 budget cuts and lead attempts on MISSES cells to maintain compliance and focus on incremental growth."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 24194,
+    "tokens_out": 19389,
+    "cost_usd": 0.0032463900000000005,
+    "wall_clock_s": 156.962612083
+  }
+}

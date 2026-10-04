@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-BLR",
+    "confidence": 0.6,
+    "rationale": "Mechanical scores are nearly tied, indicating estimation noise. C-S3-BLR holds a significantly higher slot1 share (0.91 vs 0.56), providing clear operational evidence of superior market dominance and positioning, which outweighs the slight mechanical score differential."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1967,
+    "cost_usd": 0.030555,
+    "wall_clock_s": 21.172914582999994
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S2-HYD",
+    "confidence": 0.65,
+    "rationale": "Mechanical score narrowly favors C-S2-HYD (1.8074 vs 1.7276). While C-S4-HYD shows a higher recent slot1 share, the difference does not clearly override the primary scoring metric per the selection criteria, so the mechanical leader is retained."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 352,
+    "tokens_out": 1936,
+    "cost_usd": 0.030096,
+    "wall_clock_s": 19.18848195800001
+  }
+}

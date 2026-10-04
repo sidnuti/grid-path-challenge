@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 9.5,
+    "direction": "surge",
+    "confidence": 0.95,
+    "rationale": "Extreme reach z-score of 11.34 with no concurrent CPM or OSA shifts, and no own-action confound, strongly indicates a genuine exogenous demand surge rather than a market or pricing artifact."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 445,
+    "tokens_out": 1787,
+    "cost_usd": 0.02814,
+    "wall_clock_s": 16.017726082999985
+  }
+}

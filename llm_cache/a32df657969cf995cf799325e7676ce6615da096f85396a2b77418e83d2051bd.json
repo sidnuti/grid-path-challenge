@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.6,
+    "rationale": "Per instructions, retaining the mechanical leader due to its higher composite score. While C-S3-BLR shows stronger recent impression capture (slot1_share 0.87 vs 0.71), the score difference falls within typical measurement noise for a near-tie. Prioritizing the integrated conversion, ASP, and incrementality metric provides a more stable baseline for bid protection against short-term ranking volatility."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1673,
+    "cost_usd": 0.026145,
+    "wall_clock_s": 17.220815041000037
+  }
+}

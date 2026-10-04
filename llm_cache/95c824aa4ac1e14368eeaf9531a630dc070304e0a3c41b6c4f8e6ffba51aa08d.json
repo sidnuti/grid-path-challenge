@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-BLR",
+    "confidence": 0.7,
+    "rationale": "C-S4-BLR has the highest leader_score (1.9318) with a ~10% margin over runner-up C-S2-BLR (1.7520), so the mechanical pick stands. C-S5-BLR's dominant slot1_share (0.95) does not clearly favor it as leader given its much lower score (0.5219), and C-S3-BLR's zero score rules it out despite moderate share."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 404,
+    "tokens_out": 588,
+    "cost_usd": 0.00088448,
+    "wall_clock_s": 6.78213162499992
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:BLR:K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift generic body wash leadership to S4 where it holds the highest incremental revenue per impression, correcting current misallocation."
+      },
+      {
+        "id": "LM-MUM-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Correct wrong holder in Mumbai branded soap search; S3 delivers stronger incremental lift than incumbent S1."
+      },
+      {
+        "id": "LM-HYD-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect Hyderabad generic body wash traffic to S2, maximizing incremental share ahead of final run."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure shower gel dominance in Pune branded search where incremental value significantly exceeds soap competitors."
+      },
+      {
+        "id": "SB-C-S2-DEL",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-DEL",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage Delhi body wash scale role and high generic iROAS (4.51) to capture additional incremental volume."
+      },
+      {
+        "id": "SB-C-S4-MUM",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Expand Mumbai shower gel presence on generic queries to utilize efficient bid headroom and drive off-take."
+      },
+      {
+        "id": "SB-C-S2-HYD",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-HYD",
+          "K:Body Wash:generic"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Scale Hyderabad body wash bids aggressively given top-tier iROAS (4.39) and remaining budget allowance."
+      },
+      {
+        "id": "SB-C-S4-HYD",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S4-HYD",
+          "K:Shower Gel:generic"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Modest Hyderabad shower gel bid increase to secure incremental sales without overspending near run end."
+      },
+      {
+        "id": "CB-S5-Generic",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S5",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL",
+          "K:Kids Soap:generic"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Reduce wasteful spend on kids soap generics (iROAS 1.03) to protect portfolio ROAS floor and reallocate funds."
+      },
+      {
+        "id": "CB-S3-Generic",
+        "verb": "cut_bid",
+        "scope": {
+          "sku_id": "S3",
+          "keyword_type": "generic"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-DEL",
+          "K:Soap:generic"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim underperforming soap generic bids across cities to offset new scale spend and maintain efficiency."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "trim",
+        "stance": "hold"
+      }
+    ],
+    "notes": "Final run prioritizes correcting misallocated contested markets to highest-incrementality holders and shifts budget toward highly efficient Body Wash/Shower Gel scales. Low-incrementality Kids Soap and underperforming Soap spends are tapered to safeguard the 4.08 ROAS floor while maximizing total off-take within the daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11123,
+    "tokens_out": 9233,
+    "cost_usd": 0.0015339800000000001,
+    "wall_clock_s": 74.23161012500009
+  }
+}

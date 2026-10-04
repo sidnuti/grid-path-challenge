@@ -1,0 +1,249 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "IB-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-PUN",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-PUN/K10",
+          "R:C-S2-PUN"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capitalize on iota=1.00 iroas=7.17; push competition bids where share <80%."
+      },
+      {
+        "id": "IB-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-HYD/K10",
+          "R:C-S2-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Secure incremental orders for Body Wash competition; strong headroom."
+      },
+      {
+        "id": "IB-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S2-BLR/K10",
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Drive high-incrementality competition traffic; avoid diluting organic."
+      },
+      {
+        "id": "IG-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "C:C-S4-PUN/K05",
+          "R:C-S4-PUN"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Leverage iroas=6.77 generic returns; slot share 61% leaves room."
+      },
+      {
+        "id": "IB-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10",
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Competitive acquisition at iroas=4.30; controlled raise."
+      },
+      {
+        "id": "IB-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K10",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Incremental capture; clear verdict supports upside."
+      },
+      {
+        "id": "IS-01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-HYD/K03",
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Generic volume support; iroas=2.70 with ample slot space."
+      },
+      {
+        "id": "IS-02",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-HYD/K04",
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Secondary generic lift; thin margins offset by volume."
+      },
+      {
+        "id": "IS-03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K03"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K03",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Brand-defensive generic; clears goal, iroas=2.50."
+      },
+      {
+        "id": "IS-04",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K04"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S1-DEL/K04",
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Broad match generic fill; steady iroas=2.66."
+      },
+      {
+        "id": "IB-06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Generic cross-sell opportunity; mroas_up20=6.50."
+      },
+      {
+        "id": "IS-05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S1-MUM/K03",
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Conservative push near 80% slot cap; iroas=2.07."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Pivoted from blocked slot-1 targets and overspent budget raises to high-incrementality competition and generic bids with confirmed room. Focused on iota=1.00 Body Wash competition and Shower Gel generic to maximize marginal ROAS while staying within the 375 INR daily allowance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12339,
+    "tokens_out": 11886,
+    "cost_usd": 0.00191535,
+    "wall_clock_s": 95.330026583
+  }
+}

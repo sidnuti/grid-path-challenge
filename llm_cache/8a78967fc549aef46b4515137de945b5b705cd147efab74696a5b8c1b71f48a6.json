@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S2-PUN",
+    "confidence": 0.55,
+    "rationale": "Mechanical score slightly favors C-S2-PUN (2.0281 vs 2.0014). Given the reported near-tie and noise, confidence is moderate. While C-S1 shows higher slot1_share (0.39 vs 0.21), the explicit directive to defer to the mechanical pick absent clear contrary evidence supports retaining C-S2 as the protected leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 2364,
+    "cost_usd": 0.036726,
+    "wall_clock_s": 23.361139500000036
+  }
+}

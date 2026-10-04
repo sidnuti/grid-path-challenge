@@ -1,0 +1,380 @@
+{
+  "leaf": "L2P_plan",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "win-S4-DEL-compe",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Shift shower gel competition share to efficient S4; frees S2 budget"
+      },
+      {
+        "id": "win-S4-HYD-gener",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Capture shower gel generic leadership in Hyd from less efficient S2"
+      },
+      {
+        "id": "win-S3-DEL-brand1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Establish S3 brand presence in Delhi by displacing weak S5"
+      },
+      {
+        "id": "win-S3-DEL-brand2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Win high-score generic-aligned brand term K02 in Delhi"
+      },
+      {
+        "id": "win-S1-HYD-gener",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Defend S1 soap generic share in Hyd against low-efficiency S3"
+      },
+      {
+        "id": "win-S1-PUN-gener1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reclaim Pune generic leadership from weaker S3"
+      },
+      {
+        "id": "win-S1-PUN-gener2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Secure Pune generic K04; improves avg iroas by dropping S3"
+      },
+      {
+        "id": "win-S1-MUM-comp",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Win competition slot where S1 score marginally exceeds S3"
+      },
+      {
+        "id": "win-S3-MUM-brand",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "size": "large",
+        "target_slot": 1,
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Exploit huge score gap to win Mumbai brand K02 from S1"
+      },
+      {
+        "id": "yield-S2-DEL",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Release Delhi competition spend back to S2 pool"
+      },
+      {
+        "id": "yield-S2-HYD",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Reduce Hydra S2 generic spend to cut inefficiency"
+      },
+      {
+        "id": "yield-S5-DEL",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "DEL",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Stop weak S5 brand bidding in Delhi"
+      },
+      {
+        "id": "yield-S1-DEL",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "DEL",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:DEL:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield Delhi brand K02 to allow S3 scoring victory; reduces S1 waste"
+      },
+      {
+        "id": "yield-S3-HYD",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Return Hyd generic K03 to stronger S1"
+      },
+      {
+        "id": "yield-S3-PUN1",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:PUN:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Pune generic loss to S1"
+      },
+      {
+        "id": "yield-S3-PUN2",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "PUN",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:PUN:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Pune generic loss to S1"
+      },
+      {
+        "id": "yield-S3-MUM",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:MUM:K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Mumbai competition yield to S1"
+      },
+      {
+        "id": "yield-S1-MUM",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Yield Mumbai brand K02 to S3"
+      },
+      {
+        "id": "cut-S3-MUM-budg",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Drastically reduce inefficient S3 Mumbai budget (drop 30%)"
+      },
+      {
+        "id": "cut-S5-MUM-budg",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-MUM"
+        },
+        "size": "large",
+        "evidence_refs": [
+          "R:C-S5-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Eliminate waste in weak S5 Mumbai campaign (drop 30%)"
+      },
+      {
+        "id": "cut-S3-DEL-budg",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Trim Delhi S3 budget slightly to lower drag on portfolio ROAS"
+      },
+      {
+        "id": "raise-S4-DEL-k10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-DEL/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Aggressive bid increase for shower gel comp to cement new lead position"
+      },
+      {
+        "id": "raise-S4-HYD-k05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "target_slot": 1,
+        "evidence_refs": [
+          "C:C-S4-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale shower gel generic wins in Hyderabad"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "soap",
+        "keyword_type": "brand",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "soap",
+        "keyword_type": "generic",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "shower gel",
+        "keyword_type": "generic",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "body wash",
+        "keyword_type": "competition",
+        "stance": "scale"
+      }
+    ],
+    "notes": "Prioritized contest corrections across 10 markets to reallocate share to higher-scoring SKUs (mainly S4 and S1). Implemented deep cuts on S3/S5 Mumbai and S3 Delhi budgets to offset spend risk. Aggressively raised bids on S4 generic/competition slots following market leadership changes."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11176,
+    "tokens_out": 10021,
+    "cost_usd": 0.00163801,
+    "wall_clock_s": 87.60850033300002
+  }
+}

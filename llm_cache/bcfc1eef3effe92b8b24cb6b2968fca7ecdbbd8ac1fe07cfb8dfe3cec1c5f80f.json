@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.7,
+    "rationale": "C-S1-MUM holds a dominant slot1 share (0.90 vs 0.52), signaling stronger auction positioning and stability. This clear secondary advantage breaks the near-tie in the mechanical scores, making it the preferable leader for bid protection."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2014,
+    "cost_usd": 0.03126,
+    "wall_clock_s": 23.223376541000107
+  }
+}

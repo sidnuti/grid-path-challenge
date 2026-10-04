@@ -1,0 +1,21 @@
+{
+  "leaf": "L2_shock",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "is_shock": true,
+    "magnitude": 5.0,
+    "direction": "surge",
+    "confidence": 0.95,
+    "rationale": "A reach z-score of 5.0 indicates a highly significant positive deviation. With CPM and OSA unchanged and the own-action confound flag off, this pattern strongly points to a genuine external demand or supply shift driving increased reach rather than internal bid adjustments or random noise."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 440,
+    "tokens_out": 1220,
+    "cost_usd": 0.01962,
+    "wall_clock_s": 13.313146958000004
+  }
+}

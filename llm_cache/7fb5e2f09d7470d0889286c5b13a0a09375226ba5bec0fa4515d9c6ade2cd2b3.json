@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.85,
+    "confidence": 0.55,
+    "rationale": "Realised dROAS (1.87) trails the goal (2.22) and with only 22 orders over 28 days the performance signal carries high variance. The mechanical +10% bid step is modest, but dampening it slightly reduces the risk of allocating incremental budget to an inefficient auction position while still allowing for potential volume growth. Confidence is moderate due to limited historical data driving the shrink adjustment."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 465,
+    "tokens_out": 1967,
+    "cost_usd": 0.0309,
+    "wall_clock_s": 19.360071333000064
+  }
+}

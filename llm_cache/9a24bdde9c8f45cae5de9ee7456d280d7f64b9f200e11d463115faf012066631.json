@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 0.6,
+    "confidence": 0.6,
+    "rationale": "Realised dROAS (1.23) falls notably short of the 1.6 target, signaling that additional bid inflation may further erode efficiency. Combined with low 28-day order volume (18), which introduces signal noise, dampening the proposed +5% raise to 60% of its size limits downside risk while preserving impression eligibility."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 461,
+    "tokens_out": 1872,
+    "cost_usd": 0.029463,
+    "wall_clock_s": 19.43759933300001
+  }
+}

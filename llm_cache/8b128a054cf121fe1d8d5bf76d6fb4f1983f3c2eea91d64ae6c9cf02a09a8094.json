@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "leader_campaign_id": "C-S4-PUN",
+    "confidence": 0.85,
+    "rationale": "Mechanical leader_score ranks C-S4-PUN highest at 1.8233, marginally above C-S2-PUN at 1.7079. Its 0.98 slot1_share_7d strongly indicates effective positioning, validating the mechanical selection and supporting bid protection for this candidate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 422,
+    "tokens_out": 1396,
+    "cost_usd": 0.022206,
+    "wall_clock_s": 13.350784541999928
+  }
+}

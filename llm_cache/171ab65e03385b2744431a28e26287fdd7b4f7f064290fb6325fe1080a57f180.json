@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.85,
+    "rationale": "Mechanical leader C-S1-BLR also holds a decisive edge in supporting evidence: its leader_score (0.6963) exceeds C-S3-BLR (0.6336) by a clear margin rather than a coin-flip tie, and its 7d slot1 share (0.87) is more than double C-S3-BLR's (0.41), indicating it owns the prime auction position for this market. Nothing in the evidence favors switching, so the mechanical pick stands."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 361,
+    "tokens_out": 303,
+    "cost_usd": 0.0005123199999999999,
+    "wall_clock_s": 3.072900790999938
+  }
+}

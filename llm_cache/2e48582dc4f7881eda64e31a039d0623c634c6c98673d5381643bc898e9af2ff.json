@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.6,
+    "rationale": "Realized dROAS (4.70) comfortably exceeds the target threshold (3.15), supporting the mechanical rationale for expansion. However, the low absolute order volume (20 over 28 days) limits statistical certainty, making aggressive scaling unnecessary. Accepting the full proposed raise aligns with efficiency signals while respecting volume-driven noise. Applied 1.0 per uncertainty guidance."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 464,
+    "tokens_out": 1956,
+    "cost_usd": 0.030732,
+    "wall_clock_s": 18.717159417000005
+  }
+}

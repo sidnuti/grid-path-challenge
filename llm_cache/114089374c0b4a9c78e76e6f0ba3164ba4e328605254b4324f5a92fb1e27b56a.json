@@ -1,0 +1,415 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "B1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient Shower Gel supply in Bangalore; frequent run-outs (7d), 5.31 iroas supports scale."
+      },
+      {
+        "id": "B2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Fund efficient Shower Gel supply in Hyderabad; frequent run-outs (6d), 5.17 iroas supports scale."
+      },
+      {
+        "id": "C1",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reallocate budget from weak Soap ROI in Mumbai (1.48 iroas) to higher-incrementality categories."
+      },
+      {
+        "id": "C2",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free allowance from underperforming Soap campaign in Bangalore (1.78 iroas)."
+      },
+      {
+        "id": "C3",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim low-incrementality Soap spend in Delhi (1.17 iroas) to protect portfolio ROAS floor."
+      },
+      {
+        "id": "C4",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim low-incrementality Soap spend in Mumbai (0.96 iroas)."
+      },
+      {
+        "id": "C5",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-BLR",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim low-incrementality Soap spend in Bangalore (1.04 iroas)."
+      },
+      {
+        "id": "C6",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim low-incrementality Soap spend in Hyderabad (1.15 iroas)."
+      },
+      {
+        "id": "C7",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-PUN",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "R:C-S3-PUN"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Trim low-incrementality Soap spend in Pune (1.16 iroas)."
+      },
+      {
+        "id": "L1",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K01",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Shift brand search leadership to Shower Gel S4, the highest incremental seller in Hyderabad (wrong holder corrected)."
+      },
+      {
+        "id": "L2",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K04",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct wrong holder in Mumbai generic K04; S1 Soap outperforms S3 on incremental score."
+      },
+      {
+        "id": "L3",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S2",
+          "city_id": "PUN",
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Resolve tie in Pune generic K05; S2 Body Wash edges S4 Shower Gel on incrementality (gap true)."
+      },
+      {
+        "id": "L4",
+        "verb": "lead_market",
+        "scope": {
+          "campaign_id": null,
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Take leadership in Pune generic K06 from S2; S4 Shower Gel has superior incremental score (wrong holder corrected)."
+      },
+      {
+        "id": "L5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-PUN",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K06",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S4-PUN/K06"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up efficient generic keyword with strong incremental uptake (iota 0.72) and healthy OSA (0.78)."
+      },
+      {
+        "id": "L6",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-HYD",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-HYD/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Increase bid on high-incrementality generic keyword for Body Wash in Hyderabad (iota 0.86)."
+      },
+      {
+        "id": "L7",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic reach in Mumbai (iota 0.86, CLEARS verdict)."
+      },
+      {
+        "id": "L8",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": "K05",
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "target_slot": null,
+        "dayparts": [],
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Scale efficient Body Wash generic reach in Bangalore (iota 0.86, CLEARS verdict)."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "competition",
+        "sku_role": "scale",
+        "stance": "conquest"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "hold",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "competition",
+        "sku_role": "trim",
+        "stance": "trim"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "any",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Cut low-incrementality Soap budgets across five cities to preserve portfolio ROAS headroom while directing allowance to efficient Shower Gel and Body Wash scales. Resolved four contested markets using incremental revenue scoring. Deliberately avoided previously rejected brand-keyword raises and budget increases on campaigns that had not run out of funds."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11268,
+    "tokens_out": 11489,
+    "cost_usd": 0.0018316100000000002,
+    "wall_clock_s": 90.26937500000008
+  }
+}

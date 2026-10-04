@@ -1,0 +1,216 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K01-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S4 has highest incremental revenue."
+      },
+      {
+        "id": "LM-BLR-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S4 dominates incrementality."
+      },
+      {
+        "id": "LM-BLR-K09-S1",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:BLR:K09"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S1 is the best competitor keyword bidder."
+      },
+      {
+        "id": "LM-HYD-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S2 offers better efficiency than S4 here."
+      },
+      {
+        "id": "LM-HYD-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:HYD:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S4 leads on incremental revenue."
+      },
+      {
+        "id": "LM-HYD-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S4 has highest mROAS potential."
+      },
+      {
+        "id": "LM-MUM-K01-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:MUM:K01"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S2 delivers stronger unit economics."
+      },
+      {
+        "id": "LM-DEL-K10-S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K10"
+        },
+        "evidence_refs": [
+          "M:DEL:K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S2 marginally outperforms S4 on incrementality."
+      },
+      {
+        "id": "LM-PUN-K05-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S4 dominates incremental volume."
+      },
+      {
+        "id": "LM-PUN-K06-S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K06"
+        },
+        "evidence_refs": [
+          "M:PUN:K06"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Correct wrong holder; S4 is the clear leader."
+      },
+      {
+        "id": "BID-UP-S4-HYD-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K06"
+        ],
+        "confidence": 0.95,
+        "expected_effect": "Capture high-mROAS generic impressions; well below 80% slot-cap."
+      },
+      {
+        "id": "BID-UP-S4-HYD-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K10"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K10"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Grow share on highly incremental competitor keyword; low base share."
+      },
+      {
+        "id": "BID-UP-S2-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-MUM/K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Support scale role in MUM on efficient generic term."
+      },
+      {
+        "id": "BID-UP-S2-MUM-K10",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K10"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-MUM/K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand competitive keyword coverage where slot-share allows."
+      }
+    ],
+    "stance": [],
+    "notes": "Prioritized correcting misallocated ownership across 10 contested markets to maximize true incremental revenue. Directed bid increases exclusively to efficient cells with sub-80% existing share to respect hard caps and avoid MISSES blocks, safely utilizing the \u20b910.7k daily headroom without touching budgets."
+  },
+  "usage": {
+    "calls": 2,
+    "tokens_in": 23266,
+    "tokens_out": 21964,
+    "cost_usd": 0.0035533,
+    "wall_clock_s": 200.43655662499998
+  }
+}

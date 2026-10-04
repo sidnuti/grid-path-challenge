@@ -1,0 +1,19 @@
+{
+  "leaf": "L1_value",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "bid_multiplier": 1.0,
+    "confidence": 0.7,
+    "rationale": "Realised dROAS (~4.80) comfortably exceeds the 3.15 target, creating a healthy efficiency buffer that validates the +20% bid step. While the 28-day order count (21) indicates modest sample size and potential volatility, the substantial dROAS margin sufficiently de-risks the mechanical recommendation. Maintaining the full proposed raise size is appropriate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 474,
+    "tokens_out": 2436,
+    "cost_usd": 0.037962,
+    "wall_clock_s": 27.073804207999956
+  }
+}

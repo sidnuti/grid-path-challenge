@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-BLR",
+    "confidence": 0.55,
+    "rationale": "Near tie in leader score; retaining mechanical pick C-S1-BLR as primary leader. While C-S3-BLR demonstrates a higher slot 1 share, the mechanical advantage of C-S1-BLR remains slightly stronger, warranting maintenance of the status quo without clear overriding evidence."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 764,
+    "cost_usd": 0.01251,
+    "wall_clock_s": 8.920718084
+  }
+}

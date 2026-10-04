@@ -1,0 +1,188 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "b_C_S1_DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Funds efficient soap brand/generic campaigns that cycled out of budget; improves steady-state reach without risking ROAS floor."
+      },
+      {
+        "id": "b_C_S4_DEL",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Fuels top-tier shower gel fund with highest iroas (3.96); captures incremental volume while staying well within allowance."
+      },
+      {
+        "id": "b_C_S2_BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.85,
+        "expected_effect": "Supports scale body wash campaign in BLR; unlocks bid headroom for incremental sales."
+      },
+      {
+        "id": "b_C_S4_HYD",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-HYD"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Fuels high-iRoAS shower gel scale position; drives profitable incrementality."
+      },
+      {
+        "id": "c_C_S5_DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL"
+        },
+        "size": "medium",
+        "confidence": 0.9,
+        "expected_effect": "Cuts drag from low-incrementality kids soap hold campaign; frees allowance for higher-value scales/funds."
+      },
+      {
+        "id": "lm_MUM_K01_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "MUM",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Transfers slot 1 to S2 (best incremental score 1.608); yields inefficient S4, reducing wasted clicks."
+      },
+      {
+        "id": "lm_HYD_K01_S2",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Shifts leadership to S2 (score 1.417) in HYD; improves competitive conversion efficiency."
+      },
+      {
+        "id": "lm_DEL_K06_S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Corrects wrong-holder in DEL K06; S4 leads (score 1.627) replacing S2, capturing premium shower gel demand."
+      },
+      {
+        "id": "lm_PUN_K05_S4",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "confidence": 0.9,
+        "expected_effect": "Moves PUN generic K05 leadership to S4 (score 1.384); boosts incremental revenue over S2."
+      },
+      {
+        "id": "bi_S1MUM_K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K03"
+        },
+        "size": "small",
+        "confidence": 0.85,
+        "expected_effect": "Modest bid lift on thin generic cell (slot1 79%) to win more impressions safely; mroas_up20 6.03 supports spend."
+      },
+      {
+        "id": "bi_S2BLR_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "confidence": 0.85,
+        "expected_effect": "Incremental bid boost on generic K06 (slot1 55%); capitalizes on clear headroom and strong mroas (4.24)."
+      },
+      {
+        "id": "bi_S2MUM_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "confidence": 0.8,
+        "expected_effect": "Targets generic K06 in MUM (slot1 65%) where bid capacity exists; adds predictable incremental orders."
+      },
+      {
+        "id": "bi_S4MUM_K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "confidence": 0.9,
+        "expected_effect": "Aggressive but safe lift on high-mroas (9.60) generic K06; fills remaining bid headroom for scale."
+      },
+      {
+        "id": "c_C_S2DEL_K06",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K06"
+        },
+        "size": "small",
+        "confidence": 0.85,
+        "expected_effect": "Reduces CPM on self-inflicted artificial reach surge; prevents wasted impressions until normalization."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "defend_min"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "any",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Prioritizes portfolio ROAS preservation by funding high-iRoAS funds/scales and trimming low-value holds, while strictly respecting the 1431 INR daily allowance cap. Resolves three incorrect market holders and six constrained generic cells using only verified headroom (<80% slot) and positive marginal returns."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11913,
+    "tokens_out": 9277,
+    "cost_usd": 0.0015634000000000002,
+    "wall_clock_s": 74.269045667
+  }
+}

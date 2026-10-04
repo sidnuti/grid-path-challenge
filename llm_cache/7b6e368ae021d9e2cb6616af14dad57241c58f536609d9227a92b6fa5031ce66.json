@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-MUM",
+    "confidence": 0.55,
+    "rationale": "Mechanical leader score slightly favors C-S1-MUM. Despite C-S3-MUM's higher Slot 1 share, the near-tie in composite scoring means the mechanical model remains the most reliable signal. Defaulting to the mechanical pick per instructions."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 2102,
+    "cost_usd": 0.03258,
+    "wall_clock_s": 19.81610145900001
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "2-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "INT-1",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Unseats budget cap for high-iroas Shower Gel Mumbai; captures incremental demand without displacing organic."
+      },
+      {
+        "id": "INT-2",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Funds capped efficient Shower Gel Bangalore campaign; replaces rejected bid attempt and secures iota-weighted sales."
+      },
+      {
+        "id": "INT-3",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Relieves Body Wash Mumbai ceiling; leverages 7-day run-out status to scale efficient generic/competition impressions."
+      },
+      {
+        "id": "INT-4",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-BLR"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Uses scale headroom to lift BCP and generic CPC slightly; drives incremental orders in Bangalore."
+      },
+      {
+        "id": "INT-5",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-HYD"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-HYD"
+        ],
+        "confidence": 0.7,
+        "expected_effect": "Deploys Hyderabad bid slack to maintain Soap share-of-voice while preserving portfolio floor margin."
+      },
+      {
+        "id": "INT-6",
+        "verb": "cut_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM"
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S3-MUM",
+          "M:MUM:K02",
+          "T:MUM:K04"
+        ],
+        "confidence": 0.6,
+        "expected_effect": "Trims persistent weak Soap Mumbai reach decay and low iroas to reallocate allowance to higher-return channels."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "all",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "all",
+        "sku_role": "any",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "all",
+        "sku_role": "trim",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Corrected prior rejections by funding S4-MUM/BLR efficiently instead of forcing slot-takes on MISSED-goal cells. Directed \u20b9300/day allowance into capped funds and scale heads to maximize iota-weighted iroas while keeping portfolio ROAS at floor margin. Avoided OSA-blocked S2-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 12094,
+    "tokens_out": 7561,
+    "cost_usd": 0.00134575,
+    "wall_clock_s": 67.17874699999993
+  }
+}

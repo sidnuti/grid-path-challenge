@@ -1,0 +1,254 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-BLR-K02",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "expected_effect": "Capture incremental volume from S3 trim by leading best scorer."
+      },
+      {
+        "id": "YL-BLR-K02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K02"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:BLR:K02"
+        ],
+        "expected_effect": "Step back lower-value holder to free impression share."
+      },
+      {
+        "id": "LM-PUN-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Lead highest ROI scorer in contested PUN brand market."
+      },
+      {
+        "id": "YL-PUN-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "confidence": 0.8,
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "expected_effect": "Yield to better incremental performer."
+      },
+      {
+        "id": "LM-DEL-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "expected_effect": "Shift shower gel leadership to highest incremental scorer."
+      },
+      {
+        "id": "YL-DEL-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "DEL",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:DEL:K06"
+        ],
+        "expected_effect": "Step back body wash sibling."
+      },
+      {
+        "id": "LM-HYD-K06",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "expected_effect": "Lead shower gel in HYD where it outperforms body wash."
+      },
+      {
+        "id": "YL-HYD-K06",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S2",
+          "city_id": "HYD",
+          "keyword_id": "K06"
+        },
+        "confidence": 0.85,
+        "evidence_refs": [
+          "M:HYD:K06"
+        ],
+        "expected_effect": "Free capacity for higher-IOTA shower gel."
+      },
+      {
+        "id": "RB-S1-MUM-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-MUM",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "C:C-S1-MUM/K01"
+        ],
+        "expected_effect": "Capture headroom in high-DROAS brand cell without hitting slot-1 cap."
+      },
+      {
+        "id": "RB-S2-MUM-K06",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "keyword_id": "K06"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "C:C-S2-MUM/K06"
+        ],
+        "expected_effect": "Grow incremental generic volume; slot share 54% leaves room."
+      },
+      {
+        "id": "RB-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "C:C-S4-MUM/K05"
+        ],
+        "expected_effect": "Bid up under-utilized generic cell with 7.1x direct ROAS."
+      },
+      {
+        "id": "RB-S1-DEL-K09",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "keyword_id": "K09"
+        },
+        "size": "small",
+        "confidence": 0.7,
+        "evidence_refs": [
+          "C:C-S1-DEL/K09"
+        ],
+        "expected_effect": "Defend competition space with perfect incrementality."
+      },
+      {
+        "id": "RB-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "C:C-S4-BLR/K05"
+        ],
+        "expected_effect": "Increase bid on scalable generic cell with 58% slot share."
+      },
+      {
+        "id": "BR-S4-BLR",
+        "verb": "raise_budget",
+        "scope": {
+          "campaign_id": "C-S4-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.8,
+        "evidence_refs": [
+          "R:C-S4-BLR"
+        ],
+        "expected_effect": "Relieve daily cap on highly efficient fund campaign (DOIAS 10.99)."
+      },
+      {
+        "id": "CB-S1-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR"
+        },
+        "size": "medium",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "expected_effect": "Reallocate from truncated hold campaign to scale candidates."
+      },
+      {
+        "id": "CB-S3-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S3-DEL"
+        },
+        "size": "small",
+        "confidence": 0.75,
+        "evidence_refs": [
+          "R:C-S3-DEL"
+        ],
+        "expected_effect": "Trim weak portfolio contributor to protect floor ROAS."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "lead"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "scale",
+        "stance": "defend_min"
+      }
+    ],
+    "notes": "Respects G4 OSA block for S2-HYD (0.42) by avoiding bid increases there and using only yield mechanisms. Aligns four contested markets by shifting leadership to highest-IOTA SKUs. Cuts lean/trim portfolios (S1-BLR, S3-DEL) to fund efficient scale holders (S4-BLR) and bid-ups in wide-slot-share cells, staying well within the 1888 INR daily allowance while protecting portfolio ROAS."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11511,
+    "tokens_out": 11161,
+    "cost_usd": 0.00179626,
+    "wall_clock_s": 82.866272375
+  }
+}

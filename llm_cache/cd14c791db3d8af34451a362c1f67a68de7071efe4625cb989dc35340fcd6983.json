@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S1-PUN",
+    "confidence": 0.7,
+    "rationale": "C-S1-PUN has the higher leader_score (0.2436 vs 0.2299) and also dominates slot-1 share (0.93 vs 0.50), so both the mechanical score and visibility evidence align. No clear evidence favours the challenger, so default to the mechanical pick; near-tie score keeps confidence moderate."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 339,
+    "tokens_out": 387,
+    "cost_usd": 0.00060918,
+    "wall_clock_s": 3.5113121669999714
+  }
+}

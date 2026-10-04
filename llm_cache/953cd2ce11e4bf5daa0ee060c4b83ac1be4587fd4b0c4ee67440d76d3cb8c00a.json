@@ -1,0 +1,261 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "intents": [
+      {
+        "id": "YIELD-S3-DEL-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "DEL",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:DEL:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S3 to S1, improving incremental efficiency in DEL:K04."
+      },
+      {
+        "id": "YIELD-S1-MUM-K02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "MUM",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:MUM:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S1 to S3, improving incremental efficiency in MUM:K02."
+      },
+      {
+        "id": "YIELD-S3-MUM-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:MUM:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S3 to S1, improving incremental efficiency in MUM:K04."
+      },
+      {
+        "id": "YIELD-S1-HYD-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:HYD:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S1 to S2, improving incremental efficiency in HYD:K01."
+      },
+      {
+        "id": "YIELD-S1-HYD-K02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:HYD:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S1 to S3, improving incremental efficiency in HYD:K02."
+      },
+      {
+        "id": "YIELD-S1-HYD-K09",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "HYD",
+          "keyword_id": "K09"
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S1 to S3, improving incremental efficiency in HYD:K09."
+      },
+      {
+        "id": "YIELD-S1-PUN-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:PUN:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S1 to S2, improving incremental efficiency in PUN:K01."
+      },
+      {
+        "id": "YIELD-S1-PUN-K02",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S1",
+          "city_id": "PUN",
+          "keyword_id": "K02"
+        },
+        "evidence_refs": [
+          "M:PUN:K02"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S1 to S3, improving incremental efficiency in PUN:K02."
+      },
+      {
+        "id": "YIELD-S4-PUN-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S4 to S2, improving incremental efficiency in PUN:K05."
+      },
+      {
+        "id": "YIELD-S5-BLR-K01",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K01"
+        },
+        "evidence_refs": [
+          "M:BLR:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S5 to S2, improving incremental efficiency in BLR:K01."
+      },
+      {
+        "id": "YIELD-S5-BLR-K03",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S5",
+          "city_id": "BLR",
+          "keyword_id": "K03"
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S5 to S1, improving incremental efficiency in BLR:K03."
+      },
+      {
+        "id": "YIELD-S3-BLR-K04",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K04"
+        },
+        "evidence_refs": [
+          "M:BLR:K04"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S3 to S1, improving incremental efficiency in BLR:K04."
+      },
+      {
+        "id": "YIELD-S4-BLR-K05",
+        "verb": "yield_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05"
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift share from S4 to S2, improving incremental efficiency in BLR:K05."
+      },
+      {
+        "id": "RAISE-S4-DEL-K01",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K01"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K01"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Increase volume on highly efficient shower gel brand search with significant bid headroom."
+      },
+      {
+        "id": "RAISE-S2-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-BLR",
+          "keyword_id": "K05"
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S2-BLR/K05"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Capture additional incremental sales from efficient body wash generic search with available headroom."
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "all",
+        "sku_role": "all",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "all",
+        "sku_role": "all",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "brand",
+        "sku_role": "all",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "all",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "all",
+        "sku_role": "all",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Focused on correcting 13 suboptimal market allocations via yield_market to boost portfolio iota without consuming allowance. Added two targeted medium raises on S4-DEL/K01 and S2-BLR/K05 to leverage remaining efficiency headroom. S5 budgets are at the \u20b9300 floor, preventing further cuts despite negative incrementality."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11659,
+    "tokens_out": 10984,
+    "cost_usd": 0.00177769,
+    "wall_clock_s": 88.67872579200002
+  }
+}

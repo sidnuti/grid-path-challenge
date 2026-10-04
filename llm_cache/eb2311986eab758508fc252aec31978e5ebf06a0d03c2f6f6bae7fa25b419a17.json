@@ -1,0 +1,438 @@
+{
+  "leaf": "L2P_repair",
+  "prompt_ver": "1-ron",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 1,
+  "response": {
+    "intents": [
+      {
+        "id": "LM-S4-DEL-K01",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "DEL",
+          "keyword_id": "K01",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:DEL:K01"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Shift leadership to highest-incremental SKU S4 in DEL brand search"
+      },
+      {
+        "id": "LM-S4-BLR-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "BLR",
+          "keyword_id": "K05",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:BLR:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Redirect generic impression share to scalable S4"
+      },
+      {
+        "id": "LM-S4-MUM-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "MUM",
+          "keyword_id": "K05",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:MUM:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Capture incremental volume with S4 in MUM generics"
+      },
+      {
+        "id": "LM-S4-HYD-K10",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "HYD",
+          "keyword_id": "K10",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:HYD:K10"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Align competitor keyword leadership to best performer S4"
+      },
+      {
+        "id": "LM-S4-PUN-K05",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S4",
+          "city_id": "PUN",
+          "keyword_id": "K05",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:PUN:K05"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Consolidate generic share on scalable S4"
+      },
+      {
+        "id": "LM-S3-BLR-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "BLR",
+          "keyword_id": "K03",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:BLR:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Fix misallocated Soap generic leadership in BLR"
+      },
+      {
+        "id": "LM-S3-HYD-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K03",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:HYD:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Optimize HYD Soap generic allocation"
+      },
+      {
+        "id": "LM-S3-MUM-K03",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "MUM",
+          "keyword_id": "K03",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:MUM:K03"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Elevate S3 leadership in MUM Soap generics"
+      },
+      {
+        "id": "LM-S3-HYD-K04",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K04",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:HYD:K04"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Correct holder mismatch in HYD Soap generics"
+      },
+      {
+        "id": "LM-S3-HYD-K09",
+        "verb": "lead_market",
+        "scope": {
+          "sku_id": "S3",
+          "city_id": "HYD",
+          "keyword_id": "K09",
+          "campaign_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "evidence_refs": [
+          "M:HYD:K09"
+        ],
+        "confidence": 0.75,
+        "expected_effect": "Assign competitor keyword leadership to S3"
+      },
+      {
+        "id": "RB-S4-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic",
+          "sku_id": null,
+          "city_id": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-DEL/K05",
+          "R:C-S4-DEL"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase bid on highly incremental generic cell with bid headroom"
+      },
+      {
+        "id": "RB-S4-MUM-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-MUM",
+          "keyword_id": "K05",
+          "keyword_type": "generic",
+          "sku_id": null,
+          "city_id": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-MUM/K05",
+          "R:C-S4-MUM"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Scale Shower Gel generic demand in MUM"
+      },
+      {
+        "id": "RB-S4-BLR-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-BLR",
+          "keyword_id": "K05",
+          "keyword_type": "generic",
+          "sku_id": null,
+          "city_id": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-BLR/K05",
+          "R:C-S4-BLR"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Lift bid on scalable generic cell"
+      },
+      {
+        "id": "RB-S4-HYD-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S4-HYD",
+          "keyword_id": "K05",
+          "keyword_type": "generic",
+          "sku_id": null,
+          "city_id": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S4-HYD/K05",
+          "R:C-S4-HYD"
+        ],
+        "confidence": 0.9,
+        "expected_effect": "Increase impression capture on efficient generic keyword"
+      },
+      {
+        "id": "RB-S3-MUM-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-MUM",
+          "keyword_id": "K03",
+          "keyword_type": "generic",
+          "sku_id": null,
+          "city_id": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-MUM/K03",
+          "R:C-S3-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Bid up clear Soap generic cell with available headroom"
+      },
+      {
+        "id": "RB-S3-HYD-K03",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S3-HYD",
+          "keyword_id": "K03",
+          "keyword_type": "generic",
+          "sku_id": null,
+          "city_id": null,
+          "sub_category": null
+        },
+        "size": "medium",
+        "evidence_refs": [
+          "C:C-S3-HYD/K03",
+          "R:C-S3-HYD"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Expand reach on efficient generic keyword"
+      },
+      {
+        "id": "RB-S2-DEL-K05",
+        "verb": "raise_bid",
+        "scope": {
+          "campaign_id": "C-S2-DEL",
+          "keyword_id": "K05",
+          "keyword_type": "generic",
+          "sku_id": null,
+          "city_id": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "C:C-S2-DEL/K05",
+          "R:C-S2-DEL"
+        ],
+        "confidence": 0.8,
+        "expected_effect": "Modest bid lift on Body Wash generic"
+      },
+      {
+        "id": "CB-S1-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-DEL",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce spend on chronically capping hold with below-median iROAS"
+      },
+      {
+        "id": "CB-S1-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S1-BLR",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S1-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Free allowance by trimming low-efficiency hold"
+      },
+      {
+        "id": "CB-S2-MUM",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S2-MUM",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S2-MUM"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Tighten budget on weak hold to protect portfolio ROAS"
+      },
+      {
+        "id": "CB-S5-DEL",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-DEL",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-DEL"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Cut chronically capped kids soap budget"
+      },
+      {
+        "id": "CB-S5-BLR",
+        "verb": "cut_budget",
+        "scope": {
+          "campaign_id": "C-S5-BLR",
+          "sku_id": null,
+          "city_id": null,
+          "keyword_id": null,
+          "keyword_type": null,
+          "sub_category": null
+        },
+        "size": "small",
+        "evidence_refs": [
+          "R:C-S5-BLR"
+        ],
+        "confidence": 0.85,
+        "expected_effect": "Reduce low-iROAS hold spend in BLR"
+      }
+    ],
+    "stance": [
+      {
+        "sub_category": "Soap",
+        "keyword_type": "generic",
+        "sku_role": "S3",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Shower Gel",
+        "keyword_type": "generic",
+        "sku_role": "S4",
+        "stance": "scale"
+      },
+      {
+        "sub_category": "Body Wash",
+        "keyword_type": "generic",
+        "sku_role": "S2",
+        "stance": "hold"
+      },
+      {
+        "sub_category": "Kids Soap",
+        "keyword_type": "generic",
+        "sku_role": "S5",
+        "stance": "trim"
+      }
+    ],
+    "notes": "Reallocates capacity from persistently capping, below-median iROAS holds to scalable shower gel and body wash generic cells while correcting wrongly assigned market leadership to maximize incremental order volume. Small budget cuts preserve the tight 300 INR daily allowance and safeguard the portfolio ROAS floor."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 11250,
+    "tokens_out": 10556,
+    "cost_usd": 0.00170978,
+    "wall_clock_s": 82.40913375000001
+  }
+}

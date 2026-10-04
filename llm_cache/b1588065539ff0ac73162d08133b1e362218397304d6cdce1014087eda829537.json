@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "z-ai/glm-5.3-flashx",
+  "schema_ver": "1",
+  "replicate": 0,
+  "response": {
+    "leader_campaign_id": "C-S4-HYD",
+    "confidence": 0.62,
+    "rationale": "Near-tie in leader_score (1.7674 vs 1.7411), so default to the mechanical pick C-S4-HYD. Its higher slot1_share_7d (0.85 vs 0.62) corroborates the mechanical choice, and no evidence favors C-S2-HYD."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 341,
+    "tokens_out": 318,
+    "cost_usd": 0.00052367,
+    "wall_clock_s": 2.823577834000048
+  }
+}

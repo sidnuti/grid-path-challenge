@@ -1,0 +1,19 @@
+{
+  "leaf": "L3_sibling",
+  "prompt_ver": "1",
+  "model": "qwen/qwen3.7-flash",
+  "schema_ver": "1",
+  "replicate": 2,
+  "response": {
+    "leader_campaign_id": "C-S3-MUM",
+    "confidence": 0.6,
+    "rationale": "The mechanical leader score favors C-S3-MUM (0.1985 vs 0.1866). While the scores are closely matched, C-S3-MUM demonstrates significantly stronger market presence with an 88% Slot 1 share compared to 55%, justifying its retention as the leader."
+  },
+  "usage": {
+    "calls": 1,
+    "tokens_in": 350,
+    "tokens_out": 1922,
+    "cost_usd": 0.02988,
+    "wall_clock_s": 18.771097749999967
+  }
+}
