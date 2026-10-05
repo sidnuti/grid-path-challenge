@@ -39,6 +39,9 @@ def run(config_rel, trials, seed, salt, tag, out_root, model):
 
     os.environ["SANDBOX_RUN_TAG"] = tag          # attributes every ledger line to this run (runs share one ledger item)
     ledger_hook.install(ITEM, salt=salt)
+    recorded = HERE / "runs" / "work" / tag
+    if orr.mode() == "replay" and work.resolve() != recorded.resolve() and (recorded / "results").exists():
+        ledger_hook.replay_schedule(recorded)    # partitioned runs: follow the recorded thread completion order
     from benchmark_initialization import get_benchmark_fn
     from mohollm.builder import Builder
     cfg = ledger_hook.overlay(json.load(open(HERE / "upstream" / "configurations" / config_rel)), model)

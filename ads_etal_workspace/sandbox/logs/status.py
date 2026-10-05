@@ -12,8 +12,11 @@ print("\nChimera R-C2 (agent runs; calls so far, cost, last-call age):")
 for k, b in sorted(by.items()):
     if k.startswith("rc2_full"): print(f"  {k[9:]:48s} calls {b[0]:4d} ${b[2]:.3f}  {int(time.time()-b[3]):4d}s ago")
 done = sorted(glob.glob(f"{R}/chimera/runs/results/rc2_full_*.csv")); print("  finished arms:", len(done), "/ 18")
-print("\nMoHOLLM R-M1 (qwen):")
-fin = {os.path.basename(os.path.dirname(f)) for f in glob.glob(f"{R}/mohollm/runs/work/full_*/result.json")}
-for k, b in sorted(by.items()):
-    if k.startswith("full_"): print(f"  {k[5:]:60s} {'DONE' if k in fin else 'run '} calls {b[0]:4d} ${b[2]:.3f} {int(time.time()-b[3]):4d}s ago")
-print("  finished:", len(fin), "/ 24")
+print("\nMoHOLLM R-M1 (qwen), the 16 jobs in logs/mohollm_jobs.txt (2 seeds x 4 problems x 2 methods):")
+jobs = [l.split() for l in open(f"{R}/logs/mohollm_jobs.txt") if l.strip()]
+tags = [f"full_{os.path.basename(c)[:-5]}_s{sd}_qwen3.7-flash" for c, sd in jobs]
+fin = {t for t in tags if os.path.exists(f"{R}/mohollm/runs/work/{t}/result.json")}
+for t in tags:
+    b = by.get(t); state = "DONE" if t in fin else "run "
+    print(f"  {t[5:]:60s} {state} " + (f"calls {b[0]:4d} ${b[2]:.3f} {int(time.time()-b[3]):5d}s ago" if b else "not started"))
+print("  finished:", len(fin), "/", len(tags), "| cancelled seed-6790 job excluded")

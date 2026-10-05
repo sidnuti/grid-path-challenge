@@ -79,16 +79,16 @@ ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;m
 <div class="wrap">
 <header>
   <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
-    <span class="label">Replication · interim · 5 Oct 2026</span>
+    <span class="label">Replication · Phase 2 · 5 Oct 2026</span>
     <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
   </div>
   <h1>Does Project Chimera, and MoHOLLM, hold up when we rerun it?</h1>
-  <p class="lede">We reran both papers' code on OpenRouter models with every call recorded, so any number below can be replayed for $0. Chimera is finished. MoHOLLM is 7 of 16 runs in, so its results are not ready.</p>
+  <p class="lede">We reran both papers' code on OpenRouter models with every call recorded, so any number below can be replayed for $0. Both main experiments are finished: Chimera's four claims hold in part, and MoHOLLM's headline claim holds in direction on all four problems.</p>
   <div class="kpis">
     <div class="kpi"><b>18 / 18</b><span>Chimera agent runs, 52 weeks each</span></div>
-    <div class="kpi"><b>7 / 16</b><span>MoHOLLM runs finished</span></div>
-    <div class="kpi"><b>$8.75</b><span>spent of the $25 programme cap</span></div>
-    <div class="kpi"><b>3 seeds</b><span>Chimera; MoHOLLM has 2</span></div>
+    <div class="kpi"><b>8 / 8</b><span>MoHOLLM pairs where regions win</span></div>
+    <div class="kpi"><b>$10.06</b><span>spent of the $25 programme cap</span></div>
+    <div class="kpi"><b>33 / 33</b><span>recorded runs replay identically at $0</span></div>
   </div>
 </header>
 
@@ -96,7 +96,7 @@ ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;m
   <h2>What was run</h2>
   <div class="prose">
     <p><b>Chimera</b> (e-commerce pricing agent) ran on minimax-m3, three agents against two organisational biases (volume or margin), three seeds each. A seed changes both the market simulator and the language-model samples, and results are paired by seed.</p>
-    <p><b>MoHOLLM</b> (LLM optimiser that splits the search space into regions) runs on qwen3.7-flash, on four problems (Penicillin, VehicleSafety, CarSideImpact, BraninCurrin) against a global LLM baseline. Qwen replaced minimax here because minimax's reasoning made each call about 8,000 tokens and the plan unaffordable.</p>
+    <p><b>MoHOLLM</b> (LLM optimiser that splits the search space into regions) ran on qwen3.7-flash, on four problems (Penicillin, VehicleSafety, CarSideImpact, BraninCurrin) against a global LLM baseline. Qwen replaced minimax here because minimax's reasoning made each call about 8,000 tokens and the plan unaffordable.</p>
   </div>
   <div class="note">The models differ from the papers' (GPT-4o, Gemini 2.0 Flash), so absolute numbers will not match. What can be tested is whether each paper's ordering of methods carries over.</div>
 </section>
@@ -146,24 +146,39 @@ ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;m
 </section>
 
 <section id="mohollm">
-  <h2>MoHOLLM: not ready, but the cost drivers are clear</h2>
+  <h2>MoHOLLM: splitting into regions beats the global LLM on every pair, mostly by a little</h2>
   <div class="fig">
-    <header><h3>Run progress</h3><p class="cap">Seeds 31415927 and 42. “Global” is the baseline LLM optimiser; “Regions” is the paper's method.</p></header>
-    <div class="grid-status" id="gridStatus" role="table" aria-label="MoHOLLM run status"></div>
+    <header><h3>Hypervolume at equal evaluations, global LLM against regions</h3>
+    <p class="cap">One row per problem and seed. Higher is better. Hypervolume is normalised jointly per problem, and each pair is compared at the same number of evaluations (57, or 29 for the stopped run). Hover a dot for values.</p></header>
+    <div class="legend" id="legendHV"></div>
+    <div class="scroll"><div id="dumbbell" style="min-width:560px"></div></div>
+    <details><summary>Table view</summary>
+    <div class="scroll"><table>
+      <thead><tr><th>Problem</th><th class="n">Seed</th><th class="n">Evaluations</th><th class="n">Global</th><th class="n">Regions</th><th class="n">Ratio</th></tr></thead>
+      <tbody id="tblHV"></tbody></table></div></details>
   </div>
+
+  <h3>Verdict on the paper's main claim (two seeds per problem)</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Claim</th><th>Result here</th></tr></thead>
+    <tbody>
+      <tr><td><b>1.</b> Region-based MoHOLLM reaches higher hypervolume than a global LLM optimiser</td>
+        <td><span class="pill ok">✓ Reproduced in direction</span><small>Ahead in 8 of 8 problem-seed pairs. Mean gain +0.19, 95% interval [+0.04, +0.33], sign-flip p = 0.008. The gain is large on Penicillin (2.4–4×) and small on CarSideImpact and BraninCurrin (1.02–1.15×). Two seeds per problem cannot establish any single problem on its own.</small></td></tr>
+      <tr><td><b>2–4.</b> Matches NSGA-II and qLogEHVI; ablation order; surrogate rank correlation 0.87</td>
+        <td><span class="pill warn">Not yet run</span><small>These need the non-LLM baselines and the surrogate ablations.</small></td></tr>
+    </tbody></table></div>
 
   <div class="panels">
     <div class="fig">
-      <header><h3>Where the LLM calls go wrong</h3><p class="cap">Share of calls cut off at the 12,000-token output cap, and average output size. 3,006 calls.</p></header>
-      <div class="bars" id="trunc"></div>
+      <header><h3>The gain costs about ten times the LLM calls</h3><p class="cap">Live calls and spend, all runs of each method.</p></header>
+      <div class="bars" id="costbars"></div>
     </div>
     <div class="fig">
-      <header><h3>One finished pair: Penicillin, seed 42</h3><p class="cap">Hypervolume (higher is better), jointly normalised. One seed only, so illustrative.</p></header>
-      <div class="legend" id="legendHV"></div>
-      <div id="hv"></div>
+      <header><h3>Where the LLM calls go wrong</h3><p class="cap">Share of calls cut off at the 12,000-token output cap, and average output size.</p></header>
+      <div class="bars" id="trunc"></div>
     </div>
   </div>
-  <div class="note">On Penicillin seed 42 the region method reached 0.46 hypervolume against 0.19 at equal evaluations (53). It also used 65 evaluations to the baseline's 57 and about 6 times the LLM calls. Nothing here is a verdict until the other pairs finish.</div>
+  <div class="note">One run (VehicleSafety, regions, seed 42) was stopped at 29 of 65 evaluations. The model kept reasoning to the output cap on one surrogate prompt, and finishing would have taken another 8 to 9 hours. That pair is compared at 29 evaluations. Without it, the result is 7 of 7 (p = 0.016).</div>
 </section>
 
 <section id="harness">
@@ -178,6 +193,8 @@ ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;m
       <tr><td>Causal estimates differ at the 12th decimal between processes</td><td>Changes the text the agent reads</td><td>Round to cents</td></tr>
       <tr><td>Upstream retries a failing prompt forever</td><td>Runaway cost on one prompt</td><td>Halt after 14 identical requests; raise the output cap on repeats</td></tr>
       <tr><td>A stalled provider keeps the connection open</td><td>A single request hung runs for hours</td><td>Hard wall-clock deadline per request</td></tr>
+      <tr><td>MoHOLLM gathers its 5 region threads in completion order, and ties in candidate selection go to whichever finished first</td><td>A replay picks different candidates and diverges (4 of 15 runs)</td><td>Replay follows the thread order upstream already logs per trial</td></tr>
+      <tr><td>An attempt cut off by the deadline uses a cache slot but saves nothing</td><td>Replay hits the empty slot and stops</td><td>Replay that slot as the same timeout, so the client retries as it did</td></tr>
     </tbody></table></div>
   <div class="prose">
     <p><b>Also found in the papers' code.</b> The Chimera guardian's CSL path returns a generic message for 4 of 6 rule violations (that text is what the LLM sees). MoHOLLM's shipped config names are inverted (<span class="mono">MOHOLLM-*</span> is the global baseline in one case), its <span class="mono">VLMOP</span> benchmark is VLMOP3 rather than VLMOP2, and most of its schedulers fail to configure. The Chimera TLA+ safety proof was re-run and matches the paper: 7,639,419 distinct states, no violation.</p>
@@ -187,10 +204,9 @@ ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;m
 <section id="next">
   <h2>Still to do</h2>
   <ul class="plain">
-    <li>Finish the remaining 9 MoHOLLM runs (roughly 2 to 4 more hours), then replay every recorded run to confirm identical results at no cost.</li>
-    <li>Run the non-LLM baselines (random, NSGA-II, qLogEHVI) and the TabPFN and GP surrogate arms.</li>
+        <li>Run the non-LLM baselines (random, NSGA-II, qLogEHVI) and the TabPFN and GP surrogate arms.</li>
     <li>Run the remaining Chimera experiments: neutral bias, the trust-multiplier sweep, and whether the LLM matters at all.</li>
-    <li>Paired statistics across seeds and problems, then the final verdict per claim.</li>
+    <li>More seeds where an interval still includes zero (Chimera claim 3, single MoHOLLM problems).</li>
   </ul>
 </section>
 </div>
@@ -212,9 +228,8 @@ const D = {
     {g:"Margin bias",l:"Guardian − LLM only",m:778266,lo:316640,hi:1239892},
     {g:"Margin bias",l:"Full − guardian",m:-215821,lo:-2457496,hi:2025853},
     {g:"Margin bias",l:"Full − LLM only",m:562445,lo:-2139871,hi:3264760}],
-  hv:{x:[5,13,21,29,37,45,53,57],g:[.128,.133,.178,.178,.188,.191,.191,.1912],
-      px:[5,13,21,29,37,45,53,61,65],p:[.128,.137,.363,.449,.452,.454,.457,.463,.4629]},
-  jobs:{Penicillin:{g:[1,1,0,0],r:[0,0,0,1]},VehicleSafety:{g:[1,0,0,0],r:[0,0,0,0]},CarSideImpact:{g:[1,0,0,0],r:[0,0,0,1]},BraninCurrin:{g:[1,0,0,0],r:[0,0,0,0]}}
+  pairs:[["Penicillin",31415927,57,.174,.701],["Penicillin",42,57,.191,.457],["VehicleSafety",31415927,57,.782,1.103],["VehicleSafety",42,29,.983,1.121],
+         ["CarSideImpact",31415927,57,.557,.571],["CarSideImpact",42,57,.567,.617],["BraninCurrin",31415927,57,1.010,1.156],["BraninCurrin",42,57,1.148,1.173]]
 };
 const M=v=>"$"+(v/1e6).toFixed(2)+"M", SM=v=>(v<0?"−":"+")+"$"+(Math.abs(v)/1e6).toFixed(2)+"M";
 const NS="http://www.w3.org/2000/svg", tip=document.getElementById("tip");
@@ -227,7 +242,7 @@ function hit(node,html){node.classList.add("hit");node.setAttribute("tabindex","
 
 /* legend */
 document.getElementById("legendAgents").innerHTML=D.agents.map(a=>`<span><i style="background:${a.c}"></i>${a.name}</span>`).join("");
-document.getElementById("legendHV").innerHTML=`<span><i style="background:var(--s1)"></i>Global LLM (57 evaluations)</span><span><i style="background:var(--s2)"></i>Regions, MoHOLLM (65 evaluations)</span>`;
+document.getElementById("legendHV").innerHTML=`<span><i style="background:var(--s1)"></i>Global LLM</span><span><i style="background:var(--s2)"></i>Regions (MoHOLLM)</span>`;
 
 /* grouped bars */
 function profitChart(host,bias){
@@ -287,46 +302,31 @@ document.getElementById("trunc").innerHTML=[
  <div class="bar-row"><span>Output, surrogate</span><div class="track"><div class="fill" style="width:${10088/12000*100}%;background:var(--s2)"></div></div><b class="mono">10.1k</b></div>
  <p class="cap" style="font-size:13px;color:var(--muted)">The surrogate prompt (“predict every objective for about 20 configurations”) makes the model reason until it runs out of room. Truncated answers are empty, so upstream retries them.</p>`;
 
-/* status grid */
+/* hypervolume dumbbell */
 (function(){
-  const g=document.getElementById("gridStatus");
-  const hdr=["", "Global · seed 31415927","Global · seed 42","Regions · seed 31415927","Regions · seed 42"];
-  hdr.forEach(h=>{const d=document.createElement("div");d.className="h";d.textContent=h;g.appendChild(d)});
-  Object.keys(D.jobs).forEach(p=>{
-    const lab=document.createElement("div");lab.style.cssText="display:flex;align-items:center;font-weight:500";lab.textContent=p;g.appendChild(lab);
-    const j=D.jobs[p];[j.g[0],j.g[1],j.r[2]||0,j.r[3]].forEach((v,i)=>{
-      const c=document.createElement("div");c.className="cell "+(v?"done":"run");c.textContent=v?"✓ done":"running";g.appendChild(c)});
+  const W=600,rowH=30,T=10,L=200,R=60,B=34,xmax=1.2,H=T+D.pairs.length*rowH+B,pw=W-L-R;
+  const X=v=>L+pw*v/xmax;
+  const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Hypervolume of global LLM and regions method per problem and seed"});
+  [0,.2,.4,.6,.8,1,1.2].forEach(v=>{el("line",{x1:X(v),x2:X(v),y1:T,y2:H-B,class:v?"gridline":"axis"},svg);el("text",{x:X(v),y:H-14,"text-anchor":"middle"},svg,v.toFixed(1))});
+  D.pairs.forEach((p,i)=>{
+    const [prob,seed,n,g,r]=p,cy=T+rowH*i+rowH/2;
+    el("text",{x:L-10,y:cy+4,"text-anchor":"end"},svg,`${prob} · ${seed}${n<57?" *":""}`);
+    el("line",{x1:X(g),x2:X(r),y1:cy,y2:cy,stroke:"var(--muted)","stroke-width":2,"stroke-linecap":"round"},svg);
+    const html=`<b>${prob}, seed ${seed}</b><br>${n} evaluations${n<57?" (regions run stopped early)":""}<br>Global ${g.toFixed(3)} · Regions ${r.toFixed(3)}<br>Ratio ${(r/g).toFixed(2)}×`;
+    hit(el("circle",{cx:X(g),cy,r:6,fill:"var(--s1)",stroke:"var(--surface)","stroke-width":2},svg),html);
+    hit(el("circle",{cx:X(r),cy,r:6,fill:"var(--s2)",stroke:"var(--surface)","stroke-width":2},svg),html);
+    el("text",{x:Math.max(X(r),X(g))+12,y:cy+4},svg,(r/g).toFixed(2)+"×");
   });
+  document.getElementById("dumbbell").appendChild(svg);
+  document.getElementById("tblHV").innerHTML=D.pairs.map(p=>`<tr><td>${p[0]}</td><td class="n">${p[1]}</td><td class="n">${p[2]}</td><td class="n">${p[3].toFixed(3)}</td><td class="n">${p[4].toFixed(3)}</td><td class="n">${(p[4]/p[3]).toFixed(2)}×</td></tr>`).join("");
 })();
 
-/* hypervolume line chart */
-(function(){
-  const W=520,H=290,L=44,R=64,T=14,B=38,xmax=70,ymax=.5,pw=W-L-R,ph=H-T-B;
-  const X=v=>L+pw*v/xmax,Y=v=>T+ph*(1-v/ymax);
-  const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Hypervolume against evaluations, Penicillin seed 42"});
-  [0,.1,.2,.3,.4,.5].forEach(v=>{el("line",{x1:L,x2:W-R,y1:Y(v),y2:Y(v),class:v?"gridline":"axis"},svg);el("text",{x:L-6,y:Y(v)+4,"text-anchor":"end"},svg,v.toFixed(1))});
-  [5,20,35,50,65].forEach(v=>el("text",{x:X(v),y:H-18,"text-anchor":"middle"},svg,v));
-  el("text",{x:L+pw/2,y:H-3,"text-anchor":"middle"},svg,"evaluations");
-  const series=[{x:D.hv.x,y:D.hv.g,c:"var(--s1)",n:"Global"},{x:D.hv.px,y:D.hv.p,c:"var(--s2)",n:"Regions"}];
-  series.forEach(s=>{
-    el("polyline",{points:s.x.map((x,i)=>X(x)+","+Y(s.y[i])).join(" "),fill:"none",stroke:s.c,"stroke-width":2,"stroke-linejoin":"round","stroke-linecap":"round"},svg);
-    const lx=X(s.x[s.x.length-1]),ly=Y(s.y[s.y.length-1]);
-    el("circle",{cx:lx,cy:ly,r:5,fill:s.c,stroke:"var(--surface)","stroke-width":2},svg);
-    el("text",{x:lx+9,y:ly+4,class:"t-strong"},svg,s.y[s.y.length-1].toFixed(2)+" "+s.n);
-  });
-  const cross=el("line",{y1:T,y2:T+ph,stroke:"var(--muted)","stroke-width":1,opacity:0},svg);
-  const overlay=el("rect",{x:L,y:T,width:pw,height:ph,fill:"transparent"},svg);
-  const allx=[...new Set([...D.hv.x,...D.hv.px])].sort((a,b)=>a-b);
-  const at=(s,x)=>{let v=null;s.x.forEach((sx,i)=>{if(sx<=x)v=s.y[i]});return v};
-  overlay.addEventListener("pointermove",e=>{
-    const r=svg.getBoundingClientRect(),xv=((e.clientX-r.left)/r.width*W-L)/pw*xmax;
-    const nx=allx.reduce((a,b)=>Math.abs(b-xv)<Math.abs(a-xv)?b:a);
-    cross.setAttribute("x1",X(nx));cross.setAttribute("x2",X(nx));cross.setAttribute("opacity",1);
-    const g=at(series[0],nx),p=at(series[1],nx);
-    showTip(`<b>${nx} evaluations</b><br>Global ${g==null?"finished":g.toFixed(3)}<br>Regions ${p==null?"n/a":p.toFixed(3)}`,e)});
-  overlay.addEventListener("pointerleave",()=>{cross.setAttribute("opacity",0);hideTip()});
-  document.getElementById("hv").appendChild(svg);
-})();
+/* cost bars */
+document.getElementById("costbars").innerHTML=[
+ {n:"Global, live calls",v:345,max:3671,c:"var(--s1)",t:"345"},{n:"Regions, live calls",v:3671,max:3671,c:"var(--s2)",t:"3,671"},
+ {n:"Global, spend",v:.49,max:3.96,c:"var(--s1)",t:"$0.49"},{n:"Regions, spend",v:3.96,max:3.96,c:"var(--s2)",t:"$3.96"}
+].map(r=>`<div class="bar-row"><span>${r.n}</span><div class="track"><div class="fill" style="width:${r.v/r.max*100}%;background:${r.c}"></div></div><b class="mono">${r.t}</b></div>`).join("")+
+`<p class="cap" style="font-size:13px;color:var(--muted)">Per evaluation, regions buys more hypervolume. Per dollar, the comparison is much closer.</p>`;
 
 /* theme toggle */
 const root=document.documentElement,btn=document.getElementById("theme");

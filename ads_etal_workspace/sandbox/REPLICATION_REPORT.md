@@ -149,7 +149,7 @@ Ledger item `mohollm_qwen` (cap $2). Penicillin, 2 trials, seed 42, `max_tokens`
 
 ---
 
-# INTERIM results (2026-10-05) — Chimera R-C2 complete; MoHOLLM R-M1 partial (7 of 16 jobs)
+# Phase 2 results (2026-10-05) — Chimera R-C2 complete; MoHOLLM R-M1 complete (15 of 16 jobs + 1 stopped at 29 evaluations)
 
 ## Chimera R-C2 — minimax-m3, 52 weeks, 3 seeds (market seed 42/43/44 + LLM sample), analysis: `chimera/runs/analyze_rc2.py`
 Total profit, mean of 3 seeds (sd across seeds); loss-week share; final trust:
@@ -175,6 +175,32 @@ Claim verdicts (provisional, n = 3):
 
 Observations: absolute profits are ~1.5–3× the paper's (minimax-m3 is a different, likely stronger, model); trust saturates at its 1.0 clip under volume for both guarded arms; Full Chimera under margin is the highest-variance arm (sd 0.85M).
 
-## MoHOLLM R-M1 (qwen3.7-flash) — operational findings so far
+## MoHOLLM R-M1 (qwen3.7-flash) — operational findings
 - Surrogate calls (1,624): 28.9% truncated at the output cap, 26.9% empty; sampler calls (1,382): 0.2% truncated. Mean output 10.1k vs 4.3k tokens. The surrogate prompt, not the sampler, drives cost and retries.
-- 7 of 16 jobs finished. Only Penicillin seed 42 has both methods: at equal evaluations (53) HV 0.457 (MoHOLLM) vs 0.191 (global) (jointly normalised, ref 1.1; **n = 1, illustrative only**); MoHOLLM used 65 evaluations vs 57 and 292 vs 44 LLM calls.
+- Cost: the region method used **3,671 live calls / $3.96** against **345 / $0.49** for the global baseline (≈ 8–11× per run). Total qwen spend $4.55 (cap raised 4.5 → 5.0 by user decision).
+- VehicleSafety seed 42 (region method) **was stopped at 29 of 65 evaluations** (user decision). In trial 5, qwen's surrogate reasoning repeatedly ran to the 12k output cap (67 of 226 live calls in 3 h). It had already used 518 live calls, against 482 for the whole seed-31415927 twin, and finishing would have taken ≈ 8–9 h and ≈ $0.7. That pair is compared at an equal 29 evaluations.
+
+## MoHOLLM R-M1 — Claim 1 (region method HV > global LLM), analysis: `mohollm/runs/analyze_rm1.py`
+Hypervolume is normalised jointly per problem over all points observed by any run (ref 1.1). Each pair is compared at an equal evaluation count, because the global baseline stops at 57 evaluations and the region method at 65.
+
+| Problem | Seed | n | HV global | HV region | Δ | ratio |
+|---|---:|---:|---:|---:|---:|---:|
+| Penicillin | 31415927 | 57 | 0.174 | 0.701 | +0.527 | 4.03× |
+| Penicillin | 42 | 57 | 0.191 | 0.457 | +0.266 | 2.39× |
+| VehicleSafety | 31415927 | 57 | 0.782 | 1.103 | +0.320 | 1.41× |
+| VehicleSafety | 42 | 29* | 0.983 | 1.121 | +0.138 | 1.14× |
+| CarSideImpact | 31415927 | 57 | 0.557 | 0.571 | +0.013 | 1.02× |
+| CarSideImpact | 42 | 57 | 0.567 | 0.617 | +0.050 | 1.09× |
+| BraninCurrin | 31415927 | 57 | 1.010 | 1.156 | +0.146 | 1.15× |
+| BraninCurrin | 42 | 57 | 1.148 | 1.173 | +0.025 | 1.02× |
+
+\* region run stopped early (see above).
+
+Across the 8 problem-seed pairs, the region method is **ahead in 8/8**. The mean HV difference is **+0.186**, with 95% t-CI [+0.038, +0.334] and sign-flip p = 0.0078. The geometric-mean ratio is 1.46× [0.96×, 2.21×]. On the 7 complete pairs only, the mean difference is +0.193 and p = 0.016.
+
+**Verdict, Claim 1: reproduced in direction on all 4 problems.** The size of the effect varies a lot by problem: large on Penicillin (2.4–4×), moderate on VehicleSafety, and small on CarSideImpact and BraninCurrin (1.02–1.15×). With n = 2 seeds per problem, the per-problem effects are not individually significant. The region method also costs about 8–11× more LLM calls, so this is a gain per evaluation, not per dollar. The model is qwen3.7-flash, not the paper's Gemini-2.0-Flash. Claims 2–4 (vs NSGA-II and qLogEHVI, the ablations, and surrogate rank correlation) need R-M2 and R-M3, which have not been run.
+
+## Replay verification (2026-10-05) — `logs/check_replay.py`
+**33 of 33 recorded Phase 2 runs replay identically at $0**: 18 Chimera arms (CSV byte-identical) and 15 MoHOLLM runs (fvals and configs identical, 0 live calls). The stopped VehicleSafety seed-42 run is excluded. Getting there needed two more harness fixes; neither changes recorded results:
+- **Finding 21:** `SpacePartitioning.optimize` collects region threads with `as_completed`, and `select_candidate_point` breaks ties by list position, so the evaluated candidates depend on thread timing. 4 of 15 replays diverged. Fix: `ledger_hook.replay_schedule` reorders region results to the per-trial candidate order upstream writes to `icl_llm_proposal_trajectory`.
+- **Finding 22:** an attempt cut off by the wall-clock deadline used its cache slot but saved nothing, and the SDK retried into the next slot, leaving a hole. Fix: the transport replays a hole (a missing slot with a later recorded slot) as the same `ReadTimeout` (test added).

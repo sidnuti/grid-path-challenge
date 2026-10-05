@@ -23,7 +23,7 @@ CAPS = {                                  # plan: "Budget sub-caps ($25)"
     "p0_ping": 0.05,                      # Gate P0 pings (spec: <= $0.01 total); drawn from the reserve
     "chimera_minimax": 6.0,               # was gpt-4o $10 + qwen $1.5; one model now, reasoning tokens inflate cost
     "mohollm_minimax": 1.5,               # was gemini $3 + qwen $1; $1.41 spent on pilots/reasoning experiments, now unused
-    "mohollm_qwen": 4.5,                  # user decision 2026-10-05: MoHOLLM runs on qwen3.7-flash (minimax-m3 reasoning is unaffordable there)
+    "mohollm_qwen": 5.0,                  # user decision 2026-10-05: MoHOLLM runs on qwen3.7-flash (minimax-m3 reasoning is unaffordable there)
     "phase3": 3.0,
     "phase4": 4.0,
     "reserve": 2.5,

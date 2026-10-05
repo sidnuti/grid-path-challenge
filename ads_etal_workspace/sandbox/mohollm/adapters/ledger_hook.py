@@ -45,6 +45,49 @@ def install(item: str, salt: str = "") -> None:
     _pin_tabpfn_v2()
 
 
+def replay_schedule(recorded_run: Path) -> None:
+    """Replay a recorded partitioned run under its recorded thread schedule.
+
+    `SpacePartitioning.optimize` runs one thread per region and collects their results with `as_completed`, i.e. in
+    completion order; `select_candidate_point` breaks hypervolume ties by position, so which candidate gets evaluated
+    depends on thread timing, and a replay (instant cached responses, different timing) diverges after a few trials.
+    The schedule is not lost: upstream writes each trial's concatenated candidate list (`llm_candidate_proposal`) to
+    `icl_llm_proposal_trajectory/*.csv`. Here `reorganize_data` puts the per-region results back in that recorded order
+    (it is a permutation of <= 5 regions) before concatenating. Record mode is unchanged."""
+    import ast
+    import csv
+    import itertools
+    import os
+
+    from mohollm.optimization_strategy.space_partitioning_mohollm import SpacePartitioningmohollm as SP
+
+    csv.field_size_limit(1 << 30)
+    paths = [os.path.join(p, f) for p, _, fs in os.walk(recorded_run / "results")       # os.walk: dir names contain "[model]"
+             if p.endswith("icl_llm_proposal_trajectory") for f in fs]
+    if len(paths) != 1:
+        raise orr.ReplayMiss(f"replay_schedule: expected one recorded trajectory under {recorded_run}, found {len(paths)}")
+    recorded = [ast.literal_eval(r["llm_candidate_proposal"]) for r in csv.DictReader(open(paths[0]))]
+
+    def norm(configs):
+        return [tuple(sorted((k, round(float(v), 9)) for k, v in c.items())) for c in configs]
+
+    original = SP.reorganize_data
+    state = {"trial": 0}
+
+    def reorganize_data(self, data):
+        t = state["trial"]
+        state["trial"] += 1
+        if t >= len(recorded):
+            raise orr.ReplayMiss(f"replay_schedule: trial {t} beyond the {len(recorded)} recorded trials")
+        want = norm(recorded[t])
+        for perm in itertools.permutations(data):
+            if norm([c for configs, _ in perm for c in configs]) == want:
+                return original(self, list(perm))
+        raise orr.ReplayMiss(f"replay_schedule: no ordering of the {len(data)} region results matches recorded trial {t}")
+
+    SP.reorganize_data = reorganize_data
+
+
 def _pin_tabpfn_v2() -> None:
     """Upstream calls `TabPFNRegressor()`; the installed tabpfn (9.x) now defaults to the license-gated v3.5, whereas the paper
     used TabPFN-v2 (open weights, ~42 MB, cached under ~/Library/Caches/tabpfn). Pin v2 and CPU (deterministic, no GPU here)."""

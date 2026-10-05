@@ -1,10 +1,10 @@
-> **WIP snapshot, 2026-10-05** (branch `arnab/wip-chimera-mohoLLM`). Chimera R-C2 is complete (18 runs); MoHOLLM R-M1 is **partial**
-> (about 11 of 16 jobs finished when this was taken; the MoHOLLM cache and `ledger.jsonl` are mid-run copies). See `REPLICATION_REPORT.md`
-> for results and findings, and `artifacts/replication_report.html` for the interim report.
+> **Phase 2 snapshot, 2026-10-05** (branch `arnab/wip-chimera-mohoLLM`). Chimera R-C2 is complete (18 runs). MoHOLLM R-M1 is complete:
+> 15 of 16 jobs, plus VehicleSafety regions seed 42, which was stopped at 29 of 65 evaluations by user decision. All 33 recorded runs replay
+> identically at $0 (`python3 logs/check_replay.py`). See `REPLICATION_REPORT.md` for results and findings, and `artifacts/replication_report.html`.
 >
 > **What is not in this folder** (to keep it small): the upstream code copies (`chimera/upstream`, `mohollm/upstream`; recopy them from
 > the repos named in each `UPSTREAM.txt` at the recorded commit, never edit them), the `.venv`s, per-run console logs, `tools/tla2tools.jar`
-> (TLA+ v1.8.0 from the tlaplus GitHub releases, sha256 `c2fe4e56...8239`), and MoHOLLM's per-run result CSVs (only `result.json` is kept).
+> (TLA+ v1.8.0 from the tlaplus GitHub releases, sha256 `c2fe4e56...8239`), and most of MoHOLLM's per-run result CSVs. `result.json` is kept, plus, for the region-method runs, upstream's `icl_llm_proposal_trajectory` CSV, which replay needs (it holds the recorded thread order).
 >
 > **Restore the record/replay caches** (needed for `SANDBOX_LLM_MODE=replay`, i.e. re-running recorded results at $0):
 > `mkdir -p cache && for f in cache_archive/*.tar.gz; do tar xzf $f -C cache; done`

@@ -156,6 +156,11 @@ class CachingTransport(httpx.BaseTransport):
             self._seen[base] = n + 1
         return f"{base}.{n}"
 
+    def _is_hole(self, key: str) -> bool:
+        """True if slot `key` has no recording but a later slot of the same request does."""
+        base, n = key.rsplit(".", 1)
+        return any(int(p.name.split(".")[1]) > int(n) for p in self.cache_dir.glob(f"{base}.*.json"))
+
     @staticmethod
     def _usage(resp_json: dict) -> tuple[int, int, float | None]:
         u = resp_json.get("usage") or {}
@@ -195,6 +200,11 @@ class CachingTransport(httpx.BaseTransport):
             tin, tout, _ = self._usage(cached["response"])
             ledger.record(self.item, model, tin, tout, cost_of(model, tin, tout), cached=True, key=key, note=os.environ.get("SANDBOX_RUN_TAG", ""))
             return self._respond(request, cached["response"])
+        if self.mode in ("replay", "record") and self._is_hole(key):
+            # The recording sent this attempt but got no response (wall-clock deadline or a transport error: the slot was used,
+            # nothing was saved) and the client then retried into the next slot. Replay that failure the same way, so the
+            # client retries exactly as it did when recording, instead of missing the cache or paying for a new sample.
+            raise httpx.ReadTimeout(f"replayed failure: recorded attempt {key[:12]} got no response")
         if self.mode == "replay":
             if os.environ.get("SANDBOX_DEBUG_MISS"):          # dump the request that missed, for diffing against the cache
                 Path(os.environ["SANDBOX_DEBUG_MISS"]).write_text(json.dumps({"key": key, "body": body}))

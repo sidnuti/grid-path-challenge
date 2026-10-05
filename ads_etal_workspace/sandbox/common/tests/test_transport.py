@@ -187,3 +187,33 @@ def test_hung_request_is_cut_off_by_the_wall_clock_deadline_and_retried(tmp_path
     assert ask(c).choices[0].message.content == "ok"
     assert calls["n"] == 2 and time.time() - t0 < 4          # hung attempt abandoned at 0.5 s, retry succeeded
     release.set()
+
+
+def test_attempt_that_got_no_response_is_replayed_as_the_same_failure(tmp_path, monkeypatch):
+    """A recorded attempt cut off by the deadline uses its slot but saves nothing; the client's retry lands in the next slot.
+    Replay must reproduce that failure (so the client retries the same way), not miss the cache or fetch a new sample."""
+    import threading
+    monkeypatch.setattr(ledger, "LEDGER_PATH", tmp_path / "ledger.jsonl")
+    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
+    monkeypatch.setenv("SANDBOX_REQUEST_DEADLINE", "0.5")
+    calls = {"n": 0}
+    release = threading.Event()
+
+    def handler(request):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            release.wait(5)
+        return httpx.Response(200, json={"id": "x", "model": "m", "choices": [{"index": 0, "finish_reason": "stop",
+            "message": {"role": "assistant", "content": f"r{calls['n']}"}}], "usage": {"prompt_tokens": 10, "completion_tokens": 2}})
+    from openai import OpenAI
+    t = orr.CachingTransport("p0_ping", "", cache_dir=tmp_path / "c", mode_="record")
+    t._inner = httpx.MockTransport(handler)
+    assert ask(OpenAI(api_key="k", base_url=orr.BASE_URL, http_client=httpx.Client(transport=t), max_retries=2)).choices[0].message.content == "r2"
+    release.set()
+    assert sorted(p.name.split(".")[1] for p in (tmp_path / "c").glob("*.json")) == ["1"]      # slot 0 is a hole
+
+    r = orr.CachingTransport("p0_ping", "", cache_dir=tmp_path / "c", mode_="replay")
+    c = OpenAI(api_key="k", base_url=orr.BASE_URL, http_client=httpx.Client(transport=r), max_retries=2)
+    assert ask(c).choices[0].message.content == "r2" and calls["n"] == 2
+    with pytest.raises(orr.ReplayMiss):                    # a missing slot with nothing after it is still a hard miss
+        ask(c)
