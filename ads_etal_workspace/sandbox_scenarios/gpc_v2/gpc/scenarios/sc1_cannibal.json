@@ -1,0 +1,216 @@
+{
+  "name": "sc1_cannibal",
+  "note": "Sim v2 scenario A (design/02 \u00a72, \u00a78): dev plus a nested-logit shelf with competitor items. Hidden; policies must not read it.",
+  "keywords": {
+    "K01": {
+      "intent": 2.4,
+      "incrementality": 0.15
+    },
+    "K02": {
+      "intent": 2.6,
+      "incrementality": 0.18
+    },
+    "K03": {
+      "intent": 0.9,
+      "incrementality": 0.55
+    },
+    "K04": {
+      "intent": 1.0,
+      "incrementality": 0.55
+    },
+    "K05": {
+      "intent": 1.0,
+      "incrementality": 0.6
+    },
+    "K06": {
+      "intent": 1.05,
+      "incrementality": 0.6
+    },
+    "K07": {
+      "intent": 1.15,
+      "incrementality": 0.5
+    },
+    "K08": {
+      "intent": 1.2,
+      "incrementality": 0.7
+    },
+    "K09": {
+      "intent": 0.5,
+      "incrementality": 0.85
+    },
+    "K10": {
+      "intent": 0.45,
+      "incrementality": 0.85
+    }
+  },
+  "appeal": {
+    "S1": 1.0,
+    "S2": 0.95,
+    "S3": 1.0,
+    "S4": 0.9,
+    "S5": 1.1
+  },
+  "organic_damp": {
+    "max_organic_rank": 3,
+    "factor": 0.6
+  },
+  "auction_sigma": 0.3,
+  "noise": {
+    "searches_sigma": 0.1,
+    "price_sigma": 0.08,
+    "organic_sigma": 0.06,
+    "weekend_lift": 1.12
+  },
+  "shocks": [
+    {
+      "kind": "osa",
+      "sku_id": "S2",
+      "city_id": "HYD",
+      "from_run": 3,
+      "to_run": 3,
+      "osa": 0.42
+    },
+    {
+      "kind": "price",
+      "city_id": "MUM",
+      "keyword_ids": [
+        "K05",
+        "K06"
+      ],
+      "from_run": 4,
+      "mult": 1.35
+    },
+    {
+      "kind": "demand",
+      "keyword_ids": [
+        "K03",
+        "K04"
+      ],
+      "from_run": 5,
+      "mult": 1.15
+    }
+  ],
+  "shelf": {
+    "beta": 0.7,
+    "nests": {
+      "bar": {
+        "lambda": 0.35,
+        "sub_categories": [
+          "Soap",
+          "Kids Soap"
+        ]
+      },
+      "liquid": {
+        "lambda": 0.6,
+        "sub_categories": [
+          "Body Wash",
+          "Shower Gel"
+        ]
+      }
+    },
+    "competitors": {
+      "V1": {
+        "name": "Velora Soap",
+        "nest": "bar",
+        "appeal": 1.05,
+        "keywords": {
+          "K03": [
+            0.85,
+            1
+          ],
+          "K04": [
+            0.85,
+            2
+          ],
+          "K07": [
+            0.6,
+            2
+          ],
+          "K08": [
+            0.4,
+            4
+          ],
+          "K09": [
+            1.0,
+            1
+          ]
+        },
+        "brand": "Velora"
+      },
+      "V2": {
+        "name": "Velora Body Wash",
+        "nest": "liquid",
+        "appeal": 0.95,
+        "keywords": {
+          "K05": [
+            0.9,
+            2
+          ],
+          "K06": [
+            0.7,
+            2
+          ],
+          "K09": [
+            0.9,
+            2
+          ]
+        },
+        "brand": "Velora"
+      },
+      "N1": {
+        "name": "Nimbus Soap",
+        "nest": "bar",
+        "appeal": 0.9,
+        "keywords": {
+          "K03": [
+            0.8,
+            2
+          ],
+          "K04": [
+            0.8,
+            1
+          ],
+          "K08": [
+            0.6,
+            2
+          ],
+          "K10": [
+            0.3,
+            5
+          ]
+        },
+        "brand": "Nimbus"
+      },
+      "N2": {
+        "name": "Nimbus Body Wash",
+        "nest": "liquid",
+        "appeal": 1.1,
+        "keywords": {
+          "K05": [
+            1.0,
+            1
+          ],
+          "K06": [
+            0.9,
+            1
+          ],
+          "K10": [
+            1.0,
+            1
+          ]
+        },
+        "brand": "Nimbus"
+      }
+    },
+    "outside_share": {
+      "default": 0.6,
+      "K01": 0.35,
+      "K02": 0.35
+    },
+    "calibration_note": "beta 0.7 (doc 1.0) and outside shares chosen so brand-level iota by keyword type is ~0.1 / 0.5 / 0.9 (brand / generic / competitor), near the legacy dev values; see scripts/calib_v2.py",
+    "competitor_units_per_day": {
+      "bar": 1800,
+      "liquid": 650
+    }
+  }
+}

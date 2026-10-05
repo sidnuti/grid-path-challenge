@@ -1,0 +1,12 @@
+# local-only: environments, upstream MoHOLLM copy (see mohollm/UPSTREAM.txt), caches, run outputs, ledger
+.venv/
+**/.venv/
+__pycache__/
+mohollm/upstream/
+mohollm/runs/work_ads/
+runs/
+cache/
+ledger.jsonl
+logs/p3_runs/
+logs/*.txt
+logs/*.log

@@ -1,0 +1,2441 @@
+<title>Grid Market Simulator v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a design dossier. Sticky tab rail of the five docs; one reading column (~70ch) with wide tables and diagrams scrolling in their own boxes. */
+:root {
+  --paper: #f3f5f8;
+  --surface: #ffffff;
+  --ink: #141b24;
+  --muted: #566273;
+  --rule: #d8dee7;
+  --accent: #2f4bd8;        /* auction indigo */
+  --accent-soft: #e5e9fb;
+  --slot: #b86f0b;          /* slot-1 amber, used sparingly */
+  --slot-soft: #fbf0df;
+  --code-bg: #eef1f6;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --step--1: 0.84rem; --step-0: 1rem; --step-1: 1.2rem; --step-2: 1.5rem; --step-3: 2.1rem; --step-4: 2.8rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f141b; --surface: #161d27; --ink: #e4e9f0; --muted: #9aa5b5; --rule: #2a3442;
+    --accent: #93a6ff; --accent-soft: #1e2742; --slot: #e3a94f; --slot-soft: #2e2416; --code-bg: #1c2431;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f141b; --surface: #161d27; --ink: #e4e9f0; --muted: #9aa5b5; --rule: #2a3442;
+  --accent: #93a6ff; --accent-soft: #1e2742; --slot: #e3a94f; --slot-soft: #2e2416; --code-bg: #1c2431;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font: 400 var(--step-0)/1.62 var(--body);
+  padding-inline: clamp(16px, 4vw, 48px); padding-block: 0 72px;
+}
+.wrap { max-width: 980px; margin-inline: auto; }
+header.top { padding-block: 40px 20px; display: grid; gap: 10px; }
+header.top .kicker { font: 500 var(--step--1)/1.3 var(--mono); color: var(--muted); letter-spacing: .04em; }
+header.top h1 { font: 700 var(--step-4)/1.05 var(--display); margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+header.top p { margin: 0; color: var(--muted); max-width: 68ch; }
+
+nav.tabs {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--paper); border-bottom: 1px solid var(--rule);
+  display: flex; gap: 4px; overflow-x: auto; scrollbar-width: thin; padding-block: 8px 0;
+}
+nav.tabs button {
+  font: 500 var(--step--1)/1 var(--body); color: var(--muted); background: none; border: 0;
+  padding: 10px 14px 12px; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap;
+  display: flex; gap: 8px; align-items: baseline;
+}
+nav.tabs button .n { font: 500 0.72rem/1 var(--mono); color: var(--muted); }
+nav.tabs button:hover { color: var(--ink); }
+nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+nav.tabs button[aria-selected="true"] .n { color: var(--accent); }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+section[role="tabpanel"] { padding-block: 28px 0; }
+section > p, section > ul, section > ol, section > blockquote, section .prose { max-width: 70ch; }
+.eyebrow { font: 500 var(--step--1)/1.3 var(--mono); color: var(--muted); margin: 0 0 6px; letter-spacing: .03em; }
+h1 { font: 700 var(--step-3)/1.12 var(--display); margin: 0 0 18px; text-wrap: balance; }
+h2 { font: 700 var(--step-2)/1.2 var(--display); margin: 44px 0 12px; text-wrap: balance; padding-top: 14px; border-top: 1px solid var(--rule); }
+h3 { font: 600 var(--step-1)/1.3 var(--body); margin: 28px 0 8px; text-wrap: balance; }
+h2.caveats { color: var(--slot); }
+p { margin: 0 0 14px; }
+ul, ol { padding-left: 1.3em; margin: 0 0 14px; }
+li { margin: 4px 0; }
+li > ul, li > ol { margin: 4px 0 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+strong { font-weight: 600; }
+blockquote { margin: 0 0 18px; padding: 10px 16px; border-left: 3px solid var(--rule); color: var(--muted); font-size: var(--step--1); }
+blockquote p { margin: 0 0 6px; }
+code { font: 0.88em/1.4 var(--mono); background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+pre:not(.mmd) { background: var(--code-bg); padding: 14px 16px; border-radius: 6px; overflow-x: auto; font: 0.84rem/1.5 var(--mono); }
+pre code { background: none; padding: 0; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 28px 0; }
+
+.tablewrap { overflow-x: auto; margin: 6px 0 20px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 8px 12px; border-bottom: 1px solid var(--rule); }
+th { font: 600 0.78rem/1.3 var(--body); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--paper); }
+tr:last-child td { border-bottom: 0; }
+td code { font-size: 0.82em; }
+
+.diagram { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; margin: 8px 0 22px; overflow-x: auto; }
+.diagram pre.mmd { margin: 0; background: none; text-align: center; }
+mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; padding-block: 4px; }
+
+/* overview */
+.lede { font-size: var(--step-1); line-height: 1.5; max-width: 62ch; }
+.steps { list-style: none; padding: 0; margin: 10px 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: none; }
+.steps li { margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.steps .k { font: 500 0.75rem/1 var(--mono); color: var(--accent); }
+.steps b { font: 700 var(--step-1)/1.2 var(--display); }
+.steps span { color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
+.thesis { background: var(--slot-soft); border-left: 3px solid var(--slot); padding: 14px 18px; border-radius: 0 6px 6px 0; margin: 4px 0 22px; max-width: 70ch; }
+.thesis p { margin: 0; }
+.docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 8px 0 24px; }
+.doc { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px; display: grid; gap: 8px; grid-template-rows: auto auto 1fr auto; }
+.doc .num { font: 500 0.75rem/1 var(--mono); color: var(--muted); }
+.doc h3 { margin: 0; font: 700 var(--step-1)/1.25 var(--display); }
+.doc ul { margin: 0; padding-left: 1.1em; font-size: 0.92rem; line-height: 1.45; }
+.doc a.open { justify-self: start; font: 500 0.88rem/1 var(--body); text-decoration: none; padding: 8px 12px; border: 1px solid var(--accent); border-radius: 4px; }
+.doc a.open:hover { background: var(--accent-soft); }
+.chip { display: inline-block; font: 500 0.72rem/1 var(--mono); padding: 4px 8px; border-radius: 6px; line-height: 1.35; background: var(--accent-soft); color: var(--accent); }
+.chip.warn { background: var(--slot-soft); color: var(--slot); }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: var(--step--1); }
+@media (max-width: 520px) { header.top h1 { font-size: var(--step-3); } h1 { font-size: var(--step-2); } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="kicker">system_design_proposals / grid_design_simulator · 5 Oct 2026 · design only, nothing run</div>
+    <h1>Grid Market Simulator v2</h1>
+    <p>Scenarios, goals, MoHOLLM experiments and a constraint compiler for the quick-commerce sponsored-search market in grid-path-challenge.</p>
+  </header>
+  <nav class="tabs" role="tablist" aria-label="Documents">
+<button role="tab" id="t-overview" aria-controls="overview" data-tab="overview" aria-selected="true"><span class="n">00</span>Overview</button>
+<button role="tab" id="t-landscape" aria-controls="landscape" data-tab="landscape" aria-selected="false"><span class="n">01</span>Landscape</button>
+<button role="tab" id="t-simulator" aria-controls="simulator" data-tab="simulator" aria-selected="false"><span class="n">02</span>Simulator v2</button>
+<button role="tab" id="t-goals" aria-controls="goals" data-tab="goals" aria-selected="false"><span class="n">03</span>Goals</button>
+<button role="tab" id="t-experiments" aria-controls="experiments" data-tab="experiments" aria-selected="false"><span class="n">04</span>Experiments</button>
+<button role="tab" id="t-compiler" aria-controls="compiler" data-tab="compiler" aria-selected="false"><span class="n">05</span>Compiler</button>
+  </nav>
+<section id="overview" role="tabpanel" aria-labelledby="t-overview"><p class="eyebrow">Overview · what is to be done, and where each part lives</p>
+<h1>Make the grid market rich enough to test goals and constraints, then test them</h1>
+
+<p class="lede">Today's grid-path-challenge market has one fixed incrementality number per keyword and no shelf: an ad can only take sales from its own SKU. This proposal extends the market with four realistic scenarios, sets one global iROAS objective, then adds sub-objectives and finally binding constraints. At each level it measures how MoHOLLM performs, and whether a compiler is needed to keep constraints.</p>
+
+<h2>The work, in order</h2>
+<ol class="steps">
+  <li><span class="k">Step 1 · Market</span><b>Add four scenarios</b><span>Category cannibalization, brand ↔ category association ("butter ≈ Amul"), festive / seasonal / ephemeral demand, and specific macro vs micro goals.</span></li>
+  <li><span class="k">Step 2 · E1</span><b>One global objective</b><span>Max brand-level incremental revenue at a fixed budget (iROAS at that budget). Run MoHOLLM against random, BoTorch and two oracles.</span></li>
+  <li><span class="k">Step 3 · E2</span><b>Add sub-objectives</b><span>New-launch visibility in North and festive sell-through. A three-objective Pareto problem, scored by hypervolume.</span></li>
+  <li><span class="k">Step 4 · E3</span><b>Add constraints</b><span>Nine typed constraints. Test whether MoHOLLM respects them, and what a compiler adds.</span></li>
+</ol>
+
+<div class="thesis"><p><strong>Working hypothesis (yours):</strong> MoHOLLM will not respect binding constraints; a compiler must enforce them. The code agrees so far. MoHOLLM only knows box bounds; its benchmarks drop constraints, or fold violations into an extra objective (CarSideImpact). The experiment is designed so the hypothesis can still fail. See <a href="#experiments" data-tab="experiments">Experiments</a> §5.</p></div>
+
+<h2>The whole system on one page</h2>
+<div class="diagram"><pre class="mmd">
+flowchart LR
+  subgraph SIM["Simulator v2 (tab 02)"]
+    W["World + scenario&lt;br/&gt;shelf · intent mix · calendar ·&lt;br/&gt;competitors · stock"] --> M["Market&lt;br/&gt;auction → shelf choice → orders"]
+    M --> SC["Scorer v2&lt;br/&gt;true brand incrementality&lt;br/&gt;by counterfactual"]
+  end
+  subgraph GOAL["Goals (tab 03)"]
+    G0["G-0 global objective"] --> G1["G-1 + sub-objectives"] --> G2["G-2 + constraints"]
+  end
+  subgraph OPT["Experiments (tab 04)"]
+    MH["MoHOLLM&lt;br/&gt;KD-tree + LLM proposer"]
+    BO["Baselines: random, BoTorch,&lt;br/&gt;oracles"]
+  end
+  subgraph CMP["Compiler (tab 05)"]
+    V["verify → repair → project →&lt;br/&gt;trim → certify"]
+    DR["Decision record&lt;br/&gt;reason codes · goal ledger"]
+  end
+  GOAL --> CMP
+  MH -->|"proposal x"| V
+  BO --> M
+  V -->|"feasible actions"| M
+  V --> DR
+  SC -->|"f(x), goal pass/fail"| MH
+  LIT["Literature and practice (tab 01)"] -.->|"design rules D1–D9"| W
+</pre></div>
+
+<h2>The four scenarios</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Scenario</th><th>New mechanism</th><th>The trap it sets</th><th>Read</th></tr></thead>
+<tbody>
+<tr><td><strong>Category cannibalization</strong></td><td>Nested-logit shelf with own and competitor SKUs; nest strength λ<sub>bar</sub> = 0.35</td><td>Raising S1 and S3 on "soap" mostly trades share between them. Per-SKU incrementality over-states brand gain by the sibling share.</td><td><a href="#simulator" data-tab="simulator">Simulator §2</a></td></tr>
+<tr><td><strong>Brand ↔ category ("butter ≈ Amul")</strong></td><td>Intent mix per query (loyal vs open shoppers), stealing that depends on presence, query reformulation</td><td>"sandal soap" is labelled generic but is 60% Aurel-loyal, so it behaves like a brand term. Pausing "soap" makes "aurel" look better while brand sales fall.</td><td><a href="#simulator" data-tab="simulator">Simulator §3</a></td></tr>
+<tr><td><strong>Festive / seasonal / ephemeral</strong></td><td>Calendar, ephemeral keyword K11 and gift pack S6 with finite stock, pull-forward, competitor budgets ×2.5</td><td>Cold start with no history, CPMs up 30–50%, a festive week that borrows from the next two, stock-outs that stop ads.</td><td><a href="#simulator" data-tab="simulator">Simulator §4–5</a></td></tr>
+<tr><td><strong>Macro vs micro goals</strong></td><td>Typed goal record, goal ladder, prices λ, μ, ν</td><td>"Max iROAS" alone is degenerate; SKU goals reward cannibalization; direct-ROAS floors favour non-incremental brand terms.</td><td><a href="#goals" data-tab="goals">Goals §1–3</a></td></tr>
+</tbody></table></div>
+
+<h2>Goals: from one objective to constraints</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Level</th><th>What is optimised</th><th>What is measured</th><th>Experiment</th></tr></thead>
+<tbody>
+<tr><td><span class="chip">G-0</span></td><td>Max brand-level incremental revenue, spend = B (≡ max iROAS at budget B)</td><td>best value vs evaluations; regret vs two oracles; generalisation to held-out seeds</td><td>E1</td></tr>
+<tr><td><span class="chip">G-1</span></td><td>f1 incremental revenue, f2 S5 slot-1 share in North, f3 S6 sell-through</td><td>hypervolume; front coverage</td><td>E2</td></tr>
+<tr><td><span class="chip">G-2</span></td><td>G-0 plus nine constraints C1–C9</td><td>violations during search and in the final answer; feasible regret; wasted evaluations</td><td>E3</td></tr>
+</tbody></table></div>
+
+<h3>Constraint classes decide what can be guaranteed</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Class</th><th>Examples</th><th>Can MoHOLLM keep it?</th><th>Can a compiler guarantee it?</th></tr></thead>
+<tbody>
+<tr><td>Action</td><td>bid ₹200–₹10,000; North ≥ 25% of spend; competitor keywords ≤ 10%</td><td>Box bounds: yes. Linear couplings: only if the encoding builds them in</td><td><span class="chip">exactly</span></td></tr>
+<tr><td>State-gated</td><td>no raise below 60% availability; no S6 ads under 2 days of stock</td><td>No: it never sees state</td><td><span class="chip">exactly</span></td></tr>
+<tr><td>Projected outcome</td><td>projected dROAS ≥ floor; K01 slot-1 ≥ 70% where conquested</td><td>Only after violating it in evaluations</td><td><span class="chip warn">on the projection</span></td></tr>
+<tr><td>Realised outcome</td><td>realised dROAS ≥ floor over 6 runs; sibling share ≤ 30%</td><td>Only after violating it</td><td><span class="chip warn">with a buffer, checked by calibration</span></td></tr>
+</tbody></table></div>
+
+<h2>The documents</h2>
+<div class="docs">
+  <div class="doc"><span class="num">01 · Landscape</span><h3>What exists and what the evidence says</h3>
+    <ul><li>AuctionGym, AdCraft, AuctionNet, RecSim NG, Chimera, Robyn/Meridian compared</li><li>Brand ads ≈ zero lift; stealing depends on presence</li><li>Quick-commerce festive CPMs, stock-outs, dashboard ROAS</li><li>Nine design rules D1–D9</li></ul>
+    <a class="open" href="#landscape" data-tab="landscape">Open Landscape</a></div>
+  <div class="doc"><span class="num">02 · Simulator v2</span><h3>Shelf, brands, calendar, competitors</h3>
+    <ul><li>Nested-logit choice and closed-form diversion ratios</li><li>4-way split: self, sibling, competitor, expansion</li><li>Festive window, pull-forward, finite stock</li><li>Scorer v2 and seven scenario files</li></ul>
+    <a class="open" href="#simulator" data-tab="simulator">Open Simulator v2</a></div>
+  <div class="doc"><span class="num">03 · Goals</span><h3>Macro vs micro, made specific</h3>
+    <ul><li>Three well-posed forms of "max iROAS"</li><li>Typed goal record with basis and chance</li><li>Hierarchy L0–L6; prices link the levels</li><li>Conflict taxonomy and the goal ledger</li></ul>
+    <a class="open" href="#goals" data-tab="goals">Open Goals</a></div>
+  <div class="doc"><span class="num">04 · Experiments</span><h3>E1 → E2 → E3</h3>
+    <ul><li>12-d decision vector and deterministic decoder</li><li>In-space and full-space oracles</li><li>Six ways to handle constraints</li><li>Eight pre-registered hypotheses</li></ul>
+    <a class="open" href="#experiments" data-tab="experiments">Open Experiments</a></div>
+  <div class="doc"><span class="num">05 · Compiler</span><h3>Enforcing binding constraints</h3>
+    <ul><li>Constraint IR in paise, four classes</li><li>Load-time consistency, feasibility, reachability over runs</li><li>Verifying the repair code itself</li><li>A CSL-like rule file</li></ul>
+    <a class="open" href="#compiler" data-tab="compiler">Open Compiler</a></div>
+</div>
+
+<h2>Build order</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Step</th><th>Work</th><th>Gate</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Shelf module and Scorer v2; legacy <code>dev</code> reproduced exactly with the new modules switched off</td><td>byte-identical legacy run; decomposition sums; no-op incremental revenue = 0</td><td>$0</td></tr>
+<tr><td>2</td><td>Intent mix, calendar, stock, competitor agents; scenario files</td><td>calibration ranges; unit conservation; festive CPM 1.3–1.5×</td><td>$0</td></tr>
+<tr><td>3</td><td>Re-run the linkage EDA on v2 worlds, scored against the hidden truth</td><td>recovery of diversion, brand ownership and reformulation</td><td>$0</td></tr>
+<tr><td>4</td><td>Decoder, oracles, random / BoTorch / random-in-leaf arms</td><td>oracle gap and baseline curves</td><td>$0</td></tr>
+<tr><td>5</td><td>Compiler with G0–G8 and C1–C9; property and differential tests</td><td>soundness, idempotence, legacy equivalence</td><td>$0</td></tr>
+<tr><td>6</td><td>MoHOLLM pilot (record → replay → project cost)</td><td><span class="chip warn">needs your approval and a new ledger cap</span></td><td>tbd</td></tr>
+<tr><td>7</td><td>E1 → E2 → E3</td><td>pre-registered hypotheses</td><td>tbd</td></tr>
+</tbody></table></div>
+
+<h2>Status</h2>
+<ul>
+  <li><span class="chip">design only</span> Nothing is built or run; all numbers in decision records and goal ledgers are illustrative.</li>
+  <li><span class="chip">paused</span> The Chimera and MoHOLLM replication runs are still waiting on a scope decision; E1–E3 reuse their harness (record/replay, ledger, fixed hash seed).</li>
+  <li><span class="chip warn">assumptions</span> Each tab ends with its own assumptions and caveats table.</li>
+</ul>
+</section>
+<section id="landscape" role="tabpanel" aria-labelledby="t-landscape" hidden><p class="eyebrow">Doc 01 · 01_landscape_and_literature.md</p><h1>Landscape: simulators, literature, practitioner evidence, and what each means for our market</h1><blockquote>
+<p>Part of <a href="#overview" data-tab="overview">grid_design_simulator</a>. Date: 2026-10-05.
+Purpose: before extending <code>grid-path-challenge/gpc/{world,market}.py</code>, collect what others built and measured, and turn each finding into a design rule for our simulator (rules are tagged <strong>→ D#</strong> and used in <a href="#simulator" data-tab="simulator">02</a>).</p>
+</blockquote>
+<hr />
+<h2>1. What our simulator already is</h2>
+<p><code>gpc</code> is a one-brand, five-SKU, five-city, ten-keyword sponsored-search market for quick commerce (Blinkit-like), calibrated to aggregated production data (<code>grid-path-challenge/CALIBRATION.md</code>).</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Today</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demand</td>
+<td>searches/day per city × keyword × daypart, weekend lift, log-normal noise, scheduled shocks</td>
+<td><code>market.py</code> step 1</td>
+</tr>
+<tr>
+<td>Auction</td>
+<td>4 slots (1/5/9/13); competitor level z ~ LogNormal(0, σ=0.30) per auction; a bid wins a <em>share</em> of auctions per slot; own-brand collision pushes the lower bid down a slot</td>
+<td><code>_slot_shares</code>, step 2</td>
+</tr>
+<tr>
+<td>Response</td>
+<td>ad orders ~ Poisson(impr × slot conv × intent × relevance × appeal); OSA gates impressions</td>
+<td>steps 3–5</td>
+</tr>
+<tr>
+<td>Incrementality</td>
+<td><strong>one fixed number per keyword</strong> ι_k (brand 0.15–0.18, generic 0.50–0.70, competitor 0.85), × 0.6 if the SKU ranks top-3 organically; organic = base − Σ(1−ι)·ad_orders</td>
+<td>step 6</td>
+</tr>
+<tr>
+<td>Cross-SKU effects</td>
+<td><strong>none</strong> (the EDA's cross-SKU t-stats are spurious by construction, caveat *15 of the linkage report)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>28 warm-up days + 6 runs × 7 days; three scheduled shocks (OSA drop, CPM ×1.35, demand ×1.15)</td>
+<td><code>dev.json</code></td>
+</tr>
+<tr>
+<td>Score</td>
+<td>max total offtake s.t. portfolio direct ROAS ≥ 0.98 × warm-up</td>
+<td><code>score.py</code></td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>G0–G8 guardrails, deterministic, run on every policy</td>
+<td><code>guardrails.py</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>The four scenarios the user wants (category cannibalization, brand↔category association, ephemeral/seasonal categories, macro vs micro goals) all need mechanics the simulator does not have. The rest of this file is the evidence for how to add them.</p>
+<hr />
+<h2>2. Comparable simulators and benchmarks</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>System</th>
+<th>What it simulates</th>
+<th>What we borrow</th>
+<th>What it lacks for us</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AuctionGym</strong> (Amazon, AdKDD'22 best paper; KDD'23) — <a href="https://github.com/amazon-science/auction-gym" target="_blank" rel="noopener">repo</a>, <a href="http://papers.adkdd.org/2022/papers/adkdd22-jeunen-learning.pdf" target="_blank" rel="noopener">paper</a></td>
+<td>Repeated auctions with learned bidders; first/second price; off-policy learning-to-bid</td>
+<td>Separating the <strong>auction</strong> from <strong>value estimation</strong>; reproducible offline evaluation with fixed randomness (we already do this with common random numbers)</td>
+<td>No organic channel, so no cannibalization; no catalogue</td>
+</tr>
+<tr>
+<td><strong>AdCraft</strong> — <a href="https://arxiv.org/abs/2306.11971" target="_blank" rel="noopener">arXiv 2306.11971</a>, <a href="https://github.com/Mikata-Project/adcraft" target="_blank" rel="noopener">repo</a></td>
+<td>SEM bid + budget per keyword, <strong>non-stationary</strong> keyword parameters (auction volume, CTR, CVR drift)</td>
+<td>Time-varying keyword parameters as a first-class, seeded process (→ <strong>D5</strong>)</td>
+<td>No brand/organic structure; single advertiser</td>
+</tr>
+<tr>
+<td><strong>AuctionNet</strong> (Alibaba, NeurIPS'24 D&amp;B) — <a href="https://arxiv.org/abs/2412.10798" target="_blank" rel="noopener">arXiv 2412.10798</a>, <a href="https://github.com/alimama-tech/AuctionNet" target="_blank" rel="noopener">repo</a></td>
+<td>48 competing auto-bidders, GSP, budget and CPA constraints, 500M records</td>
+<td><strong>Competitors as agents with their own budgets and constraints</strong>, which is what makes festive CPM inflation endogenous rather than a scheduled ×1.35 (→ <strong>D6</strong>)</td>
+<td>Ad-opportunity value only; no organic shelf; no catalogue cannibalization</td>
+</tr>
+<tr>
+<td><strong>PlatformBid</strong> — <a href="https://arxiv.org/html/2607.27265v1" target="_blank" rel="noopener">arXiv 2607.27265</a></td>
+<td>Auto-bidding from the platform's side</td>
+<td>Platform-level view of constraints</td>
+<td>Same gaps</td>
+</tr>
+<tr>
+<td><strong>RecSim NG</strong> (Google) — <a href="https://arxiv.org/abs/2103.08057" target="_blank" rel="noopener">arXiv 2103.08057</a>, <a href="https://github.com/google-research/recsim_ng" target="_blank" rel="noopener">repo</a></td>
+<td>Users, providers, recommender as a dynamic Bayesian network; <strong>multinomial-logit (MNL) user choice</strong></td>
+<td>The <strong>choice model</strong> as the place where substitution lives; latent user state; probabilistic programs for "hidden truth" (→ <strong>D1, D2</strong>)</td>
+<td>Not about auctions or ads economics</td>
+</tr>
+<tr>
+<td><strong>Chimera <code>EcommerceSimulatorV5</code></strong> (our sandbox copy, <code>sandbox/chimera/upstream/src/components.py</code>)</td>
+<td>52 weeks, price, ad spend, trust with hysteresis, seasonality σ(θ)=1+0.2·sin(2πθ/52)</td>
+<td>The <strong>guardian + repair</strong> pattern; a latent slow variable (trust) that punishes myopic policies (→ <strong>D7</strong>)</td>
+<td>One SKU, one channel; ads are a log-response scalar. Our replication found the seasonality floor 0.75 never binds and the causal engine is exactly linear in treatment (REPLICATION_REPORT findings 3–4)</td>
+</tr>
+<tr>
+<td><strong>Robyn / Meridian</strong> (Meta / Google MMM) — <a href="https://mbuzz.co/articles/robyn-vs-meridian" target="_blank" rel="noopener">comparison</a>, <a href="https://eliya.io/blog/media-mix-modeling/practical-guide-for-meridian-mmm-from-zero-to-hero" target="_blank" rel="noopener">Meridian guide</a></td>
+<td>Adstock (carry-over), Hill saturation, trend/seasonality/holiday decomposition, geo-level</td>
+<td>The <strong>response-curve vocabulary</strong> and holiday regressors; our <code>plan.csv</code> is already an "MMM read" stand-in (→ <strong>D5, D8</strong>)</td>
+<td>Aggregate; no auction or keyword</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Takeaway.</strong> No public simulator combines an auction, an organic shelf, a multi-SKU catalogue and a calendar. The closest pieces are AuctionNet (strategic competitors), AdCraft (non-stationarity) and RecSim NG (choice-based substitution). Our extension is the union of those, anchored on the current <code>gpc</code> auction so that existing data, guardrails and EDA keep working.</p>
+<hr />
+<h2>3. Literature on incrementality and cannibalization</h2>
+<h3>3.1 Brand keywords are mostly not incremental</h3>
+<ul>
+<li><strong>Blake, Nosko &amp; Tadelis (2015), <em>Econometrica</em></strong> — <a href="https://www.nber.org/system/files/working_papers/w20171/w20171.pdf" target="_blank" rel="noopener">NBER w20171</a>. eBay switched off brand-keyword ads on Yahoo!/MSN and kept <strong>99.5%</strong> of the clicks through organic links. For non-brand keywords, ads moved new and infrequent users, but frequent users (who would buy anyway) absorbed most of the spend, so average returns were negative.</li>
+<li><strong>→ D2:</strong> incrementality is a property of <strong>who is searching</strong> (loyal vs open), not of the keyword label. A keyword's ι must emerge from its intent mix.</li>
+<li><strong>→ D3:</strong> within one keyword, ι should fall as spend rises (marginal shoppers are increasingly the ones who would have bought anyway). Our current ι is constant in spend.</li>
+</ul>
+<h3>3.2 Competitors on your brand term: defend or not?</h3>
+<ul>
+<li><strong>Simonov, Nosko &amp; Rao (2018)</strong>, Bing randomized experiment — <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2668265" target="_blank" rel="noopener">SSRN</a>, <a href="https://events.bse.eu/live/files/2651-andreysimonov66894pdf" target="_blank" rel="noopener">BSE paper</a>:</li>
+<li>with no competitors, the focal brand's own ad adds <strong>1–4%</strong> clicks (smaller for bigger brands);</li>
+<li>when the focal brand's ad is present, competitors in positions 2–4 steal <strong>1–5%</strong>;</li>
+<li>when the focal brand does <strong>not</strong> advertise, competitors steal <strong>18–42%</strong>;</li>
+<li>removing the focal brand from the top slot raises stealing from 1–2% to <strong>6–15%</strong>;</li>
+<li>"stolen" clicks convert poorly (46% bounce within 30 s, vs 3.5–6% on the focal link).</li>
+<li><strong>→ D4:</strong> brand-keyword ι must be <strong>conditional on competitor presence</strong>. Our dev ι for K01/K02 (0.15–0.18) is the "defend" value; with an aggressive conquester present, pausing the brand term should cost far more. That is a scenario, not a constant.</li>
+</ul>
+<h3>3.3 Attribution overstates; correct it hierarchically</h3>
+<ul>
+<li><strong>"Attributed, But Not Incremental"</strong> (Li et al., June 2026) — <a href="https://arxiv.org/abs/2606.26690" target="_blank" rel="noopener">arXiv 2606.26690</a>. Uses sparse lift experiments as causal anchors and allocates the calibrated cannibalization <strong>down a business hierarchy under consistency constraints</strong>; deployment cut measured cannibalization by ~15 pp.</li>
+<li><strong>→ D8:</strong> the simulator should expose the <strong>true</strong> decomposition (expansion / stolen-from-competitor / own-organic / sibling-SKU) for scoring, and occasionally a noisy <strong>lift-test readout</strong> to policies, so methods that calibrate to experiments can be tested.</li>
+<li><strong>CanniUplift</strong> — <a href="https://arxiv.org/pdf/2607.05242" target="_blank" rel="noopener">arXiv 2607.05242</a>: seller and incentive cannibalization in uplift models. Same message: SKU-level uplift double-counts what siblings lose.</li>
+</ul>
+<h3>3.4 Substitution inside a category</h3>
+<ul>
+<li><strong>Multinomial / nested logit</strong> is the standard model of within-category substitution — <a href="https://www.pymc-labs.com/blog-posts/causal-sales-analytics-discrete-choice-modeling" target="_blank" rel="noopener">PyMC Labs explainer</a>, <a href="https://arxiv.org/abs/1906.02635" target="_blank" rel="noopener">counterfactual choice across categories, arXiv 1906.02635</a>, <a href="https://arxiv.org/pdf/2608.12680" target="_blank" rel="noopener">restricted-logit demand transfer at scale, arXiv 2608.12680</a>.</li>
+<li>Plain MNL forces <strong>proportional</strong> substitution (IIA): an ad for S1 takes share from every item in proportion to its share.</li>
+<li><strong>Nested</strong> logit lets substitution be stronger inside a nest (bar soap ↔ bar soap) than across nests (bar soap ↔ body wash).</li>
+<li><strong>→ D1:</strong> a nested-logit shelf is the cheapest model that produces product↔product cannibalization with a tunable strength, and it yields closed-form <strong>diversion ratios</strong> that we can publish as hidden truth.</li>
+</ul>
+<h3>3.5 Constrained auto-bidding: the optimisation side</h3>
+<ul>
+<li><strong>Balseiro et al. (2024), "A Field Guide for Pacing Budget and ROS Constraints"</strong>, ICML — <a href="https://proceedings.mlr.press/v235/balseiro24a.html" target="_blank" rel="noopener">PMLR 235</a>. Budget and return-on-spend constraints are paced with <strong>one Lagrange multiplier per constraint</strong>, updated online; the bid multiplier is a function of the duals.</li>
+<li><strong>Deng et al. (2023), "Multi-channel Autobidding with Budget and ROI Constraints"</strong>, ICML — <a href="https://proceedings.mlr.press/v202/deng23c/deng23c.pdf" target="_blank" rel="noopener">PMLR 202</a>. A <strong>global</strong> ROI and budget across channels behave differently from per-channel ones: per-channel optimisation can be badly sub-optimal.</li>
+<li><strong>Aggarwal et al., auto-bidding survey</strong> — <a href="https://sigecom.org/exchanges/volume_22/1/AGGARWAL.pdf" target="_blank" rel="noopener">SIGecom Exchanges</a>.</li>
+<li><strong>→ Goal design (<a href="#goals" data-tab="goals">03</a>)</strong>: our λ (budget) and μ (dROAS floor) are exactly these duals. Deng et al. is the formal version of "cell-level optimisation misses the global optimum" (report 05 §2), and is why macro goals must be evaluated at portfolio level.</li>
+</ul>
+<h3>3.6 LLMs and hard constraints</h3>
+<ul>
+<li><strong>COMPASS</strong> (2025) — <a href="https://arxiv.org/abs/2510.07043" target="_blank" rel="noopener">arXiv 2510.07043</a>. Frontier LLM agents reach <strong>70–90% feasibility but only 20–60% optimality</strong> on constrained optimisation tasks.</li>
+<li><strong>LLMs as formalizers on CSPs</strong> — <a href="https://arxiv.org/pdf/2505.13252" target="_blank" rel="noopener">arXiv 2505.13252</a>. Formalisations miss constraints or add wrong logic.</li>
+<li><strong>Solver-hard is not model-hard</strong> — <a href="https://arxiv.org/pdf/2607.17047" target="_blank" rel="noopener">arXiv 2607.17047</a>.</li>
+<li><strong>MoHOLLM itself.</strong> In our sandbox copy (<code>sandbox/mohollm/upstream</code>), "constraints" means <strong>parameter box bounds</strong> only (<code>builder.py: parameter_constraints</code>). Benchmarks with real constraints either <strong>drop them</strong> (Chankong–Haimes, Schaffer N2, Test Function 4: "For this benchmark we drop the constraints") or take BoTorch's <strong>CarSideImpact</strong>, whose 4th objective is the summed violation of its 10 constraints (<code>g = where(g&lt;0, −g, 0)</code>, checked in the sandbox's BoTorch install). So the one "constrained" benchmark MoHOLLM ships turns constraints into a soft objective.</li>
+<li><strong>→ <a href="#experiments" data-tab="experiments">04</a> / <a href="#compiler" data-tab="compiler">05</a>:</strong> the user's hypothesis ("MoHOLLM won't respect constraints; it needs a compiler") is consistent with both the literature and the code. The interesting measurement is <em>how</em> it fails: box bounds hold, linear constraints on the decision (budget simplex) hold only by encoding, and <strong>outcome constraints</strong> (realised dROAS floor, stock sell-through) are learned only after violating them.</li>
+</ul>
+<hr />
+<h2>4. Practitioner evidence (blogs, trade press, testimonials)</h2>
+<p>Treat as directional; numbers are self-reported and often marketing-adjacent.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Source</th>
+<th>Design rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Festive premium placements on quick commerce cost <strong>30–40% more</strong> around Diwali; some report 40–50%</td>
+<td><a href="https://www.storyboard18.com/advertising/festive-rush-pushes-quick-commerce-ad-rates-up-30-40-as-brands-shift-more-digital-spend-108755.htm" target="_blank" rel="noopener">Storyboard18</a>, <a href="https://inc42.com/features/blinkit-zepto-instamart-d2c-ad-strategy-festive-season/" target="_blank" rel="noopener">Inc42</a></td>
+<td><strong>D6</strong> festive CPM inflation ×1.3–1.5, endogenous via competitor budgets</td>
+</tr>
+<tr>
+<td>Advertisers spend <strong>50–60% of the annual budget in a 2–3 month window</strong>; CPC moves from ₹60 to ₹240; "brands paying 4× more for the same pool of customers"</td>
+<td><a href="https://www.storyboard18.com/how-it-works/quick-commerce-ad-costs-soar-this-festive-season-ws-l-110678.htm" target="_blank" rel="noopener">Storyboard18</a></td>
+<td><strong>D6</strong> festive demand rises less than competition does: attention does not scale with spend</td>
+</tr>
+<tr>
+<td>Quick-commerce conversion 3–8% vs 1.5–3% on Meta/Google; "someone opening Blinkit at 7 pm before a Diwali gathering is buying"</td>
+<td><a href="https://inc42.com/features/blinkit-zepto-instamart-d2c-ad-strategy-festive-season/" target="_blank" rel="noopener">Inc42</a></td>
+<td><strong>D5</strong> festive evening daypart intent lift</td>
+</tr>
+<tr>
+<td>Ads only serve where the SKU is stocked in the nearest dark store; ads into stock-outs waste money</td>
+<td><a href="https://www.42signals.com/blog/visibility-on-quick-commerce-platforms/" target="_blank" rel="noopener">42signals</a>, <a href="https://metricscart.com/insights/advertising-on-quick-commerce-platforms/" target="_blank" rel="noopener">MetricsCart</a></td>
+<td>Already modelled (OSA gates impressions, G4). Extend: <strong>finite festive stock</strong> that ads deplete (<strong>D7</strong>)</td>
+</tr>
+<tr>
+<td>"The 6× ROAS on your Blinkit dashboard": platform ROAS intercepts shoppers already in the app, often already yours; rising share at flat GMV means cannibalizing your baseline</td>
+<td><a href="https://www.meerkats.ai/blog/quick-commerce-roas-truth/" target="_blank" rel="noopener">Meerkats.ai</a></td>
+<td><strong>D2/D8</strong> score on brand-level incremental, not attributed</td>
+</tr>
+<tr>
+<td>Amazon "flywheel": sponsored sales feed organic rank; caveat — if 90% of sales vanish when ads stop, there is no flywheel</td>
+<td><a href="https://www.sellerapp.com/blog/amazon-advertising-impact-on-organic-ranking/" target="_blank" rel="noopener">SellerApp</a>, <a href="https://landingcube.com/amazon-ppc-impact-on-organic-search-rankings/" target="_blank" rel="noopener">LandingCube</a></td>
+<td><strong>D9</strong> optional halo: ad-driven velocity lifts organic rank with a lag. Off by default; a scenario tests whether a method can <em>detect</em> it</td>
+</tr>
+<tr>
+<td>Amul holds roughly 80–90% of Indian butter (figures vary by year and source)</td>
+<td><a href="https://www.forbesindia.com/article/work-in-progress/amuls-going-utterly-butterly-digital/55855/1" target="_blank" rel="noopener">Forbes India</a>, <a href="https://blog.osum.com/amul-butter-market-share/" target="_blank" rel="noopener">Osum</a></td>
+<td><strong>D2</strong> "butter ≈ Amul": a generic query whose intent mass is mostly one brand's loyalists. Ads by that brand on it behave like brand-keyword ads</td>
+</tr>
+<tr>
+<td>70% of advertisers struggle to measure retail-media incrementality</td>
+<td><a href="https://eva.guru/blog/amazon-ad-incrementality-measurement/" target="_blank" rel="noopener">via Eva Guru summary</a></td>
+<td>Motivates exposing lift-test readouts (<strong>D8</strong>)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>5. Design rules collected</h2>
+<div class="diagram"><pre class="mmd">flowchart LR
+  subgraph EV[&quot;Evidence&quot;]
+    B[&quot;Blake et al.&lt;br/&gt;brand ads ≈ 0 lift&quot;]
+    S[&quot;Simonov et al.&lt;br/&gt;stealing depends on presence&quot;]
+    L[&quot;Logit choice models&lt;br/&gt;nested substitution&quot;]
+    Q[&quot;Quick-commerce practice&lt;br/&gt;festive CPM +30–50%, stock-outs&quot;]
+    A[&quot;AuctionNet / AdCraft&lt;br/&gt;strategic, drifting markets&quot;]
+    C[&quot;COMPASS, MoHOLLM code&lt;br/&gt;LLMs weak on hard constraints&quot;]
+  end
+  subgraph DR[&quot;Design rules&quot;]
+    D1[&quot;D1 nested-logit shelf&quot;]
+    D2[&quot;D2 intent mix&quot;]
+    D4[&quot;D4 conditional stealing&quot;]
+    D5[&quot;D5 calendar&quot;]
+    D6[&quot;D6 competitor agents&quot;]
+    D7[&quot;D7 finite stock&quot;]
+    D8[&quot;D8 counterfactual scorer&quot;]
+  end
+  L --&gt; D1
+  B --&gt; D2
+  S --&gt; D4
+  Q --&gt; D5
+  Q --&gt; D7
+  A --&gt; D6
+  B --&gt; D8
+  C --&gt; CMP[&quot;Compiler (tab 05)&quot;]
+</pre></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Statement</th>
+<th>Scenario it serves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1</strong></td>
+<td>Replace "organic = base − Σ(1−ι)·ad" with a <strong>nested-logit shelf</strong> per query: items = own SKUs + competitor SKUs; nests = sub-categories; ads change an item's visibility</td>
+<td>Category cannibalization</td>
+</tr>
+<tr>
+<td><strong>D2</strong></td>
+<td>Each query carries a latent <strong>intent mix</strong> π_q over {loyal-to-brand-b, open}. ι emerges from it; keyword labels (brand/generic/competitor) become <em>public metadata that can be wrong</em></td>
+<td>Brand↔category association; replaces fixed ι</td>
+</tr>
+<tr>
+<td><strong>D3</strong></td>
+<td>ι falls with spend inside a cell (deeper auctions reach more loyal shoppers)</td>
+<td>Marginal vs average (caveat *5)</td>
+</tr>
+<tr>
+<td><strong>D4</strong></td>
+<td>Competitor stealing on a brand query depends on whether the focal brand is present (Simonov et al. calibration)</td>
+<td>Brand defence; pause traps</td>
+</tr>
+<tr>
+<td><strong>D5</strong></td>
+<td>A <strong>calendar</strong> of seasonal curves, festive windows, ephemeral keywords and SKUs, with pull-forward</td>
+<td>Ephemeral / seasonal / festive</td>
+</tr>
+<tr>
+<td><strong>D6</strong></td>
+<td><strong>Competitor agents</strong> with budgets that surge in festive windows ⇒ CPM inflation emerges</td>
+<td>Festive CPM</td>
+</tr>
+<tr>
+<td><strong>D7</strong></td>
+<td><strong>Finite stock</strong> for limited SKUs; ads deplete it; stock-out ends delivery</td>
+<td>Festive gift packs; a hard constraint the compiler must project</td>
+</tr>
+<tr>
+<td><strong>D8</strong></td>
+<td>Scorer computes <strong>true brand-level incremental revenue</strong> by counterfactual (same seed, ads off), and the true 4-way decomposition; policies can request noisy lift readouts at a cost</td>
+<td>iROAS objective</td>
+</tr>
+<tr>
+<td><strong>D9</strong></td>
+<td>Optional organic halo with lag (off by default)</td>
+<td>Tests whether methods detect a mechanism that is absent vs present</td>
+</tr>
+</tbody>
+</table></div>
+<p>* Practitioner numbers in §4 are self-reported, vary by source and year, and are used only to set plausible ranges, never as calibration targets.</p></section>
+<section id="simulator" role="tabpanel" aria-labelledby="t-simulator" hidden><p class="eyebrow">Doc 02 · 02_simulator_v2_design.md</p><h1>Simulator v2: a market with a shelf, brands, a calendar and competitors</h1><blockquote>
+<p>Part of <a href="#overview" data-tab="overview">grid_design_simulator</a>. Builds on <code>grid-path-challenge/gpc/{world,market}.py</code> and the design rules D1–D9 in <a href="#landscape" data-tab="landscape">01</a>.
+Principle: <strong>every new mechanism is behind a scenario flag, and with all flags off the simulator reproduces today's <code>dev</code> outputs byte for byte.</strong> Existing data, guardrails, EDA and linkage work keep their meaning.</p>
+</blockquote>
+<hr />
+<h2>0. TL;DR</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Scenario the user asked for</th>
+<th>New mechanism</th>
+<th>What it makes true that is false today</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category-specific cannibalization</td>
+<td><strong>Nested-logit shelf</strong> per query (own + competitor SKUs, nests = sub-categories)</td>
+<td>An S1 ad on "soap" takes orders from S3 and S5, not only from S1's own organic. SKU-level ι over-states brand-level ι by the sibling share</td>
+</tr>
+<tr>
+<td>Brand ↔ product association ("butter ≈ Amul")</td>
+<td><strong>Intent mix</strong> π_q per query and city: loyal-to-brand-b vs open; <strong>query reformulation</strong></td>
+<td>A "generic" keyword can behave like a brand keyword (low ι) for the brand that owns it, and like a conquest keyword for challengers. The keyword-type label becomes a trap</td>
+</tr>
+<tr>
+<td>Ephemeral / seasonal / festive</td>
+<td><strong>Calendar</strong>: seasonal curves, festive windows, ephemeral keywords and SKUs, finite stock, pull-forward; <strong>competitor agents</strong> whose festive budgets inflate CPMs</td>
+<td>Some cells exist for 3 weeks with no history; a festive week borrows demand from the weeks after it; stock runs out</td>
+</tr>
+<tr>
+<td>Macro vs micro goals (see <a href="#goals" data-tab="goals">03</a>)</td>
+<td><strong>Scorer v2</strong>: true brand-level incremental revenue by counterfactual, a 4-way decomposition, and per-goal pass/fail</td>
+<td>iROAS can be scored on truth, at any level of the hierarchy, without the policy ever seeing truth</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>1. Today's response model, and the one line we replace</h2>
+<div class="diagram"><pre class="mmd">flowchart LR
+  SE[&quot;Searches&lt;br/&gt;city × keyword × daypart&quot;] --&gt; AU[&quot;Auction&lt;br/&gt;slot shares 1/5/9/13&quot;]
+  AU --&gt; IM[&quot;Impressions&lt;br/&gt;× on-shelf availability&quot;]
+  IM --&gt; BU[&quot;Budget pacing&quot;]
+  BU --&gt; SH[&quot;Shelf choice&lt;br/&gt;NEW: nested logit + intent mix&quot;]
+  SH --&gt; OR[&quot;Orders: ad-attributed + organic&lt;br/&gt;for own and competitor SKUs&quot;]
+  CAL[&quot;NEW: calendar&lt;br/&gt;seasons, festive, ephemeral&quot;] -.-&gt; SE
+  CAL -.-&gt; SH
+  COMP[&quot;NEW: competitor agents&quot;] -.-&gt; AU
+  STK[&quot;NEW: finite stock&quot;] -.-&gt; IM
+  OR --&gt; SC[&quot;NEW: Scorer v2&lt;br/&gt;counterfactual, ads off&quot;]
+</pre></div>
+<p>Today, per SKU × city × day (<code>market.py</code> step 6):</p>
+<p>\[\text{organic}_{s,c} = \text{base}_{s,c} - \sum_{k} (1-\iota_{s,k})\cdot \text{ad\_orders}_{s,c,k},\qquad \iota_{s,k} = \iota_k\cdot(0.6 \text{ if organic rank}\le 3)\]</p>
+<p>Consequences we want to remove:</p>
+<ol>
+<li>An ad can only cannibalize <strong>its own SKU's</strong> organic sales. There are no siblings and no competitors on the shelf.</li>
+<li>ι is a constant per keyword: it does not depend on who is searching, whether a competitor is present, or how much we spend.</li>
+<li>No ad can ever grow the category or take a sale from a competitor. "Incremental" just means "not subtracted".</li>
+</ol>
+<p>v2 replaces that line with a <strong>choice model on the search-result page</strong>. Everything upstream (searches, auction, slot shares, OSA, budgets) is unchanged.</p>
+<hr />
+<h2>2. Module A — the shelf: nested logit per query (D1)</h2>
+<h3>2.1 Items and nests</h3>
+<p>The shelf for query q in city c, daypart d, day t lists items i with a <strong>position weight</strong> w_i:</p>
+<ul>
+<li>own SKUs (S1–S5, later S6) and <strong>competitor SKUs</strong> (new, not controllable): V1 Velora Soap, V2 Velora Body Wash, N1 Nimbus Soap, N2 Nimbus Body Wash;</li>
+<li>each item may appear <strong>organically</strong> (rank r ⇒ weight w_org(r) from the industry view curve) and/or in an <strong>ad slot</strong> s won in this auction (weight w_ad(s) = SLOT_VIEW_REL[s]);</li>
+<li>nests n = sub-category: <em>bar</em> {S1, S3, S5, V1, N1}, <em>liquid</em> {S2, S4, V2, N2}; nest 0 = <strong>no purchase</strong> (outside option).</li>
+</ul>
+<h3>2.2 Choice probabilities (open shoppers)</h3>
+<p>Utility of item i: \(V_i = a_i + \beta \log(w_{org,i} + w_{ad,i}) + \gamma_{q,i}\), where a_i is appeal (hidden) and γ_{q,i} is query-item fit (from <code>keyword_sku.relevance</code>).</p>
+<p>\[P(i\mid n) = \frac{e^{V_i/\lambda_n}}{\sum_{j\in n} e^{V_j/\lambda_n}},\quad I_n = \lambda_n \log\sum_{j\in n} e^{V_j/\lambda_n},\quad P(n) = \frac{e^{I_n}}{e^{V_0} + \sum_m e^{I_m}}\]</p>
+<ul>
+<li>λ_n ∈ (0, 1] is the <strong>nest dissimilarity</strong>. Small λ_bar (e.g. 0.35) ⇒ bar soaps substitute strongly for each other: the "category-specific cannibalization" knob. λ = 1 collapses to plain MNL.</li>
+<li>V_0 sets the <strong>category conversion</strong>: an ad that raises some V_i lifts I_n and pulls shoppers from the outside option, i.e. <strong>category expansion</strong>.</li>
+<li>An order is <strong>ad-attributed</strong> with probability w_ad,i / (w_ad,i + w_org,i) given that i was chosen (the platform credits the click path). This reproduces "ad orders that would have happened anyway" without a fixed ι.</li>
+</ul>
+<h3>2.3 Diversion ratios: the published hidden truth</h3>
+<p>For a small visibility change on item i, the share it takes from j is the diversion ratio</p>
+<p>\[D_{j\to i} = -\frac{\partial P_j/\partial V_i}{\partial P_i/\partial V_i}\]</p>
+<p>Nested logit gives it in closed form. With \(Q_i = \tfrac{1}{\lambda_n}(1-P(i|n)) + P(i|n)(1-P(n))\) (so that \(\partial \log P_i/\partial V_i = Q_i\)):</p>
+<p>\[D_{j\to i} = \begin{cases}\dfrac{P(j|n)\,\big(1/\lambda_n - 1 + P(n)\big)}{Q_i} &amp; j \text{ in the same nest } n\\[2ex] \dfrac{P_j}{Q_i} &amp; j \text{ in another nest, or } j = \text{no purchase}\end{cases}\]</p>
+<p>The term 1/λ_n − 1 is what makes siblings lose more than items elsewhere; at λ_n = 1 both cases reduce to P_j/Q_i (plain MNL, proportional substitution). The simulator writes D for every (i, j, q, c) into <code>truth["diversion"]</code> so the linkage EDA can be scored against it (today the EDA had nothing to recover: caveat *15).</p>
+<h3>2.4 The 4-way decomposition of every ad order</h3>
+<div class="diagram"><pre class="mmd">flowchart TD
+  AO[&quot;One ad-attributed order of S1 on &#x27;soap&#x27;&quot;] --&gt; Q{&quot;Without the ad, the shopper would have…&quot;}
+  Q --&gt;|&quot;bought S1 organically&quot;| SELF[&quot;self&lt;br/&gt;not incremental&quot;]
+  Q --&gt;|&quot;bought S3 or S5&quot;| SIB[&quot;sibling&lt;br/&gt;not incremental for the brand&quot;]
+  Q --&gt;|&quot;bought Velora or Nimbus&quot;| CO[&quot;competitor&lt;br/&gt;stolen: incremental&quot;]
+  Q --&gt;|&quot;not bought in the category&quot;| EXP[&quot;expansion&lt;br/&gt;incremental&quot;]
+</pre></div>
+<p>For each ad-attributed order of own SKU i the scorer (never the policy) splits the expected effect of the ad into</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+<th>Brand-incremental?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>self</strong></td>
+<td>would have bought i organically</td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>sibling</strong></td>
+<td>would have bought another own SKU (S3 instead of S1)</td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td><strong>competitor</strong></td>
+<td>would have bought V1/N1/…</td>
+<td>yes (stolen)</td>
+</tr>
+<tr>
+<td><strong>expansion</strong></td>
+<td>would not have bought in the category</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table></div>
+<p>\[\iota^{\text{SKU}}_i = \text{competitor}+\text{expansion}+\text{sibling},\qquad \iota^{\text{brand}}_i = \text{competitor}+\text{expansion}\]</p>
+<p><strong>Today's estimator</strong> (organic of SKU <em>s</em> on its own ad orders, report 06) measures ι^SKU. <strong>The gap ι^SKU − ι^brand = sibling share is exactly the category-specific cannibalization the user wants captured</strong>, and it is invisible to any per-SKU regression. It shows up only in a cross-SKU regression (S3 organic on S1 ad orders) or in brand totals.</p>
+<p>Computation: the expectation is exact per auction (remove the ad, recompute the four probabilities), so the decomposition costs one extra softmax per (q, c, d, t). Joint removal of several ads is non-additive; the scorer reports leave-one-out per cell plus the true all-ads-off counterfactual (§7).</p>
+<h3>2.5 Default parameters (scenario <code>sc1_cannibal</code>)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>λ_bar, λ_liquid</td>
+<td>0.35, 0.60</td>
+<td>Bar soaps are near-interchangeable; liquids less so (fragrance, format)</td>
+</tr>
+<tr>
+<td>β (position sensitivity)</td>
+<td>1.0</td>
+<td>Choice ∝ visibility at fixed appeal; reproduces slot conv ratios</td>
+</tr>
+<tr>
+<td>V_0</td>
+<td>tuned so warm-up category conversion ≈ today's</td>
+<td>Keeps calibration</td>
+</tr>
+<tr>
+<td>Competitor appeal</td>
+<td>V1 1.05, N1 0.9, V2 0.95, N2 1.1</td>
+<td>Velora strong in bar, Nimbus in liquid</td>
+</tr>
+</tbody>
+</table></div>
+<p>Calibration target: with <code>sc1_cannibal</code>, warm-up direct ROAS by keyword type and ad share of units stay within CALIBRATION.md ranges (generic 2.5–7.0×, competitor 0.8–1.9×, brand 16–19×, ads ≈ 20% of units, run-out ≈ 30% of campaign-days). A calibration test fails the build otherwise.</p>
+<hr />
+<h2>3. Module B — intent mix and brand association (D2, D4)</h2>
+<h3>3.1 Who is searching</h3>
+<p>Each query q in city c has an intent mix over segments:</p>
+<p>\[\pi_{q,c} = (\pi^{\text{Aurel}}, \pi^{\text{Velora}}, \pi^{\text{Nimbus}}, \pi^{\text{open}}),\quad \sum = 1\]</p>
+<ul>
+<li><strong>Loyal-to-b</strong> shoppers choose among b's items with the within-brand logit; they buy elsewhere only if b is out of stock or not visible, or if <strong>stolen</strong> by a competitor ad.</li>
+<li><strong>Open</strong> shoppers use the nested logit of §2.</li>
+</ul>
+<p>So ι emerges: an Aurel ad shown to an Aurel-loyal searcher is never brand-incremental (at most it moves them between Aurel SKUs: sibling); to an open searcher it can expand or steal; to a Velora-loyal searcher it can steal only through the stealing channel below.</p>
+<h3>3.2 Stealing depends on presence (Simonov et al.)</h3>
+<p>A competitor ad in a slot above the loyal brand's best position steals a loyal shopper with probability</p>
+<p>\[\sigma_{\text{steal}} = \begin{cases} \sigma_{\text{def}} \approx 0.01\text{–}0.05 &amp; \text{the brand also has an ad at or above that slot}\\ \sigma_{\text{undef}} \approx 0.18\text{–}0.42 &amp; \text{the brand is absent from paid slots}\end{cases}\]</p>
+<p>and stolen shoppers convert at ≈ 0.3× (the 46% fast-bounce finding). This turns "pause the brand keyword" from a free saving (today, ι ≈ 0.15) into a <strong>conditional</strong> decision: cheap when no one conquests, expensive when someone does. It is the first place where a competitor's behaviour (Module D) changes the value of our own lever.</p>
+<h3>3.3 "Butter ≈ Amul": queries owned by a brand</h3>
+<p>Brand–category association is a large π^b on a generic query. Default table for <code>sc2_brand_assoc</code> (city-average; per-city values vary, see §3.5):</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Public label</th>
+<th>π^Aurel</th>
+<th>π^Velora</th>
+<th>π^Nimbus</th>
+<th>π^open</th>
+<th>Emergent behaviour for <strong>Aurel</strong> ads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K01 aurel</td>
+<td>brand</td>
+<td>0.85</td>
+<td>—</td>
+<td>—</td>
+<td>0.15</td>
+<td>brand-like: ι^brand ≈ 0.1–0.2 (defend only if conquested)</td>
+</tr>
+<tr>
+<td>K02 aurel soap</td>
+<td>brand</td>
+<td>0.90</td>
+<td>—</td>
+<td>—</td>
+<td>0.10</td>
+<td>brand-like</td>
+</tr>
+<tr>
+<td>K03 soap</td>
+<td>generic</td>
+<td>0.10</td>
+<td>0.25</td>
+<td>0.05</td>
+<td>0.60</td>
+<td>true generic: mix of expansion and stealing, <strong>and</strong> sibling cannibalization among S1/S3/S5</td>
+</tr>
+<tr>
+<td>K05 body wash</td>
+<td>generic</td>
+<td>0.05</td>
+<td>0.05</td>
+<td><strong>0.45</strong></td>
+<td>0.45</td>
+<td><strong>challenger</strong>: Nimbus "owns" body wash. High ι, low conversion</td>
+</tr>
+<tr>
+<td>K07 sandal soap</td>
+<td>generic</td>
+<td><strong>0.60</strong></td>
+<td>0.05</td>
+<td>—</td>
+<td>0.35</td>
+<td><strong>owned by Aurel</strong>: behaves like a brand keyword although labelled generic. The "butter ≈ Amul" case from Aurel's side</td>
+</tr>
+<tr>
+<td>K09 velora</td>
+<td>competition</td>
+<td>—</td>
+<td>0.85</td>
+<td>—</td>
+<td>0.15</td>
+<td>conquest: steal-only, poor conversion</td>
+</tr>
+<tr>
+<td>K10 nimbus body wash</td>
+<td>competition</td>
+<td>—</td>
+<td>—</td>
+<td>0.90</td>
+<td>0.10</td>
+<td>conquest</td>
+</tr>
+</tbody>
+</table></div>
+<p>The <strong>trap</strong>: today's <code>_BID_MULT</code> and the plan's <code>goal_droas</code> key off <code>keyword_type</code>. In v2, K07's label says "generic, goal 3.2×", but its direct ROAS looks brand-like (high) and its brand-incremental ROAS is low. A policy that trusts labels over-bids K07; a policy that learns "K07 ≈ Aurel" from data (organic share of Aurel on K07, flat organic when ads pause) does not.</p>
+<h3>3.4 Keyword ↔ keyword: reformulation</h3>
+<p>A loyal-b shopper on a generic query who does not see b in the top positions <strong>reformulates</strong> to b's brand query with probability ρ_reform (default 0.4), otherwise buys from the open shelf or leaves. Effects:</p>
+<ul>
+<li>pausing Aurel on K03 "soap" raises searches on K01 "aurel" the same day;</li>
+<li>K01's ad orders rise and its attributed ROAS <strong>improves</strong> while brand totals fall: a classic attribution illusion;</li>
+<li>the linkage graph gets a new edge type, <em>keyword → keyword (reformulation)</em>, recoverable from the day-level correlation of K03 Aurel visibility with K01 volume.</li>
+</ul>
+<h3>3.5 Geography of brand strength</h3>
+<p>π varies by city (log-normal around the table with a city tilt): Aurel stronger in the South (BLR, HYD), Velora in the North (DEL), like Amul's regional strength (Gujarat &gt; rest). This creates <em>brand × geo</em> linkages and makes regional macro goals ("grow North") genuinely harder than "grow South".</p>
+<hr />
+<h2>4. Module C — calendar: seasonal, festive, ephemeral (D5, D7)</h2>
+<h3>4.1 Event calendar</h3>
+<pre><code class="language-json">&quot;calendar&quot;: {
+  &quot;seasonal&quot;: [
+    {&quot;keywords&quot;: [&quot;K12&quot;], &quot;shape&quot;: &quot;sin&quot;, &quot;period_days&quot;: 365, &quot;peak_day&quot;: 40, &quot;amp&quot;: 0.30}
+  ],
+  &quot;events&quot;: [
+    {&quot;id&quot;: &quot;FEST&quot;, &quot;peak_day&quot;: 56, &quot;ramp_days&quot;: 14, &quot;tail_days&quot;: 3,
+     &quot;demand&quot;: {&quot;K11&quot;: 6.0, &quot;K03&quot;: 1.15, &quot;K01&quot;: 1.10}, &quot;evening_intent_lift&quot;: 1.25,
+     &quot;competitor_budget_mult&quot;: 2.5,
+     &quot;pull_forward&quot;: {&quot;keywords&quot;: [&quot;K03&quot;, &quot;K04&quot;, &quot;K07&quot;], &quot;rho&quot;: 0.5, &quot;days_after&quot;: 14}}
+  ],
+  &quot;ephemeral_keywords&quot;: [{&quot;id&quot;: &quot;K11&quot;, &quot;keyword&quot;: &quot;bath gift set&quot;, &quot;live_from&quot;: 42, &quot;live_to&quot;: 59}],
+  &quot;ephemeral_skus&quot;: [{&quot;id&quot;: &quot;S6&quot;, &quot;name&quot;: &quot;Aurel Festive Gift Pack&quot;, &quot;nest&quot;: &quot;bar&quot;, &quot;asp&quot;: 549,
+                       &quot;stock_by_city&quot;: {&quot;DEL&quot;: 2400, &quot;MUM&quot;: 1800, &quot;BLR&quot;: 1600, &quot;HYD&quot;: 900, &quot;PUN&quot;: 600},
+                       &quot;live_from&quot;: 42, &quot;live_to&quot;: 59, &quot;salvage_frac&quot;: 0.4}]
+}
+</code></pre>
+<p>(Days are simulator day indices. With <code>START_DATE</code> moved to 2026-09-14, day 56 ≈ 9 Nov, near Diwali 2026*.)</p>
+<h3>4.2 Mechanics</h3>
+<ul>
+<li><strong>Festive demand curve</strong> for keyword k: \(m_k(t) = 1 + (A_k - 1)\cdot\exp\!\big(-\tfrac{(t - t^*)^2}{2w^2}\big)\) for t ≤ t* + tail, using the ramp width w; ephemeral keywords have m = 0 outside their live window.</li>
+<li><strong>Evening intent lift</strong> in the window (the "7 pm before a gathering" effect): purchase utility +log(1.25) in the evening daypart.</li>
+<li><strong>Pull-forward</strong> (temporal cannibalization): excess purchases E = Σ_t (m_k(t) − 1)·base during the window reduce base demand over the next <code>days_after</code> days by ρ·E, spread evenly. Total category units over the window plus tail rise by only (1 − ρ)·E. A policy that scores itself on the festive week alone over-states its lift; one that keeps spending into the post-festive dip buys depressed demand.</li>
+<li><strong>Finite stock</strong> for S6: each unit sold (ad or organic) depletes city stock; at zero, OSA → 0 and its ads stop serving (existing OSA gating). Unsold stock at <code>live_to</code> is salvaged at 40% of ASP: a real cost of under-promotion.</li>
+<li><strong>Cold start</strong>: K11 and S6 have <strong>no warm-up history</strong>. <code>keyword_sku</code> lists S6's relevance to K11, K01, K03 and S1/S3's relevance to K11 (public). The only way to price these cells is to transfer from analogues in the linkage graph (K11 ↔ K03 through shared SKUs; S6 ↔ S1 through the nest). This tests graph reasoning (deck: retrieve → compose → verify) directly.</li>
+<li><strong>Seasonal</strong> keyword K12 "antibacterial soap" (monsoon, ±30%) co-moves with nothing we control. If a policy raises bids on K12 just as its season rises, a naive before/after reads the season as ad lift. The day fixed effects in our ι estimator absorb <em>common</em> seasonality but not <em>keyword-specific</em> seasonality; v2 makes that difference matter (requires keyword × week effects).</li>
+</ul>
+<hr />
+<h2>5. Module D — competitor agents (D6)</h2>
+<p>Replace the fixed median of the competitor level z with a small set of competitor agents (Velora, Nimbus, plus a long-tail "rest") that pace a daily budget:</p>
+<p>\[\text{bidmult}_{c}(t+1) = \text{bidmult}_c(t)\cdot\exp\!\Big(\eta\cdot\frac{B_c(t) - \text{spend}_c(t)}{B_c(t)}\Big),\qquad B_c(t) = B_c^0\cdot \text{competitor\_budget\_mult}(t)\]</p>
+<ul>
+<li>Per-auction spread stays log-normal (σ = 0.30) around the agents' bid level, so <code>_slot_shares</code> keeps its closed form.</li>
+<li>During the festive window B_c × 2.5 ⇒ clearing CPMs rise by an <strong>emergent</strong> ≈ 1.3–1.5× (calibrate η so it lands in the trade-press range of 30–50%), while searches rise less: attention does not scale with spend.</li>
+<li><strong>Opportunism</strong>: a competitor raises its bid on Aurel's brand query when Aurel's slot-1 share there drops below 50% for 3 days (stealing is cheap when the brand is absent, §3.2). This makes "pause brand terms" a dynamic, not static, decision.</li>
+<li>The legacy <code>price</code> shock (MUM ×1.35 on K05/K06) becomes one competitor's budget step in the legacy-compatible scenario.</li>
+</ul>
+<hr />
+<h2>6. Module E — optional organic halo (D9, off by default)</h2>
+<p>Organic rank r_{i,q} updates weekly: if i's 7-day orders on q exceed the item above it by more than h (default 20%), i moves up one position; the reverse moves it down. Ads drive orders, so ads can move organic rank with a lag. Default <strong>off</strong>, because the current calibration and finding *8 ("organic +20% is infeasible through ads") assume no halo. Scenario <code>sc5_halo</code> turns it on to test whether methods <strong>detect</strong> a mechanism when present and do <strong>not</strong> hallucinate it when absent.</p>
+<hr />
+<h2>7. Module F — Scorer v2 and observations</h2>
+<h3>7.1 Truth-side scoring (policy never sees it)</h3>
+<p>With common random numbers, the scorer runs the horizon twice: under the policy and under <strong>"all Aurel ads off from the end of warm-up"</strong>. Then</p>
+<p>\[\text{IncRev}^{\text{brand}} = \sum_{t,s,c} \text{offtake}^{\text{policy}}_{t,s,c} - \text{offtake}^{\text{ads-off}}_{t,s,c},\qquad \text{iROAS} = \frac{\text{IncRev}^{\text{brand}}}{\text{Spend}}\]</p>
+<p>plus the §2.4 decomposition per cell, per SKU, per nest, per event phase, and a <strong>per-goal pass/fail</strong> table for whatever GoalSpec is active (<a href="#goals" data-tab="goals">03</a>). The legacy score (offtake s.t. floor) is still reported, so old and new results stay comparable.</p>
+<h3>7.2 New observations (public)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Content</th>
+<th>Why realistic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shelf_daily</code></td>
+<td>per query × city: organic rank of every listed item (own and competitor), daily</td>
+<td>Search results are public; brands scrape them</td>
+</tr>
+<tr>
+<td><code>category_share_weekly</code></td>
+<td>per nest × city: own-brand share of category units, ±3 pp noise, <strong>7-day lag</strong></td>
+<td>Platforms and panels sell category insights with a lag</td>
+</tr>
+<tr>
+<td><code>calendar_public</code></td>
+<td>event dates, ephemeral keyword/SKU live windows, S6 stock by city</td>
+<td>Brands know their own festive plans and stock</td>
+</tr>
+<tr>
+<td><code>lift_readout</code> (on request)</td>
+<td>result of a <strong>holdout action</strong>: one cell paused in one city for one run ⇒ noisy brand-incremental estimate with a CI</td>
+<td>Lift tests exist and cost money; <a href="#landscape" data-tab="landscape">01 §3.3</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>A seventh lever, <code>request_holdout(cell, city)</code>, is added to <code>ACTION_TYPES</code>; it is a measurement action with a real cost (lost sales in that cell) and goes through the guardrails like any other.</p>
+<hr />
+<h2>8. Scenario files</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>Flags on</th>
+<th>Main trap</th>
+<th>What a good policy does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dev.json</code> (unchanged)</td>
+<td>none</td>
+<td>—</td>
+<td>— (backward compatibility, byte-identical outputs)</td>
+</tr>
+<tr>
+<td><code>sc1_cannibal.json</code></td>
+<td>A</td>
+<td>raising S1 and S3 together on K03/K04 trades share between them; SKU-level ι says both are fine</td>
+<td>raise the one with higher brand-level marginal value per market, hold the other</td>
+</tr>
+<tr>
+<td><code>sc2_brand_assoc.json</code></td>
+<td>A, B, D(opportunism)</td>
+<td>K07 labelled generic but Aurel-owned; pausing K03 lifts K01 attributed ROAS; pausing K01 invites conquest</td>
+<td>treat K07 like a brand term; judge K03 on brand totals; defend K01 only where conquested</td>
+</tr>
+<tr>
+<td><code>sc3_festive.json</code></td>
+<td>A, C, D</td>
+<td>cold-start K11/S6; CPM ×1.4; pull-forward; stock-out</td>
+<td>pre-load spend on S6/K11 within stock; stop before stock-out; cut core generics in the post-festive dip</td>
+</tr>
+<tr>
+<td><code>sc4_seasonal.json</code></td>
+<td>A, C(seasonal)</td>
+<td>K12's season masquerades as ad lift</td>
+<td>estimate with keyword × week effects or a holdout</td>
+</tr>
+<tr>
+<td><code>sc5_halo.json</code></td>
+<td>A, E</td>
+<td>halo present: ads move organic rank</td>
+<td>detect and value the lagged organic gain</td>
+</tr>
+<tr>
+<td><code>sc_all.json</code></td>
+<td>A–D</td>
+<td>all of the above at once</td>
+<td>— (the integration test for E1–E3 in <a href="#experiments" data-tab="experiments">04</a>)</td>
+</tr>
+<tr>
+<td><code>eval_*.json</code> (private)</td>
+<td>same families, different values</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each scenario's truth is drawn from priors with the seed (as today), so the same scenario family produces many worlds; hidden values never ship to policies.</p>
+<hr />
+<h2>9. Effect on the hypercube and linkage work</h2>
+<ul>
+<li><strong>Hypercube axes</strong> gain <strong>time phase</strong> T ∈ {normal, ramp, peak, tail, post} and the <strong>owner of the query</strong> as a keyword-node attribute: H = S × C × K × D × T × Λ. New nodes: S6, K11, K12, competitor items (read-only).</li>
+<li><strong>New edge types</strong> for the linkage graph, each with a ground-truth table to score recovery:</li>
+</ul>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Truth field</th>
+<th>How a method can estimate it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKU → SKU diversion</td>
+<td><code>truth.diversion</code></td>
+<td>cross-SKU regression of sibling organic on own ad orders (now non-spurious), category share</td>
+</tr>
+<tr>
+<td>keyword → brand ownership π</td>
+<td><code>truth.intent_mix</code></td>
+<td>own organic share on the query; organic response to pauses</td>
+</tr>
+<tr>
+<td>keyword → keyword reformulation</td>
+<td><code>truth.reformulation</code></td>
+<td>day-level co-movement of brand-query volume with own visibility on the generic</td>
+</tr>
+<tr>
+<td>event → keyword demand</td>
+<td><code>truth.calendar</code></td>
+<td>public calendar + observed volume</td>
+</tr>
+<tr>
+<td>competitor → keyword pressure</td>
+<td><code>truth.competitors</code></td>
+<td>CPM level by keyword over time</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The four trust levels from the linkage report (declared / measured / mechanism-backed / confounded / spurious) stay; v2 adds truth for all of them so "confounded" and "spurious" can be graded, not just argued.</li>
+</ul>
+<hr />
+<h2>10. Implementation plan ($0, no LLM calls)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Files</th>
+<th>Test that gates it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>gpc/shelf.py</code> (nested logit, decomposition), flag <code>shelf_model: legacy\|nested_logit</code></td>
+<td>legacy path byte-identical on <code>dev</code>; MNL limit (λ=1) matches IIA; diversion rows sum to ≤ 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>gpc/intent.py</code> (π, stealing, reformulation)</td>
+<td>calibration ranges in CALIBRATION.md hold for <code>sc2</code> warm-up</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>gpc/calendar.py</code>, <code>gpc/stock.py</code></td>
+<td>pull-forward conserves units: Σ excess·ρ = Σ dip; stock never negative; S6 OSA 0 after stock-out</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>gpc/competitors.py</code></td>
+<td>festive CPM ratio in [1.3, 1.5] on <code>sc3</code>; legacy shock reproduced</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>gpc/score_v2.py</code> (counterfactual, decomposition, goal table)</td>
+<td>IncRev = 0 for <code>no_op</code>; decomposition sums to attributed orders; CRN: same seed ⇒ same counterfactual</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>observation.py</code> additions, <code>request_holdout</code> lever + guardrail rules</td>
+<td>G0 schema accepts it; holdout readout CI covers truth ≥ 90% over 50 seeds</td>
+</tr>
+<tr>
+<td>7</td>
+<td>scenario JSONs, <code>make scenarios</code></td>
+<td>all scenarios run in &lt; 30 s per 70-day world</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 class="caveats">Assumptions and caveats</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Assumption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*1</td>
+<td>Nested logit is a modelling choice, not a fact about Blinkit shoppers. It is the simplest model with tunable within-nest substitution; real substitution may be asymmetric (premium → value but not back), which needs a richer model.</td>
+</tr>
+<tr>
+<td>*2</td>
+<td>The intent-mix values (e.g. π^Nimbus = 0.45 on "body wash") are illustrative. They are chosen to produce the traps, not estimated from data.</td>
+</tr>
+<tr>
+<td>*3</td>
+<td>Simonov et al. measured clicks on Bing web search; transferring the steal rates to quick-commerce product search is an assumption.</td>
+</tr>
+<tr>
+<td>*4</td>
+<td>Diwali 2026 falls in early-to-mid November; the exact date and the START_DATE shift should be confirmed before fixing <code>peak_day</code>. Days in the scenario are indices, so the mechanics do not depend on the real date.</td>
+</tr>
+<tr>
+<td>*5</td>
+<td>The pull-forward coefficient ρ = 0.5 is a guess; stockpiling of soap around festivals is plausible but unmeasured here.</td>
+</tr>
+<tr>
+<td>*6</td>
+<td>Counterfactual scoring with "all ads off" defines incrementality relative to <em>no advertising</em>, not relative to the warm-up policy. Both baselines are reasonable; we report the first and can add the second.</td>
+</tr>
+<tr>
+<td>*7</td>
+<td>Backward compatibility is a test target, not yet verified: floating-point order changes in shared code paths could break byte identity and would need a tolerance.</td>
+</tr>
+</tbody>
+</table></div></section>
+<section id="goals" role="tabpanel" aria-labelledby="t-goals" hidden><p class="eyebrow">Doc 03 · 03_goals_macro_micro.md</p><h1>Goals: one global iROAS objective, then sub-objectives, then constraints; macro vs micro made specific</h1><blockquote>
+<p>Part of <a href="#overview" data-tab="overview">grid_design_simulator</a>. Extends GoalSpec from <code>explore-and-understand/05_l2dprime_macro_planner_and_explainability.md</code> §5 and the macro/micro section of report 06 §5.
+The simulator mechanics referenced here (sibling cannibalization, intent mix, calendar, stock) are in <a href="#simulator" data-tab="simulator">02</a>.</p>
+</blockquote>
+<hr />
+<h2>0. TL;DR</h2>
+<ol>
+<li><strong>"Maximise iROAS" is not yet a well-posed goal.</strong> A ratio is maximised by spending ₹1 on the single best cell. It needs a budget, a margin, or a marginal floor. We fix the global objective as <strong>maximise brand-level incremental revenue at a fixed budget B</strong>, which is the same thing as maximising iROAS at that budget, and report the other two forms.</li>
+<li><strong>Macro vs micro is a difference of scope, horizon, owner and unit, not of size.</strong> A macro goal is about a portfolio aggregate over weeks, owned by a brand or CMO, in money or share. A micro goal is about a cell or a small hypercube over days, owned by an operator, in delivery terms (slot share, pacing, stock cover).</li>
+<li><strong>They meet through prices.</strong> The macro problem has a budget price λ and a floor price μ. Each micro goal, once written as a constraint, gets its own shadow price: <em>what that goal costs the macro objective</em>. "S5 slot-1 ≥ 60% on K08 in DEL costs ₹410 of brand-incremental revenue per week" is the explanation format.</li>
+<li><strong>With cannibalization on, SKU-level goals and brand-level goals disagree.</strong> S1 can hit "+10% units" by taking units from S3. Macro goals must be scored at brand level; micro goals that are stated per SKU need a "not from siblings" clause or they reward cannibalization.</li>
+<li><strong>Goal ladder for the experiments</strong> (<a href="#experiments" data-tab="experiments">04</a>): G-0 global objective only → G-1 add 2 sub-objectives (a Pareto problem) → G-2 add 9 typed constraints (feasibility problem).</li>
+</ol>
+<hr />
+<h2>1. Making "iROAS" a well-posed objective</h2>
+<p>Let x be the policy's decisions, Spend(x) its spend over the horizon, and IncRev(x) the <strong>brand-level</strong> incremental revenue from the scorer v2 counterfactual.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Statement</th>
+<th>Optimum behaviour</th>
+<th>When it is the right goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ratio alone</td>
+<td>max IncRev/Spend</td>
+<td>degenerate: tiny spend on the top cell</td>
+<td>never as a stand-alone objective</td>
+</tr>
+<tr>
+<td><strong>F1 fixed budget</strong></td>
+<td>max IncRev s.t. Spend = B</td>
+<td>spends B, ordered by marginal iROAS</td>
+<td><strong>the global objective for E1</strong>, B = warm-up spend × 6 weeks</td>
+</tr>
+<tr>
+<td>F2 profit</td>
+<td>max m·IncRev − Spend (m = contribution margin)</td>
+<td>spends until marginal iROAS = 1/m</td>
+<td>when the budget is genuinely flexible</td>
+</tr>
+<tr>
+<td>F3 marginal floor</td>
+<td>max IncRev s.t. marginal iROAS ≥ θ on every rupee</td>
+<td>stops each cell where its marginal falls to θ</td>
+<td>when finance sets a hurdle rate</td>
+</tr>
+</tbody>
+</table></div>
+<p>Two scoring rules apply to all forms:</p>
+<ul>
+<li><strong>Brand level, not SKU level.</strong> IncRev counts expansion + stolen only. Sibling transfers are zero (<a href="#simulator" data-tab="simulator">02 §2.4</a>).</li>
+<li><strong>Horizon includes the tail.</strong> With the calendar on, IncRev runs to the end of the pull-forward window, so festive "lift" that was borrowed from later weeks is netted out.</li>
+</ul>
+<p>The legacy direct-ROAS floor (G8, ≥ 0.98 × warm-up) is <strong>not</strong> part of G-0. It comes back in G-2 as a constraint. Keeping it out of G-0 shows how much it costs: in the current world it already turns low-ι brand keywords into ROAS ballast (linkage report caveat *6).</p>
+<hr />
+<h2>2. What a goal is: the typed record</h2>
+<pre><code>Goal {
+  id:        &quot;G-NORTH-SOV&quot;
+  kind:      objective | constraint | target | preference
+  scope:     hypercube expression, e.g. sku∈{S5} × city∈North × kw∈{K08,K01,K03} × phase∈{normal}
+  metric:    inc_revenue | units | slot1_share | spend | droas | iroas | sell_through | category_share | sibling_share
+  basis:     direct | sku_incremental | brand_incremental          # what &quot;revenue&quot; means
+  aggregate: sum | ratio_of_sums | min_over_cells | max_over_cells
+  op, value: ≥ 0.60
+  horizon:   run | 6_runs | event_window | event_window+tail
+  chance:    deterministic | P(≥ 0.9) | expected                   # how it is judged under noise
+  priority:  1..n (lexicographic tiers) or weight
+  owner:     cmo | brand_manager | operator | finance | platform_policy
+  provenance:[{field, quote}]                                     # the sentence it came from
+}
+</code></pre>
+<p><code>basis</code> and <code>chance</code> are the two fields the old GoalSpec lacked. Without <code>basis</code>, "ROAS ≥ 3" is ambiguous between direct and incremental, a factor of up to 6 on brand keywords. Without <code>chance</code>, a goal on a realised outcome cannot be verified by a deterministic compiler (<a href="#compiler" data-tab="compiler">05 §3</a>).</p>
+<hr />
+<h2>3. Macro vs micro, specifically</h2>
+<h3>3.1 The hierarchy</h3>
+<div class="diagram"><pre class="mmd">flowchart TD
+  subgraph MACRO[&quot;Macro: aggregates over weeks, in ₹ or share&quot;]
+    L0[&quot;L0 Portfolio: all Aurel&quot;] --&gt; L1[&quot;L1 Nest: bar soap · liquid&quot;]
+    L1 --&gt; L2[&quot;L2 SKU or region: S5 · North&quot;]
+  end
+  subgraph MICRO[&quot;Micro: cells over days, in delivery terms&quot;]
+    L3[&quot;L3 SKU × city&quot;] --&gt; L4[&quot;L4 cell: SKU × city × keyword&quot;]
+    L4 --&gt; L5[&quot;L5 cell × daypart&quot;]
+    L5 --&gt; L6[&quot;L6 bid / budget value&quot;]
+  end
+  L2 --&gt; L3
+  L0 -. &quot;prices λ (budget), μ (floor)&quot; .-&gt; L4
+  L4 -. &quot;ν: what each micro goal costs&quot; .-&gt; L0
+</pre></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Node</th>
+<th>Example</th>
+<th>Typical owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0</td>
+<td>Portfolio (brand)</td>
+<td>all Aurel</td>
+<td>CMO, finance</td>
+</tr>
+<tr>
+<td>L1</td>
+<td>Category nest</td>
+<td>bar soap, liquid</td>
+<td>brand manager</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>SKU, or region</td>
+<td>S5, North</td>
+<td>brand manager, regional lead</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>SKU × city</td>
+<td>S5 × DEL</td>
+<td>operator</td>
+</tr>
+<tr>
+<td>L4</td>
+<td>Cell: SKU × city × keyword</td>
+<td>S5 × DEL × K08</td>
+<td>operator</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>Cell × daypart</td>
+<td>… × evening</td>
+<td>operator / platform</td>
+</tr>
+<tr>
+<td>L6</td>
+<td>Bid, budget value</td>
+<td>₹420 CPM</td>
+<td>the optimiser</td>
+</tr>
+</tbody>
+</table></div>
+<h3>3.2 The distinction</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Macro goal</th>
+<th>Micro goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope</td>
+<td>L0–L2 aggregate (a large hypercube)</td>
+<td>L3–L5 (a small hypercube)</td>
+</tr>
+<tr>
+<td>Horizon</td>
+<td>≥ 1 run, often the event window or quarter</td>
+<td>a day to a run</td>
+</tr>
+<tr>
+<td>Unit</td>
+<td>₹ incremental, category share, iROAS</td>
+<td>slot share, pacing, stock cover, delivery</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>CMO, brand manager, finance</td>
+<td>operator, platform rules</td>
+</tr>
+<tr>
+<td>Who can verify it</td>
+<td>only the scorer, after the fact (outcome)</td>
+<td>often the compiler, before acting (action or projection)</td>
+</tr>
+<tr>
+<td>Typical kind</td>
+<td>objective, or soft target</td>
+<td>hard constraint, or preference</td>
+</tr>
+<tr>
+<td>Failure mode</td>
+<td>silently under-delivers</td>
+<td>blocks or wastes spend locally</td>
+</tr>
+</tbody>
+</table></div>
+<p>A goal like "North +5% units" is <strong>macro</strong> even though it is about one region: it is an L2 aggregate over weeks, in business units. A goal like "never let S6 ads run with &lt; 2 days of stock cover" is <strong>micro</strong> even though it applies everywhere: it is an L3 delivery rule judged per day.</p>
+<h3>3.3 How they meet: prices</h3>
+<p>Write the macro problem with the micro goals as constraints:</p>
+<p>\[\max_x\ \text{IncRev}(x)\quad\text{s.t.}\quad \text{Spend}(x)\le B\ [\lambda],\quad \text{dROAS}(x)\ge R\ [\mu],\quad g_j(x)\ge v_j\ [\nu_j]\ \ \forall j\in\text{micro}\]</p>
+<p>At the optimum each cell receives spend until its marginal value equals the prices it touches:</p>
+<p>\[\iota^{\text{brand}}_i\, r_i&#x27;(s_i) + \mu\,(r_i&#x27;(s_i) - R) + \sum_j \nu_j\,\frac{\partial g_j}{\partial s_i} = \lambda\]</p>
+<ul>
+<li>λ and μ are the <strong>macro prices</strong>, the same duals Balseiro et al. pace online (<a href="#landscape" data-tab="landscape">01 §3.5</a>).</li>
+<li>ν_j is the <strong>price of micro goal j</strong>: the IncRev lost per unit of tightening. ν_j = 0 means the goal costs nothing (not binding). That gives the explanation sentence for every goal, binding or not.</li>
+<li><strong>Macro → micro handoff.</strong> Each hypercube H receives an envelope (min/max spend, the prices λ, μ). The in-box optimiser only has to beat λ inside H; it never reasons about the whole portfolio. This is the "macro → micro" step in the user's turn-n loop.</li>
+<li><strong>Micro → macro feedback.</strong> If micro goals are infeasible inside H's envelope, the box returns an IIS (irreducible infeasible subset) instead of a plan, and the macro layer either relaxes or re-prices.</li>
+</ul>
+<h3>3.4 Conflict taxonomy, with grid examples</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Conflict</th>
+<th>Example in v2</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aligned</strong></td>
+<td>"max IncRev" and "defend K01 where Velora conquests" (defence is incremental when conquest is present, <a href="#simulator" data-tab="simulator">02 §3.2</a>)</td>
+<td>none needed; ν ≈ 0</td>
+</tr>
+<tr>
+<td><strong>Competing</strong> (share a budget)</td>
+<td>"North +5% units" vs "max IncRev" (Aurel is weak in North, so North rupees earn less)</td>
+<td>price it: ν_North; or a Pareto front</td>
+</tr>
+<tr>
+<td><strong>Contradictory</strong> (infeasible)</td>
+<td>"+20% organic S1" (ads cannot raise organic without halo, finding *8); "S6 sell-through ≥ 95%" with stock 2,400 in DEL and demand cap 1,900</td>
+<td>IIS + minimal relaxation ("feasible at 79%")</td>
+</tr>
+<tr>
+<td><strong>Measurement mismatch</strong></td>
+<td>"direct ROAS ≥ 4.5" vs "max brand IncRev": brand terms help the first and barely the second</td>
+<td>make <code>basis</code> explicit; show the cost of the direct floor as μ</td>
+</tr>
+<tr>
+<td><strong>Level mismatch</strong> (cannibalization)</td>
+<td>"S1 +10% units" met by taking S3's units on K03</td>
+<td>restate with <code>basis: brand_incremental</code> or add <code>sibling_share ≤ 30%</code></td>
+</tr>
+<tr>
+<td><strong>Temporal</strong></td>
+<td>"festive week +40%" vs "event window + tail IncRev" (pull-forward)</td>
+<td>score over window+tail; the week goal becomes a target, not the objective</td>
+</tr>
+</tbody>
+</table></div>
+<h3>3.5 Aggregation pitfalls the scorer must avoid</h3>
+<ul>
+<li>Portfolio iROAS is a <strong>ratio of sums</strong>, not a mean of cell iROAS. A policy can raise every cell's iROAS and lower the portfolio's (Simpson-style mix shift).</li>
+<li><strong>Sum of SKU incremental ≠ brand incremental</strong> whenever siblings share a nest. With λ_bar = 0.35, the gap on K03/K04 can be most of the SKU number.</li>
+<li><strong>Average vs marginal</strong>: goals are set on averages; allocation must use marginals (linkage caveat *5). A cell can beat its average-ROAS goal while its last rupee is far below λ.</li>
+</ul>
+<hr />
+<h2>4. The goal ladder used in the experiments</h2>
+<h3>G-0: one global objective</h3>
+<blockquote>
+<p><strong>max brand-level IncRev over the horizon (incl. tail), Spend = B.</strong> Nothing else.</p>
+</blockquote>
+<p>Only box bounds on the decision vector (they define the search space). Report direct ROAS, sibling share, stock outcomes, but do not constrain them.</p>
+<h3>G-1: add sub-objectives (a 3-objective problem)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Objective</th>
+<th>Scope</th>
+<th>Why it conflicts with f1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f1 = brand IncRev</td>
+<td>L0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>f2 = S5 slot-1 share on {K08, K01, K03} in North</td>
+<td>L2–L4 (new launch, 45 days old)</td>
+<td>North is Velora-strong; S5 competes with S1/S3 on K01/K03 (68–80% displacement today)</td>
+</tr>
+<tr>
+<td>f3 = S6 sell-through by event end</td>
+<td>L2 (festive SKU)</td>
+<td>cold start, CPM ×1.4, and a stock-out stops ads; pushing it can buy pull-forward</td>
+</tr>
+</tbody>
+</table></div>
+<p>Scored by hypervolume with a fixed reference point per scenario (computed from the no-op and the oracle). Scalarised views (weighted, Chebyshev, lexicographic) are reported for comparison.</p>
+<h3>G-2: add constraints, typed by how they can be checked</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Constraint</th>
+<th>Class</th>
+<th>Checkable before acting?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td>Spend ≤ B per run; bid in [₹200, ₹10k]; bid step ±50%; budget step +50%/−30% (G1, G2, G6)</td>
+<td><strong>action</strong></td>
+<td>yes, exactly</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>No raise where 3-day OSA &lt; 60% (G4); no S6 ads with &lt; 2 days stock cover</td>
+<td><strong>state-gated</strong></td>
+<td>yes, from observations</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>No spend on K11 or S6 outside the live window</td>
+<td><strong>action</strong> (calendar)</td>
+<td>yes, exactly</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>Projected portfolio direct ROAS ≥ 0.98 × warm-up (G8)</td>
+<td><strong>projected outcome</strong></td>
+<td>on the projection only</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>North share of spend ≥ 25% each run</td>
+<td><strong>action</strong> (linear on decisions)</td>
+<td>yes, exactly</td>
+</tr>
+<tr>
+<td>C6</td>
+<td>Competitor-keyword spend ≤ 10% of total</td>
+<td><strong>action</strong></td>
+<td>yes, exactly</td>
+</tr>
+<tr>
+<td>C7</td>
+<td>K01 slot-1 share ≥ 70% in any city where a competitor bids on it</td>
+<td><strong>projected outcome</strong></td>
+<td>on the projection, via the slot model</td>
+</tr>
+<tr>
+<td>C8</td>
+<td>Sibling share of attributed orders ≤ 30% in every nest × city</td>
+<td><strong>realised outcome</strong> (needs truth or a lift test)</td>
+<td>no; only via an estimate with a buffer</td>
+</tr>
+<tr>
+<td>C9</td>
+<td><strong>Realised</strong> portfolio direct ROAS ≥ 0.98 × warm-up over the horizon</td>
+<td><strong>realised outcome</strong></td>
+<td>no; chance constraint, P ≥ 0.9</td>
+</tr>
+</tbody>
+</table></div>
+<p>The classes matter for <a href="#experiments" data-tab="experiments">04</a> and <a href="#compiler" data-tab="compiler">05</a>: a compiler guarantees <strong>action</strong> and <strong>state-gated</strong> constraints by construction; it guarantees <strong>projected</strong> constraints only relative to its projection; it can only <strong>buffer</strong> realised-outcome constraints (Chimera's 1% safety buffer is the same idea for rounding).</p>
+<hr />
+<h2>5. Scenario-specific macro/micro examples</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Macro goal (owner)</th>
+<th>Micro goals (owner)</th>
+<th>What makes it hard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sc1 cannibal</td>
+<td>"Bar soap +5% brand IncRev, all cities" (brand mgr)</td>
+<td>"S3 never below slot 5 on K04 in BLR" (operator)</td>
+<td>raising S1 and S3 together mostly trades share; the micro goal forces S3 visibility that cannibalizes S1</td>
+</tr>
+<tr>
+<td>sc2 brand assoc</td>
+<td>"Grow body-wash share vs Nimbus" (brand mgr)</td>
+<td>"Defend K01 slot-1 where conquested" (operator)</td>
+<td>K05 is Nimbus-owned: high ι, low conversion; K07 looks generic but is ours</td>
+</tr>
+<tr>
+<td>sc3 festive</td>
+<td>"Max IncRev over festive window + tail" (CMO)</td>
+<td>"S6 sell-through ≥ 85% per city", "no ads below 2 days cover" (ops)</td>
+<td>cold start, CPM inflation, pull-forward, stock-out; the two micro goals pull opposite ways near stock-out</td>
+</tr>
+<tr>
+<td>sc4 seasonal</td>
+<td>"Hold iROAS through monsoon" (finance)</td>
+<td>"K12 bids follow the season" (operator)</td>
+<td>season masquerades as ad lift; a micro rule that "follows" the season can look brilliant and add nothing</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>6. Explainability: the goal ledger</h2>
+<p>Every decision record from <a href="#compiler" data-tab="compiler">05</a> carries a goal ledger:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Kind</th>
+<th>Status</th>
+<th>Binding?</th>
+<th>Price</th>
+<th>Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f1 IncRev</td>
+<td>objective</td>
+<td>₹1.92L</td>
+<td>—</td>
+<td>λ = 2.3</td>
+<td>"Last rupee anywhere earns 2.3 incremental"</td>
+</tr>
+<tr>
+<td>C4 dROAS floor</td>
+<td>constraint</td>
+<td>4.61 ≥ 4.54</td>
+<td>yes</td>
+<td>μ = 0.4</td>
+<td>"The direct floor costs ₹2.1k/week; it keeps K01 funded"</td>
+</tr>
+<tr>
+<td>C5 North ≥ 25%</td>
+<td>constraint</td>
+<td>25.0%</td>
+<td>yes</td>
+<td>ν = 0.7</td>
+<td>"North minimum costs ₹410/week"</td>
+</tr>
+<tr>
+<td>C8 sibling ≤ 30%</td>
+<td>constraint</td>
+<td>22% (est., CI 15–31%)</td>
+<td>no</td>
+<td>0</td>
+<td>"Not binding; estimate from the K03 holdout"</td>
+</tr>
+<tr>
+<td>f2 S5 North SOV</td>
+<td>objective</td>
+<td>52%</td>
+<td>—</td>
+<td>—</td>
+<td>"Front point 3 of 7; +8 pp costs ₹1.3k IncRev"</td>
+</tr>
+</tbody>
+</table></div>
+<p>(Values illustrative; nothing is built yet.)</p>
+<hr />
+<h2 class="caveats">Assumptions and caveats</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Assumption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*1</td>
+<td>B = warm-up spend × 6 weeks keeps E1 comparable with the legacy score; a different B changes which cells are marginal.</td>
+</tr>
+<tr>
+<td>*2</td>
+<td>The KKT condition in §3.3 assumes concave, differentiable response. The real grid is discrete (bid options), so the prices come from the LP relaxation or from the MILP's duals at the optimal basis, and are approximate at breakpoints.</td>
+</tr>
+<tr>
+<td>*3</td>
+<td>The goal ladder's thresholds (25% North, 10% competitor, 30% sibling, 70% K01 defence) are illustrative policy choices, picked so that each constraint binds in at least one scenario.</td>
+</tr>
+<tr>
+<td>*4</td>
+<td>f2 and f3 are proxies for what a brand manager means by "launch visibility" and "festive success". Other proxies (new-to-brand buyers, sell-through value) would change the front.</td>
+</tr>
+<tr>
+<td>*5</td>
+<td>Brand-level IncRev needs the counterfactual, which only the simulator has. In production it would come from lift tests and models, with error that this design does not represent in G-0.</td>
+</tr>
+</tbody>
+</table></div></section>
+<section id="experiments" role="tabpanel" aria-labelledby="t-experiments" hidden><p class="eyebrow">Doc 04 · 04_experiment_protocol.md</p><h1>Experiments E1–E3: MoHOLLM on the v2 market, from one objective to constraints</h1><blockquote>
+<p>Part of <a href="#overview" data-tab="overview">grid_design_simulator</a>. Uses the simulator in <a href="#simulator" data-tab="simulator">02</a>, the goal ladder G-0/G-1/G-2 in <a href="#goals" data-tab="goals">03 §4</a>, and the compiler in <a href="#compiler" data-tab="compiler">05</a>.
+Nothing here has been run. <strong>No paid run starts without the user's go-ahead</strong>; the pilot → record → replay → project protocol and the ledger from <code>sandbox/</code> apply.</p>
+</blockquote>
+<hr />
+<h2>0. TL;DR</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Experiment</th>
+<th>Goal level</th>
+<th>Question</th>
+<th>Prediction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E1</strong></td>
+<td>G-0: max brand IncRev at budget B</td>
+<td>Does partitioned MoHOLLM find good allocations in a 12-d decision space, versus random, classical BO, an unpartitioned LLM and an oracle?</td>
+<td>Partitioned ≥ unpartitioned; near BO; well short of the oracle on scenarios with cold-start cells</td>
+</tr>
+<tr>
+<td><strong>E2</strong></td>
+<td>G-1: three objectives (IncRev, S5 North SOV, S6 sell-through)</td>
+<td>Does it trace a useful Pareto front?</td>
+<td>Front shape is right; coverage of the S6 extreme is poor (cold start)</td>
+</tr>
+<tr>
+<td><strong>E3</strong></td>
+<td>G-2: nine typed constraints</td>
+<td>Which constraint classes does MoHOLLM respect, and what does a compiler add?</td>
+<td>Box: always. Linear-on-decision: only by encoding. Outcome: violated during search, often at the end. Compiler: zero action/state violations by construction, buffered outcome violations, small regret</td>
+</tr>
+</tbody>
+</table></div>
+<p>The headline the user expects ("MoHOLLM won't respect constraints; it needs a compiler") is the E3 hypothesis H4–H6. The experiment is designed so that it can <strong>fail</strong>: if prompt-only MoHOLLM ends feasible on outcome constraints in ≥ 90% of seeds, the hypothesis is wrong for this problem.</p>
+<hr />
+<h2>1. Two tracks</h2>
+<div class="diagram"><pre class="mmd">flowchart LR
+  E1[&quot;E1 · G-0&lt;br/&gt;max brand IncRev at budget B&quot;] --&gt; E2[&quot;E2 · G-1&lt;br/&gt;+ S5 North SOV, S6 sell-through&lt;br/&gt;(Pareto, hypervolume)&quot;]
+  E2 --&gt; E3[&quot;E3 · G-2&lt;br/&gt;+ 9 typed constraints&quot;]
+  E3 --&gt; ARMS[&quot;prompt-only · penalty · reject ·&lt;br/&gt;compiler-repair · compiler-box&quot;]
+  O[&quot;Oracles O1 (in-space), O2 (full-space)&quot;] -.-&gt; E1
+  O -.-&gt; E2
+  O -.-&gt; E3
+</pre></div>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Track</th>
+<th>Search space</th>
+<th>Faithful to the paper?</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A (this doc)</strong></td>
+<td>A 12-d continuous decision vector decoded deterministically into all bids and budgets</td>
+<td>Yes: MoHOLLM's KD-tree partitions a box, the LLM proposes points inside a leaf</td>
+<td>Clean test of the method and of the constraint hypothesis</td>
+</tr>
+<tr>
+<td>B (later)</td>
+<td>Hypercube-native: KD-tree over the cell embedding from report 06 (log(1+iROAS), slot-1 share, run-out, ι_est), LLM proposes hypercubes, compiler + in-box MILP</td>
+<td>No; our adaptation</td>
+<td>Explainability and scale; reuses E1–E3's harness</td>
+</tr>
+</tbody>
+</table></div>
+<p>Track A first, because it isolates what MoHOLLM itself does.</p>
+<hr />
+<h2>2. Decision encoding and decoder (Track A)</h2>
+<h3>2.1 The vector x ∈ [0, 1]^12</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Dim</th>
+<th>Meaning</th>
+<th>Decoded range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1–x3</td>
+<td>bid multiplier by keyword type (brand, generic, competition)</td>
+<td>0.5–1.5 × live bid</td>
+</tr>
+<tr>
+<td>x4–x5</td>
+<td>bid multiplier by nest (bar, liquid)</td>
+<td>0.7–1.3</td>
+</tr>
+<tr>
+<td>x6–x8</td>
+<td>budget <strong>share</strong> by region (North, West, South)</td>
+<td>stick-breaking → simplex</td>
+</tr>
+<tr>
+<td>x9</td>
+<td>total budget scale</td>
+<td>0.8–1.2 × B/6 per run</td>
+</tr>
+<tr>
+<td>x10</td>
+<td>evening/night daypart tilt</td>
+<td>−1 night off … +1 evening ×1.2</td>
+</tr>
+<tr>
+<td>x11</td>
+<td>festive aggressiveness (K11, S6, window only)</td>
+<td>0–2 × base bid</td>
+</tr>
+<tr>
+<td>x12</td>
+<td>brand-defence threshold (defend K01 where competitor share &gt; x12)</td>
+<td>0–1</td>
+</tr>
+</tbody>
+</table></div>
+<p>The box [0, 1]^12 is MoHOLLM's native space. Note two things already: the <strong>region shares must sum to 1</strong> (a simplex, not a box), and the <strong>budget scale times shares</strong> couples dimensions. Encoding the simplex by stick-breaking keeps every point in the box valid for that one constraint; it is the encoding, not MoHOLLM, that guarantees it. Constraints like C5 (North ≥ 25%) are <em>not</em> expressible as box bounds after stick-breaking.</p>
+<h3>2.2 Decoder = the deterministic macro → micro step</h3>
+<p><code>decode(x, observation) → actions</code> sets every cell's bid as live bid × type mult × nest mult (× festive mult in the window), splits budget by region share, scales by x9, applies the daypart tilt and the defence rule. It is a pure function: same x and observation ⇒ same actions. It is also where Track B will later plug in the in-box MILP.</p>
+<h3>2.3 Black box</h3>
+<p>\[f(x) = \text{Scorer v2}\big(\text{simulate}(\text{world}_{\text{seed}},\ \text{policy}=\text{decode}(x))\big)\]</p>
+<ul>
+<li>The decoded policy is applied at each of the 6 runs (re-decoded on that run's observation, so it adapts mechanically, e.g. live bids move).</li>
+<li>Same world seed for every evaluation within an optimisation run (common random numbers) ⇒ the black box is deterministic per seed, and differences between x are not noise.</li>
+<li><strong>Generalisation check:</strong> the best x from each optimiser is re-scored on 5 <strong>held-out</strong> world seeds of the same scenario family.</li>
+<li>Cost per evaluation: one 70-day world plus one counterfactual ≈ 2 simulator runs; target &lt; 60 s, $0.</li>
+</ul>
+<h3>2.4 Two oracles</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Oracle</th>
+<th>How</th>
+<th>What it bounds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>In-space oracle</strong></td>
+<td>CMA-ES with 2,000 evaluations on f(x) (no LLM), plus the best of 10 restarts</td>
+<td>Best achievable <em>in this 12-d encoding</em></td>
+</tr>
+<tr>
+<td><strong>Full-space oracle</strong></td>
+<td>Exact MILP over every cell's bid/budget options using <strong>true</strong> response parameters (expected-value mode, no Poisson noise)</td>
+<td>Best achievable by <em>any</em> policy; the gap to the in-space oracle is the <strong>encoding loss</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Both are $0. Regret is reported against both.</p>
+<hr />
+<h2>3. Arms</h2>
+<h3>3.1 E1 and E2</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Arm</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A0</td>
+<td>no-op, and the existing <code>deterministic_traversal</code> baseline (legacy reference)</td>
+</tr>
+<tr>
+<td>A1</td>
+<td>uniform random search in the box (Sobol)</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>classical BO: BoTorch qLogEI (E1) / qLogEHVI (E2) — already installed in the MoHOLLM env</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>MoHOLLM <strong>unpartitioned</strong> (<code>optimization_method: mohollm</code>, the global baseline; note upstream's inverted naming, REPLICATION finding 7)</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>MoHOLLM <strong>partitioned</strong> (<code>SpacePartitioning</code>, <code>ScoreRegionRHVC</code>, cosine-annealed α; the paper's method, finding 8)</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>partitioned, with the LLM replaced by random sampling in the selected leaf (MoHOLLM's own ablation)</td>
+</tr>
+<tr>
+<td>O1, O2</td>
+<td>in-space and full-space oracles</td>
+</tr>
+</tbody>
+</table></div>
+<p>A5 vs A4 measures what the LLM adds beyond the partitioning; A4 vs A3 measures what the partitioning adds.</p>
+<h3>3.2 E3 (constraints on), all built on A4</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Arm</th>
+<th>How constraints are handled</th>
+<th>Analogue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A4-blind</strong></td>
+<td>not mentioned; scored after the fact</td>
+<td>G-0 policy judged on G-2</td>
+</tr>
+<tr>
+<td><strong>A4-prompt</strong></td>
+<td>constraints written in the prompt and the task context, nothing enforced</td>
+<td>"just tell the LLM"</td>
+</tr>
+<tr>
+<td><strong>A4-penalty</strong></td>
+<td>each constraint's violation becomes an extra minimised objective (or a summed one)</td>
+<td>BoTorch CarSideImpact's f4 (<a href="#landscape" data-tab="landscape">01 §3.6</a>)</td>
+</tr>
+<tr>
+<td><strong>A4-reject</strong></td>
+<td>infeasible evaluations return the worst observed value</td>
+<td>death penalty</td>
+</tr>
+<tr>
+<td><strong>A4+compiler-repair</strong></td>
+<td>every proposal passes the compiler: action/state constraints repaired (clamp, trim), projected constraints enforced on the projection, outcome constraints enforced with a buffer; the <strong>repaired</strong> point is evaluated and fed back</td>
+<td>Chimera's guardian + repair</td>
+</tr>
+<tr>
+<td><strong>A4+compiler-box</strong></td>
+<td>as above, and the compiler also <strong>tightens each KD leaf</strong> to its feasible sub-box before the LLM samples (where constraints are box-expressible) and returns a reason code per rejected region</td>
+<td>our proposal; Track B's precursor</td>
+</tr>
+<tr>
+<td>O1c, O2c</td>
+<td>oracles with constraints (CMA-ES with repair; MILP with the constraints as rows)</td>
+<td>upper bounds under constraints</td>
+</tr>
+</tbody>
+</table></div>
+<p>Feeding back the <strong>proposed</strong> vs the <strong>repaired</strong> point is a known design choice (it decides what the LLM learns from). Default: repaired, as Chimera does; an ablation runs the other.</p>
+<hr />
+<h2>4. Metrics</h2>
+<h3>4.1 E1 / E2</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best IncRev @ n</td>
+<td>best f found after n evaluations (n = 10, 25, 50, 100)</td>
+</tr>
+<tr>
+<td>Regret</td>
+<td>1 − best/oracle, against O1 and O2</td>
+</tr>
+<tr>
+<td>Evals to 90%</td>
+<td>first n with best ≥ 0.9 × O1</td>
+</tr>
+<tr>
+<td>HV, HV regret (E2)</td>
+<td>hypervolume with a per-scenario reference point (from no-op and the oracle front)</td>
+</tr>
+<tr>
+<td>Front coverage (E2)</td>
+<td>share of O1's front within ε of the found front, per objective extreme</td>
+</tr>
+<tr>
+<td>Generalisation</td>
+<td>held-out-seed score of the final x, as a share of in-seed score</td>
+</tr>
+<tr>
+<td>$ and tokens</td>
+<td>from the ledger</td>
+</tr>
+<tr>
+<td>Interpretability probe</td>
+<td>does the best x encode the scenario's correct move? (sc1: S1 and S3 not both raised; sc2: K07 bid like a brand term; sc3: festive spend stops before stock-out) — scored by rule, yes/no</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4.2 E3 (constraints)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Search-time violation rate</strong></td>
+<td>share of <em>evaluated</em> points violating each constraint class</td>
+</tr>
+<tr>
+<td><strong>Final violation</strong></td>
+<td>does the recommended x violate, per class, per held-out seed</td>
+</tr>
+<tr>
+<td>Violation severity</td>
+<td>normalised amount (e.g. ROAS shortfall / floor)</td>
+</tr>
+<tr>
+<td>Feasible regret</td>
+<td>1 − best feasible / O1c</td>
+</tr>
+<tr>
+<td>Wasted evals</td>
+<td>share of evaluations spent on infeasible points</td>
+</tr>
+<tr>
+<td>Proposal drift (repair arms)</td>
+<td>‖proposed − repaired‖, and how it changes over the run (does the LLM learn the feasible region?)</td>
+</tr>
+<tr>
+<td>Explanation completeness</td>
+<td>share of final decisions carrying a goal ledger and reason codes (<a href="#goals" data-tab="goals">03 §6</a>, <a href="#compiler" data-tab="compiler">05 §6</a>)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Why search-time violations matter.</strong> In the simulator an infeasible evaluation is free. In production every evaluation is a week of real spend: a search that violates the ROAS floor on 40% of its evaluations has spent 40% of its weeks below the floor. E3 reports both, and the production-relevant one is search-time.</p>
+<hr />
+<h2>5. Hypotheses (pre-registered)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hypothesis</th>
+<th>Falsified if</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td>E1: A4 ≥ A3 and A4 ≥ A1 at n = 50 on ≥ 3 of 4 scenarios</td>
+<td>A4 &lt; A1 on ≥ 2 scenarios</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>E1: A4 is within 10% of A2 (classical BO) at n = 50</td>
+<td>A4 better than A2 by &gt; 10% (which would be a positive surprise) or worse by &gt; 10%</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>E1: the encoding loss (O2 − O1) is largest on sc3 (cold-start cells and stock are poorly captured by 12 global multipliers)</td>
+<td>another scenario has a larger loss</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>E3: A4-prompt violates <strong>action-linear</strong> constraints (C5, C6) on ≥ 20% of evaluated points and <strong>outcome</strong> constraints (C4, C7, C9) on ≥ 30%</td>
+<td>rates below half of these</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>E3: A4-penalty reaches a feasible final point on ≥ 80% of seeds but spends ≥ 30% of evaluations infeasible</td>
+<td>&lt; 10% wasted, or &lt; 50% feasible finals</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>E3: A4+compiler-repair has <strong>0</strong> action/state violations (by construction), <strong>0</strong> projected violations on the projection, realised C9 violation on ≤ 10% of held-out seeds (buffered chance constraint), and feasible regret within 5 pp of A4-penalty's</td>
+<td>any action/state violation (a compiler bug), or regret &gt; 10 pp worse</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>E3: A4+compiler-box needs fewer evaluations than compiler-repair to reach 90% of O1c, because the LLM never samples infeasible regions</td>
+<td>no difference</td>
+</tr>
+<tr>
+<td>H8</td>
+<td>E1–E3: the LLM in A4 proposes more <strong>interpretable</strong> moves than A5 (random-in-leaf) on the probe in §4.1</td>
+<td>no difference</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>6. Design of the runs</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenarios</td>
+<td>sc1, sc2, sc3, sc_all (sc4, sc5 in a second pass)</td>
+</tr>
+<tr>
+<td>World seeds</td>
+<td>3 per scenario for optimisation; 5 held-out for generalisation</td>
+</tr>
+<tr>
+<td>Optimiser seeds</td>
+<td>1 per world seed (the world seed sets both); 3 for the cheapest arms if variance matters</td>
+</tr>
+<tr>
+<td>Evaluation budget</td>
+<td>50 (paper default) and 100; initial design 5 Sobol points shared by all arms</td>
+</tr>
+<tr>
+<td>LLM</td>
+<td><code>qwen/qwen3.7-flash</code> via OpenRouter (the user's MoHOLLM choice), reasoning effort as in the earlier pilot</td>
+</tr>
+<tr>
+<td>Determinism</td>
+<td><code>PYTHONHASHSEED=0</code>, content-seeded shuffles, CachingTransport record/replay (sandbox findings 16–20)</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>new <code>GridMarketBenchmark(BENCHMARK)</code> in <code>sandbox/mohollm/adapters/</code> with <code>evaluate_point</code>, <code>n_obj</code>, <code>metrics</code>, bounds; compiler arms wrap <code>evaluate_point</code> and, for compiler-box, the region bounds. Upstream stays byte-identical</td>
+</tr>
+<tr>
+<td>Cost control</td>
+<td>pilot = 2 evaluations per LLM arm on sc1, recorded and replayed at $0, then projected. Needs a <strong>new ledger cap</strong> (the existing <code>mohollm_qwen</code> cap is $2 for the replication). Ask before spending</td>
+</tr>
+</tbody>
+</table></div>
+<p>Order of work: (1) simulator v2 steps 1–5 (<a href="#simulator" data-tab="simulator">02 §10</a>); (2) decoder, oracles, A0–A2 and A5 at $0; (3) compiler (<a href="#compiler" data-tab="compiler">05</a>) and its tests at $0; (4) LLM pilot; (5) full E1 → E2 → E3 after approval.</p>
+<hr />
+<h2>7. What each outcome would mean</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Outcome</th>
+<th>Reading</th>
+<th>Next step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1, H2 hold; H4–H6 hold</td>
+<td>MoHOLLM is a reasonable explorer; constraints need a compiler. The user's thesis stands</td>
+<td>build Track B with the compiler at the centre</td>
+</tr>
+<tr>
+<td>H1 holds, H2 fails (A4 ≫ BO)</td>
+<td>the LLM's priors help here (e.g. reading "festive" and "gift set")</td>
+<td>invest in the proposer; test priors on cold-start cells</td>
+</tr>
+<tr>
+<td>H1 fails (A4 ≤ random)</td>
+<td>12 global multipliers are too coarse, or the LLM adds noise</td>
+<td>Track B directly; the in-box MILP does the work, the LLM only picks boxes</td>
+</tr>
+<tr>
+<td>H4 fails (prompt-only is feasible)</td>
+<td>outcome constraints were slack in these scenarios</td>
+<td>tighten C4/C9 or the B, re-run E3; the compiler is then about explanation, not safety</td>
+</tr>
+<tr>
+<td>H6 fails on action/state</td>
+<td>compiler bug</td>
+<td>fix; this is what the property tests in <a href="#compiler" data-tab="compiler">05 §5</a> exist for</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 class="caveats">Assumptions and caveats</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Assumption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*1</td>
+<td>Track A's 12 global multipliers cannot express cell-level moves (e.g. "raise S3 on K04 in BLR only"). Its optimum is an encoding-limited optimum; O2 − O1 measures how limited.</td>
+</tr>
+<tr>
+<td>*2</td>
+<td>A deterministic black box per world seed removes evaluation noise that a production optimiser would face. Held-out seeds partly restore it.</td>
+</tr>
+<tr>
+<td>*3</td>
+<td>MoHOLLM was designed for static black-box functions. Our f(x) wraps a 6-run sequential process, decoded open-loop from x; adaptive (closed-loop) policies are outside Track A.</td>
+</tr>
+<tr>
+<td>*4</td>
+<td>Hypothesis thresholds (20%, 30%, 80%, 10 pp) are judgement calls set before running, so they can be wrong in either direction; they are not derived from power calculations.</td>
+</tr>
+<tr>
+<td>*5</td>
+<td>LLM cost per evaluation is unknown until the pilot. MoHOLLM's prompt size grows with the in-leaf history, and reasoning models add hidden tokens (sandbox finding 20).</td>
+</tr>
+<tr>
+<td>*6</td>
+<td><code>qwen3.7-flash</code> replaces the paper's models; results test whether the <em>method</em> transfers, not a replication of reported numbers.</td>
+</tr>
+</tbody>
+</table></div></section>
+<section id="compiler" role="tabpanel" aria-labelledby="t-compiler" hidden><p class="eyebrow">Doc 05 · 05_compiler_and_verifier.md</p><h1>The compiler and verifier: how binding constraints are enforced, and how we know the enforcement is right</h1><blockquote>
+<p>Part of <a href="#overview" data-tab="overview">grid_design_simulator</a>. Draws on Chimera's guardian (<code>sandbox/chimera/upstream/policies/ecommerce_guard.csl</code>, <code>src/csl_guardian.py</code>, <code>TLA+_verification/ChimeraGuardianProof.tla</code>) and the existing grid guardrails (<code>grid-path-challenge/gpc/guardrails.py</code>, G0–G8).
+Constraint classes and the goal ladder come from <a href="#goals" data-tab="goals">03 §4</a>; the arms that use the compiler are in <a href="#experiments" data-tab="experiments">04 §3.2</a>.</p>
+</blockquote>
+<hr />
+<h2>0. TL;DR</h2>
+<ul>
+<li><strong>The proposer (MoHOLLM, an LLM, a human) never ships an action. The compiler does.</strong> It turns typed goals and platform rules into a constraint set, checks the set once when loaded, then verifies → repairs → projects → trims every proposal, and writes a decision record.</li>
+<li><strong>Four constraint classes, four different guarantees:</strong></li>
+</ul>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+<th>Guarantee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>bid in [₹200, ₹10k]; North ≥ 25% of spend</td>
+<td><strong>exact</strong>, by construction</td>
+</tr>
+<tr>
+<td>state-gated</td>
+<td>no raise if 3-day OSA &lt; 60%; no S6 ads below 2 days of stock cover</td>
+<td><strong>exact</strong>, given the observation</td>
+</tr>
+<tr>
+<td>projected outcome</td>
+<td>projected portfolio dROAS ≥ floor; K01 slot-1 ≥ 70% where conquested</td>
+<td>exact <strong>on the projection</strong>; only as good as the projection</td>
+</tr>
+<tr>
+<td>realised outcome</td>
+<td>realised dROAS ≥ floor over 6 runs; sibling share ≤ 30%</td>
+<td><strong>probabilistic</strong> only: a buffered chance constraint, checked by calibration</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Chimera's lesson, with our replication's corrections.</strong> Chimera's rules live in a small declarative file checked by Z3 at load; repair logic lives in Python; a TLA+ model proves the repair functions keep the invariant. Our replication found that (1) the violation-to-message map was keyed wrongly, so 4 of 6 rules returned a generic message to the LLM, and (2) integer rounding let <code>ad_spend = −0.4</code> pass (REPLICATION findings 1–2). So: verify the <strong>repair code</strong>, not just the rules, and use exact units (paise) with explicit buffers.</li>
+<li><strong>What the compiler cannot do:</strong> guarantee realised outcomes, or fix a wrong projection. Those need calibration tests and holdouts, not proofs.</li>
+</ul>
+<hr />
+<h2>1. What exists today</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Rules</th>
+<th>Enforcement</th>
+<th>Verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chimera <code>ecommerce_guard.csl</code></td>
+<td>8 <code>STATE_CONSTRAINT</code>s on integer variables (ad cap, weekly increase cap, price change bounds, price ceiling, above cost, min margin)</td>
+<td><code>CSLGuardianEcom.repair_action</code>: clip to nearest valid value, then <code>validate_action</code> via CSL</td>
+<td>Z3 consistency at load; TLA+ <code>RepairedPrice</code> / <code>RepairedAdSpend</code> model-checked with TLC (our machine had no Java, so this was skipped in replication)</td>
+</tr>
+<tr>
+<td>Grid <code>guardrails.py</code></td>
+<td>G0 schema, G1–G2 bid bounds/step (clamp), G3 top slot, G4 availability, G5 budget realisable, G6 budget step (clamp), G7 cell goal, G8 portfolio ROAS (trim worst-marginal increases until projected dROAS ≥ floor)</td>
+<td>Python, in a fixed order, per action then portfolio</td>
+<td>Unit tests; no formal model; projections from the guardrail's own grid, never policy-supplied numbers</td>
+</tr>
+</tbody>
+</table></div>
+<p>Our grid guardrails are already the right shape (deterministic, uses its own projection, logs a rule and outcome per action). What is missing: <strong>goals as data</strong> (G7's goals are hard-coded from the plan), <strong>classes</strong> with different guarantees, <strong>load-time consistency and feasibility</strong>, <strong>multi-run reachability</strong>, and <strong>verification of the repair functions</strong>.</p>
+<hr />
+<h2>2. Architecture</h2>
+<div class="diagram"><pre class="mmd">graph LR
+  GS[&quot;GoalSpec (typed goals, 03 §2)&lt;br/&gt;+ platform rules (G0–G8)&lt;br/&gt;+ scenario rules (calendar, stock)&quot;] --&gt; C[&quot;Compile&lt;br/&gt;→ constraint IR, typed by class&quot;]
+  C --&gt; L[&quot;Load-time checks&lt;br/&gt;types · Z3 consistency ·&lt;br/&gt;feasibility now · reachability over runs&quot;]
+  L --&gt;|&quot;infeasible&quot;| IIS[&quot;IIS + minimal relaxation&lt;br/&gt;(returned to the goal owner)&quot;]
+  L --&gt;|&quot;ok&quot;| RT
+  P[&quot;Proposer&lt;br/&gt;MoHOLLM / LLM / human&quot;] --&gt; RT[&quot;Runtime per proposal&lt;br/&gt;verify → repair → project → trim → certify&quot;]
+  RT --&gt; DR[&quot;Decision record&lt;br/&gt;reason codes · goal ledger · duals&quot;]
+  RT --&gt; EX[&quot;Ship actions&quot;]
+  EX --&gt; OBS[&quot;Observations&quot;] --&gt; CAL[&quot;Calibration monitor&lt;br/&gt;(realised-outcome classes)&quot;]
+  CAL --&gt;|&quot;buffer too thin&quot;| C
+</pre></div>
+<h3>2.1 Constraint IR</h3>
+<p>Every rule compiles to one record:</p>
+<pre><code>Constraint {
+  id, class: action | state | projected | realised,
+  scope: hypercube expression over S × C × K × D × T,
+  expr:  linear or piecewise-linear in decision variables (action),
+         a predicate on observations (state),
+         a predicate on Projection(actions, obs) (projected),
+         a predicate on realised metrics with chance level α and buffer b (realised),
+  repair: clamp | block | trim(order) | project(norm) | none,
+  priority: platform &gt; finance &gt; brand &gt; operator,         # used only for conflict reports
+  provenance: GoalSpec id or rule id, source quote
+}
+</code></pre>
+<p>Decision variables are <strong>integers in paise</strong> (bids, budgets) and booleans (daypart on/off, keyword active). No floats in the verified core, so the CSL rounding hole cannot recur.</p>
+<hr />
+<h2>3. Load-time checks (once per GoalSpec change)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Tool</th>
+<th>Output on failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Typing: every scope names existing nodes; every metric has a basis (<a href="#goals" data-tab="goals">03 §2</a>)</td>
+<td>schema</td>
+<td>"C8 needs <code>basis</code>; 'ROAS ≥ 3' is ambiguous between direct and incremental"</td>
+</tr>
+<tr>
+<td><strong>Consistency</strong> of action + state constraints (no contradiction for some reachable state)</td>
+<td>Z3 over the integer domains, like CSL's <code>CHECK_LOGICAL_CONSISTENCY</code></td>
+<td>the conflicting pair, with provenance</td>
+</tr>
+<tr>
+<td><strong>Feasibility now</strong>: exists an action set satisfying all action/state constraints and the projected ones, from the current state</td>
+<td>small MILP</td>
+<td>an <strong>IIS</strong> (irreducible infeasible subset) and the <strong>minimal relaxation</strong> of each soft member ("feasible at North ≥ 21%, or at B + ₹2.4k")</td>
+</tr>
+<tr>
+<td><strong>Reachability over runs</strong>: can the constraints be met within the step limits? E.g. North is at 18% of spend; G6 allows +50%/−30% per run per campaign; C5 asks ≥ 25% <em>every run</em></td>
+<td>bounded model check over k runs (TLA+/TLC, or the MILP unrolled k steps)</td>
+<td>"C5 cannot hold in run 1; earliest is run 2 via path …" ⇒ restate C5 as 'from run 2' or relax</td>
+</tr>
+<tr>
+<td>Coverage: every lever type is touched by at least one rule; no rule is dead (never binding on any reachable state)</td>
+<td>Z3 / sampling</td>
+<td>a warning, not a block</td>
+</tr>
+</tbody>
+</table></div>
+<p>The reachability check is the one Chimera's design does not need (its caps are per-week and memoryless) and our grid does: step limits make some goals <strong>temporally</strong> infeasible even when they are statically feasible.</p>
+<hr />
+<h2>4. Runtime: verify → repair → project → trim → certify</h2>
+<p>Per proposal (one action set per run):</p>
+<ol>
+<li><strong>Verify</strong> each action against action and state constraints; record pass / violation.</li>
+<li><strong>Repair</strong> violations by the rule's declared repair, in a declared order:
+   - <code>clamp</code> (G1, G2, G6): move to the nearest bound;
+   - <code>block</code> (G0, G3, G4, G5, C2, C3): drop the action, keep the reason;
+   - <code>project</code> (C5, C6, linear coupled constraints): solve the small LP/QP "closest feasible action set in L1 distance to the proposal", so the repair changes as little as possible and only the violating levers.</li>
+<li><strong>Project</strong> outcomes with the compiler's own grid model (as G8 does today, never a policy's numbers): Δspend, Δrevenue, slot shares, stock cover.</li>
+<li><strong>Trim</strong> for projected constraints (C4, C7): remove or shrink increases in a declared order (worst marginal first, as G8) until all hold.</li>
+<li><strong>Buffer</strong> realised-outcome constraints as chance constraints on the projection: require \(\widehat{\text{dROAS}} - z_{\alpha}\cdot \widehat{se} \ge R\), with \(\widehat{se}\) from a bootstrap of the grid's cell estimates and α = 0.10. (Chimera's 1% price buffer is the deterministic cousin of this.)</li>
+<li><strong>Certify</strong>: re-verify the final set against <em>every</em> action/state/projected constraint; if anything fails, ship nothing and raise (a compiler bug, never silently shipped).</li>
+</ol>
+<h3>4.1 Interface to MoHOLLM (Track A)</h3>
+<pre><code>x  ──decode──▶ actions ──compiler──▶ actions′ ──encode⁺──▶ x̃     (repaired point, fed back)
+                                   └──▶ evaluate(actions′)           (the black box sees only feasible actions)
+</code></pre>
+<ul>
+<li><code>encode⁺</code> is the least-squares inverse of the decoder; it is approximate where the repair made a cell-level change the 12-d encoding cannot express. The gap ‖x − x̃‖ is logged (proposal drift, <a href="#experiments" data-tab="experiments">04 §4.2</a>).</li>
+<li><strong>Compiler-box mode:</strong> the decoder is monotone in each coordinate, so interval arithmetic on a KD leaf [l, u] gives exact bounds on decoded bids and budgets. Box-expressible action constraints (C1, C3, C6 under a fixed scale) then tighten the leaf before the LLM samples it; a leaf whose tightened box is empty is marked <code>infeasible(Cx)</code> and its score is set to −∞ with that reason code.</li>
+</ul>
+<h3>4.2 Interface to Track B (hypercube-native)</h3>
+<p>The LLM proposes hypercubes H; the compiler checks each H's scope against the constraints (a hypercube that only contains blocked levers is rejected with a reason code), derives H's envelope from the macro duals (λ, μ, ν), and the in-box MILP solves with the constraints as rows. Same IR, same record.</p>
+<hr />
+<h2>5. Verifying the verifier</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Statement</th>
+<th>How checked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Soundness</strong></td>
+<td>the certified output satisfies every action, state and projected constraint</td>
+<td>Z3 on the repair postconditions over bounded domains; property tests (Hypothesis) on 10⁵ random proposals and states</td>
+</tr>
+<tr>
+<td><strong>Idempotence</strong></td>
+<td>repair(repair(a)) = repair(a)</td>
+<td>property test</td>
+</tr>
+<tr>
+<td><strong>Minimality</strong></td>
+<td>repair changes no lever that was not in violation, unless a coupled constraint (C5, C6) required it; and then the L1 change is minimal</td>
+<td>compare to an exact LP on random cases</td>
+</tr>
+<tr>
+<td><strong>Order independence</strong> or declared order</td>
+<td>permuting proposal order gives the same output, or the order is fixed and documented (G8 trims by marginal, ties by id)</td>
+<td>property test</td>
+</tr>
+<tr>
+<td><strong>Termination</strong></td>
+<td>trim loops end (finite actions, each step removes one)</td>
+<td>proof by construction + test</td>
+</tr>
+<tr>
+<td><strong>No-op safety</strong></td>
+<td>the empty proposal is always certified (doing nothing is always allowed) — or the load-time check reports why not (e.g. C5 is violated by the current state)</td>
+<td>Z3 / reachability check</td>
+</tr>
+<tr>
+<td><strong>Invariant over runs</strong></td>
+<td>if the rules hold at run k and the certified set is shipped, action/state rules hold at run k+1 for any market outcome</td>
+<td>TLA+ model of the run loop with abstract market outcomes (Chimera-style), TLC on small domains</td>
+</tr>
+<tr>
+<td><strong>Legacy equivalence</strong></td>
+<td>with only G0–G8 loaded, the compiler's output equals <code>guardrails.apply_guardrails</code> on every logged action set from existing runs</td>
+<td>differential test over <code>data/runs/*</code></td>
+</tr>
+<tr>
+<td><strong>Messages match rules</strong></td>
+<td>every violation returns its own rule id and message</td>
+<td>test per rule (the Chimera bug, finding 1)</td>
+</tr>
+<tr>
+<td><strong>Calibration</strong> (realised class)</td>
+<td>over held-out seeds, realised violation rate of buffered constraints ≤ α + tolerance</td>
+<td>monitor in E3; if it fails, widen the buffer or fix the projection</td>
+</tr>
+</tbody>
+</table></div>
+<p>Soundness, idempotence and legacy equivalence gate every change. Calibration is the only check that can fail for reasons outside the compiler (a biased projection), and it is the one that says when to trust the "projected" class.</p>
+<hr />
+<h2>6. The decision record</h2>
+<p>Every proposed option ends in exactly one terminal state with a reason code:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Terminal state</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shipped</code></td>
+<td>"S3 × K04 × BLR bid ₹410 → ₹470"</td>
+</tr>
+<tr>
+<td><code>repaired(Cx, from → to)</code></td>
+<td>"G2: ₹900 → ₹705 (±50% of ₹470)"; "C5: North share 21% → 25% by moving ₹180 from BLR K05"</td>
+</tr>
+<tr>
+<td><code>blocked(Cx)</code></td>
+<td>"G4: S2 × HYD availability 42% over 3 days"</td>
+</tr>
+<tr>
+<td><code>trimmed(C4, marginal 1.6×)</code></td>
+<td>"pulls projected dROAS below 4.54"</td>
+</tr>
+<tr>
+<td><code>infeasible-region(Cx)</code></td>
+<td>"KD leaf 7: every point violates C3 (K11 outside live window)"</td>
+</tr>
+<tr>
+<td><code>not explored(score)</code></td>
+<td>"leaf 12 not sampled this turn: score 0.21 &lt; 0.47 cut"</td>
+</tr>
+<tr>
+<td><code>dominated(reduced cost)</code></td>
+<td>"MILP: −₹0.3 per ₹ vs λ" (Track B)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Plus the goal ledger from <a href="#goals" data-tab="goals">03 §6</a>: status, binding, price (dual), sentence. This is how the "why this over 100+ alternatives" question is answered: each alternative has a terminal state and a number.</p>
+<hr />
+<h2>7. Example rule file (sketch, CSL-like)</h2>
+<pre><code>DOMAIN GridGuard {
+  UNITS paise
+  VARIABLES {
+    bid[cell]:        20000..1000000          // ₹200–₹10,000
+    live_bid[cell]:   20000..1000000
+    budget[camp]:     30000..10000000
+    spend_share[region]: 0..10000             // basis points
+    stock_cover_days[sku, city]: 0..365
+    osa3[sku, city]:  0..100
+    day: 0..120
+  }
+
+  ACTION   bid_bounds   { ALWAYS THEN 20000 &lt;= bid[c] &lt;= 1000000 }                 REPAIR clamp
+  ACTION   bid_step     { ALWAYS THEN 2*bid[c] &lt;= 3*live_bid[c] AND 2*bid[c] &gt;= live_bid[c] }  REPAIR clamp
+  ACTION   north_min    { ALWAYS THEN spend_share[North] &gt;= 2500 }                 REPAIR project(L1)  FROM run 2
+  ACTION   comp_cap     { ALWAYS THEN spend_share[competition] &lt;= 1000 }           REPAIR project(L1)
+  ACTION   ephemeral    { WHEN kw(c) == K11 AND (day &lt; 42 OR day &gt; 59) THEN active[c] == false }  REPAIR block
+  STATE    osa_gate     { WHEN increase(c) AND osa3[sku(c), city(c)] &lt; 60 THEN false }           REPAIR block
+  STATE    stock_gate   { WHEN sku(c) == S6 AND stock_cover_days[S6, city(c)] &lt; 2 THEN active[c] == false }  REPAIR block
+  PROJECTED droas_floor { ALWAYS THEN proj_droas &gt;= floor }                        REPAIR trim(worst_marginal)
+  PROJECTED k01_defend  { WHEN conquested(city) THEN proj_slot1_share[K01, city] &gt;= 7000 }      REPAIR raise_min(K01)
+  REALISED  droas_real  { OVER 6 runs THEN droas &gt;= floor  WITH P &gt;= 0.90 }        BUFFER z*se
+  REALISED  sibling_cap { OVER run THEN sibling_share[nest, city] &lt;= 3000 WITH P &gt;= 0.90 }  ESTIMATE from holdouts
+}
+</code></pre>
+<p>Rules are written by people, or compiled from a GoalSpec that a person confirmed. An LLM may <strong>draft</strong> a GoalSpec from a sentence ("grow North without hurting ROAS"), but the compiler shows a paraphrase of every compiled rule with its provenance quote and waits for confirmation, because LLMs are unreliable formalisers: they drop constraints and add wrong ones (<a href="#landscape" data-tab="landscape">01 §3.6</a>).</p>
+<hr />
+<h2 class="caveats">Assumptions and caveats</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Assumption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*1</td>
+<td>Linear and piecewise-linear constraints cover C1–C7. Constraints that are non-linear in decisions (e.g. a ratio of projected sums) are linearised at the current point or handled by the trim loop, which is exact for G8's form but not in general.</td>
+</tr>
+<tr>
+<td>*2</td>
+<td>The compiler's projection is the guardrail grid model. Its known biases (slot-1 and share-curve, linkage caveat *13) make the "projected" class only as good as that model; the calibration monitor is the check.</td>
+</tr>
+<tr>
+<td>*3</td>
+<td>The chance-constraint buffer assumes the projection error is roughly normal and unbiased. A biased projection (e.g. ignoring pull-forward) defeats any buffer.</td>
+</tr>
+<tr>
+<td>*4</td>
+<td>TLA+ checking is on small abstract domains (as Chimera's was); it proves the repair logic, not the market. TLC needs Java, which the sandbox machine lacks.</td>
+</tr>
+<tr>
+<td>*5</td>
+<td>"Legacy equivalence" assumes <code>guardrails.py</code> is the intended behaviour. Where the new compiler deliberately differs (e.g. C5's <code>project</code> repair), the differential test must whitelist it.</td>
+</tr>
+</tbody>
+</table></div></section>
+  <footer>Source: the six Markdown files in <code>system_design_proposals/grid_design_simulator/</code>. Each tab ends with its own assumptions and caveats.</footer>
+</div>
+
+<script>
+window.MathJax = {
+  tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]], processEscapes: false },
+  svg: { fontCache: "global" },
+  options: { skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"] }
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+(function () {
+  function dark() {
+    var t = document.documentElement.getAttribute("data-theme");
+    return t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  if (window.mermaid) mermaid.initialize({ startOnLoad: false, theme: dark() ? "dark" : "neutral", securityLevel: "strict",
+    fontFamily: "IBM Plex Sans, Helvetica Neue, Arial, sans-serif", flowchart: { htmlLabels: true, curve: "basis" } });
+  function draw(sec) {
+    if (!window.mermaid || !sec) return;
+    var nodes = sec.querySelectorAll("pre.mmd:not([data-processed])");
+    if (nodes.length) mermaid.run({ nodes: nodes }).catch(function (e) { console.error(e); });
+  }
+  var ids = Array.prototype.map.call(document.querySelectorAll('nav.tabs button'), function (b) { return b.dataset.tab; });
+  function show(id, scroll) {
+    if (ids.indexOf(id) < 0) id = "overview";
+    document.querySelectorAll('section[role="tabpanel"]').forEach(function (s) { s.hidden = s.id !== id; });
+    document.querySelectorAll('nav.tabs button').forEach(function (b) { b.setAttribute("aria-selected", b.dataset.tab === id ? "true" : "false"); });
+    draw(document.getElementById(id));
+    if (scroll) window.scrollTo({ top: 0 });
+    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+  }
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest("[data-tab]");
+    if (!t) return;
+    e.preventDefault();
+    show(t.dataset.tab, true);
+  });
+  show((location.hash || "#overview").slice(1), false);
+})();
+</script>

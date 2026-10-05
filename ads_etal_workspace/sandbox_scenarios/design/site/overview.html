@@ -1,0 +1,109 @@
+<p class="eyebrow">Overview · what is to be done, and where each part lives</p>
+<h1>Make the grid market rich enough to test goals and constraints, then test them</h1>
+
+<p class="lede">Today's grid-path-challenge market has one fixed incrementality number per keyword and no shelf: an ad can only take sales from its own SKU. This proposal extends the market with four realistic scenarios, sets one global iROAS objective, then adds sub-objectives and finally binding constraints. At each level it measures how MoHOLLM performs, and whether a compiler is needed to keep constraints.</p>
+
+<h2>The work, in order</h2>
+<ol class="steps">
+  <li><span class="k">Step 1 · Market</span><b>Add four scenarios</b><span>Category cannibalization, brand ↔ category association ("butter ≈ Amul"), festive / seasonal / ephemeral demand, and specific macro vs micro goals.</span></li>
+  <li><span class="k">Step 2 · E1</span><b>One global objective</b><span>Max brand-level incremental revenue at a fixed budget (iROAS at that budget). Run MoHOLLM against random, BoTorch and two oracles.</span></li>
+  <li><span class="k">Step 3 · E2</span><b>Add sub-objectives</b><span>New-launch visibility in North and festive sell-through. A three-objective Pareto problem, scored by hypervolume.</span></li>
+  <li><span class="k">Step 4 · E3</span><b>Add constraints</b><span>Nine typed constraints. Test whether MoHOLLM respects them, and what a compiler adds.</span></li>
+</ol>
+
+<div class="thesis"><p><strong>Working hypothesis (yours):</strong> MoHOLLM will not respect binding constraints; a compiler must enforce them. The code agrees so far. MoHOLLM only knows box bounds; its benchmarks drop constraints, or fold violations into an extra objective (CarSideImpact). The experiment is designed so the hypothesis can still fail. See <a href="#experiments" data-tab="experiments">Experiments</a> §5.</p></div>
+
+<h2>The whole system on one page</h2>
+<div class="diagram"><pre class="mmd">
+flowchart LR
+  subgraph SIM["Simulator v2 (tab 02)"]
+    W["World + scenario&lt;br/&gt;shelf · intent mix · calendar ·&lt;br/&gt;competitors · stock"] --> M["Market&lt;br/&gt;auction → shelf choice → orders"]
+    M --> SC["Scorer v2&lt;br/&gt;true brand incrementality&lt;br/&gt;by counterfactual"]
+  end
+  subgraph GOAL["Goals (tab 03)"]
+    G0["G-0 global objective"] --> G1["G-1 + sub-objectives"] --> G2["G-2 + constraints"]
+  end
+  subgraph OPT["Experiments (tab 04)"]
+    MH["MoHOLLM&lt;br/&gt;KD-tree + LLM proposer"]
+    BO["Baselines: random, BoTorch,&lt;br/&gt;oracles"]
+  end
+  subgraph CMP["Compiler (tab 05)"]
+    V["verify → repair → project →&lt;br/&gt;trim → certify"]
+    DR["Decision record&lt;br/&gt;reason codes · goal ledger"]
+  end
+  GOAL --> CMP
+  MH -->|"proposal x"| V
+  BO --> M
+  V -->|"feasible actions"| M
+  V --> DR
+  SC -->|"f(x), goal pass/fail"| MH
+  LIT["Literature and practice (tab 01)"] -.->|"design rules D1–D9"| W
+</pre></div>
+
+<h2>The four scenarios</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Scenario</th><th>New mechanism</th><th>The trap it sets</th><th>Read</th></tr></thead>
+<tbody>
+<tr><td><strong>Category cannibalization</strong></td><td>Nested-logit shelf with own and competitor SKUs; nest strength λ<sub>bar</sub> = 0.35</td><td>Raising S1 and S3 on "soap" mostly trades share between them. Per-SKU incrementality over-states brand gain by the sibling share.</td><td><a href="#simulator" data-tab="simulator">Simulator §2</a></td></tr>
+<tr><td><strong>Brand ↔ category ("butter ≈ Amul")</strong></td><td>Intent mix per query (loyal vs open shoppers), stealing that depends on presence, query reformulation</td><td>"sandal soap" is labelled generic but is 60% Aurel-loyal, so it behaves like a brand term. Pausing "soap" makes "aurel" look better while brand sales fall.</td><td><a href="#simulator" data-tab="simulator">Simulator §3</a></td></tr>
+<tr><td><strong>Festive / seasonal / ephemeral</strong></td><td>Calendar, ephemeral keyword K11 and gift pack S6 with finite stock, pull-forward, competitor budgets ×2.5</td><td>Cold start with no history, CPMs up 30–50%, a festive week that borrows from the next two, stock-outs that stop ads.</td><td><a href="#simulator" data-tab="simulator">Simulator §4–5</a></td></tr>
+<tr><td><strong>Macro vs micro goals</strong></td><td>Typed goal record, goal ladder, prices λ, μ, ν</td><td>"Max iROAS" alone is degenerate; SKU goals reward cannibalization; direct-ROAS floors favour non-incremental brand terms.</td><td><a href="#goals" data-tab="goals">Goals §1–3</a></td></tr>
+</tbody></table></div>
+
+<h2>Goals: from one objective to constraints</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Level</th><th>What is optimised</th><th>What is measured</th><th>Experiment</th></tr></thead>
+<tbody>
+<tr><td><span class="chip">G-0</span></td><td>Max brand-level incremental revenue, spend = B (≡ max iROAS at budget B)</td><td>best value vs evaluations; regret vs two oracles; generalisation to held-out seeds</td><td>E1</td></tr>
+<tr><td><span class="chip">G-1</span></td><td>f1 incremental revenue, f2 S5 slot-1 share in North, f3 S6 sell-through</td><td>hypervolume; front coverage</td><td>E2</td></tr>
+<tr><td><span class="chip">G-2</span></td><td>G-0 plus nine constraints C1–C9</td><td>violations during search and in the final answer; feasible regret; wasted evaluations</td><td>E3</td></tr>
+</tbody></table></div>
+
+<h3>Constraint classes decide what can be guaranteed</h3>
+<div class="tablewrap"><table>
+<thead><tr><th>Class</th><th>Examples</th><th>Can MoHOLLM keep it?</th><th>Can a compiler guarantee it?</th></tr></thead>
+<tbody>
+<tr><td>Action</td><td>bid ₹200–₹10,000; North ≥ 25% of spend; competitor keywords ≤ 10%</td><td>Box bounds: yes. Linear couplings: only if the encoding builds them in</td><td><span class="chip">exactly</span></td></tr>
+<tr><td>State-gated</td><td>no raise below 60% availability; no S6 ads under 2 days of stock</td><td>No: it never sees state</td><td><span class="chip">exactly</span></td></tr>
+<tr><td>Projected outcome</td><td>projected dROAS ≥ floor; K01 slot-1 ≥ 70% where conquested</td><td>Only after violating it in evaluations</td><td><span class="chip warn">on the projection</span></td></tr>
+<tr><td>Realised outcome</td><td>realised dROAS ≥ floor over 6 runs; sibling share ≤ 30%</td><td>Only after violating it</td><td><span class="chip warn">with a buffer, checked by calibration</span></td></tr>
+</tbody></table></div>
+
+<h2>The documents</h2>
+<div class="docs">
+  <div class="doc"><span class="num">01 · Landscape</span><h3>What exists and what the evidence says</h3>
+    <ul><li>AuctionGym, AdCraft, AuctionNet, RecSim NG, Chimera, Robyn/Meridian compared</li><li>Brand ads ≈ zero lift; stealing depends on presence</li><li>Quick-commerce festive CPMs, stock-outs, dashboard ROAS</li><li>Nine design rules D1–D9</li></ul>
+    <a class="open" href="#landscape" data-tab="landscape">Open Landscape</a></div>
+  <div class="doc"><span class="num">02 · Simulator v2</span><h3>Shelf, brands, calendar, competitors</h3>
+    <ul><li>Nested-logit choice and closed-form diversion ratios</li><li>4-way split: self, sibling, competitor, expansion</li><li>Festive window, pull-forward, finite stock</li><li>Scorer v2 and seven scenario files</li></ul>
+    <a class="open" href="#simulator" data-tab="simulator">Open Simulator v2</a></div>
+  <div class="doc"><span class="num">03 · Goals</span><h3>Macro vs micro, made specific</h3>
+    <ul><li>Three well-posed forms of "max iROAS"</li><li>Typed goal record with basis and chance</li><li>Hierarchy L0–L6; prices link the levels</li><li>Conflict taxonomy and the goal ledger</li></ul>
+    <a class="open" href="#goals" data-tab="goals">Open Goals</a></div>
+  <div class="doc"><span class="num">04 · Experiments</span><h3>E1 → E2 → E3</h3>
+    <ul><li>12-d decision vector and deterministic decoder</li><li>In-space and full-space oracles</li><li>Six ways to handle constraints</li><li>Eight pre-registered hypotheses</li></ul>
+    <a class="open" href="#experiments" data-tab="experiments">Open Experiments</a></div>
+  <div class="doc"><span class="num">05 · Compiler</span><h3>Enforcing binding constraints</h3>
+    <ul><li>Constraint IR in paise, four classes</li><li>Load-time consistency, feasibility, reachability over runs</li><li>Verifying the repair code itself</li><li>A CSL-like rule file</li></ul>
+    <a class="open" href="#compiler" data-tab="compiler">Open Compiler</a></div>
+</div>
+
+<h2>Build order</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Step</th><th>Work</th><th>Gate</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Shelf module and Scorer v2; legacy <code>dev</code> reproduced exactly with the new modules switched off</td><td>byte-identical legacy run; decomposition sums; no-op incremental revenue = 0</td><td>$0</td></tr>
+<tr><td>2</td><td>Intent mix, calendar, stock, competitor agents; scenario files</td><td>calibration ranges; unit conservation; festive CPM 1.3–1.5×</td><td>$0</td></tr>
+<tr><td>3</td><td>Re-run the linkage EDA on v2 worlds, scored against the hidden truth</td><td>recovery of diversion, brand ownership and reformulation</td><td>$0</td></tr>
+<tr><td>4</td><td>Decoder, oracles, random / BoTorch / random-in-leaf arms</td><td>oracle gap and baseline curves</td><td>$0</td></tr>
+<tr><td>5</td><td>Compiler with G0–G8 and C1–C9; property and differential tests</td><td>soundness, idempotence, legacy equivalence</td><td>$0</td></tr>
+<tr><td>6</td><td>MoHOLLM pilot (record → replay → project cost)</td><td><span class="chip warn">needs your approval and a new ledger cap</span></td><td>tbd</td></tr>
+<tr><td>7</td><td>E1 → E2 → E3</td><td>pre-registered hypotheses</td><td>tbd</td></tr>
+</tbody></table></div>
+
+<h2>Status</h2>
+<ul>
+  <li><span class="chip">design only</span> Nothing is built or run; all numbers in decision records and goal ledgers are illustrative.</li>
+  <li><span class="chip">paused</span> The Chimera and MoHOLLM replication runs are still waiting on a scope decision; E1–E3 reuse their harness (record/replay, ledger, fixed hash seed).</li>
+  <li><span class="chip warn">assumptions</span> Each tab ends with its own assumptions and caveats table.</li>
+</ul>

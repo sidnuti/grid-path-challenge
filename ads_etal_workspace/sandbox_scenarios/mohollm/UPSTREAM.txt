@@ -1,0 +1,5 @@
+source: ~/Documents/Exploration/mohollm
+commit: 0443ffbc66c07519893ed38212ef77c2b15ba8e5 ("updated README")
+copied: 2026-10-05 from sandbox/mohollm/upstream (file-identical to the source tree at that commit; .git excluded).
+note: sandbox/mohollm/UPSTREAM.txt records d7f960e, which does not exist in the source repo; the tree content is the same.
+Upstream is never edited; patches live in adapters/.

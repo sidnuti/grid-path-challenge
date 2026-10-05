@@ -1,0 +1,3328 @@
+diff --git a/gpc/calendar.py b/gpc/calendar.py
+new file mode 100644
+index 0000000..8bdd12b
+--- /dev/null
++++ b/gpc/calendar.py
+@@ -0,0 +1,103 @@
++"""Module C (sim v2): calendar. Seasonal, festive and ephemeral demand, pull-forward.
++
++Design: `design/02_simulator_v2_design.md` §4. Everything here is a deterministic function of the day
++index and the scenario's `calendar` block, so it is identical under any policy (common random numbers).
++
++    festive m_k(t) = 1 + (A_k − 1)·exp(−(t − t*)² / 2w²) for t in [t* − ramp, t* + tail], w = ramp/2
++    pull-forward:  over the `days_after` days after the window, m_k = 1 − ρ·S_k/days_after,
++                   S_k = Σ_window (m_k(t) − 1), so Σ dip = ρ·Σ excess exactly (gate, §10 step 3)
++    seasonal:      m_k(t) = 1 + amp·cos(2π(t − peak)/period)
++    ephemeral:     a keyword or SKU exists only on days [live_from, live_to]
++"""
++from __future__ import annotations
++
++import math
++
++
++class Calendar:
++    def __init__(self, spec: dict):
++        self.spec = spec or {}
++        self.events = self.spec.get("events", [])
++        self.seasonal = self.spec.get("seasonal", [])
++        self.live = {e["id"]: (e["live_from"], e["live_to"])
++                     for e in self.spec.get("ephemeral_keywords", []) + self.spec.get("ephemeral_skus", [])}
++        self._excess = {}                                   # (event id, keyword) → S_k
++        for ev in self.events:
++            pf = ev.get("pull_forward")
++            if not pf:
++                continue
++            lo, hi = self.window(ev)
++            for k in pf["keywords"]:
++                self._excess[(ev["id"], k)] = sum(self._festive(ev, k, t) - 1 for t in range(lo, hi + 1))
++
++    # ── windows and phases ──────────────────────────────────────────────────────
++    @staticmethod
++    def window(ev: dict) -> tuple[int, int]:
++        return ev["peak_day"] - ev["ramp_days"], ev["peak_day"] + ev.get("tail_days", 0)
++
++    def in_window(self, day: int) -> bool:
++        return any(lo <= day <= hi for lo, hi in map(self.window, self.events))
++
++    def phase(self, day: int) -> str:
++        for ev in self.events:
++            lo, hi = self.window(ev)
++            post = ev.get("pull_forward", {}).get("days_after", 0)
++            if lo <= day < ev["peak_day"] - 2:
++                return "ramp"
++            if ev["peak_day"] - 2 <= day <= ev["peak_day"] + 1:
++                return "peak"
++            if ev["peak_day"] + 1 < day <= hi:
++                return "tail"
++            if hi < day <= hi + post:
++                return "post"
++        return "normal"
++
++    def is_live(self, entity: str, day: int) -> bool:
++        if entity not in self.live:
++            return True
++        lo, hi = self.live[entity]
++        return lo <= day <= hi
++
++    # ── multipliers ─────────────────────────────────────────────────────────────
++    @staticmethod
++    def _festive(ev: dict, k: str, t: int) -> float:
++        a = ev.get("demand", {}).get(k)
++        lo, hi = Calendar.window(ev)
++        if a is None or not lo <= t <= hi:
++            return 1.0
++        w = ev["ramp_days"] / 2
++        return 1 + (a - 1) * math.exp(-((t - ev["peak_day"]) ** 2) / (2 * w * w))
++
++    def search_mult(self, k: str, t: int) -> float:
++        if not self.is_live(k, t):
++            return 0.0
++        m = 1.0
++        for ev in self.events:
++            m *= self._festive(ev, k, t)
++            pf = ev.get("pull_forward")
++            if pf and k in pf["keywords"]:
++                hi = self.window(ev)[1]
++                if hi < t <= hi + pf["days_after"]:
++                    m *= 1 - pf["rho"] * self._excess[(ev["id"], k)] / pf["days_after"]
++        for s in self.seasonal:
++            if k in s["keywords"]:
++                m *= 1 + s["amp"] * math.cos(2 * math.pi * (t - s["peak_day"]) / s["period_days"])
++        return m
++
++    def evening_lift(self, t: int) -> float:
++        for ev in self.events:
++            lo, hi = self.window(ev)
++            if lo <= t <= hi:
++                return float(ev.get("evening_intent_lift", 1.0))
++        return 1.0
++
++    def competitor_budget_mult(self, t: int) -> float:
++        """Smooth festive budget curve for competitor agents (same shape as the demand curve)."""
++        m = 1.0
++        for ev in self.events:
++            a = ev.get("competitor_budget_mult")
++            lo, hi = self.window(ev)
++            if a and lo <= t <= hi:
++                w = ev["ramp_days"] / 2
++                m *= 1 + (a - 1) * math.exp(-((t - ev["peak_day"]) ** 2) / (2 * w * w))
++        return m
+diff --git a/gpc/competitors.py b/gpc/competitors.py
+new file mode 100644
+index 0000000..aefc1bd
+--- /dev/null
++++ b/gpc/competitors.py
+@@ -0,0 +1,91 @@
++"""Module D (sim v2): competitor agents that pace a budget, plus opportunistic conquest of Aurel's brand query.
++
++Design: `design/02_simulator_v2_design.md` §5.
++
++Pacing. Each agent c (Velora, Nimbus) holds a bid level b_c (1.0 at the start). Its spend, in units of its
++base budget, is s_c(t)·b_c^ε, where s_c(t) is the search index of its keywords (from the calendar), so
++spend rises with both demand and bids. It updates once a day:
++
++    b_c(t+1) = b_c(t) · exp(η · (B_c(t) − spend_c(t)) / B_c(t)),   B_c(t) = competitor_budget_mult(t)
++
++The equilibrium is b* = (B/s)^{1/ε}: a festive budget ×2.5 against searches ×1.15 gives b* ≈ 1.40 at
++ε = 2.3, the 30–50% CPM rise the doc targets (§5, gate §10 step 4). The clearing-price multiplier of a
++keyword is Σ_c share_{c,k}·b_c + (1 − Σ_c share_{c,k})·b_rest (the long tail paces like an agent).
++The search index s_c covers core keywords only (an ephemeral keyword's ×6 surge would swamp it). The per-auction
++log-normal spread of `_slot_shares` is unchanged, so the auction keeps its closed form.
++
++Opportunism. Per city, if Aurel's slot-1 share on the brand query stays below `threshold` for `days`
++consecutive days, a competitor starts conquesting it: K01's clearing price rises by `bid_up` and its
++conquest presence (used by the intent module's stealing channel) becomes `presence`. It stops after
++Aurel's share is back above the threshold for `days` consecutive days.
++
++Agent state depends on the day only, except for opportunism, which reacts to Aurel's own bids. That is
++intended: pausing the brand keyword invites conquest. The state lives on the Market instance.
++"""
++from __future__ import annotations
++
++import math
++
++from .calendar import Calendar
++
++
++class Competitors:
++    def __init__(self, spec: dict, calendar: Calendar, city_ids: list[str]):
++        self.spec = spec
++        self.cal = calendar
++        self.agents = spec["agents"]                     # {"velora": {"keywords": {"K03": 0.4, ...}}, ...}
++        self.eps = float(spec.get("spend_elasticity", 2.3))
++        self.eta = float(spec.get("eta", 0.5))
++        self.bid = {a: 1.0 for a in self.agents}
++        self.bid["rest"] = 1.0                           # the long tail paces too (its share = 1 − Σ named shares)
++        # search index over core keywords only: an ephemeral keyword's surge (K11 ×6, 0 outside its window)
++        # would otherwise swamp the index and pull the festive bid response down
++        self.core = [k for k in {k for ag in self.agents.values() for k in ag["keywords"]} if k not in calendar.live]
++        self.rest_core = list(spec.get("rest_keywords", self.core))
++        opp = spec.get("opportunism", {})
++        self.opp = opp
++        self.opp_kw = opp.get("keyword", "K01")
++        self.on = {c: False for c in city_ids}
++        self.streak = {c: 0 for c in city_ids}
++
++    def price_mult(self, kid: str, city: str) -> float:
++        tot, share = 0.0, 0.0
++        for a, ag in self.agents.items():
++            s = ag["keywords"].get(kid, 0.0)
++            tot += s * self.bid[a]
++            share += s
++        m = tot + (1 - share) * self.bid["rest"]
++        if self.opp and kid == self.opp_kw and self.on[city]:
++            m *= 1 + self.opp["bid_up"]
++        return m
++
++    def conquest_keywords(self) -> list[str]:
++        ks = list(self.spec.get("conquest_base", {}))
++        if self.opp and self.opp_kw not in ks:
++            ks.append(self.opp_kw)
++        return ks
++
++    def conquest(self, kid: str, city: str) -> float:
++        """Competitor ad presence on an Aurel-owned query (0–1): a baseline per query plus opportunism."""
++        base = self.spec.get("conquest_base", {}).get(kid, 0.0)
++        if self.opp and kid == self.opp_kw and self.on[city]:
++            return max(base, float(self.opp["presence"]))
++        return base
++
++    def end_of_day(self, day: int, aurel_slot1_share: dict[str, float]) -> None:
++        budget = self.cal.competitor_budget_mult(day)
++        index = {a: {k: w for k, w in ag["keywords"].items() if k in self.core} for a, ag in self.agents.items()}
++        index["rest"] = {k: 1.0 for k in self.rest_core}
++        for a, kw in index.items():
++            s = sum(w * self.cal.search_mult(k, day) for k, w in kw.items()) / sum(kw.values()) if kw else 1.0
++            spend = s * self.bid[a] ** self.eps
++            self.bid[a] *= math.exp(self.eta * (budget - spend) / budget)
++        if self.opp:
++            for c in self.on:
++                low = aurel_slot1_share.get(c, 0.0) < self.opp["threshold"]
++                if low != self.on[c]:
++                    self.streak[c] += 1
++                    if self.streak[c] >= self.opp["days"]:
++                        self.on[c], self.streak[c] = low, 0
++                else:
++                    self.streak[c] = 0
+diff --git a/gpc/engine/grid.py b/gpc/engine/grid.py
+index 349029a..7783992 100644
+--- a/gpc/engine/grid.py
++++ b/gpc/engine/grid.py
+@@ -119,7 +119,7 @@ def build_grid(obs: Observation, window: int = WINDOW_DAYS) -> pd.DataFrame:
+                     "keyword_id": r.keyword_id, "daypart": dp, "slot": s,
+                     "cpm_inr": round(cpm, 1), "impressions_day": round(impr, 1),
+                     "orders_day": round(orders_d, 3), "spend_day": round(impr * cpm / 1000, 2),
+-                    "revenue_day": round(orders_d * asp, 2), "droas": round(orders_d * asp / (impr * cpm / 1000), 3),
++                    "revenue_day": round(orders_d * asp, 2), "droas": round(orders_d * asp / (impr * cpm / 1000), 3) if impr * cpm > 0 else float("nan"),  # no reach (e.g. SKU not yet on sale)
+                     "reach_source": reach_src, "tier": tier, "orders_28d": orders, "current_slot": cur_slot,
+                 })
+     return pd.DataFrame(rows)
+diff --git a/gpc/guardrails.py b/gpc/guardrails.py
+index fbf668e..7fad796 100644
+--- a/gpc/guardrails.py
++++ b/gpc/guardrails.py
+@@ -32,7 +32,8 @@ from .engine.loop import campaign_pacing, cell_verdicts
+ from .observation import Observation
+ from .world import DAYPARTS
+ 
+-ACTION_TYPES = {"increase_cpm", "reduce_cpm", "pause_keyword", "increase_budget", "reduce_budget", "set_dayparts"}
++ACTION_TYPES = {"increase_cpm", "reduce_cpm", "pause_keyword", "increase_budget", "reduce_budget", "set_dayparts",
++                "request_holdout"}                      # sim v2: a one-run pause that returns a lift readout
+ INCREASES = {"increase_cpm", "increase_budget"}
+ BID_FLOOR, BID_CEIL, BID_STEP = 200.0, 10_000.0, 0.50
+ BUDGET_UP, BUDGET_DOWN, BUDGET_MIN = 0.50, 0.30, 300.0
+@@ -42,7 +43,7 @@ RUNOUT_MIN_DAYS = 2
+ 
+ 
+ def _lever(a) -> tuple:
+-    if a.action_type in ("increase_cpm", "reduce_cpm", "pause_keyword"):
++    if a.action_type in ("increase_cpm", "reduce_cpm", "pause_keyword", "request_holdout"):
+         return (a.campaign_id, a.keyword_id, "bid")
+     return (a.campaign_id, "", "budget" if "budget" in a.action_type else "dayparts")
+ 
+@@ -75,7 +76,7 @@ def apply_guardrails(obs: Observation, actions: pd.DataFrame, grid: pd.DataFrame
+         # G0
+         if at not in ACTION_TYPES or cid not in camp.index:
+             note(a, "G0_SCHEMA", "blocked", "unknown action type or campaign"); continue
+-        if at in ("increase_cpm", "reduce_cpm", "pause_keyword") and (cid, kid) not in ck.index:
++        if at in ("increase_cpm", "reduce_cpm", "pause_keyword", "request_holdout") and (cid, kid) not in ck.index:
+             note(a, "G0_SCHEMA", "blocked", "keyword not in this campaign"); continue
+         lever = _lever(pd.Series(a))
+         if lever in seen:
+@@ -84,7 +85,7 @@ def apply_guardrails(obs: Observation, actions: pd.DataFrame, grid: pd.DataFrame
+             dps = [d for d in str(a.get("new_value", "")).split(",") if d]
+             if not dps or any(d not in DAYPARTS for d in dps):
+                 note(a, "G0_SCHEMA", "blocked", "daypart schedule must list ≥ 1 valid daypart"); continue
+-        elif at != "pause_keyword":
++        elif at not in ("pause_keyword", "request_holdout"):
+             try:
+                 a["new_value"] = float(a["new_value"])
+             except (TypeError, ValueError):
+@@ -176,11 +177,12 @@ def project_actions(obs: Observation, actions: pd.DataFrame, grid: pd.DataFrame,
+         on = {dp: bool(camp.loc[a.campaign_id, f"on_{dp}"]) for dp in DAYPARTS}
+         ds = dr = 0.0
+         cg = grid[grid.campaign_id == a.campaign_id]
+-        if a.action_type in ("increase_cpm", "reduce_cpm", "pause_keyword"):
++        if a.action_type in ("increase_cpm", "reduce_cpm", "pause_keyword", "request_holdout"):
+             g = cg[cg.keyword_id == a.keyword_id]
+             live = float(ck.loc[(a.campaign_id, a.keyword_id), "bid_cpm_inr"])
+             p0 = predict_cell(g, live, on)
+-            p1 = {"spend": 0.0, "revenue": 0.0} if a.action_type == "pause_keyword" else predict_cell(g, float(a.new_value), on)
++            p1 = {"spend": 0.0, "revenue": 0.0} if a.action_type in ("pause_keyword", "request_holdout") \
++                else predict_cell(g, float(a.new_value), on)
+             ds, dr = p1["spend"] - p0["spend"], p1["revenue"] - p0["revenue"]
+             if a.action_type == "increase_cpm" and bool(pacing.loc[a.campaign_id, "budget_bound"]):
+                 ds, dr = ds * float(pacing.loc[a.campaign_id, "absorption"]), dr * float(pacing.loc[a.campaign_id, "absorption"])
+diff --git a/gpc/holdout.py b/gpc/holdout.py
+new file mode 100644
+index 0000000..325889b
+--- /dev/null
++++ b/gpc/holdout.py
+@@ -0,0 +1,37 @@
++"""Sim v2 measurement lever: `request_holdout` (design/02 §7.2).
++
++A holdout pauses one cell (campaign × keyword, i.e. SKU × city × keyword) for one run. Like a real lift test,
++its result is a noisy estimate of the cell's brand-incremental revenue per day, with a 95% confidence
++interval. The truth it estimates is the cell's expected brand-incremental revenue over the 7 days before the
++holdout: (competitor + expansion) orders × ASP, from the shelf model's `truth_decomp`, or the legacy
++incrementality × ad revenue when the shelf is off. The holdout's real cost is the sales lost while paused.
++"""
++from __future__ import annotations
++
++import zlib
++
++import numpy as np
++import pandas as pd
++
++HOLDOUT_STREAM = 5001
++SE_REL, SE_FLOOR_INR = 0.25, 300.0
++Z95 = 1.959964
++
++
++def true_cell_value(world, cid: str, kid: str, day: int, facts: pd.DataFrame, decomp: pd.DataFrame | None) -> float:
++    lo = day - 7
++    if decomp is not None and len(decomp):
++        d = decomp[(decomp.campaign_id == cid) & (decomp.keyword_id == kid) & (decomp.day >= lo) & (decomp.day < day)]
++        if len(d):
++            asp = world.public["products"].set_index("sku_id").asp_inr
++            return float(((d.competitor + d.expansion) * d.sku_id.map(asp)).sum() / 7)
++    f = facts[(facts.campaign_id == cid) & (facts.keyword_id == kid) & (facts.day >= lo) & (facts.day < day)]
++    return float(f.ad_revenue_inr.sum() * world.truth["keywords"][kid]["incrementality"] / 7)
++
++
++def readout(world, run: int, cid: str, kid: str, truth: float) -> dict:
++    rng = np.random.default_rng(np.random.SeedSequence([world.seed, HOLDOUT_STREAM, run, zlib.crc32(f"{cid}|{kid}".encode())]))
++    se = SE_REL * abs(truth) + SE_FLOOR_INR
++    est = truth + rng.normal(0, se)
++    return {"run": run, "campaign_id": cid, "keyword_id": kid, "est_inc_rev_per_day": round(est, 2),
++            "se": round(se, 2), "ci_lo": round(est - Z95 * se, 2), "ci_hi": round(est + Z95 * se, 2)}
+diff --git a/gpc/intent.py b/gpc/intent.py
+new file mode 100644
+index 0000000..59c6a61
+--- /dev/null
++++ b/gpc/intent.py
+@@ -0,0 +1,156 @@
++"""Module B (sim v2): who is searching. Brand-loyal vs open shoppers, stealing, reformulation.
++
++Design: `design/02_simulator_v2_design.md` §3.
++
++Each query q in city c has an intent mix π_{q,c} over segments (aurel, velora, nimbus, open), built from
++the scenario's city-average table, a per-brand city tilt (§3.5) and seeded log-normal noise.
++
++Ad orders are still drawn by the legacy auction (README M1). This module decides what an Aurel ad order
++*took*, as a mixture over the segments that could have produced it. The weight of segment s is
++π_s · r_s, where r_s is the rate at which one searcher of that segment becomes an attributed order:
++  - open:          the nested-logit shelf (Module A): r = P_i · w_ad/w, split by `shelf.decompose`;
++  - aurel-loyal:   buys some Aurel item with probability `loyal_buy`, choosing among visible Aurel items
++                   in proportion to w^β e^{v}; an ad only moves them between Aurel SKUs (self / sibling).
++                   If no Aurel item would be visible without the ad, they reformulate to the brand query
++                   with probability ρ (counted as self: they still buy Aurel) and otherwise act as open;
++  - b-loyal:       stolen through the ad (Simonov et al.): r = σ_b · steal_conv · w_ad, all "competitor",
++                   with σ_b = d·σ_def + (1−d)·σ_undef, where d is the chance brand b defends with its own ad.
++
++Two flows change *volumes*:
++  - reformulation (§3.4): Aurel-loyal searchers on a generic query who do not see Aurel in the top
++    positions move to the brand query K01 with probability ρ. The brand query gains
++    Σ_q ρ·π^aurel_{q,c}·searches_q·(1 − min(1, vis_q)) searches, where vis_q is Aurel's visibility on q.
++  - conquest loss (§3.2): on Aurel-owned queries with competitor presence κ (Module D), Aurel-loyal
++    searchers are stolen at σ = s1·σ_def + (1−s1)·σ_undef, where s1 is Aurel's slot-1 share; the lost
++    purchases come out of Aurel organic sales.
++"""
++from __future__ import annotations
++
++import numpy as np
++
++from .shelf import QueryShelf, decompose
++
++SEGMENTS = ("aurel", "velora", "nimbus", "open")
++COMP_ITEMS = {"velora": ("V1", "V2"), "nimbus": ("N1", "N2")}
++
++
++def build_intent(spec: dict, keyword_ids, city_ids, seed: int) -> dict:
++    """π per (query, city), with city tilt and seeded noise. Uses its own RNG stream (no legacy draws)."""
++    rng = np.random.default_rng(np.random.SeedSequence([seed, 2003]))
++    tilt = spec.get("city_tilt", {})                     # {"aurel": {"BLR": 1.15, ...}, ...}
++    sd = float(spec.get("city_noise_sigma", 0.08))
++    mix = {}
++    for k in keyword_ids:
++        base = spec["mix"].get(k, {"open": 1.0})
++        for c in city_ids:
++            p = {}
++            for b in SEGMENTS[:3]:
++                v = base.get(b, 0.0)
++                p[b] = v * tilt.get(b, {}).get(c, 1.0) * float(np.exp(rng.normal(0, sd))) if v > 0 else 0.0
++            tot = sum(p.values())
++            if tot > 0.95:
++                p = {b: v * 0.95 / tot for b, v in p.items()}
++            p["open"] = 1.0 - sum(p.values())
++            mix[(k, c)] = p
++    return mix
++
++
++class Intent:
++    def __init__(self, spec: dict, mix: dict):
++        self.spec = spec
++        self.mix = mix
++        self.loyal_buy = float(spec.get("loyal_buy", 0.15))
++        self.rho = float(spec.get("rho_reform", 0.4))
++        self.s_def = float(spec.get("sigma_def", 0.03))
++        self.s_undef = float(spec.get("sigma_undef", 0.30))
++        self.steal_conv = float(spec.get("steal_conv", 0.3))
++        self.defend = spec.get("defend", {})             # {"velora": {"K09": 0.9, "default": 0.3}}
++        self.brand_query = spec.get("brand_query", "K01")
++        self.reform_from = set(spec.get("reformulation_from", []))
++        self.reform_conv = float(spec.get("reform_conv_mult", 1.0))   # reformulators are high-intent searchers
++
++    def _sigma(self, b: str, kid: str) -> float:
++        d = self.defend.get(b, {})
++        d = float(d.get(kid, d.get("default", 0.3)))
++        return d * self.s_def + (1 - d) * self.s_undef
++
++    @staticmethod
++    def _aurel_shares(shelf: QueryShelf, wa: np.ndarray) -> np.ndarray:
++        w = shelf.w_org + wa
++        s = np.where(shelf.own & (w > 0), np.power(np.where(w > 0, w, 1.0), shelf.beta) * np.exp(shelf.v), 0.0)
++        tot = s.sum()
++        return s / tot if tot > 0 else s
++
++    def decompose(self, shelf: QueryShelf, w_ad: dict[str, float], city: str) -> dict[str, dict]:
++        """Mixture of the per-segment splits of one attributed ad order (same schema as `shelf.decompose`)."""
++        pi = self.mix.get((shelf.keyword_id, city), {"open": 1.0})
++        open_split = decompose(shelf, w_ad)
++        wa = np.zeros(len(shelf.items))
++        for item, x in w_ad.items():
++            wa[shelf.index(item)] = x
++        p_open, _ = shelf.probs(wa)
++        share = self._aurel_shares(shelf, wa)
++        out = {}
++        for item, x in w_ad.items():
++            i = shelf.index(item)
++            if x <= 0 or item not in open_split:
++                continue
++            wtot = shelf.w_org[i] + x
++            parts = []                                    # (weight, split)
++            # open shoppers
++            parts.append((pi["open"] * p_open[i] * x / wtot, open_split[item]))
++            # Aurel-loyal shoppers
++            if pi.get("aurel", 0) > 0 and share[i] > 0:
++                wl = wa.copy(); wl[i] = 0.0
++                share_l = self._aurel_shares(shelf, wl)
++                attr = self.loyal_buy * share[i] * x / wtot
++                if share_l.sum() > 0:                     # some Aurel item visible without the ad
++                    gain = self.loyal_buy * (share[i] - share_l[i])
++                    inc = min(max(gain, 0.0), attr) / attr
++                    loss = np.clip(share_l - share, 0.0, None); loss[i] = 0.0
++                    sib = {shelf.items[j]: inc * loss[j] / loss.sum() for j in range(len(loss)) if loss[j] > 0} \
++                        if loss.sum() > 0 else {}
++                    sp = {"self": 1.0 - inc if sib else 1.0, "sibling": sib, "competitor": 0.0, "expansion": 0.0,
++                          "excess": 0.0}
++                else:                                     # invisible without the ad: reformulate or shop open
++                    o = open_split[item]
++                    sp = {"self": self.rho + (1 - self.rho) * o["self"],
++                          "sibling": {k: (1 - self.rho) * v for k, v in o["sibling"].items()},
++                          "competitor": (1 - self.rho) * o["competitor"],
++                          "expansion": (1 - self.rho) * o["expansion"], "excess": 0.0}
++                parts.append((pi["aurel"] * attr, sp))
++            # competitor-loyal shoppers, stolen
++            for b in ("velora", "nimbus"):
++                if pi.get(b, 0) > 0:
++                    parts.append((pi[b] * self._sigma(b, shelf.keyword_id) * self.steal_conv * min(x, 1.0),
++                                  {"self": 0.0, "sibling": {}, "competitor": 1.0, "expansion": 0.0, "excess": 0.0}))
++            tot = sum(w for w, _ in parts)
++            if tot <= 0:
++                out[item] = open_split[item]
++                continue
++            mix = {"self": 0.0, "sibling": {}, "competitor": 0.0, "expansion": 0.0, "excess": 0.0}
++            for w, sp in parts:
++                f = w / tot
++                for k in ("self", "competitor", "expansion", "excess"):
++                    mix[k] += f * sp[k]
++                for s, v in sp["sibling"].items():
++                    mix["sibling"][s] = mix["sibling"].get(s, 0.0) + f * v
++            out[item] = mix
++        return out
++
++    def aurel_visibility(self, shelf: QueryShelf, w_ad: dict[str, float]) -> float:
++        v = float(shelf.w_org[shelf.own].sum()) + sum(w_ad.values())
++        return min(1.0, v)
++
++    def reformulation_searches(self, kid: str, city: str, searches: float, vis: float) -> float:
++        """Searches moved from generic query `kid` to the brand query in one daypart."""
++        if kid not in self.reform_from:
++            return 0.0
++        return self.rho * self.mix.get((kid, city), {}).get("aurel", 0.0) * searches * (1 - vis)
++
++    def conquest_loss(self, kid: str, city: str, searches: float, kappa: float, s1: float) -> float:
++        """Aurel purchases lost to competitor ads on an Aurel-owned query, in one daypart (expected units)."""
++        if kappa <= 0:
++            return 0.0
++        sigma = s1 * self.s_def + (1 - s1) * self.s_undef
++        return searches * self.mix.get((kid, city), {}).get("aurel", 0.0) * self.loyal_buy * kappa * sigma
+diff --git a/gpc/market.py b/gpc/market.py
+index 5eeab7e..49a49b6 100644
+--- a/gpc/market.py
++++ b/gpc/market.py
+@@ -30,12 +30,36 @@ from datetime import timedelta
+ 
+ import numpy as np
+ import pandas as pd
+-from scipy.stats import norm, poisson
++from scipy import special
++from scipy.stats import poisson
+ 
++from .calendar import Calendar
++from .competitors import Competitors
++from .intent import Intent
++from .shelf import decompose
++from .stock import Stock
+ from .world import (DAYPART_PRICE, DAYPARTS, SLOT_CONV, SLOT_PRICE_REL, SLOT_VIEW_REL, SLOTS, START_DATE,
+                     World)
+ 
+ 
++DECOMP_COLUMNS = ["day", "campaign_id", "sku_id", "city_id", "keyword_id", "daypart", "slot", "ad_orders",
++                  "self", "sibling", "competitor", "expansion", "excess"]
++
++
++def _ndtr(x):
++    """`scipy.stats.norm.cdf` for a finite scalar: the same `special.ndtr` kernel, without the argument machinery."""
++    return special.ndtr(x)
++
++
++def _poisson_ppf(q, mu) -> float:
++    """`scipy.stats.poisson.ppf(q, mu)` for scalars, bit-identical (scipy 1.17 `poisson_gen._ppf`), ~50x faster."""
++    if 0 < q < 1 and mu >= 0:
++        vals = np.ceil(special.pdtrik(q, mu))
++        vals1 = max(vals - 1, 0)
++        return vals1 if special.pdtr(vals1, mu) >= q else vals
++    return poisson.ppf(q, mu)
++
++
+ def _slot_shares(bid: float, base: dict[int, float], sigma: float) -> dict[int, tuple[float, float]]:
+     """Share of auctions won at each slot, and the average CPM paid there.
+ 
+@@ -47,12 +71,12 @@ def _slot_shares(bid: float, base: dict[int, float], sigma: float) -> dict[int,
+     e = np.exp(sigma ** 2 / 2)
+     for s in SLOTS:
+         hi = bid / base[s]
+-        p_hi = norm.cdf(np.log(hi) / sigma)
+-        p_lo = norm.cdf(np.log(lo) / sigma) if lo > 0 else 0.0
++        p_hi = _ndtr(np.log(hi) / sigma)
++        p_lo = _ndtr(np.log(lo) / sigma) if lo > 0 else 0.0
+         share = max(p_hi - p_lo, 0.0)
+         if share > 1e-6:
+-            pe_hi = norm.cdf(np.log(hi) / sigma - sigma)
+-            pe_lo = norm.cdf(np.log(lo) / sigma - sigma) if lo > 0 else 0.0
++            pe_hi = _ndtr(np.log(hi) / sigma - sigma)
++            pe_lo = _ndtr(np.log(lo) / sigma - sigma) if lo > 0 else 0.0
+             cpm = base[s] * e * (pe_hi - pe_lo) / share
+         else:
+             cpm = base[s]
+@@ -77,6 +101,22 @@ class Market:
+         ck = p["campaign_keywords"].merge(p["campaigns"][["campaign_id", "sku_id", "city_id"]])
+         self.pairs = list(ck[["campaign_id", "keyword_id", "sku_id", "city_id"]].itertuples(index=False, name=None))
+         self.camp_ids = list(p["campaigns"].campaign_id)
++        # plain-dict views of the static tables (pandas .loc in the inner loops was ~40% of run time)
++        self._city = {c: r for c, r in zip(self.city_ids, self.cities.to_dict("records"))}
++        self._kw = {k: r for k, r in zip(self.kw_ids, self.keywords.to_dict("records"))}
++        self._prod = {s: r for s, r in zip(self.sku_ids, self.products.to_dict("records"))}
++        self._rel = {k: float(v) for k, v in self.ks["relevance"].items()}
++        self._base_osa = {k: float(v) for k, v in self.sku_city["base_osa"].items()}
++        # sim v2 modules (absent in legacy scenarios). Stateful parts live on this instance, so the policy run
++        # and the ads-off counterfactual each keep their own stock and competitor state.
++        tr = world.truth
++        self.cal = Calendar(tr["calendar"]) if tr.get("calendar") else None
++        self.stock = Stock(tr["calendar"].get("ephemeral_skus", [])) if self.cal else None
++        self.comp = Competitors(tr["competitors"], self.cal or Calendar({}), self.city_ids) if tr.get("competitors") else None
++        self.intent = Intent(tr["intent"], tr["intent_mix"]) if tr.get("intent_mix") else None
++        self._org_w: dict[str, list[tuple[str, float]]] = {}      # organic multiplier weights: searches × relevance
++        for (sk, kid), r in self._rel.items():
++            self._org_w.setdefault(sk, []).append((kid, self._kw[kid]["searches_30d"] * r))
+ 
+     # ── random draws, fixed shapes per day ────────────────────────────────────
+     def _draws(self, day: int) -> dict:
+@@ -108,47 +148,73 @@ class Market:
+ 
+     def osa(self, sku: str, city: str, day: int) -> float:
+         shock = self._shock("osa", day, sku_id=sku, city_id=city)
+-        return float(shock if shock is not None else self.sku_city.loc[(sku, city), "base_osa"])
++        if self.stock is not None and self.stock.tracks(sku):
++            if not self.cal.is_live(sku, day) or not self.stock.available(sku, city):
++                return 0.0
++        return float(shock if shock is not None else self._base_osa[(sku, city)])
++
++    def organic_mult(self, sku: str, day: int) -> float:
++        ws = self._org_w.get(sku)
++        if self.cal is None or not ws:
++            return 1.0
++        tot = sum(w for _, w in ws)
++        return sum(w * self.cal.search_mult(k, day) for k, w in ws) / tot
++
++    def _searches(self, city: str, kid: str, d: int, dp: str, day: int, weekend: float, dr: dict, ci, ki) -> float:
++        c, k = self._city[city], self._kw[kid]
++        return (k["searches_30d"] / 30 * c["demand_share"] * c[f"share_{dp}"]
++                * self.w.truth["city_kw_affinity"][(city, kid)] * weekend * dr["search"][ci[city], ki[kid], d]
++                * (self._shock("demand", day, keyword_id=kid) or 1.0))
+ 
+     # ── one day ───────────────────────────────────────────────────────────────
+     def simulate_day(self, day: int, campaigns: pd.DataFrame, campaign_keywords: pd.DataFrame) -> dict[str, pd.DataFrame]:
+         t = self.w.truth
++        shelves = t.get("shelves")
++        row_split: list[dict | None] = []          # per fact row, aligned with `facts` (shelf model only)
+         dr = self._draws(day)
+         dt = START_DATE + timedelta(days=day)
+         weekend = t["noise"]["weekend_lift"] if dt.weekday() >= 5 else 1.0
+ 
+-        camp = campaigns.set_index("campaign_id")
+-        bids = campaign_keywords.set_index(["campaign_id", "keyword_id"])
+-        remaining = {cid: float(camp.loc[cid, "daily_budget_inr"]) for cid in self.camp_ids}
++        camp = {r["campaign_id"]: r for r in campaigns.to_dict("records")}
++        bids = {(r["campaign_id"], r["keyword_id"]): r for r in campaign_keywords.to_dict("records")}
++        remaining = {cid: float(camp[cid]["daily_budget_inr"]) for cid in self.camp_ids}
+         ran_out_dp: dict[str, str] = {}
+         ci = {c: i for i, c in enumerate(self.city_ids)}
+         ki = {k: i for i, k in enumerate(self.kw_ids)}
+         osa = {(s, c): self.osa(s, c, day) for s in self.sku_ids for c in self.city_ids}
+ 
+         facts = []
++        s1_day: dict[str, float] = {}            # sim v2 competitors: Aurel slot-1 share on the brand query, by city
++        conq_sc: dict[tuple[str, str], float] = {}
++        conq_rows: list[dict] = []
++        slot1_rows: list[dict] = []
+         for d, dp in enumerate(DAYPARTS):
+             # 1–2. who bids, what each slot clears at, who wins which slot
+             by_market: dict[tuple[str, str], list[tuple[float, int]]] = {}
+             for pi, (cid, kid, sku, city) in enumerate(self.pairs):
+-                row = camp.loc[cid]
++                row = camp[cid]
+                 if not row[f"on_{dp}"] or remaining[cid] <= 0.5:
+                     continue
+-                if (cid, kid) not in bids.index or not bool(bids.loc[(cid, kid), "active"]):
++                b = bids.get((cid, kid))
++                if b is None or not bool(b["active"]):
+                     continue
+-                by_market.setdefault((city, kid), []).append((float(bids.loc[(cid, kid), "bid_cpm_inr"]), pi))
++                by_market.setdefault((city, kid), []).append((float(b["bid_cpm_inr"]), pi))
+ 
+             demand: dict[int, list] = {}
++            markets: dict[tuple[str, str], tuple[float, list[int]]] = {}     # sim v2 shelf: searches and entrants
++            # stage 1: auction outcome per market (independent of search volume)
++            stage: dict[tuple[str, str], tuple] = {}
+             for (city, kid), entrants in by_market.items():
+-                c, k = self.cities.loc[city], self.keywords.loc[kid]
++                c, k = self._city[city], self._kw[kid]
+                 kt = t["keywords"][kid]
+-                searches = (k.searches_30d / 30 * c.demand_share * c[f"share_{dp}"]
+-                            * t["city_kw_affinity"][(city, kid)] * weekend * dr["search"][ci[city], ki[kid], d]
+-                            * (self._shock("demand", day, keyword_id=kid) or 1.0))
+                 pmult = self._shock("price", day, city_id=city, keyword_id=kid) or 1.0
++                if self.comp is not None:
++                    pmult *= self.comp.price_mult(kid, city)
+                 level = dr["price"][ci[city], ki[kid], d]
+-                base = {s: k.rank1_cpm_inr * c.cpm_index * DAYPART_PRICE[d] * SLOT_PRICE_REL[s] * kt["price_dev"][s]
++                base = {s: k["rank1_cpm_inr"] * c["cpm_index"] * DAYPART_PRICE[d] * SLOT_PRICE_REL[s] * kt["price_dev"][s]
+                         * level * pmult for s in SLOTS}
+                 occupied = {s: 0.0 for s in SLOTS}          # share of auctions a higher Aurel bid already holds
++                won = []
+                 for bid, pi in sorted(entrants, key=lambda x: -x[0]):
+                     shares = _slot_shares(bid, base, t["auction_sigma"])
+                     # own-brand collision: where a sibling already holds the slot, this ad drops one slot down
+@@ -161,6 +227,47 @@ class Market:
+                         adj[s] = (keep, cpm_s)
+                     for s in SLOTS:
+                         occupied[s] = min(1.0, occupied[s] + adj[s][0])
++                    won.append((pi, adj))
++                    if shelves is not None:            # truth: share of auctions won at slot 1 (G-1 objective f2)
++                        slot1_rows.append({"day": day, "city_id": city, "keyword_id": kid, "daypart": dp,
++                                           "sku_id": self.pairs[pi][2], "share1": adj[1][0]})
++                stage[(city, kid)] = (won, occupied)
++                if self.comp is not None and kid == self.comp.opp_kw:
++                    s1_day[city] = s1_day.get(city, 0.0) + occupied[1] * c[f"share_{dp}"]
++
++            # sim v2 intent: reformulation from generic queries to the brand query (needs Aurel visibility first)
++            reform: dict[str, float] = {}
++            conv_boost: dict[tuple[str, str], float] = {}
++            if self.intent is not None and self.intent.reform_from:
++                for city in self.city_ids:
++                    for kid in self.intent.reform_from:
++                        if kid not in shelves:
++                            continue
++                        w_ad = {}
++                        for pi, adj in stage.get((city, kid), ([], None))[0]:
++                            sku = self.pairs[pi][2]
++                            kt = t["keywords"][kid]
++                            w_ad[sku] = sum(adj[s][0] * SLOT_VIEW_REL[s] * kt["view_dev"][s] for s in SLOTS) * osa[(sku, city)]
++                        sq = self._searches(city, kid, d, dp, day, weekend, dr, ci, ki)
++                        if self.cal is not None:
++                            sq *= self.cal.search_mult(kid, day)
++                        vis = self.intent.aurel_visibility(shelves[kid], w_ad)
++                        reform[city] = reform.get(city, 0.0) + self.intent.reformulation_searches(kid, city, sq, vis)
++
++            # stage 2: searches and impressions
++            for (city, kid), (won, occupied) in stage.items():
++                kt = t["keywords"][kid]
++                searches = self._searches(city, kid, d, dp, day, weekend, dr, ci, ki)
++                if self.cal is not None:
++                    searches *= self.cal.search_mult(kid, day)
++                if reform and kid == self.intent.brand_query:
++                    extra = reform.get(city, 0.0)
++                    searches += extra
++                    if searches > 0:                   # conversion boost on the brand query, by reformulated share
++                        conv_boost[(city, kid)] = 1 + (self.intent.reform_conv - 1) * extra / searches
++                if self.cal is not None and searches <= 0:     # keyword not live today (ephemeral)
++                    continue
++                for pi, adj in won:
+                     _cid, _kid, sku, _city = self.pairs[pi]
+                     rows = []
+                     for s in SLOTS:
+@@ -171,6 +278,33 @@ class Market:
+                         rows.append((s, impr, cpm))
+                     if rows:
+                         demand[pi] = rows
++                        markets.setdefault((city, kid), (searches, []))[1].append(pi)
++
++            # sim v2 intent: Aurel-loyal shoppers stolen by competitor ads on Aurel-owned queries
++            if self.comp is not None and self.intent is not None:
++                for kid in self.comp.conquest_keywords():
++                    for city in self.city_ids:
++                        kappa = self.comp.conquest(kid, city)
++                        if kappa <= 0:
++                            continue
++                        won, occupied = stage.get((city, kid), ([], {1: 0.0}))
++                        sq = self._searches(city, kid, d, dp, day, weekend, dr, ci, ki)
++                        if self.cal is not None:
++                            sq *= self.cal.search_mult(kid, day)
++                        if reform and kid == self.intent.brand_query:
++                            sq += reform.get(city, 0.0)
++                        lost = self.intent.conquest_loss(kid, city, sq, kappa, occupied[1])
++                        if lost <= 0:
++                            continue
++                        sh = shelves[kid]
++                        w_ad = {self.pairs[pi][2]: sum(adj[s][0] * SLOT_VIEW_REL[s] for s in SLOTS) for pi, adj in won}
++                        wa = np.array([w_ad.get(it, 0.0) for it in sh.items])
++                        share = self.intent._aurel_shares(sh, wa)
++                        for j, it in enumerate(sh.items):
++                            if share[j] > 0:
++                                conq_sc[(it, city)] = conq_sc.get((it, city), 0.0) + lost * share[j]
++                        conq_rows.append({"day": day, "city_id": city, "keyword_id": kid, "daypart": dp,
++                                          "kappa": kappa, "aurel_slot1": occupied[1], "lost_units": lost})
+ 
+             # 4. budget pacing within the daypart
+             want: dict[str, float] = {}
+@@ -186,22 +320,42 @@ class Market:
+             for cid, w in want.items():
+                 remaining[cid] -= w * frac[cid]
+ 
++            # sim v2 shelf: split of each ad order into self / sibling / competitor / expansion, per auction
++            dec: dict[int, dict] = {}
++            if shelves is not None:
++                for (city, kid), (searches, pis) in markets.items():
++                    w_ad = {}
++                    for pi in pis:
++                        cid = self.pairs[pi][0]
++                        w_ad[self.pairs[pi][2]] = sum(i * frac[cid] for _, i, _ in demand[pi] if i * frac[cid] >= 1) / searches
++                    split = (self.intent.decompose(shelves[kid], w_ad, city) if self.intent is not None
++                             else decompose(shelves[kid], w_ad))
++                    for pi in pis:
++                        if self.pairs[pi][2] in split:
++                            dec[pi] = split[self.pairs[pi][2]]
++
+             # 5. ad orders
+             for pi, rows in demand.items():
+                 cid, kid, sku, city = self.pairs[pi]
+                 kt = t["keywords"][kid]
+-                asp = float(self.products.loc[sku, "asp_inr"])
++                asp = float(self._prod[sku]["asp_inr"])
+                 for slot, impr, cpm in rows:
+                     impr *= frac[cid]
+                     if impr < 1:
+                         continue
+                     lam = (impr * SLOT_CONV[slot] * kt["conv_dev"][slot] * kt["intent"]
+-                           * self.ks.loc[(sku, kid), "relevance"] * t["appeal"][sku])
+-                    orders = int(poisson.ppf(dr["u_ad"][pi, d, SLOTS.index(slot)], lam)) if lam > 0 else 0
++                           * self._rel[(sku, kid)] * t["appeal"][sku])
++                    if self.cal is not None and dp == "evening":
++                        lam *= self.cal.evening_lift(day)
++                    if conv_boost:
++                        lam *= conv_boost.get((city, kid), 1.0)
++                    orders = int(_poisson_ppf(dr["u_ad"][pi, d, SLOTS.index(slot)], lam)) if lam > 0 else 0
+                     facts.append({"day": day, "date": dt.isoformat(), "campaign_id": cid, "sku_id": sku,
+                                   "city_id": city, "keyword_id": kid, "daypart": dp, "slot": slot,
+                                   "impressions": round(impr), "spend_inr": round(impr * cpm / 1000, 2),
+                                   "ad_orders": orders, "ad_revenue_inr": round(orders * asp, 2)})
++                    if shelves is not None:
++                        row_split.append(dec.get(pi))
+ 
+         facts_df = pd.DataFrame(facts, columns=["day", "date", "campaign_id", "sku_id", "city_id", "keyword_id",
+                                                 "daypart", "slot", "impressions", "spend_inr", "ad_orders",
+@@ -212,30 +366,70 @@ class Market:
+         camp_rows = []
+         for cid in self.camp_ids:
+             camp_rows.append({"day": day, "date": dt.isoformat(), "campaign_id": cid,
+-                              "daily_budget_inr": float(camp.loc[cid, "daily_budget_inr"]),
++                              "daily_budget_inr": float(camp[cid]["daily_budget_inr"]),
+                               "spend_inr": round(float(spend_by_c.get(cid, 0.0)), 2),
+                               "ran_out": cid in ran_out_dp, "ran_out_daypart": ran_out_dp.get(cid, "")})
+ 
+         # 6. organic + total offtake per SKU × city
+-        sc_rows = []
++        # ad units and "would have bought anyway" units per SKU × city, summed in fact-row order (same float sums as before)
++        ad_units_sc: dict[tuple[str, str], int] = {}
++        cannibal_sc: dict[tuple[str, str], float] = {}
++        decomp_rows = []
++        for n, f in enumerate(facts):
++            key = (f["sku_id"], f["city_id"])
++            ad_units_sc[key] = ad_units_sc.get(key, 0) + f["ad_orders"]
++            if shelves is None:
++                inc = t["keywords"][f["keyword_id"]]["incrementality"] * t["organic_damp"].get((f["sku_id"], f["keyword_id"]), 1.0)
++                cannibal_sc[key] = cannibal_sc.get(key, 0.0) + (1 - inc) * f["ad_orders"]
++                continue
++            sp = row_split[n] or {"self": 1.0, "sibling": {}, "competitor": 0.0, "expansion": 0.0, "excess": 0.0}
++            o = f["ad_orders"]
++            cannibal_sc[key] = cannibal_sc.get(key, 0.0) + sp["self"] * o
++            for sib, fr in sp["sibling"].items():                 # orders the sibling would have had organically
++                k2 = (sib, f["city_id"])
++                cannibal_sc[k2] = cannibal_sc.get(k2, 0.0) + fr * o
++            decomp_rows.append({"day": day, "campaign_id": f["campaign_id"], "sku_id": f["sku_id"],
++                                "city_id": f["city_id"], "keyword_id": f["keyword_id"], "daypart": f["daypart"],
++                                "slot": f["slot"], "ad_orders": o, "self": sp["self"] * o,
++                                "sibling": sum(sp["sibling"].values()) * o, "competitor": sp["competitor"] * o,
++                                "expansion": sp["expansion"] * o, "excess": sp["excess"] * o})
++        for key, v in conq_sc.items():                       # sim v2: conquest losses come out of organic sales
++            cannibal_sc[key] = cannibal_sc.get(key, 0.0) + v
++        sc_rows, stock_rows = [], []
+         for si, sku in enumerate(self.sku_ids):
+-            p = self.products.loc[sku]
++            p = self._prod[sku]
+             for cj, city in enumerate(self.city_ids):
+-                c = self.cities.loc[city]
+-                lam_org = p.organic_units_per_day * c.demand_share * weekend * dr["organic"][si, cj] * osa[(sku, city)]
+-                organic_base = int(poisson.ppf(dr["u_org"][si, cj], lam_org)) if lam_org > 0 else 0
+-                ad = facts_df[(facts_df.sku_id == sku) & (facts_df.city_id == city)]
+-                ad_units = int(ad.ad_orders.sum())
+-                cannibal = 0.0
+-                for r in ad.itertuples():
+-                    inc = t["keywords"][r.keyword_id]["incrementality"] * t["organic_damp"].get((sku, r.keyword_id), 1.0)
+-                    cannibal += (1 - inc) * r.ad_orders
+-                cannibal = int(np.floor(cannibal + dr["u_can"][si, cj]))
++                c = self._city[city]
++                lam_org = p["organic_units_per_day"] * c["demand_share"] * weekend * dr["organic"][si, cj] * osa[(sku, city)]
++                if self.cal is not None:
++                    lam_org *= self.organic_mult(sku, day)
++                organic_base = int(_poisson_ppf(dr["u_org"][si, cj], lam_org)) if lam_org > 0 else 0
++                ad_units = int(ad_units_sc.get((sku, city), 0))
++                cannibal = int(np.floor(cannibal_sc.get((sku, city), 0.0) + dr["u_can"][si, cj]))
+                 organic = max(organic_base - cannibal, 0)
++                if self.stock is not None and self.stock.tracks(sku) and self.cal.is_live(sku, day):
++                    ad_units, organic, before, after = self.stock.fulfil(sku, city, ad_units, organic)
++                    stock_rows.append({"day": day, "sku_id": sku, "city_id": city, "stock_start": before,
++                                       "sold": ad_units + organic, "stock_end": after})
+                 total = organic + ad_units
+                 sc_rows.append({"day": day, "date": dt.isoformat(), "sku_id": sku, "city_id": city,
+                                 "osa": round(osa[(sku, city)], 3), "ad_units": ad_units, "organic_units": organic,
+-                                "total_units": total, "offtake_inr": round(total * p.asp_inr, 2),
+-                                "ad_revenue_inr": round(ad_units * p.asp_inr, 2)})
+-        return {"daily_facts": facts_df, "campaign_daily": pd.DataFrame(camp_rows),
+-                "sku_city_daily": pd.DataFrame(sc_rows)}
++                                "total_units": total, "offtake_inr": round(total * p["asp_inr"], 2),
++                                "ad_revenue_inr": round(ad_units * p["asp_inr"], 2)})
++        out = {"daily_facts": facts_df, "campaign_daily": pd.DataFrame(camp_rows),
++               "sku_city_daily": pd.DataFrame(sc_rows)}
++        if shelves is not None:                # truth-side table; the runner keeps it out of observations
++            out["truth_decomp"] = pd.DataFrame(decomp_rows, columns=DECOMP_COLUMNS)
++            out["truth_slot1"] = pd.DataFrame(slot1_rows, columns=["day", "city_id", "keyword_id", "daypart", "sku_id",
++                                                                   "share1"])
++        if self.stock is not None:             # the brand knows its own stock: public
++            out["pub_stock_daily"] = pd.DataFrame(stock_rows, columns=["day", "sku_id", "city_id", "stock_start", "sold",
++                                                                       "stock_end"])
++        if self.comp is not None:
++            out["truth_conquest"] = pd.DataFrame(conq_rows, columns=["day", "city_id", "keyword_id", "daypart", "kappa",
++                                                                     "aurel_slot1", "lost_units"])
++            out["truth_competitors"] = pd.DataFrame(
++                [{"day": day, "agent": a, "bid_level": b} for a, b in self.comp.bid.items()]
++                + [{"day": day, "agent": f"conquest_{c}", "bid_level": float(on)} for c, on in self.comp.on.items()])
++            self.comp.end_of_day(day, s1_day)
++        return out
+diff --git a/gpc/observation.py b/gpc/observation.py
+index dc5d08d..b9121ff 100644
+--- a/gpc/observation.py
++++ b/gpc/observation.py
+@@ -2,7 +2,7 @@
+ 
+ from __future__ import annotations
+ 
+-from dataclasses import dataclass
++from dataclasses import dataclass, field
+ from datetime import date, timedelta
+ 
+ import pandas as pd
+@@ -22,6 +22,7 @@ class Observation:
+     sku_city_daily: pd.DataFrame          # SKU × city offtake (ad + organic), all days < `day`
+     roas_floor: float                     # portfolio direct ROAS to hold (warm-up level − 2%)
+     warmup_droas: float                   # portfolio direct ROAS over the 28-day warm-up
++    extra: dict = field(default_factory=dict)   # sim v2 public tables (pub_stock_daily, category_share_weekly, …), days < `day`
+ 
+     @property
+     def date(self) -> date:
+diff --git a/gpc/public_v2.py b/gpc/public_v2.py
+new file mode 100644
+index 0000000..0870139
+--- /dev/null
++++ b/gpc/public_v2.py
+@@ -0,0 +1,82 @@
++"""Sim v2 public observations (design/02 §7.2), assembled from the market's per-day tables.
++
++  - pub_stock_daily:        the brand's own gift-pack stock, sold units and stock left (it knows its stock)
++  - category_share_weekly:  own-brand share of category units per nest × city, ±3 pp noise, published with
++                            a 7-day lag (platform/panel category insights)
++  - lift_readout:           results of `request_holdout` actions (added by the runner)
++
++Competitor units are a hidden base (scenario `shelf.competitor_units_per_day`, by nest, scaled by city
++demand share and the calendar) minus the orders Aurel's ads took from competitors, plus the Aurel
++purchases competitors took through conquest.
++"""
++from __future__ import annotations
++
++import numpy as np
++import pandas as pd
++
++from .world import World
++
++SHARE_NOISE_PP = 0.03
++LAG_DAYS = 7
++CATEGORY_STREAM = 4001
++
++
++def build_public(world: World, hidden: dict, day: int, sku_city_daily: pd.DataFrame) -> dict:
++    out = {}
++    if "pub_stock_daily" in hidden:
++        st = pd.concat(hidden["pub_stock_daily"], ignore_index=True)
++        out["pub_stock_daily"] = st[st.day < day]
++    if "pub_lift_readout" in hidden:                    # readouts of holdouts that finished before `day`
++        out["lift_readout"] = pd.concat(hidden["pub_lift_readout"], ignore_index=True)
++    if world.truth.get("shelves") and world.truth.get("shelf_spec", {}).get("competitor_units_per_day"):
++        out["category_share_weekly"] = category_share_weekly(world, hidden, day, sku_city_daily)
++    return out
++
++
++def _cal_mult(world: World, nest_kws: list[str], d: int) -> float:
++    cal = world.truth.get("_calendar_obj")
++    if cal is None:
++        return 1.0
++    return float(np.mean([cal.search_mult(k, d) for k in nest_kws])) if nest_kws else 1.0
++
++
++def category_share_weekly(world: World, hidden: dict, day: int, sku_city_daily: pd.DataFrame) -> pd.DataFrame:
++    spec = world.truth["shelf_spec"]
++    base = spec.get("competitor_units_per_day", {})
++    if not base:
++        return pd.DataFrame(columns=["week", "nest", "city_id", "own_share"])
++    nest_of = {s: n for n, ss in world.truth["nest_of_sku"].items() for s in ss}
++    cities = world.public["cities"].set_index("city_id").demand_share
++    last_day = day - 1 - LAG_DAYS
++    n_weeks = (last_day + 1) // 7
++    if n_weeks <= 0:
++        return pd.DataFrame(columns=["week", "nest", "city_id", "own_share"])
++    sc = sku_city_daily[sku_city_daily.day < n_weeks * 7].assign(nest=lambda d: d.sku_id.map(nest_of),
++                                                                  week=lambda d: d.day // 7)
++    own = sc.groupby(["week", "nest", "city_id"]).total_units.sum()
++    taken = pd.Series(0.0, index=own.index)
++    if "truth_decomp" in hidden:
++        dec = pd.concat(hidden["truth_decomp"], ignore_index=True)
++        dec = dec[dec.day < n_weeks * 7].assign(nest=lambda d: d.sku_id.map(nest_of), week=lambda d: d.day // 7)
++        taken = taken.add(dec.groupby(["week", "nest", "city_id"]).competitor.sum(), fill_value=0.0)
++    gained = pd.Series(0.0, index=own.index)
++    if "truth_conquest" in hidden:
++        cq = pd.concat(hidden["truth_conquest"], ignore_index=True)
++        if len(cq):
++            cq = cq[cq.day < n_weeks * 7].assign(week=lambda d: d.day // 7, nest="bar")   # brand queries: bar-led
++            gained = gained.add(cq.groupby(["week", "nest", "city_id"]).lost_units.sum(), fill_value=0.0)
++    kws = {n: [k for k, sh in world.truth["shelves"].items()
++               if any(world.truth["nest_of_sku"].get(n) and it in world.truth["nest_of_sku"][n] for it in sh.items)]
++           for n in base}
++    rows = []
++    for (w, n, c), u in own.items():
++        if n not in base:
++            continue
++        comp_units = sum(base[n] * cities[c] * _cal_mult(world, kws[n], d) for d in range(7 * w, 7 * w + 7))
++        comp_units = max(comp_units - taken.get((w, n, c), 0.0) + gained.get((w, n, c), 0.0), 0.0)
++        rng = np.random.default_rng(np.random.SeedSequence([world.seed, CATEGORY_STREAM, int(w),
++                                                            sorted(base).index(n), list(cities.index).index(c)]))
++        share = u / (u + comp_units) if u + comp_units > 0 else 0.0
++        rows.append({"week": int(w), "nest": n, "city_id": c,
++                     "own_share": round(float(np.clip(share + rng.normal(0, SHARE_NOISE_PP), 0, 1)), 4)})
++    return pd.DataFrame(rows)
+diff --git a/gpc/runner.py b/gpc/runner.py
+index b202839..6a4af7f 100644
+--- a/gpc/runner.py
++++ b/gpc/runner.py
+@@ -12,7 +12,7 @@ from __future__ import annotations
+ import argparse
+ import importlib
+ import json
+-from dataclasses import dataclass
++from dataclasses import dataclass, field
+ from pathlib import Path
+ 
+ import pandas as pd
+@@ -34,6 +34,7 @@ class SimResult:
+     sku_city_daily: pd.DataFrame
+     runs: list[dict]
+     warmup_droas: float
++    truth_tables: dict = field(default_factory=dict)     # sim v2: hidden per-day tables (e.g. truth_decomp); scorer only
+ 
+ 
+ def apply_actions(campaigns: pd.DataFrame, ck: pd.DataFrame, actions: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+@@ -42,7 +43,7 @@ def apply_actions(campaigns: pd.DataFrame, ck: pd.DataFrame, actions: pd.DataFra
+         if a.action_type in ("increase_cpm", "reduce_cpm"):
+             m = (ck.campaign_id == a.campaign_id) & (ck.keyword_id == a.keyword_id)
+             ck.loc[m, "bid_cpm_inr"] = float(a.new_value)
+-        elif a.action_type == "pause_keyword":
++        elif a.action_type in ("pause_keyword", "request_holdout"):   # a holdout is restored after its run
+             m = (ck.campaign_id == a.campaign_id) & (ck.keyword_id == a.keyword_id)
+             ck.loc[m, "active"] = False
+         elif a.action_type in ("increase_budget", "reduce_budget"):
+@@ -54,11 +55,20 @@ def apply_actions(campaigns: pd.DataFrame, ck: pd.DataFrame, actions: pd.DataFra
+     return campaigns, ck
+ 
+ 
+-def _days(market: Market, start: int, n: int, campaigns, ck, acc: dict):
++def public_extra(world: World, hidden: dict, day: int, sku_city_daily: pd.DataFrame) -> dict:
++    """Public sim v2 tables a policy may see at decision day `day` (empty for legacy scenarios)."""
++    from .public_v2 import build_public
++    return build_public(world, hidden, day, sku_city_daily)
++
++
++def _days(market: Market, start: int, n: int, campaigns, ck, acc: dict, hidden: dict | None = None):
+     for d in range(start, start + n):
+         o = market.simulate_day(d, campaigns, ck)
+         for k, v in o.items():
+-            acc[k].append(v)
++            if k in acc:
++                acc[k].append(v)
++            elif hidden is not None:                   # truth_* never reach the Observation; pub_* do (via `extra`)
++                hidden.setdefault(k, []).append(v)
+ 
+ 
+ def simulate(world: World, policy: Policy, n_runs: int = N_RUNS, out_dir: Path | None = None,
+@@ -67,7 +77,8 @@ def simulate(world: World, policy: Policy, n_runs: int = N_RUNS, out_dir: Path |
+     campaigns = world.public["campaigns"].copy()
+     ck = world.public["campaign_keywords"].copy()
+     acc = {"daily_facts": [], "campaign_daily": [], "sku_city_daily": []}
+-    _days(market, 0, WARMUP_DAYS, campaigns, ck, acc)
++    hidden: dict = {}
++    _days(market, 0, WARMUP_DAYS, campaigns, ck, acc, hidden)
+     f = pd.concat(acc["daily_facts"])
+     warm = float(f.ad_revenue_inr.sum() / f.spend_inr.sum())
+     runs = []
+@@ -76,18 +87,33 @@ def simulate(world: World, policy: Policy, n_runs: int = N_RUNS, out_dir: Path |
+         frames = {k: pd.concat(v, ignore_index=True) for k, v in acc.items()}
+         obs = Observation(run=r, day=day, public=world.public, campaigns=campaigns.copy(),
+                           campaign_keywords=ck.copy(), roas_floor=warm * (1 - ROAS_TOLERANCE), warmup_droas=warm,
+-                          **frames)
++                          extra=public_extra(world, hidden, day, frames["sku_city_daily"]), **frames)
+         proposed = policy.recommend(obs)
+         final, glog, gsum = apply_guardrails(obs, proposed)
+         runs.append({"run": r, "day": day, "date": obs.date.isoformat(), "proposed": proposed, "final": final,
+                      "guardrail_log": glog, "guardrail_summary": gsum, "trace": policy.last_trace,
+                      "campaigns_before": campaigns.copy(), "campaign_keywords_before": ck.copy()})
++        holds = final[final.action_type == "request_holdout"] if len(final) else final
++        before_active = ck.set_index(["campaign_id", "keyword_id"]).active
+         campaigns, ck = apply_actions(campaigns, ck, final)
+-        _days(market, day, RUN_DAYS, campaigns, ck, acc)
++        _days(market, day, RUN_DAYS, campaigns, ck, acc, hidden)
++        if len(holds):                                 # sim v2: restore held-out cells, publish their readouts
++            from .holdout import readout, true_cell_value
++            dec = pd.concat(hidden["truth_decomp"], ignore_index=True) if "truth_decomp" in hidden else None
++            fac = pd.concat(acc["daily_facts"], ignore_index=True)
++            for h in holds.itertuples():
++                m = (ck.campaign_id == h.campaign_id) & (ck.keyword_id == h.keyword_id)
++                ck.loc[m, "active"] = bool(before_active[(h.campaign_id, h.keyword_id)])
++                truth = true_cell_value(world, h.campaign_id, h.keyword_id, day, fac, dec)
++                hidden.setdefault("pub_lift_readout", []).append(pd.DataFrame([readout(world, r, h.campaign_id,
++                                                                                       h.keyword_id, truth)]))
++                hidden.setdefault("truth_lift", []).append(pd.DataFrame([{"run": r, "campaign_id": h.campaign_id,
++                                                                          "keyword_id": h.keyword_id, "truth": truth}]))
+         if verbose:
+             print(f"run {r} {obs.date}: proposed {len(proposed)} → shipped {len(final)}")
+     frames = {k: pd.concat(v, ignore_index=True) for k, v in acc.items()}
+-    res = SimResult(policy.name, frames["daily_facts"], frames["campaign_daily"], frames["sku_city_daily"], runs, warm)
++    res = SimResult(policy.name, frames["daily_facts"], frames["campaign_daily"], frames["sku_city_daily"], runs, warm,
++                    {k: pd.concat(v, ignore_index=True) for k, v in hidden.items()})
+     if out_dir is not None:
+         write_outputs(world, res, Path(out_dir))
+     return res
+diff --git a/gpc/scenarios/sc1_cannibal.json b/gpc/scenarios/sc1_cannibal.json
+new file mode 100644
+index 0000000..023dd8b
+--- /dev/null
++++ b/gpc/scenarios/sc1_cannibal.json
+@@ -0,0 +1,216 @@
++{
++  "name": "sc1_cannibal",
++  "note": "Sim v2 scenario A (design/02 \u00a72, \u00a78): dev plus a nested-logit shelf with competitor items. Hidden; policies must not read it.",
++  "keywords": {
++    "K01": {
++      "intent": 2.4,
++      "incrementality": 0.15
++    },
++    "K02": {
++      "intent": 2.6,
++      "incrementality": 0.18
++    },
++    "K03": {
++      "intent": 0.9,
++      "incrementality": 0.55
++    },
++    "K04": {
++      "intent": 1.0,
++      "incrementality": 0.55
++    },
++    "K05": {
++      "intent": 1.0,
++      "incrementality": 0.6
++    },
++    "K06": {
++      "intent": 1.05,
++      "incrementality": 0.6
++    },
++    "K07": {
++      "intent": 1.15,
++      "incrementality": 0.5
++    },
++    "K08": {
++      "intent": 1.2,
++      "incrementality": 0.7
++    },
++    "K09": {
++      "intent": 0.5,
++      "incrementality": 0.85
++    },
++    "K10": {
++      "intent": 0.45,
++      "incrementality": 0.85
++    }
++  },
++  "appeal": {
++    "S1": 1.0,
++    "S2": 0.95,
++    "S3": 1.0,
++    "S4": 0.9,
++    "S5": 1.1
++  },
++  "organic_damp": {
++    "max_organic_rank": 3,
++    "factor": 0.6
++  },
++  "auction_sigma": 0.3,
++  "noise": {
++    "searches_sigma": 0.1,
++    "price_sigma": 0.08,
++    "organic_sigma": 0.06,
++    "weekend_lift": 1.12
++  },
++  "shocks": [
++    {
++      "kind": "osa",
++      "sku_id": "S2",
++      "city_id": "HYD",
++      "from_run": 3,
++      "to_run": 3,
++      "osa": 0.42
++    },
++    {
++      "kind": "price",
++      "city_id": "MUM",
++      "keyword_ids": [
++        "K05",
++        "K06"
++      ],
++      "from_run": 4,
++      "mult": 1.35
++    },
++    {
++      "kind": "demand",
++      "keyword_ids": [
++        "K03",
++        "K04"
++      ],
++      "from_run": 5,
++      "mult": 1.15
++    }
++  ],
++  "shelf": {
++    "beta": 0.7,
++    "nests": {
++      "bar": {
++        "lambda": 0.35,
++        "sub_categories": [
++          "Soap",
++          "Kids Soap"
++        ]
++      },
++      "liquid": {
++        "lambda": 0.6,
++        "sub_categories": [
++          "Body Wash",
++          "Shower Gel"
++        ]
++      }
++    },
++    "competitors": {
++      "V1": {
++        "name": "Velora Soap",
++        "nest": "bar",
++        "appeal": 1.05,
++        "keywords": {
++          "K03": [
++            0.85,
++            1
++          ],
++          "K04": [
++            0.85,
++            2
++          ],
++          "K07": [
++            0.6,
++            2
++          ],
++          "K08": [
++            0.4,
++            4
++          ],
++          "K09": [
++            1.0,
++            1
++          ]
++        },
++        "brand": "Velora"
++      },
++      "V2": {
++        "name": "Velora Body Wash",
++        "nest": "liquid",
++        "appeal": 0.95,
++        "keywords": {
++          "K05": [
++            0.9,
++            2
++          ],
++          "K06": [
++            0.7,
++            2
++          ],
++          "K09": [
++            0.9,
++            2
++          ]
++        },
++        "brand": "Velora"
++      },
++      "N1": {
++        "name": "Nimbus Soap",
++        "nest": "bar",
++        "appeal": 0.9,
++        "keywords": {
++          "K03": [
++            0.8,
++            2
++          ],
++          "K04": [
++            0.8,
++            1
++          ],
++          "K08": [
++            0.6,
++            2
++          ],
++          "K10": [
++            0.3,
++            5
++          ]
++        },
++        "brand": "Nimbus"
++      },
++      "N2": {
++        "name": "Nimbus Body Wash",
++        "nest": "liquid",
++        "appeal": 1.1,
++        "keywords": {
++          "K05": [
++            1.0,
++            1
++          ],
++          "K06": [
++            0.9,
++            1
++          ],
++          "K10": [
++            1.0,
++            1
++          ]
++        },
++        "brand": "Nimbus"
++      }
++    },
++    "outside_share": {
++      "default": 0.6,
++      "K01": 0.35,
++      "K02": 0.35
++    },
++    "calibration_note": "beta 0.7 (doc 1.0) and outside shares chosen so brand-level iota by keyword type is ~0.1 / 0.5 / 0.9 (brand / generic / competitor), near the legacy dev values; see scripts/calib_v2.py",
++    "competitor_units_per_day": {
++      "bar": 1800,
++      "liquid": 650
++    }
++  }
++}
+diff --git a/gpc/scenarios/sc2_brand_assoc.json b/gpc/scenarios/sc2_brand_assoc.json
+new file mode 100644
+index 0000000..e838a02
+--- /dev/null
++++ b/gpc/scenarios/sc2_brand_assoc.json
+@@ -0,0 +1,346 @@
++{
++  "name": "sc2_brand_assoc",
++  "note": "Sim v2 scenario A+B+D(opportunism): brand-owned queries, stealing, reformulation. Hidden; policies must not read it.",
++  "keywords": {
++    "K01": {
++      "intent": 2.4,
++      "incrementality": 0.15
++    },
++    "K02": {
++      "intent": 2.6,
++      "incrementality": 0.18
++    },
++    "K03": {
++      "intent": 0.9,
++      "incrementality": 0.55
++    },
++    "K04": {
++      "intent": 1.0,
++      "incrementality": 0.55
++    },
++    "K05": {
++      "intent": 0.8,
++      "incrementality": 0.6
++    },
++    "K06": {
++      "intent": 1.05,
++      "incrementality": 0.6
++    },
++    "K07": {
++      "intent": 2.0,
++      "incrementality": 0.5
++    },
++    "K08": {
++      "intent": 1.2,
++      "incrementality": 0.7
++    },
++    "K09": {
++      "intent": 0.5,
++      "incrementality": 0.85
++    },
++    "K10": {
++      "intent": 0.45,
++      "incrementality": 0.85
++    }
++  },
++  "appeal": {
++    "S1": 1.0,
++    "S2": 0.95,
++    "S3": 1.0,
++    "S4": 0.9,
++    "S5": 1.1
++  },
++  "organic_damp": {
++    "max_organic_rank": 3,
++    "factor": 0.6
++  },
++  "auction_sigma": 0.3,
++  "noise": {
++    "searches_sigma": 0.1,
++    "price_sigma": 0.08,
++    "organic_sigma": 0.06,
++    "weekend_lift": 1.12
++  },
++  "shocks": [
++    {
++      "kind": "osa",
++      "sku_id": "S2",
++      "city_id": "HYD",
++      "from_run": 3,
++      "to_run": 3,
++      "osa": 0.42
++    },
++    {
++      "kind": "price",
++      "city_id": "MUM",
++      "keyword_ids": [
++        "K05",
++        "K06"
++      ],
++      "from_run": 4,
++      "mult": 1.35
++    },
++    {
++      "kind": "demand",
++      "keyword_ids": [
++        "K03",
++        "K04"
++      ],
++      "from_run": 5,
++      "mult": 1.15
++    }
++  ],
++  "shelf": {
++    "beta": 0.7,
++    "nests": {
++      "bar": {
++        "lambda": 0.35,
++        "sub_categories": [
++          "Soap",
++          "Kids Soap"
++        ]
++      },
++      "liquid": {
++        "lambda": 0.6,
++        "sub_categories": [
++          "Body Wash",
++          "Shower Gel"
++        ]
++      }
++    },
++    "competitors": {
++      "V1": {
++        "name": "Velora Soap",
++        "nest": "bar",
++        "appeal": 1.05,
++        "keywords": {
++          "K03": [
++            0.85,
++            1
++          ],
++          "K04": [
++            0.85,
++            2
++          ],
++          "K07": [
++            0.6,
++            2
++          ],
++          "K08": [
++            0.4,
++            4
++          ],
++          "K09": [
++            1.0,
++            1
++          ]
++        },
++        "brand": "Velora"
++      },
++      "V2": {
++        "name": "Velora Body Wash",
++        "nest": "liquid",
++        "appeal": 0.95,
++        "keywords": {
++          "K05": [
++            0.9,
++            2
++          ],
++          "K06": [
++            0.7,
++            2
++          ],
++          "K09": [
++            0.9,
++            2
++          ]
++        },
++        "brand": "Velora"
++      },
++      "N1": {
++        "name": "Nimbus Soap",
++        "nest": "bar",
++        "appeal": 0.9,
++        "keywords": {
++          "K03": [
++            0.8,
++            2
++          ],
++          "K04": [
++            0.8,
++            1
++          ],
++          "K08": [
++            0.6,
++            2
++          ],
++          "K10": [
++            0.3,
++            5
++          ]
++        },
++        "brand": "Nimbus"
++      },
++      "N2": {
++        "name": "Nimbus Body Wash",
++        "nest": "liquid",
++        "appeal": 1.1,
++        "keywords": {
++          "K05": [
++            1.0,
++            1
++          ],
++          "K06": [
++            0.9,
++            1
++          ],
++          "K10": [
++            1.0,
++            1
++          ]
++        },
++        "brand": "Nimbus"
++      }
++    },
++    "outside_share": {
++      "default": 0.6,
++      "K01": 0.35,
++      "K02": 0.35
++    },
++    "calibration_note": "beta 0.7 (doc 1.0) and outside shares chosen so brand-level iota by keyword type is ~0.1 / 0.5 / 0.9 (brand / generic / competitor), near the legacy dev values; see scripts/calib_v2.py",
++    "competitor_units_per_day": {
++      "bar": 1800,
++      "liquid": 650
++    }
++  },
++  "intent": {
++    "mix": {
++      "K01": {
++        "aurel": 0.85
++      },
++      "K02": {
++        "aurel": 0.9
++      },
++      "K03": {
++        "aurel": 0.1,
++        "velora": 0.25,
++        "nimbus": 0.05
++      },
++      "K04": {
++        "aurel": 0.1,
++        "velora": 0.2,
++        "nimbus": 0.1
++      },
++      "K05": {
++        "aurel": 0.05,
++        "velora": 0.05,
++        "nimbus": 0.45
++      },
++      "K06": {
++        "aurel": 0.05,
++        "velora": 0.1,
++        "nimbus": 0.3
++      },
++      "K07": {
++        "aurel": 0.6,
++        "velora": 0.05
++      },
++      "K08": {
++        "aurel": 0.2,
++        "nimbus": 0.1
++      },
++      "K09": {
++        "velora": 0.85
++      },
++      "K10": {
++        "nimbus": 0.9
++      },
++      "K11": {
++        "aurel": 0.1,
++        "velora": 0.05
++      },
++      "K12": {
++        "aurel": 0.1,
++        "nimbus": 0.1
++      }
++    },
++    "city_tilt": {
++      "aurel": {
++        "BLR": 1.2,
++        "HYD": 1.2,
++        "DEL": 0.85
++      },
++      "velora": {
++        "DEL": 1.25,
++        "BLR": 0.85,
++        "HYD": 0.9
++      }
++    },
++    "city_noise_sigma": 0.08,
++    "loyal_buy": 0.08,
++    "rho_reform": 0.4,
++    "reform_conv_mult": 2.0,
++    "sigma_def": 0.03,
++    "sigma_undef": 0.2,
++    "steal_conv": 0.3,
++    "defend": {
++      "velora": {
++        "K09": 0.9,
++        "default": 0.3
++      },
++      "nimbus": {
++        "K10": 0.9,
++        "default": 0.3
++      }
++    },
++    "brand_query": "K01",
++    "reformulation_from": [
++      "K03",
++      "K04",
++      "K07",
++      "K08"
++    ]
++  },
++  "competitors": {
++    "agents": {
++      "velora": {
++        "keywords": {
++          "K03": 0.35,
++          "K04": 0.3,
++          "K07": 0.25,
++          "K09": 0.6,
++          "K05": 0.15,
++          "K06": 0.15,
++          "K11": 0.3,
++          "K12": 0.2
++        }
++      },
++      "nimbus": {
++        "keywords": {
++          "K05": 0.4,
++          "K06": 0.4,
++          "K10": 0.6,
++          "K03": 0.2,
++          "K04": 0.25,
++          "K08": 0.3,
++          "K11": 0.2,
++          "K12": 0.3
++        }
++      }
++    },
++    "spend_elasticity": 2.3,
++    "eta": 0.5,
++    "opportunism": {
++      "keyword": "K01",
++      "threshold": 0.5,
++      "days": 3,
++      "bid_up": 0.25,
++      "presence": 0.4
++    },
++    "conquest_base": {
++      "K01": 0.1,
++      "K02": 0.05,
++      "K07": 0.25
++    }
++  }
++}
+diff --git a/gpc/scenarios/sc3_festive.json b/gpc/scenarios/sc3_festive.json
+new file mode 100644
+index 0000000..2cc066a
+--- /dev/null
++++ b/gpc/scenarios/sc3_festive.json
+@@ -0,0 +1,355 @@
++{
++  "name": "sc3_festive",
++  "note": "Sim v2 scenario A+C+D: festive event, K11/S6 cold start with stock, pull-forward, CPM inflation. Hidden; policies must not read it.",
++  "keywords": {
++    "K01": {
++      "intent": 2.4,
++      "incrementality": 0.15
++    },
++    "K02": {
++      "intent": 2.6,
++      "incrementality": 0.18
++    },
++    "K03": {
++      "intent": 0.9,
++      "incrementality": 0.55
++    },
++    "K04": {
++      "intent": 1.0,
++      "incrementality": 0.55
++    },
++    "K05": {
++      "intent": 1.0,
++      "incrementality": 0.6
++    },
++    "K06": {
++      "intent": 1.05,
++      "incrementality": 0.6
++    },
++    "K07": {
++      "intent": 1.15,
++      "incrementality": 0.5
++    },
++    "K08": {
++      "intent": 1.2,
++      "incrementality": 0.7
++    },
++    "K09": {
++      "intent": 0.5,
++      "incrementality": 0.85
++    },
++    "K10": {
++      "intent": 0.45,
++      "incrementality": 0.85
++    },
++    "K11": {
++      "intent": 1.4,
++      "incrementality": 0.7
++    }
++  },
++  "appeal": {
++    "S1": 1.0,
++    "S2": 0.95,
++    "S3": 1.0,
++    "S4": 0.9,
++    "S5": 1.1
++  },
++  "organic_damp": {
++    "max_organic_rank": 3,
++    "factor": 0.6
++  },
++  "auction_sigma": 0.3,
++  "noise": {
++    "searches_sigma": 0.1,
++    "price_sigma": 0.08,
++    "organic_sigma": 0.06,
++    "weekend_lift": 1.12
++  },
++  "shocks": [
++    {
++      "kind": "osa",
++      "sku_id": "S2",
++      "city_id": "HYD",
++      "from_run": 3,
++      "to_run": 3,
++      "osa": 0.42
++    },
++    {
++      "kind": "price",
++      "city_id": "MUM",
++      "keyword_ids": [
++        "K05",
++        "K06"
++      ],
++      "from_run": 4,
++      "mult": 1.35
++    },
++    {
++      "kind": "demand",
++      "keyword_ids": [
++        "K03",
++        "K04"
++      ],
++      "from_run": 5,
++      "mult": 1.15
++    }
++  ],
++  "shelf": {
++    "beta": 0.7,
++    "nests": {
++      "bar": {
++        "lambda": 0.35,
++        "sub_categories": [
++          "Soap",
++          "Kids Soap"
++        ]
++      },
++      "liquid": {
++        "lambda": 0.6,
++        "sub_categories": [
++          "Body Wash",
++          "Shower Gel"
++        ]
++      }
++    },
++    "competitors": {
++      "V1": {
++        "name": "Velora Soap",
++        "nest": "bar",
++        "appeal": 1.05,
++        "keywords": {
++          "K03": [
++            0.85,
++            1
++          ],
++          "K04": [
++            0.85,
++            2
++          ],
++          "K07": [
++            0.6,
++            2
++          ],
++          "K08": [
++            0.4,
++            4
++          ],
++          "K09": [
++            1.0,
++            1
++          ],
++          "K11": [
++            0.6,
++            1
++          ]
++        },
++        "brand": "Velora"
++      },
++      "V2": {
++        "name": "Velora Body Wash",
++        "nest": "liquid",
++        "appeal": 0.95,
++        "keywords": {
++          "K05": [
++            0.9,
++            2
++          ],
++          "K06": [
++            0.7,
++            2
++          ],
++          "K09": [
++            0.9,
++            2
++          ]
++        },
++        "brand": "Velora"
++      },
++      "N1": {
++        "name": "Nimbus Soap",
++        "nest": "bar",
++        "appeal": 0.9,
++        "keywords": {
++          "K03": [
++            0.8,
++            2
++          ],
++          "K04": [
++            0.8,
++            1
++          ],
++          "K08": [
++            0.6,
++            2
++          ],
++          "K10": [
++            0.3,
++            5
++          ],
++          "K11": [
++            0.5,
++            3
++          ]
++        },
++        "brand": "Nimbus"
++      },
++      "N2": {
++        "name": "Nimbus Body Wash",
++        "nest": "liquid",
++        "appeal": 1.1,
++        "keywords": {
++          "K05": [
++            1.0,
++            1
++          ],
++          "K06": [
++            0.9,
++            1
++          ],
++          "K10": [
++            1.0,
++            1
++          ]
++        },
++        "brand": "Nimbus"
++      }
++    },
++    "outside_share": {
++      "default": 0.6,
++      "K01": 0.35,
++      "K02": 0.35
++    },
++    "calibration_note": "beta 0.7 (doc 1.0) and outside shares chosen so brand-level iota by keyword type is ~0.1 / 0.5 / 0.9 (brand / generic / competitor), near the legacy dev values; see scripts/calib_v2.py",
++    "competitor_units_per_day": {
++      "bar": 1800,
++      "liquid": 650
++    }
++  },
++  "calendar": {
++    "events": [
++      {
++        "id": "FEST",
++        "peak_day": 56,
++        "ramp_days": 14,
++        "tail_days": 3,
++        "demand": {
++          "K11": 6.0,
++          "K03": 1.15,
++          "K04": 1.1,
++          "K07": 1.2,
++          "K01": 1.1
++        },
++        "evening_intent_lift": 1.25,
++        "competitor_budget_mult": 2.5,
++        "pull_forward": {
++          "keywords": [
++            "K03",
++            "K04",
++            "K07"
++          ],
++          "rho": 0.5,
++          "days_after": 10
++        }
++      }
++    ],
++    "ephemeral_keywords": [
++      {
++        "id": "K11",
++        "keyword": "bath gift set",
++        "type": "generic",
++        "searches_30d": 90000,
++        "rank1_cpm_inr": 380,
++        "intent": 1.4,
++        "incrementality": 0.7,
++        "live_from": 42,
++        "live_to": 59
++      }
++    ],
++    "ephemeral_skus": [
++      {
++        "id": "S6",
++        "name": "Aurel Festive Gift Pack",
++        "sub_category": "Soap",
++        "pack": "gift pack",
++        "mrp": 649,
++        "asp": 549,
++        "organic_units_per_day": 140,
++        "appeal": 1.15,
++        "start_budget": 1600,
++        "stock_by_city": {
++          "DEL": 1560,
++          "MUM": 1170,
++          "BLR": 1040,
++          "HYD": 585,
++          "PUN": 390
++        },
++        "live_from": 42,
++        "live_to": 59,
++        "salvage_frac": 0.4
++      }
++    ],
++    "extra_relevance": {
++      "S6": [
++        [
++          "K11",
++          1.0,
++          2
++        ],
++        [
++          "K01",
++          0.6,
++          9
++        ],
++        [
++          "K03",
++          0.4,
++          14
++        ]
++      ],
++      "S1": [
++        [
++          "K11",
++          0.5,
++          null
++        ]
++      ],
++      "S3": [
++        [
++          "K11",
++          0.5,
++          null
++        ]
++      ]
++    }
++  },
++  "competitors": {
++    "agents": {
++      "velora": {
++        "keywords": {
++          "K03": 0.35,
++          "K04": 0.3,
++          "K07": 0.25,
++          "K09": 0.6,
++          "K05": 0.15,
++          "K06": 0.15,
++          "K11": 0.3,
++          "K12": 0.2
++        }
++      },
++      "nimbus": {
++        "keywords": {
++          "K05": 0.4,
++          "K06": 0.4,
++          "K10": 0.6,
++          "K03": 0.2,
++          "K04": 0.25,
++          "K08": 0.3,
++          "K11": 0.2,
++          "K12": 0.3
++        }
++      }
++    },
++    "spend_elasticity": 2.3,
++    "eta": 0.5
++  }
++}
+diff --git a/gpc/scenarios/sc4_seasonal.json b/gpc/scenarios/sc4_seasonal.json
+new file mode 100644
+index 0000000..46f12f3
+--- /dev/null
++++ b/gpc/scenarios/sc4_seasonal.json
+@@ -0,0 +1,271 @@
++{
++  "name": "sc4_seasonal",
++  "note": "Sim v2 scenario A+C(seasonal): K12's season masquerades as ad lift. Hidden; policies must not read it.",
++  "keywords": {
++    "K01": {
++      "intent": 2.4,
++      "incrementality": 0.15
++    },
++    "K02": {
++      "intent": 2.6,
++      "incrementality": 0.18
++    },
++    "K03": {
++      "intent": 0.9,
++      "incrementality": 0.55
++    },
++    "K04": {
++      "intent": 1.0,
++      "incrementality": 0.55
++    },
++    "K05": {
++      "intent": 1.0,
++      "incrementality": 0.6
++    },
++    "K06": {
++      "intent": 1.05,
++      "incrementality": 0.6
++    },
++    "K07": {
++      "intent": 1.15,
++      "incrementality": 0.5
++    },
++    "K08": {
++      "intent": 1.2,
++      "incrementality": 0.7
++    },
++    "K09": {
++      "intent": 0.5,
++      "incrementality": 0.85
++    },
++    "K10": {
++      "intent": 0.45,
++      "incrementality": 0.85
++    }
++  },
++  "appeal": {
++    "S1": 1.0,
++    "S2": 0.95,
++    "S3": 1.0,
++    "S4": 0.9,
++    "S5": 1.1
++  },
++  "organic_damp": {
++    "max_organic_rank": 3,
++    "factor": 0.6
++  },
++  "auction_sigma": 0.3,
++  "noise": {
++    "searches_sigma": 0.1,
++    "price_sigma": 0.08,
++    "organic_sigma": 0.06,
++    "weekend_lift": 1.12
++  },
++  "shocks": [
++    {
++      "kind": "osa",
++      "sku_id": "S2",
++      "city_id": "HYD",
++      "from_run": 3,
++      "to_run": 3,
++      "osa": 0.42
++    },
++    {
++      "kind": "price",
++      "city_id": "MUM",
++      "keyword_ids": [
++        "K05",
++        "K06"
++      ],
++      "from_run": 4,
++      "mult": 1.35
++    },
++    {
++      "kind": "demand",
++      "keyword_ids": [
++        "K03",
++        "K04"
++      ],
++      "from_run": 5,
++      "mult": 1.15
++    }
++  ],
++  "shelf": {
++    "beta": 0.7,
++    "nests": {
++      "bar": {
++        "lambda": 0.35,
++        "sub_categories": [
++          "Soap",
++          "Kids Soap"
++        ]
++      },
++      "liquid": {
++        "lambda": 0.6,
++        "sub_categories": [
++          "Body Wash",
++          "Shower Gel"
++        ]
++      }
++    },
++    "competitors": {
++      "V1": {
++        "name": "Velora Soap",
++        "nest": "bar",
++        "appeal": 1.05,
++        "keywords": {
++          "K03": [
++            0.85,
++            1
++          ],
++          "K04": [
++            0.85,
++            2
++          ],
++          "K07": [
++            0.6,
++            2
++          ],
++          "K08": [
++            0.4,
++            4
++          ],
++          "K09": [
++            1.0,
++            1
++          ],
++          "K12": [
++            0.7,
++            2
++          ]
++        },
++        "brand": "Velora"
++      },
++      "V2": {
++        "name": "Velora Body Wash",
++        "nest": "liquid",
++        "appeal": 0.95,
++        "keywords": {
++          "K05": [
++            0.9,
++            2
++          ],
++          "K06": [
++            0.7,
++            2
++          ],
++          "K09": [
++            0.9,
++            2
++          ]
++        },
++        "brand": "Velora"
++      },
++      "N1": {
++        "name": "Nimbus Soap",
++        "nest": "bar",
++        "appeal": 0.9,
++        "keywords": {
++          "K03": [
++            0.8,
++            2
++          ],
++          "K04": [
++            0.8,
++            1
++          ],
++          "K08": [
++            0.6,
++            2
++          ],
++          "K10": [
++            0.3,
++            5
++          ],
++          "K12": [
++            0.8,
++            1
++          ]
++        },
++        "brand": "Nimbus"
++      },
++      "N2": {
++        "name": "Nimbus Body Wash",
++        "nest": "liquid",
++        "appeal": 1.1,
++        "keywords": {
++          "K05": [
++            1.0,
++            1
++          ],
++          "K06": [
++            0.9,
++            1
++          ],
++          "K10": [
++            1.0,
++            1
++          ]
++        },
++        "brand": "Nimbus"
++      }
++    },
++    "outside_share": {
++      "default": 0.6,
++      "K01": 0.35,
++      "K02": 0.35
++    },
++    "calibration_note": "beta 0.7 (doc 1.0) and outside shares chosen so brand-level iota by keyword type is ~0.1 / 0.5 / 0.9 (brand / generic / competitor), near the legacy dev values; see scripts/calib_v2.py",
++    "competitor_units_per_day": {
++      "bar": 1800,
++      "liquid": 650
++    }
++  },
++  "calendar": {
++    "seasonal": [
++      {
++        "keywords": [
++          "K12"
++        ],
++        "shape": "cos",
++        "period_days": 365,
++        "peak_day": 40,
++        "amp": 0.3
++      }
++    ],
++    "extra_keywords": [
++      {
++        "id": "K12",
++        "keyword": "antibacterial soap",
++        "type": "generic",
++        "searches_30d": 150000,
++        "rank1_cpm_inr": 340,
++        "intent": 1.0,
++        "incrementality": 0.6
++      }
++    ],
++    "extra_relevance": {
++      "S3": [
++        [
++          "K12",
++          0.8,
++          3
++        ]
++      ],
++      "S1": [
++        [
++          "K12",
++          0.5,
++          7
++        ]
++      ],
++      "S2": [
++        [
++          "K12",
++          0.4,
++          null
++        ]
++      ]
++    }
++  }
++}
+diff --git a/gpc/scenarios/sc_all.json b/gpc/scenarios/sc_all.json
+new file mode 100644
+index 0000000..5aacd4d
+--- /dev/null
++++ b/gpc/scenarios/sc_all.json
+@@ -0,0 +1,502 @@
++{
++  "name": "sc_all",
++  "note": "Sim v2 integration scenario A\u2013D (E1\u2013E3). Hidden; policies must not read it.",
++  "keywords": {
++    "K01": {
++      "intent": 2.4,
++      "incrementality": 0.15
++    },
++    "K02": {
++      "intent": 2.6,
++      "incrementality": 0.18
++    },
++    "K03": {
++      "intent": 0.9,
++      "incrementality": 0.55
++    },
++    "K04": {
++      "intent": 1.0,
++      "incrementality": 0.55
++    },
++    "K05": {
++      "intent": 0.8,
++      "incrementality": 0.6
++    },
++    "K06": {
++      "intent": 1.05,
++      "incrementality": 0.6
++    },
++    "K07": {
++      "intent": 2.0,
++      "incrementality": 0.5
++    },
++    "K08": {
++      "intent": 1.2,
++      "incrementality": 0.7
++    },
++    "K09": {
++      "intent": 0.5,
++      "incrementality": 0.85
++    },
++    "K10": {
++      "intent": 0.45,
++      "incrementality": 0.85
++    },
++    "K11": {
++      "intent": 1.4,
++      "incrementality": 0.7
++    }
++  },
++  "appeal": {
++    "S1": 1.0,
++    "S2": 0.95,
++    "S3": 1.0,
++    "S4": 0.9,
++    "S5": 1.1
++  },
++  "organic_damp": {
++    "max_organic_rank": 3,
++    "factor": 0.6
++  },
++  "auction_sigma": 0.3,
++  "noise": {
++    "searches_sigma": 0.1,
++    "price_sigma": 0.08,
++    "organic_sigma": 0.06,
++    "weekend_lift": 1.12
++  },
++  "shocks": [
++    {
++      "kind": "osa",
++      "sku_id": "S2",
++      "city_id": "HYD",
++      "from_run": 3,
++      "to_run": 3,
++      "osa": 0.42
++    },
++    {
++      "kind": "price",
++      "city_id": "MUM",
++      "keyword_ids": [
++        "K05",
++        "K06"
++      ],
++      "from_run": 4,
++      "mult": 1.35
++    },
++    {
++      "kind": "demand",
++      "keyword_ids": [
++        "K03",
++        "K04"
++      ],
++      "from_run": 5,
++      "mult": 1.15
++    }
++  ],
++  "shelf": {
++    "beta": 0.7,
++    "nests": {
++      "bar": {
++        "lambda": 0.35,
++        "sub_categories": [
++          "Soap",
++          "Kids Soap"
++        ]
++      },
++      "liquid": {
++        "lambda": 0.6,
++        "sub_categories": [
++          "Body Wash",
++          "Shower Gel"
++        ]
++      }
++    },
++    "competitors": {
++      "V1": {
++        "name": "Velora Soap",
++        "nest": "bar",
++        "appeal": 1.05,
++        "keywords": {
++          "K03": [
++            0.85,
++            1
++          ],
++          "K04": [
++            0.85,
++            2
++          ],
++          "K07": [
++            0.6,
++            2
++          ],
++          "K08": [
++            0.4,
++            4
++          ],
++          "K09": [
++            1.0,
++            1
++          ],
++          "K11": [
++            0.6,
++            1
++          ],
++          "K12": [
++            0.7,
++            2
++          ]
++        },
++        "brand": "Velora"
++      },
++      "V2": {
++        "name": "Velora Body Wash",
++        "nest": "liquid",
++        "appeal": 0.95,
++        "keywords": {
++          "K05": [
++            0.9,
++            2
++          ],
++          "K06": [
++            0.7,
++            2
++          ],
++          "K09": [
++            0.9,
++            2
++          ]
++        },
++        "brand": "Velora"
++      },
++      "N1": {
++        "name": "Nimbus Soap",
++        "nest": "bar",
++        "appeal": 0.9,
++        "keywords": {
++          "K03": [
++            0.8,
++            2
++          ],
++          "K04": [
++            0.8,
++            1
++          ],
++          "K08": [
++            0.6,
++            2
++          ],
++          "K10": [
++            0.3,
++            5
++          ],
++          "K11": [
++            0.5,
++            3
++          ],
++          "K12": [
++            0.8,
++            1
++          ]
++        },
++        "brand": "Nimbus"
++      },
++      "N2": {
++        "name": "Nimbus Body Wash",
++        "nest": "liquid",
++        "appeal": 1.1,
++        "keywords": {
++          "K05": [
++            1.0,
++            1
++          ],
++          "K06": [
++            0.9,
++            1
++          ],
++          "K10": [
++            1.0,
++            1
++          ]
++        },
++        "brand": "Nimbus"
++      }
++    },
++    "outside_share": {
++      "default": 0.6,
++      "K01": 0.35,
++      "K02": 0.35
++    },
++    "calibration_note": "beta 0.7 (doc 1.0) and outside shares chosen so brand-level iota by keyword type is ~0.1 / 0.5 / 0.9 (brand / generic / competitor), near the legacy dev values; see scripts/calib_v2.py",
++    "competitor_units_per_day": {
++      "bar": 1800,
++      "liquid": 650
++    }
++  },
++  "calendar": {
++    "events": [
++      {
++        "id": "FEST",
++        "peak_day": 56,
++        "ramp_days": 14,
++        "tail_days": 3,
++        "demand": {
++          "K11": 6.0,
++          "K03": 1.15,
++          "K04": 1.1,
++          "K07": 1.2,
++          "K01": 1.1
++        },
++        "evening_intent_lift": 1.25,
++        "competitor_budget_mult": 2.5,
++        "pull_forward": {
++          "keywords": [
++            "K03",
++            "K04",
++            "K07"
++          ],
++          "rho": 0.5,
++          "days_after": 10
++        }
++      }
++    ],
++    "ephemeral_keywords": [
++      {
++        "id": "K11",
++        "keyword": "bath gift set",
++        "type": "generic",
++        "searches_30d": 90000,
++        "rank1_cpm_inr": 380,
++        "intent": 1.4,
++        "incrementality": 0.7,
++        "live_from": 42,
++        "live_to": 59
++      }
++    ],
++    "ephemeral_skus": [
++      {
++        "id": "S6",
++        "name": "Aurel Festive Gift Pack",
++        "sub_category": "Soap",
++        "pack": "gift pack",
++        "mrp": 649,
++        "asp": 549,
++        "organic_units_per_day": 140,
++        "appeal": 1.15,
++        "start_budget": 1600,
++        "stock_by_city": {
++          "DEL": 1560,
++          "MUM": 1170,
++          "BLR": 1040,
++          "HYD": 585,
++          "PUN": 390
++        },
++        "live_from": 42,
++        "live_to": 59,
++        "salvage_frac": 0.4
++      }
++    ],
++    "seasonal": [
++      {
++        "keywords": [
++          "K12"
++        ],
++        "shape": "cos",
++        "period_days": 365,
++        "peak_day": 40,
++        "amp": 0.3
++      }
++    ],
++    "extra_keywords": [
++      {
++        "id": "K12",
++        "keyword": "antibacterial soap",
++        "type": "generic",
++        "searches_30d": 150000,
++        "rank1_cpm_inr": 340,
++        "intent": 1.0,
++        "incrementality": 0.6
++      }
++    ],
++    "extra_relevance": {
++      "S6": [
++        [
++          "K11",
++          1.0,
++          2
++        ],
++        [
++          "K01",
++          0.6,
++          9
++        ],
++        [
++          "K03",
++          0.4,
++          14
++        ]
++      ],
++      "S1": [
++        [
++          "K11",
++          0.5,
++          null
++        ],
++        [
++          "K12",
++          0.5,
++          7
++        ]
++      ],
++      "S3": [
++        [
++          "K11",
++          0.5,
++          null
++        ],
++        [
++          "K12",
++          0.8,
++          3
++        ]
++      ],
++      "S2": [
++        [
++          "K12",
++          0.4,
++          null
++        ]
++      ]
++    }
++  },
++  "intent": {
++    "mix": {
++      "K01": {
++        "aurel": 0.85
++      },
++      "K02": {
++        "aurel": 0.9
++      },
++      "K03": {
++        "aurel": 0.1,
++        "velora": 0.25,
++        "nimbus": 0.05
++      },
++      "K04": {
++        "aurel": 0.1,
++        "velora": 0.2,
++        "nimbus": 0.1
++      },
++      "K05": {
++        "aurel": 0.05,
++        "velora": 0.05,
++        "nimbus": 0.45
++      },
++      "K06": {
++        "aurel": 0.05,
++        "velora": 0.1,
++        "nimbus": 0.3
++      },
++      "K07": {
++        "aurel": 0.6,
++        "velora": 0.05
++      },
++      "K08": {
++        "aurel": 0.2,
++        "nimbus": 0.1
++      },
++      "K09": {
++        "velora": 0.85
++      },
++      "K10": {
++        "nimbus": 0.9
++      },
++      "K11": {
++        "aurel": 0.1,
++        "velora": 0.05
++      },
++      "K12": {
++        "aurel": 0.1,
++        "nimbus": 0.1
++      }
++    },
++    "city_tilt": {
++      "aurel": {
++        "BLR": 1.2,
++        "HYD": 1.2,
++        "DEL": 0.85
++      },
++      "velora": {
++        "DEL": 1.25,
++        "BLR": 0.85,
++        "HYD": 0.9
++      }
++    },
++    "city_noise_sigma": 0.08,
++    "loyal_buy": 0.08,
++    "rho_reform": 0.4,
++    "reform_conv_mult": 2.0,
++    "sigma_def": 0.03,
++    "sigma_undef": 0.2,
++    "steal_conv": 0.3,
++    "defend": {
++      "velora": {
++        "K09": 0.9,
++        "default": 0.3
++      },
++      "nimbus": {
++        "K10": 0.9,
++        "default": 0.3
++      }
++    },
++    "brand_query": "K01",
++    "reformulation_from": [
++      "K03",
++      "K04",
++      "K07",
++      "K08"
++    ]
++  },
++  "competitors": {
++    "agents": {
++      "velora": {
++        "keywords": {
++          "K03": 0.35,
++          "K04": 0.3,
++          "K07": 0.25,
++          "K09": 0.6,
++          "K05": 0.15,
++          "K06": 0.15,
++          "K11": 0.3,
++          "K12": 0.2
++        }
++      },
++      "nimbus": {
++        "keywords": {
++          "K05": 0.4,
++          "K06": 0.4,
++          "K10": 0.6,
++          "K03": 0.2,
++          "K04": 0.25,
++          "K08": 0.3,
++          "K11": 0.2,
++          "K12": 0.3
++        }
++      }
++    },
++    "spend_elasticity": 2.3,
++    "eta": 0.5,
++    "opportunism": {
++      "keyword": "K01",
++      "threshold": 0.5,
++      "days": 3,
++      "bid_up": 0.25,
++      "presence": 0.4
++    },
++    "conquest_base": {
++      "K01": 0.1,
++      "K02": 0.05,
++      "K07": 0.25
++    }
++  }
++}
+diff --git a/gpc/score_v2.py b/gpc/score_v2.py
+new file mode 100644
+index 0000000..4cdfd5b
+--- /dev/null
++++ b/gpc/score_v2.py
+@@ -0,0 +1,105 @@
++"""Module F (sim v2): truth-side scoring by counterfactual. A policy never sees any of this.
++
++Design: `design/02_simulator_v2_design.md` §7.1. With common random numbers the horizon is run twice:
++under the policy, and with "all Aurel ads off from the end of warm-up". Then
++
++    IncRev^brand = Σ_{t ≥ warm-up, s, c} offtake^policy − offtake^ads-off,   iROAS = IncRev / Spend
++
++plus the expected four-way split of the ad orders (self / sibling / competitor / expansion, from the
++shelf model's `truth_decomp` table) by cell, SKU and nest, and the legacy score.
++
++The ads-off run bypasses the guardrails (G1/G6 would clamp a zero budget to ₹300) and is deterministic
++per (seed, scenario), so it is computed once and cached.
++"""
++from __future__ import annotations
++
++import pandas as pd
++
++from .market import Market
++from .runner import SimResult
++from .score import summarize
++from .world import N_RUNS, RUN_DAYS, WARMUP_DAYS, World
++
++_CF_CACHE: dict[tuple, dict[str, pd.DataFrame]] = {}
++
++
++def run_schedule(world: World, after_warmup=None, n_runs: int = N_RUNS) -> dict[str, pd.DataFrame]:
++    """Run the market with the starting set-up, applying `after_warmup(campaigns, ck) -> (campaigns, ck)` once at
++    the end of warm-up. No guardrails: for counterfactuals and mechanism probes, never for policies."""
++    market = Market(world)
++    campaigns = world.public["campaigns"].copy()
++    ck = world.public["campaign_keywords"].copy()
++    acc: dict[str, list] = {}
++    for d in range(WARMUP_DAYS + n_runs * RUN_DAYS):
++        if d == WARMUP_DAYS and after_warmup is not None:
++            campaigns, ck = after_warmup(campaigns, ck)
++        for k, v in market.simulate_day(d, campaigns, ck).items():
++            acc.setdefault(k, []).append(v)
++    return {k: pd.concat(v, ignore_index=True) for k, v in acc.items()}
++
++
++def ads_off_tables(world: World, n_runs: int = N_RUNS) -> dict[str, pd.DataFrame]:
++    """All per-day tables of the counterfactual: starting set-up during warm-up, every ad paused afterwards."""
++    key = (world.seed, world.scenario, n_runs)
++    if key not in _CF_CACHE:
++        _CF_CACHE[key] = run_schedule(world, lambda c, k: (c, k.assign(active=False)), n_runs)
++    return _CF_CACHE[key]
++
++
++def ads_off(world: World, n_runs: int = N_RUNS) -> pd.DataFrame:
++    """sku_city_daily of the counterfactual."""
++    return ads_off_tables(world, n_runs)["sku_city_daily"]
++
++
++def salvage_value(world: World, stock: pd.DataFrame | None) -> dict[str, float]:
++    """₹ recovered for ephemeral-SKU units left when each SKU's live window ends (salvage_frac × ASP), by SKU."""
++    cal = world.truth.get("calendar") or {}
++    if stock is None or not len(stock):
++        return {}
++    asp = world.public["products"].set_index("sku_id").asp_inr
++    out = {}
++    for s in cal.get("ephemeral_skus", []):
++        last = stock[(stock.sku_id == s["id"]) & (stock.day == s["live_to"])]
++        out[s["id"]] = float(last.stock_end.sum() * s["salvage_frac"] * asp[s["id"]])
++    return out
++
++
++def score(res: SimResult, world: World) -> dict:
++    """Truth-side score of one policy run (`res` from `gpc.runner.simulate` on `world`)."""
++    cft = ads_off_tables(world, n_runs=len(res.runs))
++    cf = cft["sku_city_daily"]
++    pol = res.sku_city_daily[res.sku_city_daily.day >= WARMUP_DAYS]
++    off = cf[cf.day >= WARMUP_DAYS]
++    f = res.daily_facts[res.daily_facts.day >= WARMUP_DAYS]
++    spend = float(f.spend_inr.sum())
++    inc_by_sku = (pol.groupby("sku_id").offtake_inr.sum() - off.groupby("sku_id").offtake_inr.sum()).astype(float).round(2)
++    # ephemeral stock left at the end of its window is salvaged: selling it at full price is worth more
++    sal_pol = salvage_value(world, res.truth_tables.get("pub_stock_daily"))
++    sal_off = salvage_value(world, cft.get("pub_stock_daily"))
++    for sku in sal_pol:
++        inc_by_sku[sku] = round(float(inc_by_sku.get(sku, 0.0)) + sal_pol[sku] - sal_off.get(sku, 0.0), 2)
++    inc = float(inc_by_sku.sum())
++    out = {
++        "inc_rev_inr": round(inc, 2),
++        "spend_inr": round(spend, 2),
++        "iroas": round(inc / spend, 4) if spend else 0.0,
++        "inc_rev_by_sku": inc_by_sku.to_dict(),
++        "legacy": summarize(res),
++    }
++    if sal_pol:
++        out["salvage_inr"] = {"policy": sal_pol, "ads_off": sal_off}
++    cq, cq_off = res.truth_tables.get("truth_conquest"), cft.get("truth_conquest")
++    if cq is not None:
++        out["conquest_lost_units"] = {"policy": round(float(cq[cq.day >= WARMUP_DAYS].lost_units.sum()), 1),
++                                      "ads_off": round(float(cq_off[cq_off.day >= WARMUP_DAYS].lost_units.sum()), 1)}
++    dec = res.truth_tables.get("truth_decomp")
++    if dec is not None and len(dec):
++        dec = dec[dec.day >= WARMUP_DAYS]
++        parts = ["ad_orders", "self", "sibling", "competitor", "expansion"]
++        out["decomposition"] = {k: round(float(dec[k].sum()), 2) for k in parts}
++        out["decomposition_by_sku"] = dec.groupby("sku_id")[parts].sum().round(2).to_dict("index")
++        out["decomposition_by_cell"] = dec.groupby(["sku_id", "city_id", "keyword_id"])[parts].sum().round(2)
++        nest = {s: n for n, spec in world.truth.get("nest_of_sku", {}).items() for s in spec}
++        if nest:
++            out["decomposition_by_nest"] = dec.assign(nest=dec.sku_id.map(nest)).groupby("nest")[parts].sum().round(2).to_dict("index")
++    return out
+diff --git a/gpc/shelf.py b/gpc/shelf.py
+new file mode 100644
+index 0000000..dbb9271
+--- /dev/null
++++ b/gpc/shelf.py
+@@ -0,0 +1,198 @@
++"""Module A (sim v2): the shelf. A nested-logit choice model on each search-results page.
++
++Design: `design/02_simulator_v2_design.md` §2. Replaces only step 6 of `market.py` (the "ad orders that
++would have happened anyway" term). Searches, the auction, slot shares, OSA, budgets and the number of
++ad orders are unchanged, so direct-ROAS calibration carries over.
++
++Per query q the shelf lists own SKUs and competitor items (V1, V2, N1, N2), grouped in nests
++(bar / liquid) plus the outside option (no purchase). Item i has visibility w_i = w_org(rank) + w_ad
++and base utility v_i = log(appeal_i) + log(relevance_{q,i}):
++
++    P(i|n) = w_i^β e^{v_i/λ_n} / Σ_{j∈n} w_j^β e^{v_j/λ_n}
++    I_n    = λ_n log Σ_{j∈n} w_j^β e^{v_j/λ_n}
++    P(n)   = e^{I_n} / (e^{V0_q} + Σ_m e^{I_m})
++
++This is the doc's nested logit with V_i = λ_n β log w_i + v_i. Deviation from §2.2, recorded in
++REPORT.md: the doc writes β log w inside V_i/λ, which makes within-nest share scale as w^{β/λ}
++(w^2.9 at λ = 0.35), so an ad could gain more orders than it is credited with. Writing it as above
++keeps "choice ∝ visibility" (§2.5, β = 1) and the doc's diversion formulas, which are stated per unit
++of V_i.
++
++V0_q is set per query so that the outside option takes `outside_share` of shoppers on the organic
++shelf (no ads): the "category conversion" knob of §2.5.
++
++Decomposition (§2.4) of the ad orders of own item i in one auction, by leave-one-out on i's ad:
++    attributed  A_i = P_i · w_ad,i / w_i                  (the platform credits the click path)
++    gain        G_i = P_i − P_i^{−ad}                      (what the ad changed)
++    self        = 1 − min(G_i, A_i)/A_i                    (would have bought i anyway)
++    the rest is split over the items that lost share, P_j^{−ad} − P_j, as
++    sibling (other own SKUs) / competitor / expansion (the outside option).
++"""
++from __future__ import annotations
++
++from dataclasses import dataclass
++
++import numpy as np
++
++from .world import SLOT_VIEW_REL, SLOTS
++
++OUTSIDE = "__none__"
++# Organic view weight by rank: log-linear fit to the industry rank curve at ranks 1/5/9/13
++# (1.00 / 0.41 / 0.17 / 0.08): exp(−κ(r−1)), least-squares κ ≈ 0.211, within 0.02 at all four ranks.
++_KAPPA = float(np.polyfit([r - 1 for r in SLOTS], [-np.log(SLOT_VIEW_REL[r]) for r in SLOTS], 1)[0])
++
++
++def organic_weight(rank) -> float:
++    if rank is None or (isinstance(rank, float) and np.isnan(rank)):
++        return 0.0
++    return float(np.exp(-_KAPPA * (float(rank) - 1)))
++
++
++@dataclass
++class QueryShelf:
++    """The static part of one query's shelf: items, nests, organic weights, base utilities, V0."""
++    keyword_id: str
++    items: list[str]
++    own: np.ndarray        # bool per item
++    nest: np.ndarray       # int nest index per item
++    lam: np.ndarray        # λ per nest
++    v: np.ndarray          # base utility per item
++    w_org: np.ndarray      # organic visibility per item
++    beta: float
++    v0: float
++
++    def probs(self, w_ad: np.ndarray | None = None) -> tuple[np.ndarray, float]:
++        """Choice probabilities per item and for the outside option, at visibility w_org + w_ad."""
++        w = self.w_org if w_ad is None else self.w_org + w_ad
++        return nested_logit(w, self.v, self.nest, self.lam, self.beta, self.v0)
++
++    def index(self, item: str) -> int:
++        return self.items.index(item)
++
++
++def nested_logit(w, v, nest, lam, beta, v0) -> tuple[np.ndarray, float]:
++    p = np.zeros(len(w))
++    on = w > 0
++    expI = np.zeros(len(lam))
++    within = np.zeros(len(w))
++    for n in range(len(lam)):
++        m = on & (nest == n)
++        if not m.any():
++            continue
++        s = w[m] ** beta * np.exp(v[m] / lam[n])
++        S = s.sum()
++        within[m] = s / S
++        expI[n] = np.exp(lam[n] * np.log(S))
++    denom = np.exp(v0) + expI.sum()
++    pn = expI / denom
++    p[on] = within[on] * pn[nest[on]]
++    return p, float(np.exp(v0) / denom)
++
++
++def diversion(shelf: QueryShelf, i: int, w_ad: np.ndarray | None = None) -> dict[str, float]:
++    """Closed-form D_{j→i} (§2.3) for every other item j and the outside option, per unit change of V_i."""
++    w = shelf.w_org if w_ad is None else shelf.w_org + w_ad
++    p, p0 = nested_logit(w, shelf.v, shelf.nest, shelf.lam, shelf.beta, shelf.v0)
++    n = shelf.nest[i]
++    lam = shelf.lam[n]
++    pn = p[shelf.nest == n].sum()
++    pin = p[i] / pn
++    q = (1 / lam) * (1 - pin) + pin * (1 - pn)
++    out = {}
++    for j, item in enumerate(shelf.items):
++        if j == i or w[j] <= 0:
++            continue
++        if shelf.nest[j] == n:
++            out[item] = (p[j] / pn) * (1 / lam - 1 + pn) / q
++        else:
++            out[item] = p[j] / q
++    out[OUTSIDE] = p0 / q
++    return out
++
++
++def build_shelves(spec: dict, keyword_sku, products, appeal: dict) -> dict[str, QueryShelf]:
++    """One QueryShelf per keyword from the scenario's `shelf` block and the public keyword_sku table."""
++    nests = spec["nests"]                                   # {"bar": {"lambda": .35, "sub_categories": [...]}, ...}
++    nest_names = list(nests)
++    sub_to_nest = {sc: k for k, n in nests.items() for sc in n["sub_categories"]}
++    lam = np.array([nests[k]["lambda"] for k in nest_names], dtype=float)
++    beta = float(spec.get("beta", 1.0))
++    comp = spec["competitors"]                              # {"V1": {"nest": "bar", "appeal": 1.05, "keywords": {"K03": [rel, rank]}}}
++    sub = dict(zip(products.sku_id, products.sub_category))
++    outside = spec["outside_share"]                         # {"default": .7, "K01": .5, ...}
++    shelves = {}
++    for kid in sorted(set(keyword_sku.keyword_id) | {k for c in comp.values() for k in c["keywords"]}):
++        items, own, nest, v, w_org = [], [], [], [], []
++        for r in keyword_sku[keyword_sku.keyword_id == kid].itertuples():
++            items.append(r.sku_id); own.append(True)
++            nest.append(nest_names.index(sub_to_nest[sub[r.sku_id]]))
++            v.append(np.log(appeal[r.sku_id]) + np.log(r.relevance))
++            w_org.append(organic_weight(r.organic_rank))
++        for cid, c in comp.items():
++            if kid in c["keywords"]:
++                rel, rank = c["keywords"][kid]
++                items.append(cid); own.append(False)
++                nest.append(nest_names.index(c["nest"]))
++                v.append(np.log(c["appeal"]) + np.log(rel))
++                w_org.append(organic_weight(rank))
++        sh = QueryShelf(kid, items, np.array(own), np.array(nest), lam, np.array(v, dtype=float),
++                        np.array(w_org, dtype=float), beta, 0.0)
++        # V0: outside option takes `p0` of shoppers on the organic shelf
++        p0 = float(outside.get(kid, outside["default"]))
++        expI_sum = _sum_exp_inclusive(sh)
++        sh.v0 = float(np.log(p0 / (1 - p0) * expI_sum)) if expI_sum > 0 else 0.0
++        shelves[kid] = sh
++    return shelves
++
++
++def _sum_exp_inclusive(sh: QueryShelf) -> float:
++    tot = 0.0
++    on = sh.w_org > 0
++    for n in range(len(sh.lam)):
++        m = on & (sh.nest == n)
++        if m.any():
++            tot += float(np.exp(sh.lam[n] * np.log((sh.w_org[m] ** sh.beta * np.exp(sh.v[m] / sh.lam[n])).sum())))
++    return tot
++
++
++def decompose(shelf: QueryShelf, w_ad: dict[str, float]) -> dict[str, dict]:
++    """Per own item with an ad in this auction: expected split of one attributed ad order.
++
++    Returns {item: {"self": f, "sibling": {sku: f}, "competitor": f, "expansion": f, "excess": g}},
++    fractions summing to 1. `excess` (diagnostic) is the gain beyond the attributed orders, which this
++    model does not credit to anyone."""
++    wa = np.zeros(len(shelf.items))
++    for item, x in w_ad.items():
++        wa[shelf.index(item)] = x
++    p, p0 = shelf.probs(wa)
++    out = {}
++    for item, x in w_ad.items():
++        i = shelf.index(item)
++        if x <= 0 or p[i] <= 0:
++            continue
++        wl = wa.copy()
++        wl[i] = 0.0
++        pl, p0l = shelf.probs(wl)
++        attr = p[i] * x / (shelf.w_org[i] + x)
++        gain = p[i] - pl[i]
++        inc = min(max(gain, 0.0), attr) / attr
++        loss = np.clip(pl - p, 0.0, None)
++        loss[i] = 0.0
++        loss0 = max(p0l - p0, 0.0)
++        tot = loss.sum() + loss0
++        sib, compf = {}, 0.0
++        if tot > 0:
++            for j, it in enumerate(shelf.items):
++                if loss[j] <= 0:
++                    continue
++                f = inc * loss[j] / tot
++                if shelf.own[j]:
++                    sib[it] = f
++                else:
++                    compf += f
++            expf = inc * loss0 / tot
++        else:
++            expf = inc
++        out[item] = {"self": 1.0 - inc, "sibling": sib, "competitor": compf, "expansion": expf,
++                     "excess": max(gain - attr, 0.0) / attr}
++    return out
+diff --git a/gpc/stock.py b/gpc/stock.py
+new file mode 100644
+index 0000000..1542a08
+--- /dev/null
++++ b/gpc/stock.py
+@@ -0,0 +1,29 @@
++"""Module C (sim v2): finite stock for ephemeral SKUs (S6 gift pack).
++
++Design: `design/02_simulator_v2_design.md` §4.2. Each unit sold (ad or organic) depletes city stock. At
++zero, availability (OSA) is 0, so the SKU's ads stop serving through the existing OSA gating. Units still
++on hand when the SKU's live window ends are salvaged at `salvage_frac` × ASP (the scorer counts that
++value). State lives on the Market instance, so the policy run and the ads-off run each keep their own.
++"""
++from __future__ import annotations
++
++
++class Stock:
++    def __init__(self, ephemeral_skus: list[dict]):
++        self.spec = {s["id"]: s for s in ephemeral_skus}
++        self.left = {(s["id"], c): float(q) for s in ephemeral_skus for c, q in s["stock_by_city"].items()}
++
++    def tracks(self, sku: str) -> bool:
++        return sku in self.spec
++
++    def available(self, sku: str, city: str) -> bool:
++        return self.left.get((sku, city), 1.0) > 0
++
++    def fulfil(self, sku: str, city: str, ad_units: int, organic_units: int) -> tuple[int, int, float, float]:
++        """Cap sales at stock (ad orders are filled first: they were paid for). Returns
++        (ad filled, organic filled, stock before, stock after)."""
++        before = self.left[(sku, city)]
++        ad = int(min(ad_units, before))
++        org = int(min(organic_units, before - ad))
++        self.left[(sku, city)] = before - ad - org
++        return ad, org, before, self.left[(sku, city)]
+diff --git a/gpc/world.py b/gpc/world.py
+index ac1569d..39d3ab7 100644
+--- a/gpc/world.py
++++ b/gpc/world.py
+@@ -265,10 +265,23 @@ def build_world(seed: int = 7, scenario: str = "dev") -> World:
+     sku_city = _sku_city(rng, cities, products)
+     campaigns, campaign_keywords = _campaigns(rng, cities, products, keywords, keyword_sku)
+     plan = _plan(rng, campaigns, campaign_keywords, keywords)
+-    truth = _truth(rng, load_scenario(scenario), keywords, keyword_sku, cities)
++    spec = load_scenario(scenario)
++    truth = _truth(rng, spec, keywords, keyword_sku, cities)
+     public = {
+         "cities": cities, "products": products, "keywords": keywords, "keyword_sku": keyword_sku,
+         "sku_city": sku_city, "campaigns": campaigns, "campaign_keywords": campaign_keywords,
+         "plan": plan, "industry_rank_curve": _industry_curve(), "dayparts": _dayparts(),
+     }
+-    return World(public=public, truth=truth, seed=seed, scenario=scenario)
++    world = World(public=public, truth=truth, seed=seed, scenario=scenario)
++    if any(spec.get(k) for k in ("shelf", "calendar", "intent", "competitors")):
++        # sim v2 blocks; absent in dev.json, so legacy worlds are unchanged (own RNG streams, after legacy draws)
++        from .shelf import build_shelves, diversion
++        from .world_v2 import extend
++        extend(world, spec)
++        if spec.get("shelf"):
++            truth["shelves"] = build_shelves(spec["shelf"], public["keyword_sku"], public["products"], truth["appeal"])
++            truth["diversion"] = {(k, sh.items[i], j): d for k, sh in truth["shelves"].items()
++                                  for i in range(len(sh.items)) if sh.w_org[i] > 0 for j, d in diversion(sh, i).items()}
++            truth["nest_of_sku"] = {n: [s for s, sc in zip(public["products"].sku_id, public["products"].sub_category)
++                                        if sc in v["sub_categories"]] for n, v in spec["shelf"]["nests"].items()}
++    return world
+diff --git a/gpc/world_v2.py b/gpc/world_v2.py
+new file mode 100644
+index 0000000..a8045ad
+--- /dev/null
++++ b/gpc/world_v2.py
+@@ -0,0 +1,149 @@
++"""Sim v2 world extensions: new keywords and SKUs (calendar), the intent mix, competitor agents, public v2 tables.
++
++Called from `world.build_world` after every legacy draw, with its own RNG stream, so a scenario without
++v2 blocks builds exactly the legacy world (goldens) and the legacy entities of a v2 world keep their values.
++"""
++from __future__ import annotations
++
++import json
++
++import numpy as np
++import pandas as pd
++
++from .world import DAYPARTS, SLOT_VIEW_REL, SLOTS, World, _BID_MULT
++
++V2_WORLD_STREAM = 3001
++
++
++def extend(world: World, spec: dict) -> None:
++    rng = np.random.default_rng(np.random.SeedSequence([world.seed, V2_WORLD_STREAM]))
++    cal = spec.get("calendar")
++    if cal:
++        world.truth["calendar"] = dict(cal, _ephemeral_ids=[e["id"] for e in cal.get("ephemeral_keywords", [])
++                                                            + cal.get("ephemeral_skus", [])])
++        _add_entities(world, cal, rng)
++        world.public["calendar_public"] = _calendar_public(cal)
++        world.truth["calendar"] = dict(cal, _ephemeral_ids=[e["id"] for e in cal.get("ephemeral_keywords", [])
++                                                            + cal.get("ephemeral_skus", [])])
++        from .calendar import Calendar
++        world.truth["_calendar_obj"] = Calendar(cal)
++    if spec.get("shelf"):
++        sh = spec["shelf"]
++        world.truth["shelf_spec"] = sh
++        world.public["shelf_ranks"] = pd.DataFrame(
++            [{"keyword_id": k, "item_id": c, "brand": v["brand"], "organic_rank": r}
++             for c, v in sh["competitors"].items() for k, (_, r) in v["keywords"].items()]
++            + [{"keyword_id": r.keyword_id, "item_id": r.sku_id, "brand": "Aurel", "organic_rank": r.organic_rank}
++               for r in world.public["keyword_sku"].itertuples()])
++    if spec.get("intent"):
++        from .intent import build_intent
++        world.truth["intent_mix"] = build_intent(spec["intent"], list(world.public["keywords"].keyword_id),
++                                                 list(world.public["cities"].city_id), world.seed)
++        world.truth["intent"] = spec["intent"]
++    if spec.get("competitors"):
++        world.truth["competitors"] = spec["competitors"]
++
++
++def _add_entities(world: World, cal: dict, rng: np.random.Generator) -> None:
++    p, t = world.public, world.truth
++    cities = p["cities"]
++    new_kw = cal.get("ephemeral_keywords", []) + cal.get("extra_keywords", [])
++    new_sku = cal.get("ephemeral_skus", [])
++    if new_kw:
++        p["keywords"] = pd.concat([p["keywords"], pd.DataFrame(
++            [{"keyword_id": k["id"], "keyword": k["keyword"], "keyword_type": k["type"],
++              "searches_30d": k["searches_30d"], "rank1_cpm_inr": k["rank1_cpm_inr"]} for k in new_kw])],
++            ignore_index=True)
++    for k in new_kw:                                     # hidden response parameters, same priors as world._truth
++        t["keywords"][k["id"]] = {
++            "intent": k["intent"] * float(np.exp(rng.normal(0, 0.08))),
++            "incrementality": float(np.clip(k["incrementality"] + rng.normal(0, 0.04), 0.05, 0.95)),
++            "view_dev": {s: float(np.exp(rng.normal(0, 0.10))) if s != 1 else 1.0 for s in SLOTS},
++            "conv_dev": {s: float(np.exp(rng.normal(0, 0.10))) for s in SLOTS},
++            "price_dev": {s: float(np.exp(rng.normal(0, 0.05))) if s != 1 else 1.0 for s in SLOTS},
++        }
++        for c in cities.city_id:
++            t["city_kw_affinity"][(c, k["id"])] = float(np.exp(rng.normal(0, 0.12)))
++    if new_sku:
++        p["products"] = pd.concat([p["products"], pd.DataFrame(
++            [{"sku_id": s["id"], "sku_name": s["name"], "sub_category": s["sub_category"], "pack": s["pack"],
++              "mrp_inr": s["mrp"], "asp_inr": s["asp"], "organic_units_per_day": s["organic_units_per_day"],
++              "launch_age_days": 0} for s in new_sku])], ignore_index=True)
++        p["sku_city"] = pd.concat([p["sku_city"], pd.DataFrame(
++            [{"sku_id": s["id"], "city_id": c, "base_osa": round(float(np.clip(rng.normal(0.95, 0.02), 0.9, 0.99)), 3)}
++             for s in new_sku for c in cities.city_id])], ignore_index=True)
++        for s in new_sku:
++            t["appeal"][s["id"]] = float(s.get("appeal", 1.0))
++    rel = cal.get("extra_relevance", {})
++    if rel:
++        p["keyword_sku"] = pd.concat([p["keyword_sku"], pd.DataFrame(
++            [{"sku_id": sku, "keyword_id": k, "relevance": r, "organic_rank": np.nan if o is None else o}
++             for sku, lst in rel.items() for k, r, o in lst])], ignore_index=True)
++        for sku, lst in rel.items():                     # legacy step-6 damping is unused when the shelf is on
++            for k, _, _ in lst:
++                t["organic_damp"][(sku, k)] = 1.0
++    _add_campaigns(world, new_sku, rel, rng)
++
++
++def _add_campaigns(world: World, new_sku: list[dict], rel: dict, rng: np.random.Generator) -> None:
++    """Campaign rows for new SKUs (one per city) and campaign_keywords rows for every new (SKU, keyword) cell."""
++    p = world.public
++    kw = p["keywords"].set_index("keyword_id")
++    cities = p["cities"].set_index("city_id")
++    camp_rows, ck_rows, plan_rows = [], [], []
++    for s in new_sku:
++        for c, crow in cities.iterrows():
++            budget = max(400.0, round(s.get("start_budget", 1500) * crow.demand_share * 5 / 50) * 50)
++            camp_rows.append({"campaign_id": f"C-{s['id']}-{c}", "campaign_name": f"AUR_{s['id']}_{c}_PB",
++                              "sku_id": s["id"], "city_id": c, "ad_type": "Product Booster",
++                              "daily_budget_inr": float(budget), **{f"on_{dp}": True for dp in DAYPARTS}})
++    if camp_rows:
++        p["campaigns"] = pd.concat([p["campaigns"], pd.DataFrame(camp_rows)], ignore_index=True)
++    goal_base = {"brand": 9.0, "generic": 3.2, "competition": 1.6}
++    for sku, lst in rel.items():
++        for k, r, _ in lst:
++            for c, crow in cities.iterrows():
++                cid = f"C-{sku}-{c}"
++                rank1 = kw.loc[k, "rank1_cpm_inr"] * crow.cpm_index
++                bid = float(np.clip(round(rank1 * _BID_MULT[kw.loc[k, "keyword_type"]]
++                                          * float(np.exp(rng.normal(0, 0.10))) / 5) * 5, 200, 10_000))
++                ck_rows.append({"campaign_id": cid, "keyword_id": k, "bid_cpm_inr": bid, "active": True})
++                goal = goal_base[kw.loc[k, "keyword_type"]] * float(np.exp(rng.normal(0, 0.25)))
++                plan_rows.append({"sku_id": sku, "city_id": c, "keyword_id": k, "plan_budget_inr_day": 0,
++                                  "goal_droas": round(goal, 2), "marginal_floor_droas": round(max(1.0, goal * 0.45), 2),
++                                  "evidence_tier": "low"})
++    # existing campaigns that gain an always-on keyword get budget for it, sized like world._campaigns does
++    # (an ephemeral keyword is not live in warm-up, so it gets none: funding it is the policy's decision)
++    ephemeral = set(world.truth.get("calendar", {}).get("_ephemeral_ids", []))
++    camp = p["campaigns"].set_index("campaign_id")
++    for r in ck_rows:
++        sku, k = r["campaign_id"].split("-")[1], r["keyword_id"]
++        if k in ephemeral or sku in {s["id"] for s in new_sku}:
++            continue
++        c = cities.loc[r["campaign_id"].split("-")[2]]
++        rank1 = kw.loc[k, "rank1_cpm_inr"] * c.cpm_index
++        relv = next(x[1] for x in rel[sku] if x[0] == k)
++        searches = kw.loc[k, "searches_30d"] / 30 * c.demand_share * relv
++        slot_guess = 1 if r["bid_cpm_inr"] >= rank1 else (5 if r["bid_cpm_inr"] >= rank1 * 0.94 else 9)
++        camp.loc[r["campaign_id"], "daily_budget_inr"] += round(
++            searches * SLOT_VIEW_REL[slot_guess] * rank1 * 0.9 / 1000 / 50) * 50
++    p["campaigns"] = camp.reset_index()
++    if ck_rows:
++        p["campaign_keywords"] = pd.concat([p["campaign_keywords"], pd.DataFrame(ck_rows)], ignore_index=True)
++        p["plan"] = pd.concat([p["plan"], pd.DataFrame(plan_rows)], ignore_index=True)
++
++
++def _calendar_public(cal: dict) -> pd.DataFrame:
++    """What a brand knows about its own calendar: events, live windows, gift-pack stock (doc 02 §7.2)."""
++    rows = []
++    for ev in cal.get("events", []):
++        rows.append({"kind": "event", "id": ev["id"], "from_day": ev["peak_day"] - ev["ramp_days"],
++                     "to_day": ev["peak_day"] + ev.get("tail_days", 0), "peak_day": ev["peak_day"], "detail": ""})
++    for k in cal.get("ephemeral_keywords", []):
++        rows.append({"kind": "ephemeral_keyword", "id": k["id"], "from_day": k["live_from"], "to_day": k["live_to"],
++                     "peak_day": None, "detail": k["keyword"]})
++    for s in cal.get("ephemeral_skus", []):
++        rows.append({"kind": "ephemeral_sku", "id": s["id"], "from_day": s["live_from"], "to_day": s["live_to"],
++                     "peak_day": None, "detail": json.dumps({"stock_by_city": s["stock_by_city"],
++                                                             "salvage_frac": s["salvage_frac"]})})
++    return pd.DataFrame(rows)

@@ -1,0 +1,5 @@
+b8fb083 sim v2 P3 support: hidden truth_slot1 table (G-1 objective f2); fix score() salvage dtype
+096bd82 sim v2 P2: intent mix, calendar + stock, competitor agents, public tables, holdout lever, scenarios
+7e15c48 sim v2 P1: Module A nested-logit shelf + Module F ads-off scorer (sc1_cannibal)
+b1f5724 sim v2 P1.1: 16x faster simulate_day, byte-identical to legacy goldens
+6e0b78b sim v2 P0: freeze legacy goldens (4 seeds x no_op/traversal) and add golden regression test
