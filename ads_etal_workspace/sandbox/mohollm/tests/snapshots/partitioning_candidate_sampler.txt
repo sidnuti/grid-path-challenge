@@ -1,0 +1,40 @@
+# Optimization task
+
+## Problem Description
+You are tasked with solving a optimization problem that requires finding optimal solutions.
+
+- **Evaluation**: Configurations are measured by F1 (lower is better), F2 (lower is better)
+
+Minimise two toy objectives.
+
+## Constraints
+The allowable ranges for the hyperparameters are:
+{
+  x0: range(float([0.0, 0.5])),
+  x1: range(float([0.5, 1.0]))
+}
+
+## Previously Evaluated Configurations
+Below are examples of configurations that have been evaluated, showing their operations and performance metrics:
+
+Configuration: {"x0": 0.1, "x1": 0.9} 
+F1: 1.5, F2: 2.25
+
+
+## Your Task
+Generate 5 new configurations that:
+1. Are likely to achieve lower F1 (lower is better), F2 (lower is better) than the examples
+2. Are different from all previously evaluated configurations
+3. Satisfy all the specified constraints: {
+  x0: range(float([0.0, 0.5])),
+  x1: range(float([0.5, 1.0]))
+}
+
+
+## Output Format
+Each configuration has to follow this format:
+
+{"x0": $x0, "x1": $x1}
+
+Provide your response in a JSON list containing each proposed configuration.
+Return only the required JSON list output without additional text.

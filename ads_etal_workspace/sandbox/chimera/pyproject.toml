@@ -1,0 +1,25 @@
+[project]
+name = "sandbox-chimera"
+version = "0.0.0"
+description = "Replication sandbox for Project-Chimera (upstream copied under upstream/, never edited)"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "csl-core>=0.2.0",
+  "langchain>=0.3,<1.0", "langchain-core>=0.3.0,<1.0", "langchain-openai>=0.3.0,<1.0",
+  "langchain-community>=0.3.0,<1.0", "openai==1.105.0",
+  "econml==0.16.0", "lightgbm==4.6.0", "scikit-learn==1.6.1", "shap==0.48.0",
+  "statsmodels==0.14.5", "scipy==1.14.0", "numpy==2.2.6", "pandas==2.3.2",
+  "matplotlib==3.9.2", "seaborn==0.13.2", "tqdm==4.67.1", "z3-solver==4.15.3.0",
+  "python-dotenv==1.1.1", "requests==2.32.5", "pydantic>=2.7", "tiktoken==0.11.0",
+  "streamlit==1.49.1",   # imported at module level by src/ui.py; not exercised
+  "pytest>=8", "hypothesis>=6.100",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+markers = ["offline: no network, scripted LLM only", "paid: calls OpenRouter (ledger-capped)", "slow: > 30 s"]
+testpaths = ["tests"]
+addopts = "-p no:warnings"
+pythonpath = [".", "upstream", ".."]

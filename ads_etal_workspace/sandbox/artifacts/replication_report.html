@@ -1,0 +1,339 @@
+<title>Chimera MoHOLLM Replication</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: a lab notebook page. One narrow reading column, figures break out to full width, every number set in mono. */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#13171e; --muted:#586172; --line:#dde1e8; --grid:#e9ecf1;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --ok:#0e7a4d; --ok-bg:#e3f4ec; --warn:#955c00; --warn-bg:#fbf0d9; --bad:#b8302e; --bad-bg:#fbe4e3; --idle:#586172; --idle-bg:#eceef2;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1116; --surface:#161a21; --fg:#e8ebf0; --muted:#98a1b0; --line:#2a303a; --grid:#222730;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --ok:#4cc190; --ok-bg:#12302a; --warn:#e3a93f; --warn-bg:#33290f; --bad:#f28280; --bad-bg:#381a1a; --idle:#98a1b0; --idle-bg:#222730; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1116; --surface:#161a21; --fg:#e8ebf0; --muted:#98a1b0; --line:#2a303a; --grid:#222730;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --ok:#4cc190; --ok-bg:#12302a; --warn:#e3a93f; --warn-bg:#33290f; --bad:#f28280; --bad-bg:#381a1a; --idle:#98a1b0; --idle-bg:#222730; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.6 var(--sans);margin:0;padding-inline:16px;padding-block:28px 64px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(26px,4.4vw,38px);font-weight:600;letter-spacing:-.02em}
+h2{font-size:21px;font-weight:600;letter-spacing:-.01em}
+h3{font-size:14px;font-weight:600}
+p{margin:0}
+.lede{color:var(--muted);max-width:68ch;font-size:16px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:500}
+header{display:flex;flex-direction:column;gap:14px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi b{font:500 22px/1.2 var(--mono);font-variant-numeric:tabular-nums}
+.kpi span{font-size:12.5px;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:18px;min-width:0}
+.prose{max-width:68ch;display:flex;flex-direction:column;gap:12px}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fig header{border:0;padding:0;gap:2px}
+.fig .cap{font-size:13px;color:var(--muted);max-width:75ch}
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
+.scroll{overflow-x:auto;min-width:0}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+svg .t-strong{fill:var(--fg)}
+.gridline{stroke:var(--grid);stroke-width:1}
+.axis{stroke:var(--line);stroke-width:1}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;border-radius:999px;padding:2px 10px 2px 8px;white-space:nowrap}
+.pill.ok{color:var(--ok);background:var(--ok-bg)}.pill.warn{color:var(--warn);background:var(--warn-bg)}
+.pill.bad{color:var(--bad);background:var(--bad-bg)}.pill.idle{color:var(--idle);background:var(--idle-bg)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;white-space:nowrap}
+td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+details{border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-size:13px;color:var(--muted);width:fit-content}
+summary:focus-visible,a:focus-visible,.hit:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:110px 1fr 70px;gap:12px;align-items:center;font-size:13px}
+.bar-row .track{height:14px;background:var(--grid);border-radius:2px;position:relative}
+.bar-row .fill{position:absolute;inset:0 auto 0 0;border-radius:2px 4px 4px 2px}
+.grid-status{display:grid;grid-template-columns:130px repeat(4,1fr);gap:6px;font-size:12.5px;align-items:stretch}
+.grid-status .h{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:2px 0}
+.cell{border-radius:4px;padding:6px 8px;text-align:center;font-weight:500}
+.cell.done{background:var(--ok-bg);color:var(--ok)}.cell.run{background:var(--idle-bg);color:var(--idle)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:10px 14px;border-radius:0 4px 4px 0;font-size:13.5px;max-width:75ch}
+ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;max-width:75ch}
+#tip{position:fixed;z-index:10;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12px;line-height:1.45;padding:7px 10px;border-radius:4px;max-width:260px;opacity:0;transition:opacity .08s}
+#tip b{font-weight:600}
+.theme{margin-left:auto;font:inherit;font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:4px;padding:3px 9px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){#tip{transition:none}}
+@media (max-width:560px){.bar-row{grid-template-columns:84px 1fr 56px}.grid-status{grid-template-columns:96px repeat(4,1fr);font-size:11.5px}}
+</style>
+
+<div class="wrap">
+<header>
+  <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap">
+    <span class="label">Replication · interim · 5 Oct 2026</span>
+    <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
+  </div>
+  <h1>Does Project Chimera, and MoHOLLM, hold up when we rerun it?</h1>
+  <p class="lede">We reran both papers' code on OpenRouter models with every call recorded, so any number below can be replayed for $0. Chimera is finished. MoHOLLM is 7 of 16 runs in, so its results are not ready.</p>
+  <div class="kpis">
+    <div class="kpi"><b>18 / 18</b><span>Chimera agent runs, 52 weeks each</span></div>
+    <div class="kpi"><b>7 / 16</b><span>MoHOLLM runs finished</span></div>
+    <div class="kpi"><b>$8.75</b><span>spent of the $25 programme cap</span></div>
+    <div class="kpi"><b>3 seeds</b><span>Chimera; MoHOLLM has 2</span></div>
+  </div>
+</header>
+
+<section id="setup">
+  <h2>What was run</h2>
+  <div class="prose">
+    <p><b>Chimera</b> (e-commerce pricing agent) ran on minimax-m3, three agents against two organisational biases (volume or margin), three seeds each. A seed changes both the market simulator and the language-model samples, and results are paired by seed.</p>
+    <p><b>MoHOLLM</b> (LLM optimiser that splits the search space into regions) runs on qwen3.7-flash, on four problems (Penicillin, VehicleSafety, CarSideImpact, BraninCurrin) against a global LLM baseline. Qwen replaced minimax here because minimax's reasoning made each call about 8,000 tokens and the plan unaffordable.</p>
+  </div>
+  <div class="note">The models differ from the papers' (GPT-4o, Gemini 2.0 Flash), so absolute numbers will not match. What can be tested is whether each paper's ordering of methods carries over.</div>
+</section>
+
+<section id="chimera">
+  <h2>Chimera: the guardian helps everywhere, the causal engine only sometimes</h2>
+  <div class="fig">
+    <header><h3>Total profit over 52 weeks, by agent and bias</h3>
+    <p class="cap">Bars are the mean of three seeds; dots are the individual seeds. Hover a bar or dot for values.</p></header>
+    <div class="legend" id="legendAgents"></div>
+    <div class="panels"><div><div class="label" style="margin-bottom:6px">Volume bias (cut prices)</div><div id="chartVol"></div></div>
+    <div><div class="label" style="margin-bottom:6px">Margin bias (raise prices)</div><div id="chartMar"></div></div></div>
+    <details><summary>Table view</summary>
+    <div class="scroll"><table>
+      <thead><tr><th>Bias</th><th>Agent</th><th class="n">Profit (mean)</th><th class="n">Seed sd</th><th class="n">Loss weeks</th><th class="n">Final trust</th></tr></thead>
+      <tbody id="tbl"></tbody></table></div></details>
+  </div>
+
+  <div class="fig">
+    <header><h3>Seed-paired profit differences, with 95% intervals</h3>
+    <p class="cap">Filled dot: the interval excludes zero. Hollow dot: it includes zero, so three seeds cannot rule out no difference.</p></header>
+    <div class="scroll"><div id="forest" style="min-width:600px"></div></div>
+  </div>
+
+  <h3>Verdict on the paper's four claims (three seeds, so provisional)</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Claim</th><th>Result here</th><th>Paper</th></tr></thead>
+    <tbody>
+      <tr><td><b>1.</b> LLM-only fails under biased instructions
+        <small>Volume: profit collapses. Margin: trust collapses.</small></td>
+        <td><span class="pill warn">◐ Partly</span><small>Volume reproduced: profit $0.27M against $1.9M, and 87% of weeks lose money. Margin did not collapse trust (final 0.69, about flat).</small></td>
+        <td class="mono">−$0.10M, 82.7% loss weeks; margin trust 0.36</td></tr>
+      <tr><td><b>2.</b> A guardian removes the failure</td>
+        <td><span class="pill ok">✓ Reproduced</span><small>Both biases, intervals exclude zero: +$1.63M (volume), +$0.78M (margin).</small></td>
+        <td class="mono">+$0.76M, +$0.07M</td></tr>
+      <tr><td><b>3.</b> Full Chimera beats guardian-only on profit</td>
+        <td><span class="pill warn">◐ Partly</span><small>Volume: higher in 3 of 3 seeds (+$0.81M) but the interval includes zero. Margin: not reproduced (−$0.22M; one Full run collapsed to $1.7M).</small></td>
+        <td class="mono">+$0.86M, +$0.26M</td></tr>
+      <tr><td><b>4.</b> Full has the lowest weekly variance</td>
+        <td><span class="pill warn">◐ Partly</span><small>Volume yes ($10.5k against $17–18k). Margin no (about $7.2k against $7.3k and $8.3k). Lowest in 4 of 6 cells.</small></td>
+        <td class="mono">lowest in both</td></tr>
+    </tbody></table></div>
+  <div class="prose">
+    <p><b>Why claim 3 is shaky.</b> The causal engine's effect estimate is exactly linear in the action. It ranks actions well (rank correlation 0.88 against a Monte-Carlo truth) but cannot represent diminishing returns on ad spend, so it is a weak guide to magnitude.</p>
+    <p><b>Noise.</b> Two recordings of the same Full-Chimera arm for four weeks gave $116k and $149k. A single run, as in the paper, cannot support an ordering claim.</p>
+  </div>
+</section>
+
+<section id="mohollm">
+  <h2>MoHOLLM: not ready, but the cost drivers are clear</h2>
+  <div class="fig">
+    <header><h3>Run progress</h3><p class="cap">Seeds 31415927 and 42. “Global” is the baseline LLM optimiser; “Regions” is the paper's method.</p></header>
+    <div class="grid-status" id="gridStatus" role="table" aria-label="MoHOLLM run status"></div>
+  </div>
+
+  <div class="panels">
+    <div class="fig">
+      <header><h3>Where the LLM calls go wrong</h3><p class="cap">Share of calls cut off at the 12,000-token output cap, and average output size. 3,006 calls.</p></header>
+      <div class="bars" id="trunc"></div>
+    </div>
+    <div class="fig">
+      <header><h3>One finished pair: Penicillin, seed 42</h3><p class="cap">Hypervolume (higher is better), jointly normalised. One seed only, so illustrative.</p></header>
+      <div class="legend" id="legendHV"></div>
+      <div id="hv"></div>
+    </div>
+  </div>
+  <div class="note">On Penicillin seed 42 the region method reached 0.46 hypervolume against 0.19 at equal evaluations (53). It also used 65 evaluations to the baseline's 57 and about 6 times the LLM calls. Nothing here is a verdict until the other pairs finish.</div>
+</section>
+
+<section id="harness">
+  <h2>What had to be fixed to make runs repeatable</h2>
+  <p class="lede">None of these are visible in the papers' numbers, and several would have silently changed results.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Problem found</th><th>Effect</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr><td>Chimera swallows every LLM error into a “do nothing” week</td><td>A broken run still “completes” with no-op weeks</td><td>Runner aborts if any error was swallowed</td></tr>
+      <tr><td>MoHOLLM orders candidates by Python's per-process string hash</td><td>The same seed gives different prompts, so no replay</td><td>Pin the hash seed</td></tr>
+      <tr><td>MoHOLLM shuffles prompt examples with an RNG shared across threads</td><td>Prompt order depends on thread timing</td><td>Shuffle seeded from content</td></tr>
+      <tr><td>Causal estimates differ at the 12th decimal between processes</td><td>Changes the text the agent reads</td><td>Round to cents</td></tr>
+      <tr><td>Upstream retries a failing prompt forever</td><td>Runaway cost on one prompt</td><td>Halt after 14 identical requests; raise the output cap on repeats</td></tr>
+      <tr><td>A stalled provider keeps the connection open</td><td>A single request hung runs for hours</td><td>Hard wall-clock deadline per request</td></tr>
+    </tbody></table></div>
+  <div class="prose">
+    <p><b>Also found in the papers' code.</b> The Chimera guardian's CSL path returns a generic message for 4 of 6 rule violations (that text is what the LLM sees). MoHOLLM's shipped config names are inverted (<span class="mono">MOHOLLM-*</span> is the global baseline in one case), its <span class="mono">VLMOP</span> benchmark is VLMOP3 rather than VLMOP2, and most of its schedulers fail to configure. The Chimera TLA+ safety proof was re-run and matches the paper: 7,639,419 distinct states, no violation.</p>
+  </div>
+</section>
+
+<section id="next">
+  <h2>Still to do</h2>
+  <ul class="plain">
+    <li>Finish the remaining 9 MoHOLLM runs (roughly 2 to 4 more hours), then replay every recorded run to confirm identical results at no cost.</li>
+    <li>Run the non-LLM baselines (random, NSGA-II, qLogEHVI) and the TabPFN and GP surrogate arms.</li>
+    <li>Run the remaining Chimera experiments: neutral bias, the trust-multiplier sweep, and whether the LLM matters at all.</li>
+    <li>Paired statistics across seeds and problems, then the final verdict per claim.</li>
+  </ul>
+</section>
+</div>
+<div id="tip" role="status"></div>
+
+<script>
+(function(){
+const D = {
+  agents:[{k:"llm_only",name:"LLM only",c:"var(--s1)"},{k:"llm_symbolic",name:"LLM + guardian",c:"var(--s2)"},{k:"full_chimera",name:"Full Chimera",c:"var(--s3)"}],
+  profit:{
+    decrease:{llm_only:[386523,428746,8612],llm_symbolic:[2157469,2003656,1555918],full_chimera:[2586130,2570350,3005282]},
+    increase:{llm_only:[2031198,2418653,1971820],llm_symbolic:[2904342,2982802,2869324],full_chimera:[3215044,1725004,3168956]}},
+  extra:{decrease:{llm_only:[18181,.87,1.00],llm_symbolic:[17214,0,1.00],full_chimera:[10491,0,1.00]},
+         increase:{llm_only:[7274,0,.69],llm_symbolic:[8325,0,1.00],full_chimera:[7170,0,.89]}},
+  diffs:[
+    {g:"Volume bias",l:"Guardian − LLM only",m:1631055,lo:1328155,hi:1933954},
+    {g:"Volume bias",l:"Full − guardian",m:814906,lo:-560745,hi:2190557},
+    {g:"Volume bias",l:"Full − LLM only",m:2445960,lo:1259015,hi:3632906},
+    {g:"Margin bias",l:"Guardian − LLM only",m:778266,lo:316640,hi:1239892},
+    {g:"Margin bias",l:"Full − guardian",m:-215821,lo:-2457496,hi:2025853},
+    {g:"Margin bias",l:"Full − LLM only",m:562445,lo:-2139871,hi:3264760}],
+  hv:{x:[5,13,21,29,37,45,53,57],g:[.128,.133,.178,.178,.188,.191,.191,.1912],
+      px:[5,13,21,29,37,45,53,61,65],p:[.128,.137,.363,.449,.452,.454,.457,.463,.4629]},
+  jobs:{Penicillin:{g:[1,1,0,0],r:[0,0,0,1]},VehicleSafety:{g:[1,0,0,0],r:[0,0,0,0]},CarSideImpact:{g:[1,0,0,0],r:[0,0,0,1]},BraninCurrin:{g:[1,0,0,0],r:[0,0,0,0]}}
+};
+const M=v=>"$"+(v/1e6).toFixed(2)+"M", SM=v=>(v<0?"−":"+")+"$"+(Math.abs(v)/1e6).toFixed(2)+"M";
+const NS="http://www.w3.org/2000/svg", tip=document.getElementById("tip");
+function el(n,a,p,t){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;if(p)p.appendChild(e);return e}
+function showTip(html,ev){tip.innerHTML=html;tip.style.opacity=1;const w=tip.offsetWidth,x=Math.min(ev.clientX+14,innerWidth-w-8);tip.style.left=Math.max(8,x)+"px";tip.style.top=(ev.clientY+14)+"px"}
+function hideTip(){tip.style.opacity=0}
+function hit(node,html){node.classList.add("hit");node.setAttribute("tabindex","0");
+  node.addEventListener("pointermove",e=>showTip(html,e));node.addEventListener("pointerleave",hideTip);
+  node.addEventListener("focus",()=>{const r=node.getBoundingClientRect();showTip(html,{clientX:r.left+r.width/2,clientY:r.top})});node.addEventListener("blur",hideTip)}
+
+/* legend */
+document.getElementById("legendAgents").innerHTML=D.agents.map(a=>`<span><i style="background:${a.c}"></i>${a.name}</span>`).join("");
+document.getElementById("legendHV").innerHTML=`<span><i style="background:var(--s1)"></i>Global LLM (57 evaluations)</span><span><i style="background:var(--s2)"></i>Regions, MoHOLLM (65 evaluations)</span>`;
+
+/* grouped bars */
+function profitChart(host,bias){
+  const W=520,H=300,L=44,R=10,T=24,B=40,max=3.5e6,ph=H-T-B,pw=W-L-R;
+  const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Total profit by agent, ${bias} bias`});
+  for(let v=0;v<=3.5e6;v+=1e6){const y=T+ph*(1-v/max);el("line",{x1:L,x2:W-R,y1:y,y2:y,class:v?"gridline":"axis"},svg);el("text",{x:L-6,y:y+4,"text-anchor":"end"},svg,v?"$"+v/1e6+"M":"0")}
+  const slot=pw/3,bw=58;
+  D.agents.forEach((a,i)=>{
+    const vals=D.profit[bias][a.k],mean=vals.reduce((s,v)=>s+v,0)/3,cx=L+slot*i+slot/2,h=ph*mean/max,y=T+ph-h;
+    const r=4,x0=cx-bw/2,x1=cx+bw/2,yb=T+ph;
+    const path=el("path",{d:`M${x0},${yb}V${y+r}Q${x0},${y} ${x0+r},${y}H${x1-r}Q${x1},${y} ${x1},${y+r}V${yb}Z`,fill:a.c},svg);
+    const ex=D.extra[bias][a.k];
+    hit(path,`<b>${a.name}</b><br>Mean ${M(mean)}<br>Seeds: ${vals.map(M).join(", ")}<br>Weekly sd $${(ex[0]/1000).toFixed(1)}k · loss weeks ${Math.round(ex[1]*100)}%<br>Final trust ${ex[2].toFixed(2)}`);
+    el("text",{x:cx,y:y-8,"text-anchor":"middle",class:"t-strong"},svg,M(mean));
+    vals.forEach((v,j)=>{const dx=(j-1)*16,dy=T+ph*(1-v/max);
+      const c=el("circle",{cx:cx+dx,cy:dy,r:5,fill:"var(--surface)",stroke:"var(--fg)","stroke-width":2},svg);
+      hit(c,`<b>${a.name}</b>, seed ${j}<br>${M(v)}`)});
+    el("text",{x:cx,y:H-16,"text-anchor":"middle"},svg,a.name);
+  });
+  host.appendChild(svg);
+}
+profitChart(document.getElementById("chartVol"),"decrease");profitChart(document.getElementById("chartMar"),"increase");
+
+/* table view */
+document.getElementById("tbl").innerHTML=["decrease","increase"].flatMap(b=>D.agents.map(a=>{
+  const v=D.profit[b][a.k],m=v.reduce((s,x)=>s+x,0)/3,sd=Math.sqrt(v.reduce((s,x)=>s+(x-m)**2,0)/2),e=D.extra[b][a.k];
+  return `<tr><td>${b==="decrease"?"Volume":"Margin"}</td><td>${a.name}</td><td class="n">${M(m)}</td><td class="n">${M(sd)}</td><td class="n">${Math.round(e[1]*100)}%</td><td class="n">${e[2].toFixed(2)}</td></tr>`})).join("");
+
+/* forest plot */
+(function(){
+  const W=680,rowH=34,gh=26,T=10,L=170,R=190,lo=-3e6,hi=4e6;
+  const rows=D.diffs,H=T+rows.length*rowH+2*gh+36;
+  const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Seed-paired profit differences with 95% intervals"});
+  const X=v=>L+(W-L-R)*(v-lo)/(hi-lo);
+  for(let v=-2e6;v<=4e6;v+=2e6){el("line",{x1:X(v),x2:X(v),y1:T,y2:H-30,class:v===0?"axis":"gridline","stroke-dasharray":v===0?"":"0"},svg);el("text",{x:X(v),y:H-12,"text-anchor":"middle"},svg,(v>0?"+":v<0?"−":"")+"$"+Math.abs(v/1e6)+"M")}
+  el("line",{x1:X(0),x2:X(0),y1:T,y2:H-30,stroke:"var(--fg)","stroke-width":1.5,"stroke-dasharray":"4 3"},svg);
+  let y=T,last="";
+  rows.forEach((r,i)=>{
+    if(r.g!==last){last=r.g;el("text",{x:8,y:y+17,class:"t-strong","font-weight":"600"},svg,r.g);y+=gh}
+    const cy=y+rowH/2,sig=r.lo>0||r.hi<0;
+    el("text",{x:L-10,y:cy+4,"text-anchor":"end"},svg,r.l);
+    const ln=el("line",{x1:X(r.lo),x2:X(r.hi),y1:cy,y2:cy,stroke:"var(--muted)","stroke-width":2,"stroke-linecap":"round"},svg);
+    const dot=el("circle",{cx:X(r.m),cy,r:6,fill:sig?"var(--fg)":"var(--surface)",stroke:"var(--fg)","stroke-width":2},svg);
+    const tipHtml=`<b>${r.g}: ${r.l}</b><br>Mean ${SM(r.m)}<br>95% interval ${SM(r.lo)} to ${SM(r.hi)}<br>${sig?"Excludes zero":"Includes zero"}`;
+    hit(dot,tipHtml);hit(ln,tipHtml);
+    el("text",{x:W-R+14,y:cy+4},svg,`${SM(r.m)} [${(r.lo/1e6).toFixed(1).replace("-","−")}, ${(r.hi/1e6).toFixed(1).replace("-","−")}]`);
+    y+=rowH;
+  });
+  document.getElementById("forest").appendChild(svg);
+})();
+
+/* truncation bars */
+document.getElementById("trunc").innerHTML=[
+ {n:"Truncated, candidate sampler",p:0.2,c:"var(--s1)",t:"0.2%"},{n:"Truncated, surrogate",p:28.9,c:"var(--s2)",t:"28.9%"}
+].map(r=>`<div class="bar-row"><span>${r.n}</span><div class="track"><div class="fill" style="width:${Math.max(r.p,0.6)/35*100}%;background:${r.c}"></div></div><b class="mono">${r.t}</b></div>`).join("")+
+`<div class="bar-row" style="margin-top:4px"><span>Output, sampler</span><div class="track"><div class="fill" style="width:${4331/12000*100}%;background:var(--s1)"></div></div><b class="mono">4.3k</b></div>
+ <div class="bar-row"><span>Output, surrogate</span><div class="track"><div class="fill" style="width:${10088/12000*100}%;background:var(--s2)"></div></div><b class="mono">10.1k</b></div>
+ <p class="cap" style="font-size:13px;color:var(--muted)">The surrogate prompt (“predict every objective for about 20 configurations”) makes the model reason until it runs out of room. Truncated answers are empty, so upstream retries them.</p>`;
+
+/* status grid */
+(function(){
+  const g=document.getElementById("gridStatus");
+  const hdr=["", "Global · seed 31415927","Global · seed 42","Regions · seed 31415927","Regions · seed 42"];
+  hdr.forEach(h=>{const d=document.createElement("div");d.className="h";d.textContent=h;g.appendChild(d)});
+  Object.keys(D.jobs).forEach(p=>{
+    const lab=document.createElement("div");lab.style.cssText="display:flex;align-items:center;font-weight:500";lab.textContent=p;g.appendChild(lab);
+    const j=D.jobs[p];[j.g[0],j.g[1],j.r[2]||0,j.r[3]].forEach((v,i)=>{
+      const c=document.createElement("div");c.className="cell "+(v?"done":"run");c.textContent=v?"✓ done":"running";g.appendChild(c)});
+  });
+})();
+
+/* hypervolume line chart */
+(function(){
+  const W=520,H=290,L=44,R=64,T=14,B=38,xmax=70,ymax=.5,pw=W-L-R,ph=H-T-B;
+  const X=v=>L+pw*v/xmax,Y=v=>T+ph*(1-v/ymax);
+  const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Hypervolume against evaluations, Penicillin seed 42"});
+  [0,.1,.2,.3,.4,.5].forEach(v=>{el("line",{x1:L,x2:W-R,y1:Y(v),y2:Y(v),class:v?"gridline":"axis"},svg);el("text",{x:L-6,y:Y(v)+4,"text-anchor":"end"},svg,v.toFixed(1))});
+  [5,20,35,50,65].forEach(v=>el("text",{x:X(v),y:H-18,"text-anchor":"middle"},svg,v));
+  el("text",{x:L+pw/2,y:H-3,"text-anchor":"middle"},svg,"evaluations");
+  const series=[{x:D.hv.x,y:D.hv.g,c:"var(--s1)",n:"Global"},{x:D.hv.px,y:D.hv.p,c:"var(--s2)",n:"Regions"}];
+  series.forEach(s=>{
+    el("polyline",{points:s.x.map((x,i)=>X(x)+","+Y(s.y[i])).join(" "),fill:"none",stroke:s.c,"stroke-width":2,"stroke-linejoin":"round","stroke-linecap":"round"},svg);
+    const lx=X(s.x[s.x.length-1]),ly=Y(s.y[s.y.length-1]);
+    el("circle",{cx:lx,cy:ly,r:5,fill:s.c,stroke:"var(--surface)","stroke-width":2},svg);
+    el("text",{x:lx+9,y:ly+4,class:"t-strong"},svg,s.y[s.y.length-1].toFixed(2)+" "+s.n);
+  });
+  const cross=el("line",{y1:T,y2:T+ph,stroke:"var(--muted)","stroke-width":1,opacity:0},svg);
+  const overlay=el("rect",{x:L,y:T,width:pw,height:ph,fill:"transparent"},svg);
+  const allx=[...new Set([...D.hv.x,...D.hv.px])].sort((a,b)=>a-b);
+  const at=(s,x)=>{let v=null;s.x.forEach((sx,i)=>{if(sx<=x)v=s.y[i]});return v};
+  overlay.addEventListener("pointermove",e=>{
+    const r=svg.getBoundingClientRect(),xv=((e.clientX-r.left)/r.width*W-L)/pw*xmax;
+    const nx=allx.reduce((a,b)=>Math.abs(b-xv)<Math.abs(a-xv)?b:a);
+    cross.setAttribute("x1",X(nx));cross.setAttribute("x2",X(nx));cross.setAttribute("opacity",1);
+    const g=at(series[0],nx),p=at(series[1],nx);
+    showTip(`<b>${nx} evaluations</b><br>Global ${g==null?"finished":g.toFixed(3)}<br>Regions ${p==null?"n/a":p.toFixed(3)}`,e)});
+  overlay.addEventListener("pointerleave",()=>{cross.setAttribute("opacity",0);hideTip()});
+  document.getElementById("hv").appendChild(svg);
+})();
+
+/* theme toggle */
+const root=document.documentElement,btn=document.getElementById("theme");
+try{const t=localStorage.getItem("theme");if(t)root.setAttribute("data-theme",t)}catch(e){}
+btn.addEventListener("click",()=>{
+  const dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+  const next=dark?"light":"dark";root.setAttribute("data-theme",next);try{localStorage.setItem("theme",next)}catch(e){}
+});
+})();
+</script>

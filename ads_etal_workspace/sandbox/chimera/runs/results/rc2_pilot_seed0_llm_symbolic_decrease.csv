@@ -1,0 +1,5 @@
+week,agent_type,strategy,price,brand_trust,profit,sales_volume,weekly_ad_spend
+1,llm_symbolic,decrease,100.0,0.6986,27100.0,542,0.0
+2,llm_symbolic,decrease,100.0,0.702035441550985,35850.0,737,1000.0
+3,llm_symbolic,decrease,80.0,0.7295784507944333,32110.0,1137,2000.0
+4,llm_symbolic,decrease,60.0,0.760359565724496,12680.0,1568,3000.0

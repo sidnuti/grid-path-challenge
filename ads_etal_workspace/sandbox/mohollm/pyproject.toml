@@ -1,0 +1,22 @@
+[project]
+name = "sandbox-mohollm"
+version = "0.0.0"
+description = "Replication sandbox for MoHOLLM/HOLLM (upstream copied under upstream/, never edited)"
+requires-python = ">=3.11,<3.12"
+# Core subset only (plan: skip NB201/fcnet, so no nashpobench2api / syne-tune / accelerate / autoawq).
+dependencies = [
+  "numpy", "pandas", "scipy", "scikit-learn", "scikit-optimize", "ConfigSpace",
+  "langchain", "openai", "tiktoken", "huggingface_hub", "transformers>=4.40", "google-generativeai", "groq",
+  "torch", "botorch", "gpytorch", "pymoo==0.6.0", "tabpfn", "paretoset", "seaborn",
+  "boto3>=1.35.36", "dill>=0.4.0", "multiprocess>=0.70.18",
+  "pytest>=8", "hypothesis>=6.100",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+markers = ["offline: no network, scripted LLM only", "paid: calls OpenRouter (ledger-capped)", "slow: > 30 s"]
+testpaths = ["tests"]
+addopts = "-p no:warnings"
+pythonpath = [".", "upstream", ".."]

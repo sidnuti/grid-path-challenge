@@ -1,0 +1,3 @@
+source: ~/Documents/Exploration/Project-Chimera
+commit: 0443ffbc66c07519893ed38212ef77c2b15ba8e5
+copied: 2026-10-05 (rsync, .git excluded). Upstream is never edited; patches live in adapters/.

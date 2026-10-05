@@ -1,0 +1,5 @@
+week,agent_type,strategy,price,brand_trust,profit,sales_volume,weekly_ad_spend
+1,full_chimera,increase,150.0,0.6874039276603388,36300.0,368,500.0
+2,full_chimera,increase,150.0,0.6892534815657844,41400.0,420,600.0
+3,full_chimera,increase,150.0,0.691918211974566,44000.0,448,800.0
+4,full_chimera,increase,150.0,0.6968616780341923,41500.0,430,1500.0
